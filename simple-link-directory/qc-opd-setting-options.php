@@ -64,7 +64,7 @@ function qcsettings_page_callback_func(){
 <div class="wrap swpm-admin-menu-wrap">
   <h1><?php echo esc_html('SLD Settings Page'); ?></h1>
   <h2 class="nav-tab-wrapper sld_nav_container"> 
-  <a class="nav-tab sld_click_handle nav-tab-active" href="#getting_started"><?php echo esc_html('Getting Started'); ?></a> 
+  <a class="nav-tab sld_click_handle qcld_getting_started nav-tab-active" href="#getting_started"><?php echo esc_html('Getting Started'); ?></a> 
   <a class="nav-tab sld_click_handle " href="#general_settings"><?php echo esc_html('General Settings'); ?></a> 
   <a class="nav-tab sld_click_handle" href="#language_settings"><?php echo esc_html('Language Settings'); ?></a> 
   <a class="nav-tab sld_click_handle" href="#custom_css"><?php echo esc_html("Custom CSS"); ?></a> 
