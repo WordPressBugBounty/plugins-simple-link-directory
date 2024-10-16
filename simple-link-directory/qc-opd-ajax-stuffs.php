@@ -2,15 +2,20 @@
 
 defined('ABSPATH') or die("No direct script access!");
 
-add_action('wp_head', 'qcopd_ajax_ajaxurl');
+//add_action('wp_head', 'qcopd_ajax_ajaxurl');
 add_action('admin_head', 'qcopd_ajax_ajaxurl');
 
 if ( ! function_exists( 'qcopd_ajax_ajaxurl' ) ) {
     function qcopd_ajax_ajaxurl(){
 
+        $sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'on':'';
+        $sld_no_results_found       = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html('No Results Found for Your Search');
+
         echo '<script type="text/javascript">
                 var ajaxurl = "' . admin_url('admin-ajax.php') . '";
                 var qc_sld_get_ajax_nonce = "'.wp_create_nonce( 'qc-opd').'";
+                var sld_ajax_object_rtl = "'.$sld_enable_rtl.'";
+                var sld_no_results_found = "'.$sld_no_results_found.'";
              </script>';
     }
 }

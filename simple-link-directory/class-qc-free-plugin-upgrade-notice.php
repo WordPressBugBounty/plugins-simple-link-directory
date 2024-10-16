@@ -86,7 +86,7 @@ if( !class_exists('QcSLDPluginUpgradeToProNotice') )
 			) );
 
 			$links = array_merge( $links, array(
-				'<a title="Help" class="'.$this->link_class.'" style="" href="' . esc_url( admin_url('edit.php?post_type=sld&page=sld_settings#help') ) . '" target="">' . __( 'Help', 'quantumcloud' ) . '</a>'
+				'<a title="Help" class="'.$this->link_class.'" style="" href="' . esc_url( admin_url('edit.php?post_type=sld&page=sld_settings#help') ) . '" target="">' . __( 'Shortcodes and Help', 'quantumcloud' ) . '</a>'
 			) );
 
 			$links = array_merge( $links, array(

@@ -46,9 +46,12 @@ function sld_register_plugin_settings() {
   	register_setting( 'qc-sld-plugin-settings-group', 'sld_embed_credit_link', $args );
   	register_setting( 'qc-sld-plugin-settings-group', 'sld_enable_scroll_to_top', $args );
     register_setting( 'qc-sld-plugin-settings-group', 'sld_enable_rtl', $args );
+    register_setting( 'qc-sld-plugin-settings-group', 'sld_enable_search', $args );
   	//Language Settings
   	register_setting( 'qc-sld-plugin-settings-group', 'sld_lan_add_link', $args );
   	register_setting( 'qc-sld-plugin-settings-group', 'sld_lan_share_list', $args );
+    register_setting( 'qc-sld-plugin-settings-group', 'sld_lan_live_search', $args );
+    register_setting( 'qc-sld-plugin-settings-group', 'sld_no_results_found', $args );
   	//custom css section
   	register_setting( 'qc-sld-plugin-settings-group', 'sld_custom_style', $args );
   	//custom js section
@@ -69,7 +72,7 @@ function qcsettings_page_callback_func(){
   <a class="nav-tab sld_click_handle" href="#language_settings"><?php echo esc_html('Language Settings'); ?></a> 
   <a class="nav-tab sld_click_handle" href="#custom_css"><?php echo esc_html("Custom CSS"); ?></a> 
   <a class="nav-tab sld_click_handle" href="#custom_js"><?php echo esc_html('Custom Javascript'); ?></a> 
-  <a class="nav-tab sld_click_handle" href="#help"><?php echo esc_html('Help & Troubleshooting'); ?></a> 
+  <a class="nav-tab sld_click_handle" href="#help"><?php echo esc_html('Shortcodes and Help'); ?></a> 
   </h2>
   <form method="post" action="options.php">
     <?php settings_fields( 'qc-sld-plugin-settings-group' ); ?>
@@ -144,6 +147,11 @@ function qcsettings_page_callback_func(){
             <i><?php echo esc_html('Top area includes Embed button (more options coming soon)'); ?></i></td>
         </tr>
         <tr valign="top">
+          <th scope="row"><?php echo esc_html('Enable Live Search'); ?></th>
+          <td><input type="checkbox" name="sld_enable_search" value="on" <?php echo (esc_attr( get_option('sld_enable_search') )=='on'?'checked="checked"':''); ?> />
+            <i><?php echo esc_html('Live search through directory items.'); ?></i></td>
+        </tr>
+        <tr valign="top">
           <th scope="row"><?php echo esc_html('Enable Upvote'); ?></th>
           <td><input type="checkbox" name="sld_enable_upvote" value="on" <?php echo (esc_attr( get_option('sld_enable_upvote') )=='on'?'checked="checked"':''); ?> />
             <i><?php echo esc_html('Turn ON to visible Upvote feature for all templates.'); ?></i></td>
@@ -197,6 +205,16 @@ function qcsettings_page_callback_func(){
           <td><input type="text" name="sld_lan_share_list" size="100" value="<?php echo esc_attr( get_option('sld_lan_share_list') ); ?>"  />
             <i><?php echo esc_html('Change the language for Share List'); ?></i></td>
         </tr>
+        <tr valign="top">
+          <th scope="row"><?php echo esc_html('Live Search Items'); ?></th>
+          <td><input type="text" name="sld_lan_live_search" size="100" value="<?php echo esc_attr( get_option('sld_lan_live_search') ); ?>"  />
+            <i><?php echo esc_html('Change the language for Live Search Items'); ?></i></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"><?php echo esc_html('No Results Found for Your Search'); ?></th>
+          <td><input type="text" name="sld_no_results_found" size="100" value="<?php echo esc_attr( get_option('sld_no_results_found') ); ?>"  />
+            <i><?php echo esc_html('Change the language for No Results Found for Your Search'); ?></i></td>
+        </tr>
       </table>
     </div>
     <div id="custom_css" style="display:none">
@@ -220,19 +238,65 @@ function qcsettings_page_callback_func(){
     <div id="help" style="display:none">
       <table class="form-table">
         <tr valign="top">
-          <th scope="row"><?php echo esc_html('Help & Troubleshooting'); ?></th>
+          <th scope="row"><?php echo esc_html('Shortcodes and Help'); ?></th>
           <td><div class="wrap">
               <div id="poststuff">
                 <div id="post-body" class="metabox-holder columns-2">
                   <div id="post-body-content" style="position: relative;"> 
                     
-                    <!--<div>
-							<img style="width: 200px;" src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/simple-link-directory.png" alt="Simple Link Directory">
-						</div>
-						
-						<div class="clear">
-							<?php do_action('buypro_promotional_link'); ?>
-						</div>-->
+
+                    <div class="clear"></div>
+
+                    
+                    <h3 class="qcld_short_genarator_scroll_wrap"><?php echo esc_html('Shortcode Generator'); ?></h3>
+                    <p><?php echo esc_html('We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode.'); ?></p>
+                    <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/classic.jpg" alt="shortcode generator" />
+                    <p><?php echo esc_html('See sample below for where to find it for Gutenberg.'); ?></p>
+                    <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/gutenburg.jpg" alt="shortcode generator" /> <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/gutenburg2.jpg" alt="shortcode generator" />
+                    <p><?php echo esc_html('This is how the shortcode generator will look like.'); ?></p>
+                    <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/shortcode-generator1.jpg" alt="shortcode generator" />
+                    <div>
+                      <h3><?php echo esc_html('Shortcode Example'); ?></h3>
+                      <p> <strong><?php echo esc_html('You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as "SLD" with WordPress content editor.'); ?></strong> </p>
+                      <p> <strong><u><?php echo esc_html('For all the lists:'); ?></u></strong> <br>
+                        <?php echo esc_html('[qcopd-directory mode="all" column="2" style="simple" orderby="date" order="DESC" enable_embedding="false"]'); ?> <br>
+                        <br>
+                        <strong><u><?php echo esc_html('For only a single list:'); ?></u></strong> <br>
+                        <?php echo esc_html('[qcopd-directory mode="one" list_id="75"]'); ?> <br>
+                        <br>
+                        <strong><u><?php echo esc_html('Available Parameters:'); ?></u></strong> <br>
+                      </p>
+                      <p> <strong><?php echo esc_html('1. mode'); ?></strong> <br>
+                        <?php echo esc_html('[Value for this option can be set as "one" or "all".]'); ?> </p>
+                      <p> <strong><?php echo esc_html('2. column'); ?></strong> <br>
+                        <?php echo esc_html('Avaialble values: "1", "2", "3" or "4".'); ?> </p>
+                      <p> <strong><?php echo esc_html('3. style'); ?></strong> <br>
+                        <?php echo esc_html('Avaialble values: "simple", "style-1", "style-2", "style-3", "style-4", "style-5", "style-16".'); ?> <br>
+                        <strong style="color: red;"> <?php echo esc_html('Only 6 templates are available in the free version. For more styles or templates, please purchase the'); ?> <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" target="_blank"><?php echo esc_html('premium version'); ?></a>. </strong> </p>
+                      <p> <strong><?php echo esc_html('4. orderby'); ?></strong> <br>
+                        <?php echo esc_html("Compatible order by values: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' and 'menu_order'."); ?> </p>
+                      <p> <strong><?php echo esc_html('5. order'); ?></strong> <br>
+                        <?php echo esc_html('Value for this option can be set as "ASC" for Ascending or "DESC" for Descending order.'); ?> </p>
+                      <p> <strong><?php echo esc_html('6. item_orderby'); ?></strong> <br>
+                        <?php echo esc_html('Value for this option are "title", "upvotes", "timestamp" that will be set as "ASC" & others will be "DESC" order.'); ?> </p>
+                      <p> <strong><?php echo esc_html('7. list_id'); ?></strong> <br>
+                        <?php echo esc_html('Only applicable if you want to display a single list [not all]. You can provide specific list id here as a value. You can also get ready shortcode for a single list under "Manage List Items" menu.'); ?> </p>
+                      <p> <strong><?php echo esc_html('8. enable_embedding'); ?></strong> <br>
+                        <?php echo esc_html('Allow visitors to embed list in other sites. Supported values - "true", "false".'); ?> <br>
+                        <?php echo esc_html('Example: enable_embedding="true"'); ?> </p>
+                      <p> <strong><?php echo esc_html('8. upvote'); ?></strong> <br>
+                        <?php echo esc_html('Allow visitors to list item. Supported values - "on", "off".'); ?> <br>
+                        <?php echo esc_html('Example: upvote="on"'); ?> </p>
+                      <p> <strong><?php echo esc_html('9. style-16 image show'); ?></strong> <br>
+                        <?php echo esc_html(' Add the shortcode parameter enable_image="true" to show images with style-16'); ?> <br>
+                        <?php echo esc_html('Example: enable_image="true"'); ?> </p>
+                      <p> <strong><?php echo esc_html('10. Search'); ?></strong> <br>
+                        <?php echo esc_html(' Add the shortcode parameter search="true" to show Live Search'); ?> <br>
+                        <?php echo esc_html('Example: search="true"'); ?> </p>
+
+                    </div>
+
+
                     <div class="clear"></div>
                     <h3> <?php echo esc_html('== Frequently Asked Questions =='); ?></h3>
                     <div class="qcld_sld_tabs">
@@ -333,50 +397,6 @@ function qcsettings_page_callback_func(){
                     <!-- <h3><?php echo esc_html('Please take a quick look at our'); ?> <a href="http://dev.quantumcloud.com/sld/tutorials/" class="button button-primary" target="_blank"><?php echo esc_html('Video Tutorials'); ?></a></h3> -->
                     <h3><?php echo esc_html('Note'); ?></h3>
                     <p><strong><?php echo esc_html('If you are having problem with adding more items or saving a list or your changes in the list are not getting saved then it is most likely because of a limitation set in your server. Your server has a limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save the List. The server’s configuration that dictates this is max_input_vars. You need to Set it to a high limit like max_input_vars = 15000. Since this is a server setting - you may need to contact your hosting company\'s support for this.'); ?></strong></p>
-                    <h3 class="qcld_short_genarator_scroll_wrap"><?php echo esc_html('Shortcode Generator'); ?></h3>
-                    <p><?php echo esc_html('We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode.'); ?></p>
-                    <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/classic.jpg" alt="shortcode generator" />
-                    <p><?php echo esc_html('See sample below for where to find it for Gutenberg.'); ?></p>
-                    <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/gutenburg.jpg" alt="shortcode generator" /> <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/gutenburg2.jpg" alt="shortcode generator" />
-                    <p><?php echo esc_html('This is how the shortcode generator will look like.'); ?></p>
-                    <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/shortcode-generator1.jpg" alt="shortcode generator" />
-                    <div>
-                      <h3><?php echo esc_html('Shortcode Example'); ?></h3>
-                      <p> <strong><?php echo esc_html('You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as "SLD" with WordPress content editor.'); ?></strong> </p>
-                      <p> <strong><u><?php echo esc_html('For all the lists:'); ?></u></strong> <br>
-                        <?php echo esc_html('[qcopd-directory mode="all" column="2" style="simple" orderby="date" order="DESC" enable_embedding="false"]'); ?> <br>
-                        <br>
-                        <strong><u><?php echo esc_html('For only a single list:'); ?></u></strong> <br>
-                        <?php echo esc_html('[qcopd-directory mode="one" list_id="75"]'); ?> <br>
-                        <br>
-                        <strong><u><?php echo esc_html('Available Parameters:'); ?></u></strong> <br>
-                      </p>
-                      <p> <strong><?php echo esc_html('1. mode'); ?></strong> <br>
-                        <?php echo esc_html('[Value for this option can be set as "one" or "all".]'); ?> </p>
-                      <p> <strong><?php echo esc_html('2. column'); ?></strong> <br>
-                        <?php echo esc_html('Avaialble values: "1", "2", "3" or "4".'); ?> </p>
-                      <p> <strong><?php echo esc_html('3. style'); ?></strong> <br>
-                        <?php echo esc_html('Avaialble values: "simple", "style-1", "style-2", "style-3".'); ?> <br>
-                        <strong style="color: red;"> <?php echo esc_html('Only 4 templates are available in the free version. For more styles or templates, please purchase the'); ?> <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" target="_blank"><?php echo esc_html('premium version'); ?></a>. </strong> </p>
-                      <p> <strong><?php echo esc_html('4. orderby'); ?></strong> <br>
-                        <?php echo esc_html("Compatible order by values: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' and 'menu_order'."); ?> </p>
-                      <p> <strong><?php echo esc_html('5. order'); ?></strong> <br>
-                        <?php echo esc_html('Value for this option can be set as "ASC" for Ascending or "DESC" for Descending order.'); ?> </p>
-                      <p> <strong><?php echo esc_html('6. item_orderby'); ?></strong> <br>
-                        <?php echo esc_html('Value for this option are "title", "upvotes", "timestamp" that will be set as "ASC" & others will be "DESC" order.'); ?> </p>
-                      <p> <strong><?php echo esc_html('7. list_id'); ?></strong> <br>
-                        <?php echo esc_html('Only applicable if you want to display a single list [not all]. You can provide specific list id here as a value. You can also get ready shortcode for a single list under "Manage List Items" menu.'); ?> </p>
-                      <p> <strong><?php echo esc_html('8. enable_embedding'); ?></strong> <br>
-                        <?php echo esc_html('Allow visitors to embed list in other sites. Supported values - "true", "false".'); ?> <br>
-                        <?php echo esc_html('Example: enable_embedding="true"'); ?> </p>
-                      <p> <strong><?php echo esc_html('8. upvote'); ?></strong> <br>
-                        <?php echo esc_html('Allow visitors to list item. Supported values - "on", "off".'); ?> <br>
-                        <?php echo esc_html('Example: upvote="on"'); ?> </p>
-                      <p> <strong><?php echo esc_html('9. style-16 image show'); ?></strong> <br>
-                        <?php echo esc_html(' Add the shortcode parameter enable_image="true" to show images with style-16'); ?> <br>
-                        <?php echo esc_html('Example: enable_image="true"'); ?> </p>
-
-                    </div>
                     <div style="padding: 15px 10px; border: 1px solid #ccc; text-align: center; margin-top: 20px;"> <?php echo esc_html('Crafted By:'); ?> <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank"><?php echo esc_html('Web Design Company'); ?></a> <?php echo esc_html('- QuantumCloud'); ?> </div>
                   </div>
                   <!-- /post-body-content --> 

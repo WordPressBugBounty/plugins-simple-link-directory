@@ -11,8 +11,8 @@ class Qcopd_BulkImportFree
 
     public $post_id;
 
-    function qcopd_info_menu()
-    {
+    function qcopd_info_menu(){
+
         add_submenu_page(
             'edit.php?post_type=sld',
             esc_html('Bulk Import'),
@@ -24,6 +24,7 @@ class Qcopd_BulkImportFree
                 'qcopd_bimport_page_content'
             )
         );
+        
     }
 
     function qcopd_bimport_page_content()

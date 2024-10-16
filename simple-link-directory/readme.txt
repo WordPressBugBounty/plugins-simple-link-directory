@@ -1,38 +1,38 @@
 === Simple Link Directory ===
 Contributors: quantumcloud
 Donate link: https://www.quantumcloud.com/products/simple-link-directory/
-Tags: directory, directory listing, link directory, listing directory, external link
+Tags: directory, directory listing, link directory, directory listings, web directory
 Requires at least: 4.6
 Tested up to: 6.6
-Stable tag: 8.3.0
+Stable tag: 8.3.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.quantumcloud.com/products/simple-link-directory/
 
-Link Directory plugin to curate topic based external link listings. Curate Link List, Link Archive, Partners or Vendors Directory
+Free Link Directory Plugin for WordPress to curate links for web directory. Link management, Directory Listings, Link Archive, Partners, Vendors Directory
 
 == Description ==
-= Link Directory Plugin for Modern Websites =
+= Free WordPress Link Directory Plugin to curate links for web directory =
 
-Link Directory plugin with a unique approach! Simple Link Directory is a unique and advanced WordPress Directory plugin and an External Link Listings Manager for One Page directory and Content Curation. Create innovative and elegant Link, Resources page or Link page on your WordPress website in matter of minutes.
+Free WordPress Link Directory Plugin for your External Link Directory Listings! Simple Link Directory is a unique and advanced WordPress Directory plugin and an External Link Listings Manager for One Page directory and Content Curation. Create innovative and elegant Link, Resources page or Link page on your WordPress website in matter of minutes.
 
 > 🚀 [Support, Bug Report, Feature Requests](https://www.quantumcloud.com/resources/free-support/) | [Directory Demo](https://dev.quantumcloud.com/sld/) | <strong>Upgrade to [Simple Link Directory Pro Now!](https://www.quantumcloud.com/products/simple-link-directory/)</strong>
 
-<strong>Simple Link Directory includes Shortcode Generator Directory Block for Gutenberg.</strong>
+<strong>Simple Link Directory includes Shortcode Generator Link Directory Block for Gutenberg.</strong>
 
 > ++ Looking for a Business Directory? Check out our [Simple Business Directory Plugin with Google Maps](https://wordpress.org/plugins/phone-directory/)
 
-It is the best wordpress directory plugin for the new age web. Compatible with any theme. With the Pro version of Simple Link Directory you can start making money or generate backlinks with the <strong>link exchange</strong> addon on complete Auto Pilot. This plugin can be used for Single page Business directory, One page External Link directory, Link library, Bookmark collection, Directory listing, Web directory, Listing directory, Video Gallery, Youtube Video Directory, Video Database, Vendor or Partners Directory, Affiliates Directory, Resources page, Link Curation, Intranet etc.
+SLD is the best Free WordPress Link Directory plugin for the new age web. Compatible with any theme. With the Pro version of Simple Link Directory you can Monetize directory listings and start making money or generate backlinks with the <strong>link exchange</strong> addon on complete Auto Pilot. This plugin can be used for Single page Business directory, One page External Link directory, Link library, Bookmark collection, Directory listing, Web directory, Listing directory, Video Gallery, Youtube Video Directory, Video Database, Vendor or Partners Directory, Affiliates Directory, Resources page, Link Curation, Intranet etc.
 
 > ++ Looking for a Complete Solution? Get a [Premium Link Directory Theme!](https://www.quantumcloud.com/products/themes/simple-link-directory/)
 
 
-= Who Should Use this Plugin? =
-This plugin is a good fir for you if you are a:
+= Who Should Use this Simple Link Directory Plugin? =
+This Link Directory plugin is a good fit for you if you are a:
 
 * Prolific Blogger and need a directory to showcase your links
 * SEO Specialist wanting to create backlinks from Link Exchange
-* Content Curator to create a Link Directory
+* Content Curator to create an External Link Directory
 * Marketer
 * Webmaster
 * Advertising or Marketing Agency
@@ -43,10 +43,10 @@ This plugin is a good fir for you if you are a:
 Do you manage a Resources Page or Links Page with lists of useful links to other websites? If so, Simple Link Diretory is a perfect solution for you to manage those links, show them beautifully and invite user engagement.
 
 <strong>Build a Complete Directory Website:</strong>
-These days one page or small directory websites have become quite popular. If you are passionate about something why not turn your bookmarks into a Single Page directory? With the help of this plugin, you can create niche specific Directory website within a matter of hours that can attract a lot of new visitors and attention.
+These days one page or small directory websites have become quite popular. If you are passionate about something why not turn your bookmarks into a Single Page directory? With the help of this plugin, you can create niche specific Web Directory websites within a matter of hours that can attract a lot of new visitors and attention.
 
-<strong>Create a Link Manager for Company Intranet:</strong>
-A lot of businesses require their company employees to access certain websites on regular basis. Such as Media or Marketing companies. You can create link directories for your company Intranet using this plugin. 
+<strong>Create a Link Management System for Company Intranet:</strong>
+A lot of businesses require their company employees to access certain websites on regular basis. Such as Media or Marketing companies. You can use this free link directory plugin for WordPress for your company Intranet.
 
 <strong>Create a Local Business Directory:</strong>
 Do you want to create Lists of the best restaurants or pet shops in your city? You can do that with SLD. Create a directory for Chiropractors, resorts, schools or local businesses with SLD.
@@ -63,12 +63,12 @@ Want to create useful directories with affiliate links? This plugin is perhaps t
 <strong>Create Top Sites List:</strong>
 Although, Simple Link Directory does not have all the bells and whistles of top site scripts but you can easily make it work like that. The Upvote feature allows users to Vote for Links that they like and find useful. Order by UpVote feature lets you sort the links by number of upvotes. Pretty handy.
 
-<strong>Make Money with Your Directory - Passive Income:</strong>
+<strong>Make Money with Your Link Directory - Passive Income:</strong>
 With the SLD Professional Version it is dead simple and insanely quick to create a best directory set up that can generate passive income for you over time. Do some SEO and regular blogging along with your website and you can start making money online with minimal effort.
 
 = Simple Link Directory Lite Version vs Professional Version = 
 
-The Lite or Free version of SLD is perfectly fine if you plan to have a small directory of few lists that you want to show on any one of your WordPress page. Below are the Lite version Main Features:
+The Free WordPress Link Directory is perfectly fine if you plan to have a small directory of few lists that you want to show on any one of your WordPress page. Below are the Lite version Main Features:
 
 * Unlimited Directories and Lists that can be displayed on any of your pages easily
 * Gutenberg Block for Directory
@@ -83,13 +83,14 @@ The Lite or Free version of SLD is perfectly fine if you plan to have a small di
 * Add Link Button that Can Link to A Contact Form Page of Your Choice so Anyone Can Suggest Links to Your
 * Easy and Quick Short Code Generator, so you do not have to hunt down the shortcode parameters
 
-A pro version of SLD is available with more advanced features to run a portal website.
-Pro features:
+A pro version of Simple Link Directory is available with more advanced features to run a link directory portal website and you can Monetize your directory listings.
+
+Simple Lik Diretory Pro features:
 
 <strong>Usability</strong>
 
-* Build lists with dozens or hundreds of links and show them in one page</li>
-* Auto Generate Title and Description from website link</li>
+* Build link lists with dozens or hundreds of links and show them in one page</li>
+* Auto Generate Title and Description from website links</li>
 * Auto Generate Thumbnail from Website link</li>
 * Topic based Link Lists that can be Displayed Category wise</li>
 * Multi Page mode generates Category, Lists and Link Details pages automatically starting with your page slug from a single shortcode</li>
@@ -125,7 +126,7 @@ Pro features:
 * Allow registered users to create their own Favorite List of links</li>
 
 
-<strong>Design</strong>
+<strong>Link Directory Designa</strong>
 
 * 16 templates to choose from for Single Page mode</li>
 * 2 templates to choose from for Multi Page mode</li>
@@ -136,7 +137,7 @@ Pro features:
 * Custom CSS to add your own style</li>
 
 
-<strong>Front End Submission Features</strong>
+<strong>Front End Submission to Monetize directory listings</strong>
 
 * Front End User Registration with Captcha, Log in, Link Submission</li>
 * Alternaive option for link submission button (link to a contact form or google doc)</li>
@@ -362,6 +363,9 @@ You can change the language texts from the Settings area. Currently, multi langu
 
 
 == Changelog ==
+
+= 8.3.1 =
+# Added Live Search feature
 
 = 8.3.0 =
 # UI Update

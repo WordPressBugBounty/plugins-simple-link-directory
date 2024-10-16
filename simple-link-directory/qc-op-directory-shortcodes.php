@@ -6,7 +6,9 @@ defined('ABSPATH') or die("No direct script access!");
 if ( ! function_exists( 'custom_sort_by_tpl_title' ) ) {
 	function custom_sort_by_tpl_title($a, $b) {
 	    //return $a['qcopd_item_title'] > $b['qcopd_item_title'];
-		return strnatcasecmp($a['qcopd_item_title'], $b['qcopd_item_title']);
+		if( isset($a['qcopd_item_title']) && isset($b['qcopd_item_title']) ){
+			return strnatcasecmp($a['qcopd_item_title'], $b['qcopd_item_title']);
+		}
 	}
 }
 
@@ -29,8 +31,8 @@ if ( ! function_exists( 'custom_sort_by_tpl_upvotes' ) ) {
 
 if ( ! function_exists( 'custom_sort_by_tpl_timestamp' ) ) {
 	function custom_sort_by_tpl_timestamp($a, $b) {
-		if( isset($a['qcopd_timelaps']) && isset($b['qcopd_timelaps']) )
-		{
+		if( isset($a['qcopd_timelaps']) && isset($b['qcopd_timelaps']) ){
+
 			// $aTime = (int)$a['qcopd_timelaps'];
 			// $bTime = (int)$b['qcopd_timelaps'];
 			// return $aTime < $bTime;
@@ -84,27 +86,27 @@ function show_qcopd_full_list( $atts = array() )
 	//Defaults & Set Parameters
 	extract( shortcode_atts(
 		array(
-			'orderby' => 'menu_order',
-			'order' => 'ASC',
-			'mode' => 'all',
-			'list_id' => '',
-			'column' => '1',
-			'style' => 'simple',
-			'list_img' => 'true',
-			'search' => 'true',
-			'category' => "",
-			'upvote' => "off",
-			'item_count' => "on",
-			'top_area' => "on",
-			'item_orderby' => "",
-			'item_order' => "",
-			'mask_url' => "off",
-			'enable_embedding' => 'false',
-			'title_font_size' => '',
-			'subtitle_font_size' => '',
-			'title_line_height' => '',
-			'subtitle_line_height' => '',
-			'enable_image' => '',
+			'orderby' 				=> 'menu_order',
+			'order' 				=> 'ASC',
+			'mode' 					=> 'all',
+			'list_id' 				=> '',
+			'column' 				=> '1',
+			'style' 				=> 'simple',
+			'list_img' 				=> 'true',
+			'search' 				=> '',
+			'category' 				=> "",
+			'upvote' 				=> "off",
+			'item_count' 			=> "on",
+			'top_area' 				=> "on",
+			'item_orderby' 			=> "",
+			'item_order' 			=> "",
+			'mask_url' 				=> "off",
+			'enable_embedding' 		=> '',
+			'title_font_size' 		=> '',
+			'subtitle_font_size' 	=> '',
+			'title_line_height' 	=> '',
+			'subtitle_line_height' 	=> '',
+			'enable_image' 			=> '',
 		), $atts
 	));
 
@@ -113,27 +115,27 @@ function show_qcopd_full_list( $atts = array() )
 
 	//ShortCode Atts
 	$shortcodeAtts = array(
-		'orderby' => $orderby,
-		'order' => $order,
-		'mode' => $mode,
-		'list_id' => $list_id,
-		'column' => $column,
-		'style' => $style,
-		'list_img' => $list_img,
-		'search' => $search,
-		'category' => $category,
-		'upvote' => $upvote,
-		'item_count' => $item_count,
-		'top_area' => $top_area,
-		'item_orderby' => $item_orderby,
-		'item_order' => $item_order,
-		'mask_url' => $mask_url,
-		'enable_embedding' => $enable_embedding,
-		'title_font_size' => $title_font_size,
-		'subtitle_font_size' => $subtitle_font_size,
-		'title_line_height' => $title_line_height,
-		'subtitle_line_height' => $subtitle_line_height,
-		'enable_image' => $enable_image,
+		'orderby' 				=> $orderby,
+		'order' 				=> $order,
+		'mode' 					=> $mode,
+		'list_id' 				=> $list_id,
+		'column' 				=> $column,
+		'style' 				=> $style,
+		'list_img' 				=> $list_img,
+		'search' 				=> $search,
+		'category' 				=> $category,
+		'upvote' 				=> $upvote,
+		'item_count' 			=> $item_count,
+		'top_area' 				=> $top_area,
+		'item_orderby' 			=> $item_orderby,
+		'item_order' 			=> $item_order,
+		'mask_url' 				=> $mask_url,
+		'enable_embedding' 		=> $enable_embedding,
+		'title_font_size' 		=> $title_font_size,
+		'subtitle_font_size' 	=> $subtitle_font_size,
+		'title_line_height' 	=> $title_line_height,
+		'subtitle_line_height' 	=> $subtitle_line_height,
+		'enable_image' 			=> $enable_image,
 	);
 	
 	$limit = -1;
@@ -149,12 +151,12 @@ function show_qcopd_full_list( $atts = array() )
 	
 	//Query Parameters
 	$list_args = array(
-		'post_type' => 'sld',
-		'posts_per_page' => $limit,
+		'post_type' 		=> 'sld',
+		'posts_per_page' 	=> $limit,
 	);
 	if($orderby!='none' or $order!='none'){
-		$list_args['orderby'] = $orderby;
-		$list_args['order'] = $order;
+		$list_args['orderby'] 	= $orderby;
+		$list_args['order'] 	= $order;
 	}
 	
 

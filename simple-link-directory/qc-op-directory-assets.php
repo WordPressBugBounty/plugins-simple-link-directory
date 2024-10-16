@@ -40,6 +40,22 @@ if ( ! function_exists( 'qcopd_load_all_scripts' ) ) {
 		//style 6 css
 		wp_register_style('sld-css-style-16', OCOPD_TPL_URL . "/style-16/template.css" );
 
+
+        $sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'on':'';
+        $sld_no_results_found       = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html('No Results Found for Your Search');
+
+        $customscript ='
+                var ajaxurl = "' . admin_url('admin-ajax.php') . '";
+                var qc_sld_get_ajax_nonce = "'.wp_create_nonce( 'qc-opd').'";
+                var sld_ajax_object_rtl = "'.$sld_enable_rtl.'";
+                var sld_no_results_found = "'.$sld_no_results_found.'";
+            ';
+
+		wp_add_inline_script( 'qcopd-custom-script', ($customscript), 'before' );
+
+
+
+
 	}
 }
 

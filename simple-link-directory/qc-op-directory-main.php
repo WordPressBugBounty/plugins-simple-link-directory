@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Simple Link Directory - Lite
+ * Plugin Name: Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.3.0
+ * Version: 8.3.1
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -46,6 +46,13 @@ require_once('qc-opd-setting-options.php');
 require_once('qc-rating-feature/qc-rating-class.php');
 require_once('modules/addons/addons.php');
 
+if ( ! function_exists( 'sld_languages_function_callback' ) ) {
+    function sld_languages_function_callback(){
+        load_plugin_textdomain( 'qc-opd', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
+    }
+}
+add_action('init', 'sld_languages_function_callback');
+
 
 add_action('wp_head', 'qcopd_add_outbound_click_tracking_script');
 
@@ -87,8 +94,8 @@ function promo_link_in_cpt_table()
     
     if( $current_screen == 'edit-sld' )
     {   
-        $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link">'.esc_html( "Upgrade to Pro" ).'</a></div>';
-        $link .= '<div class="alignleft actions"><a href="'.esc_url( admin_url('post-new.php?post_type=sld')).'" class="button">'.esc_html( "Add New List of Links" ).'</a></div>';
+        $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link">'.esc_html( "Upgrade to Pro", 'qc-opd' ).'</a></div>';
+        $link .= '<div class="alignleft actions"><a href="'.esc_url( admin_url('post-new.php?post_type=sld')).'" class="button">'.esc_html( "Add New List of Links", 'qc-opd' ).'</a></div>';
     }
     
     echo $link;
@@ -105,7 +112,7 @@ function promo_link_in_settings_page()
     
     $link = "";
     
-    $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link">'.esc_html( "Upgrade to Pro" ).'</a></div>';
+    $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link">'.esc_html( "Upgrade to Pro", 'qc-opd' ).'</a></div>';
     
     echo $link;
     
@@ -167,7 +174,7 @@ add_action( 'admin_menu' , 'qcopd_help_link_submenu', 20 );
 function qcopd_help_link_submenu(){
     global $submenu;
     
-    $link_text = "Help";
+    $link_text = esc_html("Shortcodes and Help");
     $submenu["edit.php?post_type=sld"][250] = array( $link_text, 'activate_plugins' , admin_url('edit.php?post_type=sld&page=sld_settings#help') );
     ksort($submenu["edit.php?post_type=sld"]);
     
@@ -235,7 +242,7 @@ add_action( 'admin_menu' , 'qcsld_help_link_submenu', 20 );
 function qcsld_help_link_submenu(){
 	global $submenu;
 	
-	$link_text = esc_html("Help");
+	$link_text = esc_html("Shortcodes and Help");
 	$submenu["edit.php?post_type=sld"][250] = array( $link_text, 'activate_plugins' , admin_url('edit.php?post_type=sld&page=sld_settings#help') );
 	ksort($submenu["edit.php?post_type=sld"]);
 	
@@ -284,6 +291,18 @@ function sld_plugin_loaded_fnc(){
 }
 
 function sld_activation_redirect( $plugin ) {
+
+    if (get_option('sld_enable_top_part') == ''){
+        update_option('sld_enable_top_part', 'on');
+    }
+
+    if (get_option('sld_enable_search') == ''){
+        update_option('sld_enable_search', 'on');
+    }
+
+    if (get_option('sld_enable_upvote') == ''){
+        update_option('sld_enable_upvote', 'on');
+    }
 
     $screen = get_current_screen();
 
@@ -336,7 +355,6 @@ add_action( 'admin_menu', 'sld_remove_admin_menu_items' );
 
 
 add_action( 'admin_notices', 'sld_wp_shortcode_notice',100 );
-
 function sld_wp_shortcode_notice(){
 
     global $pagenow, $typenow;

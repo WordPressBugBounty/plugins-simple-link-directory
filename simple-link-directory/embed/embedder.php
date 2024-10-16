@@ -78,8 +78,8 @@ if ($embed_link_button == 1) {
     add_action('qcsld_attach_embed_btn', 'qcld_custom_embedder');
 }
 
-function qcld_custom_embedder($shortcodeAtts)
-{
+function qcld_custom_embedder($shortcodeAtts){
+
     global $post;
 	
 	$site_title = get_bloginfo('title');
@@ -95,15 +95,42 @@ function qcld_custom_embedder($shortcodeAtts)
 	
     $pagename = $post->post_name;
 
-    if ($pagename != 'embed-link') {
+   // if ($pagename !== 'embed-link') {
 	
         ?>
-<div class="qcopd_embed_container">
+<div class="qcopd_embed_container sld-top-area">
+
+	<?php 
+
+	if(isset( $shortcodeAtts['search'] ) && $shortcodeAtts['search'] =='true'){
+		$searchSettings = 'on';
+	}else{
+		if( isset( $shortcodeAtts['search'] ) && $shortcodeAtts['search'] =='false'){
+			$searchSettings = 'off';
+		}else{
+			$searchSettings = get_option( 'sld_enable_search' );
+		}
+	}
+
+	//If the top area is not disabled (both serch and add item)
+	if( $searchSettings == 'on' ) {
+		?>
+        <div class="sld-half">
+            <form id="live-search" action="" class="styled" method="post">
+				<?php 
+					if(get_option('sld_lan_live_search')!=''){
+						$srcplaceholder = get_option('sld_lan_live_search');
+					}else{
+						$srcplaceholder = __('Live Search Items', 'qc-opd');
+					}
+				?>
+                <input type="text" class="text-input sld-search sld_search_filter" placeholder="<?php echo $srcplaceholder; ?>"/>
+            </form>
+        </div>
+	<?php } ?>
 
 
-
-
-<?php if(get_option( 'sld_add_new_button' )=='on' && get_option( 'sld_add_item_link' )!=''): ?>
+<?php if(get_option( 'sld_add_new_button' )=='on' && get_option( 'sld_add_item_link' )!=''){ ?>
 <a style="" href="<?php echo esc_url(get_option( 'sld_add_item_link' )); ?>" class="button-link cls-embed-btn">
 <?php 
 	if(get_option('sld_lan_add_link')!=''){
@@ -113,9 +140,21 @@ function qcld_custom_embedder($shortcodeAtts)
 	}
 ?>
 </a>
-<?php endif; ?>
+<?php } ?>
 
-<?php if($shortcodeAtts['enable_embedding'] == 'true'): ?>
+<?php 
+
+	if(isset( $shortcodeAtts['enable_embedding'] ) && $shortcodeAtts['enable_embedding'] =='true'){
+		$enable_embedding = 'on';
+	}else{
+		if( isset( $shortcodeAtts['enable_embedding'] ) && $shortcodeAtts['enable_embedding'] =='false'){
+			$enable_embedding = 'off';
+		}else{
+			$enable_embedding = get_option( 'sld_enable_top_part' );
+		}
+	}
+
+if($enable_embedding == 'on'){ ?>
 <a class="button-link js-open-modal cls-embed-btn" href="#" data-modal-id="popup"
            data-url="<?php bloginfo('url'); ?>/embed-link"
            data-order="<?php echo $shortcodeAtts['order']; ?>"
@@ -139,11 +178,11 @@ function qcld_custom_embedder($shortcodeAtts)
             ?>
 		   
 		   </a>
-<?php endif; ?>
+<?php } ?>
 
 
 </div>
-<?php }
+<?php //}
 }
 
 function sld_share_modal() {

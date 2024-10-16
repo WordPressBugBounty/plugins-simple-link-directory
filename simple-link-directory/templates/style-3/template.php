@@ -16,11 +16,12 @@ global $wpdb;
 if ( $list_query->have_posts() ) 
 {
 	
-	if(get_option('sld_enable_top_part')=='on') :
+	if(get_option('sld_enable_top_part')=='on' || get_option('sld_enable_search')=='on') :
 		
 	 do_action('qcsld_attach_embed_btn', $shortcodeAtts);
 	
 	endif;
+
 
 	//Directory Wrap or Container
 	$sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'dir="rtl"':'';
