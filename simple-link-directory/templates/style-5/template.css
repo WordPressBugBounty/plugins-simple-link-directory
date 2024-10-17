@@ -314,3 +314,16 @@ color: #777;
     text-align: center;
     width: 100%;}
 
+    .style-5 .ca-main {
+      font-size: 18px;
+      width: 97%;
+
+  }
+
+  .style-5 .ca-menu li:hover .ca-main {
+    display: none;
+}
+.style-5 .ca-menu li:hover .ca-sub {
+  opacity: 0.8;
+  top: 56px;
+}

@@ -348,3 +348,21 @@ transform: rotate(75deg);
     text-align: center;
     width: 100%;
 }
+.style-4 .ca-main {
+  font-size: 16px;
+  top: 110px;
+}
+.style-4 .ca-icon {
+  top: 20px;
+}
+.style-4 .ca-main {
+  top: 90px;
+}
+
+.style-4 .ca-menu li:hover .ca-main {
+  display: none;
+}
+
+.style-4 .ca-menu li:hover .ca-sub {
+  top: 34px;
+}

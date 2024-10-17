@@ -184,6 +184,7 @@ jQuery(document).ready(function($){
 		
 		if( style == 'simple' || style == 'style-1' || style == 'style-16' ){
 			$('#sld_column_div').css('display', 'block');
+
 		}
 		else{
 			$('#sld_column_div').css('display', 'none');
@@ -203,6 +204,16 @@ jQuery(document).ready(function($){
 		}
 		else{
 		   $('#demo-preview-link #demo-url').html('<a href="http://dev.quantumcloud.com/sld/" target="_blank">http://dev.quantumcloud.com/sld/</a>');
+		}
+
+		if(style == 'style-1'){
+			$('#sld_column option[value="3"]').hide();
+			$('#sld_column option[value="4"]').hide();
+
+		}else{
+			$('#sld_column option[value="3"]').show();
+			$('#sld_column option[value="4"]').show();
+			
 		}		
 		
 	});

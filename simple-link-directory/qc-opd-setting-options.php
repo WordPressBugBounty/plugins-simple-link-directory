@@ -164,7 +164,9 @@ function qcsettings_page_callback_func(){
         <tr valign="top">
           <th scope="row"><?php echo esc_html('Add Button Link'); ?></th>
           <td><input type="text" name="sld_add_item_link" size="100" value="<?php echo esc_attr( get_option('sld_add_item_link') ); ?>"  />
-            <i><?php echo esc_html('Example: http://www.yourdomain.com'); ?></i></td>
+            <i><?php echo esc_html('Example:  https://yourdomain.com/submit-link/'); ?></i>
+            <p><?php echo esc_html('Paste the full URL of a page that contains a contact form to submit link '); ?> ( <?php echo esc_html('Front end submission with monetization feature is available with the '); ?> <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank"><?php echo esc_html('Pro version'); ?></a> ) </p>
+          </td>
         </tr>
         <tr valign="top">
           <th scope="row"><?php echo esc_html('Track Outbound Clicks'); ?></th>
@@ -247,7 +249,7 @@ function qcsettings_page_callback_func(){
 
                     <div class="clear"></div>
 
-                    
+
                     <h3 class="qcld_short_genarator_scroll_wrap"><?php echo esc_html('Shortcode Generator'); ?></h3>
                     <p><?php echo esc_html('We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode.'); ?></p>
                     <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/classic.jpg" alt="shortcode generator" />

@@ -297,3 +297,18 @@ transform: rotate(75deg);
   float: right;
   margin: 0 0 15px 10px;
 }
+
+.style-3 .ca-main {
+    font-size: 18px;
+    top: 90px;
+
+}
+
+.style-3 .ca-menu li:hover .ca-main {
+    display: none;
+}
+.style-3 .ca-menu li:hover .ca-sub {
+    opacity: 0.8;
+    top: 60px;
+    padding: 0 20px;
+}
