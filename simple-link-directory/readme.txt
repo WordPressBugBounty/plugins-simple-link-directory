@@ -3,8 +3,8 @@ Contributors: quantumcloud
 Donate link: https://www.quantumcloud.com/products/simple-link-directory/
 Tags: directory, directory listing, link directory, link management, web directory
 Requires at least: 4.6
-Tested up to: 6.6
-Stable tag: 8.3.5
+Tested up to: 6.7
+Stable tag: 8.3.6
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.quantumcloud.com/products/simple-link-directory/
@@ -16,7 +16,8 @@ Free LINK DIRECTORY Plugin for WordPress to curate links for Web Directory. Link
 
 Free WordPress Link Directory Plugin for your External Link Directory Listings! Simple Link Directory is a unique and advanced WordPress Directory plugin and an External Link Listings Manager for One Page directory and Content Curation. Create innovative and elegant Link, Resources page or Link page on your WordPress website in matter of minutes.
 
-> 🚀 [Support, Bug Report, Feature Requests](https://www.quantumcloud.com/resources/free-support/) | [Directory Demo](https://dev.quantumcloud.com/sld/) | <strong>Upgrade to [Simple Link Directory Pro](https://www.quantumcloud.com/products/simple-link-directory/) now!</strong>
+> 🚀 <strong>Upgrade to [Simple Link Directory](https://www.quantumcloud.com/products/simple-link-directory/) PRO now!</strong>
+> 🚀 [Support, Bug Report, Feature Requests](https://www.quantumcloud.com/resources/free-support/) | [Link Directory Demo](https://dev.quantumcloud.com/sld/)
 
 <strong>Simple Link Directory includes Shortcode Generator Link Directory Block for Gutenberg.</strong>
 
@@ -363,6 +364,9 @@ You can change the language texts from the Settings area. Currently, multi langu
 
 
 == Changelog ==
+
+= 8.3.6 =
+# Black Friday sale
 
 = 8.3.5 =
 # End sale
