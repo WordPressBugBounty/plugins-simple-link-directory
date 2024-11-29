@@ -3,11 +3,11 @@
  * Plugin Name: Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.3.6
+ * Version: 8.3.7
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
- * Tested up to: 6.7
+ * Tested up to: 6.7.1
  * Text Domain: qc-opd
  * Domain Path: /lang/
  * License: GPL2
@@ -16,14 +16,33 @@
 defined('ABSPATH') or die("No direct script access!");
 
 //Custom Constants
-define('QCOPD_URL', plugin_dir_url(__FILE__));
-define('QCOPD_IMG_URL', QCOPD_URL . "assets/images");
-define('QCOPD_ASSETS_URL', QCOPD_URL . "assets");
+if ( ! defined( 'QCOPD_URL' ) ) {
+    define('QCOPD_URL', plugin_dir_url(__FILE__));
+}
 
-define('QCOPD_DIR', dirname(__FILE__));
-define('QCOPD_INC_DIR', QCOPD_DIR . "/inc");
-define('OCOPD_TPL_URL', QCOPD_URL . "templates");
-define('OCOPD_TPL_DIR', QCOPD_DIR . "templates");
+if ( ! defined( 'QCOPD_IMG_URL' ) ) {
+    define('QCOPD_IMG_URL', QCOPD_URL . "assets/images");
+}
+
+if ( ! defined( 'QCOPD_ASSETS_URL' ) ) {
+    define('QCOPD_ASSETS_URL', QCOPD_URL . "assets");
+}
+
+if ( ! defined( 'QCOPD_DIR' ) ) {
+    define('QCOPD_DIR', dirname(__FILE__));
+}
+
+if ( ! defined( 'QCOPD_INC_DIR' ) ) {
+    define('QCOPD_INC_DIR', QCOPD_DIR . "/inc");
+}
+
+if ( ! defined( 'OCOPD_TPL_URL' ) ) {
+    define('OCOPD_TPL_URL', QCOPD_URL . "templates");
+}
+
+if ( ! defined( 'OCOPD_TPL_DIR' ) ) {
+    define('OCOPD_TPL_DIR', QCOPD_DIR . "templates");
+}
 
 //Include files and scripts
 

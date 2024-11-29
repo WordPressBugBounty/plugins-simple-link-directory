@@ -378,3 +378,18 @@ i.qc_sld_btn {
   color: #000;
   float: right;
 }
+
+
+.qcld-tabs-custom {
+    background: #fff;
+    padding: 20px;
+    margin: 10px 0 0 0;
+    border-radius: 6px;
+}
+
+
+@media (min-width: 1200px) {
+    .sld-container {
+        width: 96% !important;
+    }
+  }

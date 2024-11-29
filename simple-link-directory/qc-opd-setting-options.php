@@ -78,7 +78,7 @@ function qcsettings_page_callback_func(){
     <?php settings_fields( 'qc-sld-plugin-settings-group' ); ?>
     <?php do_settings_sections( 'qc-sld-plugin-settings-group' ); ?>
    
-      <div id="getting_started">
+      <div id="getting_started" >
         <div class="sld-container"><div class="sld-row">
           <div class="is-dismissible sld-Getting-Started " style="display:none">
             <div class="sld_Started_carousel slick-slider">
@@ -138,7 +138,7 @@ function qcsettings_page_callback_func(){
         </div>
       </div>
     </div>
-    <div id="general_settings" style="display:none">
+    <div id="general_settings" style="display:none" class="qcld-tabs-custom">
       
       <table class="form-table">
         <tr valign="top">
@@ -195,7 +195,7 @@ function qcsettings_page_callback_func(){
         </tr>
       </table>
     </div>
-    <div id="language_settings" style="display:none">
+    <div id="language_settings" style="display:none" class="qcld-tabs-custom">
       <table class="form-table">
         <tr valign="top">
           <th scope="row"><?php echo esc_html('Add New'); ?></th>
@@ -219,7 +219,7 @@ function qcsettings_page_callback_func(){
         </tr>
       </table>
     </div>
-    <div id="custom_css" style="display:none">
+    <div id="custom_css" style="display:none" class="qcld-tabs-custom">
       <table class="form-table">
         <tr valign="top">
           <th scope="row"><?php echo esc_html('Custom CSS (Use *!important* flag if the changes does not take place)'); ?></th>
@@ -228,7 +228,7 @@ function qcsettings_page_callback_func(){
         </tr>
       </table>
     </div>
-    <div id="custom_js" style="display:none">
+    <div id="custom_js" style="display:none" class="qcld-tabs-custom">
       <table class="form-table">
         <tr valign="top">
           <th scope="row"><?php echo esc_html('Custom Javascript'); ?></th>
@@ -237,7 +237,7 @@ function qcsettings_page_callback_func(){
         </tr>
       </table>
     </div>
-    <div id="help" style="display:none">
+    <div id="help" style="display:none" class="qcld-tabs-custom">
       <table class="form-table">
         <tr valign="top">
           <th scope="row"><?php echo esc_html('Shortcodes and Help'); ?></th>
