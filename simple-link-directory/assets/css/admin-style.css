@@ -387,9 +387,60 @@ i.qc_sld_btn {
     border-radius: 6px;
 }
 
+.modal.qcld_alert_msg_modal {
+  padding-top: 100px;
+}
+
+@media (max-width: 667px) {
+  .modal.qcld_alert_msg_modal .modal-content {
+      padding: 15px;
+      width: 85%;
+  }
+}
+
+.qcld_alert_msg_modal .qcld_alert_msg{
+    background: #e9fbf6;
+    padding: 8px 8px;
+    color: #222 !important;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+    text-align: center;
+
+}
+.qcld_alert_msg_modal .qcld_alert_msg a{
+  text-decoration: none;
+}
+
+.qcld_alert_msg_modal .sld_alert_msg_close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.qcld_alert_msg_modal .sld_alert_msg_close:hover, 
+.qcld_alert_msg_modal .sld_alert_msg_close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.qcld_alert_msg_modal button.sld_alert_msg_close.button {
+    background: #f59e0b;
+    border: #f59e0b;
+    margin-right: 5px;
+    color:#fff;
+}
+
+.qcld_alert_msg_modal .qcld_alert_msg_footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
 
 @media (min-width: 1200px) {
-    .sld-container {
-        width: 96% !important;
-    }
+  .sld-container {
+      width: 96% !important;
   }
+}

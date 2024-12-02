@@ -77,6 +77,8 @@ class CMB_Meta_Box {
 
 	function enqueue_scripts() {
 
+		wp_enqueue_script( 'jquery-ui-sortable');
+
 		wp_enqueue_script( 'cmb-scripts', trailingslashit( CMB_URL ) . 'js/cmb.js', array( 'jquery' ) );
 
 		wp_localize_script( 'cmb-scripts', 'CMBData', array(

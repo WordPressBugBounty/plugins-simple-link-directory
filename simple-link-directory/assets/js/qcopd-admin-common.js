@@ -1,5 +1,24 @@
 jQuery(document).ready(function($){
 
+	//sld_list_elements
+
+	var sld_list_elements = $('#qcopd_list_item01 .field-item[data-class="CMB_Group_Field"]').not(':hidden').length;
+	$('.qcld_alert_msg_modal').css({'display': 'none'});
+	if ( sld_list_elements === 1  ) {
+        $('.qcld_alert_msg_modal').css({'display': 'block'});
+    }
+
+	$(document).on( 'click', '.sld_alert_msg_close', function(){
+        $('.qcld_alert_msg_modal').css({'display': 'none'});
+    })
+
+	$(document).on( 'click', '.sld_add_more_item', function(){
+        $('.qcld_alert_msg_modal').css({'display': 'none'});
+        var scroll_top = $("body").get(0).scrollHeight;
+        var scroll_tops = $(".sld_list_elements").get(0).scrollHeight;
+        $("html, body").animate({ scrollTop: scroll_top - scroll_tops }, 1500);
+        $('.sld_list_elements .button.repeat-field').trigger('click');
+    })
 	
 
     var storedNoticeId = localStorage.getItem('qcld_sld_Notice_set');

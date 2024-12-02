@@ -268,3 +268,40 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 }
 
 add_action( 'wp_ajax_show_qcsld_shortcodes', 'qcsld_render_shortcode_modal_free');
+
+if ( ! function_exists( 'qcsld_render_message_alert_modal_free' ) ) {
+	function qcsld_render_message_alert_modal_free() {
+
+		$screen = get_current_screen();
+      	if( isset( $screen->post_type ) && ( $screen->post_type == 'sld' ) ){
+		?>
+		<div class="modal qcld_alert_msg_modal" style="display: none">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="sld_alert_msg_close">
+					<span class="dashicons dashicons-no"></span>
+				</span>
+				<h3><?php esc_html_e( 'SLD - Alert' , 'qc-opd' ); ?></h3>
+				<hr/>
+				<div class="qcld_alert_wrap">
+					<div class="qcld_alert_msg">
+						<p><?php esc_html_e( 'A list should have more than just 1 item.' , 'qc-opd' ); ?></p>
+						<p> <?php esc_html_e( 'We recommend' , 'qc-opd' ); ?> <b><?php esc_html_e( '10-30' , 'qc-opd' ); ?></b> <?php esc_html_e( 'links/businesses for each List.' , 'qc-opd' ); ?> </p> 
+						<p><?php esc_html_e( 'Create multiple Lists and show them all on a page using the' , 'qc-opd' ); ?> <a href="<?php echo esc_url( admin_url('edit.php?post_type=sld&page=sld_settings#help') ); ?>" target="_blank"><?php esc_html_e( 'Shortcode Generator.' , 'qc-opd' ); ?></a></p>
+					</div>
+				</div>
+				<div class="qcld_alert_msg_footer">
+					<button class="sld_alert_msg_close button button-primary button-small" ><?php echo esc_html('No'); ?></button> 
+					<button class="sld_add_more_item button button-primary button-small" ><?php echo esc_html('Add more item'); ?></button>
+					
+				</div>
+			</div>
+
+		</div>
+		<?php
+		exit;
+		}
+	}
+}
+
+add_action( 'admin_footer', 'qcsld_render_message_alert_modal_free');

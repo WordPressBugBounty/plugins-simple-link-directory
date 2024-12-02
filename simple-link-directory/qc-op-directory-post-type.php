@@ -7,13 +7,13 @@ if ( ! function_exists( 'qcopd_register_cpt_sld' ) ) {
 	function qcopd_register_cpt_sld() {
 		
 		$qc_list_labels = array(
-			'name'               => _x( 'Manage List Items', 'qc-opd' ),
+			'name'               => _x( 'Manage Lists', 'qc-opd' ),
 			'singular_name'      => _x( 'Manage List Item', 'qc-opd' ),
 			'add_new'            => _x( 'New List', 'qc-opd' ),
 			'add_new_item'       => __( 'Add New List Item' ),
 			'edit_item'          => __( 'Edit List Item' ),
 			'new_item'           => __( 'New List Item' ),
-			'all_items'          => __( 'Manage List Items' ),
+			'all_items'          => __( 'Manage Lists' ),
 			'view_item'          => __( 'View List Item' ),
 			'search_items'       => __( 'Search List Item' ),
 			'not_found'          => __( 'No List Item found' ),
@@ -114,6 +114,7 @@ if ( ! function_exists( 'cmb_qcopd_dir_fields' ) ) {
 			array( 'id' => 'list_item_bg_color',  'name' => 'Item Background Color', 'type' => 'colorpicker', 'cols' => 2, 'default' => '0' ),
 			
 		);
+	    
 
 		$meta_boxes[] = array(
 			'title' 		=> __('List Elements'),
