@@ -62,6 +62,8 @@ if ( ! function_exists( 'qcopd_load_all_scripts' ) ) {
 if ( ! function_exists( 'qcsld_admin_enqueue' ) ) {
 	function qcsld_admin_enqueue(){
 		global $post_type;
+
+		wp_enqueue_media();
 		
 		wp_register_style( 'qcopd-custom-admin-css', QCOPD_ASSETS_URL . '/css/admin-style.css');
 		wp_enqueue_style( 'qcopd-custom-admin-css' );

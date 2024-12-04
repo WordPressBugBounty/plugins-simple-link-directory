@@ -446,7 +446,8 @@ class CMB_File_Field extends CMB_Field {
 		parent::enqueue_scripts();
 
 		wp_enqueue_media( array( 'post' => $post_ID ));
-		wp_enqueue_script( 'cmb-file-upload', trailingslashit( CMB_URL ) . 'js/file-upload.js', array( 'jquery', 'cmb-scripts' ) );
+
+		wp_enqueue_script( 'cmb-file-upload', trailingslashit( CMB_URL ) . 'js/file-upload.js', array( 'jquery', 'media-upload', 'cmb-scripts' ) );
 
 	}
 

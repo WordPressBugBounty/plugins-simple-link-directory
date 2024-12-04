@@ -293,13 +293,11 @@ if ( ! function_exists( 'qcsld_render_message_alert_modal_free' ) ) {
 				<div class="qcld_alert_msg_footer">
 					<button class="sld_alert_msg_close button button-primary button-small" ><?php echo esc_html('No'); ?></button> 
 					<button class="sld_add_more_item button button-primary button-small" ><?php echo esc_html('Add more item'); ?></button>
-					
 				</div>
 			</div>
-
 		</div>
 		<?php
-		exit;
+
 		}
 	}
 }
