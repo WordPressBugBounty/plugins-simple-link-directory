@@ -3,7 +3,7 @@
  * Plugin Name: Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.3.9
+ * Version: 8.4.0
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -381,17 +381,17 @@ function sld_wp_shortcode_notice(){
     if ( isset($typenow) && $typenow == 'sld'  ) {
     ?>
 
-        <div id="message-sld" class="notice notice-info is-dismissible">
+        <!-- <div id="message-sld" class="notice notice-info is-dismissible">
             <?php
-            printf(
+            /*printf(
                 __('%s  %s  %s', 'dna88-wp-notice'),
                 '<a href="'.esc_url('https://www.quantumcloud.com/products/simple-link-directory/').'" target="_blank">',
                 '<img src="'.esc_url(QCOPD_ASSETS_URL).'/images/blackfriday24-sld.jpg" >',
                 '</a>'
-            );
+            );*/
 
             ?>
-        </div>
+        </div> -->
 
 
         <div id="message" class="notice notice-info is-dismissible">
