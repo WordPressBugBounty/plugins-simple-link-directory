@@ -1,5 +1,5 @@
 <?php
-
+defined('ABSPATH') or die("No direct script access!");
 
 $embed_link_button = 1;
 
