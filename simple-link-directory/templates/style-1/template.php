@@ -72,7 +72,7 @@ if ( $list_query->have_posts() )
 
 	$sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'dir="rtl"':'';
 
-	echo '<div class="qcopd-list-wrapper" '.$sld_enable_rtl.'><div id="opd-list-holder" class="qc-grid qcopd-list-holder">';
+	echo '<div class="qcld-main-container-style-1"><div class="qcopd-list-wrapper" '.$sld_enable_rtl.'><div id="opd-list-holder" class="qc-grid qcopd-list-holder opd-list-holder-style-1">';
 
 	$listId = 1;
 
@@ -98,15 +98,15 @@ if ( $list_query->have_posts() )
 
 		if( $item_orderby == 'title' )
 		{
-			usort($lists, "custom_sort_by_tpl_title");
+			usort($lists, "sld_custom_sort_by_tpl_title");
 		}
 		if( $item_orderby == 'upvotes' )
 		{
-			usort($lists, "custom_sort_by_tpl_upvotes");
+			usort($lists, "sld_custom_sort_by_tpl_upvotes");
 		}
 		if( $item_orderby == 'timestamp' )
 		{
-			usort($lists, "custom_sort_by_tpl_timestamp");
+			usort($lists, "sld_custom_sort_by_tpl_timestamp");
 		}
 
 		?>
@@ -161,7 +161,7 @@ if ( $list_query->have_posts() )
 							$masked_url = isset( $list['qcopd_item_link'] ) ? esc_url($list['qcopd_item_link']) : '';
 						?>
 						<!-- List Anchor -->
-						<a <?php echo (isset($list['qcopd_item_nofollow']) && $list['qcopd_item_nofollow'] == 1) ? 'rel="nofollow"' : ''; ?> href="<?php echo esc_url($masked_url); ?>" <?php echo (isset($list['qcopd_item_newtab']) && $list['qcopd_item_newtab'] == 1) ? 'target="_blank"' : ''; ?>>
+						<a class="qcld-con-list-img" <?php echo (isset($list['qcopd_item_nofollow']) && $list['qcopd_item_nofollow'] == 1) ? 'rel="nofollow"' : ''; ?> href="<?php echo esc_url($masked_url); ?>" <?php echo (isset($list['qcopd_item_newtab']) && $list['qcopd_item_newtab'] == 1) ? 'target="_blank"' : ''; ?>>
 
 							<!-- Image, If Present -->
 							<?php if( ($list_img == "true") && isset($list['qcopd_item_img'])  && $list['qcopd_item_img'] != "" ) : ?>
@@ -176,7 +176,10 @@ if ( $list_query->have_posts() )
 									<img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/list-image-placeholder.png" alt="">
 								</span>
 							<?php endif; ?>
+							</a>
+							<a class="qcld-con-list" <?php echo (isset($list['qcopd_item_nofollow']) && $list['qcopd_item_nofollow'] == 1) ? 'rel="nofollow"' : ''; ?> href="<?php echo esc_url($masked_url); ?>" <?php echo (isset($list['qcopd_item_newtab']) && $list['qcopd_item_newtab'] == 1) ? 'target="_blank"' : ''; ?>>
 
+							<div class="qcld-sld-content-dividar visible"></div>
 							<!-- Link Text -->
 							<div class="ca-content">
                                 <h3 class="ca-main <?php echo $canContentClass; ?>">
@@ -197,7 +200,7 @@ if ( $list_query->have_posts() )
 						<?php if( $upvote == 'on' ) : ?>
 
 							<!-- upvote section -->
-							<div class="upvote-section">
+							<div class="upvote-section style-1-upvote-section">
 								<span data-post-id="<?php echo esc_attr(get_the_ID()); ?>" data-item-title="<?php echo ( isset($list['qcopd_item_title']) ? esc_html(trim($list['qcopd_item_title'])) : '' ); ?>" data-item-link="<?php echo ( isset($list['qcopd_item_link']) ? esc_url($list['qcopd_item_link']) : '' ); ?>" class="upvote-btn upvote-on">
 									<i class="fa fa-thumbs-up"></i>
 								</span>
@@ -238,6 +241,6 @@ if ( $list_query->have_posts() )
 	echo '<div class="sld-clearfix"></div>
 			</div>
 		<div class="sld-clearfix"></div>
-	</div>';
+	</div></div>';
 
 }

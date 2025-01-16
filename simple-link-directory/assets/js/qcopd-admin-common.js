@@ -1,6 +1,7 @@
 jQuery(document).ready(function($){
 
 	//sld_list_elements
+	$('#sld_width_div').css('display', 'none');
 
 	var sld_list_elements = $('#qcopd_list_item01 .field-item[data-class="CMB_Group_Field"]').not(':hidden').length;
 	$('.qcld_alert_msg_modal').css({'display': 'none'});
@@ -73,6 +74,7 @@ jQuery(document).ready(function($){
 	
       	var mode = $('#sld_mode').val();
       	var column = $('#sld_column').val();
+      	var sld_width = $('#sld_width').val();
       	var style = $('#sld_style').val();
       	var upvote = $('.sld_upvote:checked').val();
       	var search = $('.sld_search:checked').val();
@@ -160,6 +162,10 @@ jQuery(document).ready(function($){
             shortcodedata +=' subtitle_line_height="'+subtitle_line_height+'"';
         }
 		  
+		  if( sld_width !== '' ){
+			  shortcodedata +=' min_width="'+sld_width+'px"';
+		  }
+		  
 		  shortcodedata += ']';
 		
 		  /*tinyMCE.activeEditor.selection.setContent(shortcodedata);
@@ -234,6 +240,17 @@ jQuery(document).ready(function($){
 			$('#sld_column option[value="4"]').show();
 			
 		}		
+		
+	}).on( 'change', '#sld_column',function(){
+	
+		var sld_column = $('#sld_column').val();
+		
+		if( sld_column == 3 || sld_column == 4 ){
+			$('#sld_width_div').css('display', 'block');
+		}else{
+			$('#sld_width_div').css('display', 'none');
+		}
+		
 		
 	});
 

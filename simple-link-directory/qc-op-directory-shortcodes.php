@@ -3,21 +3,22 @@
 defined('ABSPATH') or die("No direct script access!");
 
 /*Custom Item Sort Logic*/
-if ( ! function_exists( 'custom_sort_by_tpl_title' ) ) {
-	function custom_sort_by_tpl_title($a, $b) {
+if ( ! function_exists( 'sld_custom_sort_by_tpl_title' ) ) {
+	function sld_custom_sort_by_tpl_title($a, $b) {
 	    //return $a['qcopd_item_title'] > $b['qcopd_item_title'];
 		if( isset($a['qcopd_item_title']) && isset($b['qcopd_item_title']) ){
-			return strnatcasecmp($a['qcopd_item_title'], $b['qcopd_item_title']);
+			return strnatcasecmp(trim($a['qcopd_item_title']), trim($b['qcopd_item_title']));
 		}
+
 	}
 }
 
-if ( ! function_exists( 'custom_sort_by_tpl_upvotes' ) ) {
-	function custom_sort_by_tpl_upvotes($a, $b) {
+if ( ! function_exists( 'sld_custom_sort_by_tpl_upvotes' ) ) {
+	function sld_custom_sort_by_tpl_upvotes($a, $b) {
 	   // return @($a['qcopd_upvote_count'] * 1 < $b['qcopd_upvote_count'] * 1);
 
-		$a_qcopd_upvote_count = isset($a['qcopd_upvote_count']) && !empty( $a['qcopd_upvote_count'] ) ? $a['qcopd_upvote_count'] : 0;
-		$b_qcopd_upvote_count = isset($b['qcopd_upvote_count']) && !empty( $b['qcopd_upvote_count'] ) ? $b['qcopd_upvote_count'] : 0;
+		$a_qcopd_upvote_count = isset($a['qcopd_upvote_count']) && !empty( $a['qcopd_upvote_count'] ) ? (int)$a['qcopd_upvote_count'] : 0;
+		$b_qcopd_upvote_count = isset($b['qcopd_upvote_count']) && !empty( $b['qcopd_upvote_count'] ) ? (int)$b['qcopd_upvote_count'] : 0;
 
 		if( $a_qcopd_upvote_count === $b_qcopd_upvote_count ){
 			return 0;
@@ -29,8 +30,8 @@ if ( ! function_exists( 'custom_sort_by_tpl_upvotes' ) ) {
 	}
 }
 
-if ( ! function_exists( 'custom_sort_by_tpl_timestamp' ) ) {
-	function custom_sort_by_tpl_timestamp($a, $b) {
+if ( ! function_exists( 'sld_custom_sort_by_tpl_timestamp' ) ) {
+	function sld_custom_sort_by_tpl_timestamp($a, $b) {
 		if( isset($a['qcopd_timelaps']) && isset($b['qcopd_timelaps']) ){
 
 			// $aTime = (int)$a['qcopd_timelaps'];
@@ -92,6 +93,7 @@ function show_qcopd_full_list( $atts = array() )
 			'list_id' 				=> '',
 			'column' 				=> '1',
 			'style' 				=> 'simple',
+			'min_width' 			=> '',
 			'list_img' 				=> 'true',
 			'search' 				=> '',
 			'category' 				=> "",
@@ -121,6 +123,7 @@ function show_qcopd_full_list( $atts = array() )
 		'list_id' 				=> $list_id,
 		'column' 				=> $column,
 		'style' 				=> $style,
+		'min_width' 			=> $min_width,
 		'list_img' 				=> $list_img,
 		'search' 				=> $search,
 		'category' 				=> $category,
@@ -139,6 +142,12 @@ function show_qcopd_full_list( $atts = array() )
 	);
 	
 	$limit = -1;
+
+
+	if( isset($min_width) && !empty($min_width) ){
+		$css = '.qcopd-list-wrapper {min-width: '.$min_width.' }';
+		wp_add_inline_style( 'qcopd-custom-css', $css );
+	}
 
 	if( $mode == 'one' )
 	{

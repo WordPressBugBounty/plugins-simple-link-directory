@@ -1,6 +1,9 @@
 /*Default Template*/
-
-.simple .qcopd-single-list ul{
+.qcld-main-container-style-simple {
+  width: 100% !important;
+  max-width: 1170px !important;
+}
+.qcld-main-container-style-simple .simple .qcopd-single-list ul{
 	padding: 0 !important;
 	margin: 0px;
 	background-color: #ffffff;
@@ -10,25 +13,25 @@
 	width: 100%;
 }
 
-.simple .qcopd-single-list ul li{
+.qcld-main-container-style-simple .simple .qcopd-single-list ul li{
 	list-style: none;
   position: relative;
   margin-left: 0;
   padding-left: 0;
 }
 
-.simple .qcopd-single-list h2 {
+.qcld-main-container-style-simple .simple .qcopd-single-list h2 {
   color: #262b35;
   font-size: 17px;
   font-weight: normal;
   text-transform: uppercase;
 }
 
-.simple .qcopd-single-list ul{
+.qcld-main-container-style-simple .simple .qcopd-single-list ul{
 	border-top: 5px solid #f86960;
 }
 
-.simple .featured-section {
+.qcld-main-container-style-simple .simple .featured-section {
   bottom: 1px;
   position: absolute;
   right: 0;
@@ -40,14 +43,14 @@
 	border-color: transparent transparent #FFEB3B transparent;
 
 }
-.simple .featured-section i {
+.qcld-main-container-style-simple .simple .featured-section i {
 	position: absolute;
 	left: -10px;
 	top: 17px;
 	color: #3d7dfc;
 }
 
-.simple .qcopd-single-list ul li a {
+.qcld-main-container-style-simple .simple .qcopd-single-list ul li a {
   border-bottom: 1px solid #e8e8e8 !important;
   color: #828282;
   display: block;
@@ -66,54 +69,53 @@
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=90, Color=#ffffff); 
 }
 
-.simple .qcopd-single-list ul li a:hover {
+.qcld-main-container-style-simple .simple .qcopd-single-list ul li a:hover {
   background: #fafafa;
   color: #f86960;
   border-bottom: 1px solid #f86960 !important;
 }
 
-.simple .list-img{
+.qcld-main-container-style-simple .simple .list-img{
   display: inline-block !important;
   vertical-align: middle;
   margin-right: 10px;
 }
 
-.simple .list-img img{
+.qcld-main-container-style-simple .simple .list-img img{
   width: 24px;
   height: 24px;
 }
 
 /*Upvote Section*/
-.simple .upvote-section {
-    height: 100%;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    color: #666;
-    font-size: 12px;
-    text-align: center;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+.qcld-main-container-style-simple .simple .upvote-section {
+  height: 100%;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
-.simple .upvote-btn:hover, .simple .ca-menu li:hover .upvote-btn{
+.qcld-main-container-style-simple .simple .upvote-btn:hover, .qcld-main-container-style-simple .simple .ca-menu li:hover .upvote-btn{
   cursor: pointer;
   color: #81D742;
 }
 
-.simple .upvote-btn, .simple .upvote-count{
+.qcld-main-container-style-simple .simple .upvote-btn, .qcld-main-container-style-simple .simple .upvote-count{
   display: block;
 }
 
-.simple .upvote-btn {
+.qcld-main-container-style-simple .simple .upvote-btn {
   display: inline-block;
   height: 35px;
   
@@ -122,7 +124,7 @@
   z-index: 805;
 }
 
-.simple .upvote-count {
+.qcld-main-container-style-simple .simple .upvote-count {
   font-size: 10px;
   margin-top: 0px;
   width: 100%;
@@ -130,7 +132,7 @@
   line-height: 12px;
 }
 
-.simple .upvote-section .upvote-btn, .simple .upvote-section .upvote-count {
+.qcld-main-container-style-simple .simple .upvote-section .upvote-btn, .qcld-main-container-style-simple .simple .upvote-section .upvote-count {
   color: #828282;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -138,32 +140,32 @@
   transition: all 0.3s ease;
 }
 
-.simple .upvote-section .upvote-btn:hover, .simple li:hover .upvote-btn, .simple li:hover .upvote-count{
+.qcld-main-container-style-simple .simple .upvote-section .upvote-btn:hover, .qcld-main-container-style-simple .simple li:hover .upvote-btn, .qcld-main-container-style-simple .simple li:hover .upvote-count{
   color: #f86960;
 }
 
 /*RTL CSS*/
-.direction-rtl .qcopd-single-list, .direction-rtl .qcopd-single-list h3, .direction-rtl .qcopd-single-list ul li, .direction-rtl .qcopd-single-list ul li a, .qcopd-single-list ul li span 
+.qcld-main-container-style-simple .direction-rtl .qcopd-single-list, .qcld-main-container-style-simple .direction-rtl .qcopd-single-list h3, .qcld-main-container-style-simple .direction-rtl .qcopd-single-list ul li, .qcld-main-container-style-simple .direction-rtl .qcopd-single-list ul li a, .qcld-main-container-style-simple .qcopd-single-list ul li span 
 {
   direction: rtl !important;
 }
 
-.direction-rtl .simple .list-img {
+.qcld-main-container-style-simple .direction-rtl .simple .list-img {
   margin-left: 10px;
   margin-right: 0;
 }
 
-.direction-rtl .upvote-section {
+.qcld-main-container-style-simple .direction-rtl .upvote-section {
   left: 10px !important;
   right: auto !important;
 }
 
 /*TPL Fix*/
-.simple .upvote-section {
+.qcld-main-container-style-simple .simple .upvote-section {
   height: 50px;
 }
 
-.simple .upvote-btn {
+.qcld-main-container-style-simple .simple .upvote-btn {
   height: 25px;
   width: 32px;
 }

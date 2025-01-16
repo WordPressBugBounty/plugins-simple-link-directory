@@ -29,7 +29,7 @@ if ( $list_query->have_posts() )
 	//Directory Wrap or Container
 	$sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'dir="rtl"':'';
 
-	echo '<div class="qcopd-list-wrapper" '.$sld_enable_rtl.'><div id="opd-list-holder" class="qc-grid qcopd-list-holder">';
+	echo '<div class="qcld-main-container-style-2"><div class="qcopd-list-wrapper" '.$sld_enable_rtl.'><div id="opd-list-holder" class="qc-grid qcopd-list-holder">';
 
 	$listId = 1;
 
@@ -55,15 +55,15 @@ if ( $list_query->have_posts() )
 
 		if( $item_orderby == 'title' )
 		{
-			usort($lists, "custom_sort_by_tpl_title");
+			usort($lists, "sld_custom_sort_by_tpl_title");
 		}
 		if( $item_orderby == 'upvotes' )
 		{
-			usort($lists, "custom_sort_by_tpl_upvotes");
+			usort($lists, "sld_custom_sort_by_tpl_upvotes");
 		}
 		if( $item_orderby == 'timestamp' )
 		{
-			usort($lists, "custom_sort_by_tpl_timestamp");
+			usort($lists, "sld_custom_sort_by_tpl_timestamp");
 		}
 
 		
@@ -112,6 +112,8 @@ if ( $list_query->have_posts() )
 						}
 					?>
 					<li id="item-<?php echo esc_attr(get_the_ID()) ."-". esc_attr($count); ?>" style="<?php echo ( isset($list['list_item_bg_color']) && !empty($list['list_item_bg_color']) ) ? 'background:'. esc_attr($list['list_item_bg_color']) : ''; ?>">
+						
+						<div class="qcld-custom-simple-style">
 						<?php 
 							$item_url 	= isset( $list['qcopd_item_link'] ) ? esc_url($list['qcopd_item_link']) : '';
 							$masked_url = isset( $list['qcopd_item_link'] ) ? esc_url($list['qcopd_item_link']) : '';
@@ -176,7 +178,7 @@ if ( $list_query->have_posts() )
 							</div>
 							<!-- /featured section -->
 						<?php endif; ?>
-
+						</div>
 					</li>
 					<?php $count++; endforeach; ?>
 				</ul>
@@ -193,6 +195,6 @@ if ( $list_query->have_posts() )
 	echo '<div class="sld-clearfix"></div>
 			</div>
 		<div class="sld-clearfix"></div>
-	</div>';
+	</div></div>';
 
 }
