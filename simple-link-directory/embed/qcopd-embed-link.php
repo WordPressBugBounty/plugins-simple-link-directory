@@ -3,16 +3,15 @@ defined('ABSPATH') or die("No direct script access!");
 
 wp_head();
 
-$order = isset($_GET['order']) ? sanitize_text_field($_GET['order']): 'ASC';
-$mode = isset($_GET['mode']) ? sanitize_text_field($_GET['mode']): 'all';
-$column = isset($_GET['column']) ? sanitize_text_field($_GET['column']): '3';
-$style = isset($_GET['style']) ? sanitize_text_field($_GET['style']): 'simple';
-$search = '';
-$category = isset($_GET['category']) ? sanitize_text_field($_GET['category']): '';
-$upvote = '';
-$list_id = isset($_GET['list_id']) ? sanitize_text_field($_GET['list_id']): '';
+$order      = isset($_GET['order']) ? preg_replace('/[^A-Za-z0-9 !@#$%^&*().]/u','', strip_tags(sanitize_text_field(wp_unslash($_GET['order'])))) : esc_attr('ASC');
+$mode      	= isset($_GET['mode']) ? preg_replace('/[^A-Za-z0-9 !@#$%^&*().]/u','', strip_tags(sanitize_text_field(wp_unslash($_GET['mode'])))) : esc_attr('all');
+$column     = isset($_GET['column']) ? preg_replace('/[^A-Za-z0-9 !@#$%^&*().]/u','', strip_tags(sanitize_text_field(wp_unslash($_GET['column'])))) : esc_attr('3');
+$style     = isset($_GET['style']) ? preg_replace('/[^A-Za-z0-9 !@#$%^&*().]/u','', strip_tags(sanitize_text_field(wp_unslash($_GET['style'])))) : esc_attr('simple');
+$category     = isset($_GET['category']) ? preg_replace('/[^A-Za-z0-9 !@#$%^&*().]/u','', strip_tags(sanitize_text_field(wp_unslash($_GET['category'])))) : '';
 
-//$item_count = sanitize_text_field(isset($_GET['item_count'])?$_GET['item_count']:'');
+$list_id     = isset($_GET['list_id']) ? preg_replace('/[^A-Za-z0-9 !@#$%^&*().]/u','', strip_tags(sanitize_text_field(wp_unslash($_GET['list_id'])))) : '';
+$search = '';
+$upvote = '';
 
 echo '<div class="clear">';
 
