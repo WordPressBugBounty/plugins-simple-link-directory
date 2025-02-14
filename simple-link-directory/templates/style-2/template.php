@@ -92,7 +92,7 @@ if ( $list_query->have_posts() )
 
 		<div class="list-and-add qc-grid-item <?php echo "opd-list-id-" . esc_attr(get_the_ID()); ?>">
 
-		<div id="qcopd-list-<?php echo esc_attr($listId) .'-'. esc_attr(get_the_ID()); ?>" class="qcopd-list-column <?php echo esc_attr($style); ?>">
+		<div id="qcopd-list-<?php echo esc_attr($listId) .'-'. esc_attr(get_the_ID()); ?>" class="qcopd-list-column <?php echo esc_attr($style); ?> opd-column-<?php echo esc_attr($column); ?>">
 
 			<div class="qcopd-single-list-1">
 				<h2>

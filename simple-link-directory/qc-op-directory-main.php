@@ -3,11 +3,11 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.4.6
+ * Version: 8.4.8
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
- * Tested up to: 6.7.1
+ * Tested up to: 6.7.2
  * Text Domain: qc-opd
  * Domain Path: /lang/
  * License: GPL2

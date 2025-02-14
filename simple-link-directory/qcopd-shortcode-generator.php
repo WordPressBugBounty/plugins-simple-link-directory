@@ -149,12 +149,6 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 						</select>
 					</div>
 				
-					<div id="sld_width_div" class="qcsld_single_field_shortcode hidden-div">
-						<label class="sld_label_width">
-							<?php esc_html_e( 'Min Width' , 'qc-opd' ); ?>
-						</label>
-						<input type="text" name="sld_width" id="sld_width" value="620" style="width: 200px;"> <?php esc_html_e( 'px' ); ?>
-					</div>
 	                <div class="qcsld_single_field_shortcode">
 	                    <label class="qcopd_title_font">
 	                        <?php echo esc_html('Title Font Size'); ?>

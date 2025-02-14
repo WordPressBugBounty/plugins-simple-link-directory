@@ -186,6 +186,7 @@ border: 1px solid rgb(28 162 252 / 99%) !important;
 .qcld-main-container-style-1 .style-1 span.ca-icon.list-img-1 {
   width: 60px;
   height: 60px;
+  overflow: hidden;
 }
 
 .qcld-main-container-style-1 .style-1 .featured-section {

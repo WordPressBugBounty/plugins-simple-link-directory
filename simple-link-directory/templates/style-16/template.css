@@ -102,7 +102,8 @@
 
 .qcld-main-container-style-16 .qcsld-new-style-16 span.list-img {
   width: 22px;
-  HEIGHT: 22px;
+  height: 22px;
+  overflow: hidden;
 }
 .qcld-main-container-style-16 .qcsld-new-style-16 span.list-img img {
   max-width: 22px;
@@ -141,8 +142,8 @@
   float: left;
 }
 .qcld-main-container-style-16 .qcsld-new-style-16 .style-16 .ca-content-audio audio {
-max-width: inherit;
-    width: 100%;
+  max-width: inherit;
+  width: 100%;
 }
 .qcld-main-container-style-16 .qcsld-new-style-16 .style-16 span.qcopd-list-item-title {
   font-size: 15px;
