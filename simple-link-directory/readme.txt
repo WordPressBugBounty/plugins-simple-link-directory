@@ -4,12 +4,12 @@ Donate link: https://www.quantumcloud.com/products/simple-link-directory/
 Tags: directory, directory listing, link directory, link management, web directory
 Requires at least: 4.6
 Tested up to: 6.7
-Stable tag: 8.4.8
+Stable tag: 8.4.9
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.quantumcloud.com/products/simple-link-directory/
 
-Free LINK DIRECTORY Plugin for WordPress to curate links for Web Directory. Link management, Directory Listings, Link Archive, Vendor Directory
+Free LINK DIRECTORY Plugin for WordPress to Curate Links for Web Directory. Link management, Directory Listings, Link Archive, Vendor Directory
 
 == Description ==
 = Free WordPress Link Directory Plugin to curate links for web directory =

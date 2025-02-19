@@ -470,6 +470,12 @@ i.qc_sld_btn {
     background: #fff;
     color: #000;
 }
+.qcld-importstylebox {
+    background: #fff;
+    padding: 20px;
+    margin: 10px 0 0 0;
+    border-radius: 6px;
+}
 
 @media (min-width: 1200px) {
   .sld-container {

@@ -41,7 +41,7 @@ class Qcopd_BulkImportFree
                         <u>
                             <h1><?php echo esc_html('Bulk Import'); ?></h1>
                         </u>
-
+                        <div class="qcld-importstylebox">
                         <div>
                             
                             <p>
@@ -231,7 +231,7 @@ class Qcopd_BulkImportFree
 
                     </div>
                     <!-- /post-body-content -->
-
+                    </div>
                 </div>
                 <!-- /post-body-->
 
