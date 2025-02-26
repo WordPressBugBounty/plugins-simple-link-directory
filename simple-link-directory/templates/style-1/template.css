@@ -203,18 +203,45 @@ border: 1px solid rgb(28 162 252 / 99%) !important;
   color: #222;
 }
 
+.qcld-main-container-style-1 .qcopd-list-column.opd-column-3.style-1 {
+  width: 49% !important;
+  margin-right: 0;
+}
+
+.qcld-main-container-style-1 .qcopd-list-column.opd-column-4.style-1 {
+  width: 49% !important;
+  margin-right: 0;
+}
+
 
 @media only screen and (min-width: 1201px) and (max-width: 1920px) {
   .qcld-main-container-style-1 .qcopd-list-column.opd-column-2.style-1 {
       width: 49% !important;
       margin-right: 0;
   }
+  .qcld-main-container-style-1 .qcopd-list-column.opd-column-3.style-1 {
+    width: 49% !important;
+    margin-right: 0;
+}
+.qcld-main-container-style-1 .qcopd-list-column.opd-column-4.style-1 {
+  width: 49% !important;
+  margin-right: 0;
+}
 }
 
 @media only screen and (max-width: 991px) {
   .qcopd-list-column.opd-column-2 {
       width: 100% !important;
   }
+
+  .qcld-main-container-style-1 .qcopd-list-column.opd-column-3.style-1 {
+    width: 100% !important;
+    margin-right: 0;
+}
+.qcld-main-container-style-1 .qcopd-list-column.opd-column-4.style-1 {
+  width: 100% !important;
+  margin-right: 0;
+}  
 }
 
 @media only screen and (max-width: 801px) {

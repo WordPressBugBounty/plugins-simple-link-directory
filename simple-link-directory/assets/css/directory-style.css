@@ -356,6 +356,11 @@ form.styled.sld_search_filter_clear_wrap {
   max-width: 1170px;
 }
 
+@media only screen and (max-width : 768px) {
+.qcopd-list-wrapper {
+  min-width: inherit !important;
+}
+}
 @media only screen and (max-width : 480px) {
 
   .sld-top-area .sld-half {
