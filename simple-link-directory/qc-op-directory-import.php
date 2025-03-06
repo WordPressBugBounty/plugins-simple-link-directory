@@ -125,7 +125,7 @@ class Qcopd_BulkImportFree
 										}
 										
 										$baseData[$data[0]][] 		= array(
-											'list_title' 			=> isset($data[0]) ? sanitize_text_field(utf8_encode(trim($data[0]))) : '',
+											'list_title' 			=> isset($data[0]) ? sanitize_text_field(iconv(mb_detect_encoding($data[1]), "UTF-8", $data[0])) : '',
 											'qcopd_item_title' 		=> isset($data[1]) ? sanitize_text_field(iconv(mb_detect_encoding($data[1]), "UTF-8", $data[1])) : '',
 											'qcopd_item_link' 		=> isset($data[2]) ? esc_url_raw(iconv(mb_detect_encoding($data[2]), "UTF-8", $data[2])) : '',
 											'qcopd_item_img' 		=> '',
