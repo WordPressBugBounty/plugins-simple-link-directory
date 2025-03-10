@@ -123,7 +123,7 @@ if( !class_exists('Qcrating') ){
 				
 					<h3><?php esc_html_e( 'Leave A Review for Simple Link Directory?', 'qc-sld' ) ?></h3>
 					
-					<p><?php esc_html_e( 'We hope you\'ve enjoyed using <b>Simple Link Directory</b>! Would you consider leaving us a review on WordPress.org?', 'qc-opd' ) ?></p>
+					<p><?php esc_html_e( 'We hope you\'ve enjoyed using', 'qc-opd' ) ?> <b><?php esc_html_e( 'Simple Link Directory', 'qc-opd' ) ?></b> !<?php esc_html_e( ' Would you consider leaving us a review on WordPress.org?', 'qc-opd' ) ?></p>
 					
 					<ul class="qc-review-ul">
 					
