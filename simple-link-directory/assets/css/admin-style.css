@@ -440,8 +440,8 @@ i.qc_sld_btn {
 }
 
 .sld-notice {
-    border-left-color: #72aee6;
-    background: #262626;
+    border-left-color: #d63638;
+    background: #d63638;
 }
 .sld_nav_container{
     border: none !important;
@@ -487,7 +487,9 @@ i.qc_sld_btn {
     margin-bottom: 12px;
     border: none;
 }
-
+.serviceBox .service-icon {
+    display: none;
+}
 
 @media (min-width: 1200px) {
   .sld-container {
