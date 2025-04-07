@@ -464,7 +464,9 @@ transform: rotate(75deg);
   grid-template-columns: 1fr;
 }
 
-
+.qcld-main-container-style-4 .style-4 li {
+  margin: 0 12px 0 0 !important;
+}
 /* tablet breakpoint */
 @media (min-width:320px) {
   .qcld-main-container-style-4 .opd-column-4 ul.ca-menu {
