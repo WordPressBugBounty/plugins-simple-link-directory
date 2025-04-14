@@ -490,6 +490,10 @@ i.qc_sld_btn {
 .serviceBox .service-icon {
     display: none;
 }
+th.Shortcodestitle {
+    border-bottom: 1px solid #eee;
+    font-size: 20px;
+}
 
 @media (min-width: 1200px) {
   .sld-container {

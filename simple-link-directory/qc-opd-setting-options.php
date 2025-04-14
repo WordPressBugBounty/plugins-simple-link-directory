@@ -239,9 +239,12 @@ function qcsettings_page_callback_func(){
     </div>
     <div id="help" style="display:none" class="qcld-tabs-custom">
       <table class="form-table">
+      <th class="Shortcodestitle" scope="row"><?php echo esc_html('Shortcodes and Help'); ?></th>
         <tr valign="top">
-          <th scope="row"><?php echo esc_html('Shortcodes and Help'); ?></th>
-          <td><div class="wrap">
+         
+          <td>
+         
+          <div class="wrap">
               <div id="poststuff">
                 <div id="post-body" class="metabox-holder columns-2">
                   <div id="post-body-content" style="position: relative;"> 
@@ -399,7 +402,7 @@ function qcsettings_page_callback_func(){
                     <!-- <h3><?php echo esc_html('Please take a quick look at our'); ?> <a href="http://dev.quantumcloud.com/sld/tutorials/" class="button button-primary" target="_blank"><?php echo esc_html('Video Tutorials'); ?></a></h3> -->
                     <h3><?php echo esc_html('Note'); ?></h3>
                     <p><strong><?php echo esc_html('If you are having problem with adding more items or saving a list or your changes in the list are not getting saved then it is most likely because of a limitation set in your server. Your server has a limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save the List. The server’s configuration that dictates this is max_input_vars. You need to Set it to a high limit like max_input_vars = 15000. Since this is a server setting - you may need to contact your hosting company\'s support for this.'); ?></strong></p>
-                    <div style="padding: 15px 10px; border: 1px solid #ccc; text-align: center; margin-top: 20px;"> <?php echo esc_html('Crafted By:'); ?> <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank"><?php echo esc_html('Web Design Company'); ?></a> <?php echo esc_html('- QuantumCloud'); ?> </div>
+                    <div style="padding: 15px 10px; border: 1px solid #ccc; text-align: center; margin-top: 20px; background: #222; color: #fff;"> <?php echo esc_html('Crafted By:'); ?> <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank"><?php echo esc_html('Web Design Company'); ?></a> <?php echo esc_html('- QuantumCloud'); ?> </div>
                   </div>
                   <!-- /post-body-content --> 
                   

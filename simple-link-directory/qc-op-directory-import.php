@@ -225,7 +225,7 @@ class Qcopd_BulkImportFree
                         </div>
 
 
-                        <div style="padding: 15px 10px; border: 1px solid #ccc; text-align: center; margin-top: 20px;">
+                        <div style="padding: 15px 10px; border: 1px solid #ccc; text-align: center; margin-top: 20px;background: #222; color: #fff;">
                             <?php echo esc_html('Crafted By:'); ?> <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank"><?php echo esc_html('Web Design Company'); ?></a> <?php echo esc_html('-QuantumCloud'); ?>
                         </div>
 
