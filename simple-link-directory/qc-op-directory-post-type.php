@@ -127,7 +127,7 @@ if ( ! function_exists( 'cmb_qcopd_dir_fields' ) ) {
 					'repeatable' 	=> true,
 					'sortable' 		=> true,
 					'fields' 		=> $qcopd_item_fields,
-					'desc' 			=> __('Please add your list items here.') . ' <br><br><i style="color:indianred;font-size:15px !important">'.esc_html('If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server.').'</i>'
+					'desc' 			=> __('Please add your list items here.') . ' <br><br><i style="color:indianred;font-size:15px !important; font-weight:bold;">'.esc_html('If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server.').'</i>'
 				)
 			)
 		);
