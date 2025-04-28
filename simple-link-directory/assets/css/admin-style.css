@@ -501,6 +501,28 @@ th.Shortcodestitle {
     border-bottom: 1px solid #eee;
     font-size: 20px;
 }
+.sld-notice .notice-dismiss:before{
+    color: #ffffff !important;
+}
+.sld-notice{
+    border: none !important;
+    border-radius: 5px;
+}
+
+.cmb_metabox .field-title {
+    margin-bottom: 3px !important;
+}
+
+.cmb_metabox .CMB_Group_Field.repeatable>.field-item:nth-child(odd){
+    background-color: #ffffff;
+}
+.cmb_metabox .CMB_Group_Field.repeatable>.field-item:nth-child(even){
+    background-color: #f5f5f5;
+}
+
+.cmb_metabox .field {
+    overflow: visible !important;
+}
 
 @media (min-width: 1200px) {
   .sld-container {
