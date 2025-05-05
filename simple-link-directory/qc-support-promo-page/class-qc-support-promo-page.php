@@ -83,7 +83,7 @@ if ( ! function_exists( 'qc_sld_promo_support_page_callback_func' ) ) {
                     <h5><?php esc_html_e('All our Pro Version users get Premium, Guaranteed Quick, One on One Priority Support.', 'qc-clr'); ?></h5>
                     <div class="support-btn">
                         <a class="premium-support" href="<?php echo esc_url('https://qc.ticksy.com/'); ?>" target="_blank"><?php esc_html_e('Get Priority Support ', 'qc-clr'); ?></a>
-                        <a style="width:282px" class="premium-support" href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/comment-tools/'); ?>" target="_blank"><?php esc_html_e('Online KnowledgeBase', 'qc-clr'); ?></a>
+                        <a style="width:282px" class="premium-support" href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>" target="_blank"><?php esc_html_e('Online KnowledgeBase', 'qc-clr'); ?></a>
                     </div>
                 </div>
             
