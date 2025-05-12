@@ -529,3 +529,8 @@ th.Shortcodestitle {
       width: 96% !important;
   }
 }
+
+.wp-picker-holder {
+    position: absolute !important;
+    z-index: 999 !important;
+}
