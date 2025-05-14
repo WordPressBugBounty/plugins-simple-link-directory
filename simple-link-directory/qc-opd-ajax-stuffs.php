@@ -61,7 +61,7 @@ if ( ! function_exists( 'upvote_ajax_action_stuff' ) ) {
 
                     $meta_id = $value->meta_id;
 
-                    $unserialized = unserialize($value->meta_value);
+                    $unserialized = maybe_unserialize($value->meta_value);
 
                     //If meta title and link matches with unserialized data
                     if (trim($unserialized['qcopd_item_title']) == trim($meta_title) && trim($unserialized['qcopd_item_link']) == trim($meta_link)) {
@@ -74,7 +74,7 @@ if ( ! function_exists( 'upvote_ajax_action_stuff' ) ) {
                         $flag = 0;
 
                         //Check if there already a set value (previous)
-                        if (array_key_exists('qcopd_upvote_count', $unserialized)) {
+                        if ( !empty($unserialized) && is_array($unserialized) && array_key_exists('qcopd_upvote_count', $unserialized)) {
                             $upvote_count = (int)$unserialized['qcopd_upvote_count'];
                             $flag = 1;
                         }
@@ -97,7 +97,7 @@ if ( ! function_exists( 'upvote_ajax_action_stuff' ) ) {
 
                         $votes = (int)$new_array['qcopd_upvote_count'];
 
-                        $updated_value = serialize($new_array);
+                        $updated_value = maybe_serialize($new_array);
 
                         $wpdb->update(
                             $wpdb->postmeta,

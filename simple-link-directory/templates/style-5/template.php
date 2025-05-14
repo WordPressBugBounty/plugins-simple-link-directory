@@ -41,7 +41,7 @@ if ( $list_query->have_posts() )
 		$results = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $wpdb->postmeta WHERE post_id = %d AND meta_key = 'qcopd_list_item01' order by `meta_id` ASC", get_the_ID() ) );
 		if(!empty($results)){
 			foreach($results as $result){
-				$unserialize = unserialize($result->meta_value);
+				$unserialize = maybe_unserialize($result->meta_value);
 				$lists[] = $unserialize;
 			}
 		}
