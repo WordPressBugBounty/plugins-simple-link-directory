@@ -283,3 +283,24 @@ left: -25px;
 .qcopd_generate_label{width: 200px;display: inline-block;}
 #sld_shortcode_container{width:100%;height:200px}
 .sld_copy_close{float:right}
+
+
+.qcld_alert_msg_modal .modal-content {
+    width: 100%;
+    max-width: 480px;
+        border-radius: 6px;
+}
+
+.qcld_alert_msg_modal .modal-content {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 6px;
+    top: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
