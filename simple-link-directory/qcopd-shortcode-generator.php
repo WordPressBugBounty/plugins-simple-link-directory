@@ -283,7 +283,7 @@ if ( ! function_exists( 'qcsld_render_message_alert_modal_free' ) ) {
 					<span class="dashicons dashicons-no"></span>
 				</span>
 				<h3><?php esc_html_e( 'SLD - Alert' , 'qc-opd' ); ?></h3>
-				<hr/>
+				
 				<div class="qcld_alert_wrap">
 					<div class="qcld_alert_msg">
 						<p><?php esc_html_e( 'A list should have more than just 1 item.' , 'qc-opd' ); ?></p>
