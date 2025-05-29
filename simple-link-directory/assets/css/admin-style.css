@@ -534,3 +534,13 @@ th.Shortcodestitle {
     position: absolute !important;
     z-index: 999 !important;
 }
+
+.button.qcsld-promo-link {
+    color: #ffffff !important;
+    background: #2271b1;
+}
+.button.qcsld-promo-link:hover {
+    color: #ffffff !important;
+    background: #d63638;
+    border-color: #d63638 !important;
+}
