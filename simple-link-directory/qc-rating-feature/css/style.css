@@ -50,17 +50,32 @@
   margin-bottom: 6px;
 }
 .qc-review-ul li a{
-display: inline-block;
-    color: rgb(214 54 56);
+    display: inline-block;
+    color: #d63638;
     text-decoration: none;
     padding-left: 26px;
     position: relative;
-	    font-size: 14px;
-    line-height: 17px;
+    font-size: 13px;
+    line-height: normal;
+    border: 1px solid #d63638;
+    padding: 5px 8px;
+    border-radius: 4px;
     font-weight: 500;
+
 }
 .qc-review-ul li a span{
-  position: absolute;
-  left: 0;
-  top: -2px;
+      padding: 0 8px 0 0;
+          font-size: 17px;
+}
+
+.qc-review-ul li a:hover{
+    background: #d63638;
+    color: #fff;
+}
+.qc-review-ul li {
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+.qc-review-ul {
+    margin: 12px 0 0 0;
 }
