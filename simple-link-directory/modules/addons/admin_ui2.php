@@ -19,9 +19,9 @@ global $woocommerce, $wp_scripts;
     <h1 class="wpbot_header_h1" style="color: #fff !important;"><?php echo esc_html__('Simple Link Directory', 'wpchatbot'); ?> </h1>
 </div>
 <div class="wp-chatbot-wrap">
-    <div class="wpbot_dashboard_header container"><h1 style="color: #fff !important;"><?php echo esc_html__('Simple Link Directory', 'kbx-qc'); ?></h1></div>
+    <div class="wpbot_dashboard_header"><h1 style="color: #fff !important;"><?php echo esc_html__('Simple Link Directory', 'kbx-qc'); ?></h1></div>
 
-    <div class="wpbot_addons_section container">
+    <div class="wpbot_addons_section">
         <div class="wpbot_single_addon_wrapper qc-display-flex qc-justify-center qc-flex-wrap kbx_pb_0">
             <h2 class="wpbot_single_addon_title"><a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" ><?php echo esc_html__('Simple Link Directory Pro', 'kbx-qc'); ?></a> <?php echo esc_html__(' Addons', 'kbx-qc'); ?></h2>
             
