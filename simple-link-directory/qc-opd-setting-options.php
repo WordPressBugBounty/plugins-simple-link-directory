@@ -256,28 +256,28 @@ function qcsettings_page_callback_func(){
                     <h3 class="qcld_short_genarator_scroll_wrap"><?php echo esc_html('Shortcode Generator'); ?></h3>
                     <p><?php echo esc_html('We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode.'); ?></p>
                     <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/classic.jpg" alt="shortcode generator" />
-                    <p><?php echo esc_html('See sample below for where to find it for Gutenberg.'); ?></p>
+                    <h3><?php echo esc_html('See sample below for where to find it for Gutenberg.'); ?></h3>
                     <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/gutenburg.jpg" alt="shortcode generator" /> <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/gutenburg2.jpg" alt="shortcode generator" />
-                    <p><?php echo esc_html('This is how the shortcode generator will look like.'); ?></p>
+                    <h3><?php echo esc_html('This is how the shortcode generator will look like.'); ?></h3>
                     <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/shortcode-generator1.jpg" alt="shortcode generator" />
                     <div>
                       <h3><?php echo esc_html('Shortcode Example'); ?></h3>
                       <p> <strong><?php echo esc_html('You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as "SLD" with WordPress content editor.'); ?></strong> </p>
                       <p> <strong><u><?php echo esc_html('For all the lists:'); ?></u></strong> <br>
-                        <?php echo esc_html('[qcopd-directory mode="all" column="2" style="simple" orderby="date" order="DESC" enable_embedding="false"]'); ?> <br>
+                        <span class="qcld-sld-code-highlight"><?php echo esc_html('[qcopd-directory mode="all" column="2" style="simple" orderby="date" order="DESC" enable_embedding="false"]'); ?></span> <br>
                         <br>
                         <strong><u><?php echo esc_html('For only a single list:'); ?></u></strong> <br>
-                        <?php echo esc_html('[qcopd-directory mode="one" list_id="75"]'); ?> <br>
+                       <span class="qcld-sld-code-highlight"> <?php echo esc_html('[qcopd-directory mode="one" list_id="75"]'); ?></span> <br>
                         <br>
                         <strong><u><?php echo esc_html('Available Parameters:'); ?></u></strong> <br>
                       </p>
                       <p> <strong><?php echo esc_html('1. mode'); ?></strong> <br>
-                        <?php echo esc_html('[Value for this option can be set as "one" or "all".]'); ?> </p>
+                    <span class="qcld-sld-code-highlight"><?php echo esc_html('[Value for this option can be set as "one" or "all".]'); ?></span> </p>
                       <p> <strong><?php echo esc_html('2. column'); ?></strong> <br>
                         <?php echo esc_html('Avaialble values: "1", "2", "3" or "4".'); ?> </p>
                       <p> <strong><?php echo esc_html('3. style'); ?></strong> <br>
                         <?php echo esc_html('Avaialble values: "simple", "style-1", "style-2", "style-3", "style-4", "style-5", "style-16".'); ?> <br>
-                        <strong style="color: red;"> <?php echo esc_html('Only 6 templates are available in the free version. For more styles or templates, please purchase the'); ?> <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" target="_blank"><?php echo esc_html('premium version'); ?></a>. </strong> </p>
+                        <strong style="color: red; padding: 10px 10px; display: inline-block; border: 1px solid; border-radius: 6px; margin: 5px 0 5px 0;"> <?php echo esc_html('Only 6 templates are available in the free version. For more styles or templates, please purchase the'); ?> <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" target="_blank"><?php echo esc_html('premium version'); ?></a>. </strong> </p>
                       <p> <strong><?php echo esc_html('4. orderby'); ?></strong> <br>
                         <?php echo esc_html("Compatible order by values: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' and 'menu_order'."); ?> </p>
                       <p> <strong><?php echo esc_html('5. order'); ?></strong> <br>

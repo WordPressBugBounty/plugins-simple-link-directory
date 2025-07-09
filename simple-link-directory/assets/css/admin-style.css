@@ -545,3 +545,8 @@ th.Shortcodestitle {
     border-color: #d63638 !important;
 }
 
+span.qcld-sld-code-highlight {
+    background: yellow;
+    margin: 9px 0 0 0;
+    display: inline-block;
+}
