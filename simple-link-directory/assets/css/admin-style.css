@@ -271,16 +271,8 @@ i.qc_sld_btn {
   z-index: -1;
 }
 
-/* Accordion styles */
-.qcld_sld_tabs {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
-}
-
 .qcld_sld_tab {
   width: 100%;
-  color: white;
   overflow: hidden;
   margin-bottom: -2px;
 }
@@ -362,7 +354,7 @@ i.qc_sld_btn {
 
 #list-elements .sbd_list_elements .repeat-field {
     background: #2271b1;
-    border: 1px solid #0d6efd;
+    border: 1px solid #2271b1;
     padding: 3px 15px;
     font-weight: 500;
     color: #fff4f4;
@@ -379,7 +371,7 @@ i.qc_sld_btn {
 
 #list-elements .sld_list_elements .repeat-field{
   background: #2271b1;
-  border: 1px solid #0d6efd;
+  border: 1px solid #2271b1;
   padding: 3px 15px;
   font-weight: 500;
   color: #fff4f4;
@@ -549,4 +541,27 @@ span.qcld-sld-code-highlight {
     background: yellow;
     margin: 9px 0 0 0;
     display: inline-block;
+}
+
+.qcld_sld_tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #2271b1;
+}
+
+.qcld_sld_tabs input:checked + .qcld_sld_tab-label {
+    background: #2271b1;
+    color: #fff;
+}
+.qcld_sld_tab-label:hover{
+     background: #2271b1;
+    color: #fff;   
+}
+
+.cmb_metabox .cmb-row {
+    overflow: visible !important;
 }
