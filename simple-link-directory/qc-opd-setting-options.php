@@ -260,7 +260,7 @@ function qcsettings_page_callback_func(){
                     <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/gutenburg.jpg" alt="shortcode generator" /> <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/gutenburg2.jpg" alt="shortcode generator" />
                     <h3><?php echo esc_html('This is how the shortcode generator will look like.'); ?></h3>
                     <img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/shortcode-generator1.jpg" alt="shortcode generator" />
-                    <div>
+                    <div class="qcld-sld-shortcode-example">
                       <h3><?php echo esc_html('Shortcode Example'); ?></h3>
                       <p> <strong><?php echo esc_html('You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as "SLD" with WordPress content editor.'); ?></strong> </p>
                       <p> <strong><u><?php echo esc_html('For all the lists:'); ?></u></strong> <br>

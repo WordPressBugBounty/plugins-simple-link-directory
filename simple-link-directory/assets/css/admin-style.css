@@ -565,3 +565,15 @@ span.qcld-sld-code-highlight {
 .cmb_metabox .cmb-row {
     overflow: visible !important;
 }
+
+.qcld-sld-shortcode-example p {
+    border-bottom: 1px solid #eee;
+    padding: 6px 0 12px 0;
+}
+.qcld-tabs-custom div#post-body {
+    margin: 0 !important;
+}
+.qcld_sld_tabs input:checked ~ .qcld_sld_tab-content {
+    background: #eee;
+    margin: 0 0 15px 0;
+}
