@@ -397,9 +397,7 @@ transform: rotate(75deg);
 .qcld-main-container-style-4 .style-4 .ca-icon {
   top: 36px;
 }
-.qcld-main-container-style-4 .style-4 .ca-main {
-  top: 90px;
-}
+
 
 .qcld-main-container-style-4 .style-4 .ca-menu li:hover .ca-main {
   display: none;

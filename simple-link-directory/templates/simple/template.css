@@ -94,7 +94,7 @@ color: #222;
 
 .qcld-main-container-style-simple .simple .qcopd-single-list ul li a {
   border-bottom: 1px solid #e8e8e8 !important;
-  color: #828282;
+  color: #222;
   display: block;
   padding: 13px 10px;
   text-decoration: none;
@@ -210,4 +210,10 @@ color: #222;
 .qcld-main-container-style-simple .simple .upvote-btn {
   height: 25px;
   width: 32px;
+}
+
+.qcld-main-container-style-simple .simple .upvote-btn {
+    display: flex;
+    align-content: center;
+    align-items: center;
 }
