@@ -171,16 +171,10 @@
 
 .qcld-main-container-style-2 .style-2 .ca-menu li:hover .ca-main{
     color: #00ccff;
-    -webkit-animation: moveFromLeftRotate 300ms ease;
-    -moz-animation: moveFromLeftRotate 300ms ease;
-    -ms-animation: moveFromLeftRotate 300ms ease;
 }
 
 .qcld-main-container-style-2 .style-2 .ca-menu li:hover .ca-sub{
     color: #fff;
-    -webkit-animation: moveFromBottom 500ms ease;
-    -moz-animation: moveFromBottom 500ms ease;
-    -ms-animation: moveFromBottom 500ms ease;
 }
 
 .qcld-main-container-style-2 .style-2 .ca-menu li:hover .ca-icon img{

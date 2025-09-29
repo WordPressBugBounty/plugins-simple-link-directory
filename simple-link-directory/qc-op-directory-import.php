@@ -38,9 +38,9 @@ class Qcopd_BulkImportFree
 
                     <div id="post-body-content" style="position: relative;">
 
-                        <u>
+                        
                             <h1><?php echo esc_html('Bulk Import'); ?></h1>
-                        </u>
+                        
                         <div class="qcld-importstylebox">
                         <div>
                             
