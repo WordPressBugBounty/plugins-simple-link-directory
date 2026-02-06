@@ -47,11 +47,15 @@ function sld_register_plugin_settings() {
   	register_setting( 'qc-sld-plugin-settings-group', 'sld_enable_scroll_to_top', $args );
     register_setting( 'qc-sld-plugin-settings-group', 'sld_enable_rtl', $args );
     register_setting( 'qc-sld-plugin-settings-group', 'sld_enable_search', $args );
+    register_setting( 'qc-sld-plugin-settings-group', 'sld_enable_dark_mode', $args );
   	//Language Settings
   	register_setting( 'qc-sld-plugin-settings-group', 'sld_lan_add_link', $args );
   	register_setting( 'qc-sld-plugin-settings-group', 'sld_lan_share_list', $args );
     register_setting( 'qc-sld-plugin-settings-group', 'sld_lan_live_search', $args );
     register_setting( 'qc-sld-plugin-settings-group', 'sld_no_results_found', $args );
+    register_setting( 'qc-sbd-plugin-settings-group', 'sld_lan_enable_dark_mode', $args );
+    register_setting( 'qc-sbd-plugin-settings-group', 'sld_lan_dark_mode_on', $args );
+    register_setting( 'qc-sbd-plugin-settings-group', 'sld_lan_light_mode_on', $args );
   	//custom css section
   	register_setting( 'qc-sld-plugin-settings-group', 'sld_custom_style', $args );
   	//custom js section
@@ -193,6 +197,11 @@ function qcsettings_page_callback_func(){
           <td><input type="checkbox" name="sld_enable_rtl" value="on" <?php echo (esc_attr( get_option('sld_enable_rtl') )=='on'?'checked="checked"':''); ?> />
             <i><?php echo esc_html('If you make this option ON, then list items will be arranged in Right-to-Left direction.'); ?></i></td>
         </tr>
+        <tr valign="top">
+          <th scope="row"><?php echo esc_html('Enable Dark Mode'); ?></th>
+          <td><input type="checkbox" name="sld_enable_dark_mode" value="on" <?php echo (esc_attr( get_option('sld_enable_dark_mode') )=='on'?'checked="checked"':''); ?> />
+            <i><?php echo esc_html('Enable this option to show Dark Mode for all themes'); ?></i></td>
+        </tr>
       </table>
     </div>
     <div id="language_settings" style="display:none" class="qcld-tabs-custom">
@@ -216,6 +225,21 @@ function qcsettings_page_callback_func(){
           <th scope="row"><?php echo esc_html('No Results Found for Your Search'); ?></th>
           <td><input type="text" name="sld_no_results_found" size="100" value="<?php echo esc_attr( get_option('sld_no_results_found') ); ?>"  />
             <i><?php echo esc_html('Change the language for No Results Found for Your Search'); ?></i></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"> <?php echo esc_html('Enable Dark Mode'); ?></th>
+          <td><input type="text" name="sld_lan_enable_dark_mode" size="100" value="<?php echo esc_attr( get_option('sld_lan_enable_dark_mode') ); ?>"  />
+            <i> <?php echo esc_html('Change the language for - Enable Dark Mode'); ?></i></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"> <?php echo esc_html('Dark Mode On'); ?></th>
+          <td><input type="text" name="sld_lan_dark_mode_on" size="100" value="<?php echo esc_attr( get_option('sld_lan_dark_mode_on') ); ?>"  />
+            <i> <?php echo esc_html('Change the language for - Dark Mode On'); ?></i></td>
+        </tr>
+        <tr valign="top">
+          <th scope="row"> <?php echo esc_html('Light Mode On'); ?></th>
+          <td><input type="text" name="sld_lan_light_mode_on" size="100" value="<?php echo esc_attr( get_option('sld_lan_light_mode_on') ); ?>"  />
+            <i> <?php echo esc_html('Change the language for - Light Mode On'); ?></i></td>
         </tr>
       </table>
     </div>
@@ -298,6 +322,8 @@ function qcsettings_page_callback_func(){
                       <p> <strong><?php echo esc_html('10. Search'); ?></strong> <br>
                         <?php echo esc_html(' Add the shortcode parameter search="true" to show Live Search'); ?> <br>
                         <?php echo esc_html('Example: search="true"'); ?> </p>
+                      <p> <strong><?php echo esc_html('11. dark_mode'); ?></strong> <br>
+                      <?php echo esc_html('You can use this value to use the dark_mode of SLD templates. Available values for this option "on", "off".'); ?> </p>
 
                     </div>
 

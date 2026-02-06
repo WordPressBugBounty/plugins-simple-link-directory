@@ -257,6 +257,60 @@ jQuery(document).ready(function($){
 	$(document).on( 'click', ' .modal-content .close', function(){
 		$(this).parent().parent().remove();
 	});
+
+
+
+	$(document).on( 'click', '#sld-start-import-btn',function(e){
+        e.preventDefault();
+        
+        var uploadBtn 	= $(this);
+        var messageArea = $('#sld-import-message');
+
+        // Data to send via AJAX
+        var data = {
+            'action': 'qcld_sld_import_csv_from_folder',
+            'security': sld_ajax_object.ajax_nonce, 
+        };
+
+        $.ajax({
+            url: ajaxurl,
+            data: data,
+            dataType: 'json',
+            type: 'POST',
+            beforeSend: function (){
+
+        		uploadBtn.prop('disabled', true).text('Importing...');
+        		messageArea.html('<p>Importing data, please wait...</p>');
+                
+            },
+            success: function (response){
+	            if (response.success) {
+	                messageArea.html('<p style="color: green;">' + response.data.message + '</p>');
+	                // Redirect to the newly created page
+	                //window.location.replace(response.data.redirect_url);
+	                window.open(response.data.redirect_url)
+	            } else {
+	                messageArea.html('<p style="color: red;">Error: ' + response.data + '</p>');
+	                uploadBtn.prop('disabled', false).text('Click to Import Data');
+	            }
+                
+            },
+            error: function (xhr, status, errorThrown){
+            	uploadBtn.prop('disabled', false).text('Click to Import Data');
+        		messageArea.html('<p style="color: red;"><strong>Something went wrong:</strong> ' + errorThrown + '</p>');
+        		window.location.reload();
+            }
+        });
+
+
+    });
+
+
+
+
+
+
+
 });
 
 
@@ -370,10 +424,16 @@ jQuery(document).ready(function($){
 	    $("html, body").animate({ scrollTop: $(".qcld_short_genarator_scroll_wrap").offset().top }, 1500);
 	});
 	
-jQuery(document).ready(function($){
-jQuery('#qcld-quick-flyout').on('click', function() {
-  jQuery(this).toggleClass('is-open');
-});
+		jQuery(document).ready(function($){
+		jQuery('.qcld-sldquick-flyout').on('click', function() {
+		jQuery(this).toggleClass('is-open');
+		});
 	});
+
+		jQuery(document).ready(function($){
+		$('.qcld-sldquick-flyout').on('click', function(){
+			$('body').toggleClass('qcld-sld-flyout');
+		});
+        });	
 
 })

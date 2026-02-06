@@ -343,6 +343,71 @@ form.styled.sld_search_filter_clear_wrap {
   max-width: 1170px;
 }
 
+
+        
+/* Toggle Switch Styling */
+.sld-sld-theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.sld-theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    background: gray;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.sld-theme-switch input { display: none; }
+
+.sld-theme-slider {
+    background-color: var(--switch-bg);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.sld-theme-slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 25px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 25px;
+    z-index: 2;
+}
+
+input:checked + .sld-theme-slider:before {
+    transform: translateX(25px);
+}
+
+.sld-theme-slider.sld-theme-round {
+    border-radius: 34px;
+}
+
+.sld-theme-slider.sld-theme-round:before {
+    border-radius: 50%;
+}
+
+.sld-theme-icon { font-size: 14px; z-index: 1; }
+
+
 @media only screen and (max-width : 768px) {
 .qcopd-list-wrapper {
   min-width: inherit !important;

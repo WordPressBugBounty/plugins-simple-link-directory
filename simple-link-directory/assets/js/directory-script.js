@@ -241,11 +241,15 @@ jQuery(document).ready(function($)
     })
     
    jQuery(document).ready(function($){
-jQuery('#qcld-quick-flyout').on('click', function() {
-  jQuery(this).toggleClass('is-open');
-});
+        jQuery('.qcld-sldquick-flyout').on('click', function() {
+        jQuery(this).toggleClass('is-open');
+        });
 	}); 
-    
+ 		jQuery(document).ready(function($){
+		$('.qcld-sldquick-flyout').on('click', function(){
+			$('body').toggleClass('qcld-sld-flyout');
+		});
+        });	   
     
 });
 

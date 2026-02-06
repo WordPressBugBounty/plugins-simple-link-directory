@@ -74,6 +74,12 @@ if ( ! function_exists( 'qcsld_admin_enqueue' ) ) {
 		wp_enqueue_script( 'jq-slick.min-js', QCOPD_ASSETS_URL . '/js/slick.min.js', array('jquery'));
 		wp_register_script( 'sld-admin-common-script', QCOPD_ASSETS_URL . '/js/qcopd-admin-common.js', array('jquery'));
 		wp_enqueue_script( 'sld-admin-common-script' );
+
+		$params 					= array(
+		  'ajaxurl' 				=> admin_url('admin-ajax.php'),
+		  'ajax_nonce' 				=> wp_create_nonce('quantum_ajax_validation_18')
+		);
+		wp_localize_script( 'sld-admin-common-script', 'sld_ajax_object', $params );
 		
 		$scrolljs = "jQuery(document).ready(function($){
 			$('.qc-up-pro-link').parent('a').on('click', function(e){

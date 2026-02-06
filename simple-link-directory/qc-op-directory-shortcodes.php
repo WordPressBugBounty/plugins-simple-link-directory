@@ -109,6 +109,7 @@ function show_qcopd_full_list( $atts = array() )
 			'title_line_height' 	=> '',
 			'subtitle_line_height' 	=> '',
 			'enable_image' 			=> '',
+			'dark_mode' 			=> get_option('sld_enable_dark_mode')
 		), $atts
 	));
 
@@ -139,6 +140,7 @@ function show_qcopd_full_list( $atts = array() )
 		'title_line_height' 	=> $title_line_height,
 		'subtitle_line_height' 	=> $subtitle_line_height,
 		'enable_image' 			=> $enable_image,
+		'dark_mode' 			=> $dark_mode,
 	);
 	
 	$limit = -1;
@@ -148,6 +150,140 @@ function show_qcopd_full_list( $atts = array() )
 		$css = '.qcopd-list-wrapper {min-width: '.$min_width.' }';
 		wp_add_inline_style( 'qcopd-custom-css', $css );
 	}
+
+	$lan_enable_dark_mode 	= get_option('sld_lan_enable_dark_mode') ? get_option('sld_lan_enable_dark_mode') : 'Enable Dark Mode';
+	$lan_dark_mode_on 		= get_option('sld_lan_dark_mode_on') ? get_option('sld_lan_dark_mode_on') : 'Dark Mode On';
+	$lan_light_mode_on 		= get_option('sld_lan_light_mode_on') ? get_option('sld_lan_light_mode_on') : 'Light Mode On';
+
+	$custom_js = 'jQuery(document).ready(function($) {
+
+			function sld_dark_light_mode($toggle, e) {
+			    
+			    if (e && e.stopImmediatePropagation) {
+			        e.stopImmediatePropagation();
+			    }
+			    const $targetWrapper = $toggle.closest(".sld-sld-theme-switch-wrapper").parent().parent();
+			    const $targetWrappers = $targetWrapper.find(".qcopd-list-wrapper ul li, .filter-area, .sld-tag-filter-area, .sld-top-area");
+			    const $allItems = $targetWrappers.find("div, a, p, h1, h2, h3, h4, h5, h6, span");
+			    const $targetElements = $targetWrappers.add($allItems);
+
+			    $targetElements.each(function() {
+		            const $el = $(this);
+		            
+		            // Store previous style only if not already stored
+		            if (!$el.data("previous-style")) {
+		                $el.data("previous-style", $el.attr("style") || "");
+		            }
+
+		            $el.css({
+		                "background-color": "#121212",
+		                "color": "#ffffff",
+		                "border-color": "#333"
+		            });
+
+		            // Ensure text headers and links are white
+		            if ($el.is("a,h3 span, h1, h2, h3, h4, h5, h6")) {
+		                $el.css("color", "#ffffff");
+		            }
+		        });
+			}
+
+			function sld_remove_dark_mode($toggle, e) {
+			    if (e && e.stopImmediatePropagation) {
+			        e.stopImmediatePropagation();
+			    }
+	        	const $targetWrapper 	= $toggle.closest(".sld-sld-theme-switch-wrapper").parent().parent();
+	        	const $targetWrappers 	= $targetWrapper.find(".qcopd-list-wrapper ul li, .qcopd-list-wrapper ul li *, .sld-top-area, .sld-top-area *, .filter-area, .filter-area *, .sld-tag-filter-area, .sld-tag-filter-area *");
+			    $targetWrappers.each(function() {
+			        const $el = $(this);
+			        const oldStyle = $el.data("previous-style");
+			        
+			        if (oldStyle !== undefined) {
+			            if (oldStyle === "") {
+			                $el.removeAttr("style");
+			            } else {
+			                $el.attr("style", oldStyle);
+			            }
+			        }
+			    });
+			}
+
+			$(".qcopd-list-wrapper").each(function(index) {
+			    const $list = $(this);
+			    const uniqueId = "sld-theme-checkbox-" + index;
+			    if (!$list.prev(".sld-sld-theme-switch-wrapper").length) {
+			        $list.before(`
+			            <div class="sld-sld-theme-switch-wrapper">
+			                <label class="sld-theme-switch" for="${uniqueId}">
+			                    <input type="checkbox" id="${uniqueId}" class="sld-theme-checkbox-input" />
+			                    <div class="sld-theme-slider sld-theme-round">
+			                        <span class="sld-theme-icon sun">☀️</span>
+			                        <span class="sld-theme-icon moon">🌙</span>
+			                    </div>
+			                </label>
+			                <em id="sld-theme-status-${index}">'.$lan_enable_dark_mode.'</em>
+			            </div>
+			        `);
+			    }
+			});
+
+            const $toggle = $("#sld-theme-checkbox-0");
+            const $qcld_sld_tab = $(".qcld_sld_tab").length;
+            const $body = $(".sld-main-style-simple");
+            const $statusText = $("#sld-theme-status-0");
+            const storageKey = "user-theme-pref";
+            const currentTheme = localStorage.getItem(storageKey);
+
+
+            if (!$qcld_sld_tab) {
+
+	            if (currentTheme) {
+	                $body.addClass(currentTheme);
+	                if (currentTheme === "dark-mode") {
+	                    $toggle.prop("checked", true);
+	                    sld_dark_light_mode($toggle);
+	                    $statusText.text("'.$lan_dark_mode_on.'");
+	                }
+	            } else {
+	                if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+	                    $body.addClass("dark-mode");
+	                    $toggle.prop("checked", true);
+	                    sld_remove_dark_mode($toggle);
+	                    $statusText.text("'.$lan_light_mode_on.'");
+	                }
+	            }
+            }
+
+			$(document).on("change", ".sld-theme-checkbox-input", function(e) {
+				e.preventDefault();
+				e.stopImmediatePropagation();
+			    const $thisToggle 	= $(this);
+			    const isDarkMode 	= $thisToggle.is(":checked");
+			    const $targetWraps = $toggle.closest(".sld-sld-theme-switch-wrapper");
+
+			    if (isDarkMode) {
+			        // APPLY DARK MODE
+                    $body.addClass("dark-mode");
+                    localStorage.setItem(storageKey, "dark-mode");
+			        sld_dark_light_mode($thisToggle);
+                    $targetWraps.find("em").text("'.$lan_dark_mode_on.'");
+			    } else {
+			        // RESTORE ORIGINAL STYLE
+                    $body.removeClass("dark-mode");
+                    localStorage.setItem(storageKey, "light-mode");
+			        sld_remove_dark_mode($thisToggle);
+                    $targetWraps.find("em").text("'.$lan_light_mode_on.'");
+			    }
+			});
+
+
+            
+        });';
+
+    if( isset($dark_mode) && ($dark_mode == 'on' || $dark_mode == 'show' || $dark_mode == 'yes' ) ){
+
+		wp_add_inline_script( 'qcopd-custom-script', $custom_js, 'after' );
+    }
 
 	if( $mode == 'one' )
 	{
