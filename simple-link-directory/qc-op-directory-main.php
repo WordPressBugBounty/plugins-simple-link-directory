@@ -3,11 +3,11 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.7.6
+ * Version: 8.8.4
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
- * Tested up to: 6.8.2
+ * Tested up to: 6.8
  * Text Domain: qc-opd
  * Domain Path: /lang/
  * License: GPL2
@@ -389,12 +389,12 @@ function sld_wp_shortcode_notice(){
 
         <!-- <div id="message-sld" class="notice notice-info is-dismissible"> -->
             <?php
-            // printf(
-            //     __('%s  %s  %s', 'dna88-wp-notice'),
-            //     '<a href="'.esc_url('https://www.quantumcloud.com/products/simple-link-directory/').'" target="_blank">',
-            //     '<img src="'.esc_url(QCOPD_ASSETS_URL).'/images/newyear24-sld.jpg" >',
-            //     '</a>'
-            // );
+            /*printf(
+                __('%s  %s  %s', 'dna88-wp-notice'),
+                '<a href="'.esc_url('https://www.quantumcloud.com/products/simple-link-directory/').'" target="_blank">',
+                '<img src="'.esc_url(QCOPD_ASSETS_URL).'/images/halloween25-sld.jpg" >',
+                '</a>'
+            );*/
 
             ?>
         <!-- </div> -->
@@ -417,6 +417,58 @@ function sld_wp_shortcode_notice(){
                 ?>
             </p>
         </div>
+
+
+
+
+
+        
+<div id="qcld-quick-flyout" >
+    <div class="qcld-quick-flyout-items">
+    <a href="https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/" target="_blank" class="qcld-quick-flyout-button qcld-quick-flyout-item qcld-quick-flyout-premium" rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
+                <div class="qcld-quick-flyout-label">
+                    <div>Getting Started</div>
+                </div>
+                <i class="dashicons dashicons-admin-home"></i>
+            </a>
+            <a href="https://www.quantumcloud.com/resources/kb-sections/frequently-asked-questions/" target="_blank" class="qcld-quick-flyout-button qcld-quick-flyout-item" rel="noopener noreferrer" target="_blank" style="transition-delay: 60ms;">
+                <div class="qcld-quick-flyout-label">
+                    <div>FAQ</div>
+                </div>
+                <i class="dashicons dashicons-flag"></i>
+            </a>
+            <a href="https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/" target="_blank" class="qcld-quick-flyout-button qcld-quick-flyout-item" style="transition-delay: 90ms;">
+                <div class="qcld-quick-flyout-label">
+                    <div>Read the Documentation</div>
+                </div>
+                <i class="dashicons dashicons-sos"></i>
+            </a>
+            <a href="https://www.quantumcloud.com/resources/free-support/" target="_blank" class="qcld-quick-flyout-button qcld-quick-flyout-item" rel="noopener noreferrer" target="_blank" style="transition-delay: 120ms;">
+                <div class="qcld-quick-flyout-label">
+                    <div>Ask for Help</div>
+                </div>
+                <i class="dashicons dashicons-email"></i>
+            </a>           
+            <a href="https://dev.quantumcloud.com/sld/" target="_blank" class="qcld-quick-flyout-button qcld-quick-flyout-item" style="transition-delay: 30ms;">
+                <div class="qcld-quick-flyout-label">
+                    <div>Check out the SLD Demo</div>
+                </div>
+                <i class="dashicons dashicons-welcome-view-site"></i>
+            </a>
+            <a href="https://www.quantumcloud.com/products/simple-link-directory/" target="_blank" class="qcld-quick-flyout-button qcld-quick-flyout-item qcld-quick-flyout-premium" rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
+                <div class="qcld-quick-flyout-label">
+                    <div>Upgrade to Premium</div>
+                </div>
+                <i class="dashicons dashicons-star-filled"></i>
+            </a>
+            </div>
+    <a href="javascript:void(0);" class="qcld-quick-flyout-button qcld-quick-flyout-mascot">
+        <div class="qcld-quick-flyout-label">
+            <div>Start Here</div>
+        </div>
+        <img style="width:100%" src="<?php echo esc_url( QCOPD_IMG_URL . '/logo.png' ); ?>" alt="Dialogflow CX">
+    </a>
+</div>
     <?php 
         
     }

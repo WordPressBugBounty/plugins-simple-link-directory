@@ -147,3 +147,4 @@ global $woocommerce, $wp_scripts;
 
     </div>
 </div>
+

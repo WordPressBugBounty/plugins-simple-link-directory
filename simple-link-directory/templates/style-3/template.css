@@ -211,7 +211,21 @@
   text-align: center;
   padding-top: 10px;
   z-index: 805;
-  font-size: 12px;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+.qcld-main-container-style-3 .style-3 .upvote-count {
+    font-size: 14px !important;
+}
+
+.qcld-main-container-style-3 .style-3 .upvote-section {
+    border: 1px solid #eee;
+    width: auto;
+    line-height: normal;
+    margin: 0;
+    padding: 7px 25px;
+    border-radius: 25px;
 }
 
 .qcld-main-container-style-3 .style-3 .upvote-count {
@@ -375,7 +389,8 @@
     bottom: 0;
     width: calc(100% - 13px);
     height: calc(100% - 6px);
-    background-color: #222;
+    background-color: #607D8B;
+        border-radius: 0 0 6px 0;
     -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     -khtml-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     -moz-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -549,5 +564,11 @@
     }
   }
   
-  
-  
+@media (max-width:480px) { 
+  .qcld-main-container-style-3 .style-3 .ca-menu li:last-child{
+    margin-right: unset !important;
+}
+.qcld-main-container-style-3 .style-3 .ca-menu li {
+    margin: 8px 0;
+}
+}

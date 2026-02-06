@@ -93,12 +93,12 @@ color: #222;
 }
 
 .qcld-main-container-style-simple .simple .qcopd-single-list ul li a {
-  border-bottom: 1px solid #e8e8e8 !important;
   color: #222;
   display: block;
   padding: 13px 10px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
+  width: 100%;
   font-weight: normal;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -110,11 +110,15 @@ color: #222;
   box-shadow: 0px 0px 0px #ffffff;
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=90, Color=#ffffff); 
 }
-
-.qcld-main-container-style-simple .simple .qcopd-single-list ul li a:hover {
-  background: #fafafa;
+.qcld-main-container-style-simple .simple .qcopd-single-list ul li{
+    -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.qcld-main-container-style-simple .simple .qcopd-single-list ul li:hover {
+  background: #fafafa !important;
   color: #f86960;
-  border-bottom: 1px solid #f86960 !important;
 }
 
 .qcld-main-container-style-simple .simple .list-img{
@@ -124,16 +128,13 @@ color: #222;
 }
 
 .qcld-main-container-style-simple .simple .list-img img{
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 
 /*Upvote Section*/
 .qcld-main-container-style-simple .simple .upvote-section {
   height: 100%;
-  position: absolute;
-  right: 20px;
-  top: 50%;
   color: #666;
   font-size: 12px;
   text-align: center;
@@ -142,11 +143,6 @@ color: #222;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 .qcld-main-container-style-simple .simple .upvote-btn:hover, .qcld-main-container-style-simple .simple .ca-menu li:hover .upvote-btn{
   cursor: pointer;
@@ -215,5 +211,14 @@ color: #222;
 .qcld-main-container-style-simple .simple .upvote-btn {
     display: flex;
     align-content: center;
+    align-items: center;
+}
+.qcld-main-container-style-simple .simple .qcopd-single-list ul li {
+    list-style: none;
+    position: relative;
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }

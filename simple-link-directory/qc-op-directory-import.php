@@ -90,7 +90,9 @@ class Qcopd_BulkImportFree
                         if( !empty($_POST) && isset($_POST['upload_csv']) ) 
                         {
 
-                            if ( function_exists('is_user_logged_in') && is_user_logged_in() ) 
+                            check_admin_referer( 'qcsld_import_nonce' );
+
+                            if ( function_exists('is_user_logged_in') && is_user_logged_in() && current_user_can( 'manage_options' ) ) 
 							{
 
 								
@@ -100,7 +102,13 @@ class Qcopd_BulkImportFree
 
 								$uploadedfile = $_FILES['csv_upload'];
 
-								$upload_overrides = array( 'test_form' => false );
+								//$upload_overrides = array( 'test_form' => false );
+                                $upload_overrides = array(
+                                    'mimes'     => array(
+                                        'csv'  => 'text/csv',
+                                    ),
+                                    'test_form' => false,
+                                );
 
 								$movefile = wp_handle_upload( $uploadedfile, $upload_overrides );
 
@@ -129,10 +137,10 @@ class Qcopd_BulkImportFree
 											'qcopd_item_title' 		=> isset($data[1]) ? sanitize_text_field(iconv(mb_detect_encoding($data[1]), "UTF-8", $data[1])) : '',
 											'qcopd_item_link' 		=> isset($data[2]) ? esc_url_raw(iconv(mb_detect_encoding($data[2]), "UTF-8", $data[2])) : '',
 											'qcopd_item_img' 		=> '',
-											'qcopd_item_nofollow' 	=> isset($data[3]) ? trim($data[3]) : 0,
-											'qcopd_item_newtab' 	=> isset($data[4]) ? trim($data[4]) : 0,
-											'qcopd_item_subtitle' 	=> isset($data[5]) ? trim($data[5]) : '',
-											'list_item_bg_color' 	=> isset($data[6]) ? trim($data[6]) : ''
+											'qcopd_item_nofollow' 	=> isset($data[3]) ? sanitize_text_field(trim($data[3])) : 0,
+											'qcopd_item_newtab' 	=> isset($data[4]) ? sanitize_text_field(trim($data[4])) : 0,
+											'qcopd_item_subtitle' 	=> isset($data[5]) ? sanitize_text_field(trim($data[5])) : '',
+											'list_item_bg_color' 	=> isset($data[6]) ? sanitize_text_field(trim($data[6])) : ''
 										);
 
 										$count++;
@@ -209,7 +217,6 @@ class Qcopd_BulkImportFree
                             </p>
 
                             <form name="uploadfile" id="uploadfile_form" method="POST" enctype="multipart/form-data" action="" accept-charset="utf-8">
-                                <?php wp_nonce_field('qcsld_import_nonce', 'qc-opd'); ?>
 
                                 <p>
                                     <?php echo esc_html__('Select file to upload') ?>
@@ -219,6 +226,7 @@ class Qcopd_BulkImportFree
                                 <p>
                                     <input class="button-primary" type="submit" name="upload_csv" id="" value="<?php echo esc_html__('Upload & Process') ?>"/>
                                 </p>
+                                <?php wp_nonce_field('qcsld_import_nonce'); ?>
 
                             </form>
 
@@ -241,6 +249,10 @@ class Qcopd_BulkImportFree
 
         </div>
         <!-- /wrap -->
+
+
+
+
 
         <?php
     }

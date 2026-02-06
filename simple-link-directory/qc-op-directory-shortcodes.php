@@ -161,6 +161,8 @@ function show_qcopd_full_list( $atts = array() )
 	//Query Parameters
 	$list_args = array(
 		'post_type' 		=> 'sld',
+		'post_status' 		=> 'publish',
+		'has_password' 		=> false,
 		'posts_per_page' 	=> $limit,
 	);
 	if($orderby!='none' or $order!='none'){

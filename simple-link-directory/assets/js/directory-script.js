@@ -240,7 +240,11 @@ jQuery(document).ready(function($)
         e.preventDefault();
     })
     
-    
+   jQuery(document).ready(function($){
+jQuery('#qcld-quick-flyout').on('click', function() {
+  jQuery(this).toggleClass('is-open');
+});
+	}); 
     
     
 });

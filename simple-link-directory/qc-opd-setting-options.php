@@ -419,6 +419,10 @@ function qcsettings_page_callback_func(){
     <?php submit_button(); ?>
   </form>
 </div>
+
+
+
+
 <?php
 	
 }

@@ -370,4 +370,10 @@ jQuery(document).ready(function($){
 	    $("html, body").animate({ scrollTop: $(".qcld_short_genarator_scroll_wrap").offset().top }, 1500);
 	});
 	
+jQuery(document).ready(function($){
+jQuery('#qcld-quick-flyout').on('click', function() {
+  jQuery(this).toggleClass('is-open');
+});
+	});
+
 })
