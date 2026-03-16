@@ -288,12 +288,11 @@ function qcsettings_page_callback_func(){
                       <h3><?php echo esc_html('Shortcode Example'); ?></h3>
                       <p> <strong><?php echo esc_html('You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as "SLD" with WordPress content editor.'); ?></strong> </p>
                       <p> <strong><u><?php echo esc_html('For all the lists:'); ?></u></strong> <br>
-                        <span class="qcld-sld-code-highlight"><?php echo esc_html('[qcopd-directory mode="all" column="2" style="simple" orderby="date" order="DESC" enable_embedding="false"]'); ?></span> <br>
-                        <br>
-                        <strong><u><?php echo esc_html('For only a single list:'); ?></u></strong> <br>
-                       <span class="qcld-sld-code-highlight"> <?php echo esc_html('[qcopd-directory mode="one" list_id="75"]'); ?></span> <br>
-                        <br>
-                        <strong><u><?php echo esc_html('Available Parameters:'); ?></u></strong> <br>
+                        <span class="qcld-sld-code-highlight"><?php echo esc_html('[qcopd-directory mode="all" column="2" style="simple" orderby="date" order="DESC" enable_embedding="false"]'); ?></span> </p>
+
+                       <p> <strong><u><?php echo esc_html('For only a single list:'); ?></u></strong> <br>
+                       <span class="qcld-sld-code-highlight"> <?php echo esc_html('[qcopd-directory mode="one" list_id="75"]'); ?></span> </p>
+                        <p><strong><u><?php echo esc_html('Available Parameters:'); ?></u></strong> <br>
                       </p>
                       <p> <strong><?php echo esc_html('1. mode'); ?></strong> <br>
                     <span class="qcld-sld-code-highlight"><?php echo esc_html('[Value for this option can be set as "one" or "all".]'); ?></span> </p>

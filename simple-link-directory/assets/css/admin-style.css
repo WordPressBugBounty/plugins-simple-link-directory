@@ -764,3 +764,13 @@ body.qcld-sld-flyout #wpcontent .is-open {
     bottom: 0;
     padding: 40px;
 }
+
+.qcld-sld-shortcode-example p {
+    background: #eee;
+    padding: 8px 12px;
+    font-size: 14px !important;
+}
+
+.qcld-sld-shortcode-example p strong{
+    font-size: 16px !important;
+}
