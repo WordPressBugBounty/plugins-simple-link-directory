@@ -478,7 +478,7 @@ i.qc_sld_btn {
 }
 
 .qcld-sld-notic-alart{
-    padding: 15px 15px 15px 15px;
+    padding: 8px 15px 8px 15px;
     background-color: #ffffff;
     border-radius: 5px;
     margin: 20px 20px 0 0;
@@ -486,6 +486,7 @@ i.qc_sld_btn {
     box-shadow: 0px 4px 6px 1px #ebebeb;
     margin-bottom: 12px;
     border: none;
+    border-left: 3px solid #e91e63;
 }
 .serviceBox .service-icon {
     display: none;
@@ -773,4 +774,20 @@ body.qcld-sld-flyout #wpcontent .is-open {
 
 .qcld-sld-shortcode-example p strong{
     font-size: 16px !important;
+}
+
+.qcld-sld-demonotic-alart {
+    padding: 8px 15px 8px 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 20px 20px 0 0;
+    border-left: 0 solid transparent;
+    box-shadow: 0px 4px 6px 1px #ebebeb;
+    margin-bottom: 12px;
+    border: none;
+    border-left: 3px solid #e91e63;
+}
+.qcld-sld-demonotic-alart a{
+    color:#E91E63;
+    font-weight: bold;
 }
