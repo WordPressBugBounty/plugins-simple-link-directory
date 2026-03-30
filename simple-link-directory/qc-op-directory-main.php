@@ -3,7 +3,7 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.8.8
+ * Version: 8.8.9
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -220,25 +220,25 @@ function options_instructions_example() {
         <div class="notice notice-info is-dismissible sld-notice" style="display:none"> 
             <div class="sld_info_carousel">
 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: Did you know that you can', 'qc-opd'); ?> <strong style="color: yellow"><?php echo esc_html('Auto Generate', 'qc-opd'); ?></strong> <?php echo esc_html('Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?', 'qc-opd'); ?> <strong style="color: yellow"><?php echo esc_html('Triple Your Link Entry Speed!', 'qc-opd'); ?></strong></div>
+                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: Did you know that you can', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('Auto Generate', 'qc-opd'); ?></strong> <?php echo esc_html('Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('Triple Your Link Entry Speed!', 'qc-opd'); ?></strong></div>
                 
                 <div class="sld_info_item"><?php echo esc_html('**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance.', 'qc-opd'); ?></div>
                 
                 <div class="sld_info_item"><?php echo esc_html('**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode.', 'qc-opd'); ?></div>
 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn', 'qc-opd'); ?> <strong style="color: yellow"><?php echo esc_html('passive income?', 'qc-opd'); ?></strong> <?php echo esc_html('Upgrade now!', 'qc-opd'); ?></div>
+                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('passive income?', 'qc-opd'); ?></strong> <?php echo esc_html('Upgrade now!', 'qc-opd'); ?></div>
                 
                 <div class="sld_info_item"><?php echo esc_html('**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed.', 'qc-opd'); ?></div>
 
                 <div class="sld_info_item"><?php echo esc_html('**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page\'s visual editor.', 'qc-opd'); ?></div>
                 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: You can display your', 'qc-opd'); ?> <strong style="color: yellow"><?php echo esc_html('Lists by category', 'qc-opd'); ?> </strong><?php echo esc_html('with the SLD pro version.', 'qc-opd'); ?> <strong style="color: yellow"><?php echo esc_html('16+ Templates, Multi page mode', 'qc-opd'); ?></strong><?php echo esc_html(', Widgets are also available.', 'qc-opd'); ?></div>
+                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: You can display your', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('Lists by category', 'qc-opd'); ?> </strong><?php echo esc_html('with the SLD pro version.', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('16+ Templates, Multi page mode', 'qc-opd'); ?></strong><?php echo esc_html(', Widgets are also available.', 'qc-opd'); ?></div>
                 
                 <div class="sld_info_item"><?php echo esc_html('**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email.', 'qc-opd'); ?></div>
 
                 <div class="sld_info_item"><?php echo esc_html('**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details.', 'qc-opd'); ?></div>
                 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: SLD pro version has', 'qc-opd'); ?> <strong style="color: yellow"><?php echo esc_html('front end dashboard', 'qc-opd'); ?></strong> <?php echo esc_html('for user registration and link management. As well as tags and instant search.', 'qc-opd'); ?> <strong style="color: yellow"><?php echo esc_html('Upgrade to the Pro version now!', 'qc-opd'); ?></strong></div>
+                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: SLD pro version has', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('front end dashboard', 'qc-opd'); ?></strong> <?php echo esc_html('for user registration and link management. As well as tags and instant search.', 'qc-opd'); ?> <strong style="color:#E91E63"><?php echo esc_html('Upgrade to the Pro version now!', 'qc-opd'); ?></strong></div>
 
             </div>
 

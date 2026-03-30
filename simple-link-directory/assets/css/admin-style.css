@@ -230,9 +230,6 @@ i.qc_sld_btn {
     overflow:hidden;    
 }
 
-.sld_info_item.slick-slide.slick-current.slick-active {
-       width: none !important;
-}
 
 
 @media only screen and (max-width:992px){
@@ -494,9 +491,6 @@ i.qc_sld_btn {
 th.Shortcodestitle {
     border-bottom: 1px solid #eee;
     font-size: 20px;
-}
-.sld-notice .notice-dismiss:before{
-    color: #ffffff !important;
 }
 .sld-notice{
     border: none !important;
@@ -790,4 +784,21 @@ body.qcld-sld-flyout #wpcontent .is-open {
 .qcld-sld-demonotic-alart a{
     color:#E91E63;
     font-weight: bold;
+}
+
+.sld-notice {
+    padding: 8px 15px 8px 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 20px 20px 0 0;
+    border-left: 0 solid transparent;
+    box-shadow: 0px 4px 6px 1px #ebebeb;
+    margin-bottom: 12px;
+    border: none;
+    border-left: 3px solid #e91e63 !important;
+        color: #000000;
+}
+
+.sld-notice .slick-prev:before, .sld-notice .slick-next:before {
+    color: #e91e63;
 }
