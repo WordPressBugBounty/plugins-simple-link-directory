@@ -3,7 +3,7 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.8.9
+ * Version: 8.9.0
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -122,7 +122,7 @@ function promo_link_in_cpt_table()
     
     if( $current_screen == 'edit-sld' )
     {   
-        $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link">'.esc_html( "Upgrade to Pro", 'qc-opd' ).'</a></div>';
+        $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link" rel="nofollow">'.esc_html( "Upgrade to Pro", 'qc-opd' ).'</a></div>';
         $link .= '<div class="alignleft actions"><a href="'.esc_url( admin_url('post-new.php?post_type=sld')).'" class="button">'.esc_html( "Add New List of Links", 'qc-opd' ).'</a></div>';
     }
     
@@ -140,7 +140,7 @@ function promo_link_in_settings_page()
     
     $link = "";
     
-    $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link">'.esc_html( "Upgrade to Pro", 'qc-opd' ).'</a></div>';
+    $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link" rel="nofollow">'.esc_html( "Upgrade to Pro", 'qc-opd' ).'</a></div>';
     
     echo $link;
     

@@ -169,7 +169,7 @@ function qcsettings_page_callback_func(){
           <th scope="row"><?php echo esc_html('Add Button Link'); ?></th>
           <td><input type="text" name="sld_add_item_link" size="100" value="<?php echo esc_attr( get_option('sld_add_item_link') ); ?>"  />
             <i><?php echo esc_html('Example:  https://yourdomain.com/submit-link/'); ?></i>
-            <p><?php echo esc_html('Paste the full URL of a page that contains a contact form to submit link '); ?> ( <?php echo esc_html('Front end submission with monetization feature is available with the '); ?> <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank"><?php echo esc_html('Pro version'); ?></a> ) </p>
+            <p><?php echo esc_html('Paste the full URL of a page that contains a contact form to submit link '); ?> ( <?php echo esc_html('Front end submission with monetization feature is available with the '); ?> <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" rel="nofollow"><?php echo esc_html('Pro version'); ?></a> ) </p>
           </td>
         </tr>
         <tr valign="top">
@@ -300,7 +300,7 @@ function qcsettings_page_callback_func(){
                         <?php echo esc_html('Avaialble values: "1", "2", "3" or "4".'); ?> </p>
                       <p> <strong><?php echo esc_html('3. style'); ?></strong> <br>
                         <?php echo esc_html('Avaialble values: "simple", "style-1", "style-2", "style-3", "style-4", "style-5", "style-16".'); ?> <br>
-                        <strong style="color: red; padding: 10px 10px; display: inline-block; border: 1px solid; border-radius: 6px; margin: 5px 0 5px 0;"> <?php echo esc_html('Only 6 templates are available in the free version. For more styles or templates, please purchase the'); ?> <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" target="_blank"><?php echo esc_html('premium version'); ?></a>. </strong> </p>
+                        <strong style="color: red; padding: 10px 10px; display: inline-block; border: 1px solid; border-radius: 6px; margin: 5px 0 5px 0;"> <?php echo esc_html('Only 6 templates are available in the free version. For more styles or templates, please purchase the'); ?> <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" target="_blank" rel="nofollow"><?php echo esc_html('premium version'); ?></a>. </strong> </p>
                       <p> <strong><?php echo esc_html('4. orderby'); ?></strong> <br>
                         <?php echo esc_html("Compatible order by values: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' and 'menu_order'."); ?> </p>
                       <p> <strong><?php echo esc_html('5. order'); ?></strong> <br>
