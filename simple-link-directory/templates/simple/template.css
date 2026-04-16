@@ -201,6 +201,7 @@ color: #222;
 /*TPL Fix*/
 .qcld-main-container-style-simple .simple .upvote-section {
   height: 50px;
+   margin: 0 8px 0 0;
 }
 
 .qcld-main-container-style-simple .simple .upvote-btn {
@@ -221,4 +222,5 @@ color: #222;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
 }
