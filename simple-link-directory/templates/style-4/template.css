@@ -412,12 +412,15 @@ transform: rotate(75deg);
 }
 
 
+@media (max-width:480px) {
+
+.qcld-main-container-style-4 .style-4 .ca-menu li {
+    float: none;
+    margin: 0 auto 15px auto !important;
+}
 
 
-
-
-
-
+}
 
 
 
@@ -463,7 +466,7 @@ transform: rotate(75deg);
 }
 
 .qcld-main-container-style-4 .style-4 li {
-  margin: 0 12px 0 0 !important;
+  margin: 0 12px 15px 0 !important;
 }
 /* tablet breakpoint */
 @media (min-width:320px) {

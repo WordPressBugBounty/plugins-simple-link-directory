@@ -4,7 +4,7 @@ Donate link: https://www.quantumcloud.com/products/simple-link-directory/
 Tags: directory, directory listing, link directory, link management, web directory
 Requires at least: 4.6
 Tested up to: 6.9
-Stable tag: 8.9.1
+Stable tag: 8.9.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.quantumcloud.com/products/simple-link-directory/
@@ -260,7 +260,7 @@ Simple Lik Diretory Pro features:
 * Change all text languages
 
 > 🚀 Upgrade to [Simple Link Directiory Pro](https://www.quantumcloud.com/products/simple-link-directory/)
-> 🚀 <strong>Looking for a Complete Solution? [Check Out our Simple Link Directory Theme](http://dev.quantumcloud.com/themes/simple-link-directory/)</strong>
+> 🚀 <strong>Looking for a Complete Solution? [Check Out our Simple Link Directory Theme](https://www.quantumcloud.com/products/themes/simple-link-directory/)</strong>
 
 > //-> Try our <strong>[FREE ChatBot for WordPress with AI - WPBot](https://wordpress.org/plugins/chatbot/)</strong>. It is an easy to use, Native, No coding required, AI ChatBot to provide Automated Live Chat Support. Use ChatBot to <strong>answer user questions</strong> and also <strong>collect information</strong> from the users using <strong>conversational forms</strong>. It can be also be powered by DialogFlow, Tavily or OpenAI ChatGPT or simply use the built-in features to provide Live support and collect data. ++++ Check out the [ChatBot for WordPress](https://www.wpbot.pro/) Demo.
 
@@ -364,6 +364,9 @@ You can change the language texts from the Settings area. Currently, multi langu
 
 
 == Changelog ==
+
+= 8.9.2 =
+# Updated style 4
 
 = 8.9.1 =
 # Improved responsiveness
