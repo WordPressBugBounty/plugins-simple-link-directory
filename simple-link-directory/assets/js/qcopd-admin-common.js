@@ -398,19 +398,24 @@ jQuery(document).ready(function($){
 		$(container_id).show();
         window.history.replaceState(null, null, container_id);
 	})
-	var hash = window.location.hash;
-	if(hash!=''){
-		$('.sld_click_handle').each(function(){
-			
-			$($(this).attr('href')).hide();
-			if($(this).attr('href')==hash){
-				$(this).removeClass('nav-tab-active').addClass('nav-tab-active');
-			}else{
+	function sld_handle_hash() {
+		var hash = window.location.hash;
+		if(hash != '' && $('.sld_click_handle[href="'+hash+'"]').length > 0){
+			$('.sld_click_handle').each(function(){
+				$($(this).attr('href')).hide();
 				$(this).removeClass('nav-tab-active');
-			}
-		})
-		$(hash).show();
+			});
+			$(hash).show();
+			$('.sld_click_handle[href="'+hash+'"]').addClass('nav-tab-active');
+		}
 	}
+
+	$(window).on('hashchange', function() {
+		sld_handle_hash();
+	});
+
+	sld_handle_hash();
+
 
 	$('.sld_help_links').on('click', function(e){
 		e.preventDefault();

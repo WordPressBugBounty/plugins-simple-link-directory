@@ -129,7 +129,7 @@ if ( $list_query->have_posts() )
 
 							<!-- Link Text -->
 							<div class="ca-content">
-                                <h3 class="ca-main <?php echo $canContentClass; ?>">
+                                <h3 class="ca-main <?php echo esc_attr($canContentClass); ?>">
 								<?php 
 									echo ( isset($list['qcopd_item_title']) ? esc_html(trim($list['qcopd_item_title'])) : '' ); 
 								?>
@@ -149,7 +149,7 @@ if ( $list_query->have_posts() )
 
 							<!-- upvote section -->
 							<div class="upvote-section style-5-upvote-section">
-								<span data-post-id="<?php echo esc_attr(get_the_ID()); ?>" data-item-title="<?php echo ( isset($list['qcopd_item_title']) ? esc_html(trim($list['qcopd_item_title'])) : '' ); ?>" data-item-link="<?php echo ( isset($list['qcopd_item_link']) ? esc_url($list['qcopd_item_link']) : '' ); ?>" class="upvote-btn upvote-on">
+								<span data-post-id="<?php echo esc_attr(get_the_ID()); ?>" data-item-title="<?php echo ( isset($list['qcopd_item_title']) ? esc_attr(trim($list['qcopd_item_title'])) : '' ); ?>" data-item-link="<?php echo ( isset($list['qcopd_item_link']) ? esc_url($list['qcopd_item_link']) : '' ); ?>" class="upvote-btn upvote-on">
 									<i class="fa fa-thumbs-up"></i>
 								</span>
 								<span class="upvote-count">

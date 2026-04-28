@@ -155,7 +155,7 @@ if ( $list_query->have_posts() )
 						}
 					?>
 
-					<li id="item-<?php echo get_the_ID() ."-". $count; ?>" style="<?php echo ( isset($list['list_item_bg_color']) && !empty($list['list_item_bg_color']) ) ? 'background:'. esc_attr($list['list_item_bg_color']) : ''; ?>">
+					<li id="item-<?php echo esc_attr(get_the_ID() ."-". $count); ?>" style="<?php echo ( isset($list['list_item_bg_color']) && !empty($list['list_item_bg_color']) ) ? 'background:'. esc_attr($list['list_item_bg_color']) : ''; ?>">
 						<?php 
 							$item_url 	= isset( $list['qcopd_item_link'] ) ? esc_url($list['qcopd_item_link']) : '';
 							$masked_url = isset( $list['qcopd_item_link'] ) ? esc_url($list['qcopd_item_link']) : '';

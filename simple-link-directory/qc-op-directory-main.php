@@ -3,7 +3,7 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.9.2
+ * Version: 8.9.4
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -16,51 +16,51 @@
 defined('ABSPATH') or die("No direct script access!");
 
 //Custom Constants
-if ( ! defined( 'QCOPD_URL' ) ) {
+if (!defined('QCOPD_URL')) {
     define('QCOPD_URL', plugin_dir_url(__FILE__));
 }
 
-if ( ! defined( 'QCOPD_IMG_URL' ) ) {
+if (!defined('QCOPD_IMG_URL')) {
     define('QCOPD_IMG_URL', QCOPD_URL . "assets/images");
 }
 
-if ( ! defined( 'QCOPD_ASSETS_URL' ) ) {
+if (!defined('QCOPD_ASSETS_URL')) {
     define('QCOPD_ASSETS_URL', QCOPD_URL . "assets");
 }
 
-if ( ! defined( 'QCOPD_DIR' ) ) {
+if (!defined('QCOPD_DIR')) {
     define('QCOPD_DIR', dirname(__FILE__));
 }
 
-if ( ! defined( 'QCOPD_INC_DIR' ) ) {
+if (!defined('QCOPD_INC_DIR')) {
     define('QCOPD_INC_DIR', QCOPD_DIR . "/inc");
 }
 
-if ( ! defined( 'OCOPD_TPL_URL' ) ) {
+if (!defined('OCOPD_TPL_URL')) {
     define('OCOPD_TPL_URL', QCOPD_URL . "templates");
 }
 
-if ( ! defined( 'OCOPD_TPL_DIR' ) ) {
+if (!defined('OCOPD_TPL_DIR')) {
     define('OCOPD_TPL_DIR', QCOPD_DIR . "templates");
 }
 
 // Define a constant for the CSV file path within the plugin directory
-if ( ! defined( 'SLD_CSV_FILE_PATH' ) ) {
-    define( 'SLD_CSV_FILE_PATH', plugin_dir_path( __FILE__ ) . 'assets/file/sample-csv-file-demo.csv' );
+if (!defined('SLD_CSV_FILE_PATH')) {
+    define('SLD_CSV_FILE_PATH', plugin_dir_path(__FILE__) . 'assets/file/sample-csv-file-demo.csv');
 }
 //Include files and scripts
 
-require_once( 'qc-op-directory-post-type.php' );
-require_once( 'qc-op-directory-assets.php' );
-require_once( 'qc-op-directory-shortcodes.php' );
-require_once( 'embed/embedder.php' );
+require_once('qc-op-directory-post-type.php');
+require_once('qc-op-directory-assets.php');
+require_once('qc-op-directory-shortcodes.php');
+require_once('embed/embedder.php');
 
-require_once( 'qcopd-shortcode-generator.php' );
-require_once( 'qc-op-directory-import.php' );
-require_once( 'qc-opd-ajax-stuffs.php' );
+require_once('qcopd-shortcode-generator.php');
+require_once('qc-op-directory-import.php');
+require_once('qc-opd-ajax-stuffs.php');
 
 /*01-27-2026*/
-require_once( 'qc-sld-import-demo-data.php' );
+require_once('qc-sld-import-demo-data.php');
 
 
 
@@ -74,9 +74,10 @@ require_once('qc-opd-setting-options.php');
 require_once('qc-rating-feature/qc-rating-class.php');
 require_once('modules/addons/addons.php');
 
-if ( ! function_exists( 'sld_languages_function_callback' ) ) {
-    function sld_languages_function_callback(){
-        load_plugin_textdomain( 'qc-opd', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
+if (!function_exists('sld_languages_function_callback')) {
+    function sld_languages_function_callback()
+    {
+        load_plugin_textdomain('qc-opd', false, dirname(plugin_basename(__FILE__)) . '/lang');
     }
 }
 add_action('init', 'sld_languages_function_callback');
@@ -88,62 +89,61 @@ function qcopd_add_outbound_click_tracking_script()
 {
 
 
-    if(!function_exists('wp_get_current_user')) {
+    if (!function_exists('wp_get_current_user')) {
         include(ABSPATH . "wp-includes/pluggable.php");
     }
- 
- 
-	if( is_user_logged_in() ){
 
-		$current_user = wp_get_current_user();
-		if(in_array('administrator',$current_user->roles)){
-		  return;
-		}
-        
-	}
 
-    $outbound_conf = get_option( 'sld_enable_click_tracking' );
+    if (is_user_logged_in()) {
 
-    if ( isset($outbound_conf) && $outbound_conf == 'on' ) {
-		wp_enqueue_script( 'sld-admin-trackoutbound-script' );
+        $current_user = wp_get_current_user();
+        if (in_array('administrator', $current_user->roles)) {
+            return;
+        }
+
+    }
+
+    $outbound_conf = get_option('sld_enable_click_tracking');
+
+    if (isset($outbound_conf) && $outbound_conf == 'on') {
+        wp_enqueue_script('sld-admin-trackoutbound-script');
     }
 }
 
 /*Add Promotional Link - Bue Pro - 12-30-2016*/
-add_action( 'manage_posts_extra_tablenav', 'promo_link_in_cpt_table' );
+add_action('manage_posts_extra_tablenav', 'promo_link_in_cpt_table');
 
 function promo_link_in_cpt_table()
 {
     $screen = get_current_screen();
-    
+
     $current_screen = $screen->id;
-    
+
     $link = "";
-    
-    if( $current_screen == 'edit-sld' )
-    {   
-        $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link" rel="nofollow">'.esc_html( "Upgrade to Pro", 'qc-opd' ).'</a></div>';
-        $link .= '<div class="alignleft actions"><a href="'.esc_url( admin_url('post-new.php?post_type=sld')).'" class="button">'.esc_html( "Add New List of Links", 'qc-opd' ).'</a></div>';
+
+    if ($current_screen == 'edit-sld') {
+        $link = '<div class="alignleft actions"><a href="' . esc_url("https://www.quantumcloud.com/products/simple-link-directory/") . '" target="_blank" class="button qcsld-promo-link" rel="nofollow">' . esc_html("Upgrade to Pro", 'qc-opd') . '</a></div>';
+        $link .= '<div class="alignleft actions"><a href="' . esc_url(admin_url('post-new.php?post_type=sld')) . '" class="button">' . esc_html("Add New List of Links", 'qc-opd') . '</a></div>';
     }
-    
+
     echo $link;
-    
+
 }
 
-add_action( 'buypro_promotional_link', 'promo_link_in_settings_page' );
+add_action('buypro_promotional_link', 'promo_link_in_settings_page');
 
 function promo_link_in_settings_page()
 {
     $screen = get_current_screen();
-    
+
     $current_screen = $screen->id;
-    
+
     $link = "";
-    
-    $link = '<div class="alignleft actions"><a href="'.esc_url("https://www.quantumcloud.com/products/simple-link-directory/").'" target="_blank" class="button qcsld-promo-link" rel="nofollow">'.esc_html( "Upgrade to Pro", 'qc-opd' ).'</a></div>';
-    
+
+    $link = '<div class="alignleft actions"><a href="' . esc_url("https://www.quantumcloud.com/products/simple-link-directory/") . '" target="_blank" class="button qcsld-promo-link" rel="nofollow">' . esc_html("Upgrade to Pro", 'qc-opd') . '</a></div>';
+
     echo $link;
-    
+
 }
 
 /**
@@ -152,108 +152,137 @@ function promo_link_in_settings_page()
  *
  * @author Hendrik Schuster <contact@deviantdev.com>
  */
-function qclsldf_order_index_catalog_menu_page( $menu_ord ) 
+function qclsldf_order_index_catalog_menu_page($menu_ord)
 {
 
-  global $submenu;
+    global $submenu;
 
-  // Enable the next line to see a specific menu and it's order positions
-  //echo '<pre>'; print_r( $submenu['edit.php?post_type=sld'] ); echo '</pre>'; exit();
+    // Enable the next line to see a specific menu and it's order positions
+    //echo '<pre>'; print_r( $submenu['edit.php?post_type=sld'] ); echo '</pre>'; exit();
 
     $arr = array();
-    if( current_user_can('edit_posts') ){ 
+    if (current_user_can('edit_posts')) {
 
-        if(isset($submenu['edit.php?post_type=sld'][5]))
+        if (isset($submenu['edit.php?post_type=sld'][5]))
             $arr[] = $submenu['edit.php?post_type=sld'][5];
 
-        if(isset($submenu['edit.php?post_type=sld'][10]))
+        if (isset($submenu['edit.php?post_type=sld'][10]))
             $arr[] = $submenu['edit.php?post_type=sld'][10];
 
-        if(isset($submenu['edit.php?post_type=sld'][15]))
+        if (isset($submenu['edit.php?post_type=sld'][15]))
             $arr[] = $submenu['edit.php?post_type=sld'][15];
 
-        if(isset($submenu['edit.php?post_type=sld'][16]))
+        if (isset($submenu['edit.php?post_type=sld'][16]))
             $arr[] = $submenu['edit.php?post_type=sld'][16];
 
-        if(isset($submenu['edit.php?post_type=sld'][18]))
+        if (isset($submenu['edit.php?post_type=sld'][18]))
             $arr[] = $submenu['edit.php?post_type=sld'][18];
 
-        if(isset($submenu['edit.php?post_type=sld'][17]))
+        if (isset($submenu['edit.php?post_type=sld'][17]))
             $arr[] = $submenu['edit.php?post_type=sld'][17];
 
-        if(isset($submenu['edit.php?post_type=sld'][250]))
+        if (isset($submenu['edit.php?post_type=sld'][250]))
             $arr[] = $submenu['edit.php?post_type=sld'][250];
 
-        if(isset($submenu['edit.php?post_type=sld'][301]))
+        if (isset($submenu['edit.php?post_type=sld'][301]))
             $arr[] = $submenu['edit.php?post_type=sld'][301];
-    
-        if(isset($submenu['edit.php?post_type=sld'][300]))
+
+        if (isset($submenu['edit.php?post_type=sld'][300]))
             $arr[] = $submenu['edit.php?post_type=sld'][300];
-    
+
     }
     $submenu['edit.php?post_type=sld'] = $arr;
 
     return $menu_ord;
 
 }
-add_filter( 'custom_menu_order', 'qclsldf_order_index_catalog_menu_page' );
+add_filter('custom_menu_order', 'qclsldf_order_index_catalog_menu_page');
 
-add_action( 'admin_menu' , 'qcopd_help_link_submenu', 20 );
-function qcopd_help_link_submenu(){
+add_action('admin_menu', 'qcopd_help_link_submenu', 20);
+function qcopd_help_link_submenu()
+{
     global $submenu;
-    
+
     $link_text = esc_html("Shortcodes and Help");
-    $submenu["edit.php?post_type=sld"][250] = array( $link_text, 'activate_plugins' , admin_url('edit.php?post_type=sld&page=sld_settings#help') );
+    $submenu["edit.php?post_type=sld"][250] = array($link_text, 'activate_plugins', admin_url('edit.php?post_type=sld&page=sld_settings#help'));
     ksort($submenu["edit.php?post_type=sld"]);
-    
+
     return ($submenu);
 }
 
 
-function options_instructions_example() {
+function options_instructions_example()
+{
     global $my_admin_page;
     $screen = get_current_screen();
-    
-    if ( is_admin() && ($screen->post_type == 'sld') ) {
-		wp_enqueue_script( 'jqc-slick.min-js', QCOPD_ASSETS_URL . '/js/slick.min.js', array('jquery'));
+
+    if (is_admin() && ($screen->post_type == 'sld')) {
+        wp_enqueue_script('jqc-slick.min-js', QCOPD_ASSETS_URL . '/js/slick.min.js', array('jquery'));
         ?>
-        <div class="notice notice-info is-dismissible sld-notice" style="display:none"> 
+        <div class="notice notice-info is-dismissible sld-notice" style="display:none">
             <div class="sld_info_carousel">
 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: Did you know that you can', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('Auto Generate', 'qc-opd'); ?></strong> <?php echo esc_html('Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('Triple Your Link Entry Speed!', 'qc-opd'); ?></strong></div>
-                
-                <div class="sld_info_item"><?php echo esc_html('**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance.', 'qc-opd'); ?></div>
-                
-                <div class="sld_info_item"><?php echo esc_html('**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode.', 'qc-opd'); ?></div>
+                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: Did you know that you can', 'qc-opd'); ?> <strong
+                        style="color: #E91E63"><?php echo esc_html('Auto Generate', 'qc-opd'); ?></strong>
+                    <?php echo esc_html('Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?', 'qc-opd'); ?>
+                    <strong style="color: #E91E63"><?php echo esc_html('Triple Your Link Entry Speed!', 'qc-opd'); ?></strong>
+                </div>
 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('passive income?', 'qc-opd'); ?></strong> <?php echo esc_html('Upgrade now!', 'qc-opd'); ?></div>
-                
-                <div class="sld_info_item"><?php echo esc_html('**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed.', 'qc-opd'); ?></div>
+                <div class="sld_info_item">
+                    <?php echo esc_html('**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance.', 'qc-opd'); ?>
+                </div>
 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page\'s visual editor.', 'qc-opd'); ?></div>
-                
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: You can display your', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('Lists by category', 'qc-opd'); ?> </strong><?php echo esc_html('with the SLD pro version.', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('16+ Templates, Multi page mode', 'qc-opd'); ?></strong><?php echo esc_html(', Widgets are also available.', 'qc-opd'); ?></div>
-                
-                <div class="sld_info_item"><?php echo esc_html('**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email.', 'qc-opd'); ?></div>
+                <div class="sld_info_item">
+                    <?php echo esc_html('**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode.', 'qc-opd'); ?>
+                </div>
 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details.', 'qc-opd'); ?></div>
-                
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: SLD pro version has', 'qc-opd'); ?> <strong style="color: #E91E63"><?php echo esc_html('front end dashboard', 'qc-opd'); ?></strong> <?php echo esc_html('for user registration and link management. As well as tags and instant search.', 'qc-opd'); ?> <strong style="color:#E91E63"><?php echo esc_html('Upgrade to the Pro version now!', 'qc-opd'); ?></strong></div>
+                <div class="sld_info_item">
+                    <?php echo esc_html('**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn', 'qc-opd'); ?>
+                    <strong style="color: #E91E63"><?php echo esc_html('passive income?', 'qc-opd'); ?></strong>
+                    <?php echo esc_html('Upgrade now!', 'qc-opd'); ?></div>
+
+                <div class="sld_info_item">
+                    <?php echo esc_html('**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed.', 'qc-opd'); ?>
+                </div>
+
+                <div class="sld_info_item">
+                    <?php echo esc_html('**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page\'s visual editor.', 'qc-opd'); ?>
+                </div>
+
+                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: You can display your', 'qc-opd'); ?> <strong
+                        style="color: #E91E63"><?php echo esc_html('Lists by category', 'qc-opd'); ?>
+                    </strong><?php echo esc_html('with the SLD pro version.', 'qc-opd'); ?> <strong
+                        style="color: #E91E63"><?php echo esc_html('16+ Templates, Multi page mode', 'qc-opd'); ?></strong><?php echo esc_html(', Widgets are also available.', 'qc-opd'); ?>
+                </div>
+
+                <div class="sld_info_item">
+                    <?php echo esc_html('**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email.', 'qc-opd'); ?>
+                </div>
+
+                <div class="sld_info_item">
+                    <?php echo esc_html('**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details.', 'qc-opd'); ?>
+                </div>
+
+                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: SLD pro version has', 'qc-opd'); ?> <strong
+                        style="color: #E91E63"><?php echo esc_html('front end dashboard', 'qc-opd'); ?></strong>
+                    <?php echo esc_html('for user registration and link management. As well as tags and instant search.', 'qc-opd'); ?>
+                    <strong style="color:#E91E63"><?php echo esc_html('Upgrade to the Pro version now!', 'qc-opd'); ?></strong>
+                </div>
 
             </div>
 
         </div>
         <?php
-		
-		
+
+
     }
 }
 
-add_action( 'admin_notices', 'options_instructions_example' );
+add_action('admin_notices', 'options_instructions_example');
 
 /*
-* This is for radium-importer plugin conflict issue.
-*/
+ * This is for radium-importer plugin conflict issue.
+ */
 
 
 
@@ -261,151 +290,155 @@ add_action( 'admin_notices', 'options_instructions_example' );
  * Detect plugin. For use in Admin area only.
  */
 // For removing conflict with Demo Data Impoter
-class Radium_Theme_Demo_Data_Importer{
-	static $instance;
+class Radium_Theme_Demo_Data_Importer
+{
+    static $instance;
 }
 
 
-add_action( 'admin_menu' , 'qcsld_help_link_submenu', 20 );
-function qcsld_help_link_submenu(){
-	global $submenu;
-	
-	$link_text = esc_html("Shortcodes and Help");
-	$submenu["edit.php?post_type=sld"][250] = array( $link_text, 'activate_plugins' , admin_url('edit.php?post_type=sld&page=sld_settings#help') );
-	ksort($submenu["edit.php?post_type=sld"]);
-	
-	return ($submenu);
-}
 
 
-add_action( 'add_meta_boxes', 'sld_meta_box_video' );
+
+add_action('add_meta_boxes', 'sld_meta_box_video');
 function sld_meta_box_video()
 {					                  // --- Parameters: ---
-    add_meta_box( 'qc-sld-meta-box-id', // ID attribute of metabox
-                  esc_html('Shortcode Generator for SLD'),       // Title of metabox visible to user
-                  'sld_meta_box_callback', // Function that prints box in wp-admin
-                  'page',              // Show box for posts, pages, custom, etc.
-                  'side',            // Where on the page to show the box
-                  'high' );            // Priority of box in display order
+    add_meta_box(
+        'qc-sld-meta-box-id', // ID attribute of metabox
+        esc_html('Shortcode Generator for SLD'),       // Title of metabox visible to user
+        'sld_meta_box_callback', // Function that prints box in wp-admin
+        'page',              // Show box for posts, pages, custom, etc.
+        'side',            // Where on the page to show the box
+        'high'
+    );            // Priority of box in display order
 }
 
-function sld_meta_box_callback( $post )
+function sld_meta_box_callback($post)
 {
     ?>
     <p>
-        <label for="sh_meta_box_bg_effect"><p><?php echo esc_html('Click the button below to generate shortcode', 'qc-opd'); ?></p></label>
-		<input type="button" id="sld_shortcode_generator_meta" class="button button-primary button-large" value="<?php echo esc_attr('Generate Shortcode', 'qc-opd'); ?>" />
+        <label for="sh_meta_box_bg_effect">
+            <p><?php echo esc_html('Click the button below to generate shortcode', 'qc-opd'); ?></p>
+        </label>
+        <input type="button" id="sld_shortcode_generator_meta" class="button button-primary button-large"
+            value="<?php echo esc_attr('Generate Shortcode', 'qc-opd'); ?>" />
     </p>
-    
+
     <?php
 }
 
 //convert previous settings to new settings
-add_action( 'plugins_loaded', 'sld_plugin_loaded_fnc' );
-function sld_plugin_loaded_fnc(){
+add_action('plugins_loaded', 'sld_plugin_loaded_fnc');
+function sld_plugin_loaded_fnc()
+{
 
-	if(!get_option('sld_ot_convrt')){
-		$prevOptions = get_option('option_tree');		
-		if(!empty($prevOptions) && is_array($prevOptions) && array_key_exists('sld_enable_top_part', $prevOptions)){
-			
-			foreach($prevOptions as $key=>$val){
-				
-				update_option( $key, $val);
-			}
-		}		
-		add_option( 'sld_ot_convrt', 'yes');
-	}
+    if (!get_option('sld_ot_convrt')) {
+        $prevOptions = get_option('option_tree');
+        if (!empty($prevOptions) && is_array($prevOptions) && array_key_exists('sld_enable_top_part', $prevOptions)) {
+
+            foreach ($prevOptions as $key => $val) {
+
+                update_option($key, $val);
+            }
+        }
+        add_option('sld_ot_convrt', 'yes');
+    }
 
 }
 
-register_activation_hook( __FILE__, 'qcld_sld_activate_callback');
+register_activation_hook(__FILE__, 'qcld_sld_activate_callback');
 
-function qcld_sld_activate_callback( $plugin ) {
+function qcld_sld_activate_callback($plugin)
+{
 
-    if (!get_option('sld_enable_top_part')){
+    if (!get_option('sld_enable_top_part')) {
         update_option('sld_enable_top_part', 'on');
     }
 
-    if (!get_option('sld_enable_search')){
+    if (!get_option('sld_enable_search')) {
         update_option('sld_enable_search', 'on');
     }
 
-    if (!get_option('sld_enable_upvote')){
+    if (!get_option('sld_enable_upvote')) {
         update_option('sld_enable_upvote', 'on');
     }
 
 }
 
-function sld_activation_redirect( $plugin ) {
+function sld_activation_redirect($plugin)
+{
 
     $screen = get_current_screen();
 
-    if( ( isset( $screen->base ) && $screen->base == 'plugins' ) && $plugin == plugin_basename( __FILE__ ) ) {
-    //if( $plugin == plugin_basename( __FILE__ ) ) {
-        if( 'cli' !== php_sapi_name() ){
-            exit( wp_redirect( admin_url( 'edit.php?post_type=sld&page=sld_settings#help') ) );
+    if ((isset($screen->base) && $screen->base == 'plugins') && $plugin == plugin_basename(__FILE__)) {
+        //if( $plugin == plugin_basename( __FILE__ ) ) {
+        if ('cli' !== php_sapi_name()) {
+            exit(wp_redirect(admin_url('edit.php?post_type=sld&page=sld_settings#help')));
         }
     }
 }
-add_action( 'activated_plugin', 'sld_activation_redirect' );
+add_action('activated_plugin', 'sld_activation_redirect');
 
 
-if( function_exists('register_block_type') ){
-	function qcopd_sld_gutenberg_block() {
-	    require_once plugin_dir_path( __FILE__ ).'/gutenberg/sld-block/plugin.php';
-	}
-	add_action( 'init', 'qcopd_sld_gutenberg_block' );
+if (function_exists('register_block_type')) {
+    function qcopd_sld_gutenberg_block()
+    {
+        require_once plugin_dir_path(__FILE__) . '/gutenberg/sld-block/plugin.php';
+    }
+    add_action('init', 'qcopd_sld_gutenberg_block');
 }
 
 
 // Remove view from custom post type.
-add_filter( 'post_row_actions', 'qc_sld_remove_row_actions', 10, 1 );
-function qc_sld_remove_row_actions( $actions )
+add_filter('post_row_actions', 'qc_sld_remove_row_actions', 10, 1);
+function qc_sld_remove_row_actions($actions)
 {
-	if( get_post_type() === 'sld' ){
-	 unset( $actions['view'] );
-	}
-	 
-	return $actions;
+    if (get_post_type() === 'sld') {
+        unset($actions['view']);
+    }
+
+    return $actions;
 }
 // Remove view from taxonomies
-add_filter( 'sld_cat_row_actions', 'qc_sld_category_remove_row_actions', 10, 1 );
-function qc_sld_category_remove_row_actions($actions){
-	unset($actions['view']);
-	return $actions;
+add_filter('sld_cat_row_actions', 'qc_sld_category_remove_row_actions', 10, 1);
+function qc_sld_category_remove_row_actions($actions)
+{
+    unset($actions['view']);
+    return $actions;
 }
 
-if( is_admin() ){
+if (is_admin()) {
     require_once('class-plugin-deactivate-feedback.php');
-    $SlD_feedback = new SLD_Usage_Feedback( __FILE__, 'plugins@quantumcloud.com', false, true );
+    $SlD_feedback = new SLD_Usage_Feedback(__FILE__, 'plugins@quantumcloud.com', false, true);
 }
 
-function sld_remove_admin_menu_items() {
-    if( !current_user_can( 'edit_posts' ) ):
-        remove_menu_page( 'edit.php?post_type=sld' );
+function sld_remove_admin_menu_items()
+{
+    if (!current_user_can('edit_posts')):
+        remove_menu_page('edit.php?post_type=sld');
     endif;
 }
-add_action( 'admin_menu', 'sld_remove_admin_menu_items' );
+add_action('admin_menu', 'sld_remove_admin_menu_items');
 
 
-add_action( 'admin_notices', 'sld_wp_shortcode_notice',100 );
-function sld_wp_shortcode_notice(){
+add_action('admin_notices', 'sld_wp_shortcode_notice', 100);
+function sld_wp_shortcode_notice()
+{
 
     global $pagenow, $typenow;
 
-    if ( isset($typenow) && $typenow == 'sld'  ) {
-    ?>
+    if (isset($typenow) && $typenow == 'sld') {
+        ?>
 
         <!-- <div id="message-sld" class="notice notice-info is-dismissible"> -->
-            <?php
-            /*printf(
-                __('%s  %s  %s', 'dna88-wp-notice'),
-                '<a href="'.esc_url('https://www.quantumcloud.com/products/simple-link-directory/').'" target="_blank">',
-                '<img src="'.esc_url(QCOPD_ASSETS_URL).'/images/halloween25-sld.jpg" >',
-                '</a>'
-            );*/
+        <?php
+        /*printf(
+            __('%s  %s  %s', 'dna88-wp-notice'),
+            '<a href="'.esc_url('https://www.quantumcloud.com/products/simple-link-directory/').'" target="_blank">',
+            '<img src="'.esc_url(QCOPD_ASSETS_URL).'/images/halloween25-sld.jpg" >',
+            '</a>'
+        );*/
 
-            ?>
+        ?>
         <!-- </div> -->
 
 
@@ -428,80 +461,91 @@ function sld_wp_shortcode_notice(){
         </div>
 
 
-        <?php 
-            $page_slug     = 'sld-demo-data';
+        <?php
+        $page_slug = 'sld-demo-data';
 
-            $existing_page = get_page_by_path( $page_slug );
-            if ( ! $existing_page ) {
-        ?>
+        $existing_page = get_page_by_path($page_slug);
+        if (!$existing_page) {
+            ?>
 
-        <div id="message" class="notice notice-info is-dismissible qcld-sld-demonotic-alart">
-            <p>
-                <?php
-                printf(
-                    __('%s Import SLD Demo Data:%s Imports a CSV file from the plugin folder into a custom post type called "sld", creates a new page, displays the data using a shortcode, and redirects the demo page %s Click to Import Data %s %s', 'qc-opd'),
-                    '<strong>',
-                    '</strong>',
-                    '<button type="button" id="sld-start-import-btn" class="button button-primary">',
-                    '</button>',
-                    '<div id="sld-import-message"></div>',
-                
-                );
-                ?>
-            </p>
-        </div>
-    <?php }else{ ?>
+            <div id="message" class="notice notice-info is-dismissible qcld-sld-demonotic-alart">
+                <p>
+                    <?php
+                    printf(
+                        __('%s Import SLD Demo Data:%s Imports a CSV file from the plugin folder into a custom post type called "sld", creates a new page, displays the data using a shortcode, and redirects the demo page %s Click to Import Data %s %s', 'qc-opd'),
+                        '<strong>',
+                        '</strong>',
+                        '<button type="button" id="sld-start-import-btn" class="button button-primary">',
+                        '</button>',
+                        '<div id="sld-import-message"></div>',
 
-        <div id="message" class="notice notice-info is-dismissible qcld-sld-demonotic-alart">
-            <p>
-                <?php
-                printf(
-                    __('%s SLD Demo Data Imported:%s Imports a CSV file from the plugin folder into a custom post type called "sld", creates a new page, displays the data using a shortcode, and redirects the demo page %s Click to View Demo Page %s ', 'qc-opd'),
-                    '<strong>',
-                    '</strong>',
-                    '<a href="'.esc_url(home_url('sld-demo-data')).'" target="_blank">',
-                    '</a>',
-                
-                );
-                ?>
-            </p>
-        </div>
-    <?php } ?>
+                    );
+                    ?>
+                </p>
+            </div>
+        <?php } else { ?>
 
-        
-        <div class="qcld-sldquick-flyout" >
+            <div id="message" class="notice notice-info is-dismissible qcld-sld-demonotic-alart">
+                <p>
+                    <?php
+                    printf(
+                        __('%s SLD Demo Data Imported:%s Imports a CSV file from the plugin folder into a custom post type called "sld", creates a new page, displays the data using a shortcode, and redirects the demo page %s Click to View Demo Page %s ', 'qc-opd'),
+                        '<strong>',
+                        '</strong>',
+                        '<a href="' . esc_url(home_url('sld-demo-data')) . '" target="_blank">',
+                        '</a>',
+
+                    );
+                    ?>
+                </p>
+            </div>
+        <?php } ?>
+
+
+        <div class="qcld-sldquick-flyout">
             <div class="qcld-sldquick-flyout-items">
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>" target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item qcld-sldquick-flyout-premium" rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
+                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>"
+                    target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item qcld-sldquick-flyout-premium"
+                    rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
                     <div class="qcld-sldquick-flyout-label">
                         <div><?php echo esc_html('Getting Started', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-admin-home"></i>
                 </a>
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/frequently-asked-questions/'); ?>" target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" rel="noopener noreferrer" target="_blank" style="transition-delay: 60ms;">
+                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/frequently-asked-questions/'); ?>"
+                    target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" rel="noopener noreferrer"
+                    target="_blank" style="transition-delay: 60ms;">
                     <div class="qcld-sldquick-flyout-label">
                         <div><?php echo esc_html('FAQ', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-flag"></i>
                 </a>
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>" target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" style="transition-delay: 90ms;">
+                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>"
+                    target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item"
+                    style="transition-delay: 90ms;">
                     <div class="qcld-sldquick-flyout-label">
                         <div><?php echo esc_html('Read the Documentation', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-sos"></i>
                 </a>
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/free-support/'); ?>" target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" rel="noopener noreferrer" target="_blank" style="transition-delay: 120ms;">
+                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/free-support/'); ?>" target="_blank"
+                    class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" rel="noopener noreferrer" target="_blank"
+                    style="transition-delay: 120ms;">
                     <div class="qcld-sldquick-flyout-label">
                         <div><?php echo esc_html('Ask for Help', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-email"></i>
-                </a>           
-                <a href="<?php echo esc_url('https://dev.quantumcloud.com/sld/'); ?>" target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" style="transition-delay: 30ms;">
+                </a>
+                <a href="<?php echo esc_url('https://dev.quantumcloud.com/sld/'); ?>" target="_blank"
+                    class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" style="transition-delay: 30ms;">
                     <div class="qcld-sldquick-flyout-label">
                         <div><?php echo esc_html('Check out the SLD Demo', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-welcome-view-site"></i>
                 </a>
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item qcld-sldquick-flyout-premium" rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
+                <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank"
+                    class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item qcld-sldquick-flyout-premium"
+                    rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
                     <div class="qcld-sldquick-flyout-label">
                         <div><?php echo esc_html('Upgrade to Premium', 'qc-opd'); ?></div>
                     </div>
@@ -512,11 +556,11 @@ function sld_wp_shortcode_notice(){
                 <div class="qcld-sldquick-flyout-label">
                     <div><?php echo esc_html('Start Here', 'qc-opd'); ?></div>
                 </div>
-                <img style="width:100%" src="<?php echo esc_url( QCOPD_IMG_URL . '/logo.png' ); ?>" alt="Dialogflow CX">
+                <img style="width:100%" src="<?php echo esc_url(QCOPD_IMG_URL . '/logo.png'); ?>" alt="Dialogflow CX">
             </a>
         </div>
-    <?php 
-        
+    <?php
+
     }
 
 }

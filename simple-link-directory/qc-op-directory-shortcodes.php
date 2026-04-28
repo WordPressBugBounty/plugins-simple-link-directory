@@ -113,35 +113,43 @@ function show_qcopd_full_list( $atts = array() )
 		), $atts
 	));
 
+	$title_font_size = preg_replace('/[^a-zA-Z0-9._%\-]/', '', $title_font_size);
+	$subtitle_font_size = preg_replace('/[^a-zA-Z0-9._%\-]/', '', $subtitle_font_size);
+	$title_line_height = preg_replace('/[^a-zA-Z0-9._%\-]/', '', $title_line_height);
+	$subtitle_line_height = preg_replace('/[^a-zA-Z0-9._%\-]/', '', $subtitle_line_height);
+	$min_width = preg_replace('/[^a-zA-Z0-9._%\-]/', '', $min_width);
+
+
 	// check style if empty. default simple.
 	$style = ( isset( $atts["style"] ) && get_style_for_template( $atts["style"] ) ) ? get_style_for_template( $atts["style"] ) : $style;
 
 	//ShortCode Atts
 	$shortcodeAtts = array(
-		'orderby' 				=> $orderby,
-		'order' 				=> $order,
-		'mode' 					=> $mode,
-		'list_id' 				=> $list_id,
-		'column' 				=> $column,
-		'style' 				=> $style,
-		'min_width' 			=> $min_width,
-		'list_img' 				=> $list_img,
-		'search' 				=> $search,
-		'category' 				=> $category,
-		'upvote' 				=> $upvote,
-		'item_count' 			=> $item_count,
-		'top_area' 				=> $top_area,
-		'item_orderby' 			=> $item_orderby,
-		'item_order' 			=> $item_order,
-		'mask_url' 				=> $mask_url,
-		'enable_embedding' 		=> $enable_embedding,
-		'title_font_size' 		=> $title_font_size,
-		'subtitle_font_size' 	=> $subtitle_font_size,
-		'title_line_height' 	=> $title_line_height,
-		'subtitle_line_height' 	=> $subtitle_line_height,
-		'enable_image' 			=> $enable_image,
-		'dark_mode' 			=> $dark_mode,
+		'orderby' 				=> esc_attr($orderby),
+		'order' 				=> esc_attr($order),
+		'mode' 					=> esc_attr($mode),
+		'list_id' 				=> esc_attr($list_id),
+		'column' 				=> esc_attr($column),
+		'style' 				=> esc_attr($style),
+		'min_width' 			=> esc_attr($min_width),
+		'list_img' 				=> esc_attr($list_img),
+		'search' 				=> esc_attr($search),
+		'category' 				=> esc_attr($category),
+		'upvote' 				=> esc_attr($upvote),
+		'item_count' 			=> esc_attr($item_count),
+		'top_area' 				=> esc_attr($top_area),
+		'item_orderby' 			=> esc_attr($item_orderby),
+		'item_order' 			=> esc_attr($item_order),
+		'mask_url' 				=> esc_attr($mask_url),
+		'enable_embedding' 		=> esc_attr($enable_embedding),
+		'title_font_size' 		=> esc_attr($title_font_size),
+		'subtitle_font_size' 	=> esc_attr($subtitle_font_size),
+		'title_line_height' 	=> esc_attr($title_line_height),
+		'subtitle_line_height' 	=> esc_attr($subtitle_line_height),
+		'enable_image' 			=> esc_attr($enable_image),
+		'dark_mode' 			=> esc_attr($dark_mode),
 	);
+
 	
 	$limit = -1;
 
@@ -221,7 +229,7 @@ function show_qcopd_full_list( $atts = array() )
 			                        <span class="sld-theme-icon moon">🌙</span>
 			                    </div>
 			                </label>
-			                <em id="sld-theme-status-${index}">'.$lan_enable_dark_mode.'</em>
+			                <em id="sld-theme-status-${index}">'.esc_html($lan_enable_dark_mode).'</em>
 			            </div>
 			        `);
 			    }
@@ -242,14 +250,14 @@ function show_qcopd_full_list( $atts = array() )
 	                if (currentTheme === "dark-mode") {
 	                    $toggle.prop("checked", true);
 	                    sld_dark_light_mode($toggle);
-	                    $statusText.text("'.$lan_dark_mode_on.'");
+	                    $statusText.text("'.esc_js($lan_dark_mode_on).'");
 	                }
 	            } else {
 	                if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 	                    $body.addClass("dark-mode");
 	                    $toggle.prop("checked", true);
 	                    sld_remove_dark_mode($toggle);
-	                    $statusText.text("'.$lan_light_mode_on.'");
+	                    $statusText.text("'.esc_js($lan_light_mode_on).'");
 	                }
 	            }
             }
@@ -266,13 +274,13 @@ function show_qcopd_full_list( $atts = array() )
                     $body.addClass("dark-mode");
                     localStorage.setItem(storageKey, "dark-mode");
 			        sld_dark_light_mode($thisToggle);
-                    $targetWraps.find("em").text("'.$lan_dark_mode_on.'");
+                    $targetWraps.find("em").text("'.esc_js($lan_dark_mode_on).'");
 			    } else {
 			        // RESTORE ORIGINAL STYLE
                     $body.removeClass("dark-mode");
                     localStorage.setItem(storageKey, "light-mode");
 			        sld_remove_dark_mode($thisToggle);
-                    $targetWraps.find("em").text("'.$lan_light_mode_on.'");
+                    $targetWraps.find("em").text("'.esc_js($lan_light_mode_on).'");
 			    }
 			});
 
