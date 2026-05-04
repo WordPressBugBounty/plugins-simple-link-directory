@@ -802,3 +802,30 @@ body.qcld-sld-flyout #wpcontent .is-open {
 .sld-notice .slick-prev:before, .sld-notice .slick-next:before {
     color: #e91e63;
 }
+
+
+
+div#general_settings table.form-table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+div#general_settings table.form-table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+div#general_settings table.form-table tr th {
+    padding: 20px 12px 20px 12px;
+}
+
+
+div#language_settings table.form-table  tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+div#language_settings table.form-table  tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+div#language_settings table.form-table  tr th {
+    padding: 20px 12px 20px 12px;
+}
