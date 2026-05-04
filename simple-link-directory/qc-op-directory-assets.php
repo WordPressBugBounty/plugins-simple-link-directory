@@ -42,7 +42,7 @@ if ( ! function_exists( 'qcopd_load_all_scripts' ) ) {
 
 
         $sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'on':'';
-        $sld_no_results_found       = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html('No Results Found for Your Search');
+        $sld_no_results_found       = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html__('No Results Found for Your Search', 'qc-opd');
 
         $customscript ='
                 var ajaxurl = "' . admin_url('admin-ajax.php') . '";

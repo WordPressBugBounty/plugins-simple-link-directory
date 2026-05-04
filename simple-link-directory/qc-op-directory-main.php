@@ -3,7 +3,7 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.9.5
+ * Version: 8.9.6
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -203,7 +203,7 @@ function qcopd_help_link_submenu()
 {
     global $submenu;
 
-    $link_text = esc_html("Shortcodes and Help");
+    $link_text = esc_html__("Shortcodes and Help", 'qc-opd');
     $submenu["edit.php?post_type=sld"][250] = array($link_text, 'activate_plugins', admin_url('edit.php?post_type=sld&page=sld_settings#help'));
     ksort($submenu["edit.php?post_type=sld"]);
 
@@ -222,51 +222,51 @@ function options_instructions_example()
         <div class="notice notice-info is-dismissible sld-notice" style="display:none">
             <div class="sld_info_carousel">
 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: Did you know that you can', 'qc-opd'); ?> <strong
-                        style="color: #E91E63"><?php echo esc_html('Auto Generate', 'qc-opd'); ?></strong>
-                    <?php echo esc_html('Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?', 'qc-opd'); ?>
-                    <strong style="color: #E91E63"><?php echo esc_html('Triple Your Link Entry Speed!', 'qc-opd'); ?></strong>
+                <div class="sld_info_item"><?php esc_html_e('**SLD Pro Tip: Did you know that you can', 'qc-opd'); ?> <strong
+                        style="color: #E91E63"><?php esc_html_e('Auto Generate', 'qc-opd'); ?></strong>
+                    <?php esc_html_e('Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?', 'qc-opd'); ?>
+                    <strong style="color: #E91E63"><?php esc_html_e('Triple Your Link Entry Speed!', 'qc-opd'); ?></strong>
                 </div>
 
                 <div class="sld_info_item">
-                    <?php echo esc_html('**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance.', 'qc-opd'); ?>
+                    <?php esc_html_e('**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance.', 'qc-opd'); ?>
                 </div>
 
                 <div class="sld_info_item">
-                    <?php echo esc_html('**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode.', 'qc-opd'); ?>
+                    <?php esc_html_e('**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode.', 'qc-opd'); ?>
                 </div>
 
                 <div class="sld_info_item">
-                    <?php echo esc_html('**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn', 'qc-opd'); ?>
-                    <strong style="color: #E91E63"><?php echo esc_html('passive income?', 'qc-opd'); ?></strong>
-                    <?php echo esc_html('Upgrade now!', 'qc-opd'); ?></div>
+                    <?php esc_html_e('**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn', 'qc-opd'); ?>
+                    <strong style="color: #E91E63"><?php esc_html_e('passive income?', 'qc-opd'); ?></strong>
+                    <?php esc_html_e('Upgrade now!', 'qc-opd'); ?></div>
 
                 <div class="sld_info_item">
-                    <?php echo esc_html('**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed.', 'qc-opd'); ?>
-                </div>
-
-                <div class="sld_info_item">
-                    <?php echo esc_html('**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page\'s visual editor.', 'qc-opd'); ?>
-                </div>
-
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: You can display your', 'qc-opd'); ?> <strong
-                        style="color: #E91E63"><?php echo esc_html('Lists by category', 'qc-opd'); ?>
-                    </strong><?php echo esc_html('with the SLD pro version.', 'qc-opd'); ?> <strong
-                        style="color: #E91E63"><?php echo esc_html('16+ Templates, Multi page mode', 'qc-opd'); ?></strong><?php echo esc_html(', Widgets are also available.', 'qc-opd'); ?>
+                    <?php esc_html_e('**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed.', 'qc-opd'); ?>
                 </div>
 
                 <div class="sld_info_item">
-                    <?php echo esc_html('**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email.', 'qc-opd'); ?>
+                    <?php esc_html_e('**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page\'s visual editor.', 'qc-opd'); ?>
+                </div>
+
+                <div class="sld_info_item"><?php esc_html_e('**SLD Pro Tip: You can display your', 'qc-opd'); ?> <strong
+                        style="color: #E91E63"><?php esc_html_e('Lists by category', 'qc-opd'); ?>
+                    </strong><?php esc_html_e('with the SLD pro version.', 'qc-opd'); ?> <strong
+                        style="color: #E91E63"><?php esc_html_e('16+ Templates, Multi page mode', 'qc-opd'); ?></strong><?php esc_html_e(', Widgets are also available.', 'qc-opd'); ?>
                 </div>
 
                 <div class="sld_info_item">
-                    <?php echo esc_html('**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details.', 'qc-opd'); ?>
+                    <?php esc_html_e('**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email.', 'qc-opd'); ?>
                 </div>
 
-                <div class="sld_info_item"><?php echo esc_html('**SLD Pro Tip: SLD pro version has', 'qc-opd'); ?> <strong
-                        style="color: #E91E63"><?php echo esc_html('front end dashboard', 'qc-opd'); ?></strong>
-                    <?php echo esc_html('for user registration and link management. As well as tags and instant search.', 'qc-opd'); ?>
-                    <strong style="color:#E91E63"><?php echo esc_html('Upgrade to the Pro version now!', 'qc-opd'); ?></strong>
+                <div class="sld_info_item">
+                    <?php esc_html_e('**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details.', 'qc-opd'); ?>
+                </div>
+
+                <div class="sld_info_item"><?php esc_html_e('**SLD Pro Tip: SLD pro version has', 'qc-opd'); ?> <strong
+                        style="color: #E91E63"><?php esc_html_e('front end dashboard', 'qc-opd'); ?></strong>
+                    <?php esc_html_e('for user registration and link management. As well as tags and instant search.', 'qc-opd'); ?>
+                    <strong style="color:#E91E63"><?php esc_html_e('Upgrade to the Pro version now!', 'qc-opd'); ?></strong>
                 </div>
 
             </div>
@@ -304,7 +304,7 @@ function sld_meta_box_video()
 {					                  // --- Parameters: ---
     add_meta_box(
         'qc-sld-meta-box-id', // ID attribute of metabox
-        esc_html('Shortcode Generator for SLD'),       // Title of metabox visible to user
+        esc_html__('Shortcode Generator for SLD', 'qc-opd'),       // Title of metabox visible to user
         'sld_meta_box_callback', // Function that prints box in wp-admin
         'page',              // Show box for posts, pages, custom, etc.
         'side',            // Where on the page to show the box
@@ -317,7 +317,7 @@ function sld_meta_box_callback($post)
     ?>
     <p>
         <label for="sh_meta_box_bg_effect">
-            <p><?php echo esc_html('Click the button below to generate shortcode', 'qc-opd'); ?></p>
+            <p><?php esc_html_e('Click the button below to generate shortcode', 'qc-opd'); ?></p>
         </label>
         <input type="button" id="sld_shortcode_generator_meta" class="button button-primary button-large"
             value="<?php echo esc_attr('Generate Shortcode', 'qc-opd'); ?>" />
@@ -508,7 +508,7 @@ function sld_wp_shortcode_notice()
                     target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item qcld-sldquick-flyout-premium"
                     rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
                     <div class="qcld-sldquick-flyout-label">
-                        <div><?php echo esc_html('Getting Started', 'qc-opd'); ?></div>
+                        <div><?php esc_html_e('Getting Started', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-admin-home"></i>
                 </a>
@@ -516,7 +516,7 @@ function sld_wp_shortcode_notice()
                     target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" rel="noopener noreferrer"
                     target="_blank" style="transition-delay: 60ms;">
                     <div class="qcld-sldquick-flyout-label">
-                        <div><?php echo esc_html('FAQ', 'qc-opd'); ?></div>
+                        <div><?php esc_html_e('FAQ', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-flag"></i>
                 </a>
@@ -524,7 +524,7 @@ function sld_wp_shortcode_notice()
                     target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item"
                     style="transition-delay: 90ms;">
                     <div class="qcld-sldquick-flyout-label">
-                        <div><?php echo esc_html('Read the Documentation', 'qc-opd'); ?></div>
+                        <div><?php esc_html_e('Read the Documentation', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-sos"></i>
                 </a>
@@ -532,14 +532,14 @@ function sld_wp_shortcode_notice()
                     class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" rel="noopener noreferrer" target="_blank"
                     style="transition-delay: 120ms;">
                     <div class="qcld-sldquick-flyout-label">
-                        <div><?php echo esc_html('Ask for Help', 'qc-opd'); ?></div>
+                        <div><?php esc_html_e('Ask for Help', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-email"></i>
                 </a>
                 <a href="<?php echo esc_url('https://dev.quantumcloud.com/sld/'); ?>" target="_blank"
                     class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" style="transition-delay: 30ms;">
                     <div class="qcld-sldquick-flyout-label">
-                        <div><?php echo esc_html('Check out the SLD Demo', 'qc-opd'); ?></div>
+                        <div><?php esc_html_e('Check out the SLD Demo', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-welcome-view-site"></i>
                 </a>
@@ -547,14 +547,14 @@ function sld_wp_shortcode_notice()
                     class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item qcld-sldquick-flyout-premium"
                     rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
                     <div class="qcld-sldquick-flyout-label">
-                        <div><?php echo esc_html('Upgrade to Premium', 'qc-opd'); ?></div>
+                        <div><?php esc_html_e('Upgrade to Premium', 'qc-opd'); ?></div>
                     </div>
                     <i class="dashicons dashicons-star-filled"></i>
                 </a>
             </div>
             <a href="javascript:void(0);" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-mascot">
                 <div class="qcld-sldquick-flyout-label">
-                    <div><?php echo esc_html('Start Here', 'qc-opd'); ?></div>
+                    <div><?php esc_html_e('Start Here', 'qc-opd'); ?></div>
                 </div>
                 <img style="width:100%" src="<?php echo esc_url(QCOPD_IMG_URL . '/logo.png'); ?>" alt="Dialogflow CX">
             </a>

@@ -223,7 +223,7 @@ if( !function_exists('qcld_recommend_support_function_first_sld_ajax') ){
                             // );
                             // $action_links[] = sprintf( '%s','<a href="#" data-toggle="modal" data-target="#myModal_'.$plugin['slug'].'">More Details</a><div class="modal fade" id="myModal_'.$plugin['slug'].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><iframe width="100%" height="550" src="'.$details_link.'"></iframe></div></div></div></div>');
                             $plugin_live_link = "https://wordpress.org/plugins/".$plugin['slug'];
-                            $action_links[] = sprintf( '%s','<a href="'.esc_url($plugin_live_link).'" target="_blank">' . esc_html('More Details') . '</a>');
+                            $action_links[] = sprintf( '%s','<a href="'.esc_url($plugin_live_link).'" target="_blank">' . esc_html__('More Details', 'qc-opd') . '</a>');
                             /*===show icon ==*/
                             if ( ! empty( $plugin['icons']['svg'] ) ) {
                                 $plugin_icon_url = $plugin['icons']['svg'];
@@ -317,10 +317,10 @@ if( !function_exists('qcld_recommend_support_function_first_sld_ajax') ){
         								<ul class="plugin-action-pro-buttons">
                                         <?php
                                         if ( !empty( $arg['live_preview'] ) ) { 
-                                            echo '<li><a href="'.esc_url( $arg['live_preview'] ).'" target="_blank">' . esc_html('Live Preview') . '</a></li>';
+                                            echo '<li><a href="'.esc_url( $arg['live_preview'] ).'" target="_blank">' . esc_html__('Live Preview', 'qc-opd') . '</a></li>';
                                         }
                                         if ( !empty( $arg['update_to_pro'] ) ) { 
-                                            echo '<li><a href="'.esc_url( $arg['update_to_pro'] ).'" target="_blank">' . esc_html('Update To Pro') . '</a></li>';
+                                            echo '<li><a href="'.esc_url( $arg['update_to_pro'] ).'" target="_blank">' . esc_html__('Update To Pro', 'qc-opd') . '</a></li>';
                                         }
                                         ?>
         								</ul>
@@ -569,7 +569,7 @@ if( !function_exists('qcld_recommend_support_function_second_sld_ajax') ){
                             // );
                             // $action_links[] = sprintf( '%s','<a href="#" data-toggle="modal" data-target="#myModal_'.$plugin['slug'].'">More Details</a><div class="modal fade" id="myModal_'.$plugin['slug'].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><iframe width="100%" height="550" src="'.$details_link.'"></iframe></div></div></div></div>');
                             $plugin_live_link = "https://wordpress.org/plugins/".$plugin['slug'];
-                            $action_links[] = sprintf( '%s','<a href="'.esc_url($plugin_live_link).'" target="_blank">' . esc_html('More Details') . '</a>');
+                            $action_links[] = sprintf( '%s','<a href="'.esc_url($plugin_live_link).'" target="_blank">' . esc_html__('More Details', 'qc-opd') . '</a>');
                             /*===show icon ==*/
                             if ( ! empty( $plugin['icons']['svg'] ) ) {
                                 $plugin_icon_url = $plugin['icons']['svg'];
@@ -663,10 +663,10 @@ if( !function_exists('qcld_recommend_support_function_second_sld_ajax') ){
                                         <ul class="plugin-action-pro-buttons">
                                         <?php
                                         if ( !empty( $arg['live_preview'] ) ) { 
-                                            echo '<li><a href="'.esc_url( $arg['live_preview'] ).'" target="_blank">' . esc_html('Live Preview') . '</a></li>';
+                                            echo '<li><a href="'.esc_url( $arg['live_preview'] ).'" target="_blank">' . esc_html__('Live Preview', 'qc-opd') . '</a></li>';
                                         }
                                         if ( !empty( $arg['update_to_pro'] ) ) { 
-                                            echo '<li><a href="'.esc_url( $arg['update_to_pro'] ).'" target="_blank">' . esc_html('Update To Pro') . '</a></li>';
+                                            echo '<li><a href="'.esc_url( $arg['update_to_pro'] ).'" target="_blank">' . esc_html__('Update To Pro', 'qc-opd') . '</a></li>';
                                         }
                                         ?>
                                         </ul>
@@ -947,7 +947,7 @@ if( !function_exists('qcld_recommend_support_function_third_sld_ajax') ){
                             // );
                             // $action_links[] = sprintf( '%s','<a href="#" data-toggle="modal" data-target="#myModal_'.$plugin['slug'].'">More Details</a><div class="modal fade" id="myModal_'.$plugin['slug'].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><iframe width="100%" height="550" src="'.$details_link.'"></iframe></div></div></div></div>');
                             $plugin_live_link = "https://wordpress.org/plugins/".$plugin['slug'];
-                            $action_links[] = sprintf( '%s','<a href="'.esc_url($plugin_live_link).'" target="_blank">' . esc_html('More Details') . '</a>');
+                            $action_links[] = sprintf( '%s','<a href="'.esc_url($plugin_live_link).'" target="_blank">' . esc_html__('More Details', 'qc-opd') . '</a>');
                             /*===show icon ==*/
                             if ( ! empty( $plugin['icons']['svg'] ) ) {
                                 $plugin_icon_url = $plugin['icons']['svg'];
@@ -1041,10 +1041,10 @@ if( !function_exists('qcld_recommend_support_function_third_sld_ajax') ){
                                         <ul class="plugin-action-pro-buttons">
                                         <?php
                                         if ( !empty( $arg['live_preview'] ) ) { 
-                                            echo '<li><a href="'.esc_url( $arg['live_preview'] ).'" target="_blank">' . esc_html('Live Preview') . '</a></li>';
+                                            echo '<li><a href="'.esc_url( $arg['live_preview'] ).'" target="_blank">' . esc_html__('Live Preview', 'qc-opd') . '</a></li>';
                                         }
                                         if ( !empty( $arg['update_to_pro'] ) ) { 
-                                            echo '<li><a href="'.esc_url( $arg['update_to_pro'] ).'" target="_blank">' . esc_html('Update To Pro') . '</a></li>';
+                                            echo '<li><a href="'.esc_url( $arg['update_to_pro'] ).'" target="_blank">' . esc_html__('Update To Pro', 'qc-opd') . '</a></li>';
                                         }
                                         ?>
                                         </ul>
@@ -1359,7 +1359,7 @@ if( !function_exists('qcld_recommend_support_function_four_sld_ajax') ){
                             // );
                             // $action_links[] = sprintf( '%s','<a href="#" data-toggle="modal" data-target="#myModal_'.$plugin['slug'].'">More Details</a><div class="modal fade" id="myModal_'.$plugin['slug'].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><iframe width="100%" height="550" src="'.$details_link.'"></iframe></div></div></div></div>');
                             $plugin_live_link = "https://wordpress.org/plugins/".$plugin['slug'];
-                            $action_links[] = sprintf( '%s','<a href="'.esc_url($plugin_live_link).'" target="_blank">' . esc_html('More Details') . '</a>');
+                            $action_links[] = sprintf( '%s','<a href="'.esc_url($plugin_live_link).'" target="_blank">' . esc_html__('More Details', 'qc-opd') . '</a>');
                             /*===show icon ==*/
                             if ( ! empty( $plugin['icons']['svg'] ) ) {
                                 $plugin_icon_url = $plugin['icons']['svg'];
@@ -1453,10 +1453,10 @@ if( !function_exists('qcld_recommend_support_function_four_sld_ajax') ){
                                         <ul class="plugin-action-pro-buttons">
                                         <?php
                                         if ( !empty( $arg['live_preview'] ) ) { 
-                                            echo '<li><a href="'.esc_url( $arg['live_preview'] ).'" target="_blank">' . esc_html('Live Preview') . '</a></li>';
+                                            echo '<li><a href="'.esc_url( $arg['live_preview'] ).'" target="_blank">' . esc_html__('Live Preview', 'qc-opd') . '</a></li>';
                                         }
                                         if ( !empty( $arg['update_to_pro'] ) ) { 
-                                            echo '<li><a href="'.esc_url( $arg['update_to_pro'] ).'" target="_blank">' . esc_html('Update To Pro') . '</a></li>';
+                                            echo '<li><a href="'.esc_url( $arg['update_to_pro'] ).'" target="_blank">' . esc_html__('Update To Pro', 'qc-opd') . '</a></li>';
                                         }
                                         ?>
                                         </ul>

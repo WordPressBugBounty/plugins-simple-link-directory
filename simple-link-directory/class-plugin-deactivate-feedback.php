@@ -127,7 +127,7 @@ if( ! class_exists( 'SLD_Usage_Feedback') ) {
 			if( empty( $plugin ) ) {
 				// We can't find the plugin data
 				// Send a message back to our home site
-				$body['message'] .= __( 'We can\'t detect any plugin information. This is most probably because you have not included the code in the plugin main file.', 'wpchatbot' );
+				$body['message'] .= __( 'We can\'t detect any plugin information. This is most probably because you have not included the code in the plugin main file.', 'qc-opd' );
 				$body['status'] = 'Data not found'; // Never translated
 			} else {
 				if( isset( $plugin['Name'] ) ) {
@@ -207,17 +207,17 @@ if( ! class_exists( 'SLD_Usage_Feedback') ) {
 		 */
 		public function form_default_text() {
 			$form = array();
-			$form['heading'] = __( 'Sorry to see you go', 'wpchatbot' );
-			$form['body'] = __( '', 'wpchatbot' );
+			$form['heading'] = __( 'Sorry to see you go', 'qc-opd' );
+			$form['body'] = __( '', 'qc-opd' );
 			$form['options'] = array(
-				__( 'Found a Bug', 'wpchatbot' ),
-				__( 'Need More Features', 'wpchatbot' ),
-				__( 'Deactivating Temporarily', 'wpchatbot' ),
-				__( 'Upgrading to Pro', 'wpchatbot' ),
+				__( 'Found a Bug', 'qc-opd' ),
+				__( 'Need More Features', 'qc-opd' ),
+				__( 'Deactivating Temporarily', 'qc-opd' ),
+				__( 'Upgrading to Pro', 'qc-opd' ),
 
 			);
-			$form['email'] = __( 'Please provide email so we can contact with bug fixes', 'wpchatbot' );
-			$form['details'] = __( 'Please provide some details so we can improve the plugin', 'wpchatbot' );
+			$form['email'] = __( 'Please provide email so we can contact with bug fixes', 'qc-opd' );
+			$form['details'] = __( 'Please provide some details so we can improve the plugin', 'qc-opd' );
 			return $form;
 		}
 		

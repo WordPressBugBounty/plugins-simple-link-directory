@@ -15,8 +15,8 @@ class Qcopd_BulkImportFree
 
         add_submenu_page(
             'edit.php?post_type=sld',
-            esc_html('Bulk Import'),
-            esc_html('Import'),
+            esc_html__('Bulk Import', 'qc-opd'),
+            esc_html__('Import', 'qc-opd'),
             'manage_options',
             'qcopd_bimport_page',
             array(
@@ -39,41 +39,41 @@ class Qcopd_BulkImportFree
                     <div id="post-body-content" style="position: relative;">
 
                         
-                            <h1><?php echo esc_html('Bulk Import'); ?></h1>
+                            <h1><?php esc_html_e('Bulk Import', 'qc-opd'); ?></h1>
                         
                         <div class="qcld-importstylebox">
                         <div>
                             
                             <p>
-								<strong><?php echo esc_html('Please Note:'); ?></strong> <?php echo esc_html('The import feature is still under development. Right now it only allows importing and creating new Lists. Existing Lists will not get updated. Also, export feature is not available in free version.'); ?>
+								<strong><?php esc_html_e('Please Note:', 'qc-opd'); ?></strong> <?php esc_html_e('The import feature is still under development. Right now it only allows importing and creating new Lists. Existing Lists will not get updated. Also, export feature is not available in free version.', 'qc-opd'); ?>
 							</p>
 							
 							<p>
-                                <strong><?php echo esc_html('Sample CSV File:'); ?></strong>
+                                <strong><?php esc_html_e('Sample CSV File:', 'qc-opd'); ?></strong>
                                 <a href="<?php echo esc_url(QCOPD_ASSETS_URL.'/file/sample-csv-file.csv'); ?>" target="_blank">
-                                    <?php echo esc_html('Download'); ?>
+                                    <?php esc_html_e('Download', 'qc-opd'); ?>
                                 </a>
                             </p>
 
-                            <p><strong><?php echo esc_html('PROCESS:'); ?></strong></p>
+                            <p><strong><?php esc_html_e('PROCESS:', 'qc-opd'); ?></strong></p>
 
                             <p>
                                 <ol>
-                                    <li><?php echo esc_html('First download the above CSV file.'); ?></li>
-                                    <li><?php echo esc_html('Add/Edit rows on the top of it, by maintaing proper provided format/fields.'); ?></li>
-                                    <li><?php echo esc_html('Finally, upload file in the below form.'); ?></li>
+                                    <li><?php esc_html_e('First download the above CSV file.', 'qc-opd'); ?></li>
+                                    <li><?php esc_html_e('Add/Edit rows on the top of it, by maintaing proper provided format/fields.', 'qc-opd'); ?></li>
+                                    <li><?php esc_html_e('Finally, upload file in the below form.', 'qc-opd'); ?></li>
                                 </ol>
                             </p>
 
 
 
-                            <p><strong><?php echo esc_html('NOTES:'); ?></strong></p>
+                            <p><strong><?php esc_html_e('NOTES:', 'qc-opd'); ?></strong></p>
 
                             <p>
                                 <ol>
-                                    <li><?php echo esc_html('It should be a simple CSV file.'); ?></li>
-                                    <li><?php echo esc_html('File encoding should be in UTF-8'); ?></li>
-                                    <li><?php echo esc_html('File must be prepared as per provided sample CSV file.'); ?></li>
+                                    <li><?php esc_html_e('It should be a simple CSV file.', 'qc-opd'); ?></li>
+                                    <li><?php esc_html_e('File encoding should be in UTF-8', 'qc-opd'); ?></li>
+                                    <li><?php esc_html_e('File must be prepared as per provided sample CSV file.', 'qc-opd'); ?></li>
                                 </ol>
                             </p>
                             
@@ -192,7 +192,7 @@ class Qcopd_BulkImportFree
 
 									if( ( isset($keyCounter) && $keyCounter > 0 ) && ( isset($metaCounter) && $metaCounter > 0 ) ) {
 
-										echo  '<div><span style="color: red; font-weight: bold;">'.esc_html('RESULT:').'</span> <strong>'.esc_attr( $keyCounter ).'</strong>  '.esc_html('entry with').' <strong>'.esc_attr( $metaCounter ).'</strong> '.esc_html('element(s) was made successfully.').'</div>';
+										echo  '<div><span style="color: red; font-weight: bold;">'.esc_html__('RESULT:', 'qc-opd').'</span> <strong>'.esc_attr( $keyCounter ).'</strong>  '.esc_html__('entry with', 'qc-opd').' <strong>'.esc_attr( $metaCounter ).'</strong> '.esc_html__('element(s) was made successfully.', 'qc-opd').'</div>';
 										
 									}
 									if(file_exists($movefile['file'])){
@@ -234,7 +234,7 @@ class Qcopd_BulkImportFree
 
 
                         <div style="padding: 15px 10px; border: 1px solid #ccc; text-align: center; margin-top: 20px;background: #222; color: #fff;">
-                            <?php echo esc_html('Crafted By:'); ?> <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank"><?php echo esc_html('Web Design Company'); ?></a> <?php echo esc_html('-QuantumCloud'); ?>
+                            <?php esc_html_e('Crafted By:', 'qc-opd'); ?> <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank"><?php esc_html_e('Web Design Company', 'qc-opd'); ?></a> <?php esc_html_e('-QuantumCloud', 'qc-opd'); ?>
                         </div>
 
                     </div>

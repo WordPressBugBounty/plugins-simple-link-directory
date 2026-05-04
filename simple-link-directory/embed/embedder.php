@@ -136,7 +136,7 @@ function qcld_custom_embedder($shortcodeAtts){
 	if(get_option('sld_lan_add_link')!=''){
 		echo esc_html(get_option('sld_lan_add_link'));
 	}else{
-		esc_html_e( 'Add New', 'qc-pd' ); 
+		esc_html_e( 'Add New', 'qc-opd' ); 
 	}
 ?>
 </a>
@@ -189,35 +189,35 @@ function sld_share_modal() {
 	?>
 	<div id="popup" class="modal-box">
 	  <header> <a href="#" class="js-modal-close close">×</a>
-		<h3><?php echo esc_html('Generate Embed Code For This List'); ?></h3>
+		<h3><?php esc_html_e('Generate Embed Code For This List', 'qc-opd'); ?></h3>
 	  </header>
 	  <div class="modal-body">
 		<div class="iframe-css">
 		  <div class="iframe-main">
 			<div class="ifram-row">
 			  <div class="ifram-sm">
-				<span><?php echo esc_html("Width: (in '%' or 'px')"); ?></span>
+				<span><?php esc_html_e("Width: (in '%' or 'px')", 'qc-opd'); ?></span>
 				<input id="igwidth" name="igwidth" type="text" value="100">
 			</div>
 			<div class="ifram-sm qcopd_iframe_sm" >
 				<span>&nbsp;</span>
 				<select name="igsizetype" class="iframe-main-select">
-					<option value="%"><?php echo esc_html('%'); ?></option>
-					<option value="px"><?php echo esc_html('px'); ?></option>
+					<option value="%"><?php esc_html_e('%', 'qc-opd'); ?></option>
+					<option value="px"><?php esc_html_e('px', 'qc-opd'); ?></option>
 				</select>
 			</div>
 			<div class="ifram-sm">
-				<span><?php echo esc_html("Height: (in 'px')"); ?></span>
+				<span><?php esc_html_e("Height: (in 'px')", 'qc-opd'); ?></span>
 				<input id="igheight" name="igheight" type="text" value="400">
 			</div>
-			  <div class="ifram-sm"> <span>&nbsp;</span> <a class="btn icon icon-code" id="generate-igcode" onclick=""><?php echo esc_html('Generate & Copy'); ?></a>
+			  <div class="ifram-sm"> <span>&nbsp;</span> <a class="btn icon icon-code" id="generate-igcode" onclick=""><?php esc_html_e('Generate & Copy', 'qc-opd'); ?></a>
 				</select>
 			  </div>
 			</div>
 			<div class="ifram-row">
-			  <div class="ifram-lg"> <span class="qcld-span-label"><?php echo esc_html('Generated Code'); ?></span> <br>
+			  <div class="ifram-lg"> <span class="qcld-span-label"><?php esc_html_e('Generated Code', 'qc-opd'); ?></span> <br>
 				<textarea id="igcode_textarea" class="igcode_textarea" name="igcode" readonly="readonly"></textarea>
-				<p class="guideline"><?php echo esc_html('Hit "Generate & Copy" button to generate embed code. It will be copied to your Clipboard. You can now paste this embed code inside your website\'s HTML where you want to show the List.'); ?></p>
+				<p class="guideline"><?php esc_html_e('Hit "Generate & Copy" button to generate embed code. It will be copied to your Clipboard. You can now paste this embed code inside your website\'s HTML where you want to show the List.', 'qc-opd'); ?></p>
 			  </div>
 			</div>
 		  </div>

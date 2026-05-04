@@ -25,7 +25,7 @@ function qcld_sld_handle_csv_import() {
 
     
     // 6. Create a new page automatically using PHP
-    $page_title 	= esc_html('SLD Demo Data Imported');
+    $page_title 	= esc_html__('SLD Demo Data Imported', 'qc-opd');
     $page_content 	= '[qcopd-directory mode="all" style="simple" column="3" upvote="on" search="true" item_count="on" orderby="date" filterorderby="date" order="ASC" filterorder="ASC" paginate_items="false" favorite="enable" tooltip="false" list_title_font_size="" item_orderby="" list_title_line_height="" title_font_size="" enable_tag_filter="true"  subtitle_font_size="" title_line_height="" subtitle_line_height="" filter_area="normal" topspacing=""  main_click="popup"]';
     $page_slug 		= 'sld-demo-data';
 
@@ -43,7 +43,7 @@ function qcld_sld_handle_csv_import() {
     }else{
 
 	    wp_send_json_success( array(
-	        'message' 		=> esc_html('Already CSV data imported and page created.'),
+	        'message' 		=> esc_html__('Already CSV data imported and page created.', 'qc-opd'),
 	        'redirect_url' 	=> get_permalink( get_page_by_path( $page_slug ) ), // URL for redirection
 	    ) );
     }

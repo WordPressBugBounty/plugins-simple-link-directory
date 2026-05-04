@@ -10,21 +10,21 @@ if ( ! function_exists( 'qcopd_register_cpt_sld' ) ) {
 			'name'               => _x( 'Manage Lists', 'qc-opd' ),
 			'singular_name'      => _x( 'Manage List Item', 'qc-opd' ),
 			'add_new'            => _x( 'New List', 'qc-opd' ),
-			'add_new_item'       => __( 'Add New List Item' ),
-			'edit_item'          => __( 'Edit List Item' ),
-			'new_item'           => __( 'New List Item' ),
-			'all_items'          => __( 'Manage Lists' ),
-			'view_item'          => __( 'View List Item' ),
-			'search_items'       => __( 'Search List Item' ),
-			'not_found'          => __( 'No List Item found' ),
-			'not_found_in_trash' => __( 'No List Item found in the Trash' ), 
+			'add_new_item'       => __( 'Add New List Item', 'qc-opd' ),
+			'edit_item'          => __( 'Edit List Item', 'qc-opd' ),
+			'new_item'           => __( 'New List Item', 'qc-opd' ),
+			'all_items'          => __( 'Manage Lists', 'qc-opd' ),
+			'view_item'          => __( 'View List Item', 'qc-opd' ),
+			'search_items'       => __( 'Search List Item', 'qc-opd' ),
+			'not_found'          => __( 'No List Item found', 'qc-opd' ),
+			'not_found_in_trash' => __( 'No List Item found in the Trash', 'qc-opd' ), 
 			'parent_item_colon'  => '',
-			'menu_name'          => 'Simple Link Directory'
+			'menu_name'          => __( 'Simple Link Directory', 'qc-opd' )
 		);
 		
 		$qc_list_args = array(
 			'labels'        		=> $qc_list_labels,
-			'description'   		=> esc_html('This post type holds all posts for your directory items.'),
+			'description'   		=> esc_html__('This post type holds all posts for your directory items.', 'qc-opd'),
 			'public'        		=> true,
 			'publicly_queryable' 	=> false,
 			'menu_position' 		=> 25,
@@ -127,7 +127,7 @@ if ( ! function_exists( 'cmb_qcopd_dir_fields' ) ) {
 					'repeatable' 	=> true,
 					'sortable' 		=> true,
 					'fields' 		=> $qcopd_item_fields,
-					'desc' 			=> __('Please add your list items here.') . ' <br><br><i style="color:indianred;font-size:14px !important; font-weight:bold;">'.esc_html('If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server.').'</i>'
+					'desc' 			=> __('Please add your list items here.', 'qc-opd') . ' <br><br><i style="color:indianred;font-size:14px !important; font-weight:bold;">'.esc_html__('If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server.', 'qc-opd').'</i>'
 				)
 			)
 		);
@@ -144,10 +144,10 @@ if ( ! function_exists( 'qcopd_list_columns_head' ) ) {
 	function qcopd_list_columns_head($defaults) {
 
 	    $new_columns['cb'] 					= '<input type="checkbox" />';
-	    $new_columns['title'] 				= __('Title');
-	    $new_columns['qcopd_item_count'] 	= __('Number of Elements');
-	    $new_columns['shortcode_col'] 		= __('Shortcode');
-	    $new_columns['date'] 				= __('Date');
+	    $new_columns['title'] 				= __('Title', 'qc-opd');
+	    $new_columns['qcopd_item_count'] 	= __('Number of Elements', 'qc-opd');
+	    $new_columns['shortcode_col'] 		= __('Shortcode', 'qc-opd');
+	    $new_columns['date'] 				= __('Date', 'qc-opd');
 
 	    return $new_columns;
 	}
@@ -162,10 +162,10 @@ if ( ! function_exists( 'qcopd_list_columns_content' ) ) {
 	    }
 
 	    if ($column_name == 'shortcode_col') {
-	    	echo '<p>'.esc_html("Single List Shortcode: ");
+	    	echo '<p>'.esc_html__("Single List Shortcode: ", 'qc-opd');
 	        echo '[qcopd-directory mode="one" style="simple" list_id="'.$post_ID.'"]';
 	    	echo '</p>';
-	    	echo '<p>'.esc_html("All Lists Shortcode: ");
+	    	echo '<p>'.esc_html__("All Lists Shortcode: ", 'qc-opd');
 	        echo '[qcopd-directory mode="all" column="2" style="simple" orderby="date" order="DESC" enable_embedding="false"]';
 	    	echo '</p>';
 	    }

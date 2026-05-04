@@ -58,22 +58,22 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 
 					<div class="qcsld_single_field_shortcode">
 						<label class="qcopd_label_mode">
-							<?php echo esc_html('Mode'); ?>
+							<?php esc_html_e('Mode', 'qc-opd'); ?>
 						</label>
 						<select id="sld_mode">
-							<option value="all"><?php echo esc_html('All List'); ?></option>
-							<option value="one"><?php echo esc_html('One List'); ?></option>
+							<option value="all"><?php esc_html_e('All List', 'qc-opd'); ?></option>
+							<option value="one"><?php esc_html_e('One List', 'qc-opd'); ?></option>
 
 						</select>
 					</div>
 					
 					<div id="sld_list_div" class="qcsld_single_field_shortcode hidden-div">
 						<label class="qcopd_select_list">
-							<?php echo esc_html('Select List '); ?>
+							<?php esc_html_e('Select List ', 'qc-opd'); ?>
 						</label>
 						<select id="sld_list_id">
 						
-							<option value=""><?php echo esc_html('Please Select List'); ?></option>
+							<option value=""><?php esc_html_e('Please Select List', 'qc-opd'); ?></option>
 							
 							<?php
 							
@@ -92,11 +92,11 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 					
 					<div id="sld_list_cat" class="qcsld_single_field_shortcode hidden-div">
 						<label class="qcopd_list_category">
-							<?php echo esc_html('List Category'); ?>
+							<?php esc_html_e('List Category', 'qc-opd'); ?>
 						</label>
 						<select id="sld_list_cat_id">
 						
-							<option value=""><?php echo esc_html('Please Select Category'); ?></option>
+							<option value=""><?php esc_html_e('Please Select Category', 'qc-opd'); ?></option>
 							
 							<?php
 							
@@ -116,20 +116,20 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 					
 					<div class="qcsld_single_field_shortcode">
 						<label class="qcopd_template_style">
-							<?php echo esc_html('Template Style'); ?>
+							<?php esc_html_e('Template Style', 'qc-opd'); ?>
 						</label>
 						<select id="sld_style">
-							<option value="simple"><?php echo esc_html('Default Style'); ?></option>
-							<option value="style-1"><?php echo esc_html('Style 01'); ?></option>
-							<option value="style-2"><?php echo esc_html('Style 02'); ?></option>
-							<option value="style-3"><?php echo esc_html('Style 03'); ?></option>
-							<option value="style-4"><?php echo esc_html('Style 04'); ?></option>
-							<option value="style-5"><?php echo esc_html('Style 05'); ?></option>
-							<option value="style-16"><?php echo esc_html('Style 16 (**NEW)'); ?></option> 
+							<option value="simple"><?php esc_html_e('Default Style', 'qc-opd'); ?></option>
+							<option value="style-1"><?php esc_html_e('Style 01', 'qc-opd'); ?></option>
+							<option value="style-2"><?php esc_html_e('Style 02', 'qc-opd'); ?></option>
+							<option value="style-3"><?php esc_html_e('Style 03', 'qc-opd'); ?></option>
+							<option value="style-4"><?php esc_html_e('Style 04', 'qc-opd'); ?></option>
+							<option value="style-5"><?php esc_html_e('Style 05', 'qc-opd'); ?></option>
+							<option value="style-16"><?php esc_html_e('Style 16 (**NEW)', 'qc-opd'); ?></option> 
 						</select>
 						
 						<div id="demo-preview-link">
-							<?php echo esc_html('Demo URL: '); ?>
+							<?php esc_html_e('Demo URL: ', 'qc-opd'); ?>
 							<div id="demo-url">
 								<a href="<?php echo esc_url('http://dev.quantumcloud.com/sld/'); ?>" target="_blank"><?php echo esc_url('http://dev.quantumcloud.com/sld/'); ?></a>
 							</div>
@@ -139,22 +139,22 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 					
 					<div id="sld_column_div" class="qcsld_single_field_shortcode">
 						<label class="qcopd_label_column">
-							<?php echo esc_html('Column'); ?>
+							<?php esc_html_e('Column', 'qc-opd'); ?>
 						</label>
 						<select id="sld_column">
-							<option value="1"><?php echo esc_html('Column 1'); ?></option>
-							<option value="2"><?php echo esc_html('Column 2'); ?></option>
-							<option value="3"><?php echo esc_html('Column 3'); ?></option>
-							<option value="4"><?php echo esc_html('Column 4'); ?></option>
+							<option value="1"><?php esc_html_e('Column 1', 'qc-opd'); ?></option>
+							<option value="2"><?php esc_html_e('Column 2', 'qc-opd'); ?></option>
+							<option value="3"><?php esc_html_e('Column 3', 'qc-opd'); ?></option>
+							<option value="4"><?php esc_html_e('Column 4', 'qc-opd'); ?></option>
 						</select>
 					</div>
 				
 	                <div class="qcsld_single_field_shortcode">
 	                    <label class="qcopd_title_font">
-	                        <?php echo esc_html('Title Font Size'); ?>
+	                        <?php esc_html_e('Title Font Size', 'qc-opd'); ?>
 	                    </label>
 	                    <select id="sld_title_font_size">
-	                        <option value=""><?php echo esc_html('Default'); ?></option>
+	                        <option value=""><?php esc_html_e('Default', 'qc-opd'); ?></option>
 							<?php
 							for($i=10;$i<50;$i++){
 								echo '<option value="'.esc_attr($i."px").'">'.esc_html($i."px").'</option>';
@@ -165,10 +165,10 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 
 	                <div class="qcsld_single_field_shortcode">
 	                    <label class="qcopd_title_line">
-	                        <?php echo esc_html('Title Line Height'); ?>
+	                        <?php esc_html_e('Title Line Height', 'qc-opd'); ?>
 	                    </label>
 	                    <select id="sld_title_line_height">
-	                        <option value=""><?php echo esc_html('Default'); ?></option>
+	                        <option value=""><?php esc_html_e('Default', 'qc-opd'); ?></option>
 							<?php
 							for($i=10;$i<50;$i++){
 								echo '<option value="'.esc_attr($i."px").'">'.esc_html($i."px").'</option>';
@@ -179,10 +179,10 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 
 	                <div class="qcsld_single_field_shortcode">
 	                    <label class="qcopd_subtitle_font">
-	                        <?php echo esc_html('Subtitle Font Size'); ?>
+	                        <?php esc_html_e('Subtitle Font Size', 'qc-opd'); ?>
 	                    </label>
 	                    <select id="sld_subtitle_font_size">
-	                        <option value=""><?php echo esc_html('Default'); ?></option>
+	                        <option value=""><?php esc_html_e('Default', 'qc-opd'); ?></option>
 							<?php
 							for($i=10;$i<50;$i++){
 								echo '<option value="'.esc_attr($i."px").'">'.esc_html($i."px").'</option>';
@@ -195,10 +195,10 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 
 	                <div class="qcsld_single_field_shortcode">
 	                    <label class="qcopd_subtitle_line">
-	                        <?php echo esc_html('Subtitle Line Height'); ?>
+	                        <?php esc_html_e('Subtitle Line Height', 'qc-opd'); ?>
 	                    </label>
 	                    <select id="sld_subtitle_line_height">
-	                        <option value=""><?php echo esc_html('Default'); ?></option>
+	                        <option value=""><?php esc_html_e('Default', 'qc-opd'); ?></option>
 							<?php
 							for($i=10;$i<50;$i++){
 								echo '<option value="'.esc_attr($i."px").'">'.esc_html($i."px").'</option>';
@@ -208,42 +208,42 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 	                </div>
 					<div id="sld_orderby_div" class="qcsld_single_field_shortcode">
 						<label class="qcopd_order_by">
-							<?php echo esc_html('List Order By'); ?>
+							<?php esc_html_e('List Order By', 'qc-opd'); ?>
 						</label>
 						<select id="sld_orderby">
-							<option value="date"><?php echo esc_html('Date'); ?></option>
-							<option value="ID"><?php echo esc_html('ID'); ?></option>
-							<option value="title"><?php echo esc_html('Title'); ?></option>
-							<option value="modified"><?php echo esc_html('Date Modified'); ?></option>
-							<option value="rand"><?php echo esc_html('Random'); ?></option>
-							<option value="menu_order"><?php echo esc_html('Menu Order'); ?></option>
+							<option value="date"><?php esc_html_e('Date', 'qc-opd'); ?></option>
+							<option value="ID"><?php esc_html_e('ID', 'qc-opd'); ?></option>
+							<option value="title"><?php esc_html_e('Title', 'qc-opd'); ?></option>
+							<option value="modified"><?php esc_html_e('Date Modified', 'qc-opd'); ?></option>
+							<option value="rand"><?php esc_html_e('Random', 'qc-opd'); ?></option>
+							<option value="menu_order"><?php esc_html_e('Menu Order', 'qc-opd'); ?></option>
 						</select>
 					</div>
 					
 					<div id="sld_order_div" class="qcsld_single_field_shortcode">
 						<label class="qcopd_order">
-							<?php echo esc_html('List Order'); ?>
+							<?php esc_html_e('List Order', 'qc-opd'); ?>
 						</label>
 						<select id="sld_order">
-							<option value="ASC"><?php echo esc_html('Ascending'); ?></option>
-							<option value="DESC"><?php echo esc_html('Descending'); ?></option>
+							<option value="ASC"><?php esc_html_e('Ascending', 'qc-opd'); ?></option>
+							<option value="DESC"><?php esc_html_e('Descending', 'qc-opd'); ?></option>
 						</select>
 					</div>
 					<div class="qcsld_single_field_shortcode">
 						<label class="qcopd_item_orderby">
-							<?php echo esc_html('List Item Orderby'); ?>
+							<?php esc_html_e('List Item Orderby', 'qc-opd'); ?>
 						</label>
 						<select id="sld_itemorderby">
-							<option value="menu_order"><?php echo esc_html('Menu Order'); ?></option>
-							<option value="title"><?php echo esc_html('Title'); ?></option>
-							<option value="upvotes"><?php echo esc_html('Upvotes'); ?></option>
-							<option value="timestamp"><?php echo esc_html('Date Modified'); ?></option>
+							<option value="menu_order"><?php esc_html_e('Menu Order', 'qc-opd'); ?></option>
+							<option value="title"><?php esc_html_e('Title', 'qc-opd'); ?></option>
+							<option value="upvotes"><?php esc_html_e('Upvotes', 'qc-opd'); ?></option>
+							<option value="timestamp"><?php esc_html_e('Date Modified', 'qc-opd'); ?></option>
 						</select>
 					</div>
 					<div class="qcsld_single_field_shortcode checkbox-sld">
 						<label>
 							<input class="sld_embeding" name="ckbox" value="true" type="checkbox">
-							<?php echo esc_html('Enable Embeding'); ?>
+							<?php esc_html_e('Enable Embeding', 'qc-opd'); ?>
 						</label>
 					</div>
 					
@@ -257,7 +257,7 @@ if ( ! function_exists( 'qcsld_render_shortcode_modal_free' ) ) {
 				<div class="sld_shortcode_container" style="display:none;">
 					<div class="qcsld_single_field_shortcode">
 						<textarea id="sld_shortcode_container"></textarea>
-						<p><b><?php echo esc_html('Copy'); ?></b> <?php echo esc_html('the shortcode & use it any text block.'); ?> <button class="sld_copy_close button button-primary button-small" ><?php echo esc_html('Copy & Close'); ?></button></p>
+						<p><b><?php esc_html_e('Copy', 'qc-opd'); ?></b> <?php esc_html_e('the shortcode & use it any text block.', 'qc-opd'); ?> <button class="sld_copy_close button button-primary button-small" ><?php esc_html_e('Copy & Close', 'qc-opd'); ?></button></p>
 					</div>
 				</div>
 			</div>
@@ -292,8 +292,8 @@ if ( ! function_exists( 'qcsld_render_message_alert_modal_free' ) ) {
 					</div>
 				</div>
 				<div class="qcld_alert_msg_footer">
-					<button class="sld_alert_msg_close button button-primary button-small" ><?php echo esc_html('No'); ?></button> 
-					<button class="sld_add_more_item button button-primary button-small" ><?php echo esc_html('Add more item'); ?></button>
+					<button class="sld_alert_msg_close button button-primary button-small" ><?php esc_html_e('No', 'qc-opd'); ?></button> 
+					<button class="sld_add_more_item button button-primary button-small" ><?php esc_html_e('Add more item', 'qc-opd'); ?></button>
 				</div>
 			</div>
 		</div>

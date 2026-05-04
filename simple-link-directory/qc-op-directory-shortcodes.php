@@ -159,9 +159,9 @@ function show_qcopd_full_list( $atts = array() )
 		wp_add_inline_style( 'qcopd-custom-css', $css );
 	}
 
-	$lan_enable_dark_mode 	= get_option('sld_lan_enable_dark_mode') ? get_option('sld_lan_enable_dark_mode') : 'Enable Dark Mode';
-	$lan_dark_mode_on 		= get_option('sld_lan_dark_mode_on') ? get_option('sld_lan_dark_mode_on') : 'Dark Mode On';
-	$lan_light_mode_on 		= get_option('sld_lan_light_mode_on') ? get_option('sld_lan_light_mode_on') : 'Light Mode On';
+	$lan_enable_dark_mode 	= get_option('sld_lan_enable_dark_mode') ? get_option('sld_lan_enable_dark_mode') : __('Enable Dark Mode', 'qc-opd');
+	$lan_dark_mode_on 		= get_option('sld_lan_dark_mode_on') ? get_option('sld_lan_dark_mode_on') : __('Dark Mode On', 'qc-opd');
+	$lan_light_mode_on 		= get_option('sld_lan_light_mode_on') ? get_option('sld_lan_light_mode_on') : __('Light Mode On', 'qc-opd');
 
 	$custom_js = 'jQuery(document).ready(function($) {
 
@@ -382,7 +382,7 @@ function show_qcopd_full_list( $atts = array() )
 	wp_add_inline_style( 'qcopd-custom-css', $scrolltotop );
 ?>
 
-	<a href="#"class="sld_scrollToTop">Scroll To Top</a>
+	<a href="#"class="sld_scrollToTop"><?php esc_html_e('Scroll To Top', 'qc-opd'); ?></a>
 
 <?php 
 	$scrolljs = "jQuery(document).ready(function($){
