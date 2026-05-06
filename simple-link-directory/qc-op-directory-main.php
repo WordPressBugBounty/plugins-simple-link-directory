@@ -3,7 +3,7 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.9.6
+ * Version: 8.9.7
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -66,6 +66,7 @@ require_once('qc-sld-import-demo-data.php');
 
 /*05-31-2017*/
 require_once('qc-support-promo-page/class-qc-support-promo-page.php');
+require_once('qc-free-ai-chatbot/class-qc-free-ai-page.php');
 require_once('class-qc-free-plugin-upgrade-notice.php');
 /*05-31-2017 - Ends*/
 /* Option page */
@@ -184,11 +185,14 @@ function qclsldf_order_index_catalog_menu_page($menu_ord)
         if (isset($submenu['edit.php?post_type=sld'][250]))
             $arr[] = $submenu['edit.php?post_type=sld'][250];
 
-        if (isset($submenu['edit.php?post_type=sld'][301]))
-            $arr[] = $submenu['edit.php?post_type=sld'][301];
+        if (isset($submenu['edit.php?post_type=sld'][302]))
+            $arr[] = $submenu['edit.php?post_type=sld'][302];
 
         if (isset($submenu['edit.php?post_type=sld'][300]))
             $arr[] = $submenu['edit.php?post_type=sld'][300];
+
+        if (isset($submenu['edit.php?post_type=sld'][301]))
+            $arr[] = $submenu['edit.php?post_type=sld'][301];
 
     }
     $submenu['edit.php?post_type=sld'] = $arr;
