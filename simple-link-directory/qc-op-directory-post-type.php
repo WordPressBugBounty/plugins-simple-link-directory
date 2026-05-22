@@ -10,7 +10,7 @@ if ( ! function_exists( 'qcopd_register_cpt_sld' ) ) {
 			'name'               => _x( 'Manage Lists', 'qc-opd' ),
 			'singular_name'      => _x( 'Manage List Item', 'qc-opd' ),
 			'add_new'            => _x( 'New List', 'qc-opd' ),
-			'add_new_item'       => __( 'Add New List Item', 'qc-opd' ),
+			'add_new_item'       => __( 'Add New List', 'qc-opd' ),
 			'edit_item'          => __( 'Edit List Item', 'qc-opd' ),
 			'new_item'           => __( 'New List Item', 'qc-opd' ),
 			'all_items'          => __( 'Manage Lists', 'qc-opd' ),
@@ -127,7 +127,7 @@ if ( ! function_exists( 'cmb_qcopd_dir_fields' ) ) {
 					'repeatable' 	=> true,
 					'sortable' 		=> true,
 					'fields' 		=> $qcopd_item_fields,
-					'desc' 			=> __('Please add your list items here.', 'qc-opd') . ' <br><br><i style="color:indianred;font-size:14px !important; font-weight:bold;">'.esc_html__('If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server.', 'qc-opd').'</i>'
+					'desc' 			=> __('Please add your list items here. Ideally, each List should have 10-30 links. Create multiple Lists on different topics and show them all with a shortcode.', 'qc-opd') . ' <br><br><i style="color:indianred;font-size:14px !important; font-weight:bold;">'.esc_html__('If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server.', 'qc-opd').'</i>'
 				)
 			)
 		);
@@ -158,16 +158,38 @@ if ( ! function_exists( 'qcopd_list_columns_content' ) ) {
 	function qcopd_list_columns_content( $column_name, $post_ID ) {
 	    
 	    if ($column_name == 'qcopd_item_count') {
-	        echo count(get_post_meta( $post_ID, 'qcopd_list_item01' ));
+	        $items = get_post_meta( $post_ID, 'qcopd_list_item01' );
+	        $count = is_array($items) ? count($items) : 0;
+	        echo '<span class="sld-item-count-badge">' . esc_html($count) . ' ' . _n('element', 'elements', $count, 'qc-opd') . '</span>';
 	    }
 
 	    if ($column_name == 'shortcode_col') {
-	    	echo '<p>'.esc_html__("Single List Shortcode: ", 'qc-opd');
-	        echo '[qcopd-directory mode="one" style="simple" list_id="'.$post_ID.'"]';
-	    	echo '</p>';
-	    	echo '<p>'.esc_html__("All Lists Shortcode: ", 'qc-opd');
-	        echo '[qcopd-directory mode="all" column="2" style="simple" orderby="date" order="DESC" enable_embedding="false"]';
-	    	echo '</p>';
+            $single_shortcode = '[qcopd-directory mode="one" style="simple" list_id="'.$post_ID.'"]';
+            $all_shortcode = '[qcopd-directory mode="all" column="2" style="simple" orderby="date" order="DESC" enable_embedding="false"]';
+            ?>
+            <div class="sld-shortcode-col-wrap">
+                <div class="sld-shortcode-item">
+                    <span class="sld-shortcode-label"><?php esc_html_e("Single List:", 'qc-opd'); ?></span>
+                    <div class="sld-shortcode-container">
+                        <code class="sld-shortcode-code"><?php echo esc_html($single_shortcode); ?></code>
+                        <button type="button" class="sld-copy-btn" data-shortcode="<?php echo esc_attr($single_shortcode); ?>" title="<?php esc_attr_e("Copy Shortcode", 'qc-opd'); ?>">
+                            <span class="dashicons dashicons-admin-page"></span>
+                            <span class="sld-copy-tooltip"><?php esc_html_e("Copied!", 'qc-opd'); ?></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sld-shortcode-item">
+                    <span class="sld-shortcode-label"><?php esc_html_e("All Lists:", 'qc-opd'); ?></span>
+                    <div class="sld-shortcode-container">
+                        <code class="sld-shortcode-code"><?php echo esc_html($all_shortcode); ?></code>
+                        <button type="button" class="sld-copy-btn" data-shortcode="<?php echo esc_attr($all_shortcode); ?>" title="<?php esc_attr_e("Copy Shortcode", 'qc-opd'); ?>">
+                            <span class="dashicons dashicons-admin-page"></span>
+                            <span class="sld-copy-tooltip"><?php esc_html_e("Copied!", 'qc-opd'); ?></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <?php
 	    }
 	}
 }

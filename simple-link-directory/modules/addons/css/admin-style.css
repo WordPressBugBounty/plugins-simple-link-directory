@@ -1330,16 +1330,25 @@ i.qc_sld_btn {
   margin-bottom: 10px;
   border-radius: 0px 0px 5px 5px;}
   .wpbot_single_addon {
-    width: 49%;
-    margin-right: 1%;
+    width: 48%;
+    margin-right: 2%;
     display: inline-block;
-    margin: 0 0 15px 0;
-    padding: 12px 8px;
-    border: 1px solid #eee;
-    background: #fff;
+    margin: 0 0 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    border-radius: 16px;
+    transition: all 0.3s ease;
 }
-  .wpbot_single_addon:hover{ border: 1px solid #d2d2d2;
-    border-radius: 10px;}
+  .wpbot_single_addon:hover{ 
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+}
 .wpbot_single_content{}
 .wpbot_addon_image{    float: left;
   margin-right: 10px;}
@@ -1348,7 +1357,25 @@ i.qc_sld_btn {
 .wpbot_addon_title{font-size: 15px;
   font-weight: bold;}
 .wpbot_addon_details{}
-.wpbot_addon_details p{margin-bottom: 8px;}
+.wpbot_addon_details p{margin-bottom: 8px; color: #475569;}
+.wpbot_addon_details a.button {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: #ffffff !important;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+.wpbot_addon_details a.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.3);
+    background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
 .wp_addon_installed{font-size: 11px;
   margin: 4px 0px;
   background: #0b8a0bad;
@@ -1365,15 +1392,31 @@ i.qc_sld_btn {
   border-radius: 3px;
   padding: 2px 6px;}
 
-  .wpbot_dashboard_header{margin-right: unset !important;
+  .wpbot_dashboard_header{
+    margin-right: unset !important;
     margin-left: unset !important;
-    background: #32373c;
-    color: #fff;
-    text-align: center;border-radius: 5px 5px 0px 0px;}
-    .wpbot_dashboard_header h1{    font-size: 30px;
-      line-height: 100px;
-      margin: 0px;}
-  .wpbot_single_addon_wrapper{background: #eee;padding: 20px;}
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 16px 16px 0px 0px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .wpbot_dashboard_header h1{
+      font-size: 36px;
+      line-height: 1.2;
+      margin: 0px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #ffffff !important;
+  }
+  .wpbot_single_addon_wrapper{
+      background: linear-gradient(135deg, #f6f8fd 0%, #f1f5f9 100%);
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+  }
   .wpbot_statistics_area{background: #fff;}
   .wpbot_statistics_area h2{    margin: 0px;
     background: #fff;
@@ -1444,14 +1487,22 @@ i.qc_sld_btn {
     border-radius: 10px;
 }
 .wpbot_single_addon_title{
-    background: #fff;
+    background: transparent;
     padding: 15px 20px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 0;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    font-size: 28px !important;
+    font-weight: 700;
+    color: #1e293b;
+}
+.wpbot_single_addon_title a {
+    text-decoration: none;
+    color: #1e293b;
 }
 .wpbot_single_addon_wrapper{
-    border: 11px solid #fff;
+    /* Handled above */
 }
 .kbx_pb_0{
     padding-bottom: 0;
@@ -1523,13 +1574,11 @@ i.qc_sld_btn {
 
 .wp-chatbot-wrap {
     padding: 0;
-    background-color: #ffffff;
-    border-radius: 5px;
-    margin: 20px 20px 0 0;
-    border-left: 0 solid transparent;
-    box-shadow: 0px 4px 6px 1px #ebebeb;
-    margin-bottom: 12px;
-    border: none;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 16px;
+    margin: 0px 0px 0 0;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
 }
 
 .qc_addon_page_full_addon .wpbot_addon_content {

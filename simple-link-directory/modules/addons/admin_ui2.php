@@ -1,150 +1,199 @@
-<?php 
+<?php
 
 
 global $woocommerce, $wp_scripts;
-        $suffix = defined('sld_SCRIPT_DEBUG') && sld_SCRIPT_DEBUG ? '' : '.min';
-            
-            wp_register_style('qlcd-sld-admin-style', sld_addon_url . 'css/admin-style.css', '', '', 'screen');
-            wp_enqueue_style('qlcd-sld-admin-style');
+$suffix = defined('sld_SCRIPT_DEBUG') && sld_SCRIPT_DEBUG ? '' : '.min';
 
-            wp_enqueue_script('jquery');
+wp_register_style('qlcd-sld-admin-style', sld_addon_url . 'css/admin-style.css', '', '', 'screen');
+wp_enqueue_style('qlcd-sld-admin-style');
 
-            wp_register_style('qcld-sld-bootcampqc-css', sld_addon_url . 'css/bootstrap.min.css', '', '', 'screen');
-            wp_enqueue_style('qcld-sld-bootcampqc-css');
+wp_enqueue_script('jquery');
+
+wp_register_style('qcld-sld-bootcampqc-css', sld_addon_url . 'css/bootstrap.min.css', '', '', 'screen');
+wp_enqueue_style('qcld-sld-bootcampqc-css');
 
 
 
 ?>
-<div class="wrap">
-    <h1 class="wpbot_header_h1" style="color: #fff !important;"><?php echo esc_html__('Simple Link Directory', 'wpchatbot'); ?> </h1>
-</div>
-<div class="wp-chatbot-wrap">
-    <div class="wpbot_dashboard_header"><h1 style="color: #fff !important;"><?php echo esc_html__('Simple Link Directory', 'qc-opd'); ?></h1></div>
+<div class="wrap sld-dashboard-wrap">
+    <h1 class="wpbot_header_h1" style="color: #fff !important;">
+        <?php echo esc_html__('Simple Link Directory', 'wpchatbot'); ?>
+    </h1>
 
-    <div class="wpbot_addons_section">
-        <div class="wpbot_single_addon_wrapper qc-display-flex qc-justify-center qc-flex-wrap kbx_pb_0">
-            <h2 class="wpbot_single_addon_title"><a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank" rel="nofollow" ><?php echo esc_html__('Simple Link Directory Pro', 'qc-opd'); ?></a> <?php echo esc_html__(' Addons', 'qc-opd'); ?></h2>  
-            
-            <div class="wpbot_single_addon kbx-center-addon">
-                <div class="wpbot_single_content">
-                    <div class="wpbot_addon_image">
-                        <img src="<?php echo esc_url(sld_addon_url.'images/multi-page-addon.png'); ?>" title="" />
-                    </div>
-                    <div class="wpbot_addon_content">
-                        <div class="wpbot_addon_title"><?php echo esc_html__('MultiPage Advanced Addon', 'qc-opd'); ?></div>
-                        <div class="wpbot_addon_details">
-                            
-                            <?php
-                                if( is_plugin_active('multi-page-advanced-addon/multi-page-advanced-addon.php') ){
-                                    echo '<span class="wp_addon_installed">Installed</span>';
-                                }else{
-                                    echo '<span class="wp_addon_notinstalled">Not Installed</span>';
-                                }
-                            ?>
-                            <p><?php esc_html_e('Global Search, Pagination, Category view with Lists on home page.', 'qc-opd'); ?></p>
-                            <a class="button button-secondary" href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>" target="_blank" ><?php echo esc_html__('Get It Now', 'qc-opd'); ?></a>
-                        </div>            
+    <div class="sld-row">
+        <div class="sld-col-md-9 sld-main-column">
+            <div class="wp-chatbot-wrap  ">
+                <div class="wpbot_dashboard_header">
+                    <h3 style="color: #fff !important;"><?php echo esc_html__('Simple Link Directory', 'qc-opd'); ?>
+                    </h3>
+                </div>
+
+                <div class="sld-container">
+                    <div class="wpbot_addons_section">
+                        <div class="wpbot_single_addon_wrapper qc-display-flex qc-justify-center qc-flex-wrap kbx_pb_0">
+                            <h2 class="wpbot_single_addon_title"><a
+                                    href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>"
+                                    target="_blank"
+                                    rel="nofollow"><?php echo esc_html__('Simple Link Directory Pro', 'qc-opd'); ?></a>
+                                <?php echo esc_html__(' Addons', 'qc-opd'); ?></h2>
+
+                            <div class="wpbot_single_addon kbx-center-addon">
+                                <div class="wpbot_single_content">
+                                    <div class="wpbot_addon_image">
+                                        <img src="<?php echo esc_url(sld_addon_url . 'images/multi-page-addon.png'); ?>"
+                                            title="" />
+                                    </div>
+                                    <div class="wpbot_addon_content">
+                                        <div class="wpbot_addon_title">
+                                            <?php echo esc_html__('MultiPage Advanced Addon', 'qc-opd'); ?>
+                                        </div>
+                                        <div class="wpbot_addon_details">
+
+                                            <?php
+                                            if (is_plugin_active('multi-page-advanced-addon/multi-page-advanced-addon.php')) {
+                                                echo '<span class="wp_addon_installed">Installed</span>';
+                                            } else {
+                                                echo '<span class="wp_addon_notinstalled">Not Installed</span>';
+                                            }
+                                            ?>
+                                            <p><?php esc_html_e('Global Search, Pagination, Category view with Lists on home page.', 'qc-opd'); ?>
+                                            </p>
+                                            <a class="button button-secondary"
+                                                href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>"
+                                                target="_blank"><?php echo esc_html__('Get It Now', 'qc-opd'); ?></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wpbot_single_addon kbx-center-addon">
+                                <div class="wpbot_single_content">
+                                    <div class="wpbot_addon_image">
+                                        <img src="<?php echo esc_url(sld_addon_url . 'images/link-checker.png'); ?>"
+                                            title="" />
+                                    </div>
+                                    <div class="wpbot_addon_content">
+                                        <div class="wpbot_addon_title">
+                                            <?php echo esc_html__('Directory Broken Link Checker', 'qc-opd'); ?>
+                                        </div>
+                                        <div class="wpbot_addon_details">
+                                            <?php
+                                            if (is_plugin_active('qc-broken-link-checker/qc-directory-broken-link-checker.php')) {
+                                                echo '<span class="wp_addon_installed">Installed</span>';
+                                            } else {
+                                                echo '<span class="wp_addon_notinstalled">Not Installed</span>';
+                                            }
+                                            ?>
+                                            <p><?php esc_html_e('Check Broken Links for SLD and SBD and other Post Types Links', 'qc-opd'); ?>
+                                            </p>
+                                            <a class="button button-secondary"
+                                                href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>"
+                                                target="_blank"><?php echo esc_html__('Get It Now', 'qc-opd'); ?></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wpbot_single_addon kbx-center-addon">
+                                <div class="wpbot_single_content">
+                                    <div class="wpbot_addon_image">
+                                        <img src="<?php echo esc_url(sld_addon_url . 'images/rating-addon-logo.png'); ?>"
+                                            title="" />
+                                    </div>
+                                    <div class="wpbot_addon_content">
+                                        <div class="wpbot_addon_title">
+                                            <?php echo esc_html__('Review, Rating for SLD Pro', 'qc-opd'); ?>
+                                        </div>
+                                        <div class="wpbot_addon_details">
+                                            <?php
+                                            if (is_plugin_active('sld-rating-review-addon/sld-rating-review.php')) {
+                                                echo '<span class="wp_addon_installed">Installed</span>';
+                                            } else {
+                                                echo '<span class="wp_addon_notinstalled">Not Installed</span>';
+                                            }
+                                            ?>
+                                            <p><?php esc_html_e('Allow your site users to leave a review comment and rate the link listings.', 'qc-opd'); ?>
+                                            </p>
+                                            <a class="button button-secondary"
+                                                href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>"
+                                                target="_blank"><?php echo esc_html__('Get It Now', 'qc-opd'); ?></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wpbot_single_addon kbx-center-addon">
+                                <div class="wpbot_single_content">
+                                    <div class="wpbot_addon_image">
+                                        <img src="<?php echo esc_url(sld_addon_url . 'images/link-exchange.png'); ?>"
+                                            title="" />
+                                    </div>
+                                    <div class="wpbot_addon_content">
+                                        <div class="wpbot_addon_title">
+                                            <?php echo esc_html__('Link Exchange AddOn for SLD Pro', 'qc-opd'); ?>
+                                        </div>
+                                        <div class="wpbot_addon_details">
+                                            <?php
+                                            if (is_plugin_active('link-exchange-addon/qcld-link-exchange-main.php')) {
+                                                echo '<span class="wp_addon_installed">Installed</span>';
+                                            } else {
+                                                echo '<span class="wp_addon_notinstalled">Not Installed</span>';
+                                            }
+                                            ?>
+                                            <p><?php esc_html_e('Allow your site users Exchange Links with Other Websites', 'qc-opd'); ?>
+                                            </p>
+                                            <a class="button button-secondary"
+                                                href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>"
+                                                target="_blank"><?php echo esc_html__('Get It Now', 'qc-opd'); ?></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+                        <div class="wpbot_single_addon_wrapper">
+                            <h2 class="wpbot_single_addon_title"><?php echo esc_html__('Themes', 'qc-opd'); ?></h2>
+                            <div class="wpbot_single_addon kbx-center-addon qc_addon_page_full_addon">
+                                <div class="wpbot_single_content">
+                                    <div class="wpbot_addon_image qc_addon_page_full_img">
+                                        <img src="<?php echo esc_url(sld_addon_url . 'images/theme.jpg'); ?>"
+                                            title="" />
+                                    </div>
+                                    <div class="wpbot_addon_content">
+                                        <div class="wpbot_addon_title">
+                                            <?php esc_html_e('Simple Link Directory Theme', 'qc-opd'); ?>
+                                        </div>
+                                        <div class="wpbot_addon_details">
+                                            <span
+                                                class="wp_addon_installed"><?php esc_html_e('Not Installed', 'qc-opd'); ?></span>
+                                            <p><?php esc_html_e('Crafted carefully to make the best out of the popular Simple Link Directory plugin. One Click Install, Demo Data, Compatible with the Elementor and the Gutenberg Page Builder!', 'qc-opd'); ?>
+                                            </p>
+                                            <a class="button button-secondary"
+                                                href="https://www.quantumcloud.com/products/themes/simple-link-directory/"
+                                                target="_blank"><?php esc_html_e('Get It Now', 'qc-opd'); ?></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div style="clear:both"></div>
+
+                        </div>
+
+
                     </div>
                 </div>
             </div>
-
-            <div class="wpbot_single_addon kbx-center-addon">
-                <div class="wpbot_single_content">
-                    <div class="wpbot_addon_image">
-                        <img src="<?php echo esc_url(sld_addon_url.'images/link-checker.png'); ?>" title="" />
-                    </div>
-                    <div class="wpbot_addon_content">
-                        <div class="wpbot_addon_title"><?php echo esc_html__('Directory Broken Link Checker', 'qc-opd'); ?></div>
-                        <div class="wpbot_addon_details">
-                            <?php
-                                if( is_plugin_active('qc-broken-link-checker/qc-directory-broken-link-checker.php') ){
-                                    echo '<span class="wp_addon_installed">Installed</span>';
-                                }else{
-                                    echo '<span class="wp_addon_notinstalled">Not Installed</span>';
-                                }
-                            ?>
-                            <p><?php esc_html_e('Check Broken Links for SLD and SBD and other Post Types Links', 'qc-opd'); ?></p>
-                            <a class="button button-secondary" href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>" target="_blank" ><?php echo esc_html__('Get It Now', 'qc-opd'); ?></a>
-                        </div>            
-                    </div>
-                </div>
-            </div>
-
-            <div class="wpbot_single_addon kbx-center-addon">
-                <div class="wpbot_single_content">
-                    <div class="wpbot_addon_image">
-                        <img src="<?php echo esc_url(sld_addon_url.'images/rating-addon-logo.png'); ?>" title="" />
-                    </div>
-                    <div class="wpbot_addon_content">
-                        <div class="wpbot_addon_title"><?php echo esc_html__('Review, Rating for SLD Pro', 'qc-opd'); ?></div>
-                        <div class="wpbot_addon_details">
-                            <?php
-                                if( is_plugin_active('sld-rating-review-addon/sld-rating-review.php') ){
-                                    echo '<span class="wp_addon_installed">Installed</span>';
-                                }else{
-                                    echo '<span class="wp_addon_notinstalled">Not Installed</span>';
-                                }
-                            ?>
-                            <p><?php esc_html_e('Allow your site users to leave a review comment and rate the link listings.', 'qc-opd'); ?></p>
-                            <a class="button button-secondary" href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>" target="_blank" ><?php echo esc_html__('Get It Now', 'qc-opd'); ?></a>
-                        </div>            
-                    </div>
-                </div>
-            </div>
-
-            <div class="wpbot_single_addon kbx-center-addon">
-                <div class="wpbot_single_content">
-                    <div class="wpbot_addon_image">
-                        <img src="<?php echo esc_url(sld_addon_url.'images/link-exchange.png'); ?>" title="" />
-                    </div>
-                    <div class="wpbot_addon_content">
-                        <div class="wpbot_addon_title"><?php echo esc_html__('Link Exchange AddOn for SLD Pro', 'qc-opd'); ?></div>
-                        <div class="wpbot_addon_details">
-                            <?php
-                                if( is_plugin_active('link-exchange-addon/qcld-link-exchange-main.php') ){
-                                    echo '<span class="wp_addon_installed">Installed</span>';
-                                }else{
-                                    echo '<span class="wp_addon_notinstalled">Not Installed</span>';
-                                }
-                            ?>
-                            <p><?php esc_html_e('Allow your site users Exchange Links with Other Websites', 'qc-opd'); ?></p>
-                            <a class="button button-secondary" href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>" target="_blank" ><?php echo esc_html__('Get It Now', 'qc-opd'); ?></a>
-                        </div>            
-                    </div>
-                </div>
-            </div>
-
-
-
         </div>
-
-
-        <div class="wpbot_single_addon_wrapper">
-            <h2 class="wpbot_single_addon_title"><?php echo esc_html__('Themes', 'qc-opd'); ?></h2>
-            <div class="wpbot_single_addon kbx-center-addon qc_addon_page_full_addon">
-                <div class="wpbot_single_content">
-                    <div class="wpbot_addon_image qc_addon_page_full_img">
-                        <img src="<?php echo esc_url(sld_addon_url.'images/theme.jpg'); ?>" title="" />
-                    </div>
-                    <div class="wpbot_addon_content">
-                        <div class="wpbot_addon_title"><?php esc_html_e('Simple Link Directory Theme', 'qc-opd'); ?></div>
-                        <div class="wpbot_addon_details">
-                            <span class="wp_addon_installed"><?php esc_html_e('Not Installed', 'qc-opd'); ?></span>
-                            <p><?php esc_html_e('Crafted carefully to make the best out of the popular Simple Link Directory plugin. One Click Install, Demo Data, Compatible with the Elementor and the Gutenberg Page Builder!', 'qc-opd'); ?></p>
-                            <a class="button button-secondary" href="https://www.quantumcloud.com/products/themes/simple-link-directory/" target="_blank" ><?php esc_html_e('Get It Now', 'qc-opd'); ?></a>
-                        </div>            
-                    </div>
-
-                </div>
-
-            </div>
-
-            
-            <div style="clear:both"></div>
-            
-        </div>
-
-
+        <?php if (function_exists('qcld_sld_help_render_sidebar')) {
+            qcld_sld_help_render_sidebar();
+        } ?>
     </div>
 </div>
-

@@ -3,11 +3,11 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 8.9.8
+ * Version: 9.0.0
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
- * Tested up to: 6.9
+ * Tested up to: 7.0
  * Text Domain: qc-opd
  * Domain Path: /lang/
  * License: GPL2
@@ -301,6 +301,8 @@ class Radium_Theme_Demo_Data_Importer
 
 
 
+
+
 add_action('add_meta_boxes', 'sld_meta_box_video');
 function sld_meta_box_video()
 {					                  // --- Parameters: ---
@@ -312,6 +314,15 @@ function sld_meta_box_video()
         'side',            // Where on the page to show the box
         'high'
     );            // Priority of box in display order
+
+    add_meta_box(
+        'sld-ai-generator-box',
+        esc_html__('AI List Items Generator', 'qc-opd'),
+        'sld_ai_generator_box_callback',
+        'sld',
+        'side',
+        'high'
+    );
 }
 
 function sld_meta_box_callback($post)
@@ -325,6 +336,59 @@ function sld_meta_box_callback($post)
             value="<?php echo esc_attr('Generate Shortcode', 'qc-opd'); ?>" />
     </p>
 
+    <?php
+}
+
+function sld_ai_generator_box_callback($post)
+{
+    $active_provider = get_option('sld_enable_ai_provider', 'none');
+    
+    if ($active_provider === 'openai') {
+        $provider_name = 'OpenAI';
+    } elseif ($active_provider === 'gemini') {
+        $provider_name = 'Google Gemini';
+    } elseif ($active_provider === 'openrouter') {
+        $provider_name = 'OpenRouter';
+    } else {
+        $provider_name = 'None';
+    }
+    ?>
+    <div class="sld-ai-sidebar-generator-wrap">
+        <input type="hidden" id="sld_ai_auto_save_val" value="<?php echo esc_attr(get_option('sld_ai_auto_save', '0')); ?>" />
+        <?php if ($active_provider === 'none'): ?>
+            <div class="notice notice-warning inline sld-ai-sidebar-notice"><p><?php printf(esc_html__('Please enable an AI provider (OpenAI, Gemini or OpenRouter) in Simple Link Directory %s first.', 'qc-opd'), '<a href="' . esc_url(admin_url('edit.php?post_type=sld&page=sld_settings#ai_settings')) . '" target="_blank" style="text-decoration: underline;">' . esc_html__('settings tab', 'qc-opd') . '</a>'); ?></p></div>
+        <?php else: ?>
+            <p class="sld-ai-sidebar-active-provider">
+                <strong><?php esc_html_e('Active AI Provider:', 'qc-opd'); ?></strong> 
+                <a href="<?php echo esc_url(admin_url('edit.php?post_type=sld&page=sld_settings#ai_settings')); ?>" target="_blank" style="text-decoration: none; border-bottom: 1px dashed #4f46e5;">
+                    <span class="sld-ai-sidebar-provider-badge"><?php echo esc_html($provider_name); ?></span>
+                </a>
+            </p>
+            
+            <p class="sld-ai-sidebar-field-wrap">
+                <label for="sld_ai_prompt"><?php esc_html_e('Topic:', 'qc-opd'); ?></label>
+                <textarea id="sld_ai_prompt" placeholder="<?php esc_attr_e('e.g., JavaScript coding', 'qc-opd'); ?>"></textarea>
+            </p>
+            
+            <p class="sld-ai-sidebar-field-wrap">
+                <label for="sld_ai_count"><?php esc_html_e('Number of Items:', 'qc-opd'); ?></label>
+                <select id="sld_ai_count">
+                    <?php for($i=1; $i<=15; $i++): ?>
+                        <option value="<?php echo $i; ?>" <?php selected($i, 5); ?>><?php echo $i; ?></option>
+                    <?php endfor; ?>
+                </select>
+            </p>
+            
+            <p class="sld-ai-sidebar-btn-wrap">
+                <button type="button" id="sld_btn_ai_generate" class="button button-primary button-large">
+                    <span class="dashicons dashicons-admin-generic sld-spinner-icon"></span>
+                    <span class="sld-btn-text"><?php esc_html_e('Generate & Add Items', 'qc-opd'); ?></span>
+                </button>
+            </p>
+            
+            <div id="sld_ai_gen_status"></div>
+        <?php endif; ?>
+    </div>
     <?php
 }
 

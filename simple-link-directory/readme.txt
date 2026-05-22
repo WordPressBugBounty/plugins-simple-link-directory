@@ -1,29 +1,30 @@
-=== Simple Link Directory ===
+=== Simple Link Directory - AI Powered ===
 Contributors: quantumcloud
 Donate link: https://www.quantumcloud.com/products/simple-link-directory/
 Tags: directory, directory listing, link directory, link management, web directory
 Requires at least: 4.6
 Tested up to: 6.9
-Stable tag: 8.9.8
+Stable tag: 9.0.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.quantumcloud.com/products/simple-link-directory/
 
-Free LINK DIRECTORY Plugin for WordPress to Curate Links for Web Directory. Link management, Directory Listings, Link Archive, Vendor Directory
+AI Powered LINK DIRECTORY Plugin for WordPress to Curate Links for Web Directory. Link Management, Directory Listings, Link Archive, Vendor Directory
 
 == Description ==
-= Free WordPress Link Directory Plugin to curate links for web directory =
+= AI Powered Free WordPress Link Directory Plugin to curate links for web directory =
 
 Free WordPress Link Directory Plugin for your External Link Directory Listings! Simple Link Directory is a unique and advanced WordPress Directory plugin and an External Link Listings Manager for One Page directory and Content Curation. Create innovative and elegant Link, Resources page or Link page on your WordPress website in matter of minutes.
 
 > 🚀 <strong>Upgrade to [Simple Link Directory](https://www.quantumcloud.com/products/simple-link-directory/) PRO now!</strong>
 > 🚀 [Support, Bug Report, Feature Requests](https://www.quantumcloud.com/resources/free-support/) | [Link Directory Demo](https://dev.quantumcloud.com/sld/)
+> 🚀 Generate Lists with links using AI - Gemini, OpenAI, Openrouter. Auto Generate Links, Titles, Sub titles, Images, and Long Description with AI
 
 <strong>Simple Link Directory includes Shortcode Generator Link Directory Block for Gutenberg.</strong>
 
 > ++ Looking for a Business Directory? Check out our [Simple Business Directory Plugin with Google Maps](https://wordpress.org/plugins/phone-directory/)
 
-SLD is the best Free WordPress Link Directory plugin for the new age web. Compatible with any theme. With the Pro version of Simple Link Directory you can Monetize directory listings and start making money or generate backlinks with the <strong>link exchange</strong> addon on complete Auto Pilot. This plugin can be used for Single page Business directory, One page External Link directory, Link library, Bookmark collection, Directory listing, Web directory, Listing directory, Video Gallery, Youtube Video Directory, Video Database, Vendor or Partners Directory, Affiliates Directory, Resources page, Link Curation, Intranet etc.
+SLD is the best Free WordPress Link Directory plugin powered by AI for the new age web. Compatible with any theme. With the Pro version of Simple Link Directory you can Monetize directory listings and start making money or generate backlinks with the <strong>link exchange</strong> addon on complete Auto Pilot. This plugin can be used for Single page Business directory, One page External Link directory, Link library, Bookmark collection, Directory listing, Web directory, Listing directory, Video Gallery, Youtube Video Directory, Video Database, Vendor or Partners Directory, Affiliates Directory, Resources page, Link Curation, Intranet etc.
 
 > ++ Looking for a Complete Solution? Get a [Premium Link Directory Theme!](https://www.quantumcloud.com/products/themes/simple-link-directory/)
 
@@ -37,6 +38,7 @@ This Link Directory plugin is a good fit for you if you are a:
 * Marketer
 * Webmaster
 * Advertising or Marketing Agency
+* Powered by AI - Gemini, OpenAI, Openrouter
 
 = Simple Link Directory Use Cases = 
 
@@ -107,6 +109,12 @@ Simple Lik Diretory Pro features:
 * Optional Fixed Position Filter buttons that can be Left aligned or placed at top of your Lists</li>
 * Multi Language support with mo/pot file. Dutch and Russian language files included.</li>
 * Compatible with Gutenberg, Visual Composer, Elementor, Beaver Builder or any Visual Builder that supports shortcode.</li>
+
+<strong>Powered by AI</strong>
+
+* Bulk Generate Lists with links using AI 
+* Supports Gemini, OpenAI, Openrouter. 
+* Auto Generate Links, Titles, Sub titles, Images, and Long Description with AI
 
 
 <strong>Community Features</strong>
@@ -364,6 +372,10 @@ You can change the language texts from the Settings area. Currently, multi langu
 
 
 == Changelog ==
+
+= 9.0.0 =
+# Introducing AI
+# Revamped Admin UI
 
 = 8.9.8 =
 # simple template border top color updated

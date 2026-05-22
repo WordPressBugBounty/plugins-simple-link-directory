@@ -92,7 +92,22 @@ if ( ! function_exists( 'qcsld_admin_enqueue' ) ) {
 		
 		wp_register_script( 'sld-admin-trackoutbound-script', QCOPD_ASSETS_URL . '/js/qcopd-track-outbound.js', array('jquery'));
 		
-		
+		if ( function_exists('wp_enqueue_code_editor') ) {
+			$settings = wp_enqueue_code_editor(array('type' => 'text/css'));
+			if ( $settings !== false ) {
+				wp_add_inline_script(
+					'sld-admin-common-script',
+					sprintf( 'jQuery(document).ready(function($) { if( $("#sld_custom_style").length ) { window.sld_custom_style_editor = wp.codeEditor.initialize("sld_custom_style", %s); } });', wp_json_encode( $settings ) )
+				);
+			}
+			$js_settings = wp_enqueue_code_editor(array('type' => 'text/javascript'));
+			if ( $js_settings !== false ) {
+				wp_add_inline_script(
+					'sld-admin-common-script',
+					sprintf( 'jQuery(document).ready(function($) { if( $("#sld_custom_js").length ) { window.sld_custom_js_editor = wp.codeEditor.initialize("sld_custom_js", %s); } });', wp_json_encode( $js_settings ) )
+				);
+			}
+		}
 		
 		$css = '';
 	    if ($post_type == 'sld') {
