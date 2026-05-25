@@ -534,6 +534,66 @@ jQuery(document).ready(function ($) {
 	// Trigger on load
 	toggle_ai_settings_fields();
 
+	// Live update manual models dropdown
+	$(document).on('change blur keyup', '#sld_openai_manual_models', function() {
+		var manualModelsStr = $(this).val() || '';
+		var manualModels = [];
+		if (manualModelsStr) {
+			manualModels = manualModelsStr.split(',').map(function(item) {
+				return item.trim();
+			}).filter(function(item) {
+				return item.length > 0;
+			});
+		}
+		
+		var modelSelect = $('#sld_openai_model');
+		$.each(manualModels, function(i, m) {
+			if (modelSelect.find('option[value="' + m + '"]').length === 0) {
+				modelSelect.append('<option value="' + m + '">' + m + '</option>');
+			}
+		});
+	});
+
+	// Live update manual gemini models dropdown
+	$(document).on('change blur keyup', '#sld_gemini_manual_models', function() {
+		var manualModelsStr = $(this).val() || '';
+		var manualModels = [];
+		if (manualModelsStr) {
+			manualModels = manualModelsStr.split(',').map(function(item) {
+				return item.trim();
+			}).filter(function(item) {
+				return item.length > 0;
+			});
+		}
+		
+		var modelSelect = $('#sld_gemini_model');
+		$.each(manualModels, function(i, m) {
+			if (modelSelect.find('option[value="' + m + '"]').length === 0) {
+				modelSelect.append('<option value="' + m + '">' + m + '</option>');
+			}
+		});
+	});
+
+	// Live update manual openrouter models dropdown
+	$(document).on('change blur keyup', '#sld_openrouter_manual_models', function() {
+		var manualModelsStr = $(this).val() || '';
+		var manualModels = [];
+		if (manualModelsStr) {
+			manualModels = manualModelsStr.split(',').map(function(item) {
+				return item.trim();
+			}).filter(function(item) {
+				return item.length > 0;
+			});
+		}
+		
+		var modelSelect = $('#sld_openrouter_model');
+		$.each(manualModels, function(i, m) {
+			if (modelSelect.find('option[value="' + m + '"]').length === 0) {
+				modelSelect.append('<option value="' + m + '">' + m + '</option>');
+			}
+		});
+	});
+
 	// Test OpenAI Connection
 	$(document).on('click', '#sld_test_openai_btn', function (e) {
 		e.preventDefault();
@@ -563,7 +623,25 @@ jQuery(document).ready(function ($) {
 					if (response.data.models && response.data.models.length > 0) {
 						var currentSelected = modelSelect.val();
 						modelSelect.empty();
-						$.each(response.data.models, function (index, modelId) {
+						
+						var manualModelsStr = $('#sld_openai_manual_models').val() || '';
+						var manualModels = [];
+						if (manualModelsStr) {
+							manualModels = manualModelsStr.split(',').map(function(item) {
+								return item.trim();
+							}).filter(function(item) {
+								return item.length > 0;
+							});
+						}
+						
+						var combinedModels = response.data.models.slice();
+						$.each(manualModels, function(i, m) {
+							if (combinedModels.indexOf(m) === -1) {
+								combinedModels.push(m);
+							}
+						});
+
+						$.each(combinedModels, function (index, modelId) {
 							var selectedAttr = (modelId === currentSelected) ? ' selected="selected"' : '';
 							modelSelect.append('<option value="' + modelId + '"' + selectedAttr + '>' + modelId + '</option>');
 						});
@@ -608,7 +686,25 @@ jQuery(document).ready(function ($) {
 					if (response.data.models && response.data.models.length > 0) {
 						var currentSelected = modelSelect.val();
 						modelSelect.empty();
-						$.each(response.data.models, function (index, modelId) {
+						
+						var manualModelsStr = $('#sld_gemini_manual_models').val() || '';
+						var manualModels = [];
+						if (manualModelsStr) {
+							manualModels = manualModelsStr.split(',').map(function(item) {
+								return item.trim();
+							}).filter(function(item) {
+								return item.length > 0;
+							});
+						}
+						
+						var combinedModels = response.data.models.slice();
+						$.each(manualModels, function(i, m) {
+							if (combinedModels.indexOf(m) === -1) {
+								combinedModels.push(m);
+							}
+						});
+
+						$.each(combinedModels, function (index, modelId) {
 							var selectedAttr = (modelId === currentSelected) ? ' selected="selected"' : '';
 							modelSelect.append('<option value="' + modelId + '"' + selectedAttr + '>' + modelId + '</option>');
 						});
@@ -653,7 +749,29 @@ jQuery(document).ready(function ($) {
 					if (response.data.models && response.data.models.length > 0) {
 						var currentSelected = modelSelect.val();
 						modelSelect.empty();
-						$.each(response.data.models, function (index, model) {
+						
+						var manualModelsStr = $('#sld_openrouter_manual_models').val() || '';
+						var manualModels = [];
+						if (manualModelsStr) {
+							manualModels = manualModelsStr.split(',').map(function(item) {
+								return item.trim();
+							}).filter(function(item) {
+								return item.length > 0;
+							});
+						}
+						
+						var combinedModels = response.data.models.slice();
+						$.each(manualModels, function(i, m) {
+							var exists = false;
+							$.each(combinedModels, function(j, obj) {
+								if(obj.id === m) exists = true;
+							});
+							if (!exists) {
+								combinedModels.push({id: m, name: m});
+							}
+						});
+
+						$.each(combinedModels, function (index, model) {
 							var selectedAttr = (model.id === currentSelected) ? ' selected="selected"' : '';
 							modelSelect.append('<option value="' + model.id + '"' + selectedAttr + '>' + model.name + '</option>');
 						});

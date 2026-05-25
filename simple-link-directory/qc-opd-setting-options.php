@@ -73,12 +73,15 @@ function sld_register_plugin_settings()
   register_setting('qc-sld-plugin-settings-group', 'sld_ai_auto_save', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_openai_api_key', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_openai_model', $args);
+  register_setting('qc-sld-plugin-settings-group', 'sld_openai_manual_models', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_openai_temperature', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_gemini_api_key', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_gemini_model', $args);
+  register_setting('qc-sld-plugin-settings-group', 'sld_gemini_manual_models', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_gemini_temperature', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_openrouter_api_key', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_openrouter_model', $args);
+  register_setting('qc-sld-plugin-settings-group', 'sld_openrouter_manual_models', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_openrouter_temperature', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_ai_prompt_instruction', $args_textarea);
   //help section
@@ -438,6 +441,18 @@ function qcsettings_page_callback_func()
                       <?php
                       $selected_model = get_option('sld_openai_model', 'gpt-4o');
                       $models = sld_get_openai_models();
+
+                      $manual_models = get_option('sld_openai_manual_models');
+                      if (!empty($manual_models)) {
+                        $manual_models_arr = explode(',', $manual_models);
+                        foreach($manual_models_arr as $manual_model) {
+                          $m = trim($manual_model);
+                          if (!empty($m)) {
+                            $models[$m] = $m;
+                          }
+                        }
+                      }
+
                       if (!empty($selected_model) && !array_key_exists($selected_model, $models)) {
                         $models[$selected_model] = $selected_model;
                       }
@@ -448,6 +463,16 @@ function qcsettings_page_callback_func()
                     </select>
                     <p class="description">
                       <?php esc_html_e('Select the OpenAI model to use. You can load all latest available models using the Test Connection button.', 'qc-opd'); ?>
+                    </p>
+                  </td>
+                </tr>
+                <tr valign="top" class="sld-openai-settings-row">
+                  <th scope="row"><?php esc_html_e('Add Custom Models', 'qc-opd'); ?></th>
+                  <td>
+                    <input type="text" name="sld_openai_manual_models" id="sld_openai_manual_models" size="80"
+                      value="<?php echo esc_attr(get_option('sld_openai_manual_models')); ?>" placeholder="gpt-4o-mini, gpt-3.5-turbo" />
+                    <p class="description">
+                      <?php esc_html_e('Manually add custom OpenAI models (comma separated).', 'qc-opd'); ?>
                     </p>
                   </td>
                 </tr>
@@ -487,6 +512,18 @@ function qcsettings_page_callback_func()
                       <?php
                       $selected_gemini = get_option('sld_gemini_model', 'gemini-1.5-flash');
                       $gemini_models = sld_get_gemini_models();
+
+                      $manual_models = get_option('sld_gemini_manual_models');
+                      if (!empty($manual_models)) {
+                        $manual_models_arr = explode(',', $manual_models);
+                        foreach($manual_models_arr as $manual_model) {
+                          $m = trim($manual_model);
+                          if (!empty($m)) {
+                            $gemini_models[$m] = $m;
+                          }
+                        }
+                      }
+
                       if (!empty($selected_gemini) && !array_key_exists($selected_gemini, $gemini_models)) {
                         $gemini_models[$selected_gemini] = $selected_gemini;
                       }
@@ -497,6 +534,16 @@ function qcsettings_page_callback_func()
                     </select>
                     <p class="description">
                       <?php esc_html_e('Select the Gemini model to use. You can load all latest available models using the Test Connection button.', 'qc-opd'); ?>
+                    </p>
+                  </td>
+                </tr>
+                <tr valign="top" class="sld-gemini-settings-row">
+                  <th scope="row"><?php esc_html_e('Add Custom Models', 'qc-opd'); ?></th>
+                  <td>
+                    <input type="text" name="sld_gemini_manual_models" id="sld_gemini_manual_models" size="80"
+                      value="<?php echo esc_attr(get_option('sld_gemini_manual_models')); ?>" placeholder="gemini-1.5-pro, gemini-ultra" />
+                    <p class="description">
+                      <?php esc_html_e('Manually add custom Google Gemini models (comma separated).', 'qc-opd'); ?>
                     </p>
                   </td>
                 </tr>
@@ -538,6 +585,18 @@ function qcsettings_page_callback_func()
                       <?php
                       $selected_openrouter = get_option('sld_openrouter_model', 'google/gemini-2.5-flash');
                       $openrouter_models = sld_get_openrouter_models();
+
+                      $manual_models = get_option('sld_openrouter_manual_models');
+                      if (!empty($manual_models)) {
+                        $manual_models_arr = explode(',', $manual_models);
+                        foreach($manual_models_arr as $manual_model) {
+                          $m = trim($manual_model);
+                          if (!empty($m)) {
+                            $openrouter_models[$m] = $m;
+                          }
+                        }
+                      }
+
                       if (!array_key_exists($selected_openrouter, $openrouter_models)) {
                         $openrouter_models[$selected_openrouter] = $selected_openrouter;
                       }
@@ -548,6 +607,16 @@ function qcsettings_page_callback_func()
                     </select>
                     <p class="description">
                       <?php esc_html_e('Select the OpenRouter model to use. Models are dynamically fetched if an API key is active.', 'qc-opd'); ?>
+                    </p>
+                  </td>
+                </tr>
+                <tr valign="top" class="sld-openrouter-settings-row">
+                  <th scope="row"><?php esc_html_e('Add Custom Models', 'qc-opd'); ?></th>
+                  <td>
+                    <input type="text" name="sld_openrouter_manual_models" id="sld_openrouter_manual_models" size="80"
+                      value="<?php echo esc_attr(get_option('sld_openrouter_manual_models')); ?>" placeholder="meta-llama/llama-3-8b-instruct" />
+                    <p class="description">
+                      <?php esc_html_e('Manually add custom OpenRouter models (comma separated).', 'qc-opd'); ?>
                     </p>
                   </td>
                 </tr>

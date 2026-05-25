@@ -3,8 +3,8 @@ Contributors: quantumcloud
 Donate link: https://www.quantumcloud.com/products/simple-link-directory/
 Tags: directory, directory listing, link directory, link management, web directory
 Requires at least: 4.6
-Tested up to: 6.9
-Stable tag: 9.0.0
+Tested up to: 7.0
+Stable tag: 9.0.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.quantumcloud.com/products/simple-link-directory/
@@ -280,20 +280,11 @@ Power Up with AddOns for Simple Link Directory Pro
 * Review Rating AddOn AddOn
 * Modern MultiPage Mode AddOn
 
-= ShortCode Generator = 
-
-You are encouraged to use the SLD * handy Short Code generator * from your page's Visual Editor. Check the plugin's Help section for more details about shortcode parameters.
-
-
-** We welcome your feedback and new feature requests to improve the plugin! **
-
-
 == Installation ==
 
 1. Download the plugin zip file. Extract and upload simple-link-directory in your wp-content/plugins folder.
 2. From the wp-admin panel go to plugins and activate the plugin
 3. Create a new page and paste the plugin Short Code with short code generator. 
-5. You are done.
 
 == Frequently Asked Questions ==
 
@@ -354,7 +345,7 @@ You can change the language texts from the Settings area. Currently, multi langu
 
 == Use ==
 
-1. Create new lists with your links.
+1. Create Multiple lists with your links. Each list should be focused on a single topic
 2. After activating the plugin, create a new page or post. In the body section write this shortcode 
 [qcopd-directory mode="all" column="3" style="style-1" ]
 3. Save the page/post and check the page in front end. You'll see a nicely designed Link Directory.
