@@ -482,14 +482,15 @@ i.qc_sld_btn {
     display: inline-flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        width: 100%;
 }
 .sld_nav_container a.nav-tab {
     float: none;
     border: none;
     border-bottom: none;
-    margin: 0;
+    margin: 8px 0 0 0;
     padding: 10px 10px;
     font-size: 14px;
     font-weight: 600;
@@ -1196,7 +1197,6 @@ div#language_settings table.form-table  tr th {
 }
 
 .sld-sidebar-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     border-color: #cbd5e1;
 }

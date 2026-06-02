@@ -387,7 +387,7 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
 
         <div class="sld-pro-upgrade">
           <a href="<?php echo esc_url('https://dev.quantumcloud.com/sld/'); ?>" target="_blank"
-            class="button button-primary"><?php esc_html_e('View Full Feature List', 'qc-opd'); ?></a>
+            class="button button-primary"><?php esc_html_e('View Pro Demo', 'qc-opd'); ?></a>
         </div>
 
         <div class="sld-pro-upgrade" style="margin-top:10px;">
