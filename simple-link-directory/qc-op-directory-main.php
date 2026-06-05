@@ -3,7 +3,7 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 9.0.2
+ * Version: 9.0.3
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -528,44 +528,41 @@ function sld_wp_shortcode_notice()
 
 
         <?php
-        $page_slug = 'sld-demo-data';
+        //$page_slug = 'sld-demo-data';
 
-        $existing_page = get_page_by_path($page_slug);
-        if (!$existing_page) {
+        //$existing_page = get_page_by_path($page_slug);
+        //if (!$existing_page) {
             ?>
 
             <div id="message" class="notice notice-info is-dismissible qcld-sld-demonotic-alart">
-                <p>
-                    <?php
-                    printf(
-                        __('%s Import SLD Demo Data:%s Imports a CSV file from the plugin folder into a custom post type called "sld", creates a new page, displays the data using a shortcode, and redirects the demo page %s Click to Import Data %s %s', 'qc-opd'),
-                        '<strong>',
-                        '</strong>',
-                        '<button type="button" id="sld-start-import-btn" class="button button-primary">',
-                        '</button>',
-                        '<div id="sld-import-message"></div>',
+                <div class="sld-demo-notice-content">
+                    <div class="sld-demo-notice-icon">
+                        <img src="<?php echo esc_url(QCOPD_IMG_URL . '/sld-logo.png'); ?>" alt="SLD Logo">
+                    </div>
+                    <div class="sld-demo-notice-text">
+                        <p>
+                            <?php
+                            printf(
+                                __('%s Import Simple Link Directory Demo Data:%s %sImport demo data to see how the plugin works.%s %sWe will create a sample directory with multiple Lists and create a new demo page using shortcode.%s %sYou can edit or delete the sample Lists to your requirements.%s %s Click to Import Data %s %s', 'qc-opd'),
+                                '<strong>',
+                                '</strong>',
+                                '<p>',
+                                '</p>',
+                                '<p>',
+                                '</p>',
+                                '<p>',
+                                '</p>',
+                                '<button type="button" id="sld-start-import-btn" class="button button-primary">',
+                                '</button>',
+                                '<div id="sld-import-message"></div>',
 
-                    );
-                    ?>
-                </p>
+                            );
+                            ?>
+                        </p>
+                    </div>
+                </div>
             </div>
-        <?php } else { ?>
 
-            <div id="message" class="notice notice-info is-dismissible qcld-sld-demonotic-alart">
-                <p>
-                    <?php
-                    printf(
-                        __('%s SLD Demo Data Imported:%s Imports a CSV file from the plugin folder into a custom post type called "sld", creates a new page, displays the data using a shortcode, and redirects the demo page %s Click to View Demo Page %s ', 'qc-opd'),
-                        '<strong>',
-                        '</strong>',
-                        '<a href="' . esc_url(home_url('sld-demo-data')) . '" target="_blank">',
-                        '</a>',
-
-                    );
-                    ?>
-                </p>
-            </div>
-        <?php } ?>
 
 
         <div class="qcld-sldquick-flyout">

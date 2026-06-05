@@ -959,20 +959,106 @@ body.qcld-sld-flyout #wpcontent .is-open {
     font-size: 16px !important;
 }
 
+/* ── Demo Notice Banner ── */
 .qcld-sld-demonotic-alart {
-    padding: 8px 15px 8px 15px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    margin: 20px 20px 0 0;
-    border-left: 0 solid transparent;
-    box-shadow: 0px 4px 6px 1px #ebebeb;
-    margin-bottom: 12px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+    margin: 16px 20px 16px 0;
+    background: linear-gradient(135deg, #f0f4ff 0%, #fdf0f7 100%);
     border: none;
-    border-left: 3px solid #e91e63;
+    border-left: none !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.10), 0 1px 4px rgba(0,0,0,0.06);
+    overflow: hidden;
 }
-.qcld-sld-demonotic-alart a{
-    color:#E91E63;
-    font-weight: bold;
+
+.qcld-sld-demonotic-alart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #6366f1 0%, #e91e63 100%);
+    border-radius: 12px 0 0 12px;
+}
+
+.qcld-sld-demonotic-alart::after {
+    content: '\2728';
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 28px;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.qcld-sld-demonotic-alart p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.7;
+    font-size: 13.5px;
+    color: #374151;
+}
+
+.qcld-sld-demonotic-alart p strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.qcld-sld-demonotic-alart a {
+    color: #6366f1 !important;
+    font-weight: 600;
+    text-decoration: none !important;
+    border-bottom: 1.5px solid rgba(99,102,241,0.35);
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.qcld-sld-demonotic-alart a:hover {
+    color: #e91e63 !important;
+    border-color: rgba(233,30,99,0.4);
+}
+
+/* Import / View Demo buttons inside notice */
+.qcld-sld-demonotic-alart .button.button-primary,
+.qcld-sld-demonotic-alart #sld-start-import-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(99,102,241,0.35);
+    transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+    text-decoration: none;
+    height: auto;
+    line-height: 1.5;
+}
+
+.qcld-sld-demonotic-alart .button.button-primary:hover,
+.qcld-sld-demonotic-alart #sld-start-import-btn:hover {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    box-shadow: 0 5px 16px rgba(99,102,241,0.45);
+    transform: translateY(-1px);
+    color: #fff !important;
+    outline: none;
+}
+
+.qcld-sld-demonotic-alart + .qcld-sld-demonotic-alart {
+    margin-top: 0;
 }
 
 .sld-notice {
@@ -2188,3 +2274,443 @@ div#language_settings table.form-table  tr th {
     margin-bottom: 4px;
 }
 
+/* ============================================================
+   SLD Import Modal
+   ============================================================ */
+
+#sld-import-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    background: rgba(15, 15, 30, 0.72);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+}
+
+#sld-import-modal.is-open {
+    display: flex;
+}
+
+#sld-import-modal-box {
+    background: #fff;
+    border-radius: 16px;
+    width: 520px;
+    max-width: 94vw;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.sld-modal-header {
+    background: linear-gradient(135deg, #6366f1 0%, #e91e63 100%);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sld-modal-header-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.sld-modal-header-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.sld-modal-header-subtitle {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 2px;
+}
+
+/* Body */
+.sld-modal-body {
+    padding: 24px;
+}
+
+/* Step row */
+.sld-modal-step-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+#sld-import-step-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+#sld-import-step-label.is-done {
+    color: #059669;
+}
+#sld-import-step-label.is-error {
+    color: #dc2626;
+}
+
+#sld-import-counter {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6366f1;
+    background: #eef2ff;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+/* Progress track */
+.sld-modal-progress-track {
+    background: #e5e7eb;
+    border-radius: 999px;
+    height: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+#sld-import-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #6366f1, #e91e63);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+
+/* Log list */
+#sld-import-log {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 12.5px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+}
+
+#sld-import-log li {
+    padding: 6px 10px;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#sld-import-log li .sld-log-icon {
+    flex-shrink: 0;
+}
+
+#sld-import-log li.is-ok    { background: #f0fdf4; color: #059669; }
+#sld-import-log li.is-skip  { background: #fffbeb; color: #d97706; }
+#sld-import-log li.is-error { background: #fef2f2; color: #dc2626; }
+
+/* Completion panel */
+#sld-import-done {
+    display: none;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.sld-done-card {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    border: 1px solid #6ee7b7;
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+
+.sld-done-emoji {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+#sld-done-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #065f46;
+    margin-bottom: 4px;
+}
+
+.sld-done-hint {
+    font-size: 12px;
+    color: #047857;
+}
+
+.sld-done-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#sld-view-demo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    color: #fff !important;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(99, 102, 241, 0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#sld-view-demo-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(99, 102, 241, 0.45);
+    color: #fff !important;
+}
+
+#sld-reload-now-btn {
+    padding: 9px 20px;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    inset: 0;
+    z-index: 999999;
+    background: rgba(15, 15, 30, 0.72);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+}
+
+#sld-import-modal.is-open {
+    display: flex;
+}
+
+#sld-import-modal-box {
+    background: #fff;
+    border-radius: 16px;
+    width: 520px;
+    max-width: 94vw;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.sld-modal-header {
+    background: linear-gradient(135deg, #6366f1 0%, #e91e63 100%);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sld-modal-header-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.sld-modal-header-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.sld-modal-header-subtitle {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 2px;
+}
+
+/* Body */
+.sld-modal-body {
+    padding: 24px;
+}
+
+/* Step row */
+.sld-modal-step-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+#sld-import-step-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+#sld-import-step-label.is-done {
+    color: #059669;
+}
+#sld-import-step-label.is-error {
+    color: #dc2626;
+}
+
+#sld-import-counter {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6366f1;
+    background: #eef2ff;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+/* Progress track */
+.sld-modal-progress-track {
+    background: #e5e7eb;
+    border-radius: 999px;
+    height: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+#sld-import-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #6366f1, #e91e63);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+
+/* Log list */
+#sld-import-log {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 12.5px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+}
+
+#sld-import-log li {
+    padding: 6px 10px;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#sld-import-log li .sld-log-icon {
+    flex-shrink: 0;
+}
+
+#sld-import-log li.is-ok    { background: #f0fdf4; color: #059669; }
+#sld-import-log li.is-skip  { background: #fffbeb; color: #d97706; }
+#sld-import-log li.is-error { background: #fef2f2; color: #dc2626; }
+
+/* Completion panel */
+#sld-import-done {
+    display: none;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.sld-done-card {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    border: 1px solid #6ee7b7;
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+
+.sld-done-emoji {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+#sld-done-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #065f46;
+    margin-bottom: 4px;
+}
+
+.sld-done-hint {
+    font-size: 12px;
+    color: #047857;
+}
+
+.sld-done-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#sld-view-demo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    color: #fff !important;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(99, 102, 241, 0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#sld-view-demo-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(99, 102, 241, 0.45);
+    color: #fff !important;
+}
+
+#sld-reload-now-btn {
+    padding: 9px 20px;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+#sld-reload-now-btn:hover {
+    background: #e5e7eb;
+}
+
+/* ============================================================
+   SLD Notice Layout
+   ============================================================ */
+
+.sld-demo-notice-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.sld-demo-notice-icon {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    background: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+    padding: 5px;
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.sld-demo-notice-icon img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sld-demo-notice-text {
+    flex-grow: 1;
+}

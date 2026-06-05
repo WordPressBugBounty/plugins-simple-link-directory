@@ -269,47 +269,175 @@ jQuery(document).ready(function ($) {
 	$(document).on('click', '#sld-start-import-btn', function (e) {
 		e.preventDefault();
 
-		var uploadBtn = $(this);
-		var messageArea = $('#sld-import-message');
+		var $btn = $(this);
+		var security = (typeof sld_ajax_object !== 'undefined') ? sld_ajax_object.ajax_nonce : '';
 
-		// Data to send via AJAX
-		var data = {
-			'action': 'qcld_sld_import_csv_from_folder',
-			'security': sld_ajax_object.ajax_nonce,
-		};
+		$btn.prop('disabled', true);
+		$btn.find('.sld-btn-text').text('Preparing…');
 
-		$.ajax({
-			url: ajaxurl,
-			data: data,
-			dataType: 'json',
-			type: 'POST',
-			beforeSend: function () {
+        // ── Inject modal HTML (once) ────────────────────────────────────
+        if ( ! $('#sld-import-modal').length ) {
+            var logoUrl = (typeof sld_ajax_object !== 'undefined' && sld_ajax_object.image_url) 
+                ? sld_ajax_object.image_url + '/sld-logo.png' 
+                : '';
 
-				uploadBtn.prop('disabled', true).text('Importing...');
-				messageArea.html('<p>Importing data, please wait...</p>');
+            $('body').append(
+                '<div id="sld-import-modal">' +
+                    '<div id="sld-import-modal-box">' +
+                        '<div class="sld-modal-header">' +
+                            '<span class="sld-modal-header-icon">' +
+                                (logoUrl ? '<img src="' + logoUrl + '" alt="SLD Logo" style="max-height: 40px; width: auto;">' : '📦') +
+                            '</span>' +
+                            '<div>' +
+                                '<div class="sld-modal-header-title">Importing Demo Data</div>' +
+                                '<div class="sld-modal-header-subtitle">Please keep this window open</div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="sld-modal-body">' +
+                            '<div class="sld-modal-step-row">' +
+                                '<span id="sld-import-step-label">Scanning CSV…</span>' +
+                                '<span id="sld-import-counter">0 / 0</span>' +
+                            '</div>' +
+                            '<div class="sld-modal-progress-track">' +
+                                '<div id="sld-import-bar" style="width: 0%; transition: width 0.4s ease;"></div>' +
+                            '</div>' +
+                            '<ul id="sld-import-log"></ul>' +
+                            '<div id="sld-import-done" style="display:none;">' +
+                                '<div class="sld-done-card">' +
+                                    '<div class="sld-done-emoji">🎉</div>' +
+                                    '<div id="sld-done-title">All lists imported!</div>' +
+                                    '<div class="sld-done-hint">Reloading page in a moment…</div>' +
+                                '</div>' +
+                                '<div class="sld-done-actions">' +
+                                    '<a id="sld-view-demo-btn" href="#" target="_blank">🌐 View Demo Page</a>' +
+                                    '<button id="sld-reload-now-btn">↺ Reload Now</button>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>'
+            );
+        }
 
-			},
-			success: function (response) {
-				if (response.success) {
-					messageArea.html('<p style="color: green;">' + response.data.message + '</p>');
-					// Redirect to the newly created page
-					//window.location.replace(response.data.redirect_url);
-					window.open(response.data.redirect_url)
-				} else {
-					messageArea.html('<p style="color: red;">Error: ' + response.data + '</p>');
-					uploadBtn.prop('disabled', false).text('Click to Import Data');
-				}
+        // ── Open modal ─────────────────────────────────────────────────
+        $('#sld-import-modal').addClass('is-open');
+        // Reset state
+        $('#sld-import-step-label').text('Scanning CSV…').removeClass('is-done').removeClass('is-error');
+        $('#sld-import-counter').text('0 / 0');
+        $('#sld-import-bar').css('width', '0%');
+        $('#sld-import-log').empty();
+        $('#sld-import-done').hide();
 
-			},
-			error: function (xhr, status, errorThrown) {
-				uploadBtn.prop('disabled', false).text('Click to Import Data');
-				messageArea.html('<p style="color: red;"><strong>Something went wrong:</strong> ' + errorThrown + '</p>');
-				window.location.reload();
-			}
-		});
+        function addLog( msg, type ) {
+            var icon  = type === 'skip' ? '⏭' : type === 'error' ? '✗' : '✓';
+            var cls   = type === 'skip' ? 'is-skip' : type === 'error' ? 'is-error' : 'is-ok';
+            var $log  = $('#sld-import-log');
+            $log.append(
+                '<li class="' + cls + '">' +
+                    '<span class="sld-log-icon">' + icon + '</span>' +
+                    '<span>' + msg + '</span>' +
+                '</li>'
+            );
+            $log.scrollTop( $log[0].scrollHeight );
+        }
 
+        function setProgress( done, total ) {
+            var pct = total > 0 ? Math.round( (done / total) * 100 ) : 0;
+            $('#sld-import-bar').css('width', pct + '%');
+            $('#sld-import-counter').text( done + ' / ' + total );
+        }
 
+        // ── Step 1: Fetch list manifest ────────────────────────────────
+        $.ajax({
+            url: ajaxurl,
+            type: 'POST',
+            data: { action: 'qcld_sld_import_get_lists', security: security },
+            dataType: 'json',
+            success: function(res) {
+                if ( ! res.success ) {
+                    addLog('Error: ' + res.data, 'error');
+                    $btn.prop('disabled', false);
+                    $btn.find('.sld-btn-text').text('Click to Import Data');
+                    return;
+                }
+
+                var lists       = res.data.lists;
+                var redirectUrl = res.data.redirect_url;
+                var total       = lists.length;
+                var doneCount   = 0;
+
+                if ( total === 0 ) {
+                    addLog('No lists found in CSV.', 'error');
+                    $btn.prop('disabled', false);
+                    return;
+                }
+
+                setProgress(0, total);
+                $('#sld-import-step-label').text('Found ' + total + ' lists — starting import…');
+
+                if (redirectUrl) {
+                    $('#sld-view-demo-btn').attr('href', redirectUrl);
+                }
+
+                // ── Step 2: Sequential list import ─────────────────────
+                function importNext(index) {
+                    if (index >= total) {
+                        setProgress(total, total);
+                        $('#sld-import-step-label').text('✓ Import complete!').addClass('is-done');
+                        $('#sld-done-title').text('All ' + total + ' lists imported successfully!');
+                        $('#sld-import-done').fadeIn(300);
+                        $btn.prop('disabled', false);
+                        $btn.find('.sld-btn-text').text('Import Complete');
+                        return;
+                    }
+
+                    var list = lists[index];
+                    $('#sld-import-step-label').text(
+                        'Importing (' + (index + 1) + '/' + total + '): ' + list.title
+                    );
+
+                    $.ajax({
+                        url: ajaxurl,
+                        type: 'POST',
+                        data: {
+                            action:   'qcld_sld_import_single_list',
+                            security: security,
+                            list_id:  list.id,
+                        },
+                        dataType: 'json',
+                        success: function(r) {
+                            doneCount++;
+                            setProgress(doneCount, total);
+                            if (r.success) {
+                                addLog(r.data.message, r.data.skipped ? 'skip' : 'ok');
+                            } else {
+                                addLog('Error on "' + list.title + '": ' + r.data, 'error');
+                            }
+                            importNext(index + 1);
+                        },
+                        error: function() {
+                            doneCount++;
+                            setProgress(doneCount, total);
+                            addLog('Network error on "' + list.title + '"', 'error');
+                            importNext(index + 1);
+                        }
+                    });
+                }
+
+                importNext(0);
+            },
+            error: function() {
+                addLog('Network error — could not connect to server.', 'error');
+                $btn.prop('disabled', false);
+                $btn.find('.sld-btn-text').text('Click to Import Data');
+            }
+        });
 	});
+
+    // Reload Now button
+    $(document).on('click', '#sld-reload-now-btn', function() {
+        window.location.reload();
+    });
 
 
 

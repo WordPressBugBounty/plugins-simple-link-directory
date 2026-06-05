@@ -20,10 +20,10 @@ if ( ! function_exists( 'qcopd_load_all_scripts' ) ) {
 		wp_enqueue_script( 'jquery', 'jquery');
 	   // wp_enqueue_script( 'qcopd-grid-packery', QCOPD_ASSETS_URL . '/js/packery.pkgd.js', array('jquery'),true,true);
 		wp_register_script( 'qcopd-images-loaded', QCOPD_ASSETS_URL . '/js/imagesloaded.js', array('jquery'));
-		wp_register_script( 'qcopd-custom-script', QCOPD_ASSETS_URL . '/js/directory-script.js', array('jquery', 'qcopd-images-loaded'));
+		wp_register_script( 'qcopd-custom-script', QCOPD_ASSETS_URL . '/js/directory-script.js', array('jquery', 'qcopd-images-loaded'), filemtime( QCOPD_DIR . '/assets/js/directory-script.js' ), true );
 		wp_register_style( 'qcsld-fa-css', QCOPD_ASSETS_URL . '/css/font-awesome.min.css' );
 		//StyleSheets
-		wp_register_style( 'qcopd-custom-css', QCOPD_ASSETS_URL . '/css/directory-style.css');
+		wp_register_style( 'qcopd-custom-css', QCOPD_ASSETS_URL . '/css/directory-style.css', [], filemtime( QCOPD_DIR . '/assets/css/directory-style.css' ) );
 		wp_register_style( 'qcopd-custom-rwd-css', QCOPD_ASSETS_URL . '/css/directory-style-rwd.css');
 		//default template css
 		wp_register_style( 'sld-css-simple', OCOPD_TPL_URL . "/simple/template.css");
@@ -65,19 +65,20 @@ if ( ! function_exists( 'qcsld_admin_enqueue' ) ) {
 
 		wp_enqueue_media();
 		
-		wp_register_style( 'qcopd-custom-admin-css', QCOPD_ASSETS_URL . '/css/admin-style.css');
+		wp_register_style( 'qcopd-custom-admin-css', QCOPD_ASSETS_URL . '/css/admin-style.css', [], filemtime( QCOPD_DIR . '/assets/css/admin-style.css' ) );
 		wp_enqueue_style( 'qcopd-custom-admin-css' );
 		wp_register_style( 'jq-slick.css-css', QCOPD_ASSETS_URL . '/css/slick.css');
 		wp_enqueue_style( 'jq-slick.css-css' );
 		wp_register_style( 'jq-slick-theme-css', QCOPD_ASSETS_URL . '/css/slick-theme.css', array(), '1.0.1');
 		wp_enqueue_style( 'jq-slick-theme-css' );
 		wp_enqueue_script( 'jq-slick.min-js', QCOPD_ASSETS_URL . '/js/slick.min.js', array('jquery'));
-		wp_register_script( 'sld-admin-common-script', QCOPD_ASSETS_URL . '/js/qcopd-admin-common.js', array('jquery'));
+		wp_register_script( 'sld-admin-common-script', QCOPD_ASSETS_URL . '/js/qcopd-admin-common.js', array('jquery'), filemtime( QCOPD_DIR . '/assets/js/qcopd-admin-common.js' ), true );
 		wp_enqueue_script( 'sld-admin-common-script' );
 
 		$params 					= array(
 		  'ajaxurl' 				=> admin_url('admin-ajax.php'),
-		  'ajax_nonce' 				=> wp_create_nonce('quantum_ajax_validation_18')
+		  'ajax_nonce' 				=> wp_create_nonce('quantum_ajax_validation_18'),
+		  'image_url'				=> QCOPD_IMG_URL
 		);
 		wp_localize_script( 'sld-admin-common-script', 'sld_ajax_object', $params );
 		
