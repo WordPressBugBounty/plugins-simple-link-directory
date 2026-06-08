@@ -4,7 +4,7 @@ Donate link: https://www.quantumcloud.com/products/simple-link-directory/
 Tags: directory, directory listing, link directory, link management, web directory
 Requires at least: 4.6
 Tested up to: 7.0
-Stable tag: 9.0.3
+Stable tag: 9.0.4
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.quantumcloud.com/products/simple-link-directory/
@@ -18,7 +18,7 @@ Free WordPress Link Directory Plugin for your External Link Directory Listings! 
 
 > 🚀 <strong>Upgrade to [Simple Link Directory](https://www.quantumcloud.com/products/simple-link-directory/) PRO now!</strong>
 > 🚀 [Support, Bug Report, Feature Requests](https://www.quantumcloud.com/resources/free-support/) | [Link Directory Demo](https://dev.quantumcloud.com/sld/)
-> 🚀 Generate Lists with links using AI - Gemini, OpenAI, Openrouter. Auto Generate Links, Titles, Sub titles, Images, and Long Description with AI
+> 🚀 Generate Lists with links using AI - <strong>Gemini, OpenAI, Openrouter</strong>. Auto Generate Links, Titles, Sub titles, Images, and Long Description with AI
 
 <strong>Simple Link Directory includes Shortcode Generator Link Directory Block for Gutenberg.</strong>
 
@@ -353,16 +353,33 @@ You can change the language texts from the Settings area. Currently, multi langu
 
 == Screenshots ==
 
-1. Gutenberg Compatible ShortCode Generator
-2. BackEnd Manage Your List of Links
-3. BackEnd View All Your Lists
-4. BackEnd Settings
-5. Front end design template 2
-6. Front end default design template
-7. BackEnd Create New List of Links
+1. Link Directory Plugin for WordPress Front End
+2. Link Directory for WordPress Front End
+3. Link Directory for WordPress Front End
+4. Link Directory for WordPress Front End
+5. Link Directory for WordPress Front End
+6. Link Directory for WordPress Front End
+7. Link Directory for WordPress Front End
+8. Link Directory Plugin for WordPress Back End
+9. Link Directory Plugin for WordPress Back End
+10. Link Directory Plugin for WordPress Back End
+11. Link Directory Plugin for WordPress Back End
+12. Link Directory Plugin for WordPress Back End
+13. Link Directory Plugin for WordPress Back End
+14. Link Directory Plugin for WordPress Back End
+15. Link Directory Plugin for WordPress Back End
+16. Link Directory Plugin for WordPress Back End
+17. Link Directory Plugin for WordPress Back End
+18. Link Directory Plugin for WordPress Back End
+19. Link Directory Plugin for WordPress Back End
+20. Link Directory Plugin for WordPress Back End
+21. Link Directory Plugin for WordPress Back End
 
 
 == Changelog ==
+
+= 9.0.4 =
+# Fixed a CSS conflict
 
 = 9.0.3 =
 # Demo Import Wizard

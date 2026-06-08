@@ -24,7 +24,7 @@ wp_enqueue_style('qcld-sld-bootcampqc-css');
         <div class="sld-col-md-9 sld-main-column">
             <div class="wp-chatbot-wrap  ">
                 <div class="wpbot_dashboard_header">
-                    <h3 style="color: #fff !important;"><?php echo esc_html__('Simple Link Directory', 'qc-opd'); ?>
+                    <h3 style="color: #333 !important;"><?php echo esc_html__('Simple Link Directory', 'qc-opd'); ?>
                     </h3>
                 </div>
 

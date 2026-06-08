@@ -1349,7 +1349,6 @@ i.qc_sld_btn {
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 16px;
 }
-.wpbot_single_content{}
 .wpbot_addon_image{    float: left;
   margin-right: 10px;}
 .wpbot_addon_image img{width: 60px;}
@@ -1363,7 +1362,7 @@ i.qc_sld_btn {
     color: #ffffff !important;
     border: none;
     border-radius: 6px;
-    padding: 5px 15px;
+    padding: 0 15px;
     font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
@@ -1395,8 +1394,8 @@ i.qc_sld_btn {
   .wpbot_dashboard_header{
     margin-right: unset !important;
     margin-left: unset !important;
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    color: #ffffff;
+    background: linear-gradient(135deg, #fdf0f7 0%, #fdf0f7 100%);
+    color: #000;
     text-align: center;
     border-radius: 16px 16px 0px 0px;
     padding: 40px 0;
@@ -1411,7 +1410,7 @@ i.qc_sld_btn {
       color: #ffffff !important;
   }
   .wpbot_single_addon_wrapper{
-      background: linear-gradient(135deg, #f6f8fd 0%, #f1f5f9 100%);
+      background: linear-gradient(135deg, #fff 0%, #fff 100%);
       padding: 30px;
       border-radius: 12px;
       margin-bottom: 20px;
