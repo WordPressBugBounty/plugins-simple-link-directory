@@ -5,9 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if( ! class_exists( 'SLD_Usage_Feedback') ) {
+if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 	
-	class SLD_Usage_Feedback {
+	class QCOPD_SLD_Usage_Feedback {
 		
 		private $wpbot_version = '1.0.0';
 		private $home_url = '';
@@ -127,7 +127,7 @@ if( ! class_exists( 'SLD_Usage_Feedback') ) {
 			if( empty( $plugin ) ) {
 				// We can't find the plugin data
 				// Send a message back to our home site
-				$body['message'] .= __( 'We can\'t detect any plugin information. This is most probably because you have not included the code in the plugin main file.', 'qc-opd' );
+				$body['message'] .= esc_html( 'We can\'t detect any plugin information. This is most probably because you have not included the code in the plugin main file.', 'simple-link-directory' );
 				$body['status'] = 'Data not found'; // Never translated
 			} else {
 				if( isset( $plugin['Name'] ) ) {
@@ -166,7 +166,7 @@ if( ! class_exists( 'SLD_Usage_Feedback') ) {
 
 			$body = $this->get_data();
 			$body['status'] = 'Deactivated'; // Never translated
-			$body['deactivated_date'] = date('Y-m-d');
+			$body['deactivated_date'] = gmdate('Y-m-d');
 			$body['website_url'] = home_url();
 			
 			// Add deactivation form data
@@ -207,17 +207,17 @@ if( ! class_exists( 'SLD_Usage_Feedback') ) {
 		 */
 		public function form_default_text() {
 			$form = array();
-			$form['heading'] = __( 'Sorry to see you go', 'qc-opd' );
-			$form['body'] = __( '', 'qc-opd' );
+			$form['heading'] = esc_html( 'Sorry to see you go', 'simple-link-directory' );
+			$form['body'] = esc_html( '', 'simple-link-directory' );
 			$form['options'] = array(
-				__( 'Found a Bug', 'qc-opd' ),
-				__( 'Need More Features', 'qc-opd' ),
-				__( 'Deactivating Temporarily', 'qc-opd' ),
-				__( 'Upgrading to Pro', 'qc-opd' ),
+				esc_html( 'Found a Bug', 'simple-link-directory' ),
+				esc_html( 'Need More Features', 'simple-link-directory' ),
+				esc_html( 'Deactivating Temporarily', 'simple-link-directory' ),
+				esc_html( 'Upgrading to Pro', 'simple-link-directory' ),
 
 			);
-			$form['email'] = __( 'Please provide email so we can contact with bug fixes', 'qc-opd' );
-			$form['details'] = __( 'Please provide some details so we can improve the plugin', 'qc-opd' );
+			$form['email'] = esc_html( 'Please provide email so we can contact with bug fixes', 'simple-link-directory' );
+			$form['details'] = esc_html( 'Please provide some details so we can improve the plugin', 'simple-link-directory' );
 			return $form;
 		}
 		
@@ -261,7 +261,7 @@ if( ! class_exists( 'SLD_Usage_Feedback') ) {
 				$html .= '</div><!-- .wpb-goodbye-options -->';
 			}
 			$html .= '</div><!-- .wpb-goodbye-form-body -->';
-			$html .= '<p class="deactivating-spinner"><span class="spinner"></span> ' . __( 'Submitting form', 'wpbot-plugin' ) . '</p>';
+			$html .= '<p class="deactivating-spinner"><span class="spinner"></span> ' . esc_html( 'Submitting form', 'simple-link-directory' ) . '</p>';
 			?>
 			<div class="wpb-goodbye-form-bg"></div>
 			<style type="text/css">
@@ -342,7 +342,7 @@ if( ! class_exists( 'SLD_Usage_Feedback') ) {
 						var url = document.getElementById("wpb-goodbye-link-<?php echo esc_attr( $this->plugin_name ); ?>");
 						$('body').toggleClass('wpb-form-active');
 						$("#wpb-goodbye-form-<?php echo esc_attr( $this->plugin_name ); ?>").fadeIn();
-						$("#wpb-goodbye-form-<?php echo esc_attr( $this->plugin_name ); ?>").html( '<?php echo $html; ?>' + '<div class="wpb-goodbye-form-footer"><p><a class="wpbot_just_deactivate" href="'+url+'">Just Deactivate</a> <a id="wpb-submit-form" class="button primary wpbot_submit_deactivate" href="#">Submit and Deactivate</a></p></div>');
+						$("#wpb-goodbye-form-<?php echo esc_attr( $this->plugin_name ); ?>").html( '<?php echo wp_json_encode($html); ?>' + '<div class="wpb-goodbye-form-footer"><p><a class="wpbot_just_deactivate" href="'+url+'">Just Deactivate</a> <a id="wpb-submit-form" class="button primary wpbot_submit_deactivate" href="#">Submit and Deactivate</a></p></div>');
 						$('#wpb-goodbye-reasons').focus();
 						$('#wpb-submit-form').on('click', function(e){
 							
@@ -372,7 +372,7 @@ if( ! class_exists( 'SLD_Usage_Feedback') ) {
 								'values': values,
 								'details': details,
 								'email': email,
-								'security': "<?php echo wp_create_nonce ( 'wpbot_goodbye_form' ); ?>",
+								'security': "<?php echo wp_create_nonce( 'wpbot_goodbye_form' ); ?>",
 								'dataType': "json"
 							}
 							
@@ -403,7 +403,7 @@ if( ! class_exists( 'SLD_Usage_Feedback') ) {
 			check_ajax_referer( 'wpbot_goodbye_form', 'security' );
 	
 			if( isset( $_POST['details'] ) ) {
-				$details = sanitize_text_field( $_POST['details'] );
+				$details = sanitize_text_field( wp_unslash( $_POST['details'] ) );
 				update_option( 'wpbot_deactivation_details_' . $this->plugin_name, $details );
 			}
 

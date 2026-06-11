@@ -10,30 +10,30 @@ if (!function_exists('qcopd_ajax_ajaxurl')) {
   {
 
     $sld_enable_rtl = (get_option('sld_enable_rtl') == 'on') ? 'on' : '';
-    $sld_no_results_found = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html__('No Results Found for Your Search', 'qc-opd');
+    $sld_no_results_found = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html('No Results Found for Your Search', 'simple-link-directory');
 
     echo '<script type="text/javascript">
                 var ajaxurl = "' . admin_url('admin-ajax.php') . '";
                 var qc_sld_get_ajax_nonce = "' . wp_create_nonce('qc-opd') . '";
-                var sld_ajax_object_rtl = "' . $sld_enable_rtl . '";
-                var sld_no_results_found = "' . $sld_no_results_found . '";
+                var sld_ajax_object_rtl = "' . esc_attr($sld_enable_rtl) . '";
+                var sld_no_results_found = "' . esc_attr($sld_no_results_found) . '";
              </script>';
   }
 }
 
 //Doing ajax action stuff
-if (!function_exists('upvote_ajax_action_stuff')) {
-  function upvote_ajax_action_stuff()
+if (!function_exists('qcopd_upvote_ajax_action_stuff')) {
+  function qcopd_upvote_ajax_action_stuff()
   {
 
     check_ajax_referer('qc-opd', 'security');
 
     //Get posted items
-    $action = isset($_POST['action']) ? sanitize_text_field($_POST['action']) : '';
-    $post_id = isset($_POST['post_id']) ? absint(sanitize_text_field($_POST['post_id'])) : '';
-    $meta_title = isset($_POST['meta_title']) ? sanitize_text_field($_POST['meta_title']) : '';
-    $meta_link = isset($_POST['meta_link']) ? esc_url_raw($_POST['meta_link']) : '';
-    $li_id = isset($_POST['li_id']) ? sanitize_text_field($_POST['li_id']) : '';
+    $action = isset($_POST['action']) ? sanitize_text_field(wp_unslash($_POST['action'])) : '';
+    $post_id = isset($_POST['post_id']) ? absint(sanitize_text_field(wp_unslash($_POST['post_id']))) : '';
+    $meta_title = isset($_POST['meta_title']) ? sanitize_text_field(wp_unslash($_POST['meta_title'])) : '';
+    $meta_link = isset($_POST['meta_link']) ? esc_url_raw(wp_unslash($_POST['meta_link'])) : '';
+    $li_id = isset($_POST['li_id']) ? sanitize_text_field(wp_unslash($_POST['li_id'])) : '';
 
     //Check wpdb directly, for all matching meta items
     global $wpdb;
@@ -47,7 +47,7 @@ if (!function_exists('upvote_ajax_action_stuff')) {
     $data['votes'] = 0;
     $data['vote_status'] = 'failed';
 
-    $voted_id = isset($_COOKIE['voted_li']) ? $_COOKIE['voted_li'] : array();
+    $voted_id = isset($_COOKIE['voted_li']) ? sanitize_text_field(wp_unslash($_COOKIE['voted_li'])) : array();
 
     $exists = in_array($li_id, $voted_id);
 
@@ -139,18 +139,18 @@ if (!function_exists('upvote_ajax_action_stuff')) {
 }
 
 //Implementing the ajax action for frontend users
-add_action('wp_ajax_qcopd_upvote_action', 'upvote_ajax_action_stuff'); // ajax for logged in users
-add_action('wp_ajax_nopriv_qcopd_upvote_action', 'upvote_ajax_action_stuff'); // ajax for not logged in users
+add_action('wp_ajax_qcopd_upvote_action', 'qcopd_upvote_ajax_action_stuff'); // ajax for logged in users
+add_action('wp_ajax_nopriv_qcopd_upvote_action', 'qcopd_upvote_ajax_action_stuff'); // ajax for not logged in users
 
 
 
-if (!function_exists('qcld_sld_help_render_sidebar')) {
-  function qcld_sld_help_render_sidebar()
+if (!function_exists('qcopd_help_render_sidebar')) {
+  function qcopd_help_render_sidebar()
   {
     ?>
     <div class="sld-col-md-3 sld-sidebar-column">
       <div class="sld-sidebar-card sld-feature-list-card">
-        <h3><?php esc_html_e('Simple Link Directory Pro Features', 'qc-opd'); ?></h3>
+        <h3><?php esc_html_e('Simple Link Directory Pro Features', 'simple-link-directory'); ?></h3>
 
 
 
@@ -165,25 +165,25 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
           <div class="sld-feature-accordion-item active">
             <div class="sld-feature-accordion-header">
               <span><span
-                  class="dashicons dashicons-admin-customizer sld-color-blue"></span><?php esc_html_e('Enhanced Usability', 'qc-opd'); ?></span>
+                  class="dashicons dashicons-admin-customizer sld-color-blue"></span><?php esc_html_e('Enhanced Usability', 'simple-link-directory'); ?></span>
               <span class="dashicons dashicons-arrow-down-alt2"></span>
             </div>
             <div class="sld-feature-accordion-content">
               <ul>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Build unlimited Lists and show them in multi-page mode', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Build unlimited Lists and show them in multi-page mode', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Auto Generate Title, Description & Thumbnail from URL', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Auto Generate Title, Description & Thumbnail from URL', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Video Gallery – Vimeo and Youtube Video Directory', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Video Gallery – Vimeo and Youtube Video Directory', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Live, on page, instant search & filtering of lists', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Live, on page, instant search & filtering of lists', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Tabbed Category Listing of All Your Directory Lists', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Tabbed Category Listing of All Your Directory Lists', 'simple-link-directory'); ?>
                 </li>
               </ul>
             </div>
@@ -193,25 +193,25 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
           <div class="sld-feature-accordion-item">
             <div class="sld-feature-accordion-header">
               <span><span
-                  class="dashicons dashicons-groups sld-color-orange"></span><?php esc_html_e('Community Features', 'qc-opd'); ?></span>
+                  class="dashicons dashicons-groups sld-color-orange"></span><?php esc_html_e('Community Features', 'simple-link-directory'); ?></span>
               <span class="dashicons dashicons-arrow-down-alt2"></span>
             </div>
             <div class="sld-feature-accordion-content">
               <ul>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Complete front end user registration, login and submission', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Complete front end user registration, login and submission', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Allow users to submit links to your directory', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Allow users to submit links to your directory', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Invite user interaction with Upvotes (Thumbs up, Heart, etc)', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Invite user interaction with Upvotes (Thumbs up, Heart, etc)', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Allow users to embed your lists on their websites', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Allow users to embed your lists on their websites', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Allow registered users to create Favorite Lists', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Allow registered users to create Favorite Lists', 'simple-link-directory'); ?>
                 </li>
               </ul>
             </div>
@@ -221,25 +221,25 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
           <div class="sld-feature-accordion-item">
             <div class="sld-feature-accordion-header">
               <span><span
-                  class="dashicons dashicons-money-alt sld-color-green"></span><?php esc_html_e('Monetization Options', 'qc-opd'); ?></span>
+                  class="dashicons dashicons-money-alt sld-color-green"></span><?php esc_html_e('Monetization Options', 'simple-link-directory'); ?></span>
               <span class="dashicons dashicons-arrow-down-alt2"></span>
             </div>
             <div class="sld-feature-accordion-content">
               <ul>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Integrated PayPal & Stripe payment for link submission', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Integrated PayPal & Stripe payment for link submission', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Create recurring subscription packages for listings', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Create recurring subscription packages for listings', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Claim Listing for Payment feature', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Claim Listing for Payment feature', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Option to Mark Paid Items as Featured at Top', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Option to Mark Paid Items as Featured at Top', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('URL masking option for affiliate links', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('URL masking option for affiliate links', 'simple-link-directory'); ?>
                 </li>
               </ul>
             </div>
@@ -249,25 +249,25 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
           <div class="sld-feature-accordion-item">
             <div class="sld-feature-accordion-header">
               <span><span
-                  class="dashicons dashicons-art sld-color-red"></span><?php esc_html_e('Design & Layouts', 'qc-opd'); ?></span>
+                  class="dashicons dashicons-art sld-color-red"></span><?php esc_html_e('Design & Layouts', 'simple-link-directory'); ?></span>
               <span class="dashicons dashicons-arrow-down-alt2"></span>
             </div>
             <div class="sld-feature-accordion-content">
               <ul>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('16 Premium templates for Single Page mode', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('16 Premium templates for Single Page mode', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('2 Premium templates for Multi Page mode', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('2 Premium templates for Multi Page mode', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Create or customize templates from your theme folder', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Create or customize templates from your theme folder', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Use theme fonts or choose Google fonts', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Use theme fonts or choose Google fonts', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Configurable highlight color for each list', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Configurable highlight color for each list', 'simple-link-directory'); ?>
                 </li>
               </ul>
             </div>
@@ -277,25 +277,25 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
           <div class="sld-feature-accordion-item">
             <div class="sld-feature-accordion-header">
               <span><span
-                  class="dashicons dashicons-admin-tools sld-color-blue"></span><?php esc_html_e('Admin Tools & Statistics', 'qc-opd'); ?></span>
+                  class="dashicons dashicons-admin-tools sld-color-blue"></span><?php esc_html_e('Admin Tools & Statistics', 'simple-link-directory'); ?></span>
               <span class="dashicons dashicons-arrow-down-alt2"></span>
             </div>
             <div class="sld-feature-accordion-content">
               <ul>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Click statistics for admin dashboard', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Click statistics for admin dashboard', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('CSV Import/Export to manage lists easily', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('CSV Import/Export to manage lists easily', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Order Listing Directory by Link Clicks or Upvotes', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Order Listing Directory by Link Clicks or Upvotes', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Restrict UpVote by IP or Logged in Users only', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Restrict UpVote by IP or Logged in Users only', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Copy List Items or Links to Other Lists', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Copy List Items or Links to Other Lists', 'simple-link-directory'); ?>
                 </li>
               </ul>
             </div>
@@ -305,25 +305,25 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
           <div class="sld-feature-accordion-item">
             <div class="sld-feature-accordion-header">
               <span><span
-                  class="dashicons dashicons-welcome-write-blog sld-color-blue"></span><?php esc_html_e('Front End Submission Features', 'qc-opd'); ?></span>
+                  class="dashicons dashicons-welcome-write-blog sld-color-blue"></span><?php esc_html_e('Front End Submission Features', 'simple-link-directory'); ?></span>
               <span class="dashicons dashicons-arrow-down-alt2"></span>
             </div>
             <div class="sld-feature-accordion-content">
               <ul>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Front End User Registration with Captcha, Log in, Link Submission', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Front End User Registration with Captcha, Log in, Link Submission', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Admin Approves User Submitted Links or Set to Auto Approve', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Admin Approves User Submitted Links or Set to Auto Approve', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Enable Free Frontend Submission & Free Submission Limit', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Enable Free Frontend Submission & Free Submission Limit', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Enable Email Notification for New Item Submission', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Enable Email Notification for New Item Submission', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Allow User to Update Profile & Upload Image', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Allow User to Update Profile & Upload Image', 'simple-link-directory'); ?>
                 </li>
               </ul>
             </div>
@@ -333,25 +333,25 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
           <div class="sld-feature-accordion-item">
             <div class="sld-feature-accordion-header">
               <span><span
-                  class="dashicons dashicons-admin-appearance sld-color-orange"></span><?php esc_html_e('Customizability and Flexibility', 'qc-opd'); ?></span>
+                  class="dashicons dashicons-admin-appearance sld-color-orange"></span><?php esc_html_e('Customizability and Flexibility', 'simple-link-directory'); ?></span>
               <span class="dashicons dashicons-arrow-down-alt2"></span>
             </div>
             <div class="sld-feature-accordion-content">
               <ul>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Choose theme font or google font', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Choose theme font or google font', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Customize colors, fonts and almost all aspects of the link lists', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Customize colors, fonts and almost all aspects of the link lists', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Complete control over directory list ordering', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Complete control over directory list ordering', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Custom JS and CSS panel to modify directory functionality', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Custom JS and CSS panel to modify directory functionality', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Over a dozen shortcode parameters & Shortcode Generator', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Over a dozen shortcode parameters & Shortcode Generator', 'simple-link-directory'); ?>
                 </li>
               </ul>
             </div>
@@ -361,23 +361,23 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
           <div class="sld-feature-accordion-item">
             <div class="sld-feature-accordion-header">
               <span><span
-                  class="dashicons dashicons-chart-bar sld-color-green"></span><?php esc_html_e('Topsite List Script Features', 'qc-opd'); ?></span>
+                  class="dashicons dashicons-chart-bar sld-color-green"></span><?php esc_html_e('Topsite List Script Features', 'simple-link-directory'); ?></span>
               <span class="dashicons dashicons-arrow-down-alt2"></span>
             </div>
             <div class="sld-feature-accordion-content">
               <ul>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Order Listing Directory by Link Clicks', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Order Listing Directory by Link Clicks', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Click statistics for admin', 'qc-opd'); ?></li>
-                <li><span class="dashicons dashicons-yes"></span><?php esc_html_e('Restrict upvote by IP', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Click statistics for admin', 'simple-link-directory'); ?></li>
+                <li><span class="dashicons dashicons-yes"></span><?php esc_html_e('Restrict upvote by IP', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Restrict UpVote for Logged in Users only', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Restrict UpVote for Logged in Users only', 'simple-link-directory'); ?>
                 </li>
                 <li><span
-                    class="dashicons dashicons-yes"></span><?php esc_html_e('Enable Upvote for Main Click in General settings', 'qc-opd'); ?>
+                    class="dashicons dashicons-yes"></span><?php esc_html_e('Enable Upvote for Main Click in General settings', 'simple-link-directory'); ?>
                 </li>
               </ul>
             </div>
@@ -387,12 +387,12 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
 
         <div class="sld-pro-upgrade">
           <a href="<?php echo esc_url('https://dev.quantumcloud.com/sld/'); ?>" target="_blank"
-            class="button button-primary"><?php esc_html_e('View Pro Demo', 'qc-opd'); ?></a>
+            class="button button-primary"><?php esc_html_e('View Pro Demo', 'simple-link-directory'); ?></a>
         </div>
 
         <div class="sld-pro-upgrade" style="margin-top:10px;">
           <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank"
-            class="button button-primary"><?php esc_html_e('Upgrade to Pro Now', 'qc-opd'); ?></a>
+            class="button button-primary"><?php esc_html_e('Upgrade to Pro Now', 'simple-link-directory'); ?></a>
         </div>
       </div>
     </div>
@@ -403,16 +403,16 @@ if (!function_exists('qcld_sld_help_render_sidebar')) {
 /**
  * Test OpenAI Connection and Retrieve Available Models
  */
-function sld_test_openai_connection()
+function qcopd_sld_test_openai_connection()
 {
   if (!current_user_can('manage_options')) {
-    wp_send_json_error(array('message' => esc_html__('Unauthorized user.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
 
   $api_key = isset($_POST['api_key']) ? sanitize_text_field(wp_unslash($_POST['api_key'])) : '';
 
   if (empty($api_key)) {
-    wp_send_json_error(array('message' => esc_html__('API Key is empty.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('API Key is empty.', 'simple-link-directory')));
   }
 
   $url = 'https://api.openai.com/v1/models';
@@ -445,29 +445,29 @@ function sld_test_openai_connection()
     $models = array_values($models);
 
     wp_send_json_success(array(
-      'message' => esc_html__('Connection Successful!', 'qc-opd'),
+      'message' => esc_html('Connection Successful!', 'simple-link-directory'),
       'models' => $models,
     ));
   } else {
-    $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html__('Invalid API key or network error.', 'qc-opd');
+    $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html('Invalid API key or network error.', 'simple-link-directory');
     wp_send_json_error(array('message' => $error_message));
   }
 }
-add_action('wp_ajax_sld_test_openai_connection', 'sld_test_openai_connection');
+add_action('wp_ajax_qcopd_sld_test_openai_connection', 'qcopd_sld_test_openai_connection');
 
 /**
  * Test Google Gemini Connection and Retrieve Available Models
  */
-function sld_test_gemini_connection()
+function qcopd_sld_test_gemini_connection()
 {
   if (!current_user_can('manage_options')) {
-    wp_send_json_error(array('message' => esc_html__('Unauthorized user.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
 
   $api_key = isset($_POST['api_key']) ? sanitize_text_field(wp_unslash($_POST['api_key'])) : '';
 
   if (empty($api_key)) {
-    wp_send_json_error(array('message' => esc_html__('API Key is empty.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('API Key is empty.', 'simple-link-directory')));
   }
 
   $url = 'https://generativelanguage.googleapis.com/v1beta/models?key=' . $api_key;
@@ -494,29 +494,29 @@ function sld_test_gemini_connection()
     $models = array_values($models);
 
     wp_send_json_success(array(
-      'message' => esc_html__('Connection Successful!', 'qc-opd'),
+      'message' => esc_html('Connection Successful!', 'simple-link-directory'),
       'models' => $models,
     ));
   } else {
-    $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html__('Invalid API key or network error.', 'qc-opd');
+    $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html('Invalid API key or network error.', 'simple-link-directory');
     wp_send_json_error(array('message' => $error_message));
   }
 }
-add_action('wp_ajax_sld_test_gemini_connection', 'sld_test_gemini_connection');
+add_action('wp_ajax_qcopd_sld_test_gemini_connection', 'qcopd_sld_test_gemini_connection');
 
 /**
  * Test OpenRouter Connection and Retrieve Available Models
  */
-function sld_test_openrouter_connection()
+function qcopd_sld_test_openrouter_connection()
 {
   if (!current_user_can('manage_options')) {
-    wp_send_json_error(array('message' => esc_html__('Unauthorized user.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
 
   $api_key = isset($_POST['api_key']) ? sanitize_text_field(wp_unslash($_POST['api_key'])) : '';
 
   if (empty($api_key)) {
-    wp_send_json_error(array('message' => esc_html__('API Key is empty.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('API Key is empty.', 'simple-link-directory')));
   }
 
   // Step 1: Verify the API Key using the auth key endpoint
@@ -536,7 +536,7 @@ function sld_test_openrouter_connection()
   if ($auth_code !== 200) {
     $auth_body = wp_remote_retrieve_body($auth_response);
     $auth_data = json_decode($auth_body, true);
-    $error_msg = isset($auth_data['error']['message']) ? $auth_data['error']['message'] : esc_html__('Invalid API Key.', 'qc-opd');
+    $error_msg = isset($auth_data['error']['message']) ? $auth_data['error']['message'] : esc_html('Invalid API Key.', 'simple-link-directory');
     wp_send_json_error(array('message' => $error_msg));
   }
 
@@ -576,22 +576,22 @@ function sld_test_openrouter_connection()
     set_transient('sld_openrouter_models_list', $transient_models, DAY_IN_SECONDS);
 
     wp_send_json_success(array(
-      'message' => esc_html__('Connection Successful!', 'qc-opd'),
+      'message' => esc_html('Connection Successful!', 'simple-link-directory'),
       'models' => $models,
     ));
   } else {
-    wp_send_json_error(array('message' => esc_html__('Failed to fetch OpenRouter models.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('Failed to fetch OpenRouter models.', 'simple-link-directory')));
   }
 }
-add_action('wp_ajax_sld_test_openrouter_connection', 'sld_test_openrouter_connection');
+add_action('wp_ajax_qcopd_sld_test_openrouter_connection', 'qcopd_sld_test_openrouter_connection');
 
 /**
  * AJAX Handler to Reset AI Prompt Instruction to Default
  */
-function sld_reset_ai_prompt_instruction()
+function qcopd_sld_reset_ai_prompt_instruction()
 {
   if (!current_user_can('manage_options')) {
-    wp_send_json_error(array('message' => esc_html__('Unauthorized user.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
 
   $default_prompt = "Generate a JSON list of exactly {count} items about '{prompt}'.\nThe output MUST be a valid JSON array of objects. Do not include any markdown format, backticks, or explanation.\nEach object must contain:\n1. 'title': The name of the website or resource.\n2. 'link': A valid URL of the resource starting with http:// or https://.\n3. 'subtitle': A brief description or subtitle (max 10-15 words).\n\nJSON Schema example:\n[\n  {\n    \"title\": \"Example Site\",\n    \"link\": \"https://example.com\",\n    \"subtitle\": \"This is a short description.\"\n  }\n]";
@@ -599,32 +599,32 @@ function sld_reset_ai_prompt_instruction()
   update_option('sld_ai_prompt_instruction', $default_prompt);
 
   wp_send_json_success(array(
-    'message' => esc_html__('Prompt reset to default successfully!', 'qc-opd'),
+    'message' => esc_html('Prompt reset to default successfully!', 'simple-link-directory'),
     'default_prompt' => $default_prompt,
   ));
 }
-add_action('wp_ajax_sld_reset_ai_prompt_instruction', 'sld_reset_ai_prompt_instruction');
+add_action('wp_ajax_qcopd_sld_reset_ai_prompt_instruction', 'qcopd_sld_reset_ai_prompt_instruction');
 
 /**
  * AJAX Handler for generating list items using OpenAI or Gemini
  */
-function sld_ai_generate_list_items()
+function qcopd_sld_ai_generate_list_items()
 {
   if (!current_user_can('edit_posts')) {
-    wp_send_json_error(array('message' => esc_html__('Unauthorized user.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
 
   $prompt = isset($_POST['prompt']) ? sanitize_text_field(wp_unslash($_POST['prompt'])) : '';
   $count = isset($_POST['count']) ? intval($_POST['count']) : 5;
 
   if (empty($prompt)) {
-    wp_send_json_error(array('message' => esc_html__('Prompt is empty.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('Prompt is empty.', 'simple-link-directory')));
   }
 
   $provider = get_option('sld_enable_ai_provider', 'none');
 
   if ($provider === 'none') {
-    wp_send_json_error(array('message' => esc_html__('No AI provider is enabled in settings.', 'qc-opd')));
+    wp_send_json_error(array('message' => esc_html('No AI provider is enabled in settings.', 'simple-link-directory')));
   }
 
   $default_prompt = "Generate a JSON list of exactly {count} items about '{prompt}'.\nThe output MUST be a valid JSON array of objects. Do not include any markdown format, backticks, or explanation.\nEach object must contain:\n1. 'title': The name of the website or resource.\n2. 'link': A valid URL of the resource starting with http:// or https://.\n3. 'subtitle': A brief description or subtitle (max 10-15 words).\n\nJSON Schema example:\n[\n  {\n    \"title\": \"Example Site\",\n    \"link\": \"https://example.com\",\n    \"subtitle\": \"This is a short description.\"\n  }\n]";
@@ -638,7 +638,7 @@ function sld_ai_generate_list_items()
     $model = get_option('sld_openai_model', 'gpt-4o');
 
     if (empty($api_key)) {
-      wp_send_json_error(array('message' => esc_html__('OpenAI API key is missing.', 'qc-opd')));
+      wp_send_json_error(array('message' => esc_html('OpenAI API key is missing.', 'simple-link-directory')));
     }
 
     $url = 'https://api.openai.com/v1/chat/completions';
@@ -682,7 +682,7 @@ function sld_ai_generate_list_items()
     if ($code === 200 && !empty($data['choices'][0]['message']['content'])) {
       $json_content = $data['choices'][0]['message']['content'];
     } else {
-      $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html__('OpenAI API error.', 'qc-opd');
+      $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html('OpenAI API error.', 'simple-link-directory');
       wp_send_json_error(array('message' => $error_message));
     }
 
@@ -691,7 +691,7 @@ function sld_ai_generate_list_items()
     $model = get_option('sld_gemini_model', 'gemini-1.5-flash');
 
     if (empty($api_key)) {
-      wp_send_json_error(array('message' => esc_html__('Gemini API key is missing.', 'qc-opd')));
+      wp_send_json_error(array('message' => esc_html('Gemini API key is missing.', 'simple-link-directory')));
     }
 
     $url = 'https://generativelanguage.googleapis.com/v1beta/models/' . $model . ':generateContent?key=' . $api_key;
@@ -732,7 +732,7 @@ function sld_ai_generate_list_items()
     if ($code === 200 && !empty($data['candidates'][0]['content']['parts'][0]['text'])) {
       $json_content = $data['candidates'][0]['content']['parts'][0]['text'];
     } else {
-      $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html__('Gemini API error.', 'qc-opd');
+      $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html('Gemini API error.', 'simple-link-directory');
       wp_send_json_error(array('message' => $error_message));
     }
   } elseif ($provider === 'openrouter') {
@@ -740,7 +740,7 @@ function sld_ai_generate_list_items()
     $model = get_option('sld_openrouter_model', 'google/gemini-2.5-flash');
 
     if (empty($api_key)) {
-      wp_send_json_error(array('message' => esc_html__('OpenRouter API key is missing.', 'qc-opd')));
+      wp_send_json_error(array('message' => esc_html('OpenRouter API key is missing.', 'simple-link-directory')));
     }
 
     $url = 'https://openrouter.ai/api/v1/chat/completions';
@@ -783,7 +783,7 @@ function sld_ai_generate_list_items()
     if ($code === 200 && !empty($data['choices'][0]['message']['content'])) {
       $json_content = $data['choices'][0]['message']['content'];
     } else {
-      $error_message = isset($data['error']['message']) ? $data['error']['message'] : (isset($data['error']) && is_string($data['error']) ? $data['error'] : esc_html__('OpenRouter API error.', 'qc-opd'));
+      $error_message = isset($data['error']['message']) ? $data['error']['message'] : (isset($data['error']) && is_string($data['error']) ? $data['error'] : esc_html('OpenRouter API error.', 'simple-link-directory'));
       wp_send_json_error(array('message' => $error_message));
     }
   }
@@ -799,13 +799,13 @@ function sld_ai_generate_list_items()
 
   if (empty($items) || !is_array($items)) {
     wp_send_json_error(array(
-      'message' => esc_html__('Failed to parse AI output. Raw content: ', 'qc-opd') . substr($json_content, 0, 100),
+      'message' => esc_html('Failed to parse AI output. Raw content: ', 'simple-link-directory') . substr($json_content, 0, 100),
     ));
   }
 
   wp_send_json_success(array(
-    'message' => sprintf(esc_html__('Generated %d items successfully!', 'qc-opd'), count($items)),
+    'message' => sprintf(esc_html('Generated %d items successfully!', 'simple-link-directory'), count($items)),
     'items' => $items,
   ));
 }
-add_action('wp_ajax_sld_ai_generate_list_items', 'sld_ai_generate_list_items');
+add_action('wp_ajax_qcopd_sld_ai_generate_list_items', 'qcopd_sld_ai_generate_list_items');

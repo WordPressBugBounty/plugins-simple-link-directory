@@ -3,7 +3,7 @@ defined('ABSPATH') or die("No direct script access!");
 
 
 // 5. Handle the AJAX request (PHP side)
-function qcld_sld_handle_csv_import() {
+function qcopd_sld_handle_csv_import() {
     check_ajax_referer( 'quantum_ajax_validation_18', 'security' );
 
     if ( ! current_user_can( 'manage_options' ) ) {
@@ -25,7 +25,7 @@ function qcld_sld_handle_csv_import() {
 
     
     // 6. Create a new page automatically using PHP
-    $page_title 	= esc_html__('SLD Demo Data Imported', 'qc-opd');
+    $page_title 	= esc_html('SLD Demo Data Imported', 'simple-link-directory');
     $page_content 	= '[qcopd-directory mode="all" style="simple" column="3" upvote="on" search="true" item_count="on" orderby="date" filterorderby="date" order="ASC" filterorder="ASC" paginate_items="false" favorite="enable" tooltip="false" list_title_font_size="" item_orderby="" list_title_line_height="" title_font_size="" enable_tag_filter="true"  subtitle_font_size="" title_line_height="" subtitle_line_height="" filter_area="normal" topspacing=""  main_click="popup"]';
     $page_slug 		= 'sld-demo-data';
 
@@ -43,7 +43,7 @@ function qcld_sld_handle_csv_import() {
     }else{
 
 	    wp_send_json_success( array(
-	        'message' 		=> esc_html__('Already CSV data imported and page created.', 'qc-opd'),
+	        'message' 		=> esc_html('Already CSV data imported and page created.', 'simple-link-directory'),
 	        'redirect_url' 	=> get_permalink( get_page_by_path( $page_slug ) ), // URL for redirection
 	    ) );
     }
@@ -89,7 +89,7 @@ function qcld_sld_handle_csv_import() {
 					'qcopd_upvote_count' 		=> isset($data[13]) ? trim($data[13]) : 0,
 					'list_item_bg_color' 		=> isset($data[14]) ? trim($data[14]) : '',
 					'attached_terms' 			=> isset($data[15]) ? trim($data[15]) : '',
-					'qcopd_entry_time' 			=> date("Y-m-d H:i:s"),
+					'qcopd_entry_time' 			=> gmdate("Y-m-d H:i:s"),
 					'qcopd_timelaps' 			=> $laps,
 					'qcopd_description' 		=> isset($data[31]) ? trim($data[31]) : '',
 					'qcopd_tags' 				=> isset($data[32]) ? trim($data[32]) : '',
@@ -325,7 +325,7 @@ function qcld_sld_handle_csv_import() {
 				                    'post_title'        => $image_title,
 				                    'post_status'       => 'inherit'
 				                );
-				                $post_id     = isset($_REQUEST['post_id']) ? absint( sanitize_text_field( $_REQUEST['post_id'])): '';
+				                $post_id     = isset($_REQUEST['post_id']) ? absint( sanitize_text_field( wp_unslash($_REQUEST['post_id']))): '';
 				                $attachment_id   = wp_insert_attachment($attachment, $target_file_name, $post_id);
 
 					       
@@ -430,13 +430,13 @@ function qcld_sld_handle_csv_import() {
         'redirect_url' 	=> get_permalink( get_page_by_path( $page_slug ) ), // URL for redirection
     ) );
 }
-add_action( 'wp_ajax_qcld_sld_import_csv_from_folder', 'qcld_sld_handle_csv_import' );
-add_action('wp_ajax_nopriv_qcld_sld_import_csv_from_folder', 'qcld_sld_handle_csv_import'); // ajax for not logged in users
+add_action( 'wp_ajax_qcld_sld_import_csv_from_folder', 'qcopd_sld_handle_csv_import' );
+add_action('wp_ajax_nopriv_qcld_sld_import_csv_from_folder', 'qcopd_sld_handle_csv_import'); // ajax for not logged in users
 
 /**
  * Step 1 of multi-step import: Parse the CSV and return all list groups (id, title, count).
  */
-function qcld_sld_import_get_lists() {
+function qcopd_sld_import_get_lists() {
     check_ajax_referer( 'quantum_ajax_validation_18', 'security' );
     if ( ! current_user_can( 'manage_options' ) ) {
         wp_send_json_error( 'Unauthorized user.' );
@@ -467,8 +467,14 @@ function qcld_sld_import_get_lists() {
     // Create the demo page now (once), so we have a redirect URL ready.
     $page_slug    = 'sld-demo-data';
     $existing_page = get_page_by_path( $page_slug );
-    if ( ! $existing_page ) {
-        $page_content = '[qcopd-directory mode="all" style="simple" column="3" upvote="on" search="true" item_count="on" orderby="date" filterorderby="date" order="ASC" filterorder="ASC" paginate_items="false" favorite="enable" tooltip="false" list_title_font_size="" item_orderby="" list_title_line_height="" title_font_size="" enable_tag_filter="true"  subtitle_font_size="" title_line_height="" subtitle_line_height="" filter_area="normal" topspacing="" main_click="popup"]';
+    $page_content = '[qcopd-directory mode="all" style="simple" column="3" upvote="on" search="true" item_count="on" orderby="date" filterorderby="date" order="ASC" filterorder="ASC" paginate_items="false" favorite="enable" tooltip="false" list_title_font_size="" item_orderby="" list_title_line_height="" title_font_size="" enable_tag_filter="true"  subtitle_font_size="" title_line_height="" subtitle_line_height="" filter_area="normal" topspacing="" main_click="popup"]';
+    if ( $existing_page ) {
+        // Page exists: Update it with the new content
+        wp_update_post( array(
+            'ID'           => $existing_page->ID,
+            'post_content' => $page_content,
+        ) );
+    }else {
         wp_insert_post( array(
             'post_title'   => 'SLD Demo Data Imported',
             'post_content' => $page_content,
@@ -483,12 +489,12 @@ function qcld_sld_import_get_lists() {
         'redirect_url' => get_permalink( get_page_by_path( $page_slug ) ),
     ) );
 }
-add_action( 'wp_ajax_qcld_sld_import_get_lists', 'qcld_sld_import_get_lists' );
+add_action( 'wp_ajax_qcopd_sld_import_get_lists', 'qcopd_sld_import_get_lists' );
 
 /**
  * Step 2 of multi-step import: Import a single list by its list_id.
  */
-function qcld_sld_import_single_list() {
+function qcopd_sld_import_single_list() {
     check_ajax_referer( 'quantum_ajax_validation_18', 'security' );
     if ( ! current_user_can( 'manage_options' ) ) {
         wp_send_json_error( 'Unauthorized user.' );
@@ -497,7 +503,7 @@ function qcld_sld_import_single_list() {
         wp_send_json_error( 'CSV file not found.' );
     }
 
-    $target_list_id = isset( $_POST['list_id'] ) ? sanitize_text_field( $_POST['list_id'] ) : '';
+    $target_list_id = isset( $_POST['list_id'] ) ? sanitize_text_field( wp_unslash( $_POST['list_id'] ) ) : '';
     if ( $target_list_id === '' ) {
         wp_send_json_error( 'No list_id provided.' );
     }
@@ -561,7 +567,7 @@ function qcld_sld_import_single_list() {
             'qcopd_featured' 			=> isset($data[34]) ? trim($data[34]) : '',
             'qcopd_image_from_link' 	=> isset($data[35]) ? trim($data[35]) : '',
             'qcopd_generate_title' 		=> isset($data[36]) ? trim($data[36]) : '',
-            'qcopd_entry_time'          => date('Y-m-d H:i:s'),
+            'qcopd_entry_time'          => gmdate('Y-m-d H:i:s'),
         );
     }
     fclose( $file );
@@ -701,4 +707,4 @@ function qcld_sld_import_single_list() {
         'skipped'    => false,
     ) );
 }
-add_action( 'wp_ajax_qcld_sld_import_single_list', 'qcld_sld_import_single_list' );
+add_action( 'wp_ajax_qcopd_sld_import_single_list', 'qcopd_sld_import_single_list' );

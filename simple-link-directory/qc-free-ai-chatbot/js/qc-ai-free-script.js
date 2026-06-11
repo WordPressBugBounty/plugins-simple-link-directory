@@ -6,16 +6,16 @@
 		$( window ).on( "load", function() {
 
 			var data = {
-				'action': 'qc_sld_free_ai_function_first_sld_ajax',
-				'security': qc_sld_free_ai_ajax_nonce
+				'action': 'qcopd_sld_free_ai_function_first_sld_ajax',
+				'security': qcopd_sld_free_ai_ajax_nonce
 			};
 
-	        jQuery.post(qc_sld_free_ai_ajaxurl, data, function (response) {
+	        jQuery.post(qcopd_sld_free_ai_ajaxurl, data, function (response) {
 
-	        	$('.qc_sld_free_ai_loading').remove();
+	        	$('.qcopd_sld_free_ai_loading').remove();
 
-	          // 	$('.qc_sld_free_ai-grid').find('.qc_sld_free_ai-card').html(response);
-	           	$('.qc_sld_free_ai-grid').find('.qc_sld_free_ai-card').append(response);
+	          // 	$('.qcopd_sld_free_ai-grid').find('.qcopd_sld_free_ai-card').html(response);
+	           	$('.qcopd_sld_free_ai-grid').find('.qcopd_sld_free_ai-card').append(response);
 
 
 	        });

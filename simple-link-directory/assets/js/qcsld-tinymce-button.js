@@ -1,9 +1,9 @@
 ﻿;(function( $ ) {
-    tinymce.PluginManager.add('qcsld_shortcode_btn', function( editor,url )
+    tinymce.PluginManager.add('qcopd_sld_shortcode_btn', function( editor,url )
     {
         var shortcodeValues = [];
 
-        editor.addButton('qcsld_shortcode_btn', {
+        editor.addButton('qcopd_sld_shortcode_btn', {
 			title : 'Generate SLD Shortcode',
             //text: 'SLD',
             icon: 'icon qc_sld_btn',
@@ -11,7 +11,7 @@
                 $.post(
                     ajaxurl,
                     {
-                        action : 'show_qcsld_shortcodes'
+                        action : 'show_qcopd_sld_shortcodes'
                         
                     },
                     function(data){

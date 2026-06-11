@@ -71,8 +71,8 @@ abstract class CMB_Field {
 				'class'               => '',
 				'data_delegate'       => null,
 				'save_callback'       => null,
-				'string-repeat-field' => __( 'Add New List Items', 'cmb' ),
-				'string-delete-field' => __( 'Remove Field', 'cmb' ),
+				'string-repeat-field' => esc_html( 'Add New List Items', 'simple-link-directory' ),
+				'string-delete-field' => esc_html( 'Remove Field', 'simple-link-directory' ),
 			),
 			get_class( $this )
 		);
@@ -468,14 +468,14 @@ class CMB_File_Field extends CMB_Field {
 			<div class="cmb-file-wrap-placeholder"></div>
 
 			<button class="button cmb-file-upload <?php echo esc_attr( $this->get_value() ) ? 'hidden' : '' ?>">
-				<?php esc_html_e( 'Add File', 'cmb' ); ?>
+				<?php esc_html_e( 'Add File', 'simple-link-directory' ); ?>
 			</button>
 
 			<div class="cmb-file-holder type-file <?php echo $this->get_value() ? '' : 'hidden'; ?>">
 
 				<?php if ( $this->get_value() ) : ?>
 
-					<?php if ( isset( $icon_img ) ) echo $icon_img; ?>
+					<?php if ( isset( $icon_img ) ) echo esc_attr($icon_img); ?>
 
 					<div class="cmb-file-name">
 						<strong><?php echo esc_html( basename( get_attached_file( $this->get_value() ) ) ); ?></strong>
@@ -486,7 +486,7 @@ class CMB_File_Field extends CMB_Field {
 			</div>
 
 			<button class="cmb-remove-file button <?php echo $this->get_value() ? '' : 'hidden'; ?>">
-				<?php esc_html_e( 'Remove', 'cmb' ); ?>
+				<?php esc_html_e( 'Remove', 'simple-link-directory' ); ?>
 			</button>
 
 			<input type="hidden"
@@ -553,7 +553,7 @@ class CMB_Image_Field extends CMB_File_Field {
 			</div>
 
 			<button class="button cmb-file-upload <?php echo esc_attr( $this->get_value() ) ? 'hidden' : '' ?>" data-nonce="<?php echo wp_create_nonce( 'cmb-file-upload-nonce' ); ?>">
-				<?php esc_html_e( 'Add Image', 'cmb' ); ?>
+				<?php esc_html_e( 'Add Image', 'simple-link-directory' ); ?>
 			</button>
 
 			<div class="cmb-file-holder type-img <?php echo $this->get_value() ? '' : 'hidden'; ?>" data-crop="<?php echo (bool) $size['crop']; ?>">
@@ -565,7 +565,7 @@ class CMB_Image_Field extends CMB_File_Field {
 			</div>
 
 			<button class="cmb-remove-file button <?php echo $this->get_value() ? '' : 'hidden'; ?>">
-				<?php esc_html_e( 'Remove', 'cmb' ); ?>
+				<?php esc_html_e( 'Remove', 'simple-link-directory' ); ?>
 			</button>
 
 			<input type="hidden"
@@ -1105,7 +1105,7 @@ class CMB_Select extends CMB_Field {
 		$name = $this->get_the_name_attr();
 		$name .= ! empty( $this->args['multiple'] ) ? '[]' : null;
 
-		$none = is_string( $this->args['allow_none'] ) ? $this->args['allow_none'] : __( 'None', 'cmb' );
+		$none = is_string( $this->args['allow_none'] ) ? $this->args['allow_none'] : __( 'None', 'simple-link-directory' );
 
 		?>
 
@@ -1135,7 +1135,7 @@ class CMB_Select extends CMB_Field {
 	public function output_script() {
 
 		$options = wp_parse_args( $this->args['select2_options'], array(
-			'placeholder' => __( 'Type to search', 'cmb' ),
+			'placeholder' => __( 'Type to search', 'simple-link-directory' ),
 			'allowClear'  => true,
 		) );
 
@@ -1465,8 +1465,8 @@ class CMB_Group_Field extends CMB_Field {
 			parent::get_default_args(),
 			array(
 				'fields'              => array(),
-				'string-repeat-field' => __( 'Add New List Items', 'cmb' ),
-				'string-delete-field' => __( 'Remove', 'cmb' ),
+				'string-repeat-field' => __( 'Add New List Items', 'simple-link-directory' ),
+				'string-delete-field' => __( 'Remove', 'simple-link-directory' ),
 			)
 		);
 	}
@@ -1665,7 +1665,7 @@ class CMB_Gmap_Field extends CMB_Field {
 				'default_lat'         => '51.5073509',
 				'default_long'        => '-0.12775829999998223',
 				'default_zoom'        => '8',
-				'string-marker-title' => __( 'Drag to set the exact location', 'cmb' ),
+				'string-marker-title' => __( 'Drag to set the exact location', 'simple-link-directory' ),
 			)
 		);
 	}

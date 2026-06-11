@@ -7,24 +7,24 @@ if ( ! function_exists( 'qcopd_register_cpt_sld' ) ) {
 	function qcopd_register_cpt_sld() {
 		
 		$qc_list_labels = array(
-			'name'               => _x( 'Manage Lists', 'qc-opd' ),
-			'singular_name'      => _x( 'Manage List Item', 'qc-opd' ),
-			'add_new'            => _x( 'New List', 'qc-opd' ),
-			'add_new_item'       => __( 'Add New List', 'qc-opd' ),
-			'edit_item'          => __( 'Edit List Item', 'qc-opd' ),
-			'new_item'           => __( 'New List Item', 'qc-opd' ),
-			'all_items'          => __( 'Manage Lists', 'qc-opd' ),
-			'view_item'          => __( 'View List Item', 'qc-opd' ),
-			'search_items'       => __( 'Search List Item', 'qc-opd' ),
-			'not_found'          => __( 'No List Item found', 'qc-opd' ),
-			'not_found_in_trash' => __( 'No List Item found in the Trash', 'qc-opd' ), 
+			'name'               => esc_html( 'Manage Lists', 'simple-link-directory' ),
+			'singular_name'      => esc_html( 'Manage List Item', 'simple-link-directory' ),
+			'add_new'            => esc_html( 'New List', 'simple-link-directory' ),
+			'add_new_item'       => esc_html( 'Add New List', 'simple-link-directory' ),
+			'edit_item'          => esc_html( 'Edit List Item', 'simple-link-directory' ),
+			'new_item'           => esc_html( 'New List Item', 'simple-link-directory' ),
+			'all_items'          => esc_html( 'Manage Lists', 'simple-link-directory' ),
+			'view_item'          => esc_html( 'View List Item', 'simple-link-directory' ),
+			'search_items'       => esc_html( 'Search List Item', 'simple-link-directory' ),
+			'not_found'          => esc_html( 'No List Item found', 'simple-link-directory' ),
+			'not_found_in_trash' => esc_html( 'No List Item found in the Trash', 'simple-link-directory' ), 
 			'parent_item_colon'  => '',
-			'menu_name'          => __( 'Simple Link Directory', 'qc-opd' )
+			'menu_name'          => esc_html( 'Simple Link Directory', 'simple-link-directory' )
 		);
 		
 		$qc_list_args = array(
 			'labels'        		=> $qc_list_labels,
-			'description'   		=> esc_html__('This post type holds all posts for your directory items.', 'qc-opd'),
+			'description'   		=> esc_html('This post type holds all posts for your directory items.', 'simple-link-directory'),
 			'public'        		=> true,
 			'publicly_queryable' 	=> false,
 			'menu_position' 		=> 25,
@@ -40,17 +40,17 @@ if ( ! function_exists( 'qcopd_register_cpt_sld' ) ) {
 		//Register New Taxonomy for Our New Post Type
 		// Add new taxonomy, make it hierarchical (like categories)
 		$labels = array(
-			'name'              => _x( 'List Categories', 'List Categories', 'qc-opd' ),
-			'singular_name'     => _x( 'Category', 'taxonomy singular name', 'qc-opd' ),
-			'search_items'      => __( 'Search List Categories', 'qc-opd' ),
-			'all_items'         => __( 'All List Categories', 'qc-opd' ),
-			'parent_item'       => __( 'Parent List Categories', 'qc-opd' ),
-			'parent_item_colon' => __( 'Parent List Category:', 'qc-opd' ),
-			'edit_item'         => __( 'Edit List Category', 'qc-opd' ),
-			'update_item'       => __( 'Update List Category', 'qc-opd' ),
-			'add_new_item'      => __( 'Add New List Category', 'qc-opd' ),
-			'new_item_name'     => __( 'New List Category Name', 'qc-opd' ),
-			'menu_name'         => __( 'List Categories', 'qc-opd' ),
+			'name'              => esc_html( 'List Categories', 'List Categories', 'simple-link-directory' ),
+			'singular_name'     => esc_html( 'Category', 'taxonomy singular name', 'simple-link-directory' ),
+			'search_items'      => esc_html( 'Search List Categories', 'simple-link-directory' ),
+			'all_items'         => esc_html( 'All List Categories', 'simple-link-directory' ),
+			'parent_item'       => esc_html( 'Parent List Categories', 'simple-link-directory' ),
+			'parent_item_colon' => esc_html( 'Parent List Category:', 'simple-link-directory' ),
+			'edit_item'         => esc_html( 'Edit List Category', 'simple-link-directory' ),
+			'update_item'       => esc_html( 'Update List Category', 'simple-link-directory' ),
+			'add_new_item'      => esc_html( 'Add New List Category', 'simple-link-directory' ),
+			'new_item_name'     => esc_html( 'New List Category Name', 'simple-link-directory' ),
+			'menu_name'         => esc_html( 'List Categories', 'simple-link-directory' ),
 		);
 
 		$args = array(
@@ -117,17 +117,17 @@ if ( ! function_exists( 'cmb_qcopd_dir_fields' ) ) {
 	    
 
 		$meta_boxes[] = array(
-			'title' 		=> __('List Elements'),
+			'title' 		=> esc_html('List Elements'),
 			'pages' 		=> 'sld',
 			'fields' 		=> array(
 				array(
 					'id' 			=> 'qcopd_list_item01',
-					'name' 			=> __('Create List Elements'),
+					'name' 			=> esc_html('Create List Elements'),
 					'type' 			=> 'group',
 					'repeatable' 	=> true,
 					'sortable' 		=> true,
 					'fields' 		=> $qcopd_item_fields,
-					'desc' 			=> __('Please add your list items here. Ideally, each List should have 10-30 links. Create multiple Lists on different topics and show them all with a shortcode.', 'qc-opd') . ' <br><br><i style="color:indianred;font-size:14px !important; font-weight:bold;">'.esc_html__('If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server.', 'qc-opd').'</i>'
+					'desc' 			=> esc_html('Please add your list items here. Ideally, each List should have 10-30 links. Create multiple Lists on different topics and show them all with a shortcode.', 'simple-link-directory') . ' <br><br><i style="color:indianred;font-size:14px !important; font-weight:bold;">'.esc_html('If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server.', 'simple-link-directory').'</i>'
 				)
 			)
 		);
@@ -144,10 +144,10 @@ if ( ! function_exists( 'qcopd_list_columns_head' ) ) {
 	function qcopd_list_columns_head($defaults) {
 
 	    $new_columns['cb'] 					= '<input type="checkbox" />';
-	    $new_columns['title'] 				= __('Title', 'qc-opd');
-	    $new_columns['qcopd_item_count'] 	= __('Number of Elements', 'qc-opd');
-	    $new_columns['shortcode_col'] 		= __('Shortcode', 'qc-opd');
-	    $new_columns['date'] 				= __('Date', 'qc-opd');
+	    $new_columns['title'] 				= esc_html('Title', 'simple-link-directory');
+	    $new_columns['qcopd_item_count'] 	= esc_html('Number of Elements', 'simple-link-directory');
+	    $new_columns['shortcode_col'] 		= esc_html('Shortcode', 'simple-link-directory');
+	    $new_columns['date'] 				= esc_html('Date', 'simple-link-directory');
 
 	    return $new_columns;
 	}
@@ -160,7 +160,7 @@ if ( ! function_exists( 'qcopd_list_columns_content' ) ) {
 	    if ($column_name == 'qcopd_item_count') {
 	        $items = get_post_meta( $post_ID, 'qcopd_list_item01' );
 	        $count = is_array($items) ? count($items) : 0;
-	        echo '<span class="sld-item-count-badge">' . esc_html($count) . ' ' . _n('element', 'elements', $count, 'qc-opd') . '</span>';
+	        echo '<span class="sld-item-count-badge">' . esc_html($count) . ' ' . _n('element', 'elements', $count, 'simple-link-directory') . '</span>';
 	    }
 
 	    if ($column_name == 'shortcode_col') {
@@ -169,22 +169,22 @@ if ( ! function_exists( 'qcopd_list_columns_content' ) ) {
             ?>
             <div class="sld-shortcode-col-wrap">
                 <div class="sld-shortcode-item">
-                    <span class="sld-shortcode-label"><?php esc_html_e("Single List:", 'qc-opd'); ?></span>
+                    <span class="sld-shortcode-label"><?php esc_html_e("Single List:", 'simple-link-directory'); ?></span>
                     <div class="sld-shortcode-container">
                         <code class="sld-shortcode-code"><?php echo esc_html($single_shortcode); ?></code>
-                        <button type="button" class="sld-copy-btn" data-shortcode="<?php echo esc_attr($single_shortcode); ?>" title="<?php esc_attr_e("Copy Shortcode", 'qc-opd'); ?>">
+                        <button type="button" class="sld-copy-btn" data-shortcode="<?php echo esc_attr($single_shortcode); ?>" title="<?php esc_attr_e("Copy Shortcode", 'simple-link-directory'); ?>">
                             <span class="dashicons dashicons-admin-page"></span>
-                            <span class="sld-copy-tooltip"><?php esc_html_e("Copied!", 'qc-opd'); ?></span>
+                            <span class="sld-copy-tooltip"><?php esc_html_e("Copied!", 'simple-link-directory'); ?></span>
                         </button>
                     </div>
                 </div>
                 <div class="sld-shortcode-item">
-                    <span class="sld-shortcode-label"><?php esc_html_e("All Lists:", 'qc-opd'); ?></span>
+                    <span class="sld-shortcode-label"><?php esc_html_e("All Lists:", 'simple-link-directory'); ?></span>
                     <div class="sld-shortcode-container">
                         <code class="sld-shortcode-code"><?php echo esc_html($all_shortcode); ?></code>
-                        <button type="button" class="sld-copy-btn" data-shortcode="<?php echo esc_attr($all_shortcode); ?>" title="<?php esc_attr_e("Copy Shortcode", 'qc-opd'); ?>">
+                        <button type="button" class="sld-copy-btn" data-shortcode="<?php echo esc_attr($all_shortcode); ?>" title="<?php esc_attr_e("Copy Shortcode", 'simple-link-directory'); ?>">
                             <span class="dashicons dashicons-admin-page"></span>
-                            <span class="sld-copy-tooltip"><?php esc_html_e("Copied!", 'qc-opd'); ?></span>
+                            <span class="sld-copy-tooltip"><?php esc_html_e("Copied!", 'simple-link-directory'); ?></span>
                         </button>
                     </div>
                 </div>

@@ -83,7 +83,7 @@ class CMB_Meta_Box {
 
 		wp_localize_script( 'cmb-scripts', 'CMBData', array(
 			'strings' => array(
-				'confirmDeleteField' => __( 'Are you sure you want to delete this field?', 'cmb' )
+				'confirmDeleteField' => esc_html( 'Are you sure you want to delete this field?', 'simple-link-directory' )
 			)
 		) );
 
@@ -230,7 +230,7 @@ class CMB_Meta_Box {
 	// display fields
 	function show() { ?>
 
-		<input type="hidden" name="wp_meta_box_nonce" value="<?php esc_attr_e( wp_create_nonce( basename(__FILE__) ) ); ?>" />
+		<input type="hidden" name="wp_meta_box_nonce" value="<?php echo esc_attr( wp_create_nonce( basename(__FILE__) ) ); ?>" />
 
 		<?php self::layout_fields( $this->fields );
 
@@ -284,7 +284,7 @@ class CMB_Meta_Box {
 							<?php $field->display(); ?>
 						</div>
 
-						<input type="hidden" name="_cmb_present_<?php esc_attr_e( $field->id ); ?>" value="1" />
+						<input type="hidden" name="_cmb_present_<?php echo esc_attr( $field->id ); ?>" value="1" />
 
 				</div>
 

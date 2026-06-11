@@ -58,7 +58,7 @@ jQuery(document).ready(function ($) {
 		$.post(
 			ajaxurl,
 			{
-				action: 'show_qcsld_shortcodes'
+				action: 'show_qcopd_sld_shortcodes'
 
 			},
 			function (data) {
@@ -76,7 +76,7 @@ jQuery(document).ready(function ($) {
 
 	$(document).on('click', '.modal-content .close', function () {
 		$(this).parent().parent().remove();
-	}).on('click', '#qcsld_add_shortcode', function () {
+	}).on('click', '#qcopd_sld_add_shortcode', function () {
 
 		var mode = $('#sld_mode').val();
 		var column = $('#sld_column').val();
@@ -351,7 +351,7 @@ jQuery(document).ready(function ($) {
         $.ajax({
             url: ajaxurl,
             type: 'POST',
-            data: { action: 'qcld_sld_import_get_lists', security: security },
+            data: { action: 'qcopd_sld_import_get_lists', security: security },
             dataType: 'json',
             success: function(res) {
                 if ( ! res.success ) {
@@ -400,7 +400,7 @@ jQuery(document).ready(function ($) {
                         url: ajaxurl,
                         type: 'POST',
                         data: {
-                            action:   'qcld_sld_import_single_list',
+                            action:   'qcopd_sld_import_single_list',
                             security: security,
                             list_id:  list.id,
                         },
@@ -740,7 +740,7 @@ jQuery(document).ready(function ($) {
 			url: ajaxurl,
 			type: 'POST',
 			data: {
-				action: 'sld_test_openai_connection',
+				action: 'qcopd_sld_test_openai_connection',
 				api_key: apiKey
 			},
 			success: function (response) {
@@ -803,7 +803,7 @@ jQuery(document).ready(function ($) {
 			url: ajaxurl,
 			type: 'POST',
 			data: {
-				action: 'sld_test_gemini_connection',
+				action: 'qcopd_sld_test_gemini_connection',
 				api_key: apiKey
 			},
 			success: function (response) {
@@ -866,7 +866,7 @@ jQuery(document).ready(function ($) {
 			url: ajaxurl,
 			type: 'POST',
 			data: {
-				action: 'sld_test_openrouter_connection',
+				action: 'qcopd_sld_test_openrouter_connection',
 				api_key: apiKey
 			},
 			success: function (response) {
@@ -939,7 +939,7 @@ jQuery(document).ready(function ($) {
 			url: ajaxurl,
 			type: 'POST',
 			data: {
-				action: 'sld_ai_generate_list_items',
+				action: 'qcopd_sld_ai_generate_list_items',
 				prompt: prompt,
 				count: count
 			},
@@ -1083,7 +1083,7 @@ jQuery(document).ready(function ($) {
 			url: ajaxurl,
 			type: 'POST',
 			data: {
-				action: 'sld_reset_ai_prompt_instruction'
+				action: 'qcopd_sld_reset_ai_prompt_instruction'
 			},
 			success: function (response) {
 				btn.removeAttr('disabled');

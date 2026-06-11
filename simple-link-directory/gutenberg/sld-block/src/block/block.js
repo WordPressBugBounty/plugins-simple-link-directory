@@ -69,11 +69,11 @@ registerBlockType( 'sld/block-sld-block', {
 			jQuery.post(
 				ajaxurl,
 				{
-					action : 'show_qcsld_shortcodes'
+					action : 'show_qcopd_sld_shortcodes'
 					
 				},
 				function(data){
-					//console.log(jQuery(data).find('#qcsld_add_shortcode').attr('value'));
+					//console.log(jQuery(data).find('#qcopd_sld_add_shortcode').attr('value'));
 					if(jQuery('#sm-modal').length<1){
 						jQuery('#wpwrap').append(data);
 					}

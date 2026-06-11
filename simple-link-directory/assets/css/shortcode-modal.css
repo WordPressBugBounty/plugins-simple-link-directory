@@ -29,7 +29,7 @@
     width: 498px;
     z-index: -2;
 }
-.qcsld_single_field_shortcode{
+.qcopd_sld_single_field_shortcode{
 	margin-bottom: 10px;
 }
 /* The Close Button */
@@ -252,7 +252,7 @@ left: -25px;
 .sld-sc-btn:hover{ cursor: pointer; background-color: #A4A29C; }
 
 #demo-preview-link{ margin: 10px 10px 10px 200px; padding-left: 5px;}
-.qcsld_single_field_shortcode.checkbox-sld{
+.qcopd_sld_single_field_shortcode.checkbox-sld{
 	    margin-left: 205px;
 }
 .qcopd_label_mode{width: 200px;display: inline-block;}

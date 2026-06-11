@@ -33,7 +33,7 @@ jQuery(document).ready(function($){
 		$.post(
 			ajaxurl,
 			{
-				action : 'show_qcsld_shortcodes'
+				action : 'show_qcopd_sld_shortcodes'
 				
 			},
 			function(data){

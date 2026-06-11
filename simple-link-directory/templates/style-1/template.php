@@ -62,7 +62,7 @@ if ( $list_query->have_posts() )
 	
 	if(get_option('sld_enable_top_part')=='on' || get_option('sld_enable_search')=='on') :
 		
-	 do_action('qcsld_attach_embed_btn', $shortcodeAtts);
+	 do_action('qcopd_sld_attach_embed_btn', $shortcodeAtts);
 	
 	endif;
 
@@ -72,7 +72,7 @@ if ( $list_query->have_posts() )
 
 	$sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'dir="rtl"':'';
 
-	echo '<div class="qcld-main-container-style-1"><div class="qcopd-list-wrapper" '.$sld_enable_rtl.'><div id="opd-list-holder" class="qc-grid qcopd-list-holder opd-list-holder-style-1">';
+	echo '<div class="qcld-main-container-style-1"><div class="qcopd-list-wrapper" '.wp_kses_post($sld_enable_rtl).'><div id="opd-list-holder" class="qc-grid qcopd-list-holder opd-list-holder-style-1">';
 
 	$listId = 1;
 
@@ -182,7 +182,7 @@ if ( $list_query->have_posts() )
 							<div class="qcld-sld-content-dividar visible"></div>
 							<!-- Link Text -->
 							<div class="ca-content">
-                                <h3 class="ca-main <?php echo $canContentClass; ?>">
+                                <h3 class="ca-main <?php echo esc_attr($canContentClass); ?>">
 								<?php 
 									echo ( isset($list['qcopd_item_title']) ? esc_html(trim($list['qcopd_item_title'])) : '' ); 
 								?>

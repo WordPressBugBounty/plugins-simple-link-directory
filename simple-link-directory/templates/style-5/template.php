@@ -18,7 +18,7 @@ if ( $list_query->have_posts() )
 	
 	if(get_option('sld_enable_top_part')=='on' || get_option('sld_enable_search')=='on') :
 		
-	 do_action('qcsld_attach_embed_btn', $shortcodeAtts);
+	 do_action('qcopd_sld_attach_embed_btn', $shortcodeAtts);
 	
 	endif;
 
@@ -26,7 +26,7 @@ if ( $list_query->have_posts() )
 	//Directory Wrap or Container
 	$sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'dir="rtl"':'';
 
-	echo '<div class="qcld-main-container-style-5"><div class="qcopd-list-wrapper" '.$sld_enable_rtl.'><div id="opd-list-holder" class="qc-grid qcopd-list-holder">';
+	echo '<div class="qcld-main-container-style-5"><div class="qcopd-list-wrapper" '.wp_kses_post($sld_enable_rtl).'><div id="opd-list-holder" class="qc-grid qcopd-list-holder">';
 
 	$listId = 1;
 

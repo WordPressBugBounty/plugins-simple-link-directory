@@ -6,7 +6,7 @@ add_action('init', 'qcopd_load_resources');
 if ( ! function_exists( 'qcopd_load_resources' ) ) {
 	function qcopd_load_resources(){
 		add_action('wp_enqueue_scripts', 'qcopd_load_all_scripts');
-		add_action( 'admin_enqueue_scripts', 'qcsld_admin_enqueue' );
+		add_action( 'admin_enqueue_scripts', 'qcopd_sld_admin_enqueue' );
 		add_action( 'wp_enqueue_scripts', 'sld_packery_adding_scripts', 100 ); 
 	}
 }
@@ -42,7 +42,7 @@ if ( ! function_exists( 'qcopd_load_all_scripts' ) ) {
 
 
         $sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'on':'';
-        $sld_no_results_found       = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html__('No Results Found for Your Search', 'qc-opd');
+        $sld_no_results_found       = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html('No Results Found for Your Search', 'simple-link-directory');
 
         $customscript ='
                 var ajaxurl = "' . admin_url('admin-ajax.php') . '";
@@ -59,8 +59,8 @@ if ( ! function_exists( 'qcopd_load_all_scripts' ) ) {
 	}
 }
 
-if ( ! function_exists( 'qcsld_admin_enqueue' ) ) {
-	function qcsld_admin_enqueue(){
+if ( ! function_exists( 'qcopd_sld_admin_enqueue' ) ) {
+	function qcopd_sld_admin_enqueue(){
 		global $post_type;
 
 		wp_enqueue_media();

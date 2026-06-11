@@ -103,13 +103,15 @@ if( !class_exists('Qcrating') ){
 				return;
 			}*/
 			
-			$scheme      = (parse_url( $_SERVER['REQUEST_URI'], PHP_URL_QUERY )) ? '&' : '?';
+			$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
+
+			$scheme      = ( parse_url( $request_uri, PHP_URL_QUERY ) ) ? '&' : '?';
 			
-			$url         = $_SERVER['REQUEST_URI'] . $scheme . 'qc_'.$this->plugin_name.'_rating_dismiss=yes';
+			$url         = $request_uri . $scheme . 'qc_'.$this->plugin_name.'_rating_dismiss=yes';
 			
 			$dismiss_url = wp_nonce_url( $url, 'qc-'.$this->plugin_name.'-rating-nonce' );
 
-			$_later_link = $_SERVER['REQUEST_URI'] . $scheme . 'qc_'.$this->plugin_name.'_rating_later=yes';
+			$_later_link = $request_uri . $scheme . 'qc_'.$this->plugin_name.'_rating_later=yes';
 			
 			$later_url   = wp_nonce_url( $_later_link, 'qc-'.$this->plugin_name.'-rating-nonce' );
 			
@@ -121,16 +123,16 @@ if( !class_exists('Qcrating') ){
 				
 				<div class="qc-review-text">
 				
-					<h3><?php esc_html_e( 'Leave A Review for Simple Link Directory?', 'qc-sld' ) ?></h3>
+					<h3><?php esc_html_e( 'Leave A Review for Simple Link Directory?', 'simple-link-directory' ) ?></h3>
 					
-					<p><?php esc_html_e( 'We hope you\'ve enjoyed using', 'qc-opd' ) ?> <b><?php esc_html_e( 'Simple Link Directory', 'qc-opd' ) ?></b> !<?php esc_html_e( ' Would you consider leaving us a review on WordPress.org?', 'qc-opd' ) ?></p>
+					<p><?php esc_html_e( 'We hope you\'ve enjoyed using', 'simple-link-directory' ) ?> <b><?php esc_html_e( 'Simple Link Directory', 'simple-link-directory' ) ?></b> !<?php esc_html_e( ' Would you consider leaving us a review on WordPress.org?', 'simple-link-directory' ) ?></p>
 					
 					<ul class="qc-review-ul">
 					
-						<li><a href="<?php echo esc_url($this->plugin_rating_url); ?>" target="_blank"><span class="dashicons dashicons-star-filled"></span><?php esc_html_e( 'Leave A Review', 'qc-sld' ) ?></a></li>
-						 <li><a href="<?php echo esc_url($dismiss_url) ?>"><span class="dashicons dashicons-yes"></span><?php esc_html_e( 'I\'ve already left a review', 'qc-sld' ) ?></a></li>
-						 <li><a href="<?php echo esc_url($later_url) ?>"><span class="dashicons dashicons-calendar"></span><?php esc_html_e( 'Maybe Later', 'qc-sld' ) ?></a></li>
-						 <li><a href="<?php echo esc_url($dismiss_url) ?>"><span class="dashicons dashicons-no"></span><?php esc_html_e( 'Never show this again', 'qc-sld' ) ?></a></li>
+						<li><a href="<?php echo esc_url($this->plugin_rating_url); ?>" target="_blank"><span class="dashicons dashicons-star-filled"></span><?php esc_html_e( 'Leave A Review', 'simple-link-directory' ) ?></a></li>
+						 <li><a href="<?php echo esc_url($dismiss_url) ?>"><span class="dashicons dashicons-yes"></span><?php esc_html_e( 'I\'ve already left a review', 'simple-link-directory' ) ?></a></li>
+						 <li><a href="<?php echo esc_url($later_url) ?>"><span class="dashicons dashicons-calendar"></span><?php esc_html_e( 'Maybe Later', 'simple-link-directory' ) ?></a></li>
+						 <li><a href="<?php echo esc_url($dismiss_url) ?>"><span class="dashicons dashicons-no"></span><?php esc_html_e( 'Never show this again', 'simple-link-directory' ) ?></a></li>
 			 
 					</ul>
 				</div>

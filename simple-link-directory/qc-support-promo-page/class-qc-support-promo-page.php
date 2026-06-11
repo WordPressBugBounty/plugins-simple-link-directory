@@ -20,8 +20,8 @@ function qc_sld_show_promo_page_callback_func(){
 
     add_submenu_page(
         "edit.php?post_type=sld",
-        esc_html__('More WordPress Goodies for You!', 'qc-opd'),
-        esc_html__('Support', 'qc-opd'),
+        esc_html('More WordPress Goodies for You!', 'simple-link-directory'),
+        esc_html('Support', 'simple-link-directory'),
         'manage_options',
         "qcopd_sld_supports",
         'qc_sld_promo_support_page_callback_func'
@@ -79,18 +79,18 @@ if ( ! function_exists( 'qc_sld_promo_support_page_callback_func' ) ) {
         <div class="qc-sld-support qcld-support-new-page">
             <div class="support-btn-main justify-content-center">
                 <div class="col text-center">
-                    <h2 class="py-3"><?php esc_html_e('Check Out Some of Our Other Works that Might Make Your Website Better', 'qc-opd'); ?></h2>
-                    <h5><?php esc_html_e('All our Pro Version users get Premium, Guaranteed Quick, One on One Priority Support.', 'qc-opd'); ?></h5>
+                    <h2 class="py-3"><?php esc_html_e('Check Out Some of Our Other Works that Might Make Your Website Better', 'simple-link-directory'); ?></h2>
+                    <h5><?php esc_html_e('All our Pro Version users get Premium, Guaranteed Quick, One on One Priority Support.', 'simple-link-directory'); ?></h5>
                     <div class="support-btn">
-                        <a class="premium-support" href="<?php echo esc_url('https://qc.turbopowers.com/'); ?>" target="_blank"><?php esc_html_e('Get Priority Support ', 'qc-opd'); ?></a>
-                        <a style="width:282px" class="premium-support" href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>" target="_blank"><?php esc_html_e('Online KnowledgeBase', 'qc-opd'); ?></a>
+                        <a class="premium-support" href="<?php echo esc_url('https://qc.turbopowers.com/'); ?>" target="_blank"><?php esc_html_e('Get Priority Support ', 'simple-link-directory'); ?></a>
+                        <a style="width:282px" class="premium-support" href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>" target="_blank"><?php esc_html_e('Online KnowledgeBase', 'simple-link-directory'); ?></a>
                     </div>
                 </div>
             
                 <div class="qc-column-12" >
                     <div class="support-btn">
                         
-                        <a class="premium-support premium-support-free" href="<?php echo esc_url('https://www.quantumcloud.com/resources/free-support/') ?>" target="_blank"><?php esc_html_e('Get Support for Free Version','qc-opd') ?></a>
+                        <a class="premium-support premium-support-free" href="<?php echo esc_url('https://www.quantumcloud.com/resources/free-support/') ?>" target="_blank"><?php esc_html_e('Get Support for Free Version', 'simple-link-directory') ?></a>
                     </div>
                 </div>
             </div>
@@ -124,22 +124,22 @@ if( !function_exists('qc_sld_process_qc_promo_form') ){
         check_ajax_referer( 'qc-clr', 'security');
         
         $data['status']   = 'failed';
-        $data['message']  = esc_html__('Problem in processing your form submission request! Apologies for the inconveniences.<br> 
-Please email to <span style="color:#22A0C9;font-weight:bold !important;font-size:14px "> quantumcloud@gmail.com </span> with any feedback. We will get back to you right away!', 'qc-opd');
+        $data['message']  = esc_html('Problem in processing your form submission request! Apologies for the inconveniences.<br> 
+Please email to <span style="color:#22A0C9;font-weight:bold !important;font-size:14px "> quantumcloud@gmail.com </span> with any feedback. We will get back to you right away!', 'simple-link-directory');
 
-        $name         = isset($_POST['post_name']) ? trim(sanitize_text_field($_POST['post_name'])) : '';
-        $email        = isset($_POST['post_email']) ? trim(sanitize_email($_POST['post_email'])) : '';
-        $subject      = isset($_POST['post_subject']) ? trim(sanitize_text_field($_POST['post_subject'])) : '';
-        $message      = isset($_POST['post_message']) ? trim(sanitize_text_field($_POST['post_message'])) : '';
-        $plugin_name  = isset($_POST['post_plugin_name']) ? trim(sanitize_text_field($_POST['post_plugin_name'])) : '';
+        $name         = isset($_POST['post_name']) ? trim(sanitize_text_field(wp_unslash($_POST['post_name']))) : '';
+        $email        = isset($_POST['post_email']) ? trim(sanitize_email(wp_unslash($_POST['post_email']))) : '';
+        $subject      = isset($_POST['post_subject']) ? trim(sanitize_text_field(wp_unslash($_POST['post_subject']))) : '';
+        $message      = isset($_POST['post_message']) ? trim(sanitize_text_field(wp_unslash($_POST['post_message']))) : '';
+        $plugin_name  = isset($_POST['post_plugin_name']) ? trim(sanitize_text_field(wp_unslash($_POST['post_plugin_name']))) : '';
 
         if( $name == "" || $email == "" || $subject == "" || $message == "" )
         {
-            $data['message'] = esc_html__('Please fill up all the requried form fields.', 'qc-opd');
+            $data['message'] = esc_html('Please fill up all the requried form fields.', 'simple-link-directory');
         }
         else if ( filter_var($email, FILTER_VALIDATE_EMAIL) === false ) 
         {
-            $data['message'] = esc_html__('Invalid email address.', 'qc-opd');
+            $data['message'] = esc_html('Invalid email address.', 'simple-link-directory');
         }
         else
         {
@@ -148,24 +148,24 @@ Please email to <span style="color:#22A0C9;font-weight:bold !important;font-size
 
             $bodyContent = "";
                 
-            $bodyContent .= "<p><strong>".esc_html__('Support Request Details:', 'qc-opd')."</strong></p><hr>";
+            $bodyContent .= "<p><strong>".esc_html('Support Request Details:', 'simple-link-directory')."</strong></p><hr>";
 
-            $bodyContent .= "<p>".esc_html__('Name', 'qc-opd')." : ".$name."</p>";
-            $bodyContent .= "<p>".esc_html__('Email', 'qc-opd')." : ".$email."</p>";
-            $bodyContent .= "<p>".esc_html__('Subject', 'qc-opd')." : ".$subject."</p>";
-            $bodyContent .= "<p>".esc_html__('Message', 'qc-opd')." : ".$message."</p>";
+            $bodyContent .= "<p>".esc_html('Name', 'simple-link-directory')." : ".$name."</p>";
+            $bodyContent .= "<p>".esc_html('Email', 'simple-link-directory')." : ".$email."</p>";
+            $bodyContent .= "<p>".esc_html('Subject', 'simple-link-directory')." : ".$subject."</p>";
+            $bodyContent .= "<p>".esc_html('Message', 'simple-link-directory')." : ".$message."</p>";
 
-            $bodyContent .= "<p>".esc_html__('Sent Via the Plugin', 'qc-opd')." : ".$plugin_name."</p>";
+            $bodyContent .= "<p>".esc_html('Sent Via the Plugin', 'simple-link-directory')." : ".$plugin_name."</p>";
 
-            $bodyContent .="<p></p><p>".esc_html__('Mail sent from:', 'qc-opd')." <strong>".get_bloginfo('name')."</strong>, ".esc_html__('URL:', 'qc-opd')." [".get_bloginfo('url')."].</p>";
-            $bodyContent .="<p>".esc_html__('Mail Generated on:', 'qc-opd')." " . date("F j, Y, g:i a") . "</p>";           
+            $bodyContent .="<p></p><p>".esc_html('Mail sent from:', 'simple-link-directory')." <strong>".get_bloginfo('name')."</strong>, ".esc_html('URL:', 'simple-link-directory')." [".get_bloginfo('url')."].</p>";
+            $bodyContent .="<p>".esc_html('Mail Generated on:', 'simple-link-directory')." " . gmdate("F j, Y, g:i a") . "</p>";           
             
             $toEmail = "quantumcloud@gmail.com"; //Receivers email address
             //$toEmail = "qc.kadir@gmail.com"; //Receivers email address
 
             //Extract Domain
             $url = get_site_url();
-            $url = parse_url($url);
+            $url = wp_parse_url($url);
             $domain = $url['host'];
             
 
@@ -178,14 +178,14 @@ Please email to <span style="color:#22A0C9;font-weight:bold !important;font-size
             $headers[] = 'From: '.esc_attr($name).' <'.esc_attr($fakeFromEmailAddress).'>';
             $headers[] = 'Reply-To: '.esc_attr($name).' <'.esc_attr($email).'>';
 
-            $finalSubject = esc_html__('From Plugin Support Page:', 'qc-opd')." " . esc_attr($subject);
+            $finalSubject = esc_html('From Plugin Support Page:', 'simple-link-directory')." " . esc_attr($subject);
             
             $result = wp_mail( $to, $finalSubject, $body, $headers );
 
             if( $result )
             {
                 $data['status'] = 'success';
-                $data['message'] = esc_html__('Your email was sent successfully. Thanks!', 'qc-opd');
+                $data['message'] = esc_html('Your email was sent successfully. Thanks!', 'simple-link-directory');
             }
 
         }

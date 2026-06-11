@@ -59,14 +59,14 @@ if ( ! function_exists( 'qcopd_directory_full_shortcode' ) ) {
 	function qcopd_directory_full_shortcode( $atts = array() ){
 
 		ob_start();
-	    show_qcopd_full_list( $atts );
+	    qcopd_show_qcopd_full_list( $atts );
 	    $content = ob_get_clean();
 	    return $content;
 	}
 }
 
-if ( ! function_exists( 'show_qcopd_full_list' ) ) {
-function show_qcopd_full_list( $atts = array() )
+if ( ! function_exists( 'qcopd_show_qcopd_full_list' ) ) {
+function qcopd_show_qcopd_full_list( $atts = array() )
 {
 
 	// if (is_admin()) {
@@ -121,7 +121,7 @@ function show_qcopd_full_list( $atts = array() )
 
 
 	// check style if empty. default simple.
-	$style = ( isset( $atts["style"] ) && get_style_for_template( $atts["style"] ) ) ? get_style_for_template( $atts["style"] ) : $style;
+	$style = ( isset( $atts["style"] ) && qcopd_get_style_for_template( $atts["style"] ) ) ? qcopd_get_style_for_template( $atts["style"] ) : $style;
 
 	//ShortCode Atts
 	$shortcodeAtts = array(
@@ -159,9 +159,9 @@ function show_qcopd_full_list( $atts = array() )
 		wp_add_inline_style( 'qcopd-custom-css', $css );
 	}
 
-	$lan_enable_dark_mode 	= get_option('sld_lan_enable_dark_mode') ? get_option('sld_lan_enable_dark_mode') : __('Enable Dark Mode', 'qc-opd');
-	$lan_dark_mode_on 		= get_option('sld_lan_dark_mode_on') ? get_option('sld_lan_dark_mode_on') : __('Dark Mode On', 'qc-opd');
-	$lan_light_mode_on 		= get_option('sld_lan_light_mode_on') ? get_option('sld_lan_light_mode_on') : __('Light Mode On', 'qc-opd');
+	$lan_enable_dark_mode 	= get_option('sld_lan_enable_dark_mode') ? get_option('sld_lan_enable_dark_mode') : __('Enable Dark Mode', 'simple-link-directory');
+	$lan_dark_mode_on 		= get_option('sld_lan_dark_mode_on') ? get_option('sld_lan_dark_mode_on') : __('Dark Mode On', 'simple-link-directory');
+	$lan_light_mode_on 		= get_option('sld_lan_light_mode_on') ? get_option('sld_lan_light_mode_on') : __('Light Mode On', 'simple-link-directory');
 
 	$custom_js = 'jQuery(document).ready(function($) {
 
@@ -349,7 +349,7 @@ function show_qcopd_full_list( $atts = array() )
     */
 
     // check style if empty. default simple.
-    $template_code = ( isset( $atts["style"] ) && get_style_for_template( $atts["style"] ) ) ? get_style_for_template( $atts["style"] ) : $style;
+    $template_code = ( isset( $atts["style"] ) && qcopd_get_style_for_template( $atts["style"] ) ) ? qcopd_get_style_for_template( $atts["style"] ) : $style;
 
     if( $mode == 'one' ){
     	$column = '1';
@@ -382,7 +382,7 @@ function show_qcopd_full_list( $atts = array() )
 	wp_add_inline_style( 'qcopd-custom-css', $scrolltotop );
 ?>
 
-	<a href="#"class="sld_scrollToTop"><?php esc_html_e('Scroll To Top', 'qc-opd'); ?></a>
+	<a href="#"class="sld_scrollToTop"><?php esc_html_e('Scroll To Top', 'simple-link-directory'); ?></a>
 
 <?php 
 	$scrolljs = "jQuery(document).ready(function($){
@@ -413,7 +413,7 @@ function show_qcopd_full_list( $atts = array() )
 		$tempath = QCOPD_DIR ."/templates/".$template_code."/template.php";
 	    require ( $tempath );
 	}
-	wp_reset_query();
+	wp_reset_postdata();
 
 	
 	
@@ -421,8 +421,8 @@ function show_qcopd_full_list( $atts = array() )
 }
 
 //Add Custom Scripts and Styles to footer
-if ( ! function_exists( 'qc_opd_custom_styles_scripts' ) ) {
-	function qc_opd_custom_styles_scripts(){	
+if ( ! function_exists( 'qcopd_custom_styles_scripts' ) ) {
+	function qcopd_custom_styles_scripts(){	
 
 		$customCss = get_option( 'sld_custom_style' );
 		if( trim($customCss) != "" ) :
@@ -462,11 +462,11 @@ if ( ! function_exists( 'qc_opd_custom_styles_scripts' ) ) {
 		}
 	}
 }
-add_action('wp_footer', 'qc_opd_custom_styles_scripts');
+add_action('wp_footer', 'qcopd_custom_styles_scripts');
 
 
-if ( ! function_exists( 'get_style_for_template' ) ) {
-	function get_style_for_template($style){
+if ( ! function_exists( 'qcopd_get_style_for_template' ) ) {
+	function qcopd_get_style_for_template($style){
 
 		if($style == 'simple'){
 			return $style;

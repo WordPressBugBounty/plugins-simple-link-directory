@@ -16,8 +16,8 @@ class Qcopd_BulkImportFree
 
         add_submenu_page(
             'edit.php?post_type=sld',
-            esc_html__('Bulk Import', 'qc-opd'),
-            esc_html__('Import', 'qc-opd'),
+            esc_html('Bulk Import', 'simple-link-directory'),
+            esc_html('Import', 'simple-link-directory'),
             'manage_options',
             'qcopd_bimport_page',
             array(
@@ -42,46 +42,46 @@ class Qcopd_BulkImportFree
 
                             <div class="qcld-importstylebox">
                                 
-                                <h3><?php esc_html_e('Bulk Import', 'qc-opd'); ?></h3>
+                                <h3><?php esc_html_e('Bulk Import', 'simple-link-directory'); ?></h3>
                                 <hr>
                                 <!-- Alert Warning for development note -->
                                 <div class="sld-alert-warning">
-                                    <strong><?php esc_html_e('Please Note:', 'qc-opd'); ?></strong>
-                                    <?php esc_html_e('The import feature is still under development. Right now it only allows importing and creating new Lists. Existing Lists will not get updated. Also, export feature is not available in free version.', 'qc-opd'); ?>
+                                    <strong><?php esc_html_e('Please Note:', 'simple-link-directory'); ?></strong>
+                                    <?php esc_html_e('The import feature is still under development. Right now it only allows importing and creating new Lists. Existing Lists will not get updated. Also, export feature is not available in free version.', 'simple-link-directory'); ?>
                                 </div>
 
                                 <!-- Guidelines and Info Card -->
                                 <div class="sld-import-card">
                                     <p>
-                                        <strong><?php esc_html_e('Sample CSV File:', 'qc-opd'); ?></strong>
+                                        <strong><?php esc_html_e('Sample CSV File:', 'simple-link-directory'); ?></strong>
                                         <a href="<?php echo esc_url(QCOPD_ASSETS_URL . '/file/sample-csv-file.csv'); ?>"
                                             target="_blank" class="sld-btn-primary" style="padding: 5px 15px; font-size: 12px; margin-left: 10px;">
-                                            <?php esc_html_e('Download Sample', 'qc-opd'); ?>
+                                            <?php esc_html_e('Download Sample', 'simple-link-directory'); ?>
                                         </a>
                                     </p>
 
-                                    <h4><?php esc_html_e('PROCESS:', 'qc-opd'); ?></h4>
+                                    <h4><?php esc_html_e('PROCESS:', 'simple-link-directory'); ?></h4>
                                     <ol>
-                                        <li><?php esc_html_e('First download the above CSV file.', 'qc-opd'); ?></li>
-                                        <li><?php esc_html_e('Add/Edit rows on the top of it, by maintaing proper provided format/fields.', 'qc-opd'); ?></li>
-                                        <li><?php esc_html_e('Finally, upload file in the below form.', 'qc-opd'); ?></li>
+                                        <li><?php esc_html_e('First download the above CSV file.', 'simple-link-directory'); ?></li>
+                                        <li><?php esc_html_e('Add/Edit rows on the top of it, by maintaing proper provided format/fields.', 'simple-link-directory'); ?></li>
+                                        <li><?php esc_html_e('Finally, upload file in the below form.', 'simple-link-directory'); ?></li>
                                     </ol>
 
-                                    <h4><?php esc_html_e('NOTES:', 'qc-opd'); ?></h4>
+                                    <h4><?php esc_html_e('NOTES:', 'simple-link-directory'); ?></h4>
                                     <ol>
-                                        <li><?php esc_html_e('It should be a simple CSV file.', 'qc-opd'); ?></li>
-                                        <li><?php esc_html_e('File encoding should be in UTF-8', 'qc-opd'); ?></li>
-                                        <li><?php esc_html_e('File must be prepared as per provided sample CSV file.', 'qc-opd'); ?></li>
+                                        <li><?php esc_html_e('It should be a simple CSV file.', 'simple-link-directory'); ?></li>
+                                        <li><?php esc_html_e('File encoding should be in UTF-8', 'simple-link-directory'); ?></li>
+                                        <li><?php esc_html_e('File must be prepared as per provided sample CSV file.', 'simple-link-directory'); ?></li>
                                     </ol>
                                 </div>
 
                                 <!-- Handle CSV Upload -->
                                 <?php
-                                $randomNum = substr(sha1(mt_rand() . microtime()), mt_rand(0, 35), 5);
+                                $randomNum = substr(sha1(wp_rand() . microtime()), wp_rand(0, 35), 5);
 
                                 if (!empty($_POST) && isset($_POST['upload_csv'])) {
 
-                                    check_admin_referer('qcsld_import_nonce');
+                                    check_admin_referer('qcopd_sld_import_nonce');
 
                                     if (function_exists('is_user_logged_in') && is_user_logged_in() && current_user_can('manage_options')) {
 
@@ -171,7 +171,7 @@ class Qcopd_BulkImportFree
                                             }
                             
                                             if ((isset($keyCounter) && $keyCounter > 0) && (isset($metaCounter) && $metaCounter > 0)) {
-                                                echo '<div class="sld-alert-warning" style="background: #ecfdf5; border-color: #10b981; color: #065f46;"><strong>' . esc_html__('RESULT:', 'qc-opd') . '</strong> ' . esc_attr($keyCounter) . ' ' . esc_html__('entry with', 'qc-opd') . ' <strong>' . esc_attr($metaCounter) . '</strong> ' . esc_html__('element(s) was made successfully.', 'qc-opd') . '</div>';
+                                                echo '<div class="sld-alert-warning" style="background: #ecfdf5; border-color: #10b981; color: #065f46;"><strong>' . esc_html('RESULT:', 'simple-link-directory') . '</strong> ' . esc_attr($keyCounter) . ' ' . esc_html('entry with', 'simple-link-directory') . ' <strong>' . esc_attr($metaCounter) . '</strong> ' . esc_html('element(s) was made successfully.', 'simple-link-directory') . '</div>';
                                             }
                                             if (file_exists($movefile['file'])) {
                                                 unlink($movefile['file']);
@@ -183,7 +183,7 @@ class Qcopd_BulkImportFree
 
                                 <!-- Upload Form Card -->
                                 <div class="sld-upload-area">
-                                    <p><?php echo esc_html__('Upload CSV File to Import'); ?></p>
+                                    <p><?php echo esc_html('Upload CSV File to Import'); ?></p>
 
                                     <form name="uploadfile" id="uploadfile_form" method="POST"
                                         enctype="multipart/form-data" action="" accept-charset="utf-8">
@@ -191,23 +191,23 @@ class Qcopd_BulkImportFree
                                         <input type="file" name="csv_upload" id="csv_upload" size="35" class="uploadfiles" />
                                         
                                         <p style="color: #ef4444; font-size: 13px; font-weight: normal; margin-top: 5px; margin-bottom: 20px;">
-                                            <?php echo esc_html__('** CSV File & Characters must be saved with UTF-8 encoding **'); ?>
+                                            <?php echo esc_html('** CSV File & Characters must be saved with UTF-8 encoding **'); ?>
                                         </p>
                                         
                                         <input class="sld-btn-primary" type="submit" name="upload_csv" id=""
-                                            value="<?php echo esc_html__('Upload & Process') ?>" />
+                                            value="<?php echo esc_html('Upload & Process') ?>" />
                                         
-                                        <?php wp_nonce_field('qcsld_import_nonce'); ?>
+                                        <?php wp_nonce_field('qcopd_sld_import_nonce'); ?>
                                     </form>
                                 </div>
 
                                 <!-- Modernized Footer -->
                                 <div class="sld-import-footer">
-                                    <?php esc_html_e('Crafted By:', 'qc-opd'); ?> 
+                                    <?php esc_html_e('Crafted By:', 'simple-link-directory'); ?> 
                                     <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank">
-                                        <?php esc_html_e('Web Design Company', 'qc-opd'); ?>
+                                        <?php esc_html_e('Web Design Company', 'simple-link-directory'); ?>
                                     </a> 
-                                    <?php esc_html_e('- QuantumCloud', 'qc-opd'); ?>
+                                    <?php esc_html_e('- QuantumCloud', 'simple-link-directory'); ?>
                                 </div>
 
                             </div>
@@ -219,8 +219,8 @@ class Qcopd_BulkImportFree
 
             
 
-                <?php if (function_exists('qcld_sld_help_render_sidebar')) {
-                    qcld_sld_help_render_sidebar();
+                <?php if (function_exists('qcopd_help_render_sidebar')) {
+                    qcopd_help_render_sidebar();
                 } ?>
 
             </div>

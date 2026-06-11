@@ -62,7 +62,7 @@ function qcopd_create_embed_page()
             'comment_status' => 'closed',
             'ping_status' => 'closed',
             'post_author' => get_current_user_id(),
-            'post_date' => date('Y-m-d H:i:s'),
+            'post_date' => gmdate('Y-m-d H:i:s'),
             'post_status' => 'publish',
             'post_title' => 'Embed Link',
             'post_type' => 'page',
@@ -75,7 +75,7 @@ function qcopd_create_embed_page()
 }
 
 if ($embed_link_button == 1) {
-    add_action('qcsld_attach_embed_btn', 'qcld_custom_embedder');
+    add_action('qcopd_sld_attach_embed_btn', 'qcld_custom_embedder');
 }
 
 function qcld_custom_embedder($shortcodeAtts){
@@ -121,10 +121,10 @@ function qcld_custom_embedder($shortcodeAtts){
 					if(get_option('sld_lan_live_search')!=''){
 						$srcplaceholder = get_option('sld_lan_live_search');
 					}else{
-						$srcplaceholder = __('Live Search Items', 'qc-opd');
+						$srcplaceholder = esc_html('Live Search Items', 'simple-link-directory');
 					}
 				?>
-                <input type="text" class="text-input sld-search sld_search_filter" placeholder="<?php echo $srcplaceholder; ?>"/>
+                <input type="text" class="text-input sld-search sld_search_filter" placeholder="<?php echo esc_attr($srcplaceholder); ?>"/>
             </form>
         </div>
 	<?php } ?>
@@ -136,7 +136,7 @@ function qcld_custom_embedder($shortcodeAtts){
 	if(get_option('sld_lan_add_link')!=''){
 		echo esc_html(get_option('sld_lan_add_link'));
 	}else{
-		esc_html_e( 'Add New', 'qc-opd' ); 
+		esc_html_e( 'Add New', 'simple-link-directory' ); 
 	}
 ?>
 </a>
@@ -156,20 +156,20 @@ function qcld_custom_embedder($shortcodeAtts){
 
 if($enable_embedding == 'on'){ ?>
 <a class="button-link js-open-modal cls-embed-btn" href="#" data-modal-id="popup"
-           data-url="<?php bloginfo('url'); ?>/embed-link"
-           data-order="<?php echo $shortcodeAtts['order']; ?>"
-           data-mode="<?php echo $shortcodeAtts['mode']; ?>"
-           data-list-id="<?php echo $shortcodeAtts['list_id']; ?>"
-           data-column="<?php echo $shortcodeAtts['column']; ?>"
-           data-style="<?php echo $shortcodeAtts['style']; ?>"
-           data-category="<?php echo $shortcodeAtts['category']; ?>" 
-		   data-credittitle="<?php echo $site_title; ?>"
-           data-creditlink="<?php echo $site_link; ?>"> 
+           data-url="<?php echo esc_url(bloginfo('url')); ?>/embed-link"
+           data-order="<?php echo esc_attr($shortcodeAtts['order']); ?>"
+           data-mode="<?php echo esc_attr($shortcodeAtts['mode']); ?>"
+           data-list-id="<?php echo esc_attr($shortcodeAtts['list_id']); ?>"
+           data-column="<?php echo esc_attr($shortcodeAtts['column']); ?>"
+           data-style="<?php echo esc_attr($shortcodeAtts['style']); ?>"
+           data-category="<?php echo esc_attr($shortcodeAtts['category']); ?>" 
+		   data-credittitle="<?php echo esc_attr($site_title); ?>"
+           data-creditlink="<?php echo esc_attr($site_link); ?>"> 
 			<?php 
 				if(get_option('sld_lan_share_list')!=''){
 					echo get_option('sld_lan_share_list');
 				}else{
-					echo esc_html__('Share List', 'qc-opd') ;
+					echo esc_html('Share List', 'simple-link-directory') ;
 				}
 			 ?>
 		   <i class="fa fa-share-alt"></i> 
@@ -189,35 +189,35 @@ function sld_share_modal() {
 	?>
 	<div id="popup" class="modal-box">
 	  <header> <a href="#" class="js-modal-close close">×</a>
-		<h3><?php esc_html_e('Generate Embed Code For This List', 'qc-opd'); ?></h3>
+		<h3><?php esc_html_e('Generate Embed Code For This List', 'simple-link-directory'); ?></h3>
 	  </header>
 	  <div class="modal-body">
 		<div class="iframe-css">
 		  <div class="iframe-main">
 			<div class="ifram-row">
 			  <div class="ifram-sm">
-				<span><?php esc_html_e("Width: (in '%' or 'px')", 'qc-opd'); ?></span>
+				<span><?php esc_html_e("Width: (in '%' or 'px')", 'simple-link-directory'); ?></span>
 				<input id="igwidth" name="igwidth" type="text" value="100">
 			</div>
 			<div class="ifram-sm qcopd_iframe_sm" >
 				<span>&nbsp;</span>
 				<select name="igsizetype" class="iframe-main-select">
-					<option value="%"><?php esc_html_e('%', 'qc-opd'); ?></option>
-					<option value="px"><?php esc_html_e('px', 'qc-opd'); ?></option>
+					<option value="%"><?php esc_html_e('%', 'simple-link-directory'); ?></option>
+					<option value="px"><?php esc_html_e('px', 'simple-link-directory'); ?></option>
 				</select>
 			</div>
 			<div class="ifram-sm">
-				<span><?php esc_html_e("Height: (in 'px')", 'qc-opd'); ?></span>
+				<span><?php esc_html_e("Height: (in 'px')", 'simple-link-directory'); ?></span>
 				<input id="igheight" name="igheight" type="text" value="400">
 			</div>
-			  <div class="ifram-sm"> <span>&nbsp;</span> <a class="btn icon icon-code" id="generate-igcode" onclick=""><?php esc_html_e('Generate & Copy', 'qc-opd'); ?></a>
+			  <div class="ifram-sm"> <span>&nbsp;</span> <a class="btn icon icon-code" id="generate-igcode" onclick=""><?php esc_html_e('Generate & Copy', 'simple-link-directory'); ?></a>
 				</select>
 			  </div>
 			</div>
 			<div class="ifram-row">
-			  <div class="ifram-lg"> <span class="qcld-span-label"><?php esc_html_e('Generated Code', 'qc-opd'); ?></span> <br>
+			  <div class="ifram-lg"> <span class="qcld-span-label"><?php esc_html_e('Generated Code', 'simple-link-directory'); ?></span> <br>
 				<textarea id="igcode_textarea" class="igcode_textarea" name="igcode" readonly="readonly"></textarea>
-				<p class="guideline"><?php esc_html_e('Hit "Generate & Copy" button to generate embed code. It will be copied to your Clipboard. You can now paste this embed code inside your website\'s HTML where you want to show the List.', 'qc-opd'); ?></p>
+				<p class="guideline"><?php esc_html_e('Hit "Generate & Copy" button to generate embed code. It will be copied to your Clipboard. You can now paste this embed code inside your website\'s HTML where you want to show the List.', 'simple-link-directory'); ?></p>
 			  </div>
 			</div>
 		  </div>
