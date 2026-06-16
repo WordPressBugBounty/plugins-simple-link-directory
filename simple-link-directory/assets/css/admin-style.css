@@ -508,8 +508,8 @@ i.qc_sld_btn {
 }
 .sld_nav_container a.nav-tab-active,
 .sld_nav_container a.nav-tab-active:hover {
-    background: #ffffff;
-    color: #2563eb;
+    background: #5B4E96;
+    color: #fff;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 .qcld-importstylebox {
