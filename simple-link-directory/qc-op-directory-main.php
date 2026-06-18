@@ -3,7 +3,7 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 9.0.6
+ * Version: 9.0.7
  * Author: Link Directory
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -14,6 +14,22 @@
  */
 
 defined('ABSPATH') or die("No direct script access!");
+
+
+// Abort execution if Pro version is active to prevent conflicts
+if ( defined('SLD_QCOPD_URL') ) {
+    return;
+}
+
+// Also abort if we are currently activating the Pro plugin
+if ( isset($_REQUEST['action']) ) {
+    if ( $_REQUEST['action'] == 'activate' && isset($_REQUEST['plugin']) && strpos($_REQUEST['plugin'], 'qc-simple-link-directory') !== false ) {
+        return;
+    }
+    if ( $_REQUEST['action'] == 'activate-selected' && isset($_POST['checked']) && in_array('qc-simple-link-directory/qc-op-directory-main.php', $_POST['checked']) ) {
+        return;
+    }
+}
 
 //Custom Constants
 if (!defined('QCOPD_URL')) {
