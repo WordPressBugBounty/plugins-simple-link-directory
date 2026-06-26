@@ -2714,3 +2714,14 @@ div#language_settings table.form-table  tr th {
 .sld-demo-notice-text {
     flex-grow: 1;
 }
+.sld-alert-warning {
+    margin: 25px 0 0 0;
+}
+.qcld-importstylebox h3 {
+    padding: 0 0 15px 0;
+}
+button#sld_test_openai_btn, button#sld_test_gemini_btn, button#sld_test_openrouter_btn {
+    background: #5b4e96;
+    color: #fff;
+    border-color: #5b4e96;
+}

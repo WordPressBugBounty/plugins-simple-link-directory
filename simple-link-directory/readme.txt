@@ -4,7 +4,7 @@ Donate link: https://www.quantumcloud.com/products/simple-link-directory/
 Tags: directory, directory listing, link directory, link management, web directory
 Requires at least: 4.6
 Tested up to: 7.0
-Stable tag: 9.0.7
+Stable tag: 9.0.8
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.quantumcloud.com/products/simple-link-directory/
@@ -14,7 +14,7 @@ AI Powered LINK DIRECTORY Plugin for WordPress to Curate Links for Web Directory
 == Description ==
 = AI Powered Free WordPress Link Directory Plugin to curate links for web directory =
 
-Free WordPress Link Directory Plugin for your External Link Directory Listings! Simple Link Directory is a unique and advanced WordPress Directory plugin and an External Link Listings Manager for One Page directory and Content Curation. Create innovative and elegant Link, Resources page or Link page on your WordPress website in matter of minutes.
+Free WordPress Link Directory Plugin for your External Link Directory Listings! Simple Link Directory is a simple WordPress Directory plugin and an External Link Listings Manager for One Page directory and Content Curation. Create innovative and elegant Link, Resources page or Link page on your WordPress website in matter of minutes.
 
 > 🚀 <strong>Upgrade to [Simple Link Directory](https://www.quantumcloud.com/products/simple-link-directory/) PRO now!</strong>
 > 🚀 [Support, Bug Report, Feature Requests](https://www.quantumcloud.com/resources/free-support/) | [Link Directory Demo](https://dev.quantumcloud.com/sld/)
@@ -377,6 +377,9 @@ You can change the language texts from the Settings area. Currently, multi langu
 
 
 == Changelog ==
+
+= 9.0.8 =
+# Admin UI update
 
 = 9.0.7 =
 # Fixed a conflict with Pro version
