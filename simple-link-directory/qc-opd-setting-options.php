@@ -907,7 +907,7 @@ function qcopd_settings_page_callback_func()
                               style="padding: 15px 10px; border: 1px solid #ccc; text-align: center; margin-top: 20px; background: #222; color: #fff;">
                               <?php esc_html_e('Crafted By:', 'simple-link-directory'); ?> <a
                                 href="<?php echo esc_url('http://www.quantumcloud.com'); ?>"
-                                target="_blank"><?php esc_html_e('Web Design Company', 'simple-link-directory'); ?></a>
+                                target="_blank" rel="nofollow"><?php esc_html_e('Web Design Company', 'simple-link-directory'); ?></a>
                               <?php esc_html_e('- QuantumCloud', 'simple-link-directory'); ?>
                             </div>
                           </div>

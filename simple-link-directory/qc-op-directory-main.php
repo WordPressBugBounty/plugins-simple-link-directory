@@ -3,7 +3,7 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 9.0.8
+ * Version: 9.0.9
  * Author: QuantumCloud
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -15,9 +15,11 @@
 
 defined('ABSPATH') or die("No direct script access!");
 
-
 // Abort execution if Pro version is active to prevent conflicts
-if ( defined('SLD_QCOPD_URL') ) {
+if ( ! function_exists( 'is_plugin_active' ) ) {
+    require_once ABSPATH . 'wp-admin/includes/plugin.php';
+}
+if ( is_plugin_active( 'qc-simple-link-directory/qc-op-directory-main.php' ) ) {
     return;
 }
 
@@ -592,7 +594,7 @@ function qcopd_sld_wp_shortcode_notice()
                     </div>
                     <i class="dashicons dashicons-admin-home"></i>
                 </a>
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/frequently-asked-questions/'); ?>"
+                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>"
                     target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" rel="noopener noreferrer"
                     target="_blank" style="transition-delay: 60ms;">
                     <div class="qcld-sldquick-flyout-label">

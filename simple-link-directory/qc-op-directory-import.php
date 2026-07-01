@@ -204,7 +204,7 @@ class Qcopd_BulkImportFree
                                 <!-- Modernized Footer -->
                                 <div class="sld-import-footer">
                                     <?php esc_html_e('Crafted By:', 'simple-link-directory'); ?> 
-                                    <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank">
+                                    <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank" rel="nofollow">
                                         <?php esc_html_e('Web Design Company', 'simple-link-directory'); ?>
                                     </a> 
                                     <?php esc_html_e('- QuantumCloud', 'simple-link-directory'); ?>
