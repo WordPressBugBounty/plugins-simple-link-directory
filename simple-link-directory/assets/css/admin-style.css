@@ -2725,3 +2725,6 @@ button#sld_test_openai_btn, button#sld_test_gemini_btn, button#sld_test_openrout
     color: #fff;
     border-color: #5b4e96;
 }
+.post-type-sld .postbox {
+    overflow: unset !important;
+}
