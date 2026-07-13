@@ -90,7 +90,7 @@ if( !class_exists('QCOPD_SLD_Plugin_Upgrade_To_Pro_Notice') )
 			) );
 
 			$links = array_merge( $links, array(
-				'<a title="Support" class="'.esc_attr($this->link_class).'" style="" href="' . esc_url( 'https://www.quantumcloud.com/resources/free-support/' ) . '" target="_blank">' . esc_html( 'Support', 'simple-link-directory' ) . '</a>'
+				'<a title="Support" class="'.esc_attr($this->link_class).'" style="" href="' . esc_url( 'https://wordpress.org/support/plugin/simple-link-directory/' ) . '" target="_blank">' . esc_html( 'Support', 'simple-link-directory' ) . '</a>'
 			) );
 
 			$links = array_merge( $links, array(

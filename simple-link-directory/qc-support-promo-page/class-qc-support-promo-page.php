@@ -90,7 +90,7 @@ if ( ! function_exists( 'qc_sld_promo_support_page_callback_func' ) ) {
                 <div class="qc-column-12" >
                     <div class="support-btn">
                         
-                        <a class="premium-support premium-support-free" href="<?php echo esc_url('https://www.quantumcloud.com/resources/free-support/') ?>" target="_blank"><?php esc_html_e('Get Support for Free Version', 'simple-link-directory') ?></a>
+                        <a class="premium-support premium-support-free" href="<?php echo esc_url('https://wordpress.org/support/plugin/simple-link-directory/') ?>" target="_blank"><?php esc_html_e('Get Support for Free Version', 'simple-link-directory') ?></a>
                     </div>
                 </div>
             </div>
