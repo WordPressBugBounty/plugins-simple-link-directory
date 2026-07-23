@@ -224,3 +224,7 @@ color: #222;
     align-items: center;
     margin: 0;
 }
+
+.qcld-main-container-style-simple .simple .list-img, .qcld-main-container-style-simple .simple .qcopd-single-list ul li a, .qcld-main-container-style-simple .simple .upvote-section, .qcld-main-container-style-simple .simple .upvote-count, .qcld-main-container-style-simple .simple .upvote-btn {
+    border-color: transparent !important;
+}
