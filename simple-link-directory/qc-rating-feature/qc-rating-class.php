@@ -19,7 +19,7 @@ if( !class_exists('Qcrating') ){
 		public $plugin_rating_url = "https://wordpress.org/support/view/plugin-reviews/simple-link-directory?rate=5#postform";
 		
 		public function __construct(){
-			$this->logo_url = QCOPD_IMG_URL . "/logo.png";
+			$this->logo_url = SLD_QCOPD_IMG_URL . "/logo.png";
 		}
 		
 		function run(){

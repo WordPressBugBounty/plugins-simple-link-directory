@@ -7,7 +7,7 @@ wp_enqueue_style('sld-css-style-2' );
 	$sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'on':'';
 
 	if($sld_enable_rtl =='on'){
-		$css = '.qcopd-list-wrapper .style-2 .ca-menu li {float:right;}';
+		$css = '.qcopd-list-wrapper .style-2 .ca-menu li {float:none;}';
 		wp_add_inline_style( 'sld-css-style-2', $css );
 
 	}
@@ -131,7 +131,7 @@ if ( $list_query->have_posts() )
 								</span>
 							<?php else : ?>
 								<span class="ca-icon list-img-1">
-									<img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/list-image-placeholder.png" alt="">
+									<img src="<?php echo esc_url( SLD_QCOPD_IMG_URL ); ?>/list-image-placeholder.png" alt="">
 								</span>
 							<?php endif; ?>
 

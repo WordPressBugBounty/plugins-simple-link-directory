@@ -54,7 +54,7 @@ class Qcopd_BulkImportFree
                                 <div class="sld-import-card">
                                     <p>
                                         <strong><?php esc_html_e('Sample CSV File:', 'simple-link-directory'); ?></strong>
-                                        <a href="<?php echo esc_url(QCOPD_ASSETS_URL . '/file/sample-csv-file.csv'); ?>"
+                                        <a href="<?php echo esc_url(SLD_QCOPD_ASSETS_URL . '/file/sample-csv-file.csv'); ?>"
                                             target="_blank" class="sld-btn-primary" style="padding: 5px 15px; font-size: 12px; margin-left: 10px;">
                                             <?php esc_html_e('Download Sample', 'simple-link-directory'); ?>
                                         </a>

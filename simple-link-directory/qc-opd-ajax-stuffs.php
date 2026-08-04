@@ -156,7 +156,7 @@ if (!function_exists('qcopd_help_render_sidebar')) {
 
         <div class="sld-pro-banner">
           <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank">
-            <img src="<?php echo esc_url(QCOPD_IMG_URL . '/sld-logo.png'); ?>" />
+            <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL . '/sld-logo.png'); ?>" />
           </a>
         </div>
 

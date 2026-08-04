@@ -173,7 +173,7 @@ if ( $list_query->have_posts() )
 								</span>
 							<?php else : ?>
 								<span class="ca-icon list-img-1">
-									<img src="<?php echo esc_url( QCOPD_IMG_URL ); ?>/list-image-placeholder.png" alt="">
+									<img src="<?php echo esc_url( SLD_QCOPD_IMG_URL ); ?>/list-image-placeholder.png" alt="">
 								</span>
 							<?php endif; ?>
 							</a>

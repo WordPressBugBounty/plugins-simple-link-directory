@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Link Directory - Simple Link Directory
- * Plugin URI: https://www.quantumcloud.com/
+ * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 9.1.2
+ * Version: 9.1.3
  * Author: QuantumCloud
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -25,41 +25,41 @@ if ( is_plugin_active( 'qc-simple-link-directory/qc-op-directory-main.php' ) ) {
 
 // Also abort if we are currently activating the Pro plugin
 if ( isset($_REQUEST['action']) ) {
-    if ( $_REQUEST['action'] == 'activate' && isset($_REQUEST['plugin']) && strpos($_REQUEST['plugin'], 'qc-simple-link-directory') !== false ) {
+    if ( $_REQUEST['action'] == 'activate' && isset($_REQUEST['plugin']) && strpos(sanitize_text_field(wp_unslash($_REQUEST['plugin'])), 'qc-simple-link-directory') !== false ) {
         return;
     }
-    if ( $_REQUEST['action'] == 'activate-selected' && isset($_POST['checked']) && in_array('qc-simple-link-directory/qc-op-directory-main.php', $_POST['checked']) ) {
+    if ( sanitize_text_field(wp_unslash($_REQUEST['action'])) == 'activate-selected' && isset($_POST['checked']) && in_array('qc-simple-link-directory/qc-op-directory-main.php', $_POST['checked']) ) {
         return;
     }
 }
 
 //Custom Constants
-if (!defined('QCOPD_URL')) {
-    define('QCOPD_URL', plugin_dir_url(__FILE__));
+if (!defined('SLD_QCOPD_URL')) {
+    define('SLD_QCOPD_URL', plugin_dir_url(__FILE__));
 }
 
-if (!defined('QCOPD_IMG_URL')) {
-    define('QCOPD_IMG_URL', QCOPD_URL . "assets/images");
+if (!defined('SLD_QCOPD_IMG_URL')) {
+    define('SLD_QCOPD_IMG_URL', SLD_QCOPD_URL . "assets/images");
 }
 
-if (!defined('QCOPD_ASSETS_URL')) {
-    define('QCOPD_ASSETS_URL', QCOPD_URL . "assets");
+if (!defined('SLD_QCOPD_ASSETS_URL')) {
+    define('SLD_QCOPD_ASSETS_URL', SLD_QCOPD_URL . "assets");
 }
 
-if (!defined('QCOPD_DIR')) {
-    define('QCOPD_DIR', dirname(__FILE__));
+if (!defined('SLD_QCOPD_DIR')) {
+    define('SLD_QCOPD_DIR', dirname(__FILE__));
 }
 
-if (!defined('QCOPD_INC_DIR')) {
-    define('QCOPD_INC_DIR', QCOPD_DIR . "/inc");
+if (!defined('SLD_QCOPD_INC_DIR')) {
+    define('SLD_QCOPD_INC_DIR', SLD_QCOPD_DIR . "/inc");
 }
 
-if (!defined('OCOPD_TPL_URL')) {
-    define('OCOPD_TPL_URL', QCOPD_URL . "templates");
+if (!defined('SLD_OCOPD_TPL_URL')) {
+    define('SLD_OCOPD_TPL_URL', SLD_QCOPD_URL . "templates");
 }
 
-if (!defined('OCOPD_TPL_DIR')) {
-    define('OCOPD_TPL_DIR', QCOPD_DIR . "templates");
+if (!defined('SLD_OCOPD_TPL_DIR')) {
+    define('SLD_OCOPD_TPL_DIR', SLD_QCOPD_DIR . "templates");
 }
 
 // Define a constant for the CSV file path within the plugin directory
@@ -240,7 +240,7 @@ function qcopd_options_instructions_example()
     $screen = get_current_screen();
 
     if (is_admin() && ($screen->post_type == 'sld')) {
-        wp_enqueue_script('jqc-slick.min-js', QCOPD_ASSETS_URL . '/js/slick.min.js', array('jquery'));
+        wp_enqueue_script('jqc-slick.min-js', SLD_QCOPD_ASSETS_URL . '/js/slick.min.js', array('jquery'));
         ?>
         <div class="notice notice-info is-dismissible sld-notice" style="display:none">
             <div class="sld_info_carousel">
@@ -519,7 +519,7 @@ function qcopd_sld_wp_shortcode_notice()
         /*printf(
             __('%s  %s  %s', 'dna88-wp-notice'),
             '<a href="'.esc_url('https://www.quantumcloud.com/products/simple-link-directory/').'" target="_blank">',
-            '<img src="'.esc_url(QCOPD_ASSETS_URL).'/images/halloween25-sld.jpg" >',
+            '<img src="'.esc_url(SLD_QCOPD_ASSETS_URL).'/images/halloween25-sld.jpg" >',
             '</a>'
         );*/
 
@@ -556,7 +556,7 @@ function qcopd_sld_wp_shortcode_notice()
             <div id="message" class="notice notice-info is-dismissible qcld-sld-demonotic-alart">
                 <div class="sld-demo-notice-content">
                     <div class="sld-demo-notice-icon">
-                        <img src="<?php echo esc_url(QCOPD_IMG_URL . '/sld-logo.png'); ?>" alt="SLD Logo">
+                        <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL . '/sld-logo.png'); ?>" alt="SLD Logo">
                     </div>
                     <div class="sld-demo-notice-text">
                         <p>
@@ -638,7 +638,7 @@ function qcopd_sld_wp_shortcode_notice()
                 <div class="qcld-sldquick-flyout-label">
                     <div><?php esc_html_e('Start Here', 'simple-link-directory'); ?></div>
                 </div>
-                <img style="width:100%" src="<?php echo esc_url(QCOPD_IMG_URL . '/logo.png'); ?>" alt="Dialogflow CX">
+                <img style="width:100%" src="<?php echo esc_url(SLD_QCOPD_IMG_URL . '/logo.png'); ?>" alt="Dialogflow CX">
             </a>
         </div>
     <?php

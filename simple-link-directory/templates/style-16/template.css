@@ -167,9 +167,7 @@ color: #222;
   background: none !important;
 }
 
-.qcld-main-container-style-16 .qcsld-new-style-16 .opd-column-3 {
-  width: 29% !important;
-}
+
 .qcld-main-container-style-16 .QCsld-new a{
   background: none !important;
 }
@@ -210,7 +208,7 @@ color: #222;
 }
 
 .qcld-main-container-style-16 .qcsld-new-style-16 .style-16 .qcopd-single-list ul li :hover {
-  border-color: #fff !important;
+  border-color: transparent !important;
 }
 
 .qcld-main-container-style-16 .qcsld-new-style-16 .style-16 .list-img.favicon-loaded > img {
@@ -248,22 +246,10 @@ color: #222;
 .qcld-main-container-style-16 .qcsld-new-style-16 a{
   color: #555 !important; 
 }
-@media only screen and (max-width: 992px) {
-  .qcld-main-container-style-16 .qcsld-new-style-16 .opd-column-3 {
-    width: 40% !important;
-    margin: 0 auto !important;
-  }
-}
 
-@media only screen and (max-width: 480px) {
-  .qcld-main-container-style-16 .qcsld-new-style-16 .opd-column-3 {
-    width: 100% !important;
-    margin: 0 auto !important;
-    max-width: initial;
-    left: 0px !important;
-    right: 0 !important;
-}
-}
+
+
+
 .qcld-main-container-style-16 .qcsld-new-style-16 .style-16 ul li > a {
   line-height: 26px;
 }
@@ -314,47 +300,9 @@ color: #222;
 .qcld-main-container-style-16 .advertise-block img {
     float: left;
 }
-.qcld-main-container-style-16 .opd-column-2 {
-    width: 49% !important;
-}
-.qcld-main-container-style-16 .qcsld-new-style-16 .opd-column-3 {
-    width: 32% !important;
-}
+
 .qcld-main-container-style-16 .qcsld-new-style-16 .featured-section {
   position: ABSOLUTE;
   right: 44px;
   top: 6px;
-}
-
-.qcld-main-container-style-16 .qcsld-new-style-16 .opd-column-2 {
-  width: 47% !important;
-}
-
-.qcld-main-container-style-16 .qcsld-new-style-16 .opd-column-1 {
-  width: 100% !important;
-}
-@media only screen and (min-width: 1201px) and (max-width: 1920px){
-  .qcld-main-container-style-16 .qcopd-list-column.opd-column-2 {
-    margin-right: .5%;
-}
-}
-
-@media only screen and (min-width: 1201px) and (max-width: 1920px){
-  .qcld-main-container-style-16 .qcopd-list-column.opd-column-3 {
-    margin-right: .5%;
-}
-}
-
-@media only screen and (max-width: 768px){
-  .qcld-main-container-style-16  .qcsld-new-style-16 .opd-column-3 {
-    width: 49%!important;
-  }
-}
-@media only screen and (max-width: 561px){
-  .qcld-main-container-style-16  .qcsld-new-style-16 .style-16 {
-    width: 100% !important;
-  }
-  .qcld-main-container-style-16  .qcsld-new-style-16 .opd-column-3 {
-    width: 100%!important;
-  } 
 }

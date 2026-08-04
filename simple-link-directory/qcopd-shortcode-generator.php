@@ -29,7 +29,7 @@ add_action ('init', 'qcopd_sld_tinymce_shortcode_button_function');
 if ( ! function_exists( 'qcopd_sld_load_custom_wp_admin_style_free' ) ) {
 	function qcopd_sld_load_custom_wp_admin_style_free($hook) {
 		if( 'post.php' == $hook || 'post-new.php' == $hook ){
-	        wp_register_style( 'sld_shortcode_gerator_css', QCOPD_ASSETS_URL . '/css/shortcode-modal.css', false, '1.0.0' );
+	        wp_register_style( 'sld_shortcode_gerator_css', SLD_QCOPD_ASSETS_URL . '/css/shortcode-modal.css', false, '1.0.0' );
 	        wp_enqueue_style( 'sld_shortcode_gerator_css' );
 	    }
 	}

@@ -32,7 +32,7 @@ if ( ! function_exists( 'qcopd_register_cpt_sld' ) ) {
 			'show_in_nav_menus' 	=> false,
 			'supports'      		=> array( 'title' ),
 			'has_archive'   		=> true,
-			'menu_icon' 			=> QCOPD_IMG_URL . '/menu_icon.png',
+			'menu_icon' 			=> SLD_QCOPD_IMG_URL . '/menu_icon.png',
 		);
 		
 		register_post_type( 'sld', $qc_list_args );	
@@ -84,7 +84,7 @@ if ( ! function_exists( 'qcopd_load_cmb' ) ) {
 		if ( ! class_exists( 'CMB_Meta_Box' ) ){
 
 			if ( is_admin() && $post_type == 'sld') {
-				require_once QCOPD_INC_DIR . '/cmb/custom-meta-boxes.php';
+				require_once SLD_QCOPD_INC_DIR . '/cmb/custom-meta-boxes.php';
 			}
 		}
 	}
@@ -92,8 +92,8 @@ if ( ! function_exists( 'qcopd_load_cmb' ) ) {
 
 
 //Metabox Fields
-if ( ! function_exists( 'cmb_qcopd_dir_fields' ) ) {
-	function cmb_qcopd_dir_fields( array $meta_boxes ) {
+if ( ! function_exists( 'cmb_SLD_QCOPD_DIR_fields' ) ) {
+	function cmb_SLD_QCOPD_DIR_fields( array $meta_boxes ) {
 		
 		//Repeatable Fields
 		$qcopd_item_fields = array(
@@ -137,7 +137,7 @@ if ( ! function_exists( 'cmb_qcopd_dir_fields' ) ) {
 	}
 }
 
-add_filter( 'cmb_meta_boxes', 'cmb_qcopd_dir_fields', null );
+add_filter( 'cmb_meta_boxes', 'cmb_SLD_QCOPD_DIR_fields', null );
 
 //Custom Columns for Directory Listing
 if ( ! function_exists( 'qcopd_list_columns_head' ) ) {

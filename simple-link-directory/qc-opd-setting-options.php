@@ -93,7 +93,8 @@ function qcopd_settings_page_callback_func()
 
   ?>
 
-  <div class="wrap swpm-admin-menu-wrap  sld-dashboard-wrap">
+  <div class="wrap">
+  <div class="swpm-admin-menu-wrap  sld-dashboard-wrap">
 
 
     <div class="sld-row">
@@ -133,7 +134,7 @@ function qcopd_settings_page_callback_func()
                               <?php esc_html_e('Go to New List and create one by giving it a name. Then simply start adding List items or Links by filling up the fields you want. Use the Add New button to add more Links to your list.', 'simple-link-directory'); ?>
                             </div>
                             <div class="Getting_Started_img">
-                              <img src="<?php echo esc_url(QCOPD_IMG_URL); ?>/image.png" />
+                              <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL); ?>/image.png" />
                             </div>
                           </div>
                         </div>
@@ -149,7 +150,7 @@ function qcopd_settings_page_callback_func()
                               <?php esc_html_e('You can just create a single list and use the Single List mode. But this plugin works the best when you create a few Lists each conatining about 15-20 Llinks. This yields the best view.', 'simple-link-directory'); ?>
                             </div>
                             <div class="Getting_Started_img">
-                              <img src="<?php echo esc_url(QCOPD_IMG_URL); ?>/step2.png" />
+                              <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL); ?>/step2.png" />
                             </div>
                           </div>
                         </div>
@@ -165,7 +166,7 @@ function qcopd_settings_page_callback_func()
                               <?php esc_html_e('Go to the page or post you want to display the directory. On the right sidebar you will see a ShortCode Generator block. Generate a shortcode with the options you want. Copy paste that to a section on your page.', 'simple-link-directory'); ?>
                             </div>
                             <div class="Getting_Started_img">
-                              <img src="<?php echo esc_url(QCOPD_IMG_URL); ?>/step3.png" />
+                              <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL); ?>/step3.png" />
                             </div>
                           </div>
                         </div>
@@ -678,13 +679,13 @@ function qcopd_settings_page_callback_func()
                             <p>
                               <?php esc_html_e('We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode.', 'simple-link-directory'); ?>
                             </p>
-                            <img src="<?php echo esc_url(QCOPD_IMG_URL); ?>/classic.jpg" alt="shortcode generator" />
+                            <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL); ?>/classic.jpg" alt="shortcode generator" />
                             <h3><?php esc_html_e('See sample below for where to find it for Gutenberg.', 'simple-link-directory'); ?>
                             </h3>
-                            <img src="<?php echo esc_url(QCOPD_IMG_URL); ?>/gutenburg.jpg" alt="shortcode generator" />
-                            <img src="<?php echo esc_url(QCOPD_IMG_URL); ?>/gutenburg2.jpg" alt="shortcode generator" />
+                            <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL); ?>/gutenburg.jpg" alt="shortcode generator" />
+                            <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL); ?>/gutenburg2.jpg" alt="shortcode generator" />
                             <h3><?php esc_html_e('This is how the shortcode generator will look like.', 'simple-link-directory'); ?></h3>
-                            <img src="<?php echo esc_url(QCOPD_IMG_URL); ?>/shortcode-generator1.jpg"
+                            <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL); ?>/shortcode-generator1.jpg"
                               alt="shortcode generator" />
                             <div class="qcld-sld-shortcode-example">
                               <h3><?php esc_html_e('Shortcode Example', 'simple-link-directory'); ?></h3>
@@ -933,6 +934,7 @@ function qcopd_settings_page_callback_func()
       <!-- Sidebar -->
       <?php qcopd_help_render_sidebar(); ?>
     </div>
+  </div>
   </div>
 
 

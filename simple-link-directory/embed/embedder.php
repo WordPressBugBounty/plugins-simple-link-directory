@@ -9,9 +9,9 @@ add_action('wp_enqueue_scripts', 'qcopd_load_embed_scripts');
 function qcopd_load_embed_scripts()
 {
 	
-	wp_register_style('qcopd-embed-form-css', QCOPD_URL . 'embed/css/embed-form.css');
+	wp_register_style('qcopd-embed-form-css', SLD_QCOPD_URL . 'embed/css/embed-form.css');
 
-    wp_register_script('qcopd-embed-form-script', QCOPD_URL . 'embed/js/embed-form.js', array('jquery'));
+    wp_register_script('qcopd-embed-form-script', SLD_QCOPD_URL . 'embed/js/embed-form.js', array('jquery'));
 
 }
 
@@ -154,9 +154,30 @@ function qcld_custom_embedder($shortcodeAtts){
 		}
 	}
 
-if($enable_embedding == 'on'){ ?>
-<a class="button-link js-open-modal cls-embed-btn" href="#" data-modal-id="popup"
-           data-url="<?php echo esc_url(bloginfo('url')); ?>/embed-link"
+if($enable_embedding == 'on'){ 
+
+        $query = new WP_Query(
+            array(
+                'post_type'              => 'page',
+                'title'                  => 'Embed Link',
+                'post_status'            => 'all',
+                'posts_per_page'         => 1,
+                'no_found_rows'          => true,
+                'ignore_sticky_posts'    => true,
+                'update_post_term_cache' => false,
+                'update_post_meta_cache' => false,
+                'has_password'           => false,
+                'orderby'                => 'post_date ID',
+                'order'                  => 'ASC',
+            )
+        );
+
+        $page_got_by_title = ! empty( $query->post ) ? $query->post->guid : site_url( '/embed-link' );
+
+
+?>
+		<a class="button-link js-open-modal cls-embed-btn" href="#" data-modal-id="popup"
+           data-url="<?php echo esc_url($page_got_by_title); ?>"
            data-order="<?php echo esc_attr($shortcodeAtts['order']); ?>"
            data-mode="<?php echo esc_attr($shortcodeAtts['mode']); ?>"
            data-list-id="<?php echo esc_attr($shortcodeAtts['list_id']); ?>"

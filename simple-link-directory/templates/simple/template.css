@@ -82,7 +82,7 @@ color: #222;
 	height: 0;
 	border-style: solid;
 	border-width: 0 0 35px 25px;
-	border-color: transparent transparent #FFEB3B transparent;
+	border-color: transparent transparent #FFEB3B transparent !important;
 
 }
 .qcld-main-container-style-simple .simple .featured-section i {
@@ -117,7 +117,7 @@ color: #222;
   transition: all 0.3s ease;
 }
 .qcld-main-container-style-simple .simple .qcopd-single-list ul li:hover {
-  background: #fafafa !important;
+  background: #fafafa;
   color: #f86960;
 }
 

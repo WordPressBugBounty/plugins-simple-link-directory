@@ -56,9 +56,12 @@
     height: 230px;
     border: 10px solid #e8f5ff;
     position: relative;
-    float:left;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     background: #fff;
-    margin: 0 4px 10px 0;
+    margin: 0;
     -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -297,28 +300,7 @@
     }
 }
 
-/* RWD */ 
-@media only screen and (max-width : 801px) {
-    .qcld-main-container-style-3 .style-3.qc-grid-item{
-        position: absolute;
-        width: 100%;
-    }
-
-    .qcld-main-container-style-3 .style-3.qc-grid-item .ca-menu li{
-        width: 48%;
-    }
-}
-
-@media only screen and (max-width : 640px) {
-    .qcld-main-container-style-3 .style-3.qc-grid-item{
-        position: absolute;
-        width: 100%;
-    }
-
-    .qcld-main-container-style-3 .style-3.qc-grid-item .ca-menu li{
-        width: 100%;
-    }
-}
+/* RWD - column breakpoints handled by FR grid below */
 
 /*RTL CSS*/
 .qcld-main-container-style-3 .direction-rtl .qc-grid-item, .direction-rtl .qc-grid-item h3
@@ -339,8 +321,8 @@
 }
 
 .qcld-main-container-style-3 .direction-rtl .qc-grid-item .ca-menu li {
-  float: right;
-  margin: 0 0 15px 10px;
+  float: none;
+  margin: 0;
 }
 
 .qcld-main-container-style-3 .style-3 .ca-main {
@@ -434,6 +416,7 @@
     margin: 20px auto;
     width: 100%;
     display: grid;
+    gap: 15px;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -443,6 +426,7 @@
     margin: 20px auto;
     width: 100%;
     display: grid;
+    gap: 15px;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -452,6 +436,7 @@
     margin: 20px auto;
     width: 100%;
     display: grid;
+    gap: 15px;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr;
   }
@@ -461,6 +446,7 @@
     margin: 20px auto;
     width: 100%;
     display: grid;
+    gap: 15px;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr;
   }
@@ -569,6 +555,6 @@
     margin-right: unset !important;
 }
 .qcld-main-container-style-3 .style-3 .ca-menu li {
-    margin: 8px 0;
+    margin: 0;
 }
 }

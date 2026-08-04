@@ -54,9 +54,9 @@ if ( ! function_exists( 'sld_custom_sort_by_tpl_timestamp' ) ) {
 }
 
 //For all list elements
-add_shortcode('qcopd-directory', 'qcopd_directory_full_shortcode');
-if ( ! function_exists( 'qcopd_directory_full_shortcode' ) ) {
-	function qcopd_directory_full_shortcode( $atts = array() ){
+add_shortcode('qcopd-directory', 'SLD_QCOPD_DIRectory_full_shortcode');
+if ( ! function_exists( 'SLD_QCOPD_DIRectory_full_shortcode' ) ) {
+	function SLD_QCOPD_DIRectory_full_shortcode( $atts = array() ){
 
 		ob_start();
 	    qcopd_show_qcopd_full_list( $atts );
@@ -170,6 +170,10 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 			    if (e && e.stopImmediatePropagation) {
 			        e.stopImmediatePropagation();
 			    }
+			    $("body").addClass("sld-dark-mode");
+			    $("html").addClass("sld-dark-mode");
+			    $(".qcopd-list-wrapper").addClass("sld-dark-mode");
+
 			    const $targetWrapper = $toggle.closest(".sld-sld-theme-switch-wrapper").parent().parent();
 			    const $targetWrappers = $targetWrapper.find(".qcopd-list-wrapper ul li, .filter-area, .sld-tag-filter-area, .sld-top-area");
 			    const $allItems = $targetWrappers.find("div, a, p, h1, h2, h3, h4, h5, h6, span");
@@ -177,6 +181,7 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 
 			    $targetElements.each(function() {
 		            const $el = $(this);
+		            const el = this;
 		            
 		            // Store previous style only if not already stored
 		            if (!$el.data("previous-style")) {
@@ -185,9 +190,17 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 
 		            $el.css({
 		                "background-color": "#121212",
-		                "color": "#ffffff",
-		                "border-color": "#333"
+		                "color": "#ffffff"
 		            });
+
+		            // Remove border on list items/links — transparent still shows page bg as a light ring
+		            if ($el.is("li, a")) {
+		                el.style.setProperty("border", "none", "important");
+		                el.style.setProperty("border-width", "0", "important");
+		                el.style.setProperty("border-color", "#121212", "important");
+		                el.style.setProperty("box-shadow", "none", "important");
+		                el.style.setProperty("outline", "none", "important");
+		            }
 
 		            // Ensure text headers and links are white
 		            if ($el.is("a,h3 span, h1, h2, h3, h4, h5, h6")) {
@@ -200,6 +213,9 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 			    if (e && e.stopImmediatePropagation) {
 			        e.stopImmediatePropagation();
 			    }
+			    $("body").removeClass("sld-dark-mode");
+			    $("html").removeClass("sld-dark-mode");
+			    $(".qcopd-list-wrapper").removeClass("sld-dark-mode");
 	        	const $targetWrapper 	= $toggle.closest(".sld-sld-theme-switch-wrapper").parent().parent();
 	        	const $targetWrappers 	= $targetWrapper.find(".qcopd-list-wrapper ul li, .qcopd-list-wrapper ul li *, .sld-top-area, .sld-top-area *, .filter-area, .filter-area *, .sld-tag-filter-area, .sld-tag-filter-area *");
 			    $targetWrappers.each(function() {
@@ -212,7 +228,8 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 			            } else {
 			                $el.attr("style", oldStyle);
 			            }
-			        }
+			            $el.removeData("previous-style");
+		        }
 			    });
 			}
 
@@ -290,6 +307,9 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 
     if( isset($dark_mode) && ($dark_mode == 'on' || $dark_mode == 'show' || $dark_mode == 'yes' ) ){
 
+		// Apply dark-mode class ASAP so CSS hides borders before jQuery ready
+		$early_dark_js = '(function(){try{if(localStorage.getItem("user-theme-pref")==="dark-mode"){document.documentElement.classList.add("sld-dark-mode");}}catch(e){}})();';
+		wp_add_inline_script( 'qcopd-custom-script', $early_dark_js, 'before' );
 		wp_add_inline_script( 'qcopd-custom-script', $custom_js, 'after' );
     }
 
@@ -376,7 +396,7 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 		border-radius: 3px;
 		z-index:9999999999;
 		box-sizing: border-box;
-		background: url('". esc_url( QCOPD_IMG_URL )."/up-arrow.ico') no-repeat 8px 7px;
+		background: url('". esc_url( SLD_QCOPD_IMG_URL )."/up-arrow.ico') no-repeat 8px 7px;
 		background-size: 50%;
 	}";
 	wp_add_inline_style( 'qcopd-custom-css', $scrolltotop );
@@ -409,8 +429,8 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 	wp_enqueue_style('sld-css-style-1' );
 	
 	echo '<!--  Starting Simple Link Directory Plugin Output -->';
-	if ( file_exists( QCOPD_DIR ."/templates/".$template_code."/template.php" ) ) {
-		$tempath = QCOPD_DIR ."/templates/".$template_code."/template.php";
+	if ( file_exists( SLD_QCOPD_DIR ."/templates/".$template_code."/template.php" ) ) {
+		$tempath = SLD_QCOPD_DIR ."/templates/".$template_code."/template.php";
 	    require ( $tempath );
 	}
 	wp_reset_postdata();
@@ -436,19 +456,29 @@ if ( ! function_exists( 'qcopd_custom_styles_scripts' ) ) {
 
 			$customscript = "jQuery(window).on('load',function()
 			{
-				jQuery('.qc-grid').packery({
+				var \$grid = jQuery('.qc-grid');
+				\$grid.packery({
 				  itemSelector: '.qc-grid-item',
 				  gutter: 10,
+				  percentPosition: true,
 				  originLeft: false
+				});
+				jQuery(window).on('resize', function(){
+					\$grid.packery('layout');
 				});
 			});";
 			wp_add_inline_script( 'qcopd-custom-script', ($customscript) );
 		}else{
 			$customscript = "jQuery(window).on('load',function()
 			{
-				jQuery('.qc-grid').packery({
+				var \$grid = jQuery('.qc-grid');
+				\$grid.packery({
 				  itemSelector: '.qc-grid-item',
-				  gutter: 10
+				  gutter: 10,
+				  percentPosition: true
+				});
+				jQuery(window).on('resize', function(){
+					\$grid.packery('layout');
 				});
 			});";
 			wp_add_inline_script( 'qcopd-custom-script', ($customscript) );

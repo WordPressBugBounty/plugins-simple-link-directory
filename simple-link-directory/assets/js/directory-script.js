@@ -202,6 +202,7 @@ jQuery(document).ready(function($)
                 grid.packery('destroy').packery({
                   itemSelector: '.qc-grid-item',
                   gutter: 10,
+                  percentPosition: true,
                   originLeft: false
                 });
 
@@ -210,7 +211,7 @@ jQuery(document).ready(function($)
                 grid.packery('destroy').packery({
                   itemSelector: '.qc-grid-item',
                   gutter: 10,
-                  
+                  percentPosition: true
                 });
             }
             
