@@ -1,4 +1,4 @@
-<?php 
+<?php
 defined('ABSPATH') or die("No direct script access!");
 
 wp_head();
@@ -22,8 +22,3 @@ echo '</div>';
 
 wp_footer();
 ?>
-
-
-
-
-

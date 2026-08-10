@@ -441,7 +441,10 @@ function qcopd_settings_page_callback_func()
                     <select name="sld_openai_model" id="sld_openai_model">
                       <?php
                       $selected_model = get_option('sld_openai_model', 'gpt-4o');
-                      $models = qcopd_sld_get_openai_models();
+                      $models = get_option('sld_openai_models_list', array());
+                      if (!is_array($models)) {
+                          $models = array();
+                      }
 
                       $manual_models = get_option('sld_openai_manual_models');
                       if (!empty($manual_models)) {
@@ -512,7 +515,10 @@ function qcopd_settings_page_callback_func()
                     <select name="sld_gemini_model" id="sld_gemini_model">
                       <?php
                       $selected_gemini = get_option('sld_gemini_model', 'gemini-1.5-flash');
-                      $gemini_models = qcopd_sld_get_gemini_models();
+                      $gemini_models = get_option('sld_gemini_models_list', array());
+                      if (!is_array($gemini_models)) {
+                          $gemini_models = array();
+                      }
 
                       $manual_models = get_option('sld_gemini_manual_models');
                       if (!empty($manual_models)) {
@@ -585,7 +591,10 @@ function qcopd_settings_page_callback_func()
                     <select name="sld_openrouter_model" id="sld_openrouter_model">
                       <?php
                       $selected_openrouter = get_option('sld_openrouter_model', 'google/gemini-2.5-flash');
-                      $openrouter_models = qcopd_sld_get_openrouter_models();
+                      $openrouter_models = get_option('sld_openrouter_models_list', array());
+                      if (!is_array($openrouter_models)) {
+                          $openrouter_models = array();
+                      }
 
                       $manual_models = get_option('sld_openrouter_manual_models');
                       if (!empty($manual_models)) {
@@ -944,197 +953,20 @@ function qcopd_settings_page_callback_func()
 
 }
 
-/**
- * Get OpenAI Models list via curl or fallback/transient cache
- */
-function qcopd_sld_get_openai_models()
-{
-  $api_key = get_option('sld_openai_api_key');
-  if (empty($api_key)) {
-    return array(
-      'gpt-4o' => 'gpt-4o (Recommended)',
-      'gpt-4o-mini' => 'gpt-4o-mini',
-      'o1-mini' => 'o1-mini',
-      'o1-preview' => 'o1-preview',
-      'o3-mini' => 'o3-mini',
-      'gpt-4-turbo' => 'gpt-4-turbo',
-      'gpt-4' => 'gpt-4',
-      'gpt-3.5-turbo' => 'gpt-3.5-turbo',
-    );
-  }
-
-  $transient_key = 'sld_openai_models_list';
-  $models = get_transient($transient_key);
-  if (false !== $models) {
-    return $models;
-  }
-
-  $url = 'https://api.openai.com/v1/models';
-  $headers = array(
-    'Authorization' => 'Bearer ' . $api_key,
-  );
-  $response = wp_remote_get($url, array(
-    'headers' => $headers,
-    'timeout' => 10,
-  ));
-
-  if (!is_wp_error($response)) {
-    $code = wp_remote_retrieve_response_code($response);
-    $body = wp_remote_retrieve_body($response);
-    $data = json_decode($body, true);
-
-    if ($code === 200 && !empty($data['data'])) {
-      $fetched_models = array();
-      foreach ($data['data'] as $model) {
-        $id = $model['id'];
-        if (strpos($id, 'gpt') === 0 || strpos($id, 'o1') === 0 || strpos($id, 'o3') === 0) {
-          $fetched_models[$id] = $id;
-        }
-      }
-      if (!empty($fetched_models)) {
-        asort($fetched_models);
-        set_transient($transient_key, $fetched_models, DAY_IN_SECONDS);
-        return $fetched_models;
-      }
-    }
-  }
-
-  return array(
-    'gpt-4o' => 'gpt-4o (Recommended)',
-    'gpt-4o-mini' => 'gpt-4o-mini',
-    'o1-mini' => 'o1-mini',
-    'o1-preview' => 'o1-preview',
-    'o3-mini' => 'o3-mini',
-    'gpt-4-turbo' => 'gpt-4-turbo',
-    'gpt-4' => 'gpt-4',
-    'gpt-3.5-turbo' => 'gpt-3.5-turbo',
-  );
-}
-
-/**
- * Get Google Gemini Models list via curl or fallback/transient cache
- */
-function qcopd_sld_get_gemini_models()
-{
-  $api_key = get_option('sld_gemini_api_key');
-  if (empty($api_key)) {
-    return array(
-      'gemini-1.5-flash' => 'gemini-1.5-flash (Recommended)',
-      'gemini-1.5-pro' => 'gemini-1.5-pro',
-      'gemini-2.0-flash' => 'gemini-2.0-flash',
-      'gemini-2.0-pro' => 'gemini-2.0-pro',
-      'gemini-1.0-pro' => 'gemini-1.0-pro',
-    );
-  }
-
-  $transient_key = 'sld_gemini_models_list';
-  $models = get_transient($transient_key);
-  if (false !== $models) {
-    return $models;
-  }
-
-  $url = 'https://generativelanguage.googleapis.com/v1beta/models?key=' . $api_key;
-  $response = wp_remote_get($url, array(
-    'timeout' => 10,
-  ));
-
-  if (!is_wp_error($response)) {
-    $code = wp_remote_retrieve_response_code($response);
-    $body = wp_remote_retrieve_body($response);
-    $data = json_decode($body, true);
-
-    if ($code === 200 && !empty($data['models'])) {
-      $fetched_models = array();
-      foreach ($data['models'] as $model) {
-        $name = str_replace('models/', '', $model['name']);
-        $fetched_models[$name] = $name;
-      }
-      if (!empty($fetched_models)) {
-        asort($fetched_models);
-        set_transient($transient_key, $fetched_models, DAY_IN_SECONDS);
-        return $fetched_models;
-      }
-    }
-  }
-
-  return array(
-    'gemini-1.5-flash' => 'gemini-1.5-flash (Recommended)',
-    'gemini-1.5-pro' => 'gemini-1.5-pro',
-    'gemini-2.0-flash' => 'gemini-2.0-flash',
-    'gemini-2.0-pro' => 'gemini-2.0-pro',
-    'gemini-1.0-pro' => 'gemini-1.0-pro',
-  );
-}
-
 add_action('update_option_sld_openai_api_key', 'qcopd_sld_clear_openai_models_transient');
 function qcopd_sld_clear_openai_models_transient()
 {
-  delete_transient('sld_openai_models_list');
+  delete_option('sld_openai_models_list');
 }
 
 add_action('update_option_sld_gemini_api_key', 'qcopd_sld_clear_gemini_models_transient');
 function qcopd_sld_clear_gemini_models_transient()
 {
-  delete_transient('sld_gemini_models_list');
-}
-
-/**
- * Get OpenRouter Models list via curl or fallback/transient cache
- */
-function qcopd_sld_get_openrouter_models()
-{
-  $api_key = get_option('sld_openrouter_api_key');
-  $fallback_models = array(
-    'google/gemini-2.5-flash' => 'Google: Gemini 2.5 Flash',
-    'meta-llama/llama-3.3-70b-instruct' => 'Meta: Llama 3.3 70B Instruct',
-    'deepseek/deepseek-chat' => 'DeepSeek: DeepSeek Chat',
-    'anthropic/claude-3.5-sonnet' => 'Anthropic: Claude 3.5 Sonnet',
-    'openai/gpt-4o-mini' => 'OpenAI: GPT-4o Mini',
-    'openai/gpt-4o' => 'OpenAI: GPT-4o',
-  );
-
-  if (empty($api_key)) {
-    return $fallback_models;
-  }
-
-  $transient_key = 'sld_openrouter_models_list';
-  $models = get_transient($transient_key);
-  if (false !== $models) {
-    return $models;
-  }
-
-  $url = 'https://openrouter.ai/api/v1/models';
-  $response = wp_remote_get($url, array(
-    'timeout' => 12,
-  ));
-
-  if (!is_wp_error($response)) {
-    $code = wp_remote_retrieve_response_code($response);
-    $body = wp_remote_retrieve_body($response);
-    $data = json_decode($body, true);
-
-    if ($code === 200 && !empty($data['data'])) {
-      $fetched_models = array();
-      foreach ($data['data'] as $model) {
-        $id = $model['id'];
-        $name = !empty($model['name']) ? $model['name'] : $id;
-        $fetched_models[$id] = $name;
-      }
-      if (!empty($fetched_models)) {
-        asort($fetched_models);
-        set_transient($transient_key, $fetched_models, DAY_IN_SECONDS);
-        return $fetched_models;
-      }
-    }
-  }
-
-  return $fallback_models;
+  delete_option('sld_gemini_models_list');
 }
 
 add_action('update_option_sld_openrouter_api_key', 'qcopd_sld_clear_openrouter_models_transient');
 function qcopd_sld_clear_openrouter_models_transient()
 {
-  delete_transient('sld_openrouter_models_list');
+  delete_option('sld_openrouter_models_list');
 }
-
-

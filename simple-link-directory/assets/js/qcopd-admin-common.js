@@ -770,8 +770,15 @@ jQuery(document).ready(function ($) {
 						});
 
 						$.each(combinedModels, function (index, modelId) {
-							var selectedAttr = (modelId === currentSelected) ? ' selected="selected"' : '';
-							modelSelect.append('<option value="' + modelId + '"' + selectedAttr + '>' + modelId + '</option>');
+							var modelName = (response.data.models_names && response.data.models_names[modelId]) ? response.data.models_names[modelId] : modelId;
+							var selectedAttr = '';
+							if (modelId === currentSelected) {
+								selectedAttr = ' selected="selected"';
+							} else if (!currentSelected && modelId === 'gpt-4o') {
+								selectedAttr = ' selected="selected"';
+								currentSelected = modelId; // Ensure we only select it once if there are duplicates for some reason
+							}
+							modelSelect.append('<option value="' + modelId + '"' + selectedAttr + '>' + modelName + '</option>');
 						});
 					}
 				} else {

@@ -432,24 +432,38 @@ function qcopd_sld_test_openai_connection()
   $body = wp_remote_retrieve_body($response);
   $data = json_decode($body, true);
 
-  if ($code === 200 && !empty($data['data'])) {
+  if ($code === 200 && isset($data['data'])) {
     $models = array();
+    $fetched_models = array();
+    $model_prefixes = array('gpt', 'o1', 'o3');
+    $sld_openai_models_list = get_option('sld_openai_models_list', array());
+    if (!is_array($sld_openai_models_list)) {
+      $sld_openai_models_list = array();
+    }
     foreach ($data['data'] as $model) {
       $id = $model['id'];
-      if (strpos($id, 'gpt') === 0 || strpos($id, 'o1') === 0 || strpos($id, 'o3') === 0) {
-        $models[] = $id;
+      foreach ($model_prefixes as $prefix) {
+        if (strpos($id, $prefix) === 0) {
+          $name = isset($sld_openai_models_list[$id]) ? $sld_openai_models_list[$id] : $id;
+          if ($id === 'gpt-4o' && strpos($name, '(Recommended)') === false) {
+             $name .= ' (Recommended)';
+          }
+          $models[] = $id;
+          $fetched_models[$id] = $name;
+          break;
+        }
       }
     }
-
-    asort($models);
-    $models = array_values($models);
-
+    sort($models);
+    asort($fetched_models);
+    update_option('sld_openai_models_list', $fetched_models);
     wp_send_json_success(array(
-      'message' => esc_html('Connection Successful!', 'simple-link-directory'),
+      'message' => esc_html('Connection successful! Valid API Key.', 'simple-link-directory'),
       'models' => $models,
+      'models_names' => $fetched_models,
     ));
   } else {
-    $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html('Invalid API key or network error.', 'simple-link-directory');
+    $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html('Invalid API Key or API error.', 'simple-link-directory');
     wp_send_json_error(array('message' => $error_message));
   }
 }
@@ -483,22 +497,34 @@ function qcopd_sld_test_gemini_connection()
   $body = wp_remote_retrieve_body($response);
   $data = json_decode($body, true);
 
-  if ($code === 200 && !empty($data['models'])) {
+  if ($code === 200 && isset($data['models'])) {
     $models = array();
-    foreach ($data['models'] as $model) {
-      $name = str_replace('models/', '', $model['name']);
-      $models[] = $name;
+    $fetched_models = array();
+    $sld_gemini_models_list = get_option('sld_gemini_models_list', array());
+    if (!is_array($sld_gemini_models_list)) {
+      $sld_gemini_models_list = array();
     }
-
-    asort($models);
-    $models = array_values($models);
-
+    foreach ($data['models'] as $model) {
+      if (strpos($model['name'], 'models/gemini') === 0) {
+        $id = str_replace('models/', '', $model['name']);
+        $name = isset($sld_gemini_models_list[$id]) ? $sld_gemini_models_list[$id] : $id;
+        if ($id === 'gemini-2.5-flash' && strpos($name, '(Recommended)') === false) {
+           $name .= ' (Recommended)';
+        }
+        $models[] = $id;
+        $fetched_models[$id] = $name;
+      }
+    }
+    sort($models);
+    asort($fetched_models);
+    update_option('sld_gemini_models_list', $fetched_models);
     wp_send_json_success(array(
-      'message' => esc_html('Connection Successful!', 'simple-link-directory'),
+      'message' => esc_html('Connection successful! Valid API Key.', 'simple-link-directory'),
       'models' => $models,
+      'models_names' => $fetched_models,
     ));
   } else {
-    $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html('Invalid API key or network error.', 'simple-link-directory');
+    $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html('Invalid API Key or API error.', 'simple-link-directory');
     wp_send_json_error(array('message' => $error_message));
   }
 }
@@ -554,33 +580,35 @@ function qcopd_sld_test_openrouter_connection()
   $body = wp_remote_retrieve_body($response);
   $data = json_decode($body, true);
 
-  if ($code === 200 && !empty($data['data'])) {
+  if ($code === 200 && isset($data['data'])) {
     $models = array();
-    $transient_models = array();
+    $fetched_models = array();
+    $sld_openrouter_models_list = get_option('sld_openrouter_models_list', array());
+    if (!is_array($sld_openrouter_models_list)) {
+      $sld_openrouter_models_list = array();
+    }
     foreach ($data['data'] as $model) {
       $id = $model['id'];
-      $name = !empty($model['name']) ? $model['name'] : $id;
+      $api_name = !empty($model['name']) ? $model['name'] : $id;
+      $name = isset($sld_openrouter_models_list[$id]) ? $sld_openrouter_models_list[$id] : $api_name;
+      if ($id === 'google/gemini-2.5-flash' && strpos($name, '(Recommended)') === false) {
+         $name .= ' (Recommended)';
+      }
       $models[] = array(
         'id' => $id,
-        'name' => $name,
+        'name' => $name
       );
-      $transient_models[$id] = $name;
+      $fetched_models[$id] = $name;
     }
-
-    // Sort models by name
-    usort($models, function ($a, $b) {
-      return strcasecmp($a['name'], $b['name']);
-    });
-
-    // Update transient list
-    set_transient('sld_openrouter_models_list', $transient_models, DAY_IN_SECONDS);
-
+    asort($fetched_models);
+    update_option('sld_openrouter_models_list', $fetched_models);
     wp_send_json_success(array(
-      'message' => esc_html('Connection Successful!', 'simple-link-directory'),
+      'message' => esc_html('Connection successful! Valid API Key.', 'simple-link-directory'),
       'models' => $models,
     ));
   } else {
-    wp_send_json_error(array('message' => esc_html('Failed to fetch OpenRouter models.', 'simple-link-directory')));
+    $error_message = isset($data['error']['message']) ? $data['error']['message'] : esc_html('Invalid API Key or API error.', 'simple-link-directory');
+    wp_send_json_error(array('message' => $error_message));
   }
 }
 add_action('wp_ajax_qcopd_sld_test_openrouter_connection', 'qcopd_sld_test_openrouter_connection');

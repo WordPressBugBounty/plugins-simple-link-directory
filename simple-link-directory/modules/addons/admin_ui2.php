@@ -1,6 +1,5 @@
 <?php
 
-
 global $woocommerce, $wp_scripts;
 $suffix = defined('sld_SCRIPT_DEBUG') && sld_SCRIPT_DEBUG ? '' : '.min';
 

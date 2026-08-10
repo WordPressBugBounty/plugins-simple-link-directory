@@ -3,7 +3,7 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://wordpress.org/plugins/simple-link-directory
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 9.1.3
+ * Version: 9.1.4
  * Author: QuantumCloud
  * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
  * Requires at least: 4.6
@@ -25,7 +25,7 @@ if ( is_plugin_active( 'qc-simple-link-directory/qc-op-directory-main.php' ) ) {
 
 // Also abort if we are currently activating the Pro plugin
 if ( isset($_REQUEST['action']) ) {
-    if ( $_REQUEST['action'] == 'activate' && isset($_REQUEST['plugin']) && strpos(sanitize_text_field(wp_unslash($_REQUEST['plugin'])), 'qc-simple-link-directory') !== false ) {
+    if ( sanitize_text_field(wp_unslash($_REQUEST['action'])) == 'activate' && isset($_REQUEST['plugin']) && strpos(sanitize_text_field(wp_unslash($_REQUEST['plugin'])), 'qc-simple-link-directory') !== false ) {
         return;
     }
     if ( sanitize_text_field(wp_unslash($_REQUEST['action'])) == 'activate-selected' && isset($_POST['checked']) && in_array('qc-simple-link-directory/qc-op-directory-main.php', $_POST['checked']) ) {
@@ -446,6 +446,37 @@ function qcopd_sld_activate_callback($plugin)
     if (!get_option('sld_enable_upvote')) {
         update_option('sld_enable_upvote', 'on');
     }
+
+    $sld_openai_models_list = array(
+      'gpt-4o'              => 'gpt-4o (Recommended)',
+      'gpt-4o-mini'         => 'gpt-4o-mini',
+      'o1-mini'             => 'o1-mini',
+      'o1-preview'          => 'o1-preview',
+      'o3-mini'             => 'o3-mini',
+      'gpt-4-turbo'         => 'gpt-4-turbo',
+      'gpt-4'               => 'gpt-4',
+      'gpt-3.5-turbo'       => 'gpt-3.5-turbo',
+    );
+    $sld_gemini_models_list = array(
+      'gemini-2.5-flash'    => 'gemini-2.5-flash (Recommended)',
+      'gemini-1.5-flash'    => 'gemini-1.5-flash',
+      'gemini-1.5-pro'      => 'gemini-1.5-pro',
+      'gemini-2.0-flash'    => 'gemini-2.0-flash',
+      'gemini-2.0-pro'      => 'gemini-2.0-pro',
+      'gemini-1.0-pro'      => 'gemini-1.0-pro',
+    );
+
+    $sld_openrouter_models_list = array(
+      'google/gemini-2.5-flash'     => 'Google: Gemini 2.5 Flash (Recommended)',
+      'meta-llama/llama-3.3-70b-instruct' => 'Meta: Llama 3.3 70B Instruct',
+      'deepseek/deepseek-chat'      => 'DeepSeek: DeepSeek Chat',
+      'anthropic/claude-3.5-sonnet' => 'Anthropic: Claude 3.5 Sonnet',
+      'openai/gpt-4o-mini'          => 'OpenAI: GPT-4o Mini',
+      'openai/gpt-4o'               => 'OpenAI: GPT-4o',
+    );
+    add_option('sld_openai_models_list', $sld_openai_models_list);
+    add_option('sld_gemini_models_list', $sld_gemini_models_list);
+    add_option('sld_openrouter_models_list', $sld_openrouter_models_list);
 
 }
 

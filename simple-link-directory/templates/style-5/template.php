@@ -1,4 +1,5 @@
-<?php wp_enqueue_style('sld-css-style-5' );
+<?php
+wp_enqueue_style('sld-css-style-5' );
 	
 	$sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'on':'';
 

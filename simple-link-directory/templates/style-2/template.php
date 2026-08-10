@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 wp_enqueue_style('sld-css-style-2' ); 
 
 
