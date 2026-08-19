@@ -8,11 +8,12 @@ body.modal-box {
 	z-index: 999999;
 	width: 98%;
     max-width: 650px;
-    left: 0;
-    right: 0;
-    top: 80px;
-    margin: 0 auto;
-	background: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-height: 90vh;
+    overflow-y: auto;
 	border-bottom: 1px solid #aaa;
 	border-radius: 4px;
 	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -179,9 +180,10 @@ a#generate-igcode {
     z-index: 999999;
     width: 98%;
     max-width: 650px;
-    left: 0;
-    right: 0;
-    margin-left: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 .ifram-sm {
     width: 100%;
