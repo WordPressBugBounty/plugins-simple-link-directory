@@ -44,7 +44,7 @@ if ( ! function_exists( 'qc_sld_include_promo_page_scripts' ) ) {
         if( isset($_GET["page"]) && !empty($_GET["page"]) && (   $_GET["page"] == "qcopd_sld_supports"  ) ){
 
             wp_enqueue_style( 'qcld-support-fontawesome-css', qc_sld_support_url . "css/font-awesome.min.css");                              
-            wp_enqueue_style( 'qcld-support-style-css', qc_sld_support_url . "css/style.css");
+            wp_enqueue_style( 'qcld-sld-support-style-css', qc_sld_support_url . "css/style.css");
 
             wp_enqueue_script( 'jquery' );
             wp_enqueue_script( 'jquery-ui-core');
