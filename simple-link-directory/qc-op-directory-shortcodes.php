@@ -1,5 +1,4 @@
 <?php
-
 defined('ABSPATH') or die("No direct script access!");
 
 /*Custom Item Sort Logic*/
@@ -34,10 +33,6 @@ if ( ! function_exists( 'sld_custom_sort_by_tpl_timestamp' ) ) {
 	function sld_custom_sort_by_tpl_timestamp($a, $b) {
 		if( isset($a['qcopd_timelaps']) && isset($b['qcopd_timelaps']) ){
 
-			// $aTime = (int)$a['qcopd_timelaps'];
-			// $bTime = (int)$b['qcopd_timelaps'];
-			// return $aTime < $bTime;
-
 			$aTime = isset($a['qcopd_timelaps']) && !empty( $a['qcopd_timelaps'] ) ? (int)$a['qcopd_timelaps'] : 0;
 			$bTime = isset($b['qcopd_timelaps']) && !empty( $b['qcopd_timelaps'] ) ? (int)$b['qcopd_timelaps'] : 0;
 
@@ -47,9 +42,121 @@ if ( ! function_exists( 'sld_custom_sort_by_tpl_timestamp' ) ) {
 
 			return $aTime < $bTime  ? 1 : -1;
 
-
-
 		}
+	}
+}
+
+if ( ! function_exists( 'qcopd_featured_bg_is_light' ) ) {
+	function qcopd_featured_bg_is_light( $hex ) {
+		$hex = ltrim( (string) $hex, '#' );
+		if ( strlen( $hex ) === 3 ) {
+			$hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
+		}
+		if ( strlen( $hex ) !== 6 || ! ctype_xdigit( $hex ) ) {
+			return false;
+		}
+		$r = hexdec( substr( $hex, 0, 2 ) );
+		$g = hexdec( substr( $hex, 2, 2 ) );
+		$b = hexdec( substr( $hex, 4, 2 ) );
+		return ( ( 0.299 * $r ) + ( 0.587 * $g ) + ( 0.114 * $b ) ) > 150;
+	}
+}
+
+if ( ! function_exists( 'qcopd_collect_featured_items' ) ) {
+	function qcopd_collect_featured_items( $list_query ) {
+		if ( get_option( 'sld_enable_featured_section' ) !== 'on' ) {
+			return array();
+		}
+		if ( empty( $list_query ) || ! $list_query->have_posts() ) {
+			return array();
+		}
+
+		global $wpdb;
+		$featured = array();
+		$seen     = array();
+
+		while ( $list_query->have_posts() ) {
+			$list_query->the_post();
+			$results = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $wpdb->postmeta WHERE post_id = %d AND meta_key = 'qcopd_list_item01' order by `meta_id` ASC", get_the_ID() ) );
+			if ( empty( $results ) ) {
+				continue;
+			}
+			foreach ( $results as $result ) {
+				$item = maybe_unserialize( $result->meta_value );
+				if ( empty( $item['qcopd_featured'] ) || (int) $item['qcopd_featured'] !== 1 ) {
+					continue;
+				}
+				$title = isset( $item['qcopd_item_title'] ) ? trim( $item['qcopd_item_title'] ) : '';
+				$link  = isset( $item['qcopd_item_link'] ) ? $item['qcopd_item_link'] : '';
+				$key   = $link . '|' . $title;
+				if ( $key === '|' || isset( $seen[ $key ] ) ) {
+					continue;
+				}
+				$seen[ $key ] = true;
+				$featured[]   = array(
+					'list'    => $item,
+					'post_id' => get_the_ID(),
+				);
+			}
+		}
+		$list_query->rewind_posts();
+
+		$limit = function_exists( 'qcopd_sanitize_featured_item_count' )
+			? qcopd_sanitize_featured_item_count( get_option( 'sld_featured_item_count', 9 ) )
+			: 9;
+		$limit = apply_filters( 'qcopd_featured_item_count_limit', $limit, $list_query );
+
+		$featured_items = array_slice( $featured, 0, $limit );
+		return apply_filters( 'qcopd_collected_featured_items', $featured_items, $list_query, $featured );
+	}
+}
+
+if ( ! function_exists( 'qcopd_get_featured_section_data' ) ) {
+	function qcopd_get_featured_section_data( $list_query ) {
+		$items = qcopd_collect_featured_items( $list_query );
+		$items = apply_filters( 'qcopd_featured_section_items', $items, $list_query );
+
+		if ( empty( $items ) ) {
+			return apply_filters( 'qcopd_get_featured_section_data', false, $list_query );
+		}
+		$bg = function_exists( 'qcopd_sanitize_featured_bg_color' )
+			? qcopd_sanitize_featured_bg_color( get_option( 'sld_featured_bg_color', '#0b0c0d' ) )
+			: '#0b0c0d';
+		$bg = apply_filters( 'qcopd_featured_section_bg_color', $bg, $items, $list_query );
+
+		$data = array(
+			'items'    => $items,
+			'bg'       => $bg,
+			'bg_class' => qcopd_featured_bg_is_light( $bg ) ? 'sld-featured-strip-light' : 'sld-featured-strip-dark',
+			'total'    => count( $items ),
+		);
+
+		return apply_filters( 'qcopd_get_featured_section_data', $data, $list_query, $items );
+	}
+}
+
+if ( ! function_exists( 'qcopd_render_featured_heading' ) ) {
+	function qcopd_render_featured_heading( $total ) {
+		/* translators: %s: Number of items */
+		$singular = apply_filters( 'qcopd_featured_heading_singular', __( '%s item', 'simple-link-directory' ), $total );
+		/* translators: %s: Number of items */
+		$plural   = apply_filters( 'qcopd_featured_heading_plural', __( '%s items', 'simple-link-directory' ), $total );
+		$title    = apply_filters( 'qcopd_featured_heading_title', __( 'Featured', 'simple-link-directory' ), $total );
+		$pill     = apply_filters( 'qcopd_featured_heading_pill', __( 'Featured', 'simple-link-directory' ), $total );
+		?>
+		<div class="sld-featured-heading">
+			<div class="sld-featured-heading-left">
+				<h2><?php echo esc_html( $title ); ?></h2>
+				<span class="sld-featured-pill"><?php echo esc_html( $pill ); ?></span>
+			</div>
+			<span class="sld-featured-heading-count" data-singular="<?php echo esc_attr( $singular ); ?>" data-plural="<?php echo esc_attr( $plural ); ?>" data-total="<?php echo esc_attr( $total ); ?>">
+				<?php
+				/* translators: %s: Number of items */
+				echo esc_html( sprintf( _n( '%s item', '%s items', $total, 'simple-link-directory' ), number_format_i18n( $total ) ) );
+				?> →
+			</span>
+		</div>
+		<?php
 	}
 }
 
@@ -170,12 +277,14 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 			    if (e && e.stopImmediatePropagation) {
 			        e.stopImmediatePropagation();
 			    }
-			    $("body").addClass("sld-dark-mode");
-			    $("html").addClass("sld-dark-mode");
-			    $(".qcopd-list-wrapper").addClass("sld-dark-mode");
+			    $("body").addClass("sld-dark-mode").removeClass("sld-light-mode");
+			    $("html").addClass("sld-dark-mode").removeClass("sld-light-mode");
+			    $(".qcopd-list-wrapper").addClass("sld-dark-mode dark-mode").removeClass("sld-light-mode light-mode");
+			    $(".qcld-main-container-style-simple, [class*=\'qcld-main-container-style-\'], .qcld-sld-style-4-page").addClass("sld-dark-mode dark-mode").removeClass("sld-light-mode light-mode");
 
-			    const $targetWrapper = $toggle.closest(".sld-sld-theme-switch-wrapper").parent().parent();
-			    const $targetWrappers = $targetWrapper.find(".qcopd-list-wrapper ul li, .filter-area, .sld-tag-filter-area, .sld-top-area");
+			    const $switchWrap = $toggle.closest(".sld-sld-theme-switch-wrapper");
+			    const $targetWrapper = $switchWrap.nextAll(".qcld-sld-style-4-page, .qcld-main-container-style-simple, [class*=\'qcld-main-container-style-\'], .qcopd-list-wrapper").add($switchWrap.parent());
+			    const $targetWrappers = $targetWrapper.find(".qcopd-list-wrapper ul li, .filter-area, .sld-tag-filter-area, .sld-top-area, .sld-featured-strip, .sld-style-4-featured-strip");
 			    const $allItems = $targetWrappers.find("div, a, p, h1, h2, h3, h4, h5, h6, span");
 			    const $targetElements = $targetWrappers.add($allItems);
 
@@ -213,11 +322,14 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 			    if (e && e.stopImmediatePropagation) {
 			        e.stopImmediatePropagation();
 			    }
-			    $("body").removeClass("sld-dark-mode");
-			    $("html").removeClass("sld-dark-mode");
-			    $(".qcopd-list-wrapper").removeClass("sld-dark-mode");
-	        	const $targetWrapper 	= $toggle.closest(".sld-sld-theme-switch-wrapper").parent().parent();
-	        	const $targetWrappers 	= $targetWrapper.find(".qcopd-list-wrapper ul li, .qcopd-list-wrapper ul li *, .sld-top-area, .sld-top-area *, .filter-area, .filter-area *, .sld-tag-filter-area, .sld-tag-filter-area *");
+			    $("body").removeClass("sld-dark-mode").addClass("sld-light-mode");
+			    $("html").removeClass("sld-dark-mode").addClass("sld-light-mode");
+			    $(".qcopd-list-wrapper").removeClass("sld-dark-mode dark-mode").addClass("sld-light-mode light-mode");
+			    $(".qcld-main-container-style-simple, [class*=\'qcld-main-container-style-\'], .qcld-sld-style-4-page").removeClass("sld-dark-mode dark-mode").addClass("sld-light-mode light-mode");
+
+	        	const $switchWrap = $toggle.closest(".sld-sld-theme-switch-wrapper");
+	        	const $targetWrapper = $switchWrap.nextAll(".qcld-sld-style-4-page, .qcld-main-container-style-simple, [class*=\'qcld-main-container-style-\'], .qcopd-list-wrapper").add($switchWrap.parent());
+	        	const $targetWrappers = $targetWrapper.find(".qcopd-list-wrapper ul li, .qcopd-list-wrapper ul li *, .sld-top-area, .sld-top-area *, .filter-area, .filter-area *, .sld-tag-filter-area, .sld-tag-filter-area *, .sld-featured-strip, .sld-featured-strip *, .sld-style-4-featured-strip, .sld-style-4-featured-strip *");
 			    $targetWrappers.each(function() {
 			        const $el = $(this);
 			        const oldStyle = $el.data("previous-style");
@@ -236,8 +348,21 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 			$(".qcopd-list-wrapper").each(function(index) {
 			    const $list = $(this);
 			    const uniqueId = "sld-theme-checkbox-" + index;
-			    if (!$list.prev(".sld-sld-theme-switch-wrapper").length) {
-			        $list.before(`
+			    let $pageWrap = $list.closest(".qcld-sld-style-4-page");
+			    let $mainContainer = $list.closest(".qcld-main-container-style-simple, [class*=\'qcld-main-container-style-\']");
+			    let $target = $pageWrap.length ? $pageWrap : ($mainContainer.length ? $mainContainer.first() : $list);
+
+			    const $prevFeatured = $target.prev(".sld-featured-strip, .sld-style-4-featured-strip");
+			    if ($prevFeatured.length) {
+			        $target = $prevFeatured;
+			    }
+			    const $prevTopArea = $target.prev(".sld-top-area, .qcopd_embed_container");
+			    if ($prevTopArea.length) {
+			        $target = $prevTopArea;
+			    }
+
+			    if (!$target.prev(".sld-sld-theme-switch-wrapper").length) {
+			        $target.before(`
 			            <div class="sld-sld-theme-switch-wrapper">
 			                <label class="sld-theme-switch" for="${uniqueId}">
 			                    <input type="checkbox" id="${uniqueId}" class="sld-theme-checkbox-input" />
@@ -254,7 +379,7 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 
             const $toggle = $("#sld-theme-checkbox-0");
             const $qcld_sld_tab = $(".qcld_sld_tab").length;
-            const $body = $(".sld-main-style-simple");
+            const $body = $(".qcld-main-container-style-simple, [class*=\'qcld-main-container-style-\'], .qcld-sld-style-4-page, .qcopd-list-wrapper");
             const $statusText = $("#sld-theme-status-0");
             const storageKey = "user-theme-pref";
             const currentTheme = localStorage.getItem(storageKey);
@@ -263,16 +388,26 @@ function qcopd_show_qcopd_full_list( $atts = array() )
             if (!$qcld_sld_tab) {
 
 	            if (currentTheme) {
-	                $body.addClass(currentTheme);
 	                if (currentTheme === "dark-mode") {
+	                    $body.addClass("dark-mode").removeClass("light-mode");
 	                    $toggle.prop("checked", true);
 	                    sld_dark_light_mode($toggle);
 	                    $statusText.text("'.esc_js($lan_dark_mode_on).'");
+	                } else {
+	                    $body.addClass("light-mode").removeClass("dark-mode");
+	                    $toggle.prop("checked", false);
+	                    sld_remove_dark_mode($toggle);
+	                    $statusText.text("'.esc_js($lan_light_mode_on).'");
 	                }
 	            } else {
-	                if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-	                    $body.addClass("dark-mode");
+	                if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+	                    $body.addClass("dark-mode").removeClass("light-mode");
 	                    $toggle.prop("checked", true);
+	                    sld_dark_light_mode($toggle);
+	                    $statusText.text("'.esc_js($lan_dark_mode_on).'");
+	                } else {
+	                    $body.addClass("light-mode").removeClass("dark-mode");
+	                    $toggle.prop("checked", false);
 	                    sld_remove_dark_mode($toggle);
 	                    $statusText.text("'.esc_js($lan_light_mode_on).'");
 	                }
@@ -284,17 +419,17 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 				e.stopImmediatePropagation();
 			    const $thisToggle 	= $(this);
 			    const isDarkMode 	= $thisToggle.is(":checked");
-			    const $targetWraps = $toggle.closest(".sld-sld-theme-switch-wrapper");
+			    const $targetWraps  = $thisToggle.closest(".sld-sld-theme-switch-wrapper");
 
 			    if (isDarkMode) {
 			        // APPLY DARK MODE
-                    $body.addClass("dark-mode");
+                    $body.addClass("dark-mode").removeClass("light-mode");
                     localStorage.setItem(storageKey, "dark-mode");
 			        sld_dark_light_mode($thisToggle);
                     $targetWraps.find("em").text("'.esc_js($lan_dark_mode_on).'");
 			    } else {
-			        // RESTORE ORIGINAL STYLE
-                    $body.removeClass("dark-mode");
+			        // RESTORE ORIGINAL STYLE / LIGHT MODE
+                    $body.removeClass("dark-mode").addClass("light-mode");
                     localStorage.setItem(storageKey, "light-mode");
 			        sld_remove_dark_mode($thisToggle);
                     $targetWraps.find("em").text("'.esc_js($lan_light_mode_on).'");
@@ -359,14 +494,6 @@ function qcopd_show_qcopd_full_list( $atts = array() )
 	}
 	// The Query
 	$list_query = new WP_Query( $list_args );
-	
-    /*
-    if ( isset($atts["style"]) && $atts["style"] )
-        $template_code = $atts["style"];
-
-    if (!$template_code)
-        $template_code = "simple";
-    */
 
     // check style if empty. default simple.
     $template_code = ( isset( $atts["style"] ) && qcopd_get_style_for_template( $atts["style"] ) ) ? qcopd_get_style_for_template( $atts["style"] ) : $style;
@@ -454,32 +581,46 @@ if ( ! function_exists( 'qcopd_custom_styles_scripts' ) ) {
 
 		if($sld_enable_rtl =='on'){
 
-			$customscript = "jQuery(window).on('load',function()
+			$customscript = "jQuery(document).ready(function($)
 			{
-				var \$grid = jQuery('.qc-grid');
-				\$grid.packery({
-				  itemSelector: '.qc-grid-item',
-				  gutter: 10,
-				  percentPosition: true,
-				  originLeft: false
-				});
-				jQuery(window).on('resize', function(){
-					\$grid.packery('layout');
-				});
+				var \$grid = $('.qc-grid');
+				if (typeof $.fn.packery === 'function' && \$grid.length > 0) {
+					\$grid.packery({
+					  itemSelector: '.qc-grid-item',
+					  gutter: 10,
+					  percentPosition: true,
+					  originLeft: false
+					});
+					if (typeof $.fn.imagesLoaded === 'function') {
+						\$grid.imagesLoaded().progress(function() {
+							\$grid.packery('layout');
+						});
+					}
+					$(window).on('load resize', function(){
+						\$grid.packery('reloadItems').packery('layout');
+					});
+				}
 			});";
 			wp_add_inline_script( 'qcopd-custom-script', ($customscript) );
 		}else{
-			$customscript = "jQuery(window).on('load',function()
+			$customscript = "jQuery(document).ready(function($)
 			{
-				var \$grid = jQuery('.qc-grid');
-				\$grid.packery({
-				  itemSelector: '.qc-grid-item',
-				  gutter: 10,
-				  percentPosition: true
-				});
-				jQuery(window).on('resize', function(){
-					\$grid.packery('layout');
-				});
+				var \$grid = $('.qc-grid');
+				if (typeof $.fn.packery === 'function' && \$grid.length > 0) {
+					\$grid.packery({
+					  itemSelector: '.qc-grid-item',
+					  gutter: 10,
+					  percentPosition: true
+					});
+					if (typeof $.fn.imagesLoaded === 'function') {
+						\$grid.imagesLoaded().progress(function() {
+							\$grid.packery('layout');
+						});
+					}
+					$(window).on('load resize', function(){
+						\$grid.packery('reloadItems').packery('layout');
+					});
+				}
 			});";
 			wp_add_inline_script( 'qcopd-custom-script', ($customscript) );
 		}

@@ -1,2 +1,5 @@
-<?php 
-//silence is golded.
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+// Silence is golden.

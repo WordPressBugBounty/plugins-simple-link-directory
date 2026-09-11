@@ -1,0 +1,1621 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-link-directory (AI Translated)\n"
+"Report-Msgid-Bugs-To: https://www.quantumcloud.net/\n"
+"POT-Creation-Date: 2026-09-07 06:51+0000\n"
+"PO-Revision-Date: 2026-09-07 06:51+0000\n"
+"Last-Translator: AI Language Packs <support@quantumcloud.net>\n"
+"Language-Team: العربية (Arabic)\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: AI Language Packs WordPress Plugin v1.0.2\n"
+
+msgid "We can't detect any plugin information. This is most probably because you have not included the code in the plugin main file."
+msgstr "لا يمكننا اكتشاف أي معلومات عن الإضافة. هذا على الأرجح لأنك لم تقم بتضمين الكود في الملف الرئيسي للإضافة."
+
+msgid "Sorry to see you go"
+msgstr "نأسف لمغادرتك"
+
+msgid "Found a Bug"
+msgstr "عثرت على خطأ"
+
+msgid "Need More Features"
+msgstr "أحتاج إلى المزيد من الميزات"
+
+msgid "Deactivating Temporarily"
+msgstr "إلغاء التفعيل مؤقتًا"
+
+msgid "Upgrading to Pro"
+msgstr "الترقية إلى النسخة الاحترافية"
+
+msgid "Please provide email so we can contact with bug fixes"
+msgstr "يرجى تقديم بريدك الإلكتروني حتى نتمكن من التواصل معك بشأن إصلاحات الأخطاء"
+
+msgid "Please provide some details so we can improve the plugin"
+msgstr "يرجى تقديم بعض التفاصيل حتى نتمكن من تحسين الإضافة"
+
+msgid "Submitting form"
+msgstr "جاري إرسال النموذج"
+
+msgid "Settings"
+msgstr "الإعدادات"
+
+msgid "Shortcodes and Help"
+msgstr "الأكواد المختصرة والمساعدة"
+
+msgid "Support"
+msgstr "الدعم"
+
+msgid "Live Search Items"
+msgstr "عناصر البحث المباشر"
+
+msgid "Add New"
+msgstr "أضف جديد"
+
+msgid "Share List"
+msgstr "مشاركة القائمة"
+
+msgid "Generate Embed Code For This List"
+msgstr "إنشاء كود التضمين لهذه القائمة"
+
+msgid "Width: (in '%' or 'px')"
+msgstr "Width: (in '%' or 'px')"
+
+msgid "%"
+msgstr "%"
+
+msgid "px"
+msgstr "px"
+
+msgid "Height: (in 'px')"
+msgstr "الارتفاع: (بالـ 'px')"
+
+msgid "Generate & Copy"
+msgstr "إنشاء ونسخ"
+
+msgid "Generated Code"
+msgstr "الكود المُنشأ"
+
+msgid "Hit \\"
+msgstr "اضغط \\"
+
+msgid "ASC"
+msgstr "تصاعدي"
+
+msgid "all"
+msgstr "الكل"
+
+msgid "3"
+msgstr "3"
+
+msgid "simple"
+msgstr "بسيط"
+
+msgid "SLD - Shortcode Maker"
+msgstr "SLD - صانع الأكواد المختصرة"
+
+msgid "SLD — Shortcode Maker"
+msgstr "SLD — صانع الأكواد المختصرة"
+
+msgid "Generate SLD Shortcode"
+msgstr "إنشاء كود SLD المختصر"
+
+msgid "Are you sure you want to delete this field?"
+msgstr "هل أنت متأكد أنك تريد حذف هذا الحقل؟"
+
+msgid "Add New List Items"
+msgstr "إضافة عناصر قائمة جديدة"
+
+msgid "Remove Field"
+msgstr "إزالة الحقل"
+
+msgid "Add File"
+msgstr "إضافة ملف"
+
+msgid "Remove"
+msgstr "إزالة"
+
+msgid "Add Image"
+msgstr "إضافة صورة"
+
+msgid "None"
+msgstr "لا شيء"
+
+msgid "Type to search"
+msgstr "اكتب للبحث"
+
+msgid "Drag to set the exact location"
+msgstr "اسحب لتعيين الموقع الدقيق"
+
+msgid "AddOns"
+msgstr "إضافات"
+
+msgid "Simple Link Directory"
+msgstr "دليل الروابط البسيط"
+
+msgid "Simple Link Directory Pro"
+msgstr "دليل الروابط البسيط برو"
+
+msgid " Addons"
+msgstr "إضافات"
+
+msgid "MultiPage Advanced Addon"
+msgstr "إضافة الصفحات المتعددة المتقدمة"
+
+msgid "Global Search, Pagination, Category view with Lists on home page."
+msgstr "بحث شامل، ترقيم الصفحات، عرض الفئات مع القوائم على الصفحة الرئيسية."
+
+msgid "Get It Now"
+msgstr "احصل عليها الآن"
+
+msgid "Directory Broken Link Checker"
+msgstr "مدقق الروابط المعطلة للدليل"
+
+msgid "Check Broken Links for SLD and SBD and other Post Types Links"
+msgstr "تحقق من الروابط المعطلة لـ SLD و SBD وروابط أنواع المنشورات الأخرى"
+
+msgid "Review, Rating for SLD Pro"
+msgstr "مراجعة، تقييم لـ SLD Pro"
+
+msgid "Allow your site users to leave a review comment and rate the link listings."
+msgstr "اسمح لمستخدمي موقعك بترك تعليق مراجعة وتقييم قوائم الروابط."
+
+msgid "Link Exchange AddOn for SLD Pro"
+msgstr "إضافة تبادل الروابط لـ SLD Pro"
+
+msgid "Allow your site users Exchange Links with Other Websites"
+msgstr "اسمح لمستخدمي موقعك بتبادل الروابط مع مواقع ويب أخرى"
+
+msgid "Themes"
+msgstr "قوالب"
+
+msgid "Simple Link Directory Theme"
+msgstr "قالب دليل الروابط البسيط"
+
+msgid "Not Installed"
+msgstr "غير مثبت"
+
+msgid "Crafted carefully to make the best out of the popular Simple Link Directory plugin. One Click Install, Demo Data, Compatible with the Elementor and the Gutenberg Page Builder!"
+msgstr "مصمم بعناية للاستفادة القصوى من إضافة دليل الروابط البسيط الشهيرة. تثبيت بنقرة واحدة، بيانات تجريبية، متوافق مع Elementor ومنشئ الصفحات Gutenberg!"
+
+msgid "Try our Free AI ChatBot - WPBot"
+msgstr "جرب روبوت الدردشة المجاني بالذكاء الاصطناعي - WPBot"
+
+msgid "Get the Best ChatBot for WordPress – WPBot"
+msgstr "احصل على أفضل روبوت دردشة لـ WordPress – WPBot"
+
+msgid "Do more than just chat with your ChatBot!"
+msgstr "افعل أكثر من مجرد الدردشة مع روبوت الدردشة الخاص بك!"
+
+msgid "Do more than just chat with your ChatBot"
+msgstr "افعل أكثر من مجرد الدردشة مع روبوت الدردشة الخاص بك"
+
+msgid "More Leads, Conversions"
+msgstr "المزيد من العملاء المحتملين، التحويلات"
+
+msgid "Satisfied customers while"
+msgstr "عملاء راضون بينما"
+
+msgid "saving time"
+msgstr "توفير الوقت"
+
+msgid "increasing your"
+msgstr "زيادة فرصك"
+
+msgid "business opportunities"
+msgstr "فرص العمل"
+
+msgid "WPBot is the best ChatBot for WordPress to improve user engagement,"
+msgstr "WPBot هو أفضل روبوت دردشة لـ WordPress لتحسين تفاعل المستخدمين،"
+
+msgid "Generate Leads,"
+msgstr "توليد العملاء المحتملين،"
+
+msgid "provide"
+msgstr "توفير"
+
+msgid "Automated Live"
+msgstr "دعم مباشر آلي"
+
+msgid "customer"
+msgstr "للعملاء"
+
+msgid "support"
+msgstr "الدعم"
+
+msgid "across your website"
+msgstr "عبر موقع الويب الخاص بك"
+
+msgid "social platforms."
+msgstr "ومنصات التواصل الاجتماعي."
+
+msgid "The"
+msgstr "ميزة"
+
+msgid "AI Insight"
+msgstr "رؤى الذكاء الاصطناعي"
+
+msgid "feature analyzes chat histories"
+msgstr "تحلل سجلات الدردشة"
+
+msgid "reveals what your users want."
+msgstr "وتكشف عما يريده المستخدمون."
+
+msgid "Deliver AI-powered ChatBot services from your websites with LLMs like"
+msgstr "قدم خدمات روبوت الدردشة المدعومة بالذكاء الاصطناعي من مواقع الويب الخاصة بك باستخدام نماذج اللغات الكبيرة (LLMs) مثل"
+
+msgid "OpenAI"
+msgstr "OpenAI"
+
+msgid "(ChatGPT), Gemini etc. along with many built-in, powerful features like"
+msgstr "(ChatGPT)، Gemini وغيرها، بالإضافة إلى العديد من الميزات المدمجة والقوية مثل"
+
+msgid "Live"
+msgstr "مباشر"
+
+msgid "Chat, Chat"
+msgstr "دردشة، دردشة"
+
+msgid "Histories"
+msgstr "سجلات"
+
+msgid "Conversational forms"
+msgstr "نماذج محادثة"
+
+msgid "Webhooks"
+msgstr "Webhooks"
+
+msgid "more!"
+msgstr "المزيد!"
+
+msgid "Need More Assistance?"
+msgstr "هل تحتاج إلى المزيد من المساعدة؟"
+
+msgid "Our support team is ready to help you with any issues or custom requests."
+msgstr "فريق الدعم لدينا جاهز لمساعدتك في أي مشاكل أو طلبات مخصصة."
+
+msgid "Knowledge Base"
+msgstr "قاعدة المعارف"
+
+msgid "Get Direct Support"
+msgstr "احصل على دعم مباشر"
+
+msgid "Handcrafted for productivity."
+msgstr "مصمم بعناية للإنتاجية."
+
+msgid "By %s"
+msgstr "بواسطة %s"
+
+msgid "Install %s now"
+msgstr "ثبّت %s الآن"
+
+msgid "Install Now"
+msgstr "ثبّت الآن"
+
+msgid "Cannot Install"
+msgstr "لا يمكن التثبيت"
+
+msgid "Update %s now"
+msgstr "حدّث %s الآن"
+
+msgid "Update Now"
+msgstr "حدّث الآن"
+
+msgid "Cannot Update"
+msgstr "لا يمكن التحديث"
+
+msgid "Active"
+msgstr "نشط"
+
+msgid "Activate"
+msgstr "تفعيل"
+
+msgid "Activate %s"
+msgstr "تفعيل %s"
+
+msgid "Network Activate"
+msgstr "تفعيل شبكي"
+
+msgid "Network Activate %s"
+msgstr "تفعيل %s شبكيًا"
+
+msgid "Installed"
+msgstr "مثبت"
+
+msgid "More Details"
+msgstr "المزيد من التفاصيل"
+
+msgid "This plugin doesn&#8217;t work with your versions of WordPress and PHP."
+msgstr "هذا الملحق لا يعمل مع إصدارات ووردبريس وPHP الخاصة بك."
+
+msgid "<a href=\\"
+msgstr "&lt;a href=\\"
+
+msgid "This plugin doesn&#8217;t work with your version of WordPress."
+msgstr "هذا الملحق لا يعمل مع إصدار ووردبريس الخاص بك."
+
+msgid "This plugin doesn&#8217;t work with your version of PHP."
+msgstr "هذا الملحق لا يعمل مع إصدار PHP الخاص بك."
+
+msgid "Live Preview"
+msgstr "معاينة مباشرة"
+
+msgid "No Results Found for Your Search"
+msgstr "لم يتم العثور على نتائج لبحثك"
+
+msgid "Bulk Import"
+msgstr "استيراد مجمع"
+
+msgid "Import"
+msgstr "استيراد"
+
+msgid "Please Note:"
+msgstr "يرجى ملاحظة:"
+
+msgid "The import feature is still under development. Right now it only allows importing and creating new Lists. Existing Lists will not get updated. Also, export feature is not available in free version."
+msgstr "ميزة الاستيراد لا تزال قيد التطوير. حاليًا، تسمح فقط باستيراد وإنشاء قوائم جديدة. لن يتم تحديث القوائم الموجودة. كما أن ميزة التصدير غير متاحة في النسخة المجانية."
+
+msgid "Sample CSV File:"
+msgstr "ملف CSV نموذجي:"
+
+msgid "Download Sample"
+msgstr "تحميل نموذج"
+
+msgid "PROCESS:"
+msgstr "العملية:"
+
+msgid "First download the above CSV file."
+msgstr "أولاً، قم بتنزيل ملف CSV أعلاه."
+
+msgid "Add/Edit rows on the top of it, by maintaing proper provided format/fields."
+msgstr "أضف/عدّل الصفوف في الجزء العلوي منه، مع الحفاظ على التنسيق/الحقول الصحيحة المقدمة."
+
+msgid "Finally, upload file in the below form."
+msgstr "أخيرًا، حمّل الملف في النموذج أدناه."
+
+msgid "NOTES:"
+msgstr "ملاحظات:"
+
+msgid "It should be a simple CSV file."
+msgstr "يجب أن يكون ملف CSV بسيطًا."
+
+msgid "File encoding should be in UTF-8"
+msgstr "يجب أن يكون ترميز الملف UTF-8"
+
+msgid "File must be prepared as per provided sample CSV file."
+msgstr "يجب إعداد الملف وفقًا لملف CSV النموذجي المقدم."
+
+msgid "RESULT:"
+msgstr "النتيجة:"
+
+msgid "entry with"
+msgstr "إدخال بـ"
+
+msgid "element(s) was made successfully."
+msgstr "عنصر/عناصر تم بنجاح."
+
+msgid "Upload CSV File to Import"
+msgstr "رفع ملف CSV للاستيراد"
+
+msgid "** CSV File & Characters must be saved with UTF-8 encoding **"
+msgstr "** يجب حفظ ملف CSV والأحرف بترميز UTF-8 **"
+
+msgid "Upload & Process"
+msgstr "رفع ومعالجة"
+
+msgid "Crafted By:"
+msgstr "صنع بواسطة:"
+
+msgid "Web Design Company"
+msgstr "شركة تصميم ويب"
+
+msgid "- QuantumCloud"
+msgstr "- كوانتوم كلاود"
+
+msgid "Upgrade to Pro"
+msgstr "الترقية إلى النسخة الاحترافية"
+
+msgid "Add New List of Links"
+msgstr "إضافة قائمة روابط جديدة"
+
+msgid "**SLD Pro Tip: Did you know that you can"
+msgstr "**نصيحة SLD الاحترافية: هل تعلم أنه يمكنك"
+
+msgid "Auto Generate"
+msgstr "إنشاء تلقائي"
+
+msgid "Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?"
+msgstr "العنوان والعنوان الفرعي والصورة المصغرة باستخدام النسخة الاحترافية بنقرتين فقط؟"
+
+msgid "Triple Your Link Entry Speed!"
+msgstr "ضاعف سرعة إدخال روابطك ثلاث مرات!"
+
+msgid "**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance."
+msgstr "**نصيحة SLD: القوائم هي الأعمدة الأساسية لـ SLD، وليست الروابط الفردية. قم بتجميع روابطك في قوائم مختلفة للحصول على أفضل أداء."
+
+msgid "**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode."
+msgstr "**نصيحة SLD: يبدو SLD أفضل عندما تنشئ قوائم متعددة وتستخدم وضع عرض جميع القوائم."
+
+msgid "**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn"
+msgstr "**نصيحة SLD الاحترافية: هل تعلم أن نسخة SLD الاحترافية تتيح لك تحقيق الدخل من دليلك وكسب"
+
+msgid "passive income?"
+msgstr "دخل سلبي؟"
+
+msgid "Upgrade now!"
+msgstr "قم بالترقية الآن!"
+
+msgid "**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed."
+msgstr "**نصيحة SLD: حاول إبقاء الحد الأقصى لعدد الروابط أقل من 30 لكل قائمة. أنشئ قوائم متعددة حسب الحاجة."
+
+msgid "**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page's visual editor."
+msgstr "**نصيحة SLD: استخدم مولد الرموز القصيرة المفيد لتسهيل الأمور. إنه زر [SLD] أزرق صغير موجود في شريط أدوات المحرر المرئي لأي صفحة."
+
+msgid "**SLD Pro Tip: You can display your"
+msgstr "**نصيحة SLD الاحترافية: يمكنك عرض"
+
+msgid "Lists by category"
+msgstr "قوائمك حسب الفئة"
+
+msgid "with the SLD pro version."
+msgstr "باستخدام نسخة SLD الاحترافية."
+
+msgid "16+ Templates, Multi page mode"
+msgstr "أكثر من 16 قالبًا، وضع الصفحات المتعددة"
+
+msgid ", Widgets are also available."
+msgstr "، وتتوفر أيضًا الودجات."
+
+msgid "**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email."
+msgstr "**نصيحة SLD: يمكنك إنشاء صفحة تحتوي على نموذج اتصال وربط زر إضافة رابط بتلك الصفحة حتى يتمكن الأشخاص من إرسال روابط إلى دليلك عبر البريد الإلكتروني."
+
+msgid "**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details."
+msgstr "**نصيحة SLD: إذا كنت تواجه مشكلة في إضافة المزيد من العناصر أو حفظ قائمة، فقد تحتاج إلى زيادة قيمة max_input_vars في الخادم. تحقق من قسم المساعدة لمزيد من التفاصيل."
+
+msgid "**SLD Pro Tip: SLD pro version has"
+msgstr "**نصيحة SLD الاحترافية: تحتوي نسخة SLD الاحترافية على"
+
+msgid "front end dashboard"
+msgstr "لوحة تحكم الواجهة الأمامية"
+
+msgid "for user registration and link management. As well as tags and instant search."
+msgstr "لتسجيل المستخدمين وإدارة الروابط. بالإضافة إلى العلامات والبحث الفوري."
+
+msgid "Upgrade to the Pro version now!"
+msgstr "قم بالترقية إلى النسخة الاحترافية الآن!"
+
+msgid "Shortcode Generator for SLD"
+msgstr "مولد الرموز القصيرة لـ SLD"
+
+msgid "AI List Items Generator"
+msgstr "مولد عناصر القائمة بالذكاء الاصطناعي"
+
+msgid "Click the button below to generate shortcode"
+msgstr "انقر على الزر أدناه لإنشاء رمز قصير"
+
+msgid "Generate Shortcode"
+msgstr "إنشاء رمز قصير"
+
+msgid "Please enable an AI provider (OpenAI, Gemini or OpenRouter) in Simple Link Directory %s first."
+msgstr "يرجى تمكين مزود AI (OpenAI أو Gemini أو OpenRouter) في Simple Link Directory %s أولاً."
+
+msgid "settings tab"
+msgstr "علامة تبويب الإعدادات"
+
+msgid "Active AI Provider:"
+msgstr "مزود AI النشط:"
+
+msgid "Topic:"
+msgstr "الموضوع:"
+
+msgid "e.g., JavaScript coding"
+msgstr "مثال: برمجة JavaScript"
+
+msgid "Number of Items:"
+msgstr "عدد العناصر:"
+
+msgid "Generate & Add Items"
+msgstr "إنشاء وإضافة عناصر"
+
+msgid "%s  %s  %s"
+msgstr "%s %s %s"
+
+msgid "%1$s Simple Link Directory %2$s works the best when you create multiple Lists and show them all in a page. Use the following shortcode to display All lists on any page:  %3$s  %4$s  %5$s  Use the %6$s shortcode generator %7$s to select style and other options. "
+msgstr "%1$s Simple Link Directory %2$s يعمل بشكل أفضل عند إنشاء قوائم متعددة وعرضها كلها في صفحة واحدة. استخدم الرمز القصير التالي لعرض جميع القوائم في أي صفحة: %3$s %4$s %5$s استخدم %6$s منشئ الرموز القصيرة %7$s لتحديد النمط والخيارات الأخرى."
+
+msgid "%1$s Import Simple Link Directory Demo Data:%2$s %3$sImport demo data to see how the plugin works.%4$s %5$sWe will create a sample directory with multiple Lists and create a new demo page using shortcode.%6$s %7$sYou can edit or delete the sample Lists to your requirements.%8$s %9$s Click to Import Data %10$s %11$s"
+msgstr "%1$s استيراد بيانات تجريبية لـ Simple Link Directory:%2$s %3$sاستورد البيانات التجريبية لترى كيف يعمل المكون الإضافي.%4$s %5$sسنقوم بإنشاء دليل عينة بقوائم متعددة وإنشاء صفحة تجريبية جديدة باستخدام الرمز القصير.%6$s %7$sيمكنك تعديل أو حذف القوائم النموذجية حسب متطلباتك.%8$s %9$s انقر لاستيراد البيانات %10$s %11$s"
+
+msgid "Getting Started"
+msgstr "البدء"
+
+msgid "FAQ"
+msgstr "الأسئلة الشائعة"
+
+msgid "Read the Documentation"
+msgstr "اقرأ الوثائق"
+
+msgid "Ask for Help"
+msgstr "اطلب المساعدة"
+
+msgid "Check out the SLD Demo"
+msgstr "اطلع على عرض SLD التجريبي"
+
+msgid "Upgrade to Premium"
+msgstr "الترقية إلى الإصدار المميز"
+
+msgid "Start Here"
+msgstr "ابدأ من هنا"
+
+msgid "Manage Lists"
+msgstr "إدارة القوائم"
+
+msgid "Manage List Item"
+msgstr "إدارة عنصر القائمة"
+
+msgid "New List"
+msgstr "قائمة جديدة"
+
+msgid "Add New List"
+msgstr "إضافة قائمة جديدة"
+
+msgid "Edit List Item"
+msgstr "تحرير عنصر القائمة"
+
+msgid "New List Item"
+msgstr "عنصر قائمة جديد"
+
+msgid "View List Item"
+msgstr "عرض عنصر القائمة"
+
+msgid "Search List Item"
+msgstr "البحث عن عنصر القائمة"
+
+msgid "No List Item found"
+msgstr "لم يتم العثور على عنصر قائمة"
+
+msgid "No List Item found in the Trash"
+msgstr "لم يتم العثور على عنصر قائمة في سلة المهملات"
+
+msgid "This post type holds all posts for your directory items."
+msgstr "نوع المنشور هذا يحمل جميع المنشورات لعناصر دليلك."
+
+msgid "List Categories"
+msgstr "فئات القائمة"
+
+msgid "Category"
+msgstr "فئة"
+
+msgid "Search List Categories"
+msgstr "البحث في فئات القائمة"
+
+msgid "All List Categories"
+msgstr "جميع فئات القائمة"
+
+msgid "Parent List Categories"
+msgstr "فئات القائمة الأصل"
+
+msgid "Parent List Category:"
+msgstr "فئة القائمة الأصل:"
+
+msgid "Edit List Category"
+msgstr "تحرير فئة القائمة"
+
+msgid "Update List Category"
+msgstr "تحديث فئة القائمة"
+
+msgid "Add New List Category"
+msgstr "إضافة فئة قائمة جديدة"
+
+msgid "New List Category Name"
+msgstr "اسم فئة القائمة الجديدة"
+
+msgid "List Elements"
+msgstr "عناصر القائمة"
+
+msgid "Create List Elements"
+msgstr "إنشاء عناصر القائمة"
+
+msgid "Please add your list items here. Ideally, each List should have 10-30 links. Create multiple Lists on different topics and show them all with a shortcode."
+msgstr "الرجاء إضافة عناصر قائمتك هنا. من الناحية المثالية، يجب أن تحتوي كل قائمة على 10-30 رابطًا. أنشئ قوائم متعددة حول مواضيع مختلفة واعرضها كلها باستخدام رمز قصير."
+
+msgid "If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server."
+msgstr "إذا لم تتمكن من حفظ قائمة طويلة، يرجى زيادة قيمة max_input_vars إلى 15000 على خادمك."
+
+msgid "Title"
+msgstr "العنوان"
+
+msgid "Number of Elements"
+msgstr "عدد العناصر"
+
+msgid "Shortcode"
+msgstr "الرمز القصير"
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "element"
+msgstr "عنصر"
+
+msgid "Single List:"
+msgstr "قائمة واحدة:"
+
+msgid "Copy Shortcode"
+msgstr "نسخ الرمز القصير"
+
+msgid "Copied!"
+msgstr "تم النسخ!"
+
+msgid "All Lists:"
+msgstr "جميع القوائم:"
+
+msgid "%s item"
+msgstr "%s عنصر"
+
+msgid "%s items"
+msgstr "%s عناصر"
+
+msgid "Featured"
+msgstr "مميز"
+
+msgid "Enable Dark Mode"
+msgstr "تفعيل الوضع الداكن"
+
+msgid "Dark Mode On"
+msgstr "الوضع الداكن مفعل"
+
+msgid "Light Mode On"
+msgstr "الوضع الفاتح مفعل"
+
+msgid "Scroll To Top"
+msgstr "التمرير للأعلى"
+
+msgid "Simple Link Directory Pro Features"
+msgstr "ميزات Simple Link Directory Pro"
+
+msgid "Enhanced Usability"
+msgstr "سهولة استخدام محسّنة"
+
+msgid "Build unlimited Lists and show them in multi-page mode"
+msgstr "أنشئ قوائم غير محدودة واعرضها في وضع متعدد الصفحات"
+
+msgid "Auto Generate Title, Description & Thumbnail from URL"
+msgstr "إنشاء العنوان والوصف والصورة المصغرة تلقائيًا من الرابط"
+
+msgid "Video Gallery – Vimeo and Youtube Video Directory"
+msgstr "معرض الفيديو – دليل فيديو Vimeo و Youtube"
+
+msgid "Live, on page, instant search & filtering of lists"
+msgstr "بحث وتصفية فوري ومباشر للقوائم على الصفحة"
+
+msgid "Tabbed Category Listing of All Your Directory Lists"
+msgstr "عرض قوائم الدليل الخاصة بك في تبويبات حسب الفئة"
+
+msgid "Community Features"
+msgstr "ميزات المجتمع"
+
+msgid "Complete front end user registration, login and submission"
+msgstr "تسجيل دخول المستخدمين وتقديمهم من الواجهة الأمامية بالكامل"
+
+msgid "Allow users to submit links to your directory"
+msgstr "السماح للمستخدمين بإرسال روابط إلى دليلك"
+
+msgid "Invite user interaction with Upvotes (Thumbs up, Heart, etc)"
+msgstr "دعوة المستخدمين للتفاعل باستخدام التصويت الإيجابي (إعجاب، قلب، إلخ)"
+
+msgid "Allow users to embed your lists on their websites"
+msgstr "السماح للمستخدمين بتضمين قوائمك على مواقعهم الإلكترونية"
+
+msgid "Allow registered users to create Favorite Lists"
+msgstr "السماح للمستخدمين المسجلين بإنشاء قوائم مفضلة"
+
+msgid "Monetization Options"
+msgstr "خيارات تحقيق الدخل"
+
+msgid "Integrated PayPal & Stripe payment for link submission"
+msgstr "دمج دفع PayPal و Stripe لتقديم الروابط"
+
+msgid "Create recurring subscription packages for listings"
+msgstr "إنشاء باقات اشتراك متكررة للقوائم"
+
+msgid "Claim Listing for Payment feature"
+msgstr "ميزة المطالبة بالقائمة مقابل الدفع"
+
+msgid "Option to Mark Paid Items as Featured at Top"
+msgstr "خيار وضع العناصر المدفوعة كمميزة في الأعلى"
+
+msgid "URL masking option for affiliate links"
+msgstr "خيار إخفاء الروابط التابعة (URL masking)"
+
+msgid "Design & Layouts"
+msgstr "التصميم والتخطيطات"
+
+msgid "16 Premium templates for Single Page mode"
+msgstr "16 قالبًا مميزًا لوضع الصفحة الواحدة"
+
+msgid "2 Premium templates for Multi Page mode"
+msgstr "قالبان مميزان لوضع الصفحات المتعددة"
+
+msgid "Create or customize templates from your theme folder"
+msgstr "إنشاء أو تخصيص القوالب من مجلد القالب الخاص بك"
+
+msgid "Use theme fonts or choose Google fonts"
+msgstr "استخدام خطوط القالب أو اختيار خطوط جوجل"
+
+msgid "Configurable highlight color for each list"
+msgstr "لون تمييز قابل للتكوين لكل قائمة"
+
+msgid "Admin Tools & Statistics"
+msgstr "أدوات وإحصائيات المدير"
+
+msgid "Click statistics for admin dashboard"
+msgstr "إحصائيات النقرات للوحة تحكم المدير"
+
+msgid "CSV Import/Export to manage lists easily"
+msgstr "استيراد/تصدير CSV لإدارة القوائم بسهولة"
+
+msgid "Order Listing Directory by Link Clicks or Upvotes"
+msgstr "ترتيب دليل القوائم حسب نقرات الروابط أو الإعجابات"
+
+msgid "Restrict UpVote by IP or Logged in Users only"
+msgstr "تقييد الإعجاب حسب عنوان IP أو للمستخدمين المسجلين فقط"
+
+msgid "Copy List Items or Links to Other Lists"
+msgstr "نسخ عناصر القائمة أو الروابط إلى قوائم أخرى"
+
+msgid "Front End Submission Features"
+msgstr "ميزات الإرسال من الواجهة الأمامية"
+
+msgid "Front End User Registration with Captcha, Log in, Link Submission"
+msgstr "تسجيل المستخدمين من الواجهة الأمامية مع كابتشا، تسجيل الدخول، إرسال الروابط"
+
+msgid "Admin Approves User Submitted Links or Set to Auto Approve"
+msgstr "يوافق المدير على الروابط المرسلة من المستخدمين أو يضبطها للموافقة التلقائية"
+
+msgid "Enable Free Frontend Submission & Free Submission Limit"
+msgstr "تمكين الإرسال المجاني من الواجهة الأمامية وحد الإرسال المجاني"
+
+msgid "Enable Email Notification for New Item Submission"
+msgstr "تمكين إشعار البريد الإلكتروني عند إرسال عنصر جديد"
+
+msgid "Allow User to Update Profile & Upload Image"
+msgstr "السماح للمستخدم بتحديث ملفه الشخصي وتحميل صورة"
+
+msgid "Customizability and Flexibility"
+msgstr "قابلية التخصيص والمرونة"
+
+msgid "Choose theme font or google font"
+msgstr "اختر خط القالب أو خط جوجل"
+
+msgid "Customize colors, fonts and almost all aspects of the link lists"
+msgstr "تخصيص الألوان والخطوط وجميع جوانب قوائم الروابط تقريبًا"
+
+msgid "Complete control over directory list ordering"
+msgstr "تحكم كامل في ترتيب قوائم الدليل"
+
+msgid "Custom JS and CSS panel to modify directory functionality"
+msgstr "لوحة JS و CSS مخصصة لتعديل وظائف الدليل"
+
+msgid "Over a dozen shortcode parameters & Shortcode Generator"
+msgstr "أكثر من اثني عشر معلمة للرمز القصير ومولد الرموز القصيرة"
+
+msgid "Topsite List Script Features"
+msgstr "ميزات سكريبت قائمة المواقع الأعلى"
+
+msgid "Order Listing Directory by Link Clicks"
+msgstr "ترتيب دليل القوائم حسب نقرات الروابط"
+
+msgid "Click statistics for admin"
+msgstr "إحصائيات النقرات للمدير"
+
+msgid "Restrict upvote by IP"
+msgstr "تقييد الإعجاب حسب عنوان IP"
+
+msgid "Restrict UpVote for Logged in Users only"
+msgstr "تقييد الإعجاب للمستخدمين المسجلين فقط"
+
+msgid "Enable Upvote for Main Click in General settings"
+msgstr "تمكين الإعجاب للنقرة الرئيسية في الإعدادات العامة"
+
+msgid "View Pro Demo"
+msgstr "عرض التجريبي للنسخة الاحترافية"
+
+msgid "Upgrade to Pro Now"
+msgstr "الترقية إلى النسخة الاحترافية الآن"
+
+msgid "Unauthorized user."
+msgstr "مستخدم غير مصرح به."
+
+msgid "API Key is empty."
+msgstr "مفتاح API فارغ."
+
+msgid "Connection successful! Valid API Key."
+msgstr "تم الاتصال بنجاح! مفتاح API صالح."
+
+msgid "Invalid API Key or API error."
+msgstr "مفتاح API غير صالح أو خطأ في API."
+
+msgid "Invalid API Key."
+msgstr "مفتاح API غير صالح."
+
+msgid "Prompt reset to default successfully!"
+msgstr "تمت إعادة تعيين المطالبة إلى الافتراضي بنجاح!"
+
+msgid "Prompt is empty."
+msgstr "المطالبة فارغة."
+
+msgid "No AI provider is enabled in settings."
+msgstr "لم يتم تمكين أي مزود للذكاء الاصطناعي في الإعدادات."
+
+msgid "OpenAI API key is missing."
+msgstr "مفتاح API الخاص بـ OpenAI مفقود."
+
+msgid "OpenAI API error."
+msgstr "خطأ في واجهة برمجة تطبيقات OpenAI."
+
+msgid "Gemini API key is missing."
+msgstr "مفتاح واجهة برمجة تطبيقات Gemini مفقود."
+
+msgid "Gemini API error."
+msgstr "خطأ في واجهة برمجة تطبيقات Gemini."
+
+msgid "OpenRouter API key is missing."
+msgstr "مفتاح واجهة برمجة تطبيقات OpenRouter مفقود."
+
+msgid "OpenRouter API error."
+msgstr "خطأ في واجهة برمجة تطبيقات OpenRouter."
+
+msgid "Failed to parse AI output. Raw content: "
+msgstr "فشل تحليل إخراج الذكاء الاصطناعي. المحتوى الخام: "
+
+msgid "Generated %d items successfully!"
+msgstr "تم إنشاء %d عنصر بنجاح!"
+
+msgid "SLD Settings Page"
+msgstr "صفحة إعدادات SLD"
+
+msgid "General Settings"
+msgstr "إعدادات عامة"
+
+msgid "AI Settings"
+msgstr "إعدادات الذكاء الاصطناعي"
+
+msgid "Language Settings"
+msgstr "إعدادات اللغة"
+
+msgid "Custom CSS"
+msgstr "CSS مخصص"
+
+msgid "Custom Javascript"
+msgstr "جافاسكريبت مخصص"
+
+msgid "Step 1"
+msgstr "الخطوة 1"
+
+msgid "Create List with Link Details "
+msgstr "إنشاء قائمة بتفاصيل الروابط"
+
+msgid "Go to New List and create one by giving it a name. Then simply start adding List items or Links by filling up the fields you want. Use the Add New button to add more Links to your list."
+msgstr "انتقل إلى \"قائمة جديدة\" وأنشئ واحدة بإعطائها اسمًا. ثم ابدأ ببساطة بإضافة عناصر القائمة أو الروابط عن طريق ملء الحقول التي تريدها. استخدم زر \"إضافة جديد\" لإضافة المزيد من الروابط إلى قائمتك."
+
+msgid "Step 2"
+msgstr "الخطوة 2"
+
+msgid "Create More Lists"
+msgstr "إنشاء المزيد من القوائم"
+
+msgid "You can just create a single list and use the Single List mode. But this plugin works the best when you create a few Lists each conatining about 15-20 Llinks. This yields the best view."
+msgstr "يمكنك إنشاء قائمة واحدة فقط واستخدام وضع القائمة الفردية. ولكن هذا المكون الإضافي يعمل بشكل أفضل عندما تنشئ بضع قوائم تحتوي كل منها على حوالي 15-20 رابطًا. هذا يعطي أفضل عرض."
+
+msgid "Step 3"
+msgstr "الخطوة 3"
+
+msgid "Generate and Paste Shortcode on a Page"
+msgstr "إنشاء ولصق الرمز القصير في صفحة"
+
+msgid "Go to the page or post you want to display the directory. On the right sidebar you will see a ShortCode Generator block. Generate a shortcode with the options you want. Copy paste that to a section on your page."
+msgstr "انتقل إلى الصفحة أو المقالة التي تريد عرض الدليل فيها. في الشريط الجانبي الأيمن، سترى كتلة \"منشئ الرمز القصير\". أنشئ رمزًا قصيرًا بالخيارات التي تريدها. انسخ والصق ذلك في قسم على صفحتك."
+
+msgid "Enable Top Area"
+msgstr "تمكين المنطقة العلوية"
+
+msgid "Top area includes Embed button (more options coming soon)"
+msgstr "تتضمن المنطقة العلوية زر التضمين (المزيد من الخيارات قريباً)"
+
+msgid "Enable Live Search"
+msgstr "تمكين البحث المباشر"
+
+msgid "Live search through directory items."
+msgstr "بحث مباشر عبر عناصر الدليل."
+
+msgid "Enable Upvote"
+msgstr "تمكين التصويت الإيجابي"
+
+msgid "Turn ON to visible Upvote feature for all templates."
+msgstr "قم بالتشغيل لجعل ميزة التصويت الإيجابي مرئية لجميع القوالب."
+
+msgid "Enable Add New Button"
+msgstr "تمكين زر إضافة جديد"
+
+msgid "on"
+msgstr "تشغيل"
+
+msgid "The button will link to a page of your choice where you can place a contact form or instructions to submit links to your directory. Links have to be manually added by the admin."
+msgstr "سيرتبط الزر بصفحة من اختيارك حيث يمكنك وضع نموذج اتصال أو تعليمات لإرسال الروابط إلى دليلك. يجب إضافة الروابط يدويًا بواسطة المسؤول."
+
+msgid "Add Button Link"
+msgstr "إضافة رابط الزر"
+
+msgid "Example:  https://yourdomain.com/submit-link/"
+msgstr "مثال: https://yourdomain.com/submit-link/"
+
+msgid "Paste the full URL of a page that contains a contact form to submit link "
+msgstr "الصق عنوان URL الكامل لصفحة تحتوي على نموذج اتصال لإرسال رابط"
+
+msgid "Front end submission with monetization feature is available with the "
+msgstr "الإرسال من الواجهة الأمامية مع ميزة تحقيق الدخل متاح مع"
+
+msgid "Pro version"
+msgstr "الإصدار الاحترافي"
+
+msgid "Track Outbound Clicks"
+msgstr "تتبع النقرات الصادرة"
+
+msgid "You need to have the analytics.js"
+msgstr "تحتاج إلى وجود analytics.js"
+
+msgid "Analytics tracking code in every page of your site"
+msgstr "رمز تتبع التحليلات في كل صفحة من موقعك"
+
+msgid "Embed Credit Title"
+msgstr "عنوان رصيد التضمين"
+
+msgid "This text will be displayed below embedded list in other sites."
+msgstr "سيتم عرض هذا النص أسفل القائمة المضمنة في مواقع أخرى."
+
+msgid "Embed Credit Link"
+msgstr "رابط اعتماد التضمين"
+
+msgid "Enable Scroll to Top Button"
+msgstr "تفعيل زر التمرير للأعلى"
+
+msgid "Show Scroll to Top."
+msgstr "إظهار التمرير للأعلى."
+
+msgid "Enable RTL Direction"
+msgstr "تفعيل اتجاه RTL (من اليمين لليسار)"
+
+msgid "If you make this option ON, then list items will be arranged in Right-to-Left direction."
+msgstr "إذا قمت بتفعيل هذا الخيار، فسيتم ترتيب عناصر القائمة من اليمين إلى اليسار."
+
+msgid "Enable this option to show Dark Mode for all themes"
+msgstr "تفعيل هذا الخيار لإظهار الوضع الداكن لجميع القوالب"
+
+msgid "Enable Featured Section"
+msgstr "تفعيل قسم المميز"
+
+msgid "Turn ON to display the Featured section. Default is OFF."
+msgstr "قم بالتشغيل لعرض قسم المميز. الافتراضي هو إيقاف التشغيل."
+
+msgid "Featured Section Item Count"
+msgstr "عدد عناصر قسم المميز"
+
+msgid "How many featured items to show. Default is 9."
+msgstr "كم عدد العناصر المميزة التي سيتم عرضها. الافتراضي هو 9."
+
+msgid "Featured Section Background Color"
+msgstr "لون خلفية قسم المميز"
+
+msgid "Background color for the Featured section. Default is #0b0c0d."
+msgstr "لون الخلفية لقسم المميز. الافتراضي هو #0b0c0d."
+
+msgid "Change the language for Add New"
+msgstr "تغيير اللغة لـ إضافة جديد"
+
+msgid "Change the language for Share List"
+msgstr "تغيير اللغة لـ مشاركة القائمة"
+
+msgid "Change the language for Live Search Items"
+msgstr "تغيير اللغة لـ عناصر البحث المباشر"
+
+msgid "Change the language for No Results Found for Your Search"
+msgstr "تغيير اللغة لـ لم يتم العثور على نتائج لبحثك"
+
+msgid "Change the language for - Enable Dark Mode"
+msgstr "تغيير اللغة لـ - تفعيل الوضع الداكن"
+
+msgid "Change the language for - Dark Mode On"
+msgstr "تغيير اللغة لـ - الوضع الداكن قيد التشغيل"
+
+msgid "Change the language for - Light Mode On"
+msgstr "تغيير اللغة لـ - الوضع الفاتح قيد التشغيل"
+
+msgid "Custom CSS (Use *!important* flag if the changes does not take place)"
+msgstr "CSS مخصص (استخدم علامة *!important* إذا لم يتم تطبيق التغييرات)"
+
+msgid "Write your custom CSS here. Please do not use"
+msgstr "اكتب CSS المخصص الخاص بك هنا. الرجاء عدم استخدام"
+
+msgid "style"
+msgstr "style"
+
+msgid "tag in this textarea."
+msgstr "الوسم في هذا الحقل النصي."
+
+msgid "Write your custom JS here. Please do not use"
+msgstr "اكتب JS المخصص الخاص بك هنا. الرجاء عدم استخدام"
+
+msgid "script"
+msgstr "script"
+
+msgid "Select Active AI Provider"
+msgstr "تحديد مزود الذكاء الاصطناعي النشط"
+
+msgid "Disable AI"
+msgstr "تعطيل الذكاء الاصطناعي"
+
+msgid "Google Gemini"
+msgstr "جوجل جيميني"
+
+msgid "OpenRouter"
+msgstr "أوبن راوتر"
+
+msgid "Choose which AI provider to enable for the directory features. Selecting \\"
+msgstr "اختر مزود الذكاء الاصطناعي الذي تريد تفعيله لميزات الدليل. عند تحديد \\"
+
+msgid "Auto Save Generated Items"
+msgstr "حفظ العناصر التي تم إنشاؤها تلقائيًا"
+
+msgid "If enabled, directory posts will be automatically saved/updated immediately after the elements are successfully generated by the AI."
+msgstr "إذا تم التفعيل، سيتم حفظ/تحديث منشورات الدليل تلقائيًا فور نجاح الذكاء الاصطناعي في إنشاء العناصر."
+
+msgid "OpenAI Integration Settings"
+msgstr "إعدادات تكامل OpenAI"
+
+msgid "OpenAI API Key"
+msgstr "مفتاح API الخاص بـ OpenAI"
+
+msgid "sk-..."
+msgstr "sk-..."
+
+msgid "Test Connection"
+msgstr "اختبار الاتصال"
+
+msgid "Enter your OpenAI API key for AI generation features."
+msgstr "أدخل مفتاح API الخاص بـ OpenAI لميزات إنشاء الذكاء الاصطناعي."
+
+msgid "OpenAI Model"
+msgstr "نموذج OpenAI"
+
+msgid "Select the OpenAI model to use. You can load all latest available models using the Test Connection button."
+msgstr "حدد نموذج OpenAI المراد استخدامه. يمكنك تحميل جميع النماذج المتاحة الأحدث باستخدام زر اختبار الاتصال."
+
+msgid "Add Custom Models"
+msgstr "إضافة نماذج مخصصة"
+
+msgid "Manually add custom OpenAI models (comma separated)."
+msgstr "أضف نماذج OpenAI مخصصة يدويًا (مفصولة بفاصلة)."
+
+msgid "OpenAI Temperature"
+msgstr "درجة حرارة OpenAI"
+
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0). Note: Temperature is ignored for reasoning models (o1/o3 series)."
+msgstr "يتحكم في العشوائية: القيم الأعلى مثل 1.2 ستجعل المخرجات أكثر عشوائية، بينما القيم الأقل مثل 0.2 ستجعلها أكثر تركيزًا وتحديدًا. النطاق: 0.0 إلى 2.0 (الافتراضي: 1.0). ملاحظة: يتم تجاهل درجة الحرارة لنماذج الاستدلال (سلسلة o1/o3)."
+
+msgid "Google Gemini Integration Settings"
+msgstr "إعدادات تكامل Google Gemini"
+
+msgid "Gemini API Key"
+msgstr "مفتاح API لـ Gemini"
+
+msgid "Enter your Google Gemini API key."
+msgstr "أدخل مفتاح API الخاص بك لـ Google Gemini."
+
+msgid "Gemini Model"
+msgstr "نموذج Gemini"
+
+msgid "Select the Gemini model to use. You can load all latest available models using the Test Connection button."
+msgstr "حدد نموذج Gemini المراد استخدامه. يمكنك تحميل جميع أحدث النماذج المتاحة باستخدام زر \"اختبار الاتصال\"."
+
+msgid "Manually add custom Google Gemini models (comma separated)."
+msgstr "أضف نماذج Google Gemini مخصصة يدويًا (مفصولة بفاصلة)."
+
+msgid "Gemini Temperature"
+msgstr "درجة حرارة Gemini"
+
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0)."
+msgstr "يتحكم في العشوائية: القيم الأعلى مثل 1.2 ستجعل المخرجات أكثر عشوائية، بينما القيم الأقل مثل 0.2 ستجعلها أكثر تركيزًا وتحديدًا. النطاق: 0.0 إلى 2.0 (الافتراضي: 1.0)."
+
+msgid "OpenRouter Integration Settings"
+msgstr "إعدادات تكامل OpenRouter"
+
+msgid "OpenRouter API Key"
+msgstr "مفتاح API لـ OpenRouter"
+
+msgid "Enter your OpenRouter API Key. You can get one from openrouter.ai."
+msgstr "أدخل مفتاح API الخاص بك لـ OpenRouter. يمكنك الحصول عليه من openrouter.ai."
+
+msgid "OpenRouter Model"
+msgstr "نموذج OpenRouter"
+
+msgid "Select the OpenRouter model to use. Models are dynamically fetched if an API key is active."
+msgstr "حدد نموذج OpenRouter المراد استخدامه. يتم جلب النماذج ديناميكيًا إذا كان مفتاح API نشطًا."
+
+msgid "Manually add custom OpenRouter models (comma separated)."
+msgstr "أضف نماذج OpenRouter مخصصة يدويًا (مفصولة بفاصلة)."
+
+msgid "OpenRouter Temperature"
+msgstr "درجة حرارة OpenRouter"
+
+msgid "Controls randomness: Range 0.0 to 2.0 (Default: 1.0)."
+msgstr "يتحكم في العشوائية: النطاق 0.0 إلى 2.0 (الافتراضي: 1.0)."
+
+msgid "AI Prompt Settings"
+msgstr "إعدادات موجه الذكاء الاصطناعي"
+
+msgid "Custom Prompt Instruction"
+msgstr "تعليمات الموجه المخصصة"
+
+msgid "Reset to Default"
+msgstr "إعادة تعيين إلى الافتراضي"
+
+msgid "You can customize the prompt instructions sent to the AI model. Be sure to include the placeholders {count} and {prompt} so they can be replaced by the user's inputs dynamically. Also, keep the general format of the prompt as is. Do not modify if you are uncertain."
+msgstr "يمكنك تخصيص تعليمات الموجه المرسلة إلى نموذج الذكاء الاصطناعي. تأكد من تضمين العناصر النائبة {count} و {prompt} حتى يمكن استبدالها بمدخلات المستخدم ديناميكيًا. حافظ أيضًا على التنسيق العام للموجه كما هو. لا تعدّل إذا كنت غير متأكد."
+
+msgid "Shortcode Generator"
+msgstr "مولد الأكواد المختصرة"
+
+msgid "We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode."
+msgstr "نشجعك على استخدام مولد الأكواد المختصرة الموجود في شريط أدوات محرر صفحتك/منشورك في الوضع المرئي."
+
+msgid "See sample below for where to find it for Gutenberg."
+msgstr "انظر المثال أدناه لمعرفة مكان العثور عليه في Gutenberg."
+
+msgid "This is how the shortcode generator will look like."
+msgstr "هكذا سيبدو مولد الأكواد المختصرة."
+
+msgid "Shortcode Example"
+msgstr "مثال على كود مختصر"
+
+msgid "You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as \\"
+msgstr "يمكنك استخدام مولد الأكواد المختصرة الخاص بنا لتوليد وإدراج الأكواد المختصرة بسهولة، بعنوان \\"
+
+msgid "For all the lists:"
+msgstr "لجميع القوائم:"
+
+msgid "[qcopd-directory mode=\\"
+msgstr "[qcopd-directory mode=\\"
+
+msgid "For only a single list:"
+msgstr "لقائمة واحدة فقط:"
+
+msgid "Available Parameters:"
+msgstr "المعلمات المتاحة:"
+
+msgid "1. mode"
+msgstr "1. الوضع"
+
+msgid "[Value for this option can be set as \\"
+msgstr "[يمكن تعيين قيمة هذا الخيار كـ \\"
+
+msgid "2. column"
+msgstr "2. عمود"
+
+msgid "Avaialble values: \\"
+msgstr "القيم المتاحة: \\"
+
+msgid "3. style"
+msgstr "3. النمط"
+
+msgid "Only 6 templates are available in the free version. For more styles or templates, please purchase the"
+msgstr "6 قوالب فقط متاحة في النسخة المجانية. لمزيد من الأنماط أو القوالب، يرجى شراء"
+
+msgid "premium version"
+msgstr "الإصدار المميز"
+
+msgid "4. orderby"
+msgstr "4. ترتيب حسب"
+
+msgid "Compatible order by values: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' and 'menu_order'."
+msgstr "قيم الترتيب حسب المتوافقة: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' و 'menu_order'."
+
+msgid "5. order"
+msgstr "5. ترتيب"
+
+msgid "Value for this option can be set as \\"
+msgstr "يمكن تعيين قيمة هذا الخيار كـ \\"
+
+msgid "6. item_orderby"
+msgstr "6. item_orderby"
+
+msgid "Value for this option are \\"
+msgstr "قيم هذا الخيار هي \\"
+
+msgid "7. list_id"
+msgstr "7. معرف_القائمة"
+
+msgid "Only applicable if you want to display a single list [not all]. You can provide specific list id here as a value. You can also get ready shortcode for a single list under \\"
+msgstr "ينطبق فقط إذا كنت ترغب في عرض قائمة واحدة [وليس الكل]. يمكنك توفير معرف قائمة محدد هنا كقيمة. يمكنك أيضًا الحصول على رمز قصير جاهز لقائمة واحدة تحت \\"
+
+msgid "8. enable_embedding"
+msgstr "8. تفعيل_التضمين"
+
+msgid "Allow visitors to embed list in other sites. Supported values - \\"
+msgstr "السماح للزوار بتضمين القائمة في مواقع أخرى. القيم المدعومة - \\"
+
+msgid "Example: enable_embedding=\\"
+msgstr "مثال: enable_embedding=\\"
+
+msgid "8. upvote"
+msgstr "8. تصويت_إيجابي"
+
+msgid "Allow visitors to list item. Supported values - \\"
+msgstr "السماح للزوار بالتصويت الإيجابي على عناصر القائمة. القيم المدعومة - \\"
+
+msgid "Example: upvote=\\"
+msgstr "مثال: upvote=\\"
+
+msgid "9. style-16 image show"
+msgstr "9. عرض الصورة بنمط 16"
+
+msgid " Add the shortcode parameter enable_image=\\"
+msgstr "أضف معلمة الرمز القصير enable_image=\\"
+
+msgid "Example: enable_image=\\"
+msgstr "مثال: enable_image=\\"
+
+msgid "10. Search"
+msgstr "10. بحث"
+
+msgid " Add the shortcode parameter search=\\"
+msgstr "أضف معلمة الرمز القصير search=\\"
+
+msgid "Example: search=\\"
+msgstr "مثال: search=\\"
+
+msgid "11. dark_mode"
+msgstr "11. الوضع_المظلم"
+
+msgid "You can use this value to use the dark_mode of SLD templates. Available values for this option \\"
+msgstr "يمكنك استخدام هذه القيمة لاستخدام الوضع المظلم لقوالب SLD. القيم المتاحة لهذا الخيار \\"
+
+msgid "== Frequently Asked Questions =="
+msgstr "== الأسئلة الشائعة =="
+
+msgid "= I cannot save my List. delete item or add new items to the List ="
+msgstr "= لا يمكنني حفظ قائمتي. حذف عنصر أو إضافة عناصر جديدة إلى القائمة ="
+
+msgid "The issue you are having with saving the Lists is because of a limitation set in your server. Your server probably has a low limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save new link items. The server’s configuration that dictates this is max_input_vars. Set it to a high limit like max_input_vars = 10000. You can do it with local php.ini file or htaccess if your server supports it, Otherwise, please contact your hosting company support if needed. "
+msgstr "المشكلة التي تواجهها في حفظ القوائم ترجع إلى قيود مفروضة على خادمك. من المحتمل أن يكون لخادمك حد منخفض لعدد حقول النموذج التي سيعالجها في المرة الواحدة. لذلك، بعد إضافة عدد معين من الروابط، يرفض الخادم حفظ عناصر الروابط الجديدة. إعداد الخادم الذي يحدد ذلك هو max_input_vars. قم بتعيينه إلى حد عالٍ مثل max_input_vars = 10000. يمكنك القيام بذلك باستخدام ملف php.ini المحلي أو htaccess إذا كان خادمك يدعم ذلك، وإلا، يرجى الاتصال بدعم شركة الاستضافة الخاصة بك إذا لزم الأمر."
+
+msgid "= The sub title is not showing ="
+msgstr "= العنوان الفرعي لا يظهر ="
+
+msgid "The default template does not show subtitles. Use style-1 from the shortcode generator to display subtitles."
+msgstr "القالب الافتراضي لا يعرض العناوين الفرعية. استخدم النمط 1 من مولد الرموز القصيرة لعرض العناوين الفرعية."
+
+msgid "= Does the free version have filter buttons? ="
+msgstr "= هل تحتوي النسخة المجانية على أزرار تصفية؟ ="
+
+msgid "No. It is a pro version feature at the moment. But in the future, we have plans to make it available in the free version as well."
+msgstr "لا. إنها ميزة خاصة بالنسخة المدفوعة في الوقت الحالي. ولكن في المستقبل، لدينا خطط لإتاحتها في النسخة المجانية أيضًا."
+
+msgid "= I cannot have more than 1 columns ="
+msgstr "= لا يمكنني الحصول على أكثر من عمود واحد ="
+
+msgid "To display more than one column, you need to create multiple Lists and choose to Show All Lists from the shortcode generator. A single list will always show in a single column."
+msgstr "لعرض أكثر من عمود واحد، تحتاج إلى إنشاء قوائم متعددة واختيار عرض جميع القوائم من مولد الرموز القصيرة. ستظهر القائمة الواحدة دائمًا في عمود واحد."
+
+msgid "= I’m having trouble grasping the use of categories. It seems like and that they can only be assigned to a list rather than a specific link. ="
+msgstr "= أواجه صعوبة في فهم استخدام التصنيفات. يبدو أنها لا يمكن تعيينها إلا لقائمة بدلاً من رابط محدد. ="
+
+msgid "The base pillars of SLD are Lists, not individual links. The most common use case scenario of SLD is to create and display multiple Lists of many Links on specific topics. As such, there is no option for a Link (list item) to belong to multiple Lists or Categories. That would make the process of creating Lists slower. For each link you would have to select a List and a Category from drop downs despite the chances of a single List item to belong to multiple Lists are usually not that high. When you have dozens or hundreds of Lists that would become a real issue to create or manage your Lists."
+msgstr "الأركان الأساسية لـ SLD هي القوائم، وليست الروابط الفردية. السيناريو الأكثر شيوعًا لاستخدام SLD هو إنشاء وعرض قوائم متعددة من العديد من الروابط حول مواضيع محددة. على هذا النحو، لا يوجد خيار للرابط (عنصر القائمة) للانتماء إلى قوائم أو تصنيفات متعددة. سيؤدي ذلك إلى إبطاء عملية إنشاء القوائم. لكل رابط، سيتعين عليك تحديد قائمة وتصنيف من القوائم المنسدلة على الرغم من أن فرص انتماء عنصر قائمة واحد إلى قوائم متعددة ليست عالية عادةً. عندما يكون لديك العشرات أو المئات من القوائم، سيصبح ذلك مشكلة حقيقية في إنشاء أو إدارة قوائمك."
+
+msgid "= Do you have pagination or load more items? I have thousands of links="
+msgstr "= هل لديكم ترقيم صفحات أو تحميل المزيد من العناصر؟ لدي آلاف الروابط ="
+
+msgid "Items in lists can be paginated in the pro version. This option is available in the shortcode generator. But you can also add the parameters manually."
+msgstr "يمكن ترقيم صفحات العناصر في القوائم في النسخة المدفوعة. هذا الخيار متاح في مولد الرموز القصيرة. ولكن يمكنك أيضًا إضافة المعلمات يدويًا."
+
+msgid "Values: “true”, “false”. This option will allow you to paginate list items. It will break the list page wise. Example: paginate_items=“true”. You also need to add the parameter per_page. This option indicates the number of items per page. Default is “5”. paginate_items=“true” is required to get this parameter working. Example: per_page=“5”"
+msgstr "القيم: \"true\"، \"false\". سيتيح لك هذا الخيار ترقيم صفحات عناصر القائمة. سيقسم القائمة حسب الصفحات. مثال: paginate_items=\"true\". تحتاج أيضًا إلى إضافة المعلمة per_page. يشير هذا الخيار إلى عدد العناصر في كل صفحة. الافتراضي هو \"5\". يتطلب paginate_items=\"true\" لكي تعمل هذه المعلمة. مثال: per_page=\"5\""
+
+msgid "Lists themselves cannot be paginated as the main concept of SLD is to be a Simple, One Page Directory."
+msgstr "لا يمكن ترقيم صفحات القوائم نفسها لأن المفهوم الرئيسي لـ SLD هو أن يكون دليلًا بسيطًا من صفحة واحدة."
+
+msgid "= I have a list to import but it does not work and there is no message saying why my import does not work. ="
+msgstr "= لدي قائمة لاستيرادها ولكنها لا تعمل ولا توجد رسالة توضح سبب عدم عمل الاستيراد. ="
+
+msgid "The most common reason for failed import is encoding. The CSV file itself and characters in it must be in utf-8 format. Please check your CSV file for any unusual/non-utf-8 characters. If the problem persists, please email us the CSV file."
+msgstr "السبب الأكثر شيوعًا لفشل الاستيراد هو الترميز. يجب أن يكون ملف CSV نفسه والأحرف الموجودة فيه بتنسيق utf-8. يرجى التحقق من ملف CSV الخاص بك بحثًا عن أي أحرف غير عادية/غير utf-8. إذا استمرت المشكلة، يرجى مراسلتنا بملف CSV."
+
+msgid "= I have some blank pages that are crawled by Google! How to avoid them? ="
+msgstr "= لدي بعض الصفحات الفارغة التي يزحف إليها جوجل! كيف أتجنبها؟ ="
+
+msgid "Like many, if not most, WordPress plugins SLD uses custom posts and WordPress creates slug URLs even though they are not being used by SLD at the moment. We are working on making use of them."
+msgstr "مثل العديد من إضافات ووردبريس، إن لم يكن معظمها، تستخدم SLD أنواع منشورات مخصصة وينشئ ووردبريس عناوين URL للسلاغ (slug) على الرغم من أن SLD لا تستخدمها في الوقت الحالي. نحن نعمل على الاستفادة منها."
+
+msgid "But rest assured they are not harmful. They are generally not linked from anywhere and not indexed by Google. The only exception is if you have an XML sitemap generator that automatically scans and generates Links to these slug URLs. Yoast SEO plugin does that. You can exclude those slugs from xml sitemap. Go to Yoast->XML Sitemap->Post Types tag and select Manage List Items (sld) to Not in sitemap – then Save."
+msgstr "ولكن كن مطمئنًا أنها ليست ضارة. لا يتم ربطها بشكل عام من أي مكان ولا تتم فهرستها بواسطة جوجل. الاستثناء الوحيد هو إذا كان لديك منشئ خريطة موقع XML يقوم تلقائيًا بمسح وإنشاء روابط لعناوين URL هذه. تقوم إضافة Yoast SEO بذلك. يمكنك استبعاد هذه السلاغات من خريطة موقع XML. انتقل إلى Yoast -&gt; XML Sitemap -&gt; علامة تبويب أنواع المنشورات (Post Types) وحدد إدارة عناصر القائمة (sld) إلى ليس في خريطة الموقع (Not in sitemap) – ثم احفظ."
+
+msgid "= How can I upgrade from free version of SLD to Pro version? ="
+msgstr "= كيف يمكنني الترقية من الإصدار المجاني من SLD إلى الإصدار الاحترافي؟ ="
+
+msgid "1. Download the latest pro version of the plugin from website"
+msgstr "1. قم بتنزيل أحدث إصدار احترافي من الإضافة من الموقع الإلكتروني"
+
+msgid "2. Log in to your WordPress admin area and go to the Plugins management page."
+msgstr "2. سجل الدخول إلى منطقة إدارة ووردبريس الخاصة بك وانتقل إلى صفحة إدارة الإضافات."
+
+msgid "3. Deactivate and Delete the old version of the plugin (don’t worry – your data is safe)"
+msgstr "3. قم بإلغاء تنشيط وحذف الإصدار القديم من الإضافة (لا تقلق – بياناتك آمنة)"
+
+msgid "4. Upload and Activate the latest pro version of the plugin"
+msgstr "4. قم برفع وتنشيط أحدث إصدار احترافي من الإضافة"
+
+msgid "5. You are done."
+msgstr "5. لقد انتهيت."
+
+msgid "= I have setup List Categories and Lists and neither is showing on home page. Did I install correctly? ="
+msgstr "= لقد قمت بإعداد فئات القوائم والقوائم ولا يظهر أي منهما على الصفحة الرئيسية. هل قمت بالتثبيت بشكل صحيح؟ ="
+
+msgid "You have to put the short code on the WordPress oage or post page where you want to show the List/s. There is a Shortcode generator in your page or post visual editor. Use that to create shortcode and insert to your page, where you want to display the lists, easily."
+msgstr "يجب عليك وضع الكود المختصر (shortcode) في صفحة ووردبريس أو صفحة المنشور حيث تريد عرض القائمة/القوائم. يوجد منشئ أكواد مختصرة في محرر صفحتك أو منشورك المرئي. استخدمه لإنشاء الكود المختصر وإدراجه في صفحتك، حيث تريد عرض القوائم، بسهولة."
+
+msgid "= Is SLD mobile friendly? Does it function well on cells and tablets? ="
+msgstr "= هل SLD متوافق مع الجوّال؟ هل يعمل بشكل جيد على الهواتف والأجهزة اللوحية؟ ="
+
+msgid "Yes, all templates are mobile device friendly and Responsive."
+msgstr "نعم، جميع القوالب متوافقة مع الأجهزة المحمولة ومتجاوبة."
+
+msgid "Please take a quick look at our"
+msgstr "يرجى إلقاء نظرة سريعة على"
+
+msgid "Video Tutorials"
+msgstr "دروس الفيديو"
+
+msgid "Note"
+msgstr "ملاحظة"
+
+msgid "If you are having problem with adding more items or saving a list or your changes in the list are not getting saved then it is most likely because of a limitation set in your server. Your server has a limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save the List. The server’s configuration that dictates this is max_input_vars. You need to Set it to a high limit like max_input_vars = 15000. Since this is a server setting - you may need to contact your hosting company's support for this."
+msgstr "إذا كنت تواجه مشكلة في إضافة المزيد من العناصر أو حفظ قائمة أو عدم حفظ تغييراتك في القائمة، فمن المرجح أن يكون ذلك بسبب قيود مفروضة على خادمك. يحتوي خادمك على حد لعدد حقول النموذج التي سيعالجها في المرة الواحدة. لذلك، بعد إضافة عدد معين من الروابط، يرفض الخادم حفظ القائمة. إعداد الخادم الذي يحدد ذلك هو max_input_vars. تحتاج إلى تعيينه على حد عالٍ مثل max_input_vars = 15000. نظرًا لأن هذا إعداد خادم - قد تحتاج إلى الاتصال بدعم شركة الاستضافة الخاصة بك لهذا الغرض."
+
+msgid "Leave A Review for Simple Link Directory?"
+msgstr "هل تود ترك تقييم لـ Simple Link Directory؟"
+
+msgid "We hope you've enjoyed using"
+msgstr "نأمل أن تكون قد استمتعت باستخدام"
+
+msgid " Would you consider leaving us a review on WordPress.org?"
+msgstr " هل تفكر في ترك تقييم لنا على WordPress.org؟"
+
+msgid "Leave A Review"
+msgstr "اترك تقييمًا"
+
+msgid "I've already left a review"
+msgstr "لقد تركت تقييمًا بالفعل"
+
+msgid "Maybe Later"
+msgstr "ربما لاحقًا"
+
+msgid "Never show this again"
+msgstr "لا تظهر هذا مرة أخرى أبدًا"
+
+msgid "SLD Demo Data Imported"
+msgstr "تم استيراد بيانات SLD التجريبية"
+
+msgid "Already CSV data imported and page created."
+msgstr "تم بالفعل استيراد بيانات CSV وإنشاء الصفحة."
+
+msgid "More WordPress Goodies for You!"
+msgstr "المزيد من إضافات ووردبريس الرائعة لك!"
+
+msgid "Check Out Some of Our Other Works that Might Make Your Website Better"
+msgstr "اطلع على بعض أعمالنا الأخرى التي قد تجعل موقعك أفضل"
+
+msgid "All our Pro Version users get Premium, Guaranteed Quick, One on One Priority Support."
+msgstr "يحصل جميع مستخدمي الإصدار الاحترافي لدينا على دعم مميز وسريع ومضمون وشخصي ذي أولوية."
+
+msgid "Get Priority Support "
+msgstr "احصل على دعم ذي أولوية"
+
+msgid "Online KnowledgeBase"
+msgstr "قاعدة المعارف عبر الإنترنت"
+
+msgid "Get Support for Free Version"
+msgstr "احصل على دعم للإصدار المجاني"
+
+msgid "Please fill up all the requried form fields."
+msgstr "يرجى ملء جميع حقول النموذج المطلوبة."
+
+msgid "Invalid email address."
+msgstr "عنوان بريد إلكتروني غير صالح."
+
+msgid "Support Request Details:"
+msgstr "تفاصيل طلب الدعم:"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Subject"
+msgstr "الموضوع"
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Sent Via the Plugin"
+msgstr "أُرسلت عبر الإضافة"
+
+msgid "Mail sent from:"
+msgstr "البريد المرسل من:"
+
+msgid "URL:"
+msgstr "الرابط:"
+
+msgid "Mail Generated on:"
+msgstr "تم إنشاء البريد في:"
+
+msgid "From Plugin Support Page:"
+msgstr "من صفحة دعم الإضافة:"
+
+msgid "Your email was sent successfully. Thanks!"
+msgstr "تم إرسال بريدك الإلكتروني بنجاح. شكرًا لك!"
+
+msgid "Update To Pro"
+msgstr "الترقية إلى الاحترافي"
+
+msgid "SLD - Shortcode Generator"
+msgstr "SLD - مولد الأكواد القصيرة"
+
+msgid "Mode"
+msgstr "الوضع"
+
+msgid "All List"
+msgstr "كل القوائم"
+
+msgid "One List"
+msgstr "قائمة واحدة"
+
+msgid "Select List "
+msgstr "تحديد قائمة"
+
+msgid "Please Select List"
+msgstr "الرجاء تحديد قائمة"
+
+msgid "List Category"
+msgstr "فئة القائمة"
+
+msgid "Please Select Category"
+msgstr "الرجاء تحديد الفئة"
+
+msgid "Template Style"
+msgstr "نمط القالب"
+
+msgid "Default Style"
+msgstr "النمط الافتراضي"
+
+msgid "Style 01"
+msgstr "النمط 01"
+
+msgid "Style 02"
+msgstr "النمط 02"
+
+msgid "Style 03"
+msgstr "النمط 03"
+
+msgid "Style 04"
+msgstr "النمط 04"
+
+msgid "Style 05"
+msgstr "النمط 05"
+
+msgid "Style 16 (**NEW)"
+msgstr "النمط 16 (**جديد**)"
+
+msgid "Demo URL: "
+msgstr "رابط العرض التجريبي:"
+
+msgid "Column"
+msgstr "عمود"
+
+msgid "Column 1"
+msgstr "عمود 1"
+
+msgid "Column 2"
+msgstr "عمود 2"
+
+msgid "Column 3"
+msgstr "عمود 3"
+
+msgid "Column 4"
+msgstr "عمود 4"
+
+msgid "Title Font Size"
+msgstr "حجم خط العنوان"
+
+msgid "Default"
+msgstr "افتراضي"
+
+msgid "Title Line Height"
+msgstr "ارتفاع سطر العنوان"
+
+msgid "Subtitle Font Size"
+msgstr "حجم خط العنوان الفرعي"
+
+msgid "Subtitle Line Height"
+msgstr "ارتفاع سطر العنوان الفرعي"
+
+msgid "List Order By"
+msgstr "ترتيب القائمة حسب"
+
+msgid "ID"
+msgstr "المعرف"
+
+msgid "Date Modified"
+msgstr "تاريخ التعديل"
+
+msgid "Random"
+msgstr "عشوائي"
+
+msgid "Menu Order"
+msgstr "ترتيب القائمة"
+
+msgid "List Order"
+msgstr "ترتيب القائمة"
+
+msgid "Ascending"
+msgstr "تصاعدي"
+
+msgid "Descending"
+msgstr "تنازلي"
+
+msgid "List Item Orderby"
+msgstr "ترتيب عناصر القائمة حسب"
+
+msgid "Upvotes"
+msgstr "الإعجابات"
+
+msgid "Enable Embeding"
+msgstr "تفعيل التضمين"
+
+msgid "Copy"
+msgstr "نسخ"
+
+msgid "the shortcode & use it any text block."
+msgstr "الكود المختصر واستخدمه في أي كتلة نصية."
+
+msgid "Copy & Close"
+msgstr "نسخ وإغلاق"
+
+msgid "SLD - Alert"
+msgstr "SLD - تنبيه"
+
+msgid "A list should have more than just 1 item."
+msgstr "يجب أن تحتوي القائمة على أكثر من عنصر واحد فقط."
+
+msgid "We recommend"
+msgstr "نوصي بـ"
+
+msgid "10-30"
+msgstr "10-30"
+
+msgid "links/businesses for each List."
+msgstr "روابط/أعمال لكل قائمة."
+
+msgid "Create multiple Lists and show them all on a page using the"
+msgstr "أنشئ قوائم متعددة واعرضها كلها في صفحة باستخدام"
+
+msgid "Shortcode Generator."
+msgstr "مولد الأكواد المختصرة."
+
+msgid "No"
+msgstr "لا"
+
+msgid "Add more item"
+msgstr "أضف المزيد من العناصر"

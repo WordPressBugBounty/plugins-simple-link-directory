@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * Create meta boxes
@@ -58,15 +61,16 @@ class CMB_Meta_Box {
 
 		global $post, $temp_ID;
 
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
 		// Get the current ID
-		if( isset( $_GET['post'] ) )
-			$post_id = sanitize_text_field($_GET['post']);
-
-		elseif( isset( $_POST['post_ID'] ) )
-			$post_id = sanitize_text_field($_POST['post_ID']);
-
-		elseif ( ! empty( $post->ID ) )
+		if ( isset( $_GET['post'] ) ) {
+			$post_id = absint( wp_unslash( $_GET['post'] ) );
+		} elseif ( isset( $_POST['post_ID'] ) ) {
+			$post_id = absint( wp_unslash( $_POST['post_ID'] ) );
+		} elseif ( ! empty( $post->ID ) ) {
 			$post_id = $post->ID;
+		}
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
 
 		if ( is_page() || ! isset( $post_id ) )
 			return false;
@@ -267,20 +271,15 @@ class CMB_Meta_Box {
 				if ( ! empty( $field->args['sortable'] ) )
 					$classes[] = 'cmb-sortable';
 
-				$attrs = array(
-					sprintf( 'id="%s"', sanitize_html_class( $field->id ) ),
-					sprintf( 'class="%s"', esc_attr( implode(' ', array_map( 'sanitize_html_class', $classes ) ) ) )
-				);
-
-				// Field Repeatable Max.
-				if ( isset( $field->args['repeatable_max']  ) )
-					$attrs[] = sprintf( 'data-rep-max="%s"', intval( $field->args['repeatable_max'] ) );
+				$field_id    = sanitize_html_class( $field->id );
+				$field_class = implode( ' ', array_map( 'sanitize_html_class', $classes ) );
+				$rep_max     = isset( $field->args['repeatable_max'] ) ? intval( $field->args['repeatable_max'] ) : null;
 
 				?>
 
 				<div class="cmb-cell-<?php echo intval( $field->args['cols'] ); ?>">
 
-						<div <?php echo implode( ' ', $attrs ); ?>>
+						<div id="<?php echo esc_attr( $field_id ); ?>" class="<?php echo esc_attr( $field_class ); ?>"<?php echo ( null !== $rep_max ) ? ' data-rep-max="' . esc_attr( $rep_max ) . '"' : ''; ?>>
 							<?php $field->display(); ?>
 						</div>
 
@@ -321,7 +320,7 @@ class CMB_Meta_Box {
 	function save( $post_id = 0 ) {
 
 		// Verify nonce
-		if ( ! isset( $_POST['wp_meta_box_nonce'] ) || ! wp_verify_nonce( $_POST['wp_meta_box_nonce'], basename( __FILE__ ) ) )
+		if ( ! isset( $_POST['wp_meta_box_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['wp_meta_box_nonce'] ) ), basename( __FILE__ ) ) )
 			return $post_id;
 
 		foreach ( $this->_meta_box['fields'] as $field ) {
@@ -331,7 +330,8 @@ class CMB_Meta_Box {
 				continue;
 
 			if ( isset( $_POST[ $field['id'] ] ) )
-				$value = (array) $_POST[ $field['id'] ];
+				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+				$value = (array) wp_unslash( $_POST[ $field['id'] ] );
 			else
 				$value = array();
 
@@ -367,11 +367,13 @@ class CMB_Meta_Box {
 
 	function get_post_id() {
 
-		$post_id = isset( $_GET['post'] ) ? sanitize_text_field($_GET['post']) : null;
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
+		$post_id = isset( $_GET['post'] ) ? absint( wp_unslash( $_GET['post'] ) ) : null;
 
 		if ( ! $post_id && isset( $_POST['post_id'] ) ) {
-			$post_id = sanitize_text_field($_POST['post_id']);
+			$post_id = absint( wp_unslash( $_POST['post_id'] ) );
 		}
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
 
 		return $post_id;
 

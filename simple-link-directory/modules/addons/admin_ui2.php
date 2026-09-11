@@ -1,14 +1,17 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 global $woocommerce, $wp_scripts;
 $suffix = defined('sld_SCRIPT_DEBUG') && sld_SCRIPT_DEBUG ? '' : '.min';
 
-wp_register_style('qlcd-sld-admin-style', sld_addon_url . 'css/admin-style.css', '', '', 'screen');
+wp_register_style('qlcd-sld-admin-style', sld_addon_url . 'css/admin-style.css', array(), SLD_QCOPD_VERSION, 'screen');
 wp_enqueue_style('qlcd-sld-admin-style');
 
 wp_enqueue_script('jquery');
 
-wp_register_style('qcld-sld-bootcampqc-css', sld_addon_url . 'css/bootstrap.min.css', '', '', 'screen');
+wp_register_style('qcld-sld-bootcampqc-css', sld_addon_url . 'css/bootstrap.min.css', array(), SLD_QCOPD_VERSION, 'screen');
 wp_enqueue_style('qcld-sld-bootcampqc-css');
 
 
@@ -31,7 +34,7 @@ wp_enqueue_style('qcld-sld-bootcampqc-css');
                     <div class="wpbot_addons_section">
                         <div class="wpbot_single_addon_wrapper qc-display-flex qc-justify-center qc-flex-wrap kbx_pb_0">
                             <h2 class="wpbot_single_addon_title"><a
-                                    href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>"
+                                    href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory/'); ?>"
                                     target="_blank"
                                     rel="nofollow"><?php echo esc_html('Simple Link Directory Pro', 'simple-link-directory'); ?></a>
                                 <?php echo esc_html(' Addons', 'simple-link-directory'); ?></h2>
@@ -58,7 +61,7 @@ wp_enqueue_style('qcld-sld-bootcampqc-css');
                                             <p><?php esc_html_e('Global Search, Pagination, Category view with Lists on home page.', 'simple-link-directory'); ?>
                                             </p>
                                             <a class="button button-secondary"
-                                                href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>"
+                                                href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory-addons/'); ?>"
                                                 target="_blank"><?php echo esc_html('Get It Now', 'simple-link-directory'); ?></a>
                                         </div>
                                     </div>
@@ -86,7 +89,7 @@ wp_enqueue_style('qcld-sld-bootcampqc-css');
                                             <p><?php esc_html_e('Check Broken Links for SLD and SBD and other Post Types Links', 'simple-link-directory'); ?>
                                             </p>
                                             <a class="button button-secondary"
-                                                href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>"
+                                                href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory-addons/'); ?>"
                                                 target="_blank"><?php echo esc_html('Get It Now', 'simple-link-directory'); ?></a>
                                         </div>
                                     </div>
@@ -114,7 +117,7 @@ wp_enqueue_style('qcld-sld-bootcampqc-css');
                                             <p><?php esc_html_e('Allow your site users to leave a review comment and rate the link listings.', 'simple-link-directory'); ?>
                                             </p>
                                             <a class="button button-secondary"
-                                                href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>"
+                                                href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory-addons/'); ?>"
                                                 target="_blank"><?php echo esc_html('Get It Now', 'simple-link-directory'); ?></a>
                                         </div>
                                     </div>
@@ -142,7 +145,7 @@ wp_enqueue_style('qcld-sld-bootcampqc-css');
                                             <p><?php esc_html_e('Allow your site users Exchange Links with Other Websites', 'simple-link-directory'); ?>
                                             </p>
                                             <a class="button button-secondary"
-                                                href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory-addons/'); ?>"
+                                                href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory-addons/'); ?>"
                                                 target="_blank"><?php echo esc_html('Get It Now', 'simple-link-directory'); ?></a>
                                         </div>
                                     </div>
@@ -172,7 +175,7 @@ wp_enqueue_style('qcld-sld-bootcampqc-css');
                                             <p><?php esc_html_e('Crafted carefully to make the best out of the popular Simple Link Directory plugin. One Click Install, Demo Data, Compatible with the Elementor and the Gutenberg Page Builder!', 'simple-link-directory'); ?>
                                             </p>
                                             <a class="button button-secondary"
-                                                href="https://www.quantumcloud.com/products/themes/simple-link-directory/"
+                                                href="https://www.quantumcloud.net/products/themes/simple-link-directory/"
                                                 target="_blank"><?php esc_html_e('Get It Now', 'simple-link-directory'); ?></a>
                                         </div>
                                     </div>

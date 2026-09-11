@@ -1,5 +1,7 @@
 <?php
-defined('ABSPATH') or die("No direct script access!");
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 $embed_link_button = 1;
 
@@ -9,9 +11,9 @@ add_action('wp_enqueue_scripts', 'qcopd_load_embed_scripts');
 function qcopd_load_embed_scripts()
 {
 	
-	wp_register_style('qcopd-embed-form-css', SLD_QCOPD_URL . 'embed/css/embed-form.css');
+	wp_register_style('qcopd-embed-form-css', SLD_QCOPD_URL . 'embed/css/embed-form.css', array(), SLD_QCOPD_VERSION);
 
-    wp_register_script('qcopd-embed-form-script', SLD_QCOPD_URL . 'embed/js/embed-form.js', array('jquery'));
+    wp_register_script('qcopd-embed-form-script', SLD_QCOPD_URL . 'embed/js/embed-form.js', array('jquery'), SLD_QCOPD_VERSION, true);
 
 }
 
@@ -95,13 +97,7 @@ function qcld_custom_embedder($shortcodeAtts){
 	
     $pagename = $post->post_name;
 
-   // if ($pagename !== 'embed-link') {
-	
-        ?>
-<div class="qcopd_embed_container sld-top-area">
-
-	<?php 
-
+  
 	if(isset( $shortcodeAtts['search'] ) && $shortcodeAtts['search'] =='true'){
 		$searchSettings = 'on';
 	}else{
@@ -112,6 +108,24 @@ function qcld_custom_embedder($shortcodeAtts){
 		}
 	}
 
+
+	if(isset( $shortcodeAtts['enable_embedding'] ) && $shortcodeAtts['enable_embedding'] =='true'){
+		$enable_embedding = 'on';
+	}else{
+		if( isset( $shortcodeAtts['enable_embedding'] ) && $shortcodeAtts['enable_embedding'] =='false'){
+			$enable_embedding = 'off';
+		}else{
+			$enable_embedding = get_option( 'sld_enable_top_part' );
+		}
+	}
+
+	if( $searchSettings == 'on' || $enable_embedding == 'on' || ( get_option( 'sld_add_new_button' )=='on' && get_option( 'sld_add_item_link' )!='' ) ) {
+	
+        ?>
+<div class="qcopd_embed_container sld-top-area">
+
+	<?php 
+
 	//If the top area is not disabled (both serch and add item)
 	if( $searchSettings == 'on' ) {
 		?>
@@ -121,7 +135,7 @@ function qcld_custom_embedder($shortcodeAtts){
 					if(get_option('sld_lan_live_search')!=''){
 						$srcplaceholder = get_option('sld_lan_live_search');
 					}else{
-						$srcplaceholder = esc_html('Live Search Items', 'simple-link-directory');
+						$srcplaceholder = esc_html__('Live Search Items', 'simple-link-directory');
 					}
 				?>
                 <input type="text" class="text-input sld-search sld_search_filter" placeholder="<?php echo esc_attr($srcplaceholder); ?>"/>
@@ -144,15 +158,6 @@ function qcld_custom_embedder($shortcodeAtts){
 
 <?php 
 
-	if(isset( $shortcodeAtts['enable_embedding'] ) && $shortcodeAtts['enable_embedding'] =='true'){
-		$enable_embedding = 'on';
-	}else{
-		if( isset( $shortcodeAtts['enable_embedding'] ) && $shortcodeAtts['enable_embedding'] =='false'){
-			$enable_embedding = 'off';
-		}else{
-			$enable_embedding = get_option( 'sld_enable_top_part' );
-		}
-	}
 
 if($enable_embedding == 'on'){ 
 
@@ -188,9 +193,9 @@ if($enable_embedding == 'on'){
            data-creditlink="<?php echo esc_attr($site_link); ?>"> 
 			<?php 
 				if(get_option('sld_lan_share_list')!=''){
-					echo get_option('sld_lan_share_list');
+					echo esc_html( get_option('sld_lan_share_list') );
 				}else{
-					echo esc_html('Share List', 'simple-link-directory') ;
+					esc_html_e('Share List', 'simple-link-directory');
 				}
 			 ?>
 		   <i class="fa fa-share-alt"></i> 
@@ -205,6 +210,7 @@ if($enable_embedding == 'on'){
 </div>
 <?php //}
 }
+}
 
 function sld_share_modal() {
 	?>
@@ -217,13 +223,19 @@ function sld_share_modal() {
 		  <div class="iframe-main">
 			<div class="ifram-row">
 			  <div class="ifram-sm">
-				<span><?php esc_html_e("Width: (in '%' or 'px')", 'simple-link-directory'); ?></span>
+				<span><?php
+				/* translators: 1: percent sign, 2: pixel abbreviation */
+				esc_html_e("Width: (in '%' or 'px')", 'simple-link-directory');
+				?></span>
 				<input id="igwidth" name="igwidth" type="text" value="100">
 			</div>
 			<div class="ifram-sm qcopd_iframe_sm" >
 				<span>&nbsp;</span>
 				<select name="igsizetype" class="iframe-main-select">
-					<option value="%"><?php esc_html_e('%', 'simple-link-directory'); ?></option>
+					<option value="%"><?php
+					/* translators: percent sign */
+					esc_html_e('%', 'simple-link-directory');
+					?></option>
 					<option value="px"><?php esc_html_e('px', 'simple-link-directory'); ?></option>
 				</select>
 			</div>

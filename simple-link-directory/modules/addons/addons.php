@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 define( 'sld_addon_url', plugin_dir_url(__FILE__) );
 define( 'sld_SCRIPT_DEBUG', true );
 add_action('admin_menu', 'sld_addon_page', 999);

@@ -1,0 +1,1621 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-link-directory (AI Translated)\n"
+"Report-Msgid-Bugs-To: https://www.quantumcloud.net/\n"
+"POT-Creation-Date: 2026-09-07 06:55+0000\n"
+"PO-Revision-Date: 2026-09-07 06:55+0000\n"
+"Last-Translator: AI Language Packs <support@quantumcloud.net>\n"
+"Language-Team: हिन्दी (Hindi)\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: AI Language Packs WordPress Plugin v1.0.2\n"
+
+msgid "We can't detect any plugin information. This is most probably because you have not included the code in the plugin main file."
+msgstr "हमें कोई प्लगइन जानकारी नहीं मिल पा रही है। ऐसा शायद इसलिए है क्योंकि आपने प्लगइन की मुख्य फ़ाइल में कोड शामिल नहीं किया है।"
+
+msgid "Sorry to see you go"
+msgstr "आपको जाते हुए देखकर अफ़सोस हुआ"
+
+msgid "Found a Bug"
+msgstr "एक बग मिला"
+
+msgid "Need More Features"
+msgstr "और अधिक सुविधाओं की आवश्यकता है"
+
+msgid "Deactivating Temporarily"
+msgstr "अस्थायी रूप से निष्क्रिय कर रहा हूँ"
+
+msgid "Upgrading to Pro"
+msgstr "प्रो में अपग्रेड कर रहा हूँ"
+
+msgid "Please provide email so we can contact with bug fixes"
+msgstr "कृपया ईमेल प्रदान करें ताकि हम बग फिक्स के साथ संपर्क कर सकें"
+
+msgid "Please provide some details so we can improve the plugin"
+msgstr "कृपया कुछ विवरण प्रदान करें ताकि हम प्लगइन को बेहतर बना सकें"
+
+msgid "Submitting form"
+msgstr "फ़ॉर्म सबमिट कर रहा है"
+
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+msgid "Shortcodes and Help"
+msgstr "शॉर्टकोड और सहायता"
+
+msgid "Support"
+msgstr "सहायता"
+
+msgid "Live Search Items"
+msgstr "लाइव खोज आइटम"
+
+msgid "Add New"
+msgstr "नया जोड़ें"
+
+msgid "Share List"
+msgstr "सूची साझा करें"
+
+msgid "Generate Embed Code For This List"
+msgstr "इस सूची के लिए एम्बेड कोड जनरेट करें"
+
+msgid "Width: (in '%' or 'px')"
+msgstr "Width: (in '%' or 'px')"
+
+msgid "%"
+msgstr "%"
+
+msgid "px"
+msgstr "px"
+
+msgid "Height: (in 'px')"
+msgstr "ऊँचाई: ('px' में)"
+
+msgid "Generate & Copy"
+msgstr "जनरेट करें और कॉपी करें"
+
+msgid "Generated Code"
+msgstr "जनरेट किया गया कोड"
+
+msgid "Hit \\"
+msgstr "हिट करें \\"
+
+msgid "ASC"
+msgstr "ASC"
+
+msgid "all"
+msgstr "सभी"
+
+msgid "3"
+msgstr "3"
+
+msgid "simple"
+msgstr "सरल"
+
+msgid "SLD - Shortcode Maker"
+msgstr "SLD - शॉर्टकोड मेकर"
+
+msgid "SLD — Shortcode Maker"
+msgstr "SLD — शॉर्टकोड मेकर"
+
+msgid "Generate SLD Shortcode"
+msgstr "SLD शॉर्टकोड जनरेट करें"
+
+msgid "Are you sure you want to delete this field?"
+msgstr "क्या आप वाकई इस फ़ील्ड को हटाना चाहते हैं?"
+
+msgid "Add New List Items"
+msgstr "नई सूची आइटम जोड़ें"
+
+msgid "Remove Field"
+msgstr "फ़ील्ड हटाएँ"
+
+msgid "Add File"
+msgstr "फ़ाइल जोड़ें"
+
+msgid "Remove"
+msgstr "हटाएँ"
+
+msgid "Add Image"
+msgstr "छवि जोड़ें"
+
+msgid "None"
+msgstr "कोई नहीं"
+
+msgid "Type to search"
+msgstr "खोजने के लिए टाइप करें"
+
+msgid "Drag to set the exact location"
+msgstr "सटीक स्थान सेट करने के लिए खींचें"
+
+msgid "AddOns"
+msgstr "ऐडऑन"
+
+msgid "Simple Link Directory"
+msgstr "सिंपल लिंक डायरेक्टरी"
+
+msgid "Simple Link Directory Pro"
+msgstr "सिंपल लिंक डायरेक्टरी प्रो"
+
+msgid " Addons"
+msgstr "ऐडऑन"
+
+msgid "MultiPage Advanced Addon"
+msgstr "मल्टीपेज एडवांस्ड ऐडऑन"
+
+msgid "Global Search, Pagination, Category view with Lists on home page."
+msgstr "होम पेज पर लिस्ट के साथ ग्लोबल सर्च, पेजिंग, कैटेगरी व्यू।"
+
+msgid "Get It Now"
+msgstr "इसे अभी प्राप्त करें"
+
+msgid "Directory Broken Link Checker"
+msgstr "डायरेक्टरी ब्रोकन लिंक चेकर"
+
+msgid "Check Broken Links for SLD and SBD and other Post Types Links"
+msgstr "SLD और SBD और अन्य पोस्ट टाइप लिंक के लिए ब्रोकन लिंक चेक करें"
+
+msgid "Review, Rating for SLD Pro"
+msgstr "SLD प्रो के लिए समीक्षा, रेटिंग"
+
+msgid "Allow your site users to leave a review comment and rate the link listings."
+msgstr "अपनी साइट के उपयोगकर्ताओं को लिंक लिस्टिंग पर समीक्षा टिप्पणी छोड़ने और रेट करने की अनुमति दें।"
+
+msgid "Link Exchange AddOn for SLD Pro"
+msgstr "SLD प्रो के लिए लिंक एक्सचेंज ऐडऑन"
+
+msgid "Allow your site users Exchange Links with Other Websites"
+msgstr "अपनी साइट के उपयोगकर्ताओं को अन्य वेबसाइटों के साथ लिंक एक्सचेंज करने की अनुमति दें"
+
+msgid "Themes"
+msgstr "थीम"
+
+msgid "Simple Link Directory Theme"
+msgstr "सिंपल लिंक डायरेक्टरी थीम"
+
+msgid "Not Installed"
+msgstr "इंस्टॉल नहीं किया गया"
+
+msgid "Crafted carefully to make the best out of the popular Simple Link Directory plugin. One Click Install, Demo Data, Compatible with the Elementor and the Gutenberg Page Builder!"
+msgstr "लोकप्रिय सिंपल लिंक डायरेक्टरी प्लगइन का सर्वोत्तम उपयोग करने के लिए सावधानीपूर्वक तैयार किया गया। वन क्लिक इंस्टॉल, डेमो डेटा, एलिमेंटर और गुटेनबर्ग पेज बिल्डर के साथ संगत!"
+
+msgid "Try our Free AI ChatBot - WPBot"
+msgstr "हमारे मुफ़्त AI चैटबॉट - WPBot को आज़माएँ"
+
+msgid "Get the Best ChatBot for WordPress – WPBot"
+msgstr "वर्डप्रेस के लिए सर्वश्रेष्ठ चैटबॉट प्राप्त करें – WPBot"
+
+msgid "Do more than just chat with your ChatBot!"
+msgstr "अपने चैटबॉट के साथ सिर्फ चैट करने से कहीं ज़्यादा करें!"
+
+msgid "Do more than just chat with your ChatBot"
+msgstr "अपने चैटबॉट के साथ सिर्फ चैट करने से कहीं ज़्यादा करें"
+
+msgid "More Leads, Conversions"
+msgstr "अधिक लीड, रूपांतरण"
+
+msgid "Satisfied customers while"
+msgstr "संतुष्ट ग्राहक जबकि"
+
+msgid "saving time"
+msgstr "समय बचाते हुए"
+
+msgid "increasing your"
+msgstr "अपने को बढ़ाना"
+
+msgid "business opportunities"
+msgstr "व्यावसायिक अवसर"
+
+msgid "WPBot is the best ChatBot for WordPress to improve user engagement,"
+msgstr "WPBot उपयोगकर्ता जुड़ाव को बेहतर बनाने के लिए वर्डप्रेस के लिए सबसे अच्छा चैटबॉट है,"
+
+msgid "Generate Leads,"
+msgstr "लीड जनरेट करें,"
+
+msgid "provide"
+msgstr "प्रदान करें"
+
+msgid "Automated Live"
+msgstr "स्वचालित लाइव"
+
+msgid "customer"
+msgstr "ग्राहक"
+
+msgid "support"
+msgstr "सहायता"
+
+msgid "across your website"
+msgstr "आपकी वेबसाइट पर"
+
+msgid "social platforms."
+msgstr "सोशल प्लेटफॉर्म पर।"
+
+msgid "The"
+msgstr "यह"
+
+msgid "AI Insight"
+msgstr "AI इनसाइट"
+
+msgid "feature analyzes chat histories"
+msgstr "सुविधा चैट इतिहास का विश्लेषण करती है"
+
+msgid "reveals what your users want."
+msgstr "बताती है कि आपके उपयोगकर्ता क्या चाहते हैं।"
+
+msgid "Deliver AI-powered ChatBot services from your websites with LLMs like"
+msgstr "LLM जैसे के साथ अपनी वेबसाइटों से AI-संचालित चैटबॉट सेवाएँ प्रदान करें:"
+
+msgid "OpenAI"
+msgstr "ओपनएआई"
+
+msgid "(ChatGPT), Gemini etc. along with many built-in, powerful features like"
+msgstr "(चैटजीपीटी), जेमिनी आदि के साथ कई अंतर्निहित, शक्तिशाली सुविधाओं के साथ:"
+
+msgid "Live"
+msgstr "लाइव"
+
+msgid "Chat, Chat"
+msgstr "चैट, चैट"
+
+msgid "Histories"
+msgstr "इतिहास"
+
+msgid "Conversational forms"
+msgstr "संवादात्मक फ़ॉर्म"
+
+msgid "Webhooks"
+msgstr "वेबहुक"
+
+msgid "more!"
+msgstr "और अधिक!"
+
+msgid "Need More Assistance?"
+msgstr "और सहायता चाहिए?"
+
+msgid "Our support team is ready to help you with any issues or custom requests."
+msgstr "हमारी सहायता टीम किसी भी समस्या या कस्टम अनुरोधों में आपकी मदद करने के लिए तैयार है।"
+
+msgid "Knowledge Base"
+msgstr "ज्ञानकोश"
+
+msgid "Get Direct Support"
+msgstr "सीधा समर्थन प्राप्त करें"
+
+msgid "Handcrafted for productivity."
+msgstr "उत्पादकता के लिए हस्तनिर्मित।"
+
+msgid "By %s"
+msgstr "द्वारा %s"
+
+msgid "Install %s now"
+msgstr "%s को अभी स्थापित करें"
+
+msgid "Install Now"
+msgstr "अभी स्थापित करें"
+
+msgid "Cannot Install"
+msgstr "स्थापित नहीं किया जा सकता"
+
+msgid "Update %s now"
+msgstr "%s को अभी अपडेट करें"
+
+msgid "Update Now"
+msgstr "अभी अपडेट करें"
+
+msgid "Cannot Update"
+msgstr "अपडेट नहीं किया जा सकता"
+
+msgid "Active"
+msgstr "सक्रिय"
+
+msgid "Activate"
+msgstr "सक्रिय करें"
+
+msgid "Activate %s"
+msgstr "%s को सक्रिय करें"
+
+msgid "Network Activate"
+msgstr "नेटवर्क सक्रिय करें"
+
+msgid "Network Activate %s"
+msgstr "%s को नेटवर्क सक्रिय करें"
+
+msgid "Installed"
+msgstr "स्थापित"
+
+msgid "More Details"
+msgstr "अधिक विवरण"
+
+msgid "This plugin doesn&#8217;t work with your versions of WordPress and PHP."
+msgstr "यह प्लगइन आपके वर्डप्रेस और PHP के संस्करणों के साथ काम नहीं करता है।"
+
+msgid "<a href=\\"
+msgstr "&lt;a href=\\"
+
+msgid "This plugin doesn&#8217;t work with your version of WordPress."
+msgstr "यह प्लगइन आपके वर्डप्रेस के संस्करण के साथ काम नहीं करता है।"
+
+msgid "This plugin doesn&#8217;t work with your version of PHP."
+msgstr "यह प्लगइन आपके PHP के संस्करण के साथ काम नहीं करता है।"
+
+msgid "Live Preview"
+msgstr "लाइव पूर्वावलोकन"
+
+msgid "No Results Found for Your Search"
+msgstr "आपकी खोज के लिए कोई परिणाम नहीं मिला"
+
+msgid "Bulk Import"
+msgstr "थोक आयात"
+
+msgid "Import"
+msgstr "आयात करें"
+
+msgid "Please Note:"
+msgstr "कृपया ध्यान दें:"
+
+msgid "The import feature is still under development. Right now it only allows importing and creating new Lists. Existing Lists will not get updated. Also, export feature is not available in free version."
+msgstr "आयात सुविधा अभी भी विकास में है। अभी यह केवल नई सूचियों को आयात करने और बनाने की अनुमति देता है। मौजूदा सूचियाँ अपडेट नहीं होंगी। साथ ही, मुफ्त संस्करण में निर्यात सुविधा उपलब्ध नहीं है।"
+
+msgid "Sample CSV File:"
+msgstr "नमूना CSV फ़ाइल:"
+
+msgid "Download Sample"
+msgstr "नमूना डाउनलोड करें"
+
+msgid "PROCESS:"
+msgstr "प्रक्रिया:"
+
+msgid "First download the above CSV file."
+msgstr "सबसे पहले ऊपर दी गई CSV फ़ाइल डाउनलोड करें।"
+
+msgid "Add/Edit rows on the top of it, by maintaing proper provided format/fields."
+msgstr "उचित प्रदान किए गए प्रारूप/फ़ील्ड को बनाए रखते हुए, इसके ऊपर पंक्तियों को जोड़ें/संपादित करें।"
+
+msgid "Finally, upload file in the below form."
+msgstr "अंत में, नीचे दिए गए फ़ॉर्म में फ़ाइल अपलोड करें।"
+
+msgid "NOTES:"
+msgstr "नोट्स:"
+
+msgid "It should be a simple CSV file."
+msgstr "यह एक साधारण CSV फ़ाइल होनी चाहिए।"
+
+msgid "File encoding should be in UTF-8"
+msgstr "फ़ाइल एन्कोडिंग UTF-8 में होनी चाहिए।"
+
+msgid "File must be prepared as per provided sample CSV file."
+msgstr "फ़ाइल प्रदान की गई नमूना CSV फ़ाइल के अनुसार तैयार की जानी चाहिए।"
+
+msgid "RESULT:"
+msgstr "परिणाम:"
+
+msgid "entry with"
+msgstr "प्रविष्टि के साथ"
+
+msgid "element(s) was made successfully."
+msgstr "तत्व सफलतापूर्वक बनाए गए।"
+
+msgid "Upload CSV File to Import"
+msgstr "आयात करने के लिए CSV फ़ाइल अपलोड करें"
+
+msgid "** CSV File & Characters must be saved with UTF-8 encoding **"
+msgstr "** CSV फ़ाइल और वर्ण UTF-8 एन्कोडिंग के साथ सहेजे जाने चाहिए **"
+
+msgid "Upload & Process"
+msgstr "अपलोड करें और प्रोसेस करें"
+
+msgid "Crafted By:"
+msgstr "द्वारा निर्मित:"
+
+msgid "Web Design Company"
+msgstr "वेब डिज़ाइन कंपनी"
+
+msgid "- QuantumCloud"
+msgstr "- क्वांटमक्लाउड"
+
+msgid "Upgrade to Pro"
+msgstr "प्रो में अपग्रेड करें"
+
+msgid "Add New List of Links"
+msgstr "लिंक की नई सूची जोड़ें"
+
+msgid "**SLD Pro Tip: Did you know that you can"
+msgstr "**SLD प्रो टिप: क्या आप जानते हैं कि आप कर सकते हैं"
+
+msgid "Auto Generate"
+msgstr "स्वतः उत्पन्न करें"
+
+msgid "Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?"
+msgstr "प्रो संस्करण के साथ केवल 2 क्लिक में शीर्षक, उपशीर्षक और थंबनेल?"
+
+msgid "Triple Your Link Entry Speed!"
+msgstr "अपनी लिंक प्रविष्टि गति को तीन गुना करें!"
+
+msgid "**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance."
+msgstr "**SLD टिप: सूचियाँ SLD के मूल स्तंभ हैं, न कि व्यक्तिगत लिंक। सर्वोत्तम प्रदर्शन के लिए अपने लिंक को विभिन्न सूचियों में समूहित करें।"
+
+msgid "**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode."
+msgstr "**SLD टिप: SLD सबसे अच्छा तब दिखता है जब आप कई सूचियाँ बनाते हैं और 'सभी सूचियाँ दिखाएँ' मोड का उपयोग करते हैं।"
+
+msgid "**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn"
+msgstr "**SLD प्रो टिप: क्या आप जानते हैं कि SLD प्रो संस्करण आपको अपनी डायरेक्टरी से कमाई करने और कमाने की सुविधा देता है"
+
+msgid "passive income?"
+msgstr "निष्क्रिय आय?"
+
+msgid "Upgrade now!"
+msgstr "अभी अपग्रेड करें!"
+
+msgid "**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed."
+msgstr "**SLD टिप: प्रति सूची अधिकतम 30 लिंक रखने का प्रयास करें। आवश्यकतानुसार कई सूचियाँ बनाएँ।"
+
+msgid "**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page's visual editor."
+msgstr "**SLD टिप: जीवन को आसान बनाने के लिए आसान शॉर्टकोड जनरेटर का उपयोग करें। यह किसी भी पृष्ठ के विज़ुअल एडिटर के टूलबार पर पाया जाने वाला एक छोटा, नीला [SLD] बटन है।"
+
+msgid "**SLD Pro Tip: You can display your"
+msgstr "**SLD प्रो टिप: आप अपनी प्रदर्शित कर सकते हैं"
+
+msgid "Lists by category"
+msgstr "श्रेणी के अनुसार सूचियाँ"
+
+msgid "with the SLD pro version."
+msgstr "SLD प्रो संस्करण के साथ।"
+
+msgid "16+ Templates, Multi page mode"
+msgstr "16+ टेम्पलेट, मल्टी पेज मोड"
+
+msgid ", Widgets are also available."
+msgstr ", विजेट भी उपलब्ध हैं।"
+
+msgid "**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email."
+msgstr "**SLD टिप: आप एक संपर्क फ़ॉर्म के साथ एक पृष्ठ बना सकते हैं और 'लिंक जोड़ें' बटन को उस पृष्ठ से लिंक कर सकते हैं ताकि लोग ईमेल द्वारा आपकी डायरेक्टरी में लिंक सबमिट कर सकें।"
+
+msgid "**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details."
+msgstr "**SLD टिप: यदि आपको अधिक आइटम जोड़ने या सूची सहेजने में समस्या हो रही है तो आपको सर्वर में max_input_vars मान बढ़ाने की आवश्यकता हो सकती है। अधिक विवरण के लिए सहायता अनुभाग देखें।"
+
+msgid "**SLD Pro Tip: SLD pro version has"
+msgstr "**SLD प्रो टिप: SLD प्रो संस्करण में है"
+
+msgid "front end dashboard"
+msgstr "फ्रंट एंड डैशबोर्ड"
+
+msgid "for user registration and link management. As well as tags and instant search."
+msgstr "उपयोगकर्ता पंजीकरण और लिंक प्रबंधन के लिए। साथ ही टैग और त्वरित खोज भी।"
+
+msgid "Upgrade to the Pro version now!"
+msgstr "अभी प्रो संस्करण में अपग्रेड करें!"
+
+msgid "Shortcode Generator for SLD"
+msgstr "SLD के लिए शॉर्टकोड जनरेटर"
+
+msgid "AI List Items Generator"
+msgstr "AI सूची आइटम जनरेटर"
+
+msgid "Click the button below to generate shortcode"
+msgstr "शॉर्टकोड जनरेट करने के लिए नीचे दिए गए बटन पर क्लिक करें।"
+
+msgid "Generate Shortcode"
+msgstr "शॉर्टकोड जनरेट करें"
+
+msgid "Please enable an AI provider (OpenAI, Gemini or OpenRouter) in Simple Link Directory %s first."
+msgstr "कृपया पहले Simple Link Directory %s में एक AI प्रदाता (OpenAI, Gemini या OpenRouter) सक्षम करें।"
+
+msgid "settings tab"
+msgstr "सेटिंग्स टैब"
+
+msgid "Active AI Provider:"
+msgstr "सक्रिय AI प्रदाता:"
+
+msgid "Topic:"
+msgstr "विषय:"
+
+msgid "e.g., JavaScript coding"
+msgstr "उदा., जावास्क्रिप्ट कोडिंग"
+
+msgid "Number of Items:"
+msgstr "आइटमों की संख्या:"
+
+msgid "Generate & Add Items"
+msgstr "आइटम जनरेट करें और जोड़ें"
+
+msgid "%s  %s  %s"
+msgstr "%s %s %s"
+
+msgid "%1$s Simple Link Directory %2$s works the best when you create multiple Lists and show them all in a page. Use the following shortcode to display All lists on any page:  %3$s  %4$s  %5$s  Use the %6$s shortcode generator %7$s to select style and other options. "
+msgstr "%1$s Simple Link Directory %2$s सबसे अच्छा काम करता है जब आप कई सूचियाँ बनाते हैं और उन सभी को एक पृष्ठ में दिखाते हैं। किसी भी पृष्ठ पर सभी सूचियों को प्रदर्शित करने के लिए निम्नलिखित शॉर्टकोड का उपयोग करें: %3$s %4$s %5$s शैली और अन्य विकल्प चुनने के लिए %6$s शॉर्टकोड जनरेटर %7$s का उपयोग करें।"
+
+msgid "%1$s Import Simple Link Directory Demo Data:%2$s %3$sImport demo data to see how the plugin works.%4$s %5$sWe will create a sample directory with multiple Lists and create a new demo page using shortcode.%6$s %7$sYou can edit or delete the sample Lists to your requirements.%8$s %9$s Click to Import Data %10$s %11$s"
+msgstr "%1$s Simple Link Directory डेमो डेटा आयात करें:%2$s %3$sप्लगइन कैसे काम करता है यह देखने के लिए डेमो डेटा आयात करें।%4$s %5$sहम कई सूचियों के साथ एक नमूना निर्देशिका बनाएंगे और शॉर्टकोड का उपयोग करके एक नया डेमो पृष्ठ बनाएंगे।%6$s %7$sआप अपनी आवश्यकताओं के अनुसार नमूना सूचियों को संपादित या हटा सकते हैं।%8$s %9$s डेटा आयात करने के लिए क्लिक करें %10$s %11$s"
+
+msgid "Getting Started"
+msgstr "आरंभ करना"
+
+msgid "FAQ"
+msgstr "अक्सर पूछे जाने वाले प्रश्न"
+
+msgid "Read the Documentation"
+msgstr "दस्तावेज़ पढ़ें"
+
+msgid "Ask for Help"
+msgstr "सहायता मांगें"
+
+msgid "Check out the SLD Demo"
+msgstr "SLD डेमो देखें"
+
+msgid "Upgrade to Premium"
+msgstr "प्रीमियम में अपग्रेड करें"
+
+msgid "Start Here"
+msgstr "यहाँ से शुरू करें"
+
+msgid "Manage Lists"
+msgstr "सूचियाँ प्रबंधित करें"
+
+msgid "Manage List Item"
+msgstr "सूची आइटम प्रबंधित करें"
+
+msgid "New List"
+msgstr "नई सूची"
+
+msgid "Add New List"
+msgstr "नई सूची जोड़ें"
+
+msgid "Edit List Item"
+msgstr "सूची आइटम संपादित करें"
+
+msgid "New List Item"
+msgstr "नया सूची आइटम"
+
+msgid "View List Item"
+msgstr "सूची आइटम देखें"
+
+msgid "Search List Item"
+msgstr "सूची आइटम खोजें"
+
+msgid "No List Item found"
+msgstr "कोई सूची आइटम नहीं मिला"
+
+msgid "No List Item found in the Trash"
+msgstr "ट्रैश में कोई सूची आइटम नहीं मिला"
+
+msgid "This post type holds all posts for your directory items."
+msgstr "यह पोस्ट प्रकार आपकी निर्देशिका आइटमों के लिए सभी पोस्ट रखता है।"
+
+msgid "List Categories"
+msgstr "सूची श्रेणियाँ"
+
+msgid "Category"
+msgstr "श्रेणी"
+
+msgid "Search List Categories"
+msgstr "सूची श्रेणियाँ खोजें"
+
+msgid "All List Categories"
+msgstr "सभी सूची श्रेणियाँ"
+
+msgid "Parent List Categories"
+msgstr "मूल सूची श्रेणियाँ"
+
+msgid "Parent List Category:"
+msgstr "मूल सूची श्रेणी:"
+
+msgid "Edit List Category"
+msgstr "सूची श्रेणी संपादित करें"
+
+msgid "Update List Category"
+msgstr "सूची श्रेणी अपडेट करें"
+
+msgid "Add New List Category"
+msgstr "नई सूची श्रेणी जोड़ें"
+
+msgid "New List Category Name"
+msgstr "नई सूची श्रेणी का नाम"
+
+msgid "List Elements"
+msgstr "सूची के तत्व"
+
+msgid "Create List Elements"
+msgstr "सूची के तत्व बनाएँ"
+
+msgid "Please add your list items here. Ideally, each List should have 10-30 links. Create multiple Lists on different topics and show them all with a shortcode."
+msgstr "कृपया अपने सूची आइटम यहाँ जोड़ें। आदर्श रूप से, प्रत्येक सूची में 10-30 लिंक होने चाहिए। विभिन्न विषयों पर कई सूचियाँ बनाएँ और उन सभी को एक शॉर्टकोड के साथ दिखाएँ।"
+
+msgid "If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server."
+msgstr "यदि आप एक लंबी सूची को सहेजने में असमर्थ हैं, तो कृपया अपने सर्वर पर max_input_vars का मान 15000 तक बढ़ाएँ।"
+
+msgid "Title"
+msgstr "शीर्षक"
+
+msgid "Number of Elements"
+msgstr "तत्वों की संख्या"
+
+msgid "Shortcode"
+msgstr "शॉर्टकोड"
+
+msgid "Date"
+msgstr "दिनांक"
+
+msgid "element"
+msgstr "तत्व"
+
+msgid "Single List:"
+msgstr "एकल सूची:"
+
+msgid "Copy Shortcode"
+msgstr "शॉर्टकोड कॉपी करें"
+
+msgid "Copied!"
+msgstr "कॉपी किया गया!"
+
+msgid "All Lists:"
+msgstr "सभी सूचियाँ:"
+
+msgid "%s item"
+msgstr "%s आइटम"
+
+msgid "%s items"
+msgstr "%s आइटम"
+
+msgid "Featured"
+msgstr "फ़ीचर्ड"
+
+msgid "Enable Dark Mode"
+msgstr "डार्क मोड सक्षम करें"
+
+msgid "Dark Mode On"
+msgstr "डार्क मोड चालू"
+
+msgid "Light Mode On"
+msgstr "लाइट मोड चालू"
+
+msgid "Scroll To Top"
+msgstr "ऊपर स्क्रॉल करें"
+
+msgid "Simple Link Directory Pro Features"
+msgstr "सिंपल लिंक डायरेक्टरी प्रो सुविधाएँ"
+
+msgid "Enhanced Usability"
+msgstr "बेहतर उपयोगिता"
+
+msgid "Build unlimited Lists and show them in multi-page mode"
+msgstr "असीमित सूचियाँ बनाएँ और उन्हें मल्टी-पेज मोड में दिखाएँ"
+
+msgid "Auto Generate Title, Description & Thumbnail from URL"
+msgstr "URL से शीर्षक, विवरण और थंबनेल स्वतः उत्पन्न करें"
+
+msgid "Video Gallery – Vimeo and Youtube Video Directory"
+msgstr "वीडियो गैलरी – विमियो और यूट्यूब वीडियो डायरेक्टरी"
+
+msgid "Live, on page, instant search & filtering of lists"
+msgstr "सूचियों की लाइव, ऑन-पेज, तत्काल खोज और फ़िल्टरिंग"
+
+msgid "Tabbed Category Listing of All Your Directory Lists"
+msgstr "आपकी सभी डायरेक्टरी सूचियों की टैब्ड श्रेणी लिस्टिंग"
+
+msgid "Community Features"
+msgstr "सामुदायिक सुविधाएँ"
+
+msgid "Complete front end user registration, login and submission"
+msgstr "पूर्ण फ्रंट एंड उपयोगकर्ता पंजीकरण, लॉगिन और सबमिशन"
+
+msgid "Allow users to submit links to your directory"
+msgstr "उपयोगकर्ताओं को आपकी डायरेक्टरी में लिंक सबमिट करने की अनुमति दें"
+
+msgid "Invite user interaction with Upvotes (Thumbs up, Heart, etc)"
+msgstr "अपवोट (थंब्स अप, हार्ट, आदि) के साथ उपयोगकर्ता सहभागिता को आमंत्रित करें"
+
+msgid "Allow users to embed your lists on their websites"
+msgstr "उपयोगकर्ताओं को आपकी सूचियों को अपनी वेबसाइटों पर एम्बेड करने की अनुमति दें"
+
+msgid "Allow registered users to create Favorite Lists"
+msgstr "पंजीकृत उपयोगकर्ताओं को पसंदीदा सूचियाँ बनाने की अनुमति दें"
+
+msgid "Monetization Options"
+msgstr "मुद्रीकरण विकल्प"
+
+msgid "Integrated PayPal & Stripe payment for link submission"
+msgstr "लिंक सबमिशन के लिए एकीकृत पेपाल और स्ट्राइप भुगतान"
+
+msgid "Create recurring subscription packages for listings"
+msgstr "लिस्टिंग के लिए आवर्ती सदस्यता पैकेज बनाएँ"
+
+msgid "Claim Listing for Payment feature"
+msgstr "भुगतान सुविधा के लिए लिस्टिंग का दावा करें"
+
+msgid "Option to Mark Paid Items as Featured at Top"
+msgstr "भुगतान किए गए आइटम को शीर्ष पर फ़ीचर्ड के रूप में चिह्नित करने का विकल्प"
+
+msgid "URL masking option for affiliate links"
+msgstr "एफिलिएट लिंक के लिए URL मास्किंग विकल्प"
+
+msgid "Design & Layouts"
+msgstr "डिज़ाइन और लेआउट"
+
+msgid "16 Premium templates for Single Page mode"
+msgstr "सिंगल पेज मोड के लिए 16 प्रीमियम टेम्पलेट"
+
+msgid "2 Premium templates for Multi Page mode"
+msgstr "मल्टी पेज मोड के लिए 2 प्रीमियम टेम्पलेट"
+
+msgid "Create or customize templates from your theme folder"
+msgstr "अपने थीम फ़ोल्डर से टेम्पलेट बनाएँ या अनुकूलित करें"
+
+msgid "Use theme fonts or choose Google fonts"
+msgstr "थीम फ़ॉन्ट का उपयोग करें या गूगल फ़ॉन्ट चुनें"
+
+msgid "Configurable highlight color for each list"
+msgstr "प्रत्येक सूची के लिए कॉन्फ़िगर करने योग्य हाइलाइट रंग"
+
+msgid "Admin Tools & Statistics"
+msgstr "एडमिन उपकरण और आँकड़े"
+
+msgid "Click statistics for admin dashboard"
+msgstr "एडमिन डैशबोर्ड के लिए क्लिक आँकड़े"
+
+msgid "CSV Import/Export to manage lists easily"
+msgstr "सूचियों को आसानी से प्रबंधित करने के लिए CSV आयात/निर्यात"
+
+msgid "Order Listing Directory by Link Clicks or Upvotes"
+msgstr "लिंक क्लिक या अपवोट द्वारा लिस्टिंग डायरेक्टरी को क्रमबद्ध करें"
+
+msgid "Restrict UpVote by IP or Logged in Users only"
+msgstr "IP या केवल लॉग इन किए गए उपयोगकर्ताओं द्वारा अपवोट प्रतिबंधित करें"
+
+msgid "Copy List Items or Links to Other Lists"
+msgstr "सूची आइटम या लिंक को अन्य सूचियों में कॉपी करें"
+
+msgid "Front End Submission Features"
+msgstr "फ्रंट एंड सबमिशन सुविधाएँ"
+
+msgid "Front End User Registration with Captcha, Log in, Link Submission"
+msgstr "कैप्चा, लॉग इन, लिंक सबमिशन के साथ फ्रंट एंड उपयोगकर्ता पंजीकरण"
+
+msgid "Admin Approves User Submitted Links or Set to Auto Approve"
+msgstr "एडमिन उपयोगकर्ता द्वारा सबमिट किए गए लिंक को स्वीकृत करता है या स्वतः स्वीकृत पर सेट करता है"
+
+msgid "Enable Free Frontend Submission & Free Submission Limit"
+msgstr "मुफ्त फ्रंटएंड सबमिशन और मुफ्त सबमिशन सीमा सक्षम करें"
+
+msgid "Enable Email Notification for New Item Submission"
+msgstr "नए आइटम सबमिशन के लिए ईमेल सूचना सक्षम करें"
+
+msgid "Allow User to Update Profile & Upload Image"
+msgstr "उपयोगकर्ता को प्रोफ़ाइल अपडेट करने और छवि अपलोड करने की अनुमति दें"
+
+msgid "Customizability and Flexibility"
+msgstr "अनुकूलनशीलता और लचीलापन"
+
+msgid "Choose theme font or google font"
+msgstr "थीम फ़ॉन्ट या गूगल फ़ॉन्ट चुनें"
+
+msgid "Customize colors, fonts and almost all aspects of the link lists"
+msgstr "लिंक सूचियों के रंग, फ़ॉन्ट और लगभग सभी पहलुओं को अनुकूलित करें"
+
+msgid "Complete control over directory list ordering"
+msgstr "डायरेक्टरी सूची के क्रम पर पूर्ण नियंत्रण"
+
+msgid "Custom JS and CSS panel to modify directory functionality"
+msgstr "डायरेक्टरी कार्यक्षमता को संशोधित करने के लिए कस्टम JS और CSS पैनल"
+
+msgid "Over a dozen shortcode parameters & Shortcode Generator"
+msgstr "एक दर्जन से अधिक शॉर्टकोड पैरामीटर और शॉर्टकोड जनरेटर"
+
+msgid "Topsite List Script Features"
+msgstr "टॉपसाइट सूची स्क्रिप्ट सुविधाएँ"
+
+msgid "Order Listing Directory by Link Clicks"
+msgstr "लिंक क्लिक द्वारा लिस्टिंग डायरेक्टरी को क्रमबद्ध करें"
+
+msgid "Click statistics for admin"
+msgstr "एडमिन के लिए क्लिक आँकड़े"
+
+msgid "Restrict upvote by IP"
+msgstr "IP द्वारा अपवोट प्रतिबंधित करें"
+
+msgid "Restrict UpVote for Logged in Users only"
+msgstr "केवल लॉग इन किए गए उपयोगकर्ताओं के लिए अपवोट प्रतिबंधित करें"
+
+msgid "Enable Upvote for Main Click in General settings"
+msgstr "सामान्य सेटिंग्स में मुख्य क्लिक के लिए अपवोट सक्षम करें"
+
+msgid "View Pro Demo"
+msgstr "प्रो डेमो देखें"
+
+msgid "Upgrade to Pro Now"
+msgstr "अभी प्रो में अपग्रेड करें"
+
+msgid "Unauthorized user."
+msgstr "अनधिकृत उपयोगकर्ता।"
+
+msgid "API Key is empty."
+msgstr "API कुंजी खाली है।"
+
+msgid "Connection successful! Valid API Key."
+msgstr "कनेक्शन सफल! वैध API कुंजी।"
+
+msgid "Invalid API Key or API error."
+msgstr "अवैध API कुंजी या API त्रुटि।"
+
+msgid "Invalid API Key."
+msgstr "अवैध API कुंजी।"
+
+msgid "Prompt reset to default successfully!"
+msgstr "प्रॉम्प्ट सफलतापूर्वक डिफ़ॉल्ट पर रीसेट किया गया!"
+
+msgid "Prompt is empty."
+msgstr "प्रॉम्प्ट खाली है।"
+
+msgid "No AI provider is enabled in settings."
+msgstr "सेटिंग्स में कोई AI प्रदाता सक्षम नहीं है।"
+
+msgid "OpenAI API key is missing."
+msgstr "OpenAI API कुंजी गायब है।"
+
+msgid "OpenAI API error."
+msgstr "OpenAI API त्रुटि।"
+
+msgid "Gemini API key is missing."
+msgstr "जेमिनी API कुंजी गुम है।"
+
+msgid "Gemini API error."
+msgstr "जेमिनी API त्रुटि।"
+
+msgid "OpenRouter API key is missing."
+msgstr "ओपनराउटर API कुंजी गुम है।"
+
+msgid "OpenRouter API error."
+msgstr "ओपनराउटर API त्रुटि।"
+
+msgid "Failed to parse AI output. Raw content: "
+msgstr "AI आउटपुट को पार्स करने में विफल। कच्ची सामग्री: "
+
+msgid "Generated %d items successfully!"
+msgstr "%d आइटम सफलतापूर्वक जनरेट किए गए!"
+
+msgid "SLD Settings Page"
+msgstr "SLD सेटिंग्स पेज"
+
+msgid "General Settings"
+msgstr "सामान्य सेटिंग्स"
+
+msgid "AI Settings"
+msgstr "AI सेटिंग्स"
+
+msgid "Language Settings"
+msgstr "भाषा सेटिंग्स"
+
+msgid "Custom CSS"
+msgstr "कस्टम CSS"
+
+msgid "Custom Javascript"
+msgstr "कस्टम जावास्क्रिप्ट"
+
+msgid "Step 1"
+msgstr "चरण 1"
+
+msgid "Create List with Link Details "
+msgstr "लिंक विवरण के साथ सूची बनाएँ"
+
+msgid "Go to New List and create one by giving it a name. Then simply start adding List items or Links by filling up the fields you want. Use the Add New button to add more Links to your list."
+msgstr "नई सूची पर जाएँ और उसे एक नाम देकर बनाएँ। फिर बस अपनी इच्छित फ़ील्ड भरकर सूची आइटम या लिंक जोड़ना शुरू करें। अपनी सूची में और लिंक जोड़ने के लिए नया जोड़ें बटन का उपयोग करें।"
+
+msgid "Step 2"
+msgstr "चरण 2"
+
+msgid "Create More Lists"
+msgstr "और सूचियाँ बनाएँ"
+
+msgid "You can just create a single list and use the Single List mode. But this plugin works the best when you create a few Lists each conatining about 15-20 Llinks. This yields the best view."
+msgstr "आप केवल एक ही सूची बना सकते हैं और एकल सूची मोड का उपयोग कर सकते हैं। लेकिन यह प्लगइन सबसे अच्छा तब काम करता है जब आप कुछ सूचियाँ बनाते हैं, जिनमें से प्रत्येक में लगभग 15-20 लिंक हों। इससे सबसे अच्छा दृश्य मिलता है।"
+
+msgid "Step 3"
+msgstr "चरण 3"
+
+msgid "Generate and Paste Shortcode on a Page"
+msgstr "एक पेज पर शॉर्टकोड जनरेट करें और पेस्ट करें"
+
+msgid "Go to the page or post you want to display the directory. On the right sidebar you will see a ShortCode Generator block. Generate a shortcode with the options you want. Copy paste that to a section on your page."
+msgstr "उस पेज या पोस्ट पर जाएँ जहाँ आप डायरेक्टरी प्रदर्शित करना चाहते हैं। दाहिनी साइडबार पर आपको एक शॉर्टकोड जनरेटर ब्लॉक दिखाई देगा। अपनी इच्छित विकल्पों के साथ एक शॉर्टकोड जनरेट करें। उसे अपने पेज के एक सेक्शन में कॉपी पेस्ट करें।"
+
+msgid "Enable Top Area"
+msgstr "शीर्ष क्षेत्र सक्षम करें"
+
+msgid "Top area includes Embed button (more options coming soon)"
+msgstr "शीर्ष क्षेत्र में एम्बेड बटन शामिल है (और विकल्प जल्द आ रहे हैं)"
+
+msgid "Enable Live Search"
+msgstr "लाइव खोज सक्षम करें"
+
+msgid "Live search through directory items."
+msgstr "डायरेक्टरी आइटम के माध्यम से लाइव खोज।"
+
+msgid "Enable Upvote"
+msgstr "अपवोट सक्षम करें"
+
+msgid "Turn ON to visible Upvote feature for all templates."
+msgstr "सभी टेम्प्लेट के लिए अपवोट सुविधा को दृश्यमान करने के लिए चालू करें।"
+
+msgid "Enable Add New Button"
+msgstr "नया जोड़ें बटन सक्षम करें"
+
+msgid "on"
+msgstr "चालू"
+
+msgid "The button will link to a page of your choice where you can place a contact form or instructions to submit links to your directory. Links have to be manually added by the admin."
+msgstr "बटन आपकी पसंद के एक पेज से लिंक होगा जहाँ आप अपनी डायरेक्टरी में लिंक सबमिट करने के लिए एक संपर्क फ़ॉर्म या निर्देश रख सकते हैं। लिंक व्यवस्थापक द्वारा मैन्युअल रूप से जोड़े जाने होंगे।"
+
+msgid "Add Button Link"
+msgstr "बटन लिंक जोड़ें"
+
+msgid "Example:  https://yourdomain.com/submit-link/"
+msgstr "उदाहरण: https://yourdomain.com/submit-link/"
+
+msgid "Paste the full URL of a page that contains a contact form to submit link "
+msgstr "उस पेज का पूरा URL पेस्ट करें जिसमें लिंक सबमिट करने के लिए एक संपर्क फ़ॉर्म है"
+
+msgid "Front end submission with monetization feature is available with the "
+msgstr "मुद्रीकरण सुविधा के साथ फ्रंट एंड सबमिशन "
+
+msgid "Pro version"
+msgstr "प्रो संस्करण"
+
+msgid "Track Outbound Clicks"
+msgstr "आउटबाउंड क्लिक ट्रैक करें"
+
+msgid "You need to have the analytics.js"
+msgstr "आपके पास analytics.js होना चाहिए"
+
+msgid "Analytics tracking code in every page of your site"
+msgstr "आपकी साइट के हर पेज में एनालिटिक्स ट्रैकिंग कोड"
+
+msgid "Embed Credit Title"
+msgstr "एम्बेड क्रेडिट शीर्षक"
+
+msgid "This text will be displayed below embedded list in other sites."
+msgstr "यह टेक्स्ट अन्य साइटों में एम्बेडेड सूची के नीचे प्रदर्शित होगा।"
+
+msgid "Embed Credit Link"
+msgstr "एम्बेड क्रेडिट लिंक"
+
+msgid "Enable Scroll to Top Button"
+msgstr "स्क्रॉल टू टॉप बटन सक्षम करें"
+
+msgid "Show Scroll to Top."
+msgstr "स्क्रॉल टू टॉप दिखाएं।"
+
+msgid "Enable RTL Direction"
+msgstr "आरटीएल दिशा सक्षम करें"
+
+msgid "If you make this option ON, then list items will be arranged in Right-to-Left direction."
+msgstr "यदि आप इस विकल्प को चालू करते हैं, तो सूची आइटम दाएँ-से-बाएँ दिशा में व्यवस्थित होंगे।"
+
+msgid "Enable this option to show Dark Mode for all themes"
+msgstr "सभी थीम के लिए डार्क मोड दिखाने के लिए इस विकल्प को सक्षम करें"
+
+msgid "Enable Featured Section"
+msgstr "विशेष अनुभाग सक्षम करें"
+
+msgid "Turn ON to display the Featured section. Default is OFF."
+msgstr "विशेष अनुभाग प्रदर्शित करने के लिए चालू करें। डिफ़ॉल्ट बंद है।"
+
+msgid "Featured Section Item Count"
+msgstr "विशेष अनुभाग आइटम गणना"
+
+msgid "How many featured items to show. Default is 9."
+msgstr "कितने विशेष आइटम दिखाने हैं। डिफ़ॉल्ट 9 है।"
+
+msgid "Featured Section Background Color"
+msgstr "विशेष अनुभाग पृष्ठभूमि रंग"
+
+msgid "Background color for the Featured section. Default is #0b0c0d."
+msgstr "विशेष अनुभाग के लिए पृष्ठभूमि रंग। डिफ़ॉल्ट #0b0c0d है।"
+
+msgid "Change the language for Add New"
+msgstr "नया जोड़ें के लिए भाषा बदलें"
+
+msgid "Change the language for Share List"
+msgstr "सूची साझा करें के लिए भाषा बदलें"
+
+msgid "Change the language for Live Search Items"
+msgstr "लाइव खोज आइटम के लिए भाषा बदलें"
+
+msgid "Change the language for No Results Found for Your Search"
+msgstr "आपकी खोज के लिए कोई परिणाम नहीं मिला के लिए भाषा बदलें"
+
+msgid "Change the language for - Enable Dark Mode"
+msgstr "- डार्क मोड सक्षम करें के लिए भाषा बदलें"
+
+msgid "Change the language for - Dark Mode On"
+msgstr "- डार्क मोड चालू के लिए भाषा बदलें"
+
+msgid "Change the language for - Light Mode On"
+msgstr "- लाइट मोड चालू के लिए भाषा बदलें"
+
+msgid "Custom CSS (Use *!important* flag if the changes does not take place)"
+msgstr "कस्टम सीएसएस (यदि परिवर्तन नहीं होते हैं तो *!important* फ़्लैग का उपयोग करें)"
+
+msgid "Write your custom CSS here. Please do not use"
+msgstr "अपना कस्टम सीएसएस यहाँ लिखें। कृपया उपयोग न करें"
+
+msgid "style"
+msgstr "style"
+
+msgid "tag in this textarea."
+msgstr "इस टेक्स्टएरिया में टैग।"
+
+msgid "Write your custom JS here. Please do not use"
+msgstr "अपना कस्टम जेएस यहाँ लिखें। कृपया उपयोग न करें"
+
+msgid "script"
+msgstr "script"
+
+msgid "Select Active AI Provider"
+msgstr "सक्रिय एआई प्रदाता चुनें"
+
+msgid "Disable AI"
+msgstr "एआई अक्षम करें"
+
+msgid "Google Gemini"
+msgstr "गूगल जेमिनी"
+
+msgid "OpenRouter"
+msgstr "ओपनराउटर"
+
+msgid "Choose which AI provider to enable for the directory features. Selecting \\"
+msgstr "निर्देशिका सुविधाओं के लिए किस एआई प्रदाता को सक्षम करना है, चुनें। \\ का चयन करना"
+
+msgid "Auto Save Generated Items"
+msgstr "जेनरेट किए गए आइटम को स्वतः सहेजें"
+
+msgid "If enabled, directory posts will be automatically saved/updated immediately after the elements are successfully generated by the AI."
+msgstr "यदि सक्षम किया गया है, तो एआई द्वारा तत्वों को सफलतापूर्वक जेनरेट करने के तुरंत बाद निर्देशिका पोस्ट स्वचालित रूप से सहेजी/अपडेट की जाएंगी।"
+
+msgid "OpenAI Integration Settings"
+msgstr "ओपनएआई एकीकरण सेटिंग्स"
+
+msgid "OpenAI API Key"
+msgstr "ओपनएआई एपीआई कुंजी"
+
+msgid "sk-..."
+msgstr "sk-..."
+
+msgid "Test Connection"
+msgstr "कनेक्शन का परीक्षण करें"
+
+msgid "Enter your OpenAI API key for AI generation features."
+msgstr "एआई जनरेशन सुविधाओं के लिए अपनी ओपनएआई एपीआई कुंजी दर्ज करें।"
+
+msgid "OpenAI Model"
+msgstr "ओपनएआई मॉडल"
+
+msgid "Select the OpenAI model to use. You can load all latest available models using the Test Connection button."
+msgstr "उपयोग करने के लिए ओपनएआई मॉडल चुनें। आप टेस्ट कनेक्शन बटन का उपयोग करके सभी नवीनतम उपलब्ध मॉडल लोड कर सकते हैं।"
+
+msgid "Add Custom Models"
+msgstr "कस्टम मॉडल जोड़ें"
+
+msgid "Manually add custom OpenAI models (comma separated)."
+msgstr "कस्टम OpenAI मॉडल मैन्युअल रूप से जोड़ें (कॉमा से अलग किए गए)।"
+
+msgid "OpenAI Temperature"
+msgstr "OpenAI तापमान"
+
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0). Note: Temperature is ignored for reasoning models (o1/o3 series)."
+msgstr "रैंडमनेस को नियंत्रित करता है: 1.2 जैसे उच्च मान आउटपुट को अधिक रैंडम बनाएंगे, जबकि 0.2 जैसे निम्न मान इसे अधिक केंद्रित और नियत बनाएंगे। सीमा: 0.0 से 2.0 (डिफ़ॉल्ट: 1.0)। ध्यान दें: रीजनिंग मॉडल (o1/o3 सीरीज़) के लिए तापमान को अनदेखा किया जाता है।"
+
+msgid "Google Gemini Integration Settings"
+msgstr "Google Gemini एकीकरण सेटिंग्स"
+
+msgid "Gemini API Key"
+msgstr "Gemini API कुंजी"
+
+msgid "Enter your Google Gemini API key."
+msgstr "अपनी Google Gemini API कुंजी दर्ज करें।"
+
+msgid "Gemini Model"
+msgstr "Gemini मॉडल"
+
+msgid "Select the Gemini model to use. You can load all latest available models using the Test Connection button."
+msgstr "उपयोग करने के लिए Gemini मॉडल चुनें। आप 'कनेक्शन टेस्ट करें' बटन का उपयोग करके सभी नवीनतम उपलब्ध मॉडल लोड कर सकते हैं।"
+
+msgid "Manually add custom Google Gemini models (comma separated)."
+msgstr "कस्टम Google Gemini मॉडल मैन्युअल रूप से जोड़ें (कॉमा से अलग किए गए)।"
+
+msgid "Gemini Temperature"
+msgstr "Gemini तापमान"
+
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0)."
+msgstr "रैंडमनेस को नियंत्रित करता है: 1.2 जैसे उच्च मान आउटपुट को अधिक रैंडम बनाएंगे, जबकि 0.2 जैसे निम्न मान इसे अधिक केंद्रित और नियत बनाएंगे। सीमा: 0.0 से 2.0 (डिफ़ॉल्ट: 1.0)।"
+
+msgid "OpenRouter Integration Settings"
+msgstr "OpenRouter एकीकरण सेटिंग्स"
+
+msgid "OpenRouter API Key"
+msgstr "OpenRouter API कुंजी"
+
+msgid "Enter your OpenRouter API Key. You can get one from openrouter.ai."
+msgstr "अपनी OpenRouter API कुंजी दर्ज करें। आप इसे openrouter.ai से प्राप्त कर सकते हैं।"
+
+msgid "OpenRouter Model"
+msgstr "OpenRouter मॉडल"
+
+msgid "Select the OpenRouter model to use. Models are dynamically fetched if an API key is active."
+msgstr "उपयोग करने के लिए OpenRouter मॉडल चुनें। यदि API कुंजी सक्रिय है तो मॉडल गतिशील रूप से प्राप्त किए जाते हैं।"
+
+msgid "Manually add custom OpenRouter models (comma separated)."
+msgstr "कस्टम OpenRouter मॉडल मैन्युअल रूप से जोड़ें (कॉमा से अलग किए गए)।"
+
+msgid "OpenRouter Temperature"
+msgstr "OpenRouter तापमान"
+
+msgid "Controls randomness: Range 0.0 to 2.0 (Default: 1.0)."
+msgstr "रैंडमनेस को नियंत्रित करता है: सीमा 0.0 से 2.0 (डिफ़ॉल्ट: 1.0)।"
+
+msgid "AI Prompt Settings"
+msgstr "AI प्रॉम्प्ट सेटिंग्स"
+
+msgid "Custom Prompt Instruction"
+msgstr "कस्टम प्रॉम्प्ट निर्देश"
+
+msgid "Reset to Default"
+msgstr "डिफ़ॉल्ट पर रीसेट करें"
+
+msgid "You can customize the prompt instructions sent to the AI model. Be sure to include the placeholders {count} and {prompt} so they can be replaced by the user's inputs dynamically. Also, keep the general format of the prompt as is. Do not modify if you are uncertain."
+msgstr "आप AI मॉडल को भेजे गए प्रॉम्प्ट निर्देशों को अनुकूलित कर सकते हैं। सुनिश्चित करें कि आप {count} और {prompt} प्लेसहोल्डर शामिल करें ताकि उन्हें उपयोगकर्ता के इनपुट द्वारा गतिशील रूप से बदला जा सके। साथ ही, प्रॉम्प्ट के सामान्य प्रारूप को वैसे ही रखें। यदि आप अनिश्चित हैं तो संशोधित न करें।"
+
+msgid "Shortcode Generator"
+msgstr "शॉर्टकोड जनरेटर"
+
+msgid "We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode."
+msgstr "हम आपको विज़ुअल मोड में अपने पेज/पोस्ट एडिटर के टूलबार में पाए जाने वाले शॉर्टकोड जनरेटर का उपयोग करने के लिए प्रोत्साहित करते हैं।"
+
+msgid "See sample below for where to find it for Gutenberg."
+msgstr "गुटेनबर्ग के लिए इसे कहाँ खोजना है, इसके लिए नीचे दिया गया नमूना देखें।"
+
+msgid "This is how the shortcode generator will look like."
+msgstr "शॉर्टकोड जनरेटर ऐसा दिखेगा।"
+
+msgid "Shortcode Example"
+msgstr "शॉर्टकोड उदाहरण"
+
+msgid "You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as \\"
+msgstr "आप आसानी से शॉर्टकोड जनरेट और इन्सर्ट करने के लिए हमारे दिए गए शॉर्टकोड जनरेटर का उपयोग कर सकते हैं, जिसका शीर्षक है \\"
+
+msgid "For all the lists:"
+msgstr "सभी सूचियों के लिए:"
+
+msgid "[qcopd-directory mode=\\"
+msgstr "[qcopd-directory mode=\\"
+
+msgid "For only a single list:"
+msgstr "केवल एक सूची के लिए:"
+
+msgid "Available Parameters:"
+msgstr "उपलब्ध पैरामीटर:"
+
+msgid "1. mode"
+msgstr "1. मोड"
+
+msgid "[Value for this option can be set as \\"
+msgstr "[इस विकल्प के लिए मान \\ के रूप में सेट किया जा सकता है"
+
+msgid "2. column"
+msgstr "2. कॉलम"
+
+msgid "Avaialble values: \\"
+msgstr "उपलब्ध मान: \\"
+
+msgid "3. style"
+msgstr "3. स्टाइल"
+
+msgid "Only 6 templates are available in the free version. For more styles or templates, please purchase the"
+msgstr "मुफ़्त संस्करण में केवल 6 टेम्पलेट उपलब्ध हैं। अधिक शैलियों या टेम्पलेट्स के लिए, कृपया खरीदें"
+
+msgid "premium version"
+msgstr "प्रीमियम संस्करण"
+
+msgid "4. orderby"
+msgstr "4. क्रमबद्ध करें"
+
+msgid "Compatible order by values: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' and 'menu_order'."
+msgstr "संगत क्रमबद्ध मान: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' और 'menu_order'।"
+
+msgid "5. order"
+msgstr "5. क्रम"
+
+msgid "Value for this option can be set as \\"
+msgstr "इस विकल्प के लिए मान इस प्रकार सेट किया जा सकता है \\"
+
+msgid "6. item_orderby"
+msgstr "6. आइटम_क्रमबद्ध करें"
+
+msgid "Value for this option are \\"
+msgstr "इस विकल्प के लिए मान हैं \\"
+
+msgid "7. list_id"
+msgstr "7. सूची_आईडी"
+
+msgid "Only applicable if you want to display a single list [not all]. You can provide specific list id here as a value. You can also get ready shortcode for a single list under \\"
+msgstr "केवल तभी लागू होता है जब आप एक एकल सूची [सभी नहीं] प्रदर्शित करना चाहते हैं। आप यहां एक विशिष्ट सूची आईडी मान के रूप में प्रदान कर सकते हैं। आप एक एकल सूची के लिए तैयार शॉर्टकोड भी प्राप्त कर सकते हैं \\"
+
+msgid "8. enable_embedding"
+msgstr "8. एम्बेडिंग सक्षम करें"
+
+msgid "Allow visitors to embed list in other sites. Supported values - \\"
+msgstr "आगंतुकों को अन्य साइटों में सूची एम्बेड करने की अनुमति दें। समर्थित मान - \\"
+
+msgid "Example: enable_embedding=\\"
+msgstr "उदाहरण: enable_embedding=\\"
+
+msgid "8. upvote"
+msgstr "8. अपवोट"
+
+msgid "Allow visitors to list item. Supported values - \\"
+msgstr "आगंतुकों को आइटम सूचीबद्ध करने की अनुमति दें। समर्थित मान - \\"
+
+msgid "Example: upvote=\\"
+msgstr "उदाहरण: upvote=\\"
+
+msgid "9. style-16 image show"
+msgstr "9. स्टाइल-16 छवि दिखाएँ"
+
+msgid " Add the shortcode parameter enable_image=\\"
+msgstr "शॉर्टकोड पैरामीटर enable_image=\\ जोड़ें"
+
+msgid "Example: enable_image=\\"
+msgstr "उदाहरण: enable_image=\\"
+
+msgid "10. Search"
+msgstr "10. खोजें"
+
+msgid " Add the shortcode parameter search=\\"
+msgstr "शॉर्टकोड पैरामीटर search=\\ जोड़ें"
+
+msgid "Example: search=\\"
+msgstr "उदाहरण: search=\\"
+
+msgid "11. dark_mode"
+msgstr "11. डार्क_मोड"
+
+msgid "You can use this value to use the dark_mode of SLD templates. Available values for this option \\"
+msgstr "आप SLD टेम्पलेट्स के डार्क_मोड का उपयोग करने के लिए इस मान का उपयोग कर सकते हैं। इस विकल्प के लिए उपलब्ध मान \\"
+
+msgid "== Frequently Asked Questions =="
+msgstr "== अक्सर पूछे जाने वाले प्रश्न =="
+
+msgid "= I cannot save my List. delete item or add new items to the List ="
+msgstr "= मैं अपनी सूची सहेज नहीं सकता। आइटम हटाएँ या सूची में नए आइटम जोड़ें ="
+
+msgid "The issue you are having with saving the Lists is because of a limitation set in your server. Your server probably has a low limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save new link items. The server’s configuration that dictates this is max_input_vars. Set it to a high limit like max_input_vars = 10000. You can do it with local php.ini file or htaccess if your server supports it, Otherwise, please contact your hosting company support if needed. "
+msgstr "सूचियों को सहेजने में आपको जो समस्या हो रही है, वह आपके सर्वर में निर्धारित एक सीमा के कारण है। आपका सर्वर शायद एक समय में कितने फॉर्म फ़ील्ड्स को संसाधित करेगा, इसके लिए एक कम सीमा है। इसलिए, जब आप एक निश्चित संख्या में लिंक जोड़ लेते हैं, तो सर्वर नए लिंक आइटम को सहेजने से इनकार कर देता है। सर्वर का कॉन्फ़िगरेशन जो इसे निर्धारित करता है वह max_input_vars है। इसे एक उच्च सीमा पर सेट करें जैसे max_input_vars = 10000। यदि आपका सर्वर इसका समर्थन करता है, तो आप इसे स्थानीय php.ini फ़ाइल या htaccess के साथ कर सकते हैं, अन्यथा, यदि आवश्यक हो तो कृपया अपनी होस्टिंग कंपनी के समर्थन से संपर्क करें।"
+
+msgid "= The sub title is not showing ="
+msgstr "= उप-शीर्षक नहीं दिख रहा है ="
+
+msgid "The default template does not show subtitles. Use style-1 from the shortcode generator to display subtitles."
+msgstr "डिफ़ॉल्ट टेम्पलेट उप-शीर्षक नहीं दिखाता है। उप-शीर्षक प्रदर्शित करने के लिए शॉर्टकोड जनरेटर से स्टाइल-1 का उपयोग करें।"
+
+msgid "= Does the free version have filter buttons? ="
+msgstr "= क्या मुफ्त संस्करण में फ़िल्टर बटन हैं? ="
+
+msgid "No. It is a pro version feature at the moment. But in the future, we have plans to make it available in the free version as well."
+msgstr "नहीं। यह इस समय एक प्रो संस्करण की सुविधा है। लेकिन भविष्य में, हमारी इसे मुफ्त संस्करण में भी उपलब्ध कराने की योजना है।"
+
+msgid "= I cannot have more than 1 columns ="
+msgstr "= मेरे पास 1 से अधिक कॉलम नहीं हो सकते ="
+
+msgid "To display more than one column, you need to create multiple Lists and choose to Show All Lists from the shortcode generator. A single list will always show in a single column."
+msgstr "एक से अधिक कॉलम प्रदर्शित करने के लिए, आपको कई सूचियाँ बनानी होंगी और शॉर्टकोड जनरेटर से सभी सूचियाँ दिखाएँ का चयन करना होगा। एक एकल सूची हमेशा एक एकल कॉलम में दिखाई देगी।"
+
+msgid "= I’m having trouble grasping the use of categories. It seems like and that they can only be assigned to a list rather than a specific link. ="
+msgstr "= मुझे श्रेणियों के उपयोग को समझने में परेशानी हो रही है। ऐसा लगता है कि उन्हें केवल एक सूची को सौंपा जा सकता है न कि एक विशिष्ट लिंक को। ="
+
+msgid "The base pillars of SLD are Lists, not individual links. The most common use case scenario of SLD is to create and display multiple Lists of many Links on specific topics. As such, there is no option for a Link (list item) to belong to multiple Lists or Categories. That would make the process of creating Lists slower. For each link you would have to select a List and a Category from drop downs despite the chances of a single List item to belong to multiple Lists are usually not that high. When you have dozens or hundreds of Lists that would become a real issue to create or manage your Lists."
+msgstr "SLD के मूल स्तंभ सूचियाँ हैं, न कि व्यक्तिगत लिंक। SLD का सबसे आम उपयोग मामला विशिष्ट विषयों पर कई लिंक की कई सूचियाँ बनाना और प्रदर्शित करना है। ऐसे में, एक लिंक (सूची आइटम) के लिए कई सूचियों या श्रेणियों से संबंधित होने का कोई विकल्प नहीं है। इससे सूचियाँ बनाने की प्रक्रिया धीमी हो जाएगी। प्रत्येक लिंक के लिए आपको ड्रॉप डाउन से एक सूची और एक श्रेणी का चयन करना होगा, भले ही एक एकल सूची आइटम के कई सूचियों से संबंधित होने की संभावना आमतौर पर इतनी अधिक न हो। जब आपके पास दर्जनों या सैकड़ों सूचियाँ होंगी तो आपकी सूचियों को बनाना या प्रबंधित करना एक वास्तविक समस्या बन जाएगा।"
+
+msgid "= Do you have pagination or load more items? I have thousands of links="
+msgstr "= क्या आपके पास पेजिंग या अधिक आइटम लोड करने का विकल्प है? मेरे पास हजारों लिंक हैं ="
+
+msgid "Items in lists can be paginated in the pro version. This option is available in the shortcode generator. But you can also add the parameters manually."
+msgstr "सूचियों में आइटम प्रो संस्करण में पेज किए जा सकते हैं। यह विकल्प शॉर्टकोड जनरेटर में उपलब्ध है। लेकिन आप मैन्युअल रूप से भी पैरामीटर जोड़ सकते हैं।"
+
+msgid "Values: “true”, “false”. This option will allow you to paginate list items. It will break the list page wise. Example: paginate_items=“true”. You also need to add the parameter per_page. This option indicates the number of items per page. Default is “5”. paginate_items=“true” is required to get this parameter working. Example: per_page=“5”"
+msgstr "मान: “true”, “false”। यह विकल्प आपको सूची आइटम को पेज करने की अनुमति देगा। यह सूची को पेज-वार तोड़ेगा। उदाहरण: paginate_items=“true”। आपको per_page पैरामीटर भी जोड़ना होगा। यह विकल्प प्रति पृष्ठ आइटम की संख्या को इंगित करता है। डिफ़ॉल्ट “5” है। इस पैरामीटर को काम करने के लिए paginate_items=“true” आवश्यक है। उदाहरण: per_page=“5”"
+
+msgid "Lists themselves cannot be paginated as the main concept of SLD is to be a Simple, One Page Directory."
+msgstr "सूचियों को स्वयं पेज नहीं किया जा सकता क्योंकि SLD की मुख्य अवधारणा एक सरल, एक-पृष्ठ निर्देशिका होना है।"
+
+msgid "= I have a list to import but it does not work and there is no message saying why my import does not work. ="
+msgstr "= मेरे पास आयात करने के लिए एक सूची है लेकिन यह काम नहीं करती है और कोई संदेश नहीं है कि मेरा आयात क्यों काम नहीं करता है। ="
+
+msgid "The most common reason for failed import is encoding. The CSV file itself and characters in it must be in utf-8 format. Please check your CSV file for any unusual/non-utf-8 characters. If the problem persists, please email us the CSV file."
+msgstr "आयात विफल होने का सबसे आम कारण एन्कोडिंग है। CSV फ़ाइल स्वयं और उसमें वर्ण utf-8 प्रारूप में होने चाहिए। कृपया अपनी CSV फ़ाइल में किसी भी असामान्य/गैर-utf-8 वर्णों की जाँच करें। यदि समस्या बनी रहती है, तो कृपया हमें CSV फ़ाइल ईमेल करें।"
+
+msgid "= I have some blank pages that are crawled by Google! How to avoid them? ="
+msgstr "= मेरे पास कुछ खाली पेज हैं जिन्हें Google क्रॉल करता है! उनसे कैसे बचें? ="
+
+msgid "Like many, if not most, WordPress plugins SLD uses custom posts and WordPress creates slug URLs even though they are not being used by SLD at the moment. We are working on making use of them."
+msgstr "कई, यदि अधिकांश नहीं, WordPress प्लगइन्स की तरह, SLD कस्टम पोस्ट का उपयोग करता है और WordPress स्लग URL बनाता है, भले ही SLD द्वारा उनका वर्तमान में उपयोग नहीं किया जा रहा हो। हम उनका उपयोग करने पर काम कर रहे हैं।"
+
+msgid "But rest assured they are not harmful. They are generally not linked from anywhere and not indexed by Google. The only exception is if you have an XML sitemap generator that automatically scans and generates Links to these slug URLs. Yoast SEO plugin does that. You can exclude those slugs from xml sitemap. Go to Yoast->XML Sitemap->Post Types tag and select Manage List Items (sld) to Not in sitemap – then Save."
+msgstr "लेकिन निश्चिंत रहें कि वे हानिकारक नहीं हैं। वे आम तौर पर कहीं से भी लिंक नहीं होते हैं और Google द्वारा अनुक्रमित (indexed) नहीं होते हैं। एकमात्र अपवाद यह है कि यदि आपके पास एक XML साइटमैप जनरेटर है जो स्वचालित रूप से इन स्लग URL को स्कैन करता है और उनके लिंक बनाता है। Yoast SEO प्लगइन ऐसा करता है। आप उन स्लग को XML साइटमैप से बाहर कर सकते हैं। Yoast-&gt;XML साइटमैप-&gt;पोस्ट प्रकार टैग पर जाएं और 'लिस्ट आइटम प्रबंधित करें (sld)' को 'साइटमैप में नहीं' चुनें - फिर सहेजें।"
+
+msgid "= How can I upgrade from free version of SLD to Pro version? ="
+msgstr "= मैं SLD के मुफ्त संस्करण से प्रो संस्करण में कैसे अपग्रेड कर सकता हूँ? ="
+
+msgid "1. Download the latest pro version of the plugin from website"
+msgstr "1. वेबसाइट से प्लगइन का नवीनतम प्रो संस्करण डाउनलोड करें"
+
+msgid "2. Log in to your WordPress admin area and go to the Plugins management page."
+msgstr "2. अपने WordPress एडमिन क्षेत्र में लॉग इन करें और प्लगइन्स प्रबंधन पृष्ठ पर जाएं।"
+
+msgid "3. Deactivate and Delete the old version of the plugin (don’t worry – your data is safe)"
+msgstr "3. प्लगइन के पुराने संस्करण को निष्क्रिय करें और हटाएं (चिंता न करें – आपका डेटा सुरक्षित है)"
+
+msgid "4. Upload and Activate the latest pro version of the plugin"
+msgstr "4. प्लगइन का नवीनतम प्रो संस्करण अपलोड करें और सक्रिय करें"
+
+msgid "5. You are done."
+msgstr "5. आपका काम हो गया।"
+
+msgid "= I have setup List Categories and Lists and neither is showing on home page. Did I install correctly? ="
+msgstr "= मैंने लिस्ट श्रेणियां और लिस्टें सेट की हैं और उनमें से कोई भी होम पेज पर नहीं दिख रही है। क्या मैंने सही ढंग से इंस्टॉल किया है? ="
+
+msgid "You have to put the short code on the WordPress oage or post page where you want to show the List/s. There is a Shortcode generator in your page or post visual editor. Use that to create shortcode and insert to your page, where you want to display the lists, easily."
+msgstr "आपको उस WordPress पेज या पोस्ट पेज पर शॉर्टकोड डालना होगा जहाँ आप लिस्ट/लिस्टें दिखाना चाहते हैं। आपके पेज या पोस्ट विजुअल एडिटर में एक शॉर्टकोड जनरेटर है। उसका उपयोग करके शॉर्टकोड बनाएं और उसे अपने पेज में डालें, जहाँ आप लिस्टें आसानी से प्रदर्शित करना चाहते हैं।"
+
+msgid "= Is SLD mobile friendly? Does it function well on cells and tablets? ="
+msgstr "= क्या SLD मोबाइल फ्रेंडली है? क्या यह सेल फोन और टैबलेट पर अच्छी तरह काम करता है? ="
+
+msgid "Yes, all templates are mobile device friendly and Responsive."
+msgstr "हाँ, सभी टेम्पलेट मोबाइल डिवाइस फ्रेंडली और रिस्पॉन्सिव हैं।"
+
+msgid "Please take a quick look at our"
+msgstr "कृपया हमारे इन पर एक त्वरित नज़र डालें"
+
+msgid "Video Tutorials"
+msgstr "वीडियो ट्यूटोरियल"
+
+msgid "Note"
+msgstr "ध्यान दें"
+
+msgid "If you are having problem with adding more items or saving a list or your changes in the list are not getting saved then it is most likely because of a limitation set in your server. Your server has a limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save the List. The server’s configuration that dictates this is max_input_vars. You need to Set it to a high limit like max_input_vars = 15000. Since this is a server setting - you may need to contact your hosting company's support for this."
+msgstr "यदि आपको अधिक आइटम जोड़ने या किसी लिस्ट को सहेजने में समस्या हो रही है या लिस्ट में आपके परिवर्तन सहेजे नहीं जा रहे हैं, तो यह सबसे अधिक संभावना है कि आपके सर्वर में एक सीमा निर्धारित होने के कारण है। आपके सर्वर की एक सीमा होती है कि वह एक बार में कितने फॉर्म फ़ील्ड्स को संसाधित करेगा। इसलिए, जब आप एक निश्चित संख्या में लिंक जोड़ लेते हैं, तो सर्वर लिस्ट को सहेजने से इनकार कर देता है। सर्वर का कॉन्फ़िगरेशन जो इसे निर्धारित करता है वह max_input_vars है। आपको इसे एक उच्च सीमा पर सेट करने की आवश्यकता है जैसे max_input_vars = 15000। चूंकि यह एक सर्वर सेटिंग है - इसके लिए आपको अपनी होस्टिंग कंपनी के समर्थन से संपर्क करने की आवश्यकता हो सकती है।"
+
+msgid "Leave A Review for Simple Link Directory?"
+msgstr "सिंपल लिंक डायरेक्टरी के लिए एक समीक्षा छोड़ें?"
+
+msgid "We hope you've enjoyed using"
+msgstr "हमें उम्मीद है कि आपको उपयोग करके मज़ा आया होगा"
+
+msgid " Would you consider leaving us a review on WordPress.org?"
+msgstr " क्या आप WordPress.org पर हमारे लिए एक समीक्षा छोड़ने पर विचार करेंगे?"
+
+msgid "Leave A Review"
+msgstr "एक समीक्षा छोड़ें"
+
+msgid "I've already left a review"
+msgstr "मैंने पहले ही एक समीक्षा छोड़ दी है"
+
+msgid "Maybe Later"
+msgstr "शायद बाद में"
+
+msgid "Never show this again"
+msgstr "इसे फिर कभी न दिखाएं"
+
+msgid "SLD Demo Data Imported"
+msgstr "SLD डेमो डेटा आयात किया गया"
+
+msgid "Already CSV data imported and page created."
+msgstr "CSV डेटा पहले ही आयात किया जा चुका है और पेज बनाया जा चुका है।"
+
+msgid "More WordPress Goodies for You!"
+msgstr "आपके लिए और अधिक WordPress की अच्छी चीजें!"
+
+msgid "Check Out Some of Our Other Works that Might Make Your Website Better"
+msgstr "हमारे कुछ अन्य कार्यों को देखें जो आपकी वेबसाइट को बेहतर बना सकते हैं"
+
+msgid "All our Pro Version users get Premium, Guaranteed Quick, One on One Priority Support."
+msgstr "हमारे सभी प्रो संस्करण उपयोगकर्ताओं को प्रीमियम, गारंटीड त्वरित, वन-ऑन-वन प्राथमिकता सहायता मिलती है।"
+
+msgid "Get Priority Support "
+msgstr "प्राथमिकता सहायता प्राप्त करें"
+
+msgid "Online KnowledgeBase"
+msgstr "ऑनलाइन नॉलेजबेस"
+
+msgid "Get Support for Free Version"
+msgstr "मुफ्त संस्करण के लिए सहायता प्राप्त करें"
+
+msgid "Please fill up all the requried form fields."
+msgstr "कृपया सभी आवश्यक फॉर्म फ़ील्ड्स भरें।"
+
+msgid "Invalid email address."
+msgstr "अमान्य ईमेल पता।"
+
+msgid "Support Request Details:"
+msgstr "सहायता अनुरोध विवरण:"
+
+msgid "Name"
+msgstr "नाम"
+
+msgid "Email"
+msgstr "ईमेल"
+
+msgid "Subject"
+msgstr "विषय"
+
+msgid "Message"
+msgstr "संदेश"
+
+msgid "Sent Via the Plugin"
+msgstr "प्लगइन के माध्यम से भेजा गया"
+
+msgid "Mail sent from:"
+msgstr "मेल यहाँ से भेजा गया:"
+
+msgid "URL:"
+msgstr "यूआरएल:"
+
+msgid "Mail Generated on:"
+msgstr "मेल इस पर जनरेट किया गया:"
+
+msgid "From Plugin Support Page:"
+msgstr "प्लगइन सपोर्ट पेज से:"
+
+msgid "Your email was sent successfully. Thanks!"
+msgstr "आपका ईमेल सफलतापूर्वक भेजा गया। धन्यवाद!"
+
+msgid "Update To Pro"
+msgstr "प्रो में अपडेट करें"
+
+msgid "SLD - Shortcode Generator"
+msgstr "एसएलडी - शॉर्टकोड जनरेटर"
+
+msgid "Mode"
+msgstr "मोड"
+
+msgid "All List"
+msgstr "सभी सूची"
+
+msgid "One List"
+msgstr "एक सूची"
+
+msgid "Select List "
+msgstr "सूची चुनें"
+
+msgid "Please Select List"
+msgstr "कृपया सूची चुनें"
+
+msgid "List Category"
+msgstr "सूची श्रेणी"
+
+msgid "Please Select Category"
+msgstr "कृपया श्रेणी चुनें"
+
+msgid "Template Style"
+msgstr "टेम्पलेट शैली"
+
+msgid "Default Style"
+msgstr "डिफ़ॉल्ट शैली"
+
+msgid "Style 01"
+msgstr "शैली 01"
+
+msgid "Style 02"
+msgstr "शैली 02"
+
+msgid "Style 03"
+msgstr "शैली 03"
+
+msgid "Style 04"
+msgstr "शैली 04"
+
+msgid "Style 05"
+msgstr "शैली 05"
+
+msgid "Style 16 (**NEW)"
+msgstr "शैली 16 (**नया)"
+
+msgid "Demo URL: "
+msgstr "डेमो यूआरएल:"
+
+msgid "Column"
+msgstr "कॉलम"
+
+msgid "Column 1"
+msgstr "कॉलम 1"
+
+msgid "Column 2"
+msgstr "कॉलम 2"
+
+msgid "Column 3"
+msgstr "कॉलम 3"
+
+msgid "Column 4"
+msgstr "कॉलम 4"
+
+msgid "Title Font Size"
+msgstr "शीर्षक फ़ॉन्ट आकार"
+
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+msgid "Title Line Height"
+msgstr "शीर्षक पंक्ति ऊँचाई"
+
+msgid "Subtitle Font Size"
+msgstr "उपशीर्षक फ़ॉन्ट आकार"
+
+msgid "Subtitle Line Height"
+msgstr "उपशीर्षक पंक्ति ऊँचाई"
+
+msgid "List Order By"
+msgstr "सूची क्रमबद्ध करें"
+
+msgid "ID"
+msgstr "आईडी"
+
+msgid "Date Modified"
+msgstr "संशोधित तिथि"
+
+msgid "Random"
+msgstr "रैंडम"
+
+msgid "Menu Order"
+msgstr "मेनू क्रम"
+
+msgid "List Order"
+msgstr "सूची क्रम"
+
+msgid "Ascending"
+msgstr "आरोही"
+
+msgid "Descending"
+msgstr "अवरोही"
+
+msgid "List Item Orderby"
+msgstr "सूची आइटम क्रमबद्धता"
+
+msgid "Upvotes"
+msgstr "अपवोट"
+
+msgid "Enable Embeding"
+msgstr "एम्बेडिंग सक्षम करें"
+
+msgid "Copy"
+msgstr "कॉपी करें"
+
+msgid "the shortcode & use it any text block."
+msgstr "शॉर्टकोड को कॉपी करें और इसे किसी भी टेक्स्ट ब्लॉक में उपयोग करें।"
+
+msgid "Copy & Close"
+msgstr "कॉपी करें और बंद करें"
+
+msgid "SLD - Alert"
+msgstr "SLD - चेतावनी"
+
+msgid "A list should have more than just 1 item."
+msgstr "एक सूची में 1 से अधिक आइटम होने चाहिए।"
+
+msgid "We recommend"
+msgstr "हम सलाह देते हैं"
+
+msgid "10-30"
+msgstr "10-30"
+
+msgid "links/businesses for each List."
+msgstr "प्रत्येक सूची के लिए लिंक/व्यवसाय।"
+
+msgid "Create multiple Lists and show them all on a page using the"
+msgstr "कई सूचियाँ बनाएँ और उन्हें एक पेज पर उपयोग करके दिखाएँ"
+
+msgid "Shortcode Generator."
+msgstr "शॉर्टकोड जनरेटर।"
+
+msgid "No"
+msgstr "नहीं"
+
+msgid "Add more item"
+msgstr "और आइटम जोड़ें"

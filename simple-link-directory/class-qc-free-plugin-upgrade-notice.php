@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /*******************************************
  * QuantumCloud Plugin Upgrade Link for Free Plugins
@@ -11,7 +14,7 @@ if( !class_exists('QCOPD_SLD_Plugin_Upgrade_To_Pro_Notice') )
 		
 		//Public variables, these can be overrides using instance callback
 
-		public $upgrade_link = "https://www.quantumcloud.com";
+		public $upgrade_link = "https://www.quantumcloud.net";
 		//public $link_color = "#FCB214";
 		public $link_color = "#fff";
 		public $link_text = "Upgrade to Pro";
@@ -194,7 +197,7 @@ if( is_admin() )
 	
 	//Uncommnent and Set these instance variables as per the requirements
 
-	$instance_sldf2->upgrade_link = "https://www.quantumcloud.com/products/simple-link-directory/";
+	$instance_sldf2->upgrade_link = "https://www.quantumcloud.net/products/simple-link-directory/";
 	//$instance_sldf2->link_color = "#FCB214";
 	//$instance_sldf2->link_text = "Upgrade To Pro";
 	//$instance_sldf2->link_class = "";

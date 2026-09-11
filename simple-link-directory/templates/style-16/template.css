@@ -258,6 +258,7 @@ color: #222;
 }
 .qcld-main-container-style-16 .qcsld-new-style-16 .upvote-section {
   float: right;
+  cursor: pointer;
 }
 .qcld-main-container-style-16 .qcsld-new-style-16 .style-16 ul li > a {
     line-height: 25px;
@@ -305,4 +306,99 @@ color: #222;
   position: ABSOLUTE;
   right: 44px;
   top: 6px;
+}
+
+.qcld-main-container-style-16.sld-featured-strip {
+    width: 100% !important;
+    max-width: 1170px !important;
+    margin: 0 0 20px 0;
+    padding: 16px 18px 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #fff !important;
+    border: 3px solid #f3f3f3;
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 12px;
+  padding: 0 0 8px;
+  border-bottom: 3px solid #f3f3f3;
+  position: relative;
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-heading:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 120px;
+  height: 3px;
+  background: #39af2f;
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-heading-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-heading h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222 !important;
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #39af2f;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-heading-count {
+  font-size: 13px;
+  color: #555;
+  white-space: nowrap;
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-columns {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr);
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-columns.sld-feat-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-columns.sld-feat-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-columns.sld-feat-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.qcld-main-container-style-16.sld-featured-strip .sld-featured-columns .qcopd-list-column {
+  width: 100% !important;
+  max-width: 100% !important;
+  float: none !important;
+  min-width: 0;
+}
+.qcld-main-container-style-16.sld-featured-strip .style-16 .qcopd-single-list ul {
+  max-height: none !important;
+  overflow: visible !important;
+}
+@media (max-width: 767px) {
+  .qcld-main-container-style-16.sld-featured-strip .sld-featured-columns,
+  .qcld-main-container-style-16.sld-featured-strip .sld-featured-columns.sld-feat-cols-2,
+  .qcld-main-container-style-16.sld-featured-strip .sld-featured-columns.sld-feat-cols-3,
+  .qcld-main-container-style-16.sld-featured-strip .sld-featured-columns.sld-feat-cols-4 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .qcld-main-container-style-16.sld-featured-strip .sld-featured-columns.sld-feat-cols-3,
+  .qcld-main-container-style-16.sld-featured-strip .sld-featured-columns.sld-feat-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

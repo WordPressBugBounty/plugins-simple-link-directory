@@ -1,5 +1,4 @@
 <?php
-
 defined('ABSPATH') or die("No direct script access!");
 
 //Registering custom post for Team
@@ -72,14 +71,17 @@ add_action( 'init', 'qcopd_load_cmb' );
 if ( ! function_exists( 'qcopd_load_cmb' ) ) {
 	function qcopd_load_cmb(){
 		$post_type = '';
-		if(isset($_GET['post']) && $_GET['post']!=''){
-			$post = get_post(sanitize_text_field($_GET['post']));
-			$post_type = $post->post_type;
-		}elseif(isset($_GET['post_type']) && $_GET['post_type']=='sld'){
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
+		if ( isset( $_GET['post'] ) && ! empty( $_GET['post'] ) ) {
+			$post_id   = absint( wp_unslash( $_GET['post'] ) );
+			$post      = get_post( $post_id );
+			$post_type = $post ? $post->post_type : '';
+		} elseif ( isset( $_GET['post_type'] ) && sanitize_text_field( wp_unslash( $_GET['post_type'] ) ) === 'sld' ) {
 			$post_type = 'sld';
-		}elseif(isset($_POST['post_type']) && $_POST['post_type']=='sld'){
+		} elseif ( isset( $_POST['post_type'] ) && sanitize_text_field( wp_unslash( $_POST['post_type'] ) ) === 'sld' ) {
 			$post_type = 'sld';
 		}
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
 			
 		if ( ! class_exists( 'CMB_Meta_Box' ) ){
 
@@ -105,7 +107,7 @@ if ( ! function_exists( 'cmb_SLD_QCOPD_DIR_fields' ) ) {
 			
 			
 			
-			array( 'id' => 'qcopd_entry_time',  'name' => 'Entry Time', 'type' => 'text', 'cols' => 4, 'default' => ''.date("Y-m-d H:i:s").'' ),	
+			array( 'id' => 'qcopd_entry_time',  'name' => 'Entry Time', 'type' => 'text', 'cols' => 4, 'default' => current_time( 'mysql' ) ),	
 			array( 'id' => 'qcopd_timelaps',  'name' => 'Time Laps', 'type' => 'text', 'cols' => 4, 'default' => '' ),	
 			
 			array( 'id' => 'qcopd_item_newtab',  'name' => 'Open Link in a New Tab', 'type' => 'checkbox', 'cols' => 3, 'default' => 0 ),
@@ -144,10 +146,10 @@ if ( ! function_exists( 'qcopd_list_columns_head' ) ) {
 	function qcopd_list_columns_head($defaults) {
 
 	    $new_columns['cb'] 					= '<input type="checkbox" />';
-	    $new_columns['title'] 				= esc_html('Title', 'simple-link-directory');
-	    $new_columns['qcopd_item_count'] 	= esc_html('Number of Elements', 'simple-link-directory');
-	    $new_columns['shortcode_col'] 		= esc_html('Shortcode', 'simple-link-directory');
-	    $new_columns['date'] 				= esc_html('Date', 'simple-link-directory');
+	    $new_columns['title'] 				= esc_html__('Title', 'simple-link-directory');
+	    $new_columns['qcopd_item_count'] 	= esc_html__('Number of Elements', 'simple-link-directory');
+	    $new_columns['shortcode_col'] 		= esc_html__('Shortcode', 'simple-link-directory');
+	    $new_columns['date'] 				= esc_html__('Date', 'simple-link-directory');
 
 	    return $new_columns;
 	}
@@ -160,7 +162,7 @@ if ( ! function_exists( 'qcopd_list_columns_content' ) ) {
 	    if ($column_name == 'qcopd_item_count') {
 	        $items = get_post_meta( $post_ID, 'qcopd_list_item01' );
 	        $count = is_array($items) ? count($items) : 0;
-	        echo '<span class="sld-item-count-badge">' . esc_html($count) . ' ' . _n('element', 'elements', $count, 'simple-link-directory') . '</span>';
+	        echo '<span class="sld-item-count-badge">' . esc_html($count) . ' ' . esc_html( _n('element', 'elements', $count, 'simple-link-directory') ) . '</span>';
 	    }
 
 	    if ($column_name == 'shortcode_col') {

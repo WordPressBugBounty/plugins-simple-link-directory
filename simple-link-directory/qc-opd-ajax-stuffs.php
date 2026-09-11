@@ -1,5 +1,4 @@
 <?php
-
 defined('ABSPATH') or die("No direct script access!");
 
 //add_action('wp_head', 'qcopd_ajax_ajaxurl');
@@ -10,13 +9,13 @@ if (!function_exists('qcopd_ajax_ajaxurl')) {
   {
 
     $sld_enable_rtl = (get_option('sld_enable_rtl') == 'on') ? 'on' : '';
-    $sld_no_results_found = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html('No Results Found for Your Search', 'simple-link-directory');
+    $sld_no_results_found = get_option('sld_no_results_found') ? get_option('sld_no_results_found') : esc_html__('No Results Found for Your Search', 'simple-link-directory');
 
     echo '<script type="text/javascript">
-                var ajaxurl = "' . admin_url('admin-ajax.php') . '";
-                var qc_sld_get_ajax_nonce = "' . wp_create_nonce('qc-opd') . '";
-                var sld_ajax_object_rtl = "' . esc_attr($sld_enable_rtl) . '";
-                var sld_no_results_found = "' . esc_attr($sld_no_results_found) . '";
+                var ajaxurl = "' . esc_url(admin_url('admin-ajax.php')) . '";
+                var qc_sld_get_ajax_nonce = "' . esc_js(wp_create_nonce('qc-opd')) . '";
+                var sld_ajax_object_rtl = "' . esc_js($sld_enable_rtl) . '";
+                var sld_no_results_found = "' . esc_js($sld_no_results_found) . '";
              </script>';
   }
 }
@@ -47,9 +46,21 @@ if (!function_exists('qcopd_upvote_ajax_action_stuff')) {
     $data['votes'] = 0;
     $data['vote_status'] = 'failed';
 
-    $voted_id = isset($_COOKIE['voted_li']) ? sanitize_text_field(wp_unslash($_COOKIE['voted_li'])) : array();
+    $voted_id = array();
+    if ( isset( $_COOKIE['voted_li'] ) ) {
+      if ( is_array( $_COOKIE['voted_li'] ) ) {
+        $voted_id = array_map( 'sanitize_text_field', wp_unslash( $_COOKIE['voted_li'] ) );
+      } elseif ( is_string( $_COOKIE['voted_li'] ) && $_COOKIE['voted_li'] !== '' ) {
+        $cookie_val = sanitize_text_field( wp_unslash( $_COOKIE['voted_li'] ) );
+        if ( strpos( $cookie_val, ',' ) !== false ) {
+          $voted_id = array_map( 'trim', explode( ',', $cookie_val ) );
+        } else {
+          $voted_id = array( $cookie_val );
+        }
+      }
+    }
 
-    $exists = in_array($li_id, $voted_id);
+    $exists = in_array( $li_id, $voted_id, true );
 
     //If li-id not exists in the cookie, then prceed to vote
     if (!$exists) {
@@ -155,7 +166,7 @@ if (!function_exists('qcopd_help_render_sidebar')) {
 
 
         <div class="sld-pro-banner">
-          <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank">
+          <a href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory/'); ?>" target="_blank">
             <img src="<?php echo esc_url(SLD_QCOPD_IMG_URL . '/sld-logo.png'); ?>" />
           </a>
         </div>
@@ -386,12 +397,12 @@ if (!function_exists('qcopd_help_render_sidebar')) {
         </div>
 
         <div class="sld-pro-upgrade">
-          <a href="<?php echo esc_url('https://dev.quantumcloud.com/sld/'); ?>" target="_blank"
+          <a href="<?php echo esc_url('https://dev.quantumcloud.net/sld/'); ?>" target="_blank"
             class="button button-primary"><?php esc_html_e('View Pro Demo', 'simple-link-directory'); ?></a>
         </div>
 
         <div class="sld-pro-upgrade" style="margin-top:10px;">
-          <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank"
+          <a href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory/'); ?>" target="_blank"
             class="button button-primary"><?php esc_html_e('Upgrade to Pro Now', 'simple-link-directory'); ?></a>
         </div>
       </div>
@@ -405,6 +416,8 @@ if (!function_exists('qcopd_help_render_sidebar')) {
  */
 function qcopd_sld_test_openai_connection()
 {
+  check_ajax_referer('quantum_ajax_validation_18', 'security');
+
   if (!current_user_can('manage_options')) {
     wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
@@ -474,6 +487,8 @@ add_action('wp_ajax_qcopd_sld_test_openai_connection', 'qcopd_sld_test_openai_co
  */
 function qcopd_sld_test_gemini_connection()
 {
+  check_ajax_referer('quantum_ajax_validation_18', 'security');
+
   if (!current_user_can('manage_options')) {
     wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
@@ -535,6 +550,8 @@ add_action('wp_ajax_qcopd_sld_test_gemini_connection', 'qcopd_sld_test_gemini_co
  */
 function qcopd_sld_test_openrouter_connection()
 {
+  check_ajax_referer('quantum_ajax_validation_18', 'security');
+
   if (!current_user_can('manage_options')) {
     wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
@@ -618,6 +635,8 @@ add_action('wp_ajax_qcopd_sld_test_openrouter_connection', 'qcopd_sld_test_openr
  */
 function qcopd_sld_reset_ai_prompt_instruction()
 {
+  check_ajax_referer('quantum_ajax_validation_18', 'security');
+
   if (!current_user_can('manage_options')) {
     wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
@@ -638,12 +657,14 @@ add_action('wp_ajax_qcopd_sld_reset_ai_prompt_instruction', 'qcopd_sld_reset_ai_
  */
 function qcopd_sld_ai_generate_list_items()
 {
+  check_ajax_referer('quantum_ajax_validation_18', 'security');
+
   if (!current_user_can('edit_posts')) {
     wp_send_json_error(array('message' => esc_html('Unauthorized user.', 'simple-link-directory')));
   }
 
   $prompt = isset($_POST['prompt']) ? sanitize_text_field(wp_unslash($_POST['prompt'])) : '';
-  $count = isset($_POST['count']) ? intval($_POST['count']) : 5;
+  $count = isset($_POST['count']) ? intval(wp_unslash($_POST['count'])) : 5;
 
   if (empty($prompt)) {
     wp_send_json_error(array('message' => esc_html('Prompt is empty.', 'simple-link-directory')));

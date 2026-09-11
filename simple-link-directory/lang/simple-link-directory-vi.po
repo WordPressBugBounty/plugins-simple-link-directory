@@ -1,0 +1,1621 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-link-directory (AI Translated)\n"
+"Report-Msgid-Bugs-To: https://www.quantumcloud.net/\n"
+"POT-Creation-Date: 2026-09-07 07:08+0000\n"
+"PO-Revision-Date: 2026-09-07 07:08+0000\n"
+"Last-Translator: AI Language Packs <support@quantumcloud.net>\n"
+"Language-Team: Tiếng Việt (Vietnamese)\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: AI Language Packs WordPress Plugin v1.0.2\n"
+
+msgid "We can't detect any plugin information. This is most probably because you have not included the code in the plugin main file."
+msgstr "Chúng tôi không thể phát hiện bất kỳ thông tin plugin nào. Rất có thể là do bạn chưa thêm mã vào tệp chính của plugin."
+
+msgid "Sorry to see you go"
+msgstr "Rất tiếc khi bạn rời đi"
+
+msgid "Found a Bug"
+msgstr "Tìm thấy lỗi"
+
+msgid "Need More Features"
+msgstr "Cần thêm tính năng"
+
+msgid "Deactivating Temporarily"
+msgstr "Tạm thời vô hiệu hóa"
+
+msgid "Upgrading to Pro"
+msgstr "Nâng cấp lên bản Pro"
+
+msgid "Please provide email so we can contact with bug fixes"
+msgstr "Vui lòng cung cấp email để chúng tôi có thể liên hệ về các bản sửa lỗi"
+
+msgid "Please provide some details so we can improve the plugin"
+msgstr "Vui lòng cung cấp một số chi tiết để chúng tôi có thể cải thiện plugin"
+
+msgid "Submitting form"
+msgstr "Đang gửi biểu mẫu"
+
+msgid "Settings"
+msgstr "Cài đặt"
+
+msgid "Shortcodes and Help"
+msgstr "Mã ngắn và Trợ giúp"
+
+msgid "Support"
+msgstr "Hỗ trợ"
+
+msgid "Live Search Items"
+msgstr "Mục tìm kiếm trực tiếp"
+
+msgid "Add New"
+msgstr "Thêm mới"
+
+msgid "Share List"
+msgstr "Chia sẻ danh sách"
+
+msgid "Generate Embed Code For This List"
+msgstr "Tạo mã nhúng cho danh sách này"
+
+msgid "Width: (in '%' or 'px')"
+msgstr "Width: (in '%' or 'px')"
+
+msgid "%"
+msgstr "%"
+
+msgid "px"
+msgstr "px"
+
+msgid "Height: (in 'px')"
+msgstr "Chiều cao: (theo 'px')"
+
+msgid "Generate & Copy"
+msgstr "Tạo &amp; Sao chép"
+
+msgid "Generated Code"
+msgstr "Mã đã tạo"
+
+msgid "Hit \\"
+msgstr "Nhấn \\"
+
+msgid "ASC"
+msgstr "Tăng dần"
+
+msgid "all"
+msgstr "tất cả"
+
+msgid "3"
+msgstr "3"
+
+msgid "simple"
+msgstr "đơn giản"
+
+msgid "SLD - Shortcode Maker"
+msgstr "SLD - Trình tạo mã ngắn"
+
+msgid "SLD — Shortcode Maker"
+msgstr "SLD — Trình tạo mã ngắn"
+
+msgid "Generate SLD Shortcode"
+msgstr "Tạo mã ngắn SLD"
+
+msgid "Are you sure you want to delete this field?"
+msgstr "Bạn có chắc chắn muốn xóa trường này không?"
+
+msgid "Add New List Items"
+msgstr "Thêm mới mục danh sách"
+
+msgid "Remove Field"
+msgstr "Xóa trường"
+
+msgid "Add File"
+msgstr "Thêm tệp"
+
+msgid "Remove"
+msgstr "Xóa"
+
+msgid "Add Image"
+msgstr "Thêm hình ảnh"
+
+msgid "None"
+msgstr "Không có"
+
+msgid "Type to search"
+msgstr "Nhập để tìm kiếm"
+
+msgid "Drag to set the exact location"
+msgstr "Kéo để đặt vị trí chính xác"
+
+msgid "AddOns"
+msgstr "Tiện ích bổ sung"
+
+msgid "Simple Link Directory"
+msgstr "Danh mục Liên kết Đơn giản"
+
+msgid "Simple Link Directory Pro"
+msgstr "Danh mục Liên kết Đơn giản Pro"
+
+msgid " Addons"
+msgstr "Tiện ích bổ sung"
+
+msgid "MultiPage Advanced Addon"
+msgstr "Tiện ích bổ sung Nâng cao Đa trang"
+
+msgid "Global Search, Pagination, Category view with Lists on home page."
+msgstr "Tìm kiếm toàn cầu, Phân trang, Xem danh mục với Danh sách trên trang chủ."
+
+msgid "Get It Now"
+msgstr "Nhận ngay"
+
+msgid "Directory Broken Link Checker"
+msgstr "Trình kiểm tra liên kết hỏng của danh mục"
+
+msgid "Check Broken Links for SLD and SBD and other Post Types Links"
+msgstr "Kiểm tra liên kết hỏng cho SLD và SBD và các liên kết loại bài đăng khác"
+
+msgid "Review, Rating for SLD Pro"
+msgstr "Đánh giá, Xếp hạng cho SLD Pro"
+
+msgid "Allow your site users to leave a review comment and rate the link listings."
+msgstr "Cho phép người dùng trang web của bạn để lại bình luận đánh giá và xếp hạng các danh sách liên kết."
+
+msgid "Link Exchange AddOn for SLD Pro"
+msgstr "Tiện ích bổ sung Trao đổi liên kết cho SLD Pro"
+
+msgid "Allow your site users Exchange Links with Other Websites"
+msgstr "Cho phép người dùng trang web của bạn trao đổi liên kết với các trang web khác"
+
+msgid "Themes"
+msgstr "Giao diện"
+
+msgid "Simple Link Directory Theme"
+msgstr "Giao diện Danh mục Liên kết Đơn giản"
+
+msgid "Not Installed"
+msgstr "Chưa cài đặt"
+
+msgid "Crafted carefully to make the best out of the popular Simple Link Directory plugin. One Click Install, Demo Data, Compatible with the Elementor and the Gutenberg Page Builder!"
+msgstr "Được thiết kế cẩn thận để tận dụng tối đa plugin Danh mục Liên kết Đơn giản phổ biến. Cài đặt một cú nhấp chuột, Dữ liệu demo, Tương thích với Elementor và Trình tạo trang Gutenberg!"
+
+msgid "Try our Free AI ChatBot - WPBot"
+msgstr "Dùng thử ChatBot AI miễn phí của chúng tôi - WPBot"
+
+msgid "Get the Best ChatBot for WordPress – WPBot"
+msgstr "Nhận ChatBot tốt nhất cho WordPress – WPBot"
+
+msgid "Do more than just chat with your ChatBot!"
+msgstr "Làm được nhiều hơn là chỉ trò chuyện với ChatBot của bạn!"
+
+msgid "Do more than just chat with your ChatBot"
+msgstr "Làm được nhiều hơn là chỉ trò chuyện với ChatBot của bạn"
+
+msgid "More Leads, Conversions"
+msgstr "Nhiều khách hàng tiềm năng, Chuyển đổi hơn"
+
+msgid "Satisfied customers while"
+msgstr "Khách hàng hài lòng trong khi"
+
+msgid "saving time"
+msgstr "tiết kiệm thời gian"
+
+msgid "increasing your"
+msgstr "tăng cường"
+
+msgid "business opportunities"
+msgstr "cơ hội kinh doanh"
+
+msgid "WPBot is the best ChatBot for WordPress to improve user engagement,"
+msgstr "WPBot là ChatBot tốt nhất cho WordPress để cải thiện tương tác người dùng,"
+
+msgid "Generate Leads,"
+msgstr "Tạo khách hàng tiềm năng,"
+
+msgid "provide"
+msgstr "cung cấp"
+
+msgid "Automated Live"
+msgstr "Trực tiếp tự động"
+
+msgid "customer"
+msgstr "khách hàng"
+
+msgid "support"
+msgstr "hỗ trợ"
+
+msgid "across your website"
+msgstr "trên toàn bộ trang web của bạn"
+
+msgid "social platforms."
+msgstr "các nền tảng xã hội."
+
+msgid "The"
+msgstr "Tính năng"
+
+msgid "AI Insight"
+msgstr "AI Insight"
+
+msgid "feature analyzes chat histories"
+msgstr "phân tích lịch sử trò chuyện"
+
+msgid "reveals what your users want."
+msgstr "tiết lộ những gì người dùng của bạn muốn."
+
+msgid "Deliver AI-powered ChatBot services from your websites with LLMs like"
+msgstr "Cung cấp dịch vụ ChatBot được hỗ trợ bởi AI từ trang web của bạn với các LLM như"
+
+msgid "OpenAI"
+msgstr "OpenAI"
+
+msgid "(ChatGPT), Gemini etc. along with many built-in, powerful features like"
+msgstr "(ChatGPT), Gemini, v.v. cùng với nhiều tính năng mạnh mẽ tích hợp sẵn như"
+
+msgid "Live"
+msgstr "Trực tiếp"
+
+msgid "Chat, Chat"
+msgstr "Trò chuyện, Trò chuyện"
+
+msgid "Histories"
+msgstr "Lịch sử"
+
+msgid "Conversational forms"
+msgstr "Biểu mẫu hội thoại"
+
+msgid "Webhooks"
+msgstr "Webhooks"
+
+msgid "more!"
+msgstr "và nhiều hơn nữa!"
+
+msgid "Need More Assistance?"
+msgstr "Cần hỗ trợ thêm?"
+
+msgid "Our support team is ready to help you with any issues or custom requests."
+msgstr "Đội ngũ hỗ trợ của chúng tôi sẵn sàng giúp bạn với mọi vấn đề hoặc yêu cầu tùy chỉnh."
+
+msgid "Knowledge Base"
+msgstr "Cơ sở kiến thức"
+
+msgid "Get Direct Support"
+msgstr "Nhận hỗ trợ trực tiếp"
+
+msgid "Handcrafted for productivity."
+msgstr "Được thiết kế để tối ưu năng suất."
+
+msgid "By %s"
+msgstr "Bởi %s"
+
+msgid "Install %s now"
+msgstr "Cài đặt %s ngay"
+
+msgid "Install Now"
+msgstr "Cài đặt ngay"
+
+msgid "Cannot Install"
+msgstr "Không thể cài đặt"
+
+msgid "Update %s now"
+msgstr "Cập nhật %s ngay"
+
+msgid "Update Now"
+msgstr "Cập nhật ngay"
+
+msgid "Cannot Update"
+msgstr "Không thể cập nhật"
+
+msgid "Active"
+msgstr "Đang hoạt động"
+
+msgid "Activate"
+msgstr "Kích hoạt"
+
+msgid "Activate %s"
+msgstr "Kích hoạt %s"
+
+msgid "Network Activate"
+msgstr "Kích hoạt mạng"
+
+msgid "Network Activate %s"
+msgstr "Kích hoạt mạng %s"
+
+msgid "Installed"
+msgstr "Đã cài đặt"
+
+msgid "More Details"
+msgstr "Xem chi tiết"
+
+msgid "This plugin doesn&#8217;t work with your versions of WordPress and PHP."
+msgstr "Plugin này không hoạt động với phiên bản WordPress và PHP của bạn."
+
+msgid "<a href=\\"
+msgstr "&lt;a href=\\"
+
+msgid "This plugin doesn&#8217;t work with your version of WordPress."
+msgstr "Plugin này không hoạt động với phiên bản WordPress của bạn."
+
+msgid "This plugin doesn&#8217;t work with your version of PHP."
+msgstr "Plugin này không hoạt động với phiên bản PHP của bạn."
+
+msgid "Live Preview"
+msgstr "Xem trước trực tiếp"
+
+msgid "No Results Found for Your Search"
+msgstr "Không tìm thấy kết quả nào cho tìm kiếm của bạn"
+
+msgid "Bulk Import"
+msgstr "Nhập hàng loạt"
+
+msgid "Import"
+msgstr "Nhập"
+
+msgid "Please Note:"
+msgstr "Xin lưu ý:"
+
+msgid "The import feature is still under development. Right now it only allows importing and creating new Lists. Existing Lists will not get updated. Also, export feature is not available in free version."
+msgstr "Tính năng nhập vẫn đang được phát triển. Hiện tại, nó chỉ cho phép nhập và tạo Danh sách mới. Các Danh sách hiện có sẽ không được cập nhật. Ngoài ra, tính năng xuất không khả dụng trong phiên bản miễn phí."
+
+msgid "Sample CSV File:"
+msgstr "Tệp CSV mẫu:"
+
+msgid "Download Sample"
+msgstr "Tải xuống mẫu"
+
+msgid "PROCESS:"
+msgstr "QUY TRÌNH:"
+
+msgid "First download the above CSV file."
+msgstr "Trước tiên, hãy tải xuống tệp CSV ở trên."
+
+msgid "Add/Edit rows on the top of it, by maintaing proper provided format/fields."
+msgstr "Thêm/Chỉnh sửa các hàng ở đầu tệp, bằng cách duy trì định dạng/trường được cung cấp đúng cách."
+
+msgid "Finally, upload file in the below form."
+msgstr "Cuối cùng, tải tệp lên trong biểu mẫu bên dưới."
+
+msgid "NOTES:"
+msgstr "LƯU Ý:"
+
+msgid "It should be a simple CSV file."
+msgstr "Đây phải là một tệp CSV đơn giản."
+
+msgid "File encoding should be in UTF-8"
+msgstr "Mã hóa tệp phải là UTF-8"
+
+msgid "File must be prepared as per provided sample CSV file."
+msgstr "Tệp phải được chuẩn bị theo tệp CSV mẫu đã cung cấp."
+
+msgid "RESULT:"
+msgstr "KẾT QUẢ:"
+
+msgid "entry with"
+msgstr "mục với"
+
+msgid "element(s) was made successfully."
+msgstr "phần tử đã được tạo thành công."
+
+msgid "Upload CSV File to Import"
+msgstr "Tải lên tệp CSV để nhập"
+
+msgid "** CSV File & Characters must be saved with UTF-8 encoding **"
+msgstr "** Tệp CSV &amp; Ký tự phải được lưu với mã hóa UTF-8 **"
+
+msgid "Upload & Process"
+msgstr "Tải lên &amp; Xử lý"
+
+msgid "Crafted By:"
+msgstr "Được tạo bởi:"
+
+msgid "Web Design Company"
+msgstr "Công ty Thiết kế Web"
+
+msgid "- QuantumCloud"
+msgstr "- QuantumCloud"
+
+msgid "Upgrade to Pro"
+msgstr "Nâng cấp lên bản Pro"
+
+msgid "Add New List of Links"
+msgstr "Thêm danh sách liên kết mới"
+
+msgid "**SLD Pro Tip: Did you know that you can"
+msgstr "**Mẹo SLD Pro: Bạn có biết rằng bạn có thể"
+
+msgid "Auto Generate"
+msgstr "Tự động tạo"
+
+msgid "Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?"
+msgstr "Tiêu đề, Phụ đề &amp; Hình thu nhỏ với phiên bản Pro chỉ trong 2 cú nhấp chuột?"
+
+msgid "Triple Your Link Entry Speed!"
+msgstr "Tăng gấp ba tốc độ nhập liên kết của bạn!"
+
+msgid "**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance."
+msgstr "**Mẹo SLD: Danh sách là nền tảng cơ bản của SLD, không phải các liên kết riêng lẻ. Nhóm các liên kết của bạn vào các Danh sách khác nhau để có hiệu suất tốt nhất."
+
+msgid "**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode."
+msgstr "**Mẹo SLD: SLD trông đẹp nhất khi bạn tạo nhiều Danh sách và sử dụng chế độ Hiển thị Tất cả Danh sách."
+
+msgid "**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn"
+msgstr "**Mẹo SLD Pro: Bạn có biết rằng phiên bản SLD Pro cho phép bạn kiếm tiền từ thư mục của mình và kiếm được"
+
+msgid "passive income?"
+msgstr "thu nhập thụ động?"
+
+msgid "Upgrade now!"
+msgstr "Nâng cấp ngay!"
+
+msgid "**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed."
+msgstr "**Mẹo SLD: Cố gắng giữ số lượng liên kết tối đa dưới 30 mỗi danh sách. Tạo nhiều Danh sách nếu cần."
+
+msgid "**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page's visual editor."
+msgstr "**Mẹo SLD: Sử dụng trình tạo shortcode tiện lợi để cuộc sống dễ dàng hơn. Đó là một nút [SLD] nhỏ, màu xanh lam được tìm thấy trên thanh công cụ của trình chỉnh sửa trực quan của bất kỳ trang nào."
+
+msgid "**SLD Pro Tip: You can display your"
+msgstr "**Mẹo SLD Pro: Bạn có thể hiển thị"
+
+msgid "Lists by category"
+msgstr "Danh sách theo danh mục"
+
+msgid "with the SLD pro version."
+msgstr "với phiên bản SLD pro."
+
+msgid "16+ Templates, Multi page mode"
+msgstr "Hơn 16 mẫu, chế độ đa trang"
+
+msgid ", Widgets are also available."
+msgstr ", Widget cũng có sẵn."
+
+msgid "**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email."
+msgstr "**Mẹo SLD: Bạn có thể tạo một trang với biểu mẫu liên hệ và liên kết nút Thêm liên kết đến trang đó để mọi người có thể gửi liên kết đến thư mục của bạn qua email."
+
+msgid "**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details."
+msgstr "**Mẹo SLD: Nếu bạn gặp sự cố khi thêm nhiều mục hơn hoặc lưu danh sách thì bạn có thể cần tăng giá trị max_input_vars trong máy chủ. Kiểm tra phần trợ giúp để biết thêm chi tiết."
+
+msgid "**SLD Pro Tip: SLD pro version has"
+msgstr "**Mẹo SLD Pro: Phiên bản SLD pro có"
+
+msgid "front end dashboard"
+msgstr "bảng điều khiển giao diện người dùng"
+
+msgid "for user registration and link management. As well as tags and instant search."
+msgstr "để đăng ký người dùng và quản lý liên kết. Cũng như các thẻ và tìm kiếm tức thì."
+
+msgid "Upgrade to the Pro version now!"
+msgstr "Nâng cấp lên phiên bản Pro ngay!"
+
+msgid "Shortcode Generator for SLD"
+msgstr "Trình tạo Shortcode cho SLD"
+
+msgid "AI List Items Generator"
+msgstr "Trình tạo mục danh sách AI"
+
+msgid "Click the button below to generate shortcode"
+msgstr "Nhấp vào nút bên dưới để tạo shortcode"
+
+msgid "Generate Shortcode"
+msgstr "Tạo Shortcode"
+
+msgid "Please enable an AI provider (OpenAI, Gemini or OpenRouter) in Simple Link Directory %s first."
+msgstr "Vui lòng bật nhà cung cấp AI (OpenAI, Gemini hoặc OpenRouter) trong Simple Link Directory %s trước."
+
+msgid "settings tab"
+msgstr "thẻ cài đặt"
+
+msgid "Active AI Provider:"
+msgstr "Nhà cung cấp AI đang hoạt động:"
+
+msgid "Topic:"
+msgstr "Chủ đề:"
+
+msgid "e.g., JavaScript coding"
+msgstr "ví dụ: lập trình JavaScript"
+
+msgid "Number of Items:"
+msgstr "Số lượng mục:"
+
+msgid "Generate & Add Items"
+msgstr "Tạo &amp; Thêm mục"
+
+msgid "%s  %s  %s"
+msgstr "%s %s %s"
+
+msgid "%1$s Simple Link Directory %2$s works the best when you create multiple Lists and show them all in a page. Use the following shortcode to display All lists on any page:  %3$s  %4$s  %5$s  Use the %6$s shortcode generator %7$s to select style and other options. "
+msgstr "%1$s Simple Link Directory %2$s hoạt động tốt nhất khi bạn tạo nhiều Danh sách và hiển thị tất cả chúng trên một trang. Sử dụng shortcode sau để hiển thị Tất cả danh sách trên bất kỳ trang nào: %3$s %4$s %5$s Sử dụng %6$s trình tạo shortcode %7$s để chọn kiểu và các tùy chọn khác."
+
+msgid "%1$s Import Simple Link Directory Demo Data:%2$s %3$sImport demo data to see how the plugin works.%4$s %5$sWe will create a sample directory with multiple Lists and create a new demo page using shortcode.%6$s %7$sYou can edit or delete the sample Lists to your requirements.%8$s %9$s Click to Import Data %10$s %11$s"
+msgstr "%1$s Nhập dữ liệu demo Simple Link Directory:%2$s %3$sNhập dữ liệu demo để xem plugin hoạt động như thế nào.%4$s %5$sChúng tôi sẽ tạo một thư mục mẫu với nhiều Danh sách và tạo một trang demo mới bằng shortcode.%6$s %7$sBạn có thể chỉnh sửa hoặc xóa các Danh sách mẫu theo yêu cầu của mình.%8$s %9$s Nhấp để nhập dữ liệu %10$s %11$s"
+
+msgid "Getting Started"
+msgstr "Bắt đầu"
+
+msgid "FAQ"
+msgstr "Câu hỏi thường gặp"
+
+msgid "Read the Documentation"
+msgstr "Đọc tài liệu"
+
+msgid "Ask for Help"
+msgstr "Yêu cầu trợ giúp"
+
+msgid "Check out the SLD Demo"
+msgstr "Xem bản demo SLD"
+
+msgid "Upgrade to Premium"
+msgstr "Nâng cấp lên Premium"
+
+msgid "Start Here"
+msgstr "Bắt đầu tại đây"
+
+msgid "Manage Lists"
+msgstr "Quản lý Danh sách"
+
+msgid "Manage List Item"
+msgstr "Quản lý Mục danh sách"
+
+msgid "New List"
+msgstr "Danh sách mới"
+
+msgid "Add New List"
+msgstr "Thêm Danh sách mới"
+
+msgid "Edit List Item"
+msgstr "Chỉnh sửa Mục danh sách"
+
+msgid "New List Item"
+msgstr "Mục danh sách mới"
+
+msgid "View List Item"
+msgstr "Xem Mục danh sách"
+
+msgid "Search List Item"
+msgstr "Tìm kiếm Mục danh sách"
+
+msgid "No List Item found"
+msgstr "Không tìm thấy Mục danh sách nào"
+
+msgid "No List Item found in the Trash"
+msgstr "Không tìm thấy Mục danh sách nào trong Thùng rác"
+
+msgid "This post type holds all posts for your directory items."
+msgstr "Loại bài đăng này chứa tất cả các bài đăng cho các mục thư mục của bạn."
+
+msgid "List Categories"
+msgstr "Danh mục danh sách"
+
+msgid "Category"
+msgstr "Danh mục"
+
+msgid "Search List Categories"
+msgstr "Tìm kiếm Danh mục danh sách"
+
+msgid "All List Categories"
+msgstr "Tất cả Danh mục danh sách"
+
+msgid "Parent List Categories"
+msgstr "Danh mục danh sách cha"
+
+msgid "Parent List Category:"
+msgstr "Danh mục danh sách cha:"
+
+msgid "Edit List Category"
+msgstr "Chỉnh sửa Danh mục danh sách"
+
+msgid "Update List Category"
+msgstr "Cập nhật Danh mục danh sách"
+
+msgid "Add New List Category"
+msgstr "Thêm Danh mục danh sách mới"
+
+msgid "New List Category Name"
+msgstr "Tên Danh mục danh sách mới"
+
+msgid "List Elements"
+msgstr "Mục danh sách"
+
+msgid "Create List Elements"
+msgstr "Tạo Mục danh sách"
+
+msgid "Please add your list items here. Ideally, each List should have 10-30 links. Create multiple Lists on different topics and show them all with a shortcode."
+msgstr "Vui lòng thêm các mục danh sách của bạn tại đây. Lý tưởng nhất là mỗi Danh sách nên có từ 10-30 liên kết. Tạo nhiều Danh sách về các chủ đề khác nhau và hiển thị tất cả bằng một shortcode."
+
+msgid "If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server."
+msgstr "Nếu bạn không thể lưu một Danh sách dài, vui lòng tăng giá trị của max_input_vars lên 15000 trên máy chủ của bạn."
+
+msgid "Title"
+msgstr "Tiêu đề"
+
+msgid "Number of Elements"
+msgstr "Số lượng phần tử"
+
+msgid "Shortcode"
+msgstr "Shortcode"
+
+msgid "Date"
+msgstr "Ngày"
+
+msgid "element"
+msgstr "phần tử"
+
+msgid "Single List:"
+msgstr "Danh sách đơn lẻ:"
+
+msgid "Copy Shortcode"
+msgstr "Sao chép Shortcode"
+
+msgid "Copied!"
+msgstr "Đã sao chép!"
+
+msgid "All Lists:"
+msgstr "Tất cả Danh sách:"
+
+msgid "%s item"
+msgstr "%s mục"
+
+msgid "%s items"
+msgstr "%s mục"
+
+msgid "Featured"
+msgstr "Nổi bật"
+
+msgid "Enable Dark Mode"
+msgstr "Bật Chế độ tối"
+
+msgid "Dark Mode On"
+msgstr "Chế độ tối đang bật"
+
+msgid "Light Mode On"
+msgstr "Chế độ sáng đang bật"
+
+msgid "Scroll To Top"
+msgstr "Cuộn lên đầu trang"
+
+msgid "Simple Link Directory Pro Features"
+msgstr "Tính năng của Simple Link Directory Pro"
+
+msgid "Enhanced Usability"
+msgstr "Cải thiện khả năng sử dụng"
+
+msgid "Build unlimited Lists and show them in multi-page mode"
+msgstr "Tạo không giới hạn Danh sách và hiển thị chúng ở chế độ nhiều trang"
+
+msgid "Auto Generate Title, Description & Thumbnail from URL"
+msgstr "Tự động tạo Tiêu đề, Mô tả &amp; Hình thu nhỏ từ URL"
+
+msgid "Video Gallery – Vimeo and Youtube Video Directory"
+msgstr "Thư viện Video – Thư mục Video Vimeo và Youtube"
+
+msgid "Live, on page, instant search & filtering of lists"
+msgstr "Tìm kiếm &amp; lọc danh sách trực tiếp, tức thì trên trang"
+
+msgid "Tabbed Category Listing of All Your Directory Lists"
+msgstr "Danh sách danh mục theo tab của tất cả các Danh sách thư mục của bạn"
+
+msgid "Community Features"
+msgstr "Tính năng Cộng đồng"
+
+msgid "Complete front end user registration, login and submission"
+msgstr "Đăng ký, đăng nhập và gửi bài của người dùng hoàn chỉnh ở giao diện người dùng"
+
+msgid "Allow users to submit links to your directory"
+msgstr "Cho phép người dùng gửi liên kết vào thư mục của bạn"
+
+msgid "Invite user interaction with Upvotes (Thumbs up, Heart, etc)"
+msgstr "Mời người dùng tương tác bằng cách Upvote (Thích, Tim, v.v.)"
+
+msgid "Allow users to embed your lists on their websites"
+msgstr "Cho phép người dùng nhúng danh sách của bạn vào trang web của họ"
+
+msgid "Allow registered users to create Favorite Lists"
+msgstr "Cho phép người dùng đã đăng ký tạo Danh sách yêu thích"
+
+msgid "Monetization Options"
+msgstr "Tùy chọn kiếm tiền"
+
+msgid "Integrated PayPal & Stripe payment for link submission"
+msgstr "Tích hợp thanh toán PayPal &amp; Stripe cho việc gửi liên kết"
+
+msgid "Create recurring subscription packages for listings"
+msgstr "Tạo các gói đăng ký định kỳ cho danh sách"
+
+msgid "Claim Listing for Payment feature"
+msgstr "Tính năng Yêu cầu danh sách để thanh toán"
+
+msgid "Option to Mark Paid Items as Featured at Top"
+msgstr "Tùy chọn đánh dấu các mục đã trả phí là Nổi bật ở đầu trang"
+
+msgid "URL masking option for affiliate links"
+msgstr "Tùy chọn che giấu URL cho các liên kết tiếp thị liên kết"
+
+msgid "Design & Layouts"
+msgstr "Thiết kế &amp; Bố cục"
+
+msgid "16 Premium templates for Single Page mode"
+msgstr "16 mẫu cao cấp cho chế độ Trang Đơn"
+
+msgid "2 Premium templates for Multi Page mode"
+msgstr "2 mẫu cao cấp cho chế độ Đa Trang"
+
+msgid "Create or customize templates from your theme folder"
+msgstr "Tạo hoặc tùy chỉnh mẫu từ thư mục giao diện của bạn"
+
+msgid "Use theme fonts or choose Google fonts"
+msgstr "Sử dụng phông chữ của giao diện hoặc chọn phông chữ Google"
+
+msgid "Configurable highlight color for each list"
+msgstr "Màu nổi bật có thể cấu hình cho mỗi danh sách"
+
+msgid "Admin Tools & Statistics"
+msgstr "Công cụ &amp; Thống kê Quản trị"
+
+msgid "Click statistics for admin dashboard"
+msgstr "Thống kê lượt nhấp cho bảng điều khiển quản trị"
+
+msgid "CSV Import/Export to manage lists easily"
+msgstr "Nhập/Xuất CSV để quản lý danh sách dễ dàng"
+
+msgid "Order Listing Directory by Link Clicks or Upvotes"
+msgstr "Sắp xếp Thư mục Danh sách theo Lượt nhấp Liên kết hoặc Lượt ủng hộ"
+
+msgid "Restrict UpVote by IP or Logged in Users only"
+msgstr "Hạn chế Lượt ủng hộ theo IP hoặc chỉ Người dùng đã đăng nhập"
+
+msgid "Copy List Items or Links to Other Lists"
+msgstr "Sao chép Mục danh sách hoặc Liên kết sang Danh sách khác"
+
+msgid "Front End Submission Features"
+msgstr "Tính năng Gửi bài từ Giao diện người dùng"
+
+msgid "Front End User Registration with Captcha, Log in, Link Submission"
+msgstr "Đăng ký người dùng từ Giao diện người dùng với Captcha, Đăng nhập, Gửi liên kết"
+
+msgid "Admin Approves User Submitted Links or Set to Auto Approve"
+msgstr "Quản trị viên phê duyệt Liên kết do Người dùng gửi hoặc Đặt tự động phê duyệt"
+
+msgid "Enable Free Frontend Submission & Free Submission Limit"
+msgstr "Bật Gửi bài miễn phí từ Giao diện người dùng &amp; Giới hạn gửi bài miễn phí"
+
+msgid "Enable Email Notification for New Item Submission"
+msgstr "Bật Thông báo Email cho Bài gửi mới"
+
+msgid "Allow User to Update Profile & Upload Image"
+msgstr "Cho phép Người dùng cập nhật Hồ sơ &amp; Tải ảnh lên"
+
+msgid "Customizability and Flexibility"
+msgstr "Khả năng tùy chỉnh và Linh hoạt"
+
+msgid "Choose theme font or google font"
+msgstr "Chọn phông chữ của giao diện hoặc phông chữ Google"
+
+msgid "Customize colors, fonts and almost all aspects of the link lists"
+msgstr "Tùy chỉnh màu sắc, phông chữ và hầu hết các khía cạnh của danh sách liên kết"
+
+msgid "Complete control over directory list ordering"
+msgstr "Kiểm soát hoàn toàn việc sắp xếp danh sách thư mục"
+
+msgid "Custom JS and CSS panel to modify directory functionality"
+msgstr "Bảng JS và CSS tùy chỉnh để sửa đổi chức năng thư mục"
+
+msgid "Over a dozen shortcode parameters & Shortcode Generator"
+msgstr "Hơn một tá tham số shortcode &amp; Trình tạo shortcode"
+
+msgid "Topsite List Script Features"
+msgstr "Tính năng Script Danh sách Topsite"
+
+msgid "Order Listing Directory by Link Clicks"
+msgstr "Sắp xếp Thư mục Danh sách theo Lượt nhấp Liên kết"
+
+msgid "Click statistics for admin"
+msgstr "Thống kê lượt nhấp cho quản trị viên"
+
+msgid "Restrict upvote by IP"
+msgstr "Hạn chế lượt ủng hộ theo IP"
+
+msgid "Restrict UpVote for Logged in Users only"
+msgstr "Hạn chế Lượt ủng hộ chỉ dành cho Người dùng đã đăng nhập"
+
+msgid "Enable Upvote for Main Click in General settings"
+msgstr "Bật Lượt ủng hộ cho Lượt nhấp chính trong cài đặt Chung"
+
+msgid "View Pro Demo"
+msgstr "Xem bản Demo Pro"
+
+msgid "Upgrade to Pro Now"
+msgstr "Nâng cấp lên Pro ngay"
+
+msgid "Unauthorized user."
+msgstr "Người dùng không được ủy quyền."
+
+msgid "API Key is empty."
+msgstr "Khóa API trống."
+
+msgid "Connection successful! Valid API Key."
+msgstr "Kết nối thành công! Khóa API hợp lệ."
+
+msgid "Invalid API Key or API error."
+msgstr "Khóa API không hợp lệ hoặc lỗi API."
+
+msgid "Invalid API Key."
+msgstr "Khóa API không hợp lệ."
+
+msgid "Prompt reset to default successfully!"
+msgstr "Lời nhắc đã được đặt lại về mặc định thành công!"
+
+msgid "Prompt is empty."
+msgstr "Lời nhắc trống."
+
+msgid "No AI provider is enabled in settings."
+msgstr "Không có nhà cung cấp AI nào được bật trong cài đặt."
+
+msgid "OpenAI API key is missing."
+msgstr "Thiếu khóa API OpenAI."
+
+msgid "OpenAI API error."
+msgstr "Lỗi API OpenAI."
+
+msgid "Gemini API key is missing."
+msgstr "Thiếu khóa API Gemini."
+
+msgid "Gemini API error."
+msgstr "Lỗi API Gemini."
+
+msgid "OpenRouter API key is missing."
+msgstr "Thiếu khóa API OpenRouter."
+
+msgid "OpenRouter API error."
+msgstr "Lỗi API OpenRouter."
+
+msgid "Failed to parse AI output. Raw content: "
+msgstr "Không thể phân tích đầu ra AI. Nội dung thô: "
+
+msgid "Generated %d items successfully!"
+msgstr "Đã tạo thành công %d mục!"
+
+msgid "SLD Settings Page"
+msgstr "Trang Cài đặt SLD"
+
+msgid "General Settings"
+msgstr "Cài đặt Chung"
+
+msgid "AI Settings"
+msgstr "Cài đặt AI"
+
+msgid "Language Settings"
+msgstr "Cài đặt Ngôn ngữ"
+
+msgid "Custom CSS"
+msgstr "CSS Tùy chỉnh"
+
+msgid "Custom Javascript"
+msgstr "Javascript Tùy chỉnh"
+
+msgid "Step 1"
+msgstr "Bước 1"
+
+msgid "Create List with Link Details "
+msgstr "Tạo Danh sách với Chi tiết Liên kết"
+
+msgid "Go to New List and create one by giving it a name. Then simply start adding List items or Links by filling up the fields you want. Use the Add New button to add more Links to your list."
+msgstr "Đi tới Danh sách Mới và tạo một danh sách bằng cách đặt tên cho nó. Sau đó, chỉ cần bắt đầu thêm các mục Danh sách hoặc Liên kết bằng cách điền vào các trường bạn muốn. Sử dụng nút Thêm Mới để thêm nhiều Liên kết hơn vào danh sách của bạn."
+
+msgid "Step 2"
+msgstr "Bước 2"
+
+msgid "Create More Lists"
+msgstr "Tạo Thêm Danh sách"
+
+msgid "You can just create a single list and use the Single List mode. But this plugin works the best when you create a few Lists each conatining about 15-20 Llinks. This yields the best view."
+msgstr "Bạn có thể chỉ tạo một danh sách duy nhất và sử dụng chế độ Danh sách Đơn. Nhưng plugin này hoạt động tốt nhất khi bạn tạo một vài Danh sách, mỗi danh sách chứa khoảng 15-20 Liên kết. Điều này mang lại chế độ xem tốt nhất."
+
+msgid "Step 3"
+msgstr "Bước 3"
+
+msgid "Generate and Paste Shortcode on a Page"
+msgstr "Tạo và Dán Shortcode vào Trang"
+
+msgid "Go to the page or post you want to display the directory. On the right sidebar you will see a ShortCode Generator block. Generate a shortcode with the options you want. Copy paste that to a section on your page."
+msgstr "Đi tới trang hoặc bài viết bạn muốn hiển thị thư mục. Trên thanh bên phải, bạn sẽ thấy một khối Trình tạo Shortcode. Tạo một shortcode với các tùy chọn bạn muốn. Sao chép và dán nó vào một phần trên trang của bạn."
+
+msgid "Enable Top Area"
+msgstr "Bật Khu vực Đầu trang"
+
+msgid "Top area includes Embed button (more options coming soon)"
+msgstr "Khu vực đầu trang bao gồm nút Nhúng (sẽ có thêm tùy chọn sớm)"
+
+msgid "Enable Live Search"
+msgstr "Bật Tìm kiếm Trực tiếp"
+
+msgid "Live search through directory items."
+msgstr "Tìm kiếm trực tiếp qua các mục thư mục."
+
+msgid "Enable Upvote"
+msgstr "Bật Tính năng Upvote"
+
+msgid "Turn ON to visible Upvote feature for all templates."
+msgstr "BẬT để hiển thị tính năng Upvote cho tất cả các mẫu."
+
+msgid "Enable Add New Button"
+msgstr "Bật Nút Thêm Mới"
+
+msgid "on"
+msgstr "bật"
+
+msgid "The button will link to a page of your choice where you can place a contact form or instructions to submit links to your directory. Links have to be manually added by the admin."
+msgstr "Nút sẽ liên kết đến một trang bạn chọn, nơi bạn có thể đặt biểu mẫu liên hệ hoặc hướng dẫn để gửi liên kết đến thư mục của bạn. Các liên kết phải được quản trị viên thêm thủ công."
+
+msgid "Add Button Link"
+msgstr "Thêm Liên kết Nút"
+
+msgid "Example:  https://yourdomain.com/submit-link/"
+msgstr "Ví dụ: https://yourdomain.com/submit-link/"
+
+msgid "Paste the full URL of a page that contains a contact form to submit link "
+msgstr "Dán URL đầy đủ của một trang chứa biểu mẫu liên hệ để gửi liên kết"
+
+msgid "Front end submission with monetization feature is available with the "
+msgstr "Gửi từ giao diện người dùng với tính năng kiếm tiền có sẵn với "
+
+msgid "Pro version"
+msgstr "phiên bản Pro"
+
+msgid "Track Outbound Clicks"
+msgstr "Theo dõi Lượt nhấp Ra ngoài"
+
+msgid "You need to have the analytics.js"
+msgstr "Bạn cần có analytics.js"
+
+msgid "Analytics tracking code in every page of your site"
+msgstr "Mã theo dõi Analytics trên mọi trang của trang web của bạn"
+
+msgid "Embed Credit Title"
+msgstr "Tiêu đề Tín dụng Nhúng"
+
+msgid "This text will be displayed below embedded list in other sites."
+msgstr "Văn bản này sẽ hiển thị bên dưới danh sách nhúng trên các trang web khác."
+
+msgid "Embed Credit Link"
+msgstr "Nhúng liên kết tín dụng"
+
+msgid "Enable Scroll to Top Button"
+msgstr "Bật nút cuộn lên đầu trang"
+
+msgid "Show Scroll to Top."
+msgstr "Hiển thị nút cuộn lên đầu trang."
+
+msgid "Enable RTL Direction"
+msgstr "Bật hướng RTL"
+
+msgid "If you make this option ON, then list items will be arranged in Right-to-Left direction."
+msgstr "Nếu bạn bật tùy chọn này, các mục trong danh sách sẽ được sắp xếp theo hướng Từ phải sang trái."
+
+msgid "Enable this option to show Dark Mode for all themes"
+msgstr "Bật tùy chọn này để hiển thị Chế độ tối cho tất cả các giao diện."
+
+msgid "Enable Featured Section"
+msgstr "Bật phần Nổi bật"
+
+msgid "Turn ON to display the Featured section. Default is OFF."
+msgstr "Bật để hiển thị phần Nổi bật. Mặc định là TẮT."
+
+msgid "Featured Section Item Count"
+msgstr "Số lượng mục trong phần Nổi bật"
+
+msgid "How many featured items to show. Default is 9."
+msgstr "Số lượng mục nổi bật sẽ hiển thị. Mặc định là 9."
+
+msgid "Featured Section Background Color"
+msgstr "Màu nền của phần Nổi bật"
+
+msgid "Background color for the Featured section. Default is #0b0c0d."
+msgstr "Màu nền cho phần Nổi bật. Mặc định là #0b0c0d."
+
+msgid "Change the language for Add New"
+msgstr "Thay đổi ngôn ngữ cho Thêm mới"
+
+msgid "Change the language for Share List"
+msgstr "Thay đổi ngôn ngữ cho Chia sẻ danh sách"
+
+msgid "Change the language for Live Search Items"
+msgstr "Thay đổi ngôn ngữ cho Mục tìm kiếm trực tiếp"
+
+msgid "Change the language for No Results Found for Your Search"
+msgstr "Thay đổi ngôn ngữ cho Không tìm thấy kết quả nào cho tìm kiếm của bạn"
+
+msgid "Change the language for - Enable Dark Mode"
+msgstr "Thay đổi ngôn ngữ cho - Bật Chế độ tối"
+
+msgid "Change the language for - Dark Mode On"
+msgstr "Thay đổi ngôn ngữ cho - Chế độ tối Đang bật"
+
+msgid "Change the language for - Light Mode On"
+msgstr "Thay đổi ngôn ngữ cho - Chế độ sáng Đang bật"
+
+msgid "Custom CSS (Use *!important* flag if the changes does not take place)"
+msgstr "CSS tùy chỉnh (Sử dụng cờ *!important* nếu các thay đổi không có hiệu lực)"
+
+msgid "Write your custom CSS here. Please do not use"
+msgstr "Viết CSS tùy chỉnh của bạn tại đây. Vui lòng không sử dụng"
+
+msgid "style"
+msgstr "style"
+
+msgid "tag in this textarea."
+msgstr "thẻ trong vùng văn bản này."
+
+msgid "Write your custom JS here. Please do not use"
+msgstr "Viết JS tùy chỉnh của bạn tại đây. Vui lòng không sử dụng"
+
+msgid "script"
+msgstr "script"
+
+msgid "Select Active AI Provider"
+msgstr "Chọn nhà cung cấp AI đang hoạt động"
+
+msgid "Disable AI"
+msgstr "Tắt AI"
+
+msgid "Google Gemini"
+msgstr "Google Gemini"
+
+msgid "OpenRouter"
+msgstr "OpenRouter"
+
+msgid "Choose which AI provider to enable for the directory features. Selecting \\"
+msgstr "Chọn nhà cung cấp AI để bật cho các tính năng thư mục. Chọn \\"
+
+msgid "Auto Save Generated Items"
+msgstr "Tự động lưu các mục đã tạo"
+
+msgid "If enabled, directory posts will be automatically saved/updated immediately after the elements are successfully generated by the AI."
+msgstr "Nếu được bật, các bài đăng thư mục sẽ tự động được lưu/cập nhật ngay sau khi các yếu tố được AI tạo thành công."
+
+msgid "OpenAI Integration Settings"
+msgstr "Cài đặt tích hợp OpenAI"
+
+msgid "OpenAI API Key"
+msgstr "Khóa API OpenAI"
+
+msgid "sk-..."
+msgstr "sk-..."
+
+msgid "Test Connection"
+msgstr "Kiểm tra kết nối"
+
+msgid "Enter your OpenAI API key for AI generation features."
+msgstr "Nhập khóa API OpenAI của bạn cho các tính năng tạo AI."
+
+msgid "OpenAI Model"
+msgstr "Mô hình OpenAI"
+
+msgid "Select the OpenAI model to use. You can load all latest available models using the Test Connection button."
+msgstr "Chọn mô hình OpenAI để sử dụng. Bạn có thể tải tất cả các mô hình mới nhất hiện có bằng cách sử dụng nút Kiểm tra kết nối."
+
+msgid "Add Custom Models"
+msgstr "Thêm Mô hình Tùy chỉnh"
+
+msgid "Manually add custom OpenAI models (comma separated)."
+msgstr "Thêm thủ công các mô hình OpenAI tùy chỉnh (phân tách bằng dấu phẩy)."
+
+msgid "OpenAI Temperature"
+msgstr "Nhiệt độ OpenAI"
+
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0). Note: Temperature is ignored for reasoning models (o1/o3 series)."
+msgstr "Kiểm soát tính ngẫu nhiên: Giá trị cao hơn như 1.2 sẽ làm cho đầu ra ngẫu nhiên hơn, trong khi giá trị thấp hơn như 0.2 sẽ làm cho nó tập trung và xác định hơn. Phạm vi: 0.0 đến 2.0 (Mặc định: 1.0). Lưu ý: Nhiệt độ bị bỏ qua đối với các mô hình suy luận (chuỗi o1/o3)."
+
+msgid "Google Gemini Integration Settings"
+msgstr "Cài đặt Tích hợp Google Gemini"
+
+msgid "Gemini API Key"
+msgstr "Khóa API Gemini"
+
+msgid "Enter your Google Gemini API key."
+msgstr "Nhập khóa API Google Gemini của bạn."
+
+msgid "Gemini Model"
+msgstr "Mô hình Gemini"
+
+msgid "Select the Gemini model to use. You can load all latest available models using the Test Connection button."
+msgstr "Chọn mô hình Gemini để sử dụng. Bạn có thể tải tất cả các mô hình mới nhất có sẵn bằng cách sử dụng nút Kiểm tra Kết nối."
+
+msgid "Manually add custom Google Gemini models (comma separated)."
+msgstr "Thêm thủ công các mô hình Google Gemini tùy chỉnh (phân tách bằng dấu phẩy)."
+
+msgid "Gemini Temperature"
+msgstr "Nhiệt độ Gemini"
+
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0)."
+msgstr "Kiểm soát tính ngẫu nhiên: Giá trị cao hơn như 1.2 sẽ làm cho đầu ra ngẫu nhiên hơn, trong khi giá trị thấp hơn như 0.2 sẽ làm cho nó tập trung và xác định hơn. Phạm vi: 0.0 đến 2.0 (Mặc định: 1.0)."
+
+msgid "OpenRouter Integration Settings"
+msgstr "Cài đặt Tích hợp OpenRouter"
+
+msgid "OpenRouter API Key"
+msgstr "Khóa API OpenRouter"
+
+msgid "Enter your OpenRouter API Key. You can get one from openrouter.ai."
+msgstr "Nhập Khóa API OpenRouter của bạn. Bạn có thể lấy khóa này từ openrouter.ai."
+
+msgid "OpenRouter Model"
+msgstr "Mô hình OpenRouter"
+
+msgid "Select the OpenRouter model to use. Models are dynamically fetched if an API key is active."
+msgstr "Chọn mô hình OpenRouter để sử dụng. Các mô hình được tìm nạp động nếu khóa API đang hoạt động."
+
+msgid "Manually add custom OpenRouter models (comma separated)."
+msgstr "Thêm thủ công các mô hình OpenRouter tùy chỉnh (phân tách bằng dấu phẩy)."
+
+msgid "OpenRouter Temperature"
+msgstr "Nhiệt độ OpenRouter"
+
+msgid "Controls randomness: Range 0.0 to 2.0 (Default: 1.0)."
+msgstr "Kiểm soát tính ngẫu nhiên: Phạm vi 0.0 đến 2.0 (Mặc định: 1.0)."
+
+msgid "AI Prompt Settings"
+msgstr "Cài đặt Lời nhắc AI"
+
+msgid "Custom Prompt Instruction"
+msgstr "Hướng dẫn Lời nhắc Tùy chỉnh"
+
+msgid "Reset to Default"
+msgstr "Đặt lại về Mặc định"
+
+msgid "You can customize the prompt instructions sent to the AI model. Be sure to include the placeholders {count} and {prompt} so they can be replaced by the user's inputs dynamically. Also, keep the general format of the prompt as is. Do not modify if you are uncertain."
+msgstr "Bạn có thể tùy chỉnh các hướng dẫn lời nhắc được gửi đến mô hình AI. Đảm bảo bao gồm các trình giữ chỗ {count} và {prompt} để chúng có thể được thay thế bằng đầu vào của người dùng một cách linh hoạt. Ngoài ra, hãy giữ nguyên định dạng chung của lời nhắc. Không sửa đổi nếu bạn không chắc chắn."
+
+msgid "Shortcode Generator"
+msgstr "Trình tạo Shortcode"
+
+msgid "We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode."
+msgstr "Chúng tôi khuyến khích bạn sử dụng trình tạo ShortCode có trong thanh công cụ của trình soạn thảo trang/bài viết của bạn ở chế độ trực quan."
+
+msgid "See sample below for where to find it for Gutenberg."
+msgstr "Xem ví dụ bên dưới để biết nơi tìm thấy nó cho Gutenberg."
+
+msgid "This is how the shortcode generator will look like."
+msgstr "Đây là giao diện của trình tạo shortcode."
+
+msgid "Shortcode Example"
+msgstr "Ví dụ Shortcode"
+
+msgid "You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as \\"
+msgstr "Bạn có thể sử dụng TRÌNH TẠO SHORTCODE của chúng tôi để tạo và chèn shortcode một cách dễ dàng, có tiêu đề là \\"
+
+msgid "For all the lists:"
+msgstr "Đối với tất cả các danh sách:"
+
+msgid "[qcopd-directory mode=\\"
+msgstr "[qcopd-directory mode=\\"
+
+msgid "For only a single list:"
+msgstr "Chỉ cho một danh sách duy nhất:"
+
+msgid "Available Parameters:"
+msgstr "Các Tham số Khả dụng:"
+
+msgid "1. mode"
+msgstr "1. chế độ"
+
+msgid "[Value for this option can be set as \\"
+msgstr "[Giá trị cho tùy chọn này có thể được đặt là \\"
+
+msgid "2. column"
+msgstr "2. cột"
+
+msgid "Avaialble values: \\"
+msgstr "Các giá trị khả dụng: \\"
+
+msgid "3. style"
+msgstr "3. kiểu"
+
+msgid "Only 6 templates are available in the free version. For more styles or templates, please purchase the"
+msgstr "Chỉ có 6 mẫu có sẵn trong phiên bản miễn phí. Để có thêm kiểu hoặc mẫu, vui lòng mua"
+
+msgid "premium version"
+msgstr "phiên bản cao cấp"
+
+msgid "4. orderby"
+msgstr "4. orderby"
+
+msgid "Compatible order by values: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' and 'menu_order'."
+msgstr "Các giá trị orderby tương thích: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' và 'menu_order'."
+
+msgid "5. order"
+msgstr "5. order"
+
+msgid "Value for this option can be set as \\"
+msgstr "Giá trị cho tùy chọn này có thể được đặt là \\"
+
+msgid "6. item_orderby"
+msgstr "6. item_orderby"
+
+msgid "Value for this option are \\"
+msgstr "Giá trị cho tùy chọn này là \\"
+
+msgid "7. list_id"
+msgstr "7. list_id"
+
+msgid "Only applicable if you want to display a single list [not all]. You can provide specific list id here as a value. You can also get ready shortcode for a single list under \\"
+msgstr "Chỉ áp dụng nếu bạn muốn hiển thị một danh sách duy nhất [không phải tất cả]. Bạn có thể cung cấp ID danh sách cụ thể tại đây làm giá trị. Bạn cũng có thể lấy shortcode sẵn sàng cho một danh sách duy nhất tại \\"
+
+msgid "8. enable_embedding"
+msgstr "8. enable_embedding"
+
+msgid "Allow visitors to embed list in other sites. Supported values - \\"
+msgstr "Cho phép khách truy cập nhúng danh sách vào các trang web khác. Các giá trị được hỗ trợ - \\"
+
+msgid "Example: enable_embedding=\\"
+msgstr "Ví dụ: enable_embedding=\\"
+
+msgid "8. upvote"
+msgstr "8. upvote"
+
+msgid "Allow visitors to list item. Supported values - \\"
+msgstr "Cho phép khách truy cập bình chọn cho mục danh sách. Các giá trị được hỗ trợ - \\"
+
+msgid "Example: upvote=\\"
+msgstr "Ví dụ: upvote=\\"
+
+msgid "9. style-16 image show"
+msgstr "9. style-16 hiển thị hình ảnh"
+
+msgid " Add the shortcode parameter enable_image=\\"
+msgstr " Thêm tham số shortcode enable_image=\\"
+
+msgid "Example: enable_image=\\"
+msgstr "Ví dụ: enable_image=\\"
+
+msgid "10. Search"
+msgstr "10. Tìm kiếm"
+
+msgid " Add the shortcode parameter search=\\"
+msgstr " Thêm tham số shortcode search=\\"
+
+msgid "Example: search=\\"
+msgstr "Ví dụ: search=\\"
+
+msgid "11. dark_mode"
+msgstr "11. dark_mode"
+
+msgid "You can use this value to use the dark_mode of SLD templates. Available values for this option \\"
+msgstr "Bạn có thể sử dụng giá trị này để dùng chế độ dark_mode của các mẫu SLD. Các giá trị có sẵn cho tùy chọn này \\"
+
+msgid "== Frequently Asked Questions =="
+msgstr "== Các câu hỏi thường gặp =="
+
+msgid "= I cannot save my List. delete item or add new items to the List ="
+msgstr "= Tôi không thể lưu Danh sách của mình. xóa mục hoặc thêm mục mới vào Danh sách ="
+
+msgid "The issue you are having with saving the Lists is because of a limitation set in your server. Your server probably has a low limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save new link items. The server’s configuration that dictates this is max_input_vars. Set it to a high limit like max_input_vars = 10000. You can do it with local php.ini file or htaccess if your server supports it, Otherwise, please contact your hosting company support if needed. "
+msgstr "Vấn đề bạn gặp phải khi lưu Danh sách là do giới hạn được đặt trên máy chủ của bạn. Máy chủ của bạn có thể có giới hạn thấp về số lượng trường biểu mẫu mà nó sẽ xử lý cùng một lúc. Vì vậy, sau khi bạn đã thêm một số lượng liên kết nhất định, máy chủ sẽ từ chối lưu các mục liên kết mới. Cấu hình máy chủ quy định điều này là max_input_vars. Hãy đặt nó thành một giới hạn cao như max_input_vars = 10000. Bạn có thể thực hiện điều đó với tệp php.ini cục bộ hoặc htaccess nếu máy chủ của bạn hỗ trợ, nếu không, vui lòng liên hệ với bộ phận hỗ trợ của công ty lưu trữ của bạn nếu cần. "
+
+msgid "= The sub title is not showing ="
+msgstr "= Tiêu đề phụ không hiển thị ="
+
+msgid "The default template does not show subtitles. Use style-1 from the shortcode generator to display subtitles."
+msgstr "Mẫu mặc định không hiển thị tiêu đề phụ. Sử dụng style-1 từ trình tạo shortcode để hiển thị tiêu đề phụ."
+
+msgid "= Does the free version have filter buttons? ="
+msgstr "= Phiên bản miễn phí có nút lọc không? ="
+
+msgid "No. It is a pro version feature at the moment. But in the future, we have plans to make it available in the free version as well."
+msgstr "Không. Hiện tại đây là một tính năng của phiên bản chuyên nghiệp. Nhưng trong tương lai, chúng tôi có kế hoạch cung cấp nó trong phiên bản miễn phí."
+
+msgid "= I cannot have more than 1 columns ="
+msgstr "= Tôi không thể có nhiều hơn 1 cột ="
+
+msgid "To display more than one column, you need to create multiple Lists and choose to Show All Lists from the shortcode generator. A single list will always show in a single column."
+msgstr "Để hiển thị nhiều hơn một cột, bạn cần tạo nhiều Danh sách và chọn Hiển thị Tất cả Danh sách từ trình tạo shortcode. Một danh sách duy nhất sẽ luôn hiển thị trong một cột duy nhất."
+
+msgid "= I’m having trouble grasping the use of categories. It seems like and that they can only be assigned to a list rather than a specific link. ="
+msgstr "= Tôi gặp khó khăn trong việc hiểu cách sử dụng danh mục. Có vẻ như chúng chỉ có thể được gán cho một danh sách chứ không phải một liên kết cụ thể. ="
+
+msgid "The base pillars of SLD are Lists, not individual links. The most common use case scenario of SLD is to create and display multiple Lists of many Links on specific topics. As such, there is no option for a Link (list item) to belong to multiple Lists or Categories. That would make the process of creating Lists slower. For each link you would have to select a List and a Category from drop downs despite the chances of a single List item to belong to multiple Lists are usually not that high. When you have dozens or hundreds of Lists that would become a real issue to create or manage your Lists."
+msgstr "Các trụ cột cơ bản của SLD là Danh sách, không phải các liên kết riêng lẻ. Trường hợp sử dụng phổ biến nhất của SLD là tạo và hiển thị nhiều Danh sách gồm nhiều Liên kết về các chủ đề cụ thể. Do đó, không có tùy chọn nào cho một Liên kết (mục danh sách) thuộc về nhiều Danh sách hoặc Danh mục. Điều đó sẽ làm chậm quá trình tạo Danh sách. Đối với mỗi liên kết, bạn sẽ phải chọn một Danh sách và một Danh mục từ các menu thả xuống, mặc dù khả năng một mục Danh sách duy nhất thuộc về nhiều Danh sách thường không cao. Khi bạn có hàng chục hoặc hàng trăm Danh sách, điều đó sẽ trở thành một vấn đề thực sự để tạo hoặc quản lý Danh sách của bạn."
+
+msgid "= Do you have pagination or load more items? I have thousands of links="
+msgstr "= Bạn có phân trang hoặc tải thêm mục không? Tôi có hàng ngàn liên kết ="
+
+msgid "Items in lists can be paginated in the pro version. This option is available in the shortcode generator. But you can also add the parameters manually."
+msgstr "Các mục trong danh sách có thể được phân trang trong phiên bản chuyên nghiệp. Tùy chọn này có sẵn trong trình tạo shortcode. Nhưng bạn cũng có thể thêm các tham số theo cách thủ công."
+
+msgid "Values: “true”, “false”. This option will allow you to paginate list items. It will break the list page wise. Example: paginate_items=“true”. You also need to add the parameter per_page. This option indicates the number of items per page. Default is “5”. paginate_items=“true” is required to get this parameter working. Example: per_page=“5”"
+msgstr "Các giá trị: “true”, “false”. Tùy chọn này sẽ cho phép bạn phân trang các mục danh sách. Nó sẽ chia danh sách theo từng trang. Ví dụ: paginate_items=“true”. Bạn cũng cần thêm tham số per_page. Tù chọn này cho biết số lượng mục trên mỗi trang. Mặc định là “5”. paginate_items=“true” là bắt buộc để tham số này hoạt động. Ví dụ: per_page=“5”"
+
+msgid "Lists themselves cannot be paginated as the main concept of SLD is to be a Simple, One Page Directory."
+msgstr "Bản thân các Danh sách không thể được phân trang vì khái niệm chính của SLD là một Thư mục Đơn giản, Một Trang."
+
+msgid "= I have a list to import but it does not work and there is no message saying why my import does not work. ="
+msgstr "= Tôi có một danh sách để nhập nhưng nó không hoạt động và không có thông báo nào cho biết tại sao việc nhập của tôi không hoạt động. ="
+
+msgid "The most common reason for failed import is encoding. The CSV file itself and characters in it must be in utf-8 format. Please check your CSV file for any unusual/non-utf-8 characters. If the problem persists, please email us the CSV file."
+msgstr "Lý do phổ biến nhất khiến việc nhập không thành công là do mã hóa. Tệp CSV và các ký tự trong đó phải ở định dạng utf-8. Vui lòng kiểm tra tệp CSV của bạn để tìm bất kỳ ký tự bất thường/không phải utf-8 nào. Nếu sự cố vẫn tiếp diễn, vui lòng gửi email cho chúng tôi tệp CSV."
+
+msgid "= I have some blank pages that are crawled by Google! How to avoid them? ="
+msgstr "= Tôi có một số trang trống được Google thu thập dữ liệu! Làm thế nào để tránh chúng? ="
+
+msgid "Like many, if not most, WordPress plugins SLD uses custom posts and WordPress creates slug URLs even though they are not being used by SLD at the moment. We are working on making use of them."
+msgstr "Giống như nhiều, nếu không muốn nói là hầu hết, các plugin WordPress, SLD sử dụng các bài đăng tùy chỉnh và WordPress tạo các URL slug mặc dù chúng hiện chưa được SLD sử dụng. Chúng tôi đang nỗ lực để tận dụng chúng."
+
+msgid "But rest assured they are not harmful. They are generally not linked from anywhere and not indexed by Google. The only exception is if you have an XML sitemap generator that automatically scans and generates Links to these slug URLs. Yoast SEO plugin does that. You can exclude those slugs from xml sitemap. Go to Yoast->XML Sitemap->Post Types tag and select Manage List Items (sld) to Not in sitemap – then Save."
+msgstr "Nhưng hãy yên tâm rằng chúng không gây hại. Chúng thường không được liên kết từ bất kỳ đâu và không được Google lập chỉ mục. Ngoại lệ duy nhất là nếu bạn có một trình tạo sơ đồ trang XML tự động quét và tạo liên kết đến các URL slug này. Plugin Yoast SEO làm điều đó. Bạn có thể loại trừ các slug đó khỏi sơ đồ trang XML. Đi tới Yoast-&gt;Sơ đồ trang XML-&gt;Thẻ Loại bài đăng và chọn Quản lý mục danh sách (sld) thành Không có trong sơ đồ trang – sau đó Lưu."
+
+msgid "= How can I upgrade from free version of SLD to Pro version? ="
+msgstr "= Làm thế nào để nâng cấp từ phiên bản miễn phí của SLD lên phiên bản Pro? ="
+
+msgid "1. Download the latest pro version of the plugin from website"
+msgstr "1. Tải xuống phiên bản pro mới nhất của plugin từ trang web"
+
+msgid "2. Log in to your WordPress admin area and go to the Plugins management page."
+msgstr "2. Đăng nhập vào khu vực quản trị WordPress của bạn và đi đến trang quản lý Plugin."
+
+msgid "3. Deactivate and Delete the old version of the plugin (don’t worry – your data is safe)"
+msgstr "3. Hủy kích hoạt và Xóa phiên bản cũ của plugin (đừng lo lắng – dữ liệu của bạn an toàn)"
+
+msgid "4. Upload and Activate the latest pro version of the plugin"
+msgstr "4. Tải lên và Kích hoạt phiên bản pro mới nhất của plugin"
+
+msgid "5. You are done."
+msgstr "5. Bạn đã hoàn tất."
+
+msgid "= I have setup List Categories and Lists and neither is showing on home page. Did I install correctly? ="
+msgstr "= Tôi đã thiết lập Danh mục danh sách và Danh sách nhưng không cái nào hiển thị trên trang chủ. Tôi đã cài đặt đúng chưa? ="
+
+msgid "You have to put the short code on the WordPress oage or post page where you want to show the List/s. There is a Shortcode generator in your page or post visual editor. Use that to create shortcode and insert to your page, where you want to display the lists, easily."
+msgstr "Bạn phải đặt mã ngắn trên trang WordPress hoặc trang bài đăng nơi bạn muốn hiển thị Danh sách. Có một trình tạo mã ngắn trong trình chỉnh sửa trực quan trang hoặc bài đăng của bạn. Sử dụng nó để tạo mã ngắn và chèn vào trang của bạn, nơi bạn muốn hiển thị các danh sách, một cách dễ dàng."
+
+msgid "= Is SLD mobile friendly? Does it function well on cells and tablets? ="
+msgstr "= SLD có thân thiện với thiết bị di động không? Nó có hoạt động tốt trên điện thoại di động và máy tính bảng không? ="
+
+msgid "Yes, all templates are mobile device friendly and Responsive."
+msgstr "Có, tất cả các mẫu đều thân thiện với thiết bị di động và có khả năng phản hồi (Responsive)."
+
+msgid "Please take a quick look at our"
+msgstr "Vui lòng xem nhanh"
+
+msgid "Video Tutorials"
+msgstr "Hướng dẫn bằng video"
+
+msgid "Note"
+msgstr "Lưu ý"
+
+msgid "If you are having problem with adding more items or saving a list or your changes in the list are not getting saved then it is most likely because of a limitation set in your server. Your server has a limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save the List. The server’s configuration that dictates this is max_input_vars. You need to Set it to a high limit like max_input_vars = 15000. Since this is a server setting - you may need to contact your hosting company's support for this."
+msgstr "Nếu bạn gặp sự cố khi thêm nhiều mục hơn hoặc lưu danh sách hoặc các thay đổi của bạn trong danh sách không được lưu, thì rất có thể là do giới hạn được đặt trên máy chủ của bạn. Máy chủ của bạn có giới hạn về số lượng trường biểu mẫu mà nó sẽ xử lý cùng một lúc. Vì vậy, sau khi bạn đã thêm một số lượng liên kết nhất định, máy chủ sẽ từ chối lưu Danh sách. Cấu hình máy chủ quy định điều này là max_input_vars. Bạn cần đặt nó ở một giới hạn cao như max_input_vars = 15000. Vì đây là cài đặt máy chủ - bạn có thể cần liên hệ với bộ phận hỗ trợ của công ty lưu trữ của mình để được trợ giúp về vấn đề này."
+
+msgid "Leave A Review for Simple Link Directory?"
+msgstr "Để lại đánh giá cho Simple Link Directory?"
+
+msgid "We hope you've enjoyed using"
+msgstr "Chúng tôi hy vọng bạn đã thích sử dụng"
+
+msgid " Would you consider leaving us a review on WordPress.org?"
+msgstr " Bạn có muốn để lại đánh giá cho chúng tôi trên WordPress.org không?"
+
+msgid "Leave A Review"
+msgstr "Để lại đánh giá"
+
+msgid "I've already left a review"
+msgstr "Tôi đã để lại đánh giá rồi"
+
+msgid "Maybe Later"
+msgstr "Có thể sau"
+
+msgid "Never show this again"
+msgstr "Không bao giờ hiển thị lại điều này"
+
+msgid "SLD Demo Data Imported"
+msgstr "Dữ liệu demo SLD đã được nhập"
+
+msgid "Already CSV data imported and page created."
+msgstr "Dữ liệu CSV đã được nhập và trang đã được tạo."
+
+msgid "More WordPress Goodies for You!"
+msgstr "Nhiều điều hay ho hơn về WordPress dành cho bạn!"
+
+msgid "Check Out Some of Our Other Works that Might Make Your Website Better"
+msgstr "Xem qua một số tác phẩm khác của chúng tôi có thể giúp trang web của bạn tốt hơn"
+
+msgid "All our Pro Version users get Premium, Guaranteed Quick, One on One Priority Support."
+msgstr "Tất cả người dùng phiên bản Pro của chúng tôi nhận được hỗ trợ ưu tiên cao cấp, nhanh chóng, một kèm một được đảm bảo."
+
+msgid "Get Priority Support "
+msgstr "Nhận hỗ trợ ưu tiên"
+
+msgid "Online KnowledgeBase"
+msgstr "Cơ sở kiến thức trực tuyến"
+
+msgid "Get Support for Free Version"
+msgstr "Nhận hỗ trợ cho phiên bản miễn phí"
+
+msgid "Please fill up all the requried form fields."
+msgstr "Vui lòng điền đầy đủ tất cả các trường biểu mẫu bắt buộc."
+
+msgid "Invalid email address."
+msgstr "Địa chỉ email không hợp lệ."
+
+msgid "Support Request Details:"
+msgstr "Chi tiết yêu cầu hỗ trợ:"
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Subject"
+msgstr "Chủ đề"
+
+msgid "Message"
+msgstr "Tin nhắn"
+
+msgid "Sent Via the Plugin"
+msgstr "Đã gửi qua Plugin"
+
+msgid "Mail sent from:"
+msgstr "Thư được gửi từ:"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Mail Generated on:"
+msgstr "Thư được tạo vào:"
+
+msgid "From Plugin Support Page:"
+msgstr "Từ trang hỗ trợ Plugin:"
+
+msgid "Your email was sent successfully. Thanks!"
+msgstr "Email của bạn đã được gửi thành công. Cảm ơn!"
+
+msgid "Update To Pro"
+msgstr "Nâng cấp lên bản Pro"
+
+msgid "SLD - Shortcode Generator"
+msgstr "SLD - Trình tạo Shortcode"
+
+msgid "Mode"
+msgstr "Chế độ"
+
+msgid "All List"
+msgstr "Tất cả danh sách"
+
+msgid "One List"
+msgstr "Một danh sách"
+
+msgid "Select List "
+msgstr "Chọn danh sách"
+
+msgid "Please Select List"
+msgstr "Vui lòng chọn danh sách"
+
+msgid "List Category"
+msgstr "Danh mục danh sách"
+
+msgid "Please Select Category"
+msgstr "Vui lòng chọn danh mục"
+
+msgid "Template Style"
+msgstr "Kiểu mẫu"
+
+msgid "Default Style"
+msgstr "Kiểu mặc định"
+
+msgid "Style 01"
+msgstr "Kiểu 01"
+
+msgid "Style 02"
+msgstr "Kiểu 02"
+
+msgid "Style 03"
+msgstr "Kiểu 03"
+
+msgid "Style 04"
+msgstr "Kiểu 04"
+
+msgid "Style 05"
+msgstr "Kiểu 05"
+
+msgid "Style 16 (**NEW)"
+msgstr "Kiểu 16 (**MỚI)"
+
+msgid "Demo URL: "
+msgstr "URL bản demo:"
+
+msgid "Column"
+msgstr "Cột"
+
+msgid "Column 1"
+msgstr "Cột 1"
+
+msgid "Column 2"
+msgstr "Cột 2"
+
+msgid "Column 3"
+msgstr "Cột 3"
+
+msgid "Column 4"
+msgstr "Cột 4"
+
+msgid "Title Font Size"
+msgstr "Cỡ chữ tiêu đề"
+
+msgid "Default"
+msgstr "Mặc định"
+
+msgid "Title Line Height"
+msgstr "Chiều cao dòng tiêu đề"
+
+msgid "Subtitle Font Size"
+msgstr "Cỡ chữ phụ đề"
+
+msgid "Subtitle Line Height"
+msgstr "Chiều cao dòng phụ đề"
+
+msgid "List Order By"
+msgstr "Sắp xếp danh sách theo"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Date Modified"
+msgstr "Ngày sửa đổi"
+
+msgid "Random"
+msgstr "Ngẫu nhiên"
+
+msgid "Menu Order"
+msgstr "Thứ tự menu"
+
+msgid "List Order"
+msgstr "Thứ tự danh sách"
+
+msgid "Ascending"
+msgstr "Tăng dần"
+
+msgid "Descending"
+msgstr "Giảm dần"
+
+msgid "List Item Orderby"
+msgstr "Sắp xếp mục danh sách theo"
+
+msgid "Upvotes"
+msgstr "Lượt bình chọn tăng"
+
+msgid "Enable Embeding"
+msgstr "Bật nhúng"
+
+msgid "Copy"
+msgstr "Sao chép"
+
+msgid "the shortcode & use it any text block."
+msgstr "mã ngắn và sử dụng nó trong bất kỳ khối văn bản nào."
+
+msgid "Copy & Close"
+msgstr "Sao chép &amp; Đóng"
+
+msgid "SLD - Alert"
+msgstr "SLD - Cảnh báo"
+
+msgid "A list should have more than just 1 item."
+msgstr "Một danh sách nên có nhiều hơn 1 mục."
+
+msgid "We recommend"
+msgstr "Chúng tôi đề xuất"
+
+msgid "10-30"
+msgstr "10-30"
+
+msgid "links/businesses for each List."
+msgstr "liên kết/doanh nghiệp cho mỗi Danh sách."
+
+msgid "Create multiple Lists and show them all on a page using the"
+msgstr "Tạo nhiều Danh sách và hiển thị tất cả chúng trên một trang bằng cách sử dụng"
+
+msgid "Shortcode Generator."
+msgstr "Trình tạo mã ngắn."
+
+msgid "No"
+msgstr "Không"
+
+msgid "Add more item"
+msgstr "Thêm mục khác"

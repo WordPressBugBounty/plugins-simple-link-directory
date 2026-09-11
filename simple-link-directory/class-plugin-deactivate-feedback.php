@@ -1,5 +1,4 @@
 <?php
-
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -372,7 +371,7 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 								'values': values,
 								'details': details,
 								'email': email,
-								'security': "<?php echo wp_create_nonce( 'wpbot_goodbye_form' ); ?>",
+								'security': "<?php echo esc_js( wp_create_nonce( 'wpbot_goodbye_form' ) ); ?>",
 								'dataType': "json"
 							}
 							

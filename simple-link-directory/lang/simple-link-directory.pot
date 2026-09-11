@@ -1,0 +1,2302 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Link Directory - Simple Link Directory 9.1.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/simple-link-directory\n"
+"POT-Creation-Date: 2026-09-07 06:10+0000\n"
+"PO-Revision-Date: 2026-09-07 06:10+0000\n"
+"Last-Translator: AI Language Packs <support@quantumcloud.net>\n"
+"Language-Team: English <support@quantumcloud.net>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: AI Language Packs WordPress Plugin v1.0.2\n"
+"X-Domain: simple-link-directory\n"
+
+#: class-plugin-deactivate-feedback.php:129
+msgid "We can't detect any plugin information. This is most probably because you have not included the code in the plugin main file."
+msgstr ""
+
+#: class-plugin-deactivate-feedback.php:209
+msgid "Sorry to see you go"
+msgstr ""
+
+#: class-plugin-deactivate-feedback.php:212
+msgid "Found a Bug"
+msgstr ""
+
+#: class-plugin-deactivate-feedback.php:213
+msgid "Need More Features"
+msgstr ""
+
+#: class-plugin-deactivate-feedback.php:214
+msgid "Deactivating Temporarily"
+msgstr ""
+
+#: class-plugin-deactivate-feedback.php:215
+msgid "Upgrading to Pro"
+msgstr ""
+
+#: class-plugin-deactivate-feedback.php:218
+msgid "Please provide email so we can contact with bug fixes"
+msgstr ""
+
+#: class-plugin-deactivate-feedback.php:219
+msgid "Please provide some details so we can improve the plugin"
+msgstr ""
+
+#: class-plugin-deactivate-feedback.php:263
+msgid "Submitting form"
+msgstr ""
+
+#: class-qc-free-plugin-upgrade-notice.php:88 qc-opd-setting-options.php:14
+#: qc-opd-setting-options.php:15
+msgid "Settings"
+msgstr ""
+
+#: class-qc-free-plugin-upgrade-notice.php:92 qc-op-directory-main.php:237
+#: qc-opd-setting-options.php:142 qc-opd-setting-options.php:721
+msgid "Shortcodes and Help"
+msgstr ""
+
+#: class-qc-free-plugin-upgrade-notice.php:96
+#: qc-support-promo-page/class-qc-support-promo-page.php:28
+msgid "Support"
+msgstr ""
+
+#: embed/embedder.php:138 qc-opd-setting-options.php:331
+msgid "Live Search Items"
+msgstr ""
+
+#: embed/embedder.php:153 qc-opd-setting-options.php:317
+msgid "Add New"
+msgstr ""
+
+#: embed/embedder.php:198 qc-opd-setting-options.php:324
+msgid "Share List"
+msgstr ""
+
+#: embed/embedder.php:219
+msgid "Generate Embed Code For This List"
+msgstr ""
+
+#: embed/embedder.php:228
+msgid "Width: (in '%' or 'px')"
+msgstr ""
+
+#: embed/embedder.php:237
+msgid "%"
+msgstr ""
+
+#: embed/embedder.php:239
+msgid "px"
+msgstr ""
+
+#: embed/embedder.php:243
+msgid "Height: (in 'px')"
+msgstr ""
+
+#: embed/embedder.php:246
+msgid "Generate & Copy"
+msgstr ""
+
+#: embed/embedder.php:251
+msgid "Generated Code"
+msgstr ""
+
+#: embed/embedder.php:253
+msgid "Hit \"Generate & Copy\" button to generate embed code. It will be copied to your Clipboard. You can now paste this embed code inside your website's HTML where you want to show the List."
+msgstr ""
+
+#: embed/qcopd-embed-link.php:7
+msgid "ASC"
+msgstr ""
+
+#: embed/qcopd-embed-link.php:8
+msgid "all"
+msgstr ""
+
+#: embed/qcopd-embed-link.php:9
+msgid "3"
+msgstr ""
+
+#: embed/qcopd-embed-link.php:10
+msgid "simple"
+msgstr ""
+
+#: gutenberg/sld-block/src/block/block.js:47
+#: gutenberg/sld-block/src/block/block.js:52
+msgid "SLD - Shortcode Maker"
+msgstr ""
+
+#: gutenberg/sld-block/src/block/block.js:51
+msgid "SLD — Shortcode Maker"
+msgstr ""
+
+#: gutenberg/sld-block/src/init.php:79
+msgid "Generate SLD Shortcode"
+msgstr ""
+
+#: inc/cmb/class.cmb-meta-box.php:90
+msgid "Are you sure you want to delete this field?"
+msgstr ""
+
+#: inc/cmb/classes.fields.php:77 inc/cmb/classes.fields.php:1475
+msgid "Add New List Items"
+msgstr ""
+
+#: inc/cmb/classes.fields.php:78
+msgid "Remove Field"
+msgstr ""
+
+#: inc/cmb/classes.fields.php:474
+msgid "Add File"
+msgstr ""
+
+#: inc/cmb/classes.fields.php:492 inc/cmb/classes.fields.php:571
+#: inc/cmb/classes.fields.php:1476
+msgid "Remove"
+msgstr ""
+
+#: inc/cmb/classes.fields.php:559
+msgid "Add Image"
+msgstr ""
+
+#: inc/cmb/classes.fields.php:1118
+msgid "None"
+msgstr ""
+
+#: inc/cmb/classes.fields.php:1148
+msgid "Type to search"
+msgstr ""
+
+#: inc/cmb/classes.fields.php:1675
+msgid "Drag to set the exact location"
+msgstr ""
+
+#: modules/addons/addons.php:11 modules/addons/addons.php:12
+msgid "AddOns"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:22 modules/addons/admin_ui2.php:29
+#: qc-op-directory-post-type.php:22 qc-rating-feature/qc-rating-class.php:132
+msgid "Simple Link Directory"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:39
+msgid "Simple Link Directory Pro"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:40
+msgid " Addons"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:50
+msgid "MultiPage Advanced Addon"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:61
+msgid "Global Search, Pagination, Category view with Lists on home page."
+msgstr ""
+
+#: modules/addons/admin_ui2.php:65 modules/addons/admin_ui2.php:93
+#: modules/addons/admin_ui2.php:121 modules/addons/admin_ui2.php:149
+#: modules/addons/admin_ui2.php:179
+msgid "Get It Now"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:79
+msgid "Directory Broken Link Checker"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:89
+msgid "Check Broken Links for SLD and SBD and other Post Types Links"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:107
+msgid "Review, Rating for SLD Pro"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:117
+msgid "Allow your site users to leave a review comment and rate the link listings."
+msgstr ""
+
+#: modules/addons/admin_ui2.php:135
+msgid "Link Exchange AddOn for SLD Pro"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:145
+msgid "Allow your site users Exchange Links with Other Websites"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:161
+msgid "Themes"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:170
+msgid "Simple Link Directory Theme"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:174
+msgid "Not Installed"
+msgstr ""
+
+#: modules/addons/admin_ui2.php:175
+msgid "Crafted carefully to make the best out of the popular Simple Link Directory plugin. One Click Install, Demo Data, Compatible with the Elementor and the Gutenberg Page Builder!"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:27
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:28
+msgid "Try our Free AI ChatBot - WPBot"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:95
+msgid "Get the Best ChatBot for WordPress – WPBot"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:96
+msgid "Do more than just chat with your ChatBot!"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Do more than just chat with your ChatBot"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "More Leads, Conversions"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Satisfied customers while"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "saving time"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "increasing your"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "business opportunities"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "WPBot is the best ChatBot for WordPress to improve user engagement,"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Generate Leads,"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "provide"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Automated Live"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "customer"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "support"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "across your website"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "social platforms."
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "The"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "AI Insight"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "feature analyzes chat histories"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "reveals what your users want."
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Deliver AI-powered ChatBot services from your websites with LLMs like"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+#: qc-opd-setting-options.php:422
+msgid "OpenAI"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "(ChatGPT), Gemini etc. along with many built-in, powerful features like"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Live"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Chat, Chat"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Histories"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Conversational forms"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "Webhooks"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:106
+msgid "more!"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:117
+msgid "Need More Assistance?"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:118
+msgid "Our support team is ready to help you with any issues or custom requests."
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:120
+msgid "Knowledge Base"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:121
+msgid "Get Direct Support"
+msgstr ""
+
+#: qc-free-ai-chatbot/class-qc-free-ai-page.php:124
+msgid "Handcrafted for productivity."
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:98
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:125
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:473
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:853
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1267
+msgid "By %s"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:122
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:149
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:497
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:877
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1291
+msgid "Install %s now"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:124
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:151
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:499
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:879
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1293
+msgid "Install Now"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:129
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:156
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:504
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:884
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1298
+msgid "Cannot Install"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:144
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:171
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:519
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:899
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1313
+msgid "Update %s now"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:146
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:173
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:521
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:901
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1315
+msgid "Update Now"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:151
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:178
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:526
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:906
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1320
+msgid "Cannot Update"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:162
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:189
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:537
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:917
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1331
+msgid "Active"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:165
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:192
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:540
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:920
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1334
+msgid "Activate"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:167
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:194
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:542
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:922
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1336
+msgid "Activate %s"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:178
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:205
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:553
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:933
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1347
+msgid "Network Activate"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:180
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:207
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:555
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:935
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1349
+msgid "Network Activate %s"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:193
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:220
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:568
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:948
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1362
+msgid "Installed"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:202
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:229
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:577
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:957
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1371
+msgid "More Details"
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:226
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:253
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:601
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:981
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1395
+msgid "This plugin doesn&#8217;t work with your versions of WordPress and PHP."
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:230
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:257
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:605
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:985
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1399
+msgid "<a href=\"%1$s\">Please update WordPress</a>, and then <a href=\"%2$s\">learn more about updating PHP</a>."
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:238
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:254
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:265
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:281
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:613
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:629
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:993
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1009
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1407
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1423
+msgid "<a href=\"%s\">Please update WordPress</a>."
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:244
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:263
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:271
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:290
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:619
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:638
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:999
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1018
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1413
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1432
+msgid "<a href=\"%s\">Learn more about updating PHP</a>."
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:250
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:277
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:625
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1005
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1419
+msgid "This plugin doesn&#8217;t work with your version of WordPress."
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:259
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:286
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:634
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1014
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1428
+msgid "This plugin doesn&#8217;t work with your version of PHP."
+msgstr ""
+
+#: qc-free-ai-chatbot/qc-sld-ai-free-plugin.php:296
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:323
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:671
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1051
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1465
+msgid "Live Preview"
+msgstr ""
+
+#: qc-op-directory-assets.php:42 qc-opd-ajax-stuffs.php:12
+#: qc-opd-setting-options.php:338
+msgid "No Results Found for Your Search"
+msgstr ""
+
+#: qc-op-directory-import.php:19 qc-op-directory-import.php:45
+msgid "Bulk Import"
+msgstr ""
+
+#: qc-op-directory-import.php:20
+msgid "Import"
+msgstr ""
+
+#: qc-op-directory-import.php:49
+msgid "Please Note:"
+msgstr ""
+
+#: qc-op-directory-import.php:50
+msgid "The import feature is still under development. Right now it only allows importing and creating new Lists. Existing Lists will not get updated. Also, export feature is not available in free version."
+msgstr ""
+
+#: qc-op-directory-import.php:56
+msgid "Sample CSV File:"
+msgstr ""
+
+#: qc-op-directory-import.php:59
+msgid "Download Sample"
+msgstr ""
+
+#: qc-op-directory-import.php:63
+msgid "PROCESS:"
+msgstr ""
+
+#: qc-op-directory-import.php:65
+msgid "First download the above CSV file."
+msgstr ""
+
+#: qc-op-directory-import.php:66
+msgid "Add/Edit rows on the top of it, by maintaing proper provided format/fields."
+msgstr ""
+
+#: qc-op-directory-import.php:67
+msgid "Finally, upload file in the below form."
+msgstr ""
+
+#: qc-op-directory-import.php:70
+msgid "NOTES:"
+msgstr ""
+
+#: qc-op-directory-import.php:72
+msgid "It should be a simple CSV file."
+msgstr ""
+
+#: qc-op-directory-import.php:73
+msgid "File encoding should be in UTF-8"
+msgstr ""
+
+#: qc-op-directory-import.php:74
+msgid "File must be prepared as per provided sample CSV file."
+msgstr ""
+
+#: qc-op-directory-import.php:201
+msgid "RESULT:"
+msgstr ""
+
+#: qc-op-directory-import.php:201
+msgid "entry with"
+msgstr ""
+
+#: qc-op-directory-import.php:201
+msgid "element(s) was made successfully."
+msgstr ""
+
+#: qc-op-directory-import.php:213
+msgid "Upload CSV File to Import"
+msgstr ""
+
+#: qc-op-directory-import.php:221
+msgid "** CSV File & Characters must be saved with UTF-8 encoding **"
+msgstr ""
+
+#: qc-op-directory-import.php:225
+msgid "Upload & Process"
+msgstr ""
+
+#: qc-op-directory-import.php:233 qc-opd-setting-options.php:968
+msgid "Crafted By:"
+msgstr ""
+
+#: qc-op-directory-import.php:235 qc-opd-setting-options.php:970
+msgid "Web Design Company"
+msgstr ""
+
+#: qc-op-directory-import.php:237 qc-opd-setting-options.php:971
+msgid "- QuantumCloud"
+msgstr ""
+
+#: qc-op-directory-main.php:153 qc-op-directory-main.php:171
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: qc-op-directory-main.php:154
+msgid "Add New List of Links"
+msgstr ""
+
+#: qc-op-directory-main.php:256
+msgid "**SLD Pro Tip: Did you know that you can"
+msgstr ""
+
+#: qc-op-directory-main.php:257
+msgid "Auto Generate"
+msgstr ""
+
+#: qc-op-directory-main.php:258
+msgid "Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?"
+msgstr ""
+
+#: qc-op-directory-main.php:259
+msgid "Triple Your Link Entry Speed!"
+msgstr ""
+
+#: qc-op-directory-main.php:263
+msgid "**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance."
+msgstr ""
+
+#: qc-op-directory-main.php:267
+msgid "**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode."
+msgstr ""
+
+#: qc-op-directory-main.php:271
+msgid "**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn"
+msgstr ""
+
+#: qc-op-directory-main.php:272
+msgid "passive income?"
+msgstr ""
+
+#: qc-op-directory-main.php:273
+msgid "Upgrade now!"
+msgstr ""
+
+#: qc-op-directory-main.php:276
+msgid "**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed."
+msgstr ""
+
+#: qc-op-directory-main.php:280
+msgid "**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page's visual editor."
+msgstr ""
+
+#: qc-op-directory-main.php:283
+msgid "**SLD Pro Tip: You can display your"
+msgstr ""
+
+#: qc-op-directory-main.php:284
+msgid "Lists by category"
+msgstr ""
+
+#: qc-op-directory-main.php:285
+msgid "with the SLD pro version."
+msgstr ""
+
+#: qc-op-directory-main.php:286
+msgid "16+ Templates, Multi page mode"
+msgstr ""
+
+#: qc-op-directory-main.php:286
+msgid ", Widgets are also available."
+msgstr ""
+
+#: qc-op-directory-main.php:290
+msgid "**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email."
+msgstr ""
+
+#: qc-op-directory-main.php:294
+msgid "**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details."
+msgstr ""
+
+#: qc-op-directory-main.php:297
+msgid "**SLD Pro Tip: SLD pro version has"
+msgstr ""
+
+#: qc-op-directory-main.php:298
+msgid "front end dashboard"
+msgstr ""
+
+#: qc-op-directory-main.php:299
+msgid "for user registration and link management. As well as tags and instant search."
+msgstr ""
+
+#: qc-op-directory-main.php:300
+msgid "Upgrade to the Pro version now!"
+msgstr ""
+
+#: qc-op-directory-main.php:338
+msgid "Shortcode Generator for SLD"
+msgstr ""
+
+#: qc-op-directory-main.php:347
+msgid "AI List Items Generator"
+msgstr ""
+
+#: qc-op-directory-main.php:360
+msgid "Click the button below to generate shortcode"
+msgstr ""
+
+#: qc-op-directory-main.php:363 qcopd-shortcode-generator.php:254
+msgid "Generate Shortcode"
+msgstr ""
+
+#: qc-op-directory-main.php:386
+msgid "Please enable an AI provider (OpenAI, Gemini or OpenRouter) in Simple Link Directory %s first."
+msgstr ""
+
+#: qc-op-directory-main.php:386
+msgid "settings tab"
+msgstr ""
+
+#: qc-op-directory-main.php:389
+msgid "Active AI Provider:"
+msgstr ""
+
+#: qc-op-directory-main.php:396
+msgid "Topic:"
+msgstr ""
+
+#: qc-op-directory-main.php:397
+msgid "e.g., JavaScript coding"
+msgstr ""
+
+#: qc-op-directory-main.php:401
+msgid "Number of Items:"
+msgstr ""
+
+#: qc-op-directory-main.php:412
+msgid "Generate & Add Items"
+msgstr ""
+
+#: qc-op-directory-main.php:560
+msgid "%s  %s  %s"
+msgstr ""
+
+#: qc-op-directory-main.php:574
+msgid "%1$s Simple Link Directory %2$s works the best when you create multiple Lists and show them all in a page. Use the following shortcode to display All lists on any page:  %3$s  %4$s  %5$s  Use the %6$s shortcode generator %7$s to select style and other options. "
+msgstr ""
+
+#: qc-op-directory-main.php:605
+msgid "%1$s Import Simple Link Directory Demo Data:%2$s %3$sImport demo data to see how the plugin works.%4$s %5$sWe will create a sample directory with multiple Lists and create a new demo page using shortcode.%6$s %7$sYou can edit or delete the sample Lists to your requirements.%8$s %9$s Click to Import Data %10$s %11$s"
+msgstr ""
+
+#: qc-op-directory-main.php:633 qc-opd-setting-options.php:134
+msgid "Getting Started"
+msgstr ""
+
+#: qc-op-directory-main.php:641
+msgid "FAQ"
+msgstr ""
+
+#: qc-op-directory-main.php:649
+msgid "Read the Documentation"
+msgstr ""
+
+#: qc-op-directory-main.php:657
+msgid "Ask for Help"
+msgstr ""
+
+#: qc-op-directory-main.php:664
+msgid "Check out the SLD Demo"
+msgstr ""
+
+#: qc-op-directory-main.php:672
+msgid "Upgrade to Premium"
+msgstr ""
+
+#: qc-op-directory-main.php:679
+msgid "Start Here"
+msgstr ""
+
+#: qc-op-directory-post-type.php:10 qc-op-directory-post-type.php:16
+msgid "Manage Lists"
+msgstr ""
+
+#: qc-op-directory-post-type.php:11
+msgid "Manage List Item"
+msgstr ""
+
+#: qc-op-directory-post-type.php:12
+msgid "New List"
+msgstr ""
+
+#: qc-op-directory-post-type.php:13
+msgid "Add New List"
+msgstr ""
+
+#: qc-op-directory-post-type.php:14
+msgid "Edit List Item"
+msgstr ""
+
+#: qc-op-directory-post-type.php:15
+msgid "New List Item"
+msgstr ""
+
+#: qc-op-directory-post-type.php:17
+msgid "View List Item"
+msgstr ""
+
+#: qc-op-directory-post-type.php:18
+msgid "Search List Item"
+msgstr ""
+
+#: qc-op-directory-post-type.php:19
+msgid "No List Item found"
+msgstr ""
+
+#: qc-op-directory-post-type.php:20
+msgid "No List Item found in the Trash"
+msgstr ""
+
+#: qc-op-directory-post-type.php:27
+msgid "This post type holds all posts for your directory items."
+msgstr ""
+
+#: qc-op-directory-post-type.php:53
+msgid "List Categories"
+msgstr ""
+
+#: qc-op-directory-post-type.php:44
+msgid "Category"
+msgstr ""
+
+#: qc-op-directory-post-type.php:45
+msgid "Search List Categories"
+msgstr ""
+
+#: qc-op-directory-post-type.php:46
+msgid "All List Categories"
+msgstr ""
+
+#: qc-op-directory-post-type.php:47
+msgid "Parent List Categories"
+msgstr ""
+
+#: qc-op-directory-post-type.php:48
+msgid "Parent List Category:"
+msgstr ""
+
+#: qc-op-directory-post-type.php:49
+msgid "Edit List Category"
+msgstr ""
+
+#: qc-op-directory-post-type.php:50
+msgid "Update List Category"
+msgstr ""
+
+#: qc-op-directory-post-type.php:51
+msgid "Add New List Category"
+msgstr ""
+
+#: qc-op-directory-post-type.php:52
+msgid "New List Category Name"
+msgstr ""
+
+#: qc-op-directory-post-type.php:123
+msgid "List Elements"
+msgstr ""
+
+#: qc-op-directory-post-type.php:128
+msgid "Create List Elements"
+msgstr ""
+
+#: qc-op-directory-post-type.php:133
+msgid "Please add your list items here. Ideally, each List should have 10-30 links. Create multiple Lists on different topics and show them all with a shortcode."
+msgstr ""
+
+#: qc-op-directory-post-type.php:133
+msgid "If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server."
+msgstr ""
+
+#: qc-op-directory-post-type.php:150 qcopd-shortcode-generator.php:217
+#: qcopd-shortcode-generator.php:239
+msgid "Title"
+msgstr ""
+
+#: qc-op-directory-post-type.php:151
+msgid "Number of Elements"
+msgstr ""
+
+#: qc-op-directory-post-type.php:152
+msgid "Shortcode"
+msgstr ""
+
+#: qc-op-directory-post-type.php:153 qcopd-shortcode-generator.php:215
+msgid "Date"
+msgstr ""
+
+#: qc-op-directory-post-type.php:166
+msgid "element"
+msgstr ""
+
+#: qc-op-directory-post-type.php:175
+msgid "Single List:"
+msgstr ""
+
+#: qc-op-directory-post-type.php:178 qc-op-directory-post-type.php:188
+msgid "Copy Shortcode"
+msgstr ""
+
+#: qc-op-directory-post-type.php:180 qc-op-directory-post-type.php:190
+msgid "Copied!"
+msgstr ""
+
+#: qc-op-directory-post-type.php:185
+msgid "All Lists:"
+msgstr ""
+
+#: templates/style-4/template.php:227
+msgid "%s item"
+msgstr ""
+
+#: qc-op-directory-shortcodes.php:143
+msgid "%s items"
+msgstr ""
+
+#: qc-op-directory-shortcodes.php:144 qc-op-directory-shortcodes.php:145
+#: templates/style-4/template.php:42 templates/style-4/template.php:43
+#: templates/style-4/template.php:107 templates/style-4/template.php:131
+#: templates/style-4/template.php:304 templates/style-4/template.php:342
+msgid "Featured"
+msgstr ""
+
+#: qc-op-directory-shortcodes.php:269 qc-opd-setting-options.php:285
+#: qc-opd-setting-options.php:345
+msgid "Enable Dark Mode"
+msgstr ""
+
+#: qc-op-directory-shortcodes.php:270 qc-opd-setting-options.php:352
+msgid "Dark Mode On"
+msgstr ""
+
+#: qc-op-directory-shortcodes.php:271 qc-opd-setting-options.php:359
+msgid "Light Mode On"
+msgstr ""
+
+#: qc-op-directory-shortcodes.php:532
+msgid "Scroll To Top"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:164
+msgid "Simple Link Directory Pro Features"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:179
+msgid "Enhanced Usability"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:185
+msgid "Build unlimited Lists and show them in multi-page mode"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:188
+msgid "Auto Generate Title, Description & Thumbnail from URL"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:191
+msgid "Video Gallery – Vimeo and Youtube Video Directory"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:194
+msgid "Live, on page, instant search & filtering of lists"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:197
+msgid "Tabbed Category Listing of All Your Directory Lists"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:207
+msgid "Community Features"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:213
+msgid "Complete front end user registration, login and submission"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:216
+msgid "Allow users to submit links to your directory"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:219
+msgid "Invite user interaction with Upvotes (Thumbs up, Heart, etc)"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:222
+msgid "Allow users to embed your lists on their websites"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:225
+msgid "Allow registered users to create Favorite Lists"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:235
+msgid "Monetization Options"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:241
+msgid "Integrated PayPal & Stripe payment for link submission"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:244
+msgid "Create recurring subscription packages for listings"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:247
+msgid "Claim Listing for Payment feature"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:250
+msgid "Option to Mark Paid Items as Featured at Top"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:253
+msgid "URL masking option for affiliate links"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:263
+msgid "Design & Layouts"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:269
+msgid "16 Premium templates for Single Page mode"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:272
+msgid "2 Premium templates for Multi Page mode"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:275
+msgid "Create or customize templates from your theme folder"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:278
+msgid "Use theme fonts or choose Google fonts"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:281
+msgid "Configurable highlight color for each list"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:291
+msgid "Admin Tools & Statistics"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:297
+msgid "Click statistics for admin dashboard"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:300
+msgid "CSV Import/Export to manage lists easily"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:303
+msgid "Order Listing Directory by Link Clicks or Upvotes"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:306
+msgid "Restrict UpVote by IP or Logged in Users only"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:309
+msgid "Copy List Items or Links to Other Lists"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:319
+msgid "Front End Submission Features"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:325
+msgid "Front End User Registration with Captcha, Log in, Link Submission"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:328
+msgid "Admin Approves User Submitted Links or Set to Auto Approve"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:331
+msgid "Enable Free Frontend Submission & Free Submission Limit"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:334
+msgid "Enable Email Notification for New Item Submission"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:337
+msgid "Allow User to Update Profile & Upload Image"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:347
+msgid "Customizability and Flexibility"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:353
+msgid "Choose theme font or google font"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:356
+msgid "Customize colors, fonts and almost all aspects of the link lists"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:359
+msgid "Complete control over directory list ordering"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:362
+msgid "Custom JS and CSS panel to modify directory functionality"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:365
+msgid "Over a dozen shortcode parameters & Shortcode Generator"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:375
+msgid "Topsite List Script Features"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:381
+msgid "Order Listing Directory by Link Clicks"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:384
+msgid "Click statistics for admin"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:385
+msgid "Restrict upvote by IP"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:388
+msgid "Restrict UpVote for Logged in Users only"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:391
+msgid "Enable Upvote for Main Click in General settings"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:401
+msgid "View Pro Demo"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:406
+msgid "Upgrade to Pro Now"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:422 qc-opd-ajax-stuffs.php:493
+#: qc-opd-ajax-stuffs.php:556 qc-opd-ajax-stuffs.php:641
+#: qc-opd-ajax-stuffs.php:663
+msgid "Unauthorized user."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:428 qc-opd-ajax-stuffs.php:499
+#: qc-opd-ajax-stuffs.php:562
+msgid "API Key is empty."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:474 qc-opd-ajax-stuffs.php:537
+#: qc-opd-ajax-stuffs.php:623
+msgid "Connection successful! Valid API Key."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:479 qc-opd-ajax-stuffs.php:542
+#: qc-opd-ajax-stuffs.php:627
+msgid "Invalid API Key or API error."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:582
+msgid "Invalid API Key."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:649
+msgid "Prompt reset to default successfully!"
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:670
+msgid "Prompt is empty."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:676
+msgid "No AI provider is enabled in settings."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:690
+msgid "OpenAI API key is missing."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:734
+msgid "OpenAI API error."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:743
+msgid "Gemini API key is missing."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:784
+msgid "Gemini API error."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:792
+msgid "OpenRouter API key is missing."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:835
+msgid "OpenRouter API error."
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:851
+msgid "Failed to parse AI output. Raw content: "
+msgstr ""
+
+#: qc-opd-ajax-stuffs.php:856
+msgid "Generated %d items successfully!"
+msgstr ""
+
+#: qc-opd-setting-options.php:124 qc-opd-setting-options.php:131
+msgid "SLD Settings Page"
+msgstr ""
+
+#: qc-opd-setting-options.php:136
+msgid "General Settings"
+msgstr ""
+
+#: qc-opd-setting-options.php:137
+msgid "AI Settings"
+msgstr ""
+
+#: qc-opd-setting-options.php:139
+msgid "Language Settings"
+msgstr ""
+
+#: qc-opd-setting-options.php:140
+msgid "Custom CSS"
+msgstr ""
+
+#: qc-opd-setting-options.php:141 qc-opd-setting-options.php:385
+msgid "Custom Javascript"
+msgstr ""
+
+#: qc-opd-setting-options.php:156
+msgid "Step 1"
+msgstr ""
+
+#: qc-opd-setting-options.php:161
+msgid "Create List with Link Details "
+msgstr ""
+
+#: qc-opd-setting-options.php:162
+msgid "Go to New List and create one by giving it a name. Then simply start adding List items or Links by filling up the fields you want. Use the Add New button to add more Links to your list."
+msgstr ""
+
+#: qc-opd-setting-options.php:173
+msgid "Step 2"
+msgstr ""
+
+#: qc-opd-setting-options.php:177
+msgid "Create More Lists"
+msgstr ""
+
+#: qc-opd-setting-options.php:178
+msgid "You can just create a single list and use the Single List mode. But this plugin works the best when you create a few Lists each conatining about 15-20 Llinks. This yields the best view."
+msgstr ""
+
+#: qc-opd-setting-options.php:189
+msgid "Step 3"
+msgstr ""
+
+#: qc-opd-setting-options.php:193
+msgid "Generate and Paste Shortcode on a Page"
+msgstr ""
+
+#: qc-opd-setting-options.php:194
+msgid "Go to the page or post you want to display the directory. On the right sidebar you will see a ShortCode Generator block. Generate a shortcode with the options you want. Copy paste that to a section on your page."
+msgstr ""
+
+#: qc-opd-setting-options.php:213
+msgid "Enable Top Area"
+msgstr ""
+
+#: qc-opd-setting-options.php:215
+msgid "Top area includes Embed button (more options coming soon)"
+msgstr ""
+
+#: qc-opd-setting-options.php:219
+msgid "Enable Live Search"
+msgstr ""
+
+#: qc-opd-setting-options.php:221
+msgid "Live search through directory items."
+msgstr ""
+
+#: qc-opd-setting-options.php:225
+msgid "Enable Upvote"
+msgstr ""
+
+#: qc-opd-setting-options.php:227
+msgid "Turn ON to visible Upvote feature for all templates."
+msgstr ""
+
+#: qc-opd-setting-options.php:231
+msgid "Enable Add New Button"
+msgstr ""
+
+#: qc-opd-setting-options.php:232
+msgid "on"
+msgstr ""
+
+#: qc-opd-setting-options.php:233
+msgid "The button will link to a page of your choice where you can place a contact form or instructions to submit links to your directory. Links have to be manually added by the admin."
+msgstr ""
+
+#: qc-opd-setting-options.php:237
+msgid "Add Button Link"
+msgstr ""
+
+#: qc-opd-setting-options.php:240
+msgid "Example:  https://yourdomain.com/submit-link/"
+msgstr ""
+
+#: qc-opd-setting-options.php:242
+msgid "Paste the full URL of a page that contains a contact form to submit link "
+msgstr ""
+
+#: qc-opd-setting-options.php:244
+msgid "Front end submission with monetization feature is available with the "
+msgstr ""
+
+#: qc-opd-setting-options.php:246
+msgid "Pro version"
+msgstr ""
+
+#: qc-opd-setting-options.php:251
+msgid "Track Outbound Clicks"
+msgstr ""
+
+#: qc-opd-setting-options.php:253
+msgid "You need to have the analytics.js"
+msgstr ""
+
+#: qc-opd-setting-options.php:255
+msgid "Analytics tracking code in every page of your site"
+msgstr ""
+
+#: qc-opd-setting-options.php:259
+msgid "Embed Credit Title"
+msgstr ""
+
+#: qc-opd-setting-options.php:262 qc-opd-setting-options.php:269
+msgid "This text will be displayed below embedded list in other sites."
+msgstr ""
+
+#: qc-opd-setting-options.php:266
+msgid "Embed Credit Link"
+msgstr ""
+
+#: qc-opd-setting-options.php:273
+msgid "Enable Scroll to Top Button"
+msgstr ""
+
+#: qc-opd-setting-options.php:275
+msgid "Show Scroll to Top."
+msgstr ""
+
+#: qc-opd-setting-options.php:279
+msgid "Enable RTL Direction"
+msgstr ""
+
+#: qc-opd-setting-options.php:281
+msgid "If you make this option ON, then list items will be arranged in Right-to-Left direction."
+msgstr ""
+
+#: qc-opd-setting-options.php:287
+msgid "Enable this option to show Dark Mode for all themes"
+msgstr ""
+
+#: qc-opd-setting-options.php:291
+msgid "Enable Featured Section"
+msgstr ""
+
+#: qc-opd-setting-options.php:295
+msgid "Turn ON to display the Featured section. Default is OFF."
+msgstr ""
+
+#: qc-opd-setting-options.php:299
+msgid "Featured Section Item Count"
+msgstr ""
+
+#: qc-opd-setting-options.php:302
+msgid "How many featured items to show. Default is 9."
+msgstr ""
+
+#: qc-opd-setting-options.php:306
+msgid "Featured Section Background Color"
+msgstr ""
+
+#: qc-opd-setting-options.php:309
+msgid "Background color for the Featured section. Default is #0b0c0d."
+msgstr ""
+
+#: qc-opd-setting-options.php:320
+msgid "Change the language for Add New"
+msgstr ""
+
+#: qc-opd-setting-options.php:327
+msgid "Change the language for Share List"
+msgstr ""
+
+#: qc-opd-setting-options.php:334
+msgid "Change the language for Live Search Items"
+msgstr ""
+
+#: qc-opd-setting-options.php:341
+msgid "Change the language for No Results Found for Your Search"
+msgstr ""
+
+#: qc-opd-setting-options.php:348
+msgid "Change the language for - Enable Dark Mode"
+msgstr ""
+
+#: qc-opd-setting-options.php:355
+msgid "Change the language for - Dark Mode On"
+msgstr ""
+
+#: qc-opd-setting-options.php:362
+msgid "Change the language for - Light Mode On"
+msgstr ""
+
+#: qc-opd-setting-options.php:371
+msgid "Custom CSS (Use *!important* flag if the changes does not take place)"
+msgstr ""
+
+#: qc-opd-setting-options.php:375
+msgid "Write your custom CSS here. Please do not use"
+msgstr ""
+
+#: qc-opd-setting-options.php:376
+msgid "style"
+msgstr ""
+
+#: qc-opd-setting-options.php:377 qc-opd-setting-options.php:390
+msgid "tag in this textarea."
+msgstr ""
+
+#: qc-opd-setting-options.php:388
+msgid "Write your custom JS here. Please do not use"
+msgstr ""
+
+#: qc-opd-setting-options.php:389
+msgid "script"
+msgstr ""
+
+#: qc-opd-setting-options.php:398
+msgid "Select Active AI Provider"
+msgstr ""
+
+#: qc-opd-setting-options.php:411
+msgid "Disable AI"
+msgstr ""
+
+#: qc-opd-setting-options.php:434
+msgid "Google Gemini"
+msgstr ""
+
+#: qc-opd-setting-options.php:446
+msgid "OpenRouter"
+msgstr ""
+
+#: qc-opd-setting-options.php:450
+msgid "Choose which AI provider to enable for the directory features. Selecting \"Disable AI\" turns off all AI functionalities."
+msgstr ""
+
+#: qc-opd-setting-options.php:455
+msgid "Auto Save Generated Items"
+msgstr ""
+
+#: qc-opd-setting-options.php:463
+msgid "If enabled, directory posts will be automatically saved/updated immediately after the elements are successfully generated by the AI."
+msgstr ""
+
+#: qc-opd-setting-options.php:470
+msgid "OpenAI Integration Settings"
+msgstr ""
+
+#: qc-opd-setting-options.php:474
+msgid "OpenAI API Key"
+msgstr ""
+
+#: qc-opd-setting-options.php:478
+msgid "sk-..."
+msgstr ""
+
+#: qc-opd-setting-options.php:480 qc-opd-setting-options.php:556
+#: qc-opd-setting-options.php:630
+msgid "Test Connection"
+msgstr ""
+
+#: qc-opd-setting-options.php:484
+msgid "Enter your OpenAI API key for AI generation features."
+msgstr ""
+
+#: qc-opd-setting-options.php:489
+msgid "OpenAI Model"
+msgstr ""
+
+#: qc-opd-setting-options.php:519
+msgid "Select the OpenAI model to use. You can load all latest available models using the Test Connection button."
+msgstr ""
+
+#: qc-opd-setting-options.php:524 qc-opd-setting-options.php:598
+#: qc-opd-setting-options.php:674
+msgid "Add Custom Models"
+msgstr ""
+
+#: qc-opd-setting-options.php:529
+msgid "Manually add custom OpenAI models (comma separated)."
+msgstr ""
+
+#: qc-opd-setting-options.php:534
+msgid "OpenAI Temperature"
+msgstr ""
+
+#: qc-opd-setting-options.php:539
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0). Note: Temperature is ignored for reasoning models (o1/o3 series)."
+msgstr ""
+
+#: qc-opd-setting-options.php:547
+msgid "Google Gemini Integration Settings"
+msgstr ""
+
+#: qc-opd-setting-options.php:551
+msgid "Gemini API Key"
+msgstr ""
+
+#: qc-opd-setting-options.php:559
+msgid "Enter your Google Gemini API key."
+msgstr ""
+
+#: qc-opd-setting-options.php:563
+msgid "Gemini Model"
+msgstr ""
+
+#: qc-opd-setting-options.php:593
+msgid "Select the Gemini model to use. You can load all latest available models using the Test Connection button."
+msgstr ""
+
+#: qc-opd-setting-options.php:603
+msgid "Manually add custom Google Gemini models (comma separated)."
+msgstr ""
+
+#: qc-opd-setting-options.php:608
+msgid "Gemini Temperature"
+msgstr ""
+
+#: qc-opd-setting-options.php:613
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0)."
+msgstr ""
+
+#: qc-opd-setting-options.php:620
+msgid "OpenRouter Integration Settings"
+msgstr ""
+
+#: qc-opd-setting-options.php:624
+msgid "OpenRouter API Key"
+msgstr ""
+
+#: qc-opd-setting-options.php:634
+msgid "Enter your OpenRouter API Key. You can get one from openrouter.ai."
+msgstr ""
+
+#: qc-opd-setting-options.php:639
+msgid "OpenRouter Model"
+msgstr ""
+
+#: qc-opd-setting-options.php:669
+msgid "Select the OpenRouter model to use. Models are dynamically fetched if an API key is active."
+msgstr ""
+
+#: qc-opd-setting-options.php:679
+msgid "Manually add custom OpenRouter models (comma separated)."
+msgstr ""
+
+#: qc-opd-setting-options.php:684
+msgid "OpenRouter Temperature"
+msgstr ""
+
+#: qc-opd-setting-options.php:689
+msgid "Controls randomness: Range 0.0 to 2.0 (Default: 1.0)."
+msgstr ""
+
+#: qc-opd-setting-options.php:695
+msgid "AI Prompt Settings"
+msgstr ""
+
+#: qc-opd-setting-options.php:699
+msgid "Custom Prompt Instruction"
+msgstr ""
+
+#: qc-opd-setting-options.php:708
+msgid "Reset to Default"
+msgstr ""
+
+#: qc-opd-setting-options.php:713
+msgid "You can customize the prompt instructions sent to the AI model. Be sure to include the placeholders {count} and {prompt} so they can be replaced by the user's inputs dynamically. Also, keep the general format of the prompt as is. Do not modify if you are uncertain."
+msgstr ""
+
+#: qc-opd-setting-options.php:736
+msgid "Shortcode Generator"
+msgstr ""
+
+#: qc-opd-setting-options.php:739
+msgid "We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode."
+msgstr ""
+
+#: qc-opd-setting-options.php:742
+msgid "See sample below for where to find it for Gutenberg."
+msgstr ""
+
+#: qc-opd-setting-options.php:746
+msgid "This is how the shortcode generator will look like."
+msgstr ""
+
+#: qc-opd-setting-options.php:750
+msgid "Shortcode Example"
+msgstr ""
+
+#: qc-opd-setting-options.php:752
+msgid "You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as \"SLD\" with WordPress content editor."
+msgstr ""
+
+#: qc-opd-setting-options.php:754
+msgid "For all the lists:"
+msgstr ""
+
+#: qc-opd-setting-options.php:756
+msgid "[qcopd-directory mode=\"all\" column=\"2\" style=\"simple\" orderby=\"date\" order=\"DESC\" enable_embedding=\"false\"]"
+msgstr ""
+
+#: qc-opd-setting-options.php:759
+msgid "For only a single list:"
+msgstr ""
+
+#: qc-opd-setting-options.php:761
+msgid "[qcopd-directory mode=\"one\" list_id=\"75\"]"
+msgstr ""
+
+#: qc-opd-setting-options.php:763
+msgid "Available Parameters:"
+msgstr ""
+
+#: qc-opd-setting-options.php:765
+msgid "1. mode"
+msgstr ""
+
+#: qc-opd-setting-options.php:767
+msgid "[Value for this option can be set as \"one\" or \"all\".]"
+msgstr ""
+
+#: qc-opd-setting-options.php:769
+msgid "2. column"
+msgstr ""
+
+#: qc-opd-setting-options.php:770
+msgid "Avaialble values: \"1\", \"2\", \"3\" or \"4\"."
+msgstr ""
+
+#: qc-opd-setting-options.php:771
+msgid "3. style"
+msgstr ""
+
+#: qc-opd-setting-options.php:772
+msgid "Avaialble values: \"simple\", \"style-1\", \"style-2\", \"style-3\", \"style-4\", \"style-5\", \"style-16\"."
+msgstr ""
+
+#: qc-opd-setting-options.php:776
+msgid "Only 6 templates are available in the free version. For more styles or templates, please purchase the"
+msgstr ""
+
+#: qc-opd-setting-options.php:779
+msgid "premium version"
+msgstr ""
+
+#: qc-opd-setting-options.php:781
+msgid "4. orderby"
+msgstr ""
+
+#: qc-opd-setting-options.php:782
+msgid "Compatible order by values: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' and 'menu_order'."
+msgstr ""
+
+#: qc-opd-setting-options.php:784
+msgid "5. order"
+msgstr ""
+
+#: qc-opd-setting-options.php:785
+msgid "Value for this option can be set as \"ASC\" for Ascending or \"DESC\" for Descending order."
+msgstr ""
+
+#: qc-opd-setting-options.php:787
+msgid "6. item_orderby"
+msgstr ""
+
+#: qc-opd-setting-options.php:788
+msgid "Value for this option are \"title\", \"upvotes\", \"timestamp\" that will be set as \"ASC\" & others will be \"DESC\" order."
+msgstr ""
+
+#: qc-opd-setting-options.php:790
+msgid "7. list_id"
+msgstr ""
+
+#: qc-opd-setting-options.php:791
+msgid "Only applicable if you want to display a single list [not all]. You can provide specific list id here as a value. You can also get ready shortcode for a single list under \"Manage List Items\" menu."
+msgstr ""
+
+#: qc-opd-setting-options.php:793
+msgid "8. enable_embedding"
+msgstr ""
+
+#: qc-opd-setting-options.php:794
+msgid "Allow visitors to embed list in other sites. Supported values - \"true\", \"false\"."
+msgstr ""
+
+#: qc-opd-setting-options.php:796
+msgid "Example: enable_embedding=\"true\""
+msgstr ""
+
+#: qc-opd-setting-options.php:798
+msgid "8. upvote"
+msgstr ""
+
+#: qc-opd-setting-options.php:799
+msgid "Allow visitors to list item. Supported values - \"on\", \"off\"."
+msgstr ""
+
+#: qc-opd-setting-options.php:801
+msgid "Example: upvote=\"on\""
+msgstr ""
+
+#: qc-opd-setting-options.php:803
+msgid "9. style-16 image show"
+msgstr ""
+
+#: qc-opd-setting-options.php:804
+msgid " Add the shortcode parameter enable_image=\"true\" to show images with style-16"
+msgstr ""
+
+#: qc-opd-setting-options.php:806
+msgid "Example: enable_image=\"true\""
+msgstr ""
+
+#: qc-opd-setting-options.php:808
+msgid "10. Search"
+msgstr ""
+
+#: qc-opd-setting-options.php:809
+msgid " Add the shortcode parameter search=\"true\" to show Live Search"
+msgstr ""
+
+#: qc-opd-setting-options.php:811
+msgid "Example: search=\"true\""
+msgstr ""
+
+#: qc-opd-setting-options.php:813
+msgid "11. dark_mode"
+msgstr ""
+
+#: qc-opd-setting-options.php:814
+msgid "You can use this value to use the dark_mode of SLD templates. Available values for this option \"on\", \"off\"."
+msgstr ""
+
+#: qc-opd-setting-options.php:821
+msgid "== Frequently Asked Questions =="
+msgstr ""
+
+#: qc-opd-setting-options.php:826
+msgid "= I cannot save my List. delete item or add new items to the List ="
+msgstr ""
+
+#: qc-opd-setting-options.php:829
+msgid "The issue you are having with saving the Lists is because of a limitation set in your server. Your server probably has a low limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save new link items. The server’s configuration that dictates this is max_input_vars. Set it to a high limit like max_input_vars = 10000. You can do it with local php.ini file or htaccess if your server supports it, Otherwise, please contact your hosting company support if needed. "
+msgstr ""
+
+#: qc-opd-setting-options.php:837
+msgid "= The sub title is not showing ="
+msgstr ""
+
+#: qc-opd-setting-options.php:840
+msgid "The default template does not show subtitles. Use style-1 from the shortcode generator to display subtitles."
+msgstr ""
+
+#: qc-opd-setting-options.php:847
+msgid "= Does the free version have filter buttons? ="
+msgstr ""
+
+#: qc-opd-setting-options.php:850
+msgid "No. It is a pro version feature at the moment. But in the future, we have plans to make it available in the free version as well."
+msgstr ""
+
+#: qc-opd-setting-options.php:857
+msgid "= I cannot have more than 1 columns ="
+msgstr ""
+
+#: qc-opd-setting-options.php:860
+msgid "To display more than one column, you need to create multiple Lists and choose to Show All Lists from the shortcode generator. A single list will always show in a single column."
+msgstr ""
+
+#: qc-opd-setting-options.php:867
+msgid "= I’m having trouble grasping the use of categories. It seems like and that they can only be assigned to a list rather than a specific link. ="
+msgstr ""
+
+#: qc-opd-setting-options.php:870
+msgid "The base pillars of SLD are Lists, not individual links. The most common use case scenario of SLD is to create and display multiple Lists of many Links on specific topics. As such, there is no option for a Link (list item) to belong to multiple Lists or Categories. That would make the process of creating Lists slower. For each link you would have to select a List and a Category from drop downs despite the chances of a single List item to belong to multiple Lists are usually not that high. When you have dozens or hundreds of Lists that would become a real issue to create or manage your Lists."
+msgstr ""
+
+#: qc-opd-setting-options.php:877
+msgid "= Do you have pagination or load more items? I have thousands of links="
+msgstr ""
+
+#: qc-opd-setting-options.php:880
+msgid "Items in lists can be paginated in the pro version. This option is available in the shortcode generator. But you can also add the parameters manually."
+msgstr ""
+
+#: qc-opd-setting-options.php:884
+msgid "Values: “true”, “false”. This option will allow you to paginate list items. It will break the list page wise. Example: paginate_items=“true”. You also need to add the parameter per_page. This option indicates the number of items per page. Default is “5”. paginate_items=“true” is required to get this parameter working. Example: per_page=“5”"
+msgstr ""
+
+#: qc-opd-setting-options.php:888
+msgid "Lists themselves cannot be paginated as the main concept of SLD is to be a Simple, One Page Directory."
+msgstr ""
+
+#: qc-opd-setting-options.php:895
+msgid "= I have a list to import but it does not work and there is no message saying why my import does not work. ="
+msgstr ""
+
+#: qc-opd-setting-options.php:898
+msgid "The most common reason for failed import is encoding. The CSV file itself and characters in it must be in utf-8 format. Please check your CSV file for any unusual/non-utf-8 characters. If the problem persists, please email us the CSV file."
+msgstr ""
+
+#: qc-opd-setting-options.php:905
+msgid "= I have some blank pages that are crawled by Google! How to avoid them? ="
+msgstr ""
+
+#: qc-opd-setting-options.php:908
+msgid "Like many, if not most, WordPress plugins SLD uses custom posts and WordPress creates slug URLs even though they are not being used by SLD at the moment. We are working on making use of them."
+msgstr ""
+
+#: qc-opd-setting-options.php:911
+msgid "But rest assured they are not harmful. They are generally not linked from anywhere and not indexed by Google. The only exception is if you have an XML sitemap generator that automatically scans and generates Links to these slug URLs. Yoast SEO plugin does that. You can exclude those slugs from xml sitemap. Go to Yoast->XML Sitemap->Post Types tag and select Manage List Items (sld) to Not in sitemap – then Save."
+msgstr ""
+
+#: qc-opd-setting-options.php:918
+msgid "= How can I upgrade from free version of SLD to Pro version? ="
+msgstr ""
+
+#: qc-opd-setting-options.php:921
+msgid "1. Download the latest pro version of the plugin from website"
+msgstr ""
+
+#: qc-opd-setting-options.php:924
+msgid "2. Log in to your WordPress admin area and go to the Plugins management page."
+msgstr ""
+
+#: qc-opd-setting-options.php:927
+msgid "3. Deactivate and Delete the old version of the plugin (don’t worry – your data is safe)"
+msgstr ""
+
+#: qc-opd-setting-options.php:930
+msgid "4. Upload and Activate the latest pro version of the plugin"
+msgstr ""
+
+#: qc-opd-setting-options.php:932
+msgid "5. You are done."
+msgstr ""
+
+#: qc-opd-setting-options.php:939
+msgid "= I have setup List Categories and Lists and neither is showing on home page. Did I install correctly? ="
+msgstr ""
+
+#: qc-opd-setting-options.php:942
+msgid "You have to put the short code on the WordPress oage or post page where you want to show the List/s. There is a Shortcode generator in your page or post visual editor. Use that to create shortcode and insert to your page, where you want to display the lists, easily."
+msgstr ""
+
+#: qc-opd-setting-options.php:949
+msgid "= Is SLD mobile friendly? Does it function well on cells and tablets? ="
+msgstr ""
+
+#: qc-opd-setting-options.php:952
+msgid "Yes, all templates are mobile device friendly and Responsive."
+msgstr ""
+
+#: qc-opd-setting-options.php:961
+msgid "Please take a quick look at our"
+msgstr ""
+
+#: qc-opd-setting-options.php:961
+msgid "Video Tutorials"
+msgstr ""
+
+#: qc-opd-setting-options.php:962
+msgid "Note"
+msgstr ""
+
+#: qc-opd-setting-options.php:964
+msgid "If you are having problem with adding more items or saving a list or your changes in the list are not getting saved then it is most likely because of a limitation set in your server. Your server has a limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save the List. The server’s configuration that dictates this is max_input_vars. You need to Set it to a high limit like max_input_vars = 15000. Since this is a server setting - you may need to contact your hosting company's support for this."
+msgstr ""
+
+#: qc-rating-feature/qc-rating-class.php:130
+msgid "Leave A Review for Simple Link Directory?"
+msgstr ""
+
+#: qc-rating-feature/qc-rating-class.php:132
+msgid "We hope you've enjoyed using"
+msgstr ""
+
+#: qc-rating-feature/qc-rating-class.php:132
+msgid " Would you consider leaving us a review on WordPress.org?"
+msgstr ""
+
+#: qc-rating-feature/qc-rating-class.php:136
+msgid "Leave A Review"
+msgstr ""
+
+#: qc-rating-feature/qc-rating-class.php:137
+msgid "I've already left a review"
+msgstr ""
+
+#: qc-rating-feature/qc-rating-class.php:138
+msgid "Maybe Later"
+msgstr ""
+
+#: qc-rating-feature/qc-rating-class.php:139
+msgid "Never show this again"
+msgstr ""
+
+#: qc-sld-import-demo-data.php:68
+msgid "SLD Demo Data Imported"
+msgstr ""
+
+#: qc-sld-import-demo-data.php:86
+msgid "Already CSV data imported and page created."
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:27
+msgid "More WordPress Goodies for You!"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:86
+msgid "Check Out Some of Our Other Works that Might Make Your Website Better"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:87
+msgid "All our Pro Version users get Premium, Guaranteed Quick, One on One Priority Support."
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:89
+msgid "Get Priority Support "
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:90
+msgid "Online KnowledgeBase"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:97
+msgid "Get Support for Free Version"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:131
+msgid ""
+"Problem in processing your form submission request! Apologies for the inconveniences.<br> 
+\n"
+"Please email to <span style=\"color:#22A0C9;font-weight:bold !important;font-size:14px \"> quantumcloud@gmail.com </span> with any feedback. We will get back to you right away!"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:142
+msgid "Please fill up all the requried form fields."
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:146
+msgid "Invalid email address."
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:155
+msgid "Support Request Details:"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:157
+msgid "Name"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:158
+msgid "Email"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:159
+msgid "Subject"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:160
+msgid "Message"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:162
+msgid "Sent Via the Plugin"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:164
+msgid "Mail sent from:"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:164
+msgid "URL:"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:165
+msgid "Mail Generated on:"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:185
+msgid "From Plugin Support Page:"
+msgstr ""
+
+#: qc-support-promo-page/class-qc-support-promo-page.php:192
+msgid "Your email was sent successfully. Thanks!"
+msgstr ""
+
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:326
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:674
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1054
+#: qc-support-promo-page/qc-clr-recommendbot-support-plugin.php:1468
+msgid "Update To Pro"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:54
+msgid "SLD - Shortcode Generator"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:61
+msgid "Mode"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:64
+msgid "All List"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:65
+msgid "One List"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:72
+msgid "Select List "
+msgstr ""
+
+#: qcopd-shortcode-generator.php:76
+msgid "Please Select List"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:95
+msgid "List Category"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:99
+msgid "Please Select Category"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:120
+msgid "Template Style"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:123
+msgid "Default Style"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:124
+msgid "Style 01"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:125
+msgid "Style 02"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:126
+msgid "Style 03"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:127
+msgid "Style 04"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:128
+msgid "Style 05"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:129
+msgid "Style 16 (**NEW)"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:133
+msgid "Demo URL: "
+msgstr ""
+
+#: qcopd-shortcode-generator.php:143
+msgid "Column"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:146
+msgid "Column 1"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:147
+msgid "Column 2"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:148
+msgid "Column 3"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:149
+msgid "Column 4"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:155
+msgid "Title Font Size"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:158 qcopd-shortcode-generator.php:172
+#: qcopd-shortcode-generator.php:186 qcopd-shortcode-generator.php:202
+msgid "Default"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:169
+msgid "Title Line Height"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:183
+msgid "Subtitle Font Size"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:199
+msgid "Subtitle Line Height"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:212
+msgid "List Order By"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:216
+msgid "ID"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:218 qcopd-shortcode-generator.php:241
+msgid "Date Modified"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:219
+msgid "Random"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:220 qcopd-shortcode-generator.php:238
+msgid "Menu Order"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:226
+msgid "List Order"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:229
+msgid "Ascending"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:230
+msgid "Descending"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:235
+msgid "List Item Orderby"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:240
+msgid "Upvotes"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:247
+msgid "Enable Embeding"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:261
+msgid "Copy"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:261
+msgid "the shortcode & use it any text block."
+msgstr ""
+
+#: qcopd-shortcode-generator.php:261
+msgid "Copy & Close"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:286
+msgid "SLD - Alert"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:290
+msgid "A list should have more than just 1 item."
+msgstr ""
+
+#: qcopd-shortcode-generator.php:291
+msgid "We recommend"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:291
+msgid "10-30"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:291
+msgid "links/businesses for each List."
+msgstr ""
+
+#: qcopd-shortcode-generator.php:292
+msgid "Create multiple Lists and show them all on a page using the"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:292
+msgid "Shortcode Generator."
+msgstr ""
+
+#: qcopd-shortcode-generator.php:296
+msgid "No"
+msgstr ""
+
+#: qcopd-shortcode-generator.php:297
+msgid "Add more item"
+msgstr ""

@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 wp_enqueue_style('sld-css-style-3' ); 
 
 	$sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'on':'';
@@ -23,6 +26,70 @@ if ( $list_query->have_posts() )
 	
 	endif;
 
+
+	$sld_featured = qcopd_get_featured_section_data( $list_query );
+	if ( $sld_featured ) :
+		$sld_feat_count = 1;
+		?>
+		<div class="qcld-main-container-style-3 sld-featured-strip sld-featured-strip-light <?php echo esc_attr( $sld_featured['bg_class'] ); ?>" style="background: <?php echo esc_attr( $sld_featured['bg'] ); ?>;">
+			<?php qcopd_render_featured_heading( $sld_featured['total'] ); ?>
+			<div class="qcopd-list-column style-3 opd-column-<?php echo esc_attr( $column ); ?>">
+				<ul class="ca-menu">
+				<?php foreach ( $sld_featured['items'] as $sld_ficon ) :
+					$list = $sld_ficon['list'];
+					$feat_post_id = $sld_ficon['post_id'];
+					$canContentClass = "subtitle-present";
+					if( !isset($list['qcopd_item_subtitle']) || $list['qcopd_item_subtitle'] == "" ) {
+						$canContentClass = "subtitle-absent";
+					}
+					$item_url   = isset( $list['qcopd_item_link'] ) ? esc_url($list['qcopd_item_link']) : '';
+					$masked_url = $item_url;
+					?>
+					<li id="item-feat-<?php echo esc_attr( $feat_post_id ) . '-' . esc_attr( $sld_feat_count ); ?>" style="<?php echo ( isset($list['list_item_bg_color']) && !empty($list['list_item_bg_color']) ) ? 'background:'. esc_attr($list['list_item_bg_color']) : ''; ?>">
+						<a <?php echo (isset($list['qcopd_item_nofollow']) && $list['qcopd_item_nofollow'] == 1) ? 'rel="nofollow"' : ''; ?> href="<?php echo esc_url($masked_url); ?>" <?php echo (isset($list['qcopd_item_newtab']) && $list['qcopd_item_newtab'] == 1) ? 'target="_blank"' : ''; ?>>
+							<?php if( ($list_img == "true") && isset($list['qcopd_item_img'])  && $list['qcopd_item_img'] != "" ) : ?>
+								<span class="ca-icon list-img-1">
+									<?php $img = wp_get_attachment_image_src($list['qcopd_item_img']); ?>
+									<img src="<?php echo ( isset($img[0]) ? esc_url($img[0]) : '' ); ?>" alt="<?php echo ( isset($list['qcopd_item_title']) ? esc_html(trim($list['qcopd_item_title'])) : '' ); ?>">
+								</span>
+							<?php else : ?>
+								<span class="ca-icon list-img-1">
+									<img src="<?php echo esc_url( SLD_QCOPD_IMG_URL ); ?>/list-image-placeholder.png" alt="">
+								</span>
+							<?php endif; ?>
+							<div class="ca-content">
+								<h3 class="ca-main <?php echo esc_attr($canContentClass); ?>">
+									<?php echo ( isset($list['qcopd_item_title']) ? esc_html(trim($list['qcopd_item_title'])) : '' ); ?>
+								</h3>
+								<?php if( isset($list['qcopd_item_subtitle']) ) : ?>
+									<p class="ca-sub"><?php echo esc_html(trim($list['qcopd_item_subtitle'])); ?></p>
+								<?php endif; ?>
+							</div>
+						</a>
+						<?php if( $upvote == 'on' ) : ?>
+							<div class="upvote-section">
+								<span data-post-id="<?php echo esc_attr( $feat_post_id ); ?>" data-item-title="<?php echo ( isset($list['qcopd_item_title']) ? esc_attr(trim($list['qcopd_item_title'])) : '' ); ?>" data-item-link="<?php echo ( isset($list['qcopd_item_link']) ? esc_url($list['qcopd_item_link']) : '' ); ?>" class="upvote-btn upvote-on">
+									<i class="fa fa-thumbs-up"></i>
+								</span>
+								<span class="upvote-count">
+									<?php
+									  if( isset($list['qcopd_upvote_count']) && (int)$list['qcopd_upvote_count'] > 0 ){
+									  	echo (int)$list['qcopd_upvote_count'];
+									  }
+									?>
+								</span>
+							</div>
+						<?php endif; ?>
+						<div class="featured-section">
+							<i class="fa fa-bolt"></i>
+						</div>
+					</li>
+				<?php $sld_feat_count++; endforeach; ?>
+				</ul>
+			</div>
+		</div>
+		<?php
+	endif;
 
 	//Directory Wrap or Container
 	$sld_enable_rtl = ( get_option('sld_enable_rtl') == 'on' ) ? 'dir="rtl"':'';

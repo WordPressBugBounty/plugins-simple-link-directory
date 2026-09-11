@@ -1,13 +1,13 @@
 === Simple Link Directory - AI Powered ===
 Contributors: quantumcloud
-Donate link: https://www.quantumcloud.com/products/simple-link-directory/
+Donate link: https://www.quantumcloud.net/products/simple-link-directory/
 Tags: directory, directory listing, link directory, link management, web directory
 Requires at least: 4.6
 Tested up to: 7.1
-Stable tag: 9.1.6
+Stable tag: 9.1.9
 Requires PHP: 7.4
 License: GPLv2 or later
-License URI: https://www.quantumcloud.com/products/simple-link-directory/
+License URI: https://www.quantumcloud.net/products/simple-link-directory/
 
 AI Powered LINK DIRECTORY Plugin for WordPress to Curate Links for Web Directory. Link Management, Directory Listings, Link Archive, Vendor Directory
 
@@ -16,8 +16,8 @@ AI Powered LINK DIRECTORY Plugin for WordPress to Curate Links for Web Directory
 
 Free WordPress Link Directory Plugin for your External Link Directory Listings! Simple Link Directory is a simple WordPress Directory plugin and an External Link Listings Manager for One Page directory and Content Curation. Create innovative and elegant Link, Resources page or Link page on your WordPress website in matter of minutes.
 
-> 🚀 <strong>Upgrade to [Simple Link Directory](https://www.quantumcloud.com/products/simple-link-directory/) PRO now!</strong>
-> 🚀 [Support, Bug Report, Feature Requests](https://www.quantumcloud.com/resources/free-support/) | [Link Directory Demo](https://dev.quantumcloud.com/sld/)
+> 🚀 <strong>Upgrade to [Simple Link Directory](https://www.quantumcloud.net/products/simple-link-directory/) PRO now!</strong>
+> 🚀 [Support, Bug Report, Feature Requests](https://www.quantumcloud.net/resources/free-support/) | [Link Directory Demo](https://dev.quantumcloud.net/sld/)
 > 🚀 Generate Lists with links using AI - <strong>Gemini, OpenAI, Openrouter</strong>. Auto Generate Links, Titles, Sub titles, Images, and Long Description with AI
 
 <strong>Simple Link Directory includes Shortcode Generator Link Directory Block for Gutenberg.</strong>
@@ -26,7 +26,7 @@ Free WordPress Link Directory Plugin for your External Link Directory Listings! 
 
 SLD is the best Free WordPress Link Directory plugin powered by AI for the new age web. Compatible with any theme. With the Pro version of Simple Link Directory you can Monetize directory listings and start making money or generate backlinks with the <strong>link exchange</strong> addon on complete Auto Pilot. This plugin can be used for Single page Business directory, One page External Link directory, Link library, Bookmark collection, Directory listing, Web directory, Listing directory, Video Gallery, Youtube Video Directory, Video Database, Vendor or Partners Directory, Affiliates Directory, Resources page, Link Curation, Intranet etc.
 
-> ++ Looking for a Complete Solution? Get a [Premium Link Directory Theme!](https://www.quantumcloud.com/products/themes/simple-link-directory/)
+> ++ Looking for a Complete Solution? Get a [Premium Link Directory Theme!](https://www.quantumcloud.net/products/themes/simple-link-directory/)
 
 
 = Who Should Use this Simple Link Directory Plugin? =
@@ -267,8 +267,8 @@ Simple Lik Diretory Pro features:
 * Pagination support
 * Change all text languages
 
-> 🚀 Upgrade to [Simple Link Directiory Pro](https://www.quantumcloud.com/products/simple-link-directory/)
-> 🚀 <strong>Looking for a Complete Solution? [Check Out our Simple Link Directory Theme](https://www.quantumcloud.com/products/themes/simple-link-directory/)</strong>
+> 🚀 Upgrade to [Simple Link Directiory Pro](https://www.quantumcloud.net/products/simple-link-directory/)
+> 🚀 <strong>Looking for a Complete Solution? [Check Out our Simple Link Directory Theme](https://www.quantumcloud.net/products/themes/simple-link-directory/)</strong>
 
 > //-> Try our <strong>[FREE ChatBot for WordPress with AI - WPBot](https://wordpress.org/plugins/chatbot/)</strong>. It is an easy to use, Native, No coding required, AI ChatBot to provide Automated Live Chat Support. Use ChatBot to <strong>answer user questions</strong> and also <strong>collect information</strong> from the users using <strong>conversational forms</strong>. It can be also be powered by DialogFlow, Tavily or OpenAI ChatGPT or simply use the built-in features to provide Live support and collect data. ++++ Check out the [ChatBot for WordPress](https://www.wpbot.pro/) Demo.
 
@@ -377,6 +377,9 @@ You can change the language texts from the Settings area. Currently, multi langu
 
 
 == Changelog ==
+
+= 9.1.9 =
+# Updated domain and misc fixes
 
 = 9.1.6 =
 # Fixed a conflict with WP 7.1

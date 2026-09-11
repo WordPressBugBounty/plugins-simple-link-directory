@@ -1,5 +1,45 @@
 <?php
-defined('ABSPATH') or die("No direct script access!");
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+if ( ! function_exists( 'qcopd_parse_csv_string' ) ) {
+    /**
+     * Parse full CSV text content into an array of rows, supporting multi-line quoted fields.
+     *
+     * @param string $csv_content Raw CSV file contents.
+     * @return array Array of row arrays.
+     */
+    function qcopd_parse_csv_string( $csv_content ) {
+        $rows = array();
+        if ( empty( $csv_content ) ) {
+            return $rows;
+        }
+
+        // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
+        $stream = fopen( 'php://temp', 'r+' );
+        if ( $stream === false ) {
+            return $rows;
+        }
+
+        // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fwrite
+        fwrite( $stream, $csv_content );
+        rewind( $stream );
+
+        // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fgetcsv
+        while ( ( $data = fgetcsv( $stream ) ) !== false ) {
+            if ( empty( $data ) || ( count( $data ) === 1 && $data[0] === null ) ) {
+                continue;
+            }
+            $rows[] = $data;
+        }
+
+        // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose
+        fclose( $stream );
+
+        return $rows;
+    }
+}
 
 
 // 5. Handle the AJAX request (PHP side)
@@ -47,112 +87,114 @@ function qcopd_sld_handle_csv_import() {
 	        'redirect_url' 	=> get_permalink( get_page_by_path( $page_slug ) ), // URL for redirection
 	    ) );
     }
+	global $wp_filesystem;
+	if ( empty( $wp_filesystem ) ) {
+		require_once ABSPATH . '/wp-admin/includes/file.php';
+		WP_Filesystem();
+	}
 
 	// Check if the file exists and is not empty before opening
-	if ( file_exists( SLD_CSV_FILE_PATH ) && filesize( SLD_CSV_FILE_PATH ) > 0 ) {
+	if ( $wp_filesystem && $wp_filesystem->exists( SLD_CSV_FILE_PATH ) && $wp_filesystem->size( SLD_CSV_FILE_PATH ) > 0 ) {
 	    
-	    // Open the file directly using the path constant
-	    $file = fopen( SLD_CSV_FILE_PATH, "r" );
-	    
-	    if ( $file !== false ) {
-	        $flag = true;
+		$csv_content = $wp_filesystem->get_contents( SLD_CSV_FILE_PATH );
+		$csv_rows    = qcopd_parse_csv_string( $csv_content );
+		$flag        = true;
 
-			$baseData = array();
-
-			$count = 0;
-
-			$laps = 1;
-			
-			//Read fields from CSV file and dump in $baseData
-			while(($data = fgetcsv($file)) !== FALSE) 
-			{
-				
-				if ($flag) {
-					$flag = false;
-					continue;
-				}
-				
-				$baseData[$data[0]][] = array(
-					'list_id' 					=> trim($data[0]),
-					'list_title' 				=> isset($data[1]) 	? sanitize_text_field((trim($data[1]))) : '',
-					'qcopd_item_title' 			=> isset($data[2]) 	? sanitize_text_field((trim($data[2]))) : '',
-					'qcopd_item_link' 			=> isset($data[3]) 	? trim($data[3]) : '',
-					'qcopd_item_nofollow' 		=> isset($data[4]) 	? trim($data[4]) : 0,
-					'qcopd_item_ugc' 			=> isset($data[5]) 	? trim($data[5]) : '',
-					'qcopd_item_newtab' 		=> isset($data[6]) 	? trim($data[6]) : 0,
-					'qcopd_item_subtitle' 		=> isset($data[7]) 	? sanitize_text_field((trim($data[7]))) : '',
-					'qcopd_fa_icon' 			=> isset($data[8]) 	? sanitize_text_field((trim($data[8]))) : '',
-					'qcopd_use_favicon' 		=> isset($data[9]) 	? trim($data[9]) : '',
-					'qcopd_item_img' 			=> isset($data[10]) ? trim($data[10]) : '',
-					'qcopd_item_img_title' 		=> isset($data[11]) ? trim($data[11]) : '',
-					'qcopd_item_img_link' 		=> isset($data[12]) ? trim($data[12]) : '',
-					'qcopd_upvote_count' 		=> isset($data[13]) ? trim($data[13]) : 0,
-					'list_item_bg_color' 		=> isset($data[14]) ? trim($data[14]) : '',
-					'attached_terms' 			=> isset($data[15]) ? trim($data[15]) : '',
-					'qcopd_entry_time' 			=> gmdate("Y-m-d H:i:s"),
-					'qcopd_timelaps' 			=> $laps,
-					'qcopd_description' 		=> isset($data[31]) ? trim($data[31]) : '',
-					'qcopd_tags' 				=> isset($data[32]) ? trim($data[32]) : '',
-					'qcopd_new' 				=> isset($data[33]) ? trim($data[33]) : '',
-					'qcopd_featured' 			=> isset($data[34]) ? trim($data[34]) : '',
-					'qcopd_image_from_link' 	=> isset($data[35]) ? trim($data[35]) : '',
-					'qcopd_generate_title' 		=> isset($data[36]) ? trim($data[36]) : '',
-					'list_border_color' 		=> isset($data[16]) ? trim($data[16]) : '',
-					'list_bg_color' 			=> isset($data[17]) ? trim($data[17]) : '',
-					'list_bg_color_hov' 		=> isset($data[18]) ? trim($data[18]) : '',
-					'list_txt_color' 			=> isset($data[19]) ? trim($data[19]) : '',
-					'list_txt_color_hov' 		=> isset($data[20]) ? trim($data[20]) : '',
-					'list_subtxt_color' 		=> isset($data[21]) ? trim($data[21]) : '',
-					'list_subtxt_color_hov' 	=> isset($data[22]) ? trim($data[22]) : '',
-					'item_bdr_color' 			=> isset($data[23]) ? trim($data[23]) : '',
-					'item_bdr_color_hov' 		=> isset($data[24]) ? trim($data[24]) : '',
-					'list_title_color'			=> isset($data[25]) ? trim($data[25]) : '',
-					'filter_background_color'	=> isset($data[26]) ? trim($data[26]) : '',
-					'filter_text_color'			=> isset($data[27]) ? trim($data[27]) : '',
-					'add_block_text' 			=> isset($data[28]) ? sanitize_text_field((trim($data[28]))) : '',
-					'menu_order' 				=> isset($data[29]) ? trim($data[29]) : '',
-					'post_status' 				=> isset($data[30]) ? trim($data[30]) : '',
-				);
-
-				$count++;
-				$laps++;
-
+		$baseData = array();
+		$count    = 0;
+		$laps     = 1;
+		
+		//Read fields from CSV file and dump in $baseData
+		foreach ( $csv_rows as $data ) {
+			if ( empty( $data ) || ! isset( $data[0] ) ) {
+				continue;
 			}
 			
-			fclose($file);
-			//print_r($baseData);exit;
-			//Inserting Data from our built array
+			if ($flag) {
+				$flag = false;
+				continue;
+			}
 			
-			$keyCounter = 0;
-			$metaCounter = 0;
+			$baseData[$data[0]][] = array(
+				'list_id' 					=> trim($data[0]),
+				'list_title' 				=> isset($data[1]) 	? sanitize_text_field((trim($data[1]))) : '',
+				'qcopd_item_title' 			=> isset($data[2]) 	? sanitize_text_field((trim($data[2]))) : '',
+				'qcopd_item_link' 			=> isset($data[3]) 	? trim($data[3]) : '',
+				'qcopd_item_nofollow' 		=> isset($data[4]) 	? trim($data[4]) : 0,
+				'qcopd_item_ugc' 			=> isset($data[5]) 	? trim($data[5]) : '',
+				'qcopd_item_newtab' 		=> isset($data[6]) 	? trim($data[6]) : 0,
+				'qcopd_item_subtitle' 		=> isset($data[7]) 	? sanitize_text_field((trim($data[7]))) : '',
+				'qcopd_fa_icon' 			=> isset($data[8]) 	? sanitize_text_field((trim($data[8]))) : '',
+				'qcopd_use_favicon' 		=> isset($data[9]) 	? trim($data[9]) : '',
+				'qcopd_item_img' 			=> isset($data[10]) ? trim($data[10]) : '',
+				'qcopd_item_img_title' 		=> isset($data[11]) ? trim($data[11]) : '',
+				'qcopd_item_img_link' 		=> isset($data[12]) ? trim($data[12]) : '',
+				'qcopd_upvote_count' 		=> isset($data[13]) ? trim($data[13]) : 0,
+				'list_item_bg_color' 		=> isset($data[14]) ? trim($data[14]) : '',
+				'attached_terms' 			=> isset($data[15]) ? trim($data[15]) : '',
+				'qcopd_entry_time' 			=> gmdate("Y-m-d H:i:s"),
+				'qcopd_timelaps' 			=> $laps,
+				'qcopd_description' 		=> isset($data[31]) ? trim($data[31]) : '',
+				'qcopd_tags' 				=> isset($data[32]) ? trim($data[32]) : '',
+				'qcopd_new' 				=> isset($data[33]) ? trim($data[33]) : '',
+				'qcopd_featured' 			=> isset($data[34]) ? trim($data[34]) : '',
+				'qcopd_image_from_link' 	=> isset($data[35]) ? trim($data[35]) : '',
+				'qcopd_generate_title' 		=> isset($data[36]) ? trim($data[36]) : '',
+				'list_border_color' 		=> isset($data[16]) ? trim($data[16]) : '',
+				'list_bg_color' 			=> isset($data[17]) ? trim($data[17]) : '',
+				'list_bg_color_hov' 		=> isset($data[18]) ? trim($data[18]) : '',
+				'list_txt_color' 			=> isset($data[19]) ? trim($data[19]) : '',
+				'list_txt_color_hov' 		=> isset($data[20]) ? trim($data[20]) : '',
+				'list_subtxt_color' 		=> isset($data[21]) ? trim($data[21]) : '',
+				'list_subtxt_color_hov' 	=> isset($data[22]) ? trim($data[22]) : '',
+				'item_bdr_color' 			=> isset($data[23]) ? trim($data[23]) : '',
+				'item_bdr_color_hov' 		=> isset($data[24]) ? trim($data[24]) : '',
+				'list_title_color'			=> isset($data[25]) ? trim($data[25]) : '',
+				'filter_background_color'	=> isset($data[26]) ? trim($data[26]) : '',
+				'filter_text_color'			=> isset($data[27]) ? trim($data[27]) : '',
+				'add_block_text' 			=> isset($data[28]) ? sanitize_text_field((trim($data[28]))) : '',
+				'menu_order' 				=> isset($data[29]) ? trim($data[29]) : '',
+				'post_status' 				=> isset($data[30]) ? trim($data[30]) : '',
+			);
+
+			$count++;
+			$laps++;
+
+		}
+		
+		//print_r($baseData);exit;
+		//Inserting Data from our built array
+		
+		$keyCounter = 0;
+		$metaCounter = 0;
+		
+		global $wpdb;
+
+		//Sort $baseData numerically
+		ksort($baseData, SORT_NUMERIC);
+		
+		//Parse $baseData and insert in the database
+		foreach( $baseData as $key => $data ){
+		
 			
-			global $wpdb;
+			//Check menu order for current SLD post, set 0 if empty
+			$menu_order_val = isset($data[0]['menu_order']) ? $data[0]['menu_order'] : 0;
 
-			//Sort $baseData numerically
-			ksort($baseData, SORT_NUMERIC);
-			
-			//Parse $baseData and insert in the database
-			foreach( $baseData as $key => $data ){
-			
-				
-				//Check menu order for current SLD post, set 0 if empty
-				$menu_order_val = isset($data[0]['menu_order']) ? $data[0]['menu_order'] : 0;
+			$post_id = (isset($data[0]['list_id']) && $data[0]['list_id'] != "" ) ? $data[0]['list_id'] : '';
 
-				$post_id = (isset($data[0]['list_id']) && $data[0]['list_id'] != "" ) ? $data[0]['list_id'] : '';
+			//Grab current LIST title
+			$post_title = (isset($data[0]['list_title']) && $data[0]['list_title'] != "" ) ? $data[0]['list_title'] : '';
 
-				//Grab current LIST title
-				$post_title = (isset($data[0]['list_title']) && $data[0]['list_title'] != "" ) ? $data[0]['list_title'] : '';
+			//Grab current LIST status, set 'publish' if empty
+			$post_status = (isset($data[0]['post_status']) && $data[0]['post_status'] != "" ) ? $data[0]['post_status'] : 'publish';
 
-				//Grab current LIST status, set 'publish' if empty
-				$post_status = (isset($data[0]['post_status']) && $data[0]['post_status'] != "" ) ? $data[0]['post_status'] : 'publish';
+			if( !empty($post_id) ){
+				$post_id = $wpdb->get_var($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE post_type = 'sld' AND post_status = 'publish' AND ID = %d ORDER BY ID DESC LIMIT 1", $post_id));
 
-				if( !empty($post_id) ){
-					$post_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_type = 'sld' AND post_status = 'publish' AND ID = $post_id ORDER BY ID DESC LIMIT 1");
-
-					if( empty($post_id) && !empty($post_title) ){
-						$post_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_type = 'sld' AND post_status = 'publish' AND post_title LIKE '%$post_title%' ORDER BY ID DESC LIMIT 1");
-					}
+				if( empty($post_id) && !empty($post_title) ){
+					$post_id = $wpdb->get_var($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE post_type = 'sld' AND post_status = 'publish' AND post_title LIKE %s ORDER BY ID DESC LIMIT 1", '%' . $wpdb->esc_like($post_title) . '%'));
 				}
+			}
 
 				//If $post_title is empty, then go for next iteration
 				if( $post_title == '' ){
@@ -304,13 +346,18 @@ function qcopd_sld_handle_csv_import() {
 			                $uploaddir          = wp_upload_dir();
 			                $target_file_name   = $uploaddir['path'] . '/' . $filename;
 
-			                $contents           = file_get_contents( $externalImageLinks );
+			                global $wp_filesystem;
+			                if ( empty( $wp_filesystem ) ) {
+			                    require_once ABSPATH . '/wp-admin/includes/file.php';
+			                    WP_Filesystem();
+			                }
 
-			                if(!empty($contents)){
+			                $response = wp_remote_get( $externalImageLinks, array( 'timeout' => 15 ) );
+			                $contents = ( ! is_wp_error( $response ) && wp_remote_retrieve_response_code( $response ) === 200 ) ? wp_remote_retrieve_body( $response ) : '';
 
-				                $savefile           = fopen($target_file_name, 'w');
-				                fwrite($savefile, $contents);
-				                fclose($savefile);
+			                if ( ! empty( $contents ) && $wp_filesystem ) {
+
+				                $wp_filesystem->put_contents( $target_file_name, $contents, FS_CHMOD_FILE );
 
 				                /* add the image title */
 				                $image_title        = ucwords( $uniq_name );
@@ -419,17 +466,15 @@ function qcopd_sld_handle_csv_import() {
 			
 			} //end of outer-foreach
 	        
-	    }
+		} else {
+			wp_send_json_error( 'CSV file is missing or empty.' );
+		}
 
-	} else {
-	    wp_send_json_error( 'CSV file is missing or empty.' );
+		wp_send_json_success( array(
+			'message' 		=> 'CSV data imported and page created successfully.',
+			'redirect_url' 	=> get_permalink( get_page_by_path( $page_slug ) ), // URL for redirection
+		) );
 	}
-
-    wp_send_json_success( array(
-        'message' 		=> 'CSV data imported and page created successfully.',
-        'redirect_url' 	=> get_permalink( get_page_by_path( $page_slug ) ), // URL for redirection
-    ) );
-}
 add_action( 'wp_ajax_qcld_sld_import_csv_from_folder', 'qcopd_sld_handle_csv_import' );
 add_action('wp_ajax_nopriv_qcld_sld_import_csv_from_folder', 'qcopd_sld_handle_csv_import'); // ajax for not logged in users
 
@@ -441,28 +486,39 @@ function qcopd_sld_import_get_lists() {
     if ( ! current_user_can( 'manage_options' ) ) {
         wp_send_json_error( 'Unauthorized user.' );
     }
-    if ( ! file_exists( SLD_CSV_FILE_PATH ) ) {
+    global $wp_filesystem;
+    if ( empty( $wp_filesystem ) ) {
+        require_once ABSPATH . '/wp-admin/includes/file.php';
+        WP_Filesystem();
+    }
+
+    if ( ! $wp_filesystem || ! $wp_filesystem->exists( SLD_CSV_FILE_PATH ) ) {
         wp_send_json_error( 'CSV file not found.' );
     }
 
-    $file = fopen( SLD_CSV_FILE_PATH, 'r' );
-    if ( $file === false ) {
-        wp_send_json_error( 'Could not open CSV file.' );
-    }
+    $csv_content = $wp_filesystem->get_contents( SLD_CSV_FILE_PATH );
+    $csv_rows    = qcopd_parse_csv_string( $csv_content );
+    $lists       = array();
+    $is_header   = true;
 
-    $lists   = array();
-    $is_header = true;
-    while ( ( $row = fgetcsv( $file ) ) !== false ) {
-        if ( $is_header ) { $is_header = false; continue; }
+    foreach ( $csv_rows as $row ) {
+        if ( empty( $row ) || ! isset( $row[0] ) ) {
+            continue;
+        }
+        if ( $is_header ) {
+            $is_header = false;
+            continue;
+        }
         $list_id    = trim( $row[0] );
-        $list_title = sanitize_text_field( trim( $row[1] ) );
-        if ( $list_id === '' ) continue;
+        $list_title = sanitize_text_field( trim( isset( $row[1] ) ? $row[1] : '' ) );
+        if ( $list_id === '' ) {
+            continue;
+        }
         if ( ! isset( $lists[ $list_id ] ) ) {
             $lists[ $list_id ] = array( 'id' => $list_id, 'title' => $list_title, 'count' => 0 );
         }
         $lists[ $list_id ]['count']++;
     }
-    fclose( $file );
 
     // Create the demo page now (once), so we have a redirect URL ready.
     $page_slug    = 'sld-demo-data';
@@ -499,7 +555,13 @@ function qcopd_sld_import_single_list() {
     if ( ! current_user_can( 'manage_options' ) ) {
         wp_send_json_error( 'Unauthorized user.' );
     }
-    if ( ! file_exists( SLD_CSV_FILE_PATH ) ) {
+    global $wp_filesystem;
+    if ( empty( $wp_filesystem ) ) {
+        require_once ABSPATH . '/wp-admin/includes/file.php';
+        WP_Filesystem();
+    }
+
+    if ( ! $wp_filesystem || ! $wp_filesystem->exists( SLD_CSV_FILE_PATH ) ) {
         wp_send_json_error( 'CSV file not found.' );
     }
 
@@ -509,9 +571,10 @@ function qcopd_sld_import_single_list() {
     }
 
     // Read all rows that belong to this list_id
-    $file      = fopen( SLD_CSV_FILE_PATH, 'r' );
-    $is_header = true;
-    $items     = array();
+    $csv_content = $wp_filesystem->get_contents( SLD_CSV_FILE_PATH );
+    $csv_rows    = qcopd_parse_csv_string( $csv_content );
+    $is_header   = true;
+    $items       = array();
     $list_title   = '';
     $post_status  = 'publish';
     $menu_order   = 0;
@@ -519,12 +582,20 @@ function qcopd_sld_import_single_list() {
     // Config fields
     $config_fields = array();
 
-    while ( ( $data = fgetcsv( $file ) ) !== false ) {
-        if ( $is_header ) { $is_header = false; continue; }
-        if ( trim( $data[0] ) !== $target_list_id ) continue;
+    foreach ( $csv_rows as $data ) {
+        if ( empty( $data ) || ! isset( $data[0] ) ) {
+            continue;
+        }
+        if ( $is_header ) {
+            $is_header = false;
+            continue;
+        }
+        if ( trim( $data[0] ) !== $target_list_id ) {
+            continue;
+        }
 
         if ( $list_title === '' ) {
-            $list_title  = sanitize_text_field( trim( $data[1] ) );
+            $list_title  = sanitize_text_field( trim( isset( $data[1] ) ? $data[1] : '' ) );
             $post_status = isset( $data[30] ) && $data[30] !== '' ? $data[30] : 'publish';
             $menu_order  = isset( $data[29] ) ? intval( $data[29] ) : 0;
             
@@ -570,7 +641,6 @@ function qcopd_sld_import_single_list() {
             'qcopd_entry_time'          => gmdate('Y-m-d H:i:s'),
         );
     }
-    fclose( $file );
 
     if ( empty( $list_title ) ) {
         wp_send_json_error( 'List not found in CSV.' );

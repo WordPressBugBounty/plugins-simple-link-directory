@@ -1,5 +1,4 @@
 <?php
-
 defined('ABSPATH') or die("No direct script access!");
 
 /*TinyMCE Shortcode Generator Button - 25-01-2017*/
@@ -29,7 +28,7 @@ add_action ('init', 'qcopd_sld_tinymce_shortcode_button_function');
 if ( ! function_exists( 'qcopd_sld_load_custom_wp_admin_style_free' ) ) {
 	function qcopd_sld_load_custom_wp_admin_style_free($hook) {
 		if( 'post.php' == $hook || 'post-new.php' == $hook ){
-	        wp_register_style( 'sld_shortcode_gerator_css', SLD_QCOPD_ASSETS_URL . '/css/shortcode-modal.css', false, '1.0.0' );
+	        wp_register_style( 'sld_shortcode_gerator_css', SLD_QCOPD_ASSETS_URL . '/css/shortcode-modal.css', array(), SLD_QCOPD_VERSION );
 	        wp_enqueue_style( 'sld_shortcode_gerator_css' );
 	    }
 	}
@@ -100,7 +99,8 @@ if ( ! function_exists( 'qcopd_sld_render_shortcode_modal_free' ) ) {
 							
 							<?php
 							
-								$terms = get_terms( 'sld_cat', array(
+								$terms = get_terms( array(
+									'taxonomy'   => 'sld_cat',
 									'hide_empty' => true,
 								) );
 								if( $terms ){
@@ -131,7 +131,7 @@ if ( ! function_exists( 'qcopd_sld_render_shortcode_modal_free' ) ) {
 						<div id="demo-preview-link">
 							<?php esc_html_e('Demo URL: ', 'simple-link-directory'); ?>
 							<div id="demo-url">
-								<a href="<?php echo esc_url('http://dev.quantumcloud.com/sld/'); ?>" target="_blank"><?php echo esc_url('http://dev.quantumcloud.com/sld/'); ?></a>
+								<a href="<?php echo esc_url('http://dev.quantumcloud.net/sld/'); ?>" target="_blank"><?php echo esc_url('http://dev.quantumcloud.net/sld/'); ?></a>
 							</div>
 						</div>
 						

@@ -1,5 +1,4 @@
 <?php
-
 defined('ABSPATH') or die("No direct script access!");
 
 //Setting options page
@@ -21,6 +20,22 @@ function qcopd_show_settngs_page_callback_func()
 
 } //show_settings_page_callback_func
 add_action('admin_menu', 'qcopd_show_settngs_page_callback_func');
+
+if (!function_exists('qcopd_sanitize_featured_item_count')) {
+  function qcopd_sanitize_featured_item_count($count)
+  {
+    $count = absint($count);
+    return ($count > 0) ? $count : 9;
+  }
+}
+
+if (!function_exists('qcopd_sanitize_featured_bg_color')) {
+  function qcopd_sanitize_featured_bg_color($color)
+  {
+    $sanitized = sanitize_hex_color($color);
+    return $sanitized ? $sanitized : '#0b0c0d';
+  }
+}
 
 function qcopd_sld_register_plugin_settings()
 {
@@ -56,6 +71,17 @@ function qcopd_sld_register_plugin_settings()
   register_setting('qc-sld-plugin-settings-group', 'sld_enable_rtl', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_enable_search', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_enable_dark_mode', $args);
+  register_setting('qc-sld-plugin-settings-group', 'sld_enable_featured_section', $args);
+  register_setting('qc-sld-plugin-settings-group', 'sld_featured_item_count', array(
+    'type' => 'integer',
+    'sanitize_callback' => 'qcopd_sanitize_featured_item_count',
+    'default' => 9,
+  ));
+  register_setting('qc-sld-plugin-settings-group', 'sld_featured_bg_color', array(
+    'type' => 'string',
+    'sanitize_callback' => 'qcopd_sanitize_featured_bg_color',
+    'default' => '#0b0c0d',
+  ));
   //Language Settings
   register_setting('qc-sld-plugin-settings-group', 'sld_lan_add_link', $args);
   register_setting('qc-sld-plugin-settings-group', 'sld_lan_share_list', $args);
@@ -94,7 +120,8 @@ function qcopd_settings_page_callback_func()
   ?>
 
   <div class="wrap">
-  <div class="swpm-admin-menu-wrap  sld-dashboard-wrap">
+    <h2><?php esc_html_e('SLD Settings Page', 'simple-link-directory'); ?></h2>
+  <div class="sld-admin-menu-wrap  sld-dashboard-wrap">
 
 
     <div class="sld-row">
@@ -120,8 +147,8 @@ function qcopd_settings_page_callback_func()
             <div id="getting_started">
               <div class="sld-container">
                 <div class="sld-row">
-                  <div class="is-dismissible sld-Getting-Started " style="display:none">
-                    <div class="sld_Started_carousel slick-slider">
+                  <div class="sld-getting-started">
+                    <div class="sld_started_carousel">
 
                       <div class="sld_info_item">
                         <div class="serviceBox">
@@ -214,7 +241,7 @@ function qcopd_settings_page_callback_func()
                       <?php esc_html_e('Paste the full URL of a page that contains a contact form to submit link ', 'simple-link-directory'); ?>
                       (
                       <?php esc_html_e('Front end submission with monetization feature is available with the ', 'simple-link-directory'); ?>
-                      <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>"
+                      <a href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory/'); ?>"
                         target="_blank" rel="nofollow"><?php esc_html_e('Pro version', 'simple-link-directory'); ?></a> )
                     </p>
                   </td>
@@ -257,6 +284,28 @@ function qcopd_settings_page_callback_func()
                   <th scope="row"><?php esc_html_e('Enable Dark Mode', 'simple-link-directory'); ?></th>
                   <td><input type="checkbox" name="sld_enable_dark_mode" value="on" <?php echo (esc_attr(get_option('sld_enable_dark_mode')) == 'on' ? 'checked="checked"' : ''); ?> />
                     <i><?php esc_html_e('Enable this option to show Dark Mode for all themes', 'simple-link-directory'); ?></i>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <th scope="row"><?php esc_html_e('Enable Featured Section', 'simple-link-directory'); ?></th>
+                  <td>
+                    <input type="hidden" name="sld_enable_featured_section" value="" />
+                    <input type="checkbox" name="sld_enable_featured_section" value="on" <?php echo (esc_attr(get_option('sld_enable_featured_section')) == 'on' ? 'checked="checked"' : ''); ?> />
+                    <i><?php esc_html_e('Turn ON to display the Featured section. Default is OFF.', 'simple-link-directory'); ?></i>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <th scope="row"><?php esc_html_e('Featured Section Item Count', 'simple-link-directory'); ?></th>
+                  <td>
+                    <input type="number" name="sld_featured_item_count" min="1" step="1" value="<?php echo esc_attr(qcopd_sanitize_featured_item_count(get_option('sld_featured_item_count', 9))); ?>" />
+                    <i><?php esc_html_e('How many featured items to show. Default is 9.', 'simple-link-directory'); ?></i>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <th scope="row"><?php esc_html_e('Featured Section Background Color', 'simple-link-directory'); ?></th>
+                  <td>
+                    <input type="text" class="sld-color-picker" name="sld_featured_bg_color" value="<?php echo esc_attr(qcopd_sanitize_featured_bg_color(get_option('sld_featured_bg_color', '#0b0c0d'))); ?>" />
+                    <i><?php esc_html_e('Background color for the Featured section. Default is #0b0c0d.', 'simple-link-directory'); ?></i>
                   </td>
                 </tr>
               </table>
@@ -724,7 +773,7 @@ function qcopd_settings_page_callback_func()
                                 <strong
                                   style="color: red; padding: 10px 10px; display: inline-block; border: 1px solid; border-radius: 6px; margin: 5px 0 5px 0;">
                                   <?php esc_html_e('Only 6 templates are available in the free version. For more styles or templates, please purchase the', 'simple-link-directory'); ?>
-                                  <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>"
+                                  <a href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory/'); ?>"
                                     target="_blank" target="_blank"
                                     rel="nofollow"><?php esc_html_e('premium version', 'simple-link-directory'); ?></a>. </strong>
                               </p>
@@ -908,7 +957,7 @@ function qcopd_settings_page_callback_func()
 
                             </div>
                             <br><br>
-                            <!-- <h3><?php esc_html_e('Please take a quick look at our', 'simple-link-directory'); ?> <a href="http://dev.quantumcloud.com/sld/tutorials/" class="button button-primary" target="_blank"><?php esc_html_e('Video Tutorials', 'simple-link-directory'); ?></a></h3> -->
+                            <!-- <h3><?php esc_html_e('Please take a quick look at our', 'simple-link-directory'); ?> <a href="http://dev.quantumcloud.net/sld/tutorials/" class="button button-primary" target="_blank"><?php esc_html_e('Video Tutorials', 'simple-link-directory'); ?></a></h3> -->
                             <h3><?php esc_html_e('Note', 'simple-link-directory'); ?></h3>
                             <p>
                               <strong><?php esc_html_e('If you are having problem with adding more items or saving a list or your changes in the list are not getting saved then it is most likely because of a limitation set in your server. Your server has a limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save the List. The server’s configuration that dictates this is max_input_vars. You need to Set it to a high limit like max_input_vars = 15000. Since this is a server setting - you may need to contact your hosting company\'s support for this.', 'simple-link-directory'); ?></strong>
@@ -916,7 +965,7 @@ function qcopd_settings_page_callback_func()
                             <div
                               style="padding: 15px 10px; border: 1px solid #ccc; text-align: center; margin-top: 20px; background: #222; color: #fff;">
                               <?php esc_html_e('Crafted By:', 'simple-link-directory'); ?> <a
-                                href="<?php echo esc_url('http://www.quantumcloud.com'); ?>"
+                                href="<?php echo esc_url('http://www.quantumcloud.net'); ?>"
                                 target="_blank" rel="nofollow"><?php esc_html_e('Web Design Company', 'simple-link-directory'); ?></a>
                               <?php esc_html_e('- QuantumCloud', 'simple-link-directory'); ?>
                             </div>

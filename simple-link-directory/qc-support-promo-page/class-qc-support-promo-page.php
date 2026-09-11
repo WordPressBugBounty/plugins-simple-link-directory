@@ -4,6 +4,10 @@
 * Revised On: 18-10-2023
 */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! defined( 'qc_sld_support_path' ) ) {
     define('qc_sld_support_path', plugin_dir_path(__FILE__));
 }
@@ -40,20 +44,20 @@ add_action( 'admin_menu', 'qc_sld_show_promo_page_callback_func', 10 );
 if ( ! function_exists( 'qc_sld_include_promo_page_scripts' ) ) {	
 	function qc_sld_include_promo_page_scripts( ) {   
 
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        if( isset($_GET["page"]) && !empty($_GET["page"]) && ( sanitize_text_field( wp_unslash( $_GET["page"] ) ) == "qcopd_sld_supports" ) ){
 
-        if( isset($_GET["page"]) && !empty($_GET["page"]) && (   $_GET["page"] == "qcopd_sld_supports"  ) ){
-
-            wp_enqueue_style( 'qcld-support-fontawesome-css', qc_sld_support_url . "css/font-awesome.min.css");                              
-            wp_enqueue_style( 'qcld-sld-support-style-css', qc_sld_support_url . "css/style.css");
+            wp_enqueue_style( 'qcld-support-fontawesome-css', qc_sld_support_url . "css/font-awesome.min.css", array(), SLD_QCOPD_VERSION );                              
+            wp_enqueue_style( 'qcld-sld-support-style-css', qc_sld_support_url . "css/style.css", array(), SLD_QCOPD_VERSION );
 
             wp_enqueue_script( 'jquery' );
             wp_enqueue_script( 'jquery-ui-core');
             wp_enqueue_script( 'jquery-ui-tabs' );
-            wp_enqueue_script( 'jquery-sld-form-processor', qc_sld_support_url . 'js/support-form-script.js',  array('jquery', 'jquery-ui-core','jquery-ui-tabs') );
+            wp_enqueue_script( 'jquery-sld-form-processor', qc_sld_support_url . 'js/support-form-script.js', array('jquery', 'jquery-ui-core', 'jquery-ui-tabs'), SLD_QCOPD_VERSION, true );
 
             wp_add_inline_script( 'jquery-sld-form-processor', 
-                                    'var qc_sld_ajaxurl    = "' . admin_url('admin-ajax.php') . '";
-                                    var qc_sld_ajax_nonce  = "'. wp_create_nonce( 'qc-clr' ).'";   
+                                    'var qc_sld_ajaxurl    = "' . esc_url( admin_url('admin-ajax.php') ) . '";
+                                    var qc_sld_ajax_nonce  = "'. esc_js( wp_create_nonce( 'qc-clr' ) ) .'";   
                                 ', 'before');
             
         }
@@ -83,7 +87,7 @@ if ( ! function_exists( 'qc_sld_promo_support_page_callback_func' ) ) {
                     <h5><?php esc_html_e('All our Pro Version users get Premium, Guaranteed Quick, One on One Priority Support.', 'simple-link-directory'); ?></h5>
                     <div class="support-btn">
                         <a class="premium-support" href="<?php echo esc_url('https://qc.turbopowers.com/'); ?>" target="_blank"><?php esc_html_e('Get Priority Support ', 'simple-link-directory'); ?></a>
-                        <a style="width:282px" class="premium-support" href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>" target="_blank"><?php esc_html_e('Online KnowledgeBase', 'simple-link-directory'); ?></a>
+                        <a style="width:282px" class="premium-support" href="<?php echo esc_url('https://www.quantumcloud.net/resources/kb-sections/simple-link-directory/'); ?>" target="_blank"><?php esc_html_e('Online KnowledgeBase', 'simple-link-directory'); ?></a>
                     </div>
                 </div>
             

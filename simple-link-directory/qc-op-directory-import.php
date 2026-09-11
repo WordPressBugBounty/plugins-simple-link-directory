@@ -83,13 +83,19 @@ class Qcopd_BulkImportFree
 
                                     check_admin_referer('qcopd_sld_import_nonce');
 
-                                    if (function_exists('is_user_logged_in') && is_user_logged_in() && current_user_can('manage_options')) {
+                                    if (function_exists('is_user_logged_in') && is_user_logged_in() && current_user_can('manage_options') && isset($_FILES['csv_upload'])) {
 
                                         if (!function_exists('wp_handle_upload')) {
                                             require_once(ABSPATH . 'wp-admin/includes/file.php');
                                         }
 
-                                        $uploadedfile = $_FILES['csv_upload'];
+                                        $uploadedfile = array(
+                                            'name'     => isset($_FILES['csv_upload']['name']) ? sanitize_file_name(wp_unslash($_FILES['csv_upload']['name'])) : '',
+                                            'type'     => isset($_FILES['csv_upload']['type']) ? sanitize_mime_type(wp_unslash($_FILES['csv_upload']['type'])) : '',
+                                            'tmp_name' => isset($_FILES['csv_upload']['tmp_name']) ? sanitize_text_field(wp_unslash($_FILES['csv_upload']['tmp_name'])) : '',
+                                            'error'    => isset($_FILES['csv_upload']['error']) ? intval($_FILES['csv_upload']['error']) : 4,
+                                            'size'     => isset($_FILES['csv_upload']['size']) ? intval($_FILES['csv_upload']['size']) : 0,
+                                        );
 
                                         $upload_overrides = array(
                                             'mimes' => array(
@@ -102,34 +108,55 @@ class Qcopd_BulkImportFree
 
                                         if ($movefile && !isset($movefile['error'])) {
 
+                                            global $wp_filesystem;
+                                            if (empty($wp_filesystem)) {
+                                                require_once ABSPATH . '/wp-admin/includes/file.php';
+                                                WP_Filesystem();
+                                            }
+
                                             $tmpName = $movefile['file'];
-                                            $file = fopen($tmpName, "r");
-                                            $flag = true;
-                                            
                                             $baseData = array();
                                             $count = 0;
 
-                                            while (($data = fgetcsv($file)) !== FALSE) {
-                                                if ($flag) {
-                                                    $flag = false;
-                                                    continue;
+                                            if ($wp_filesystem && $wp_filesystem->exists($tmpName)) {
+                                                $file_content = $wp_filesystem->get_contents($tmpName);
+                                                $csv_rows = qcopd_parse_csv_string($file_content);
+                                                $flag = true;
+
+                                                foreach ($csv_rows as $data) {
+                                                    if (empty($data) || !isset($data[0])) {
+                                                        continue;
+                                                    }
+                                                    if ($flag) {
+                                                        $flag = false;
+                                                        continue;
+                                                    }
+
+                                                    $data0 = isset($data[0]) ? $data[0] : '';
+                                                    $data1 = isset($data[1]) ? $data[1] : '';
+                                                    $data2 = isset($data[2]) ? $data[2] : '';
+                                                    $data3 = isset($data[3]) ? trim($data[3]) : 0;
+                                                    $data4 = isset($data[4]) ? trim($data[4]) : 0;
+                                                    $data5 = isset($data[5]) ? trim($data[5]) : '';
+                                                    $data6 = isset($data[6]) ? trim($data[6]) : '';
+
+                                                    $enc1 = mb_detect_encoding($data1) ? mb_detect_encoding($data1) : 'UTF-8';
+                                                    $enc2 = mb_detect_encoding($data2) ? mb_detect_encoding($data2) : 'UTF-8';
+
+                                                    $baseData[$data0][] = array(
+                                                        'list_title' => sanitize_text_field(iconv($enc1, 'UTF-8//IGNORE', $data0)),
+                                                        'qcopd_item_title' => sanitize_text_field(iconv($enc1, 'UTF-8//IGNORE', $data1)),
+                                                        'qcopd_item_link' => esc_url_raw(iconv($enc2, 'UTF-8//IGNORE', $data2)),
+                                                        'qcopd_item_img' => '',
+                                                        'qcopd_item_nofollow' => sanitize_text_field($data3),
+                                                        'qcopd_item_newtab' => sanitize_text_field($data4),
+                                                        'qcopd_item_subtitle' => sanitize_text_field($data5),
+                                                        'list_item_bg_color' => sanitize_text_field($data6)
+                                                    );
+
+                                                    $count++;
                                                 }
-
-                                                $baseData[$data[0]][] = array(
-                                                    'list_title' => isset($data[0]) ? sanitize_text_field(iconv(mb_detect_encoding($data[1]), "UTF-8", $data[0])) : '',
-                                                    'qcopd_item_title' => isset($data[1]) ? sanitize_text_field(iconv(mb_detect_encoding($data[1]), "UTF-8", $data[1])) : '',
-                                                    'qcopd_item_link' => isset($data[2]) ? esc_url_raw(iconv(mb_detect_encoding($data[2]), "UTF-8", $data[2])) : '',
-                                                    'qcopd_item_img' => '',
-                                                    'qcopd_item_nofollow' => isset($data[3]) ? sanitize_text_field(trim($data[3])) : 0,
-                                                    'qcopd_item_newtab' => isset($data[4]) ? sanitize_text_field(trim($data[4])) : 0,
-                                                    'qcopd_item_subtitle' => isset($data[5]) ? sanitize_text_field(trim($data[5])) : '',
-                                                    'list_item_bg_color' => isset($data[6]) ? sanitize_text_field(trim($data[6])) : ''
-                                                );
-
-                                                $count++;
                                             }
-
-                                            fclose($file);
                                             
                                             $keyCounter = 0;
                                             $metaCounter = 0;
@@ -174,7 +201,7 @@ class Qcopd_BulkImportFree
                                                 echo '<div class="sld-alert-warning" style="background: #ecfdf5; border-color: #10b981; color: #065f46;"><strong>' . esc_html('RESULT:', 'simple-link-directory') . '</strong> ' . esc_attr($keyCounter) . ' ' . esc_html('entry with', 'simple-link-directory') . ' <strong>' . esc_attr($metaCounter) . '</strong> ' . esc_html('element(s) was made successfully.', 'simple-link-directory') . '</div>';
                                             }
                                             if (file_exists($movefile['file'])) {
-                                                unlink($movefile['file']);
+                                                wp_delete_file($movefile['file']);
                                             }
                                         }
                                     }
@@ -204,7 +231,7 @@ class Qcopd_BulkImportFree
                                 <!-- Modernized Footer -->
                                 <div class="sld-import-footer">
                                     <?php esc_html_e('Crafted By:', 'simple-link-directory'); ?> 
-                                    <a href="<?php echo esc_url('http://www.quantumcloud.com'); ?>" target="_blank" rel="nofollow">
+                                    <a href="<?php echo esc_url('http://www.quantumcloud.net'); ?>" target="_blank" rel="nofollow">
                                         <?php esc_html_e('Web Design Company', 'simple-link-directory'); ?>
                                     </a> 
                                     <?php esc_html_e('- QuantumCloud', 'simple-link-directory'); ?>

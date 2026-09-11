@@ -81,7 +81,7 @@
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 
 	.cmb-delete-field .cmb-delete-field-icon {
-		background-image: url( '../../images/cmb-icon-remove@2x.png');
+		background-image: url( '../../images/cmb-icon-remove2x.png');
 		background-size: 8px 8px;
 	}
 

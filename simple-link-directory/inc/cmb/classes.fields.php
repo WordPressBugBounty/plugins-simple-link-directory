@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * Abstract class for all fields.
@@ -552,7 +555,7 @@ class CMB_Image_Field extends CMB_File_Field {
 
 			</div>
 
-			<button class="button cmb-file-upload <?php echo esc_attr( $this->get_value() ) ? 'hidden' : '' ?>" data-nonce="<?php echo wp_create_nonce( 'cmb-file-upload-nonce' ); ?>">
+			<button class="button cmb-file-upload <?php echo esc_attr( $this->get_value() ) ? 'hidden' : '' ?>" data-nonce="<?php echo esc_attr( wp_create_nonce( 'cmb-file-upload-nonce' ) ); ?>">
 				<?php esc_html_e( 'Add Image', 'simple-link-directory' ); ?>
 			</button>
 
@@ -624,19 +627,26 @@ class CMB_Image_Field extends CMB_File_Field {
 	 */
 	static function request_image_ajax_callback() {
 
-		if ( ! ( isset( $_POST['nonce'] ) && wp_verify_nonce( $_POST['nonce'], 'cmb-file-upload-nonce' ) ) )
+		if ( ! ( isset( $_POST['nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['nonce'] ) ), 'cmb-file-upload-nonce' ) ) ) {
 			return;
+		}
 
-		$id = intval( $_POST['id'] );
+		$id = isset( $_POST['id'] ) ? absint( wp_unslash( $_POST['id'] ) ) : 0;
+
+		$width  = isset( $_POST['width'] ) ? intval( wp_unslash( $_POST['width'] ) ) : 0;
+		$height = isset( $_POST['height'] ) ? intval( wp_unslash( $_POST['height'] ) ) : 0;
+		$crop   = isset( $_POST['crop'] ) ? (bool) wp_unslash( $_POST['crop'] ) : false;
 
 		$size = array(
-			intval( $_POST['width'] ),
-			intval( $_POST['height'] ),
-			'crop' => (bool) $_POST['crop']
+			$width,
+			$height,
+			'crop' => $crop,
 		);
 
 		$image = wp_get_attachment_image_src( $id, $size );
-		echo reset( $image );
+		if ( $image ) {
+			echo esc_url( reset( $image ) );
+		}
 
 		die(); // this is required to return a proper result
 	}
@@ -740,7 +750,7 @@ class CMB_Date_Timestamp_Field extends CMB_Field {
 
 	public function html() { ?>
 
-		<input <?php $this->id_attr(); ?> <?php $this->boolean_attr(); ?> <?php $this->class_attr( 'cmb_text_small cmb_datepicker' ); ?> type="text" <?php $this->name_attr(); ?>  value="<?php echo $this->value ? esc_attr( date( 'm\/d\/Y', $this->value ) ) : '' ?>" />
+		<input <?php $this->id_attr(); ?> <?php $this->boolean_attr(); ?> <?php $this->class_attr( 'cmb_text_small cmb_datepicker' ); ?> type="text" <?php $this->name_attr(); ?>  value="<?php echo $this->value ? esc_attr( gmdate( 'm\/d\/Y', $this->value ) ) : '' ?>" />
 
 	<?php }
 
@@ -773,8 +783,8 @@ class CMB_Datetime_Timestamp_Field extends CMB_Field {
 
 	public function html() { ?>
 
-		<input <?php $this->id_attr('date'); ?> <?php $this->boolean_attr(); ?> <?php $this->class_attr( 'cmb_text_small cmb_datepicker' ); ?> type="text" <?php $this->name_attr( '[date]' ); ?>  value="<?php echo $this->value ? esc_attr( date( 'm\/d\/Y', $this->value ) ) : '' ?>" />
-		<input <?php $this->id_attr('time'); ?> <?php $this->boolean_attr(); ?> <?php $this->class_attr( 'cmb_text_small cmb_timepicker' ); ?> type="text" <?php $this->name_attr( '[time]' ); ?> value="<?php echo $this->value ? esc_attr( date( 'h:i A', $this->value ) ) : '' ?>" />
+		<input <?php $this->id_attr('date'); ?> <?php $this->boolean_attr(); ?> <?php $this->class_attr( 'cmb_text_small cmb_datepicker' ); ?> type="text" <?php $this->name_attr( '[date]' ); ?>  value="<?php echo $this->value ? esc_attr( gmdate( 'm\/d\/Y', $this->value ) ) : '' ?>" />
+		<input <?php $this->id_attr('time'); ?> <?php $this->boolean_attr(); ?> <?php $this->class_attr( 'cmb_text_small cmb_timepicker' ); ?> type="text" <?php $this->name_attr( '[time]' ); ?> value="<?php echo $this->value ? esc_attr( gmdate( 'h:i A', $this->value ) ) : '' ?>" />
 
 	<?php }
 
@@ -969,7 +979,7 @@ class CMB_wysiwyg extends CMB_Field {
 
 		$field_id = $this->get_js_id();
 
-		printf( '<div class="cmb-wysiwyg" data-id="%s" data-name="%s" data-field-id="%s">', $id, $name, $field_id );
+		printf( '<div class="cmb-wysiwyg" data-id="%s" data-name="%s" data-field-id="%s">', esc_attr( $id ), esc_attr( $name ), esc_attr( $field_id ) );
 
 		if ( $this->is_placeholder() ) 	{
 
@@ -987,7 +997,7 @@ class CMB_wysiwyg extends CMB_Field {
 				if ( 'undefined' === typeof( cmb_wysiwyg_editors ) )
 					var cmb_wysiwyg_editors = {};
 				/*<!--*/
-				cmb_wysiwyg_editors.<?php echo $field_id; ?> = '<?php echo $editor; ?>';
+				cmb_wysiwyg_editors.<?php echo esc_js( $field_id ); ?> = '<?php echo esc_js( $editor ); ?>';
 				/*-->*/
 			</script>
 
@@ -996,7 +1006,7 @@ class CMB_wysiwyg extends CMB_Field {
 		} else {
 
 			$this->args['options']['textarea_name'] = $name;
-			echo wp_editor( $this->get_value(), $id, $this->args['options'] );
+			wp_editor( $this->get_value(), $id, $this->args['options'] );
 
 		}
 
@@ -1120,7 +1130,7 @@ class CMB_Select extends CMB_Field {
 		>
 
 			<?php if ( $this->args['allow_none'] ) : ?>
-				<option value=""><?php echo $none; ?></option>
+				<option value=""><?php echo esc_html( $none ); ?></option>
 			<?php endif; ?>
 
 			<?php foreach ( $this->args['options'] as $value => $name ): ?>
@@ -1209,7 +1219,7 @@ class CMB_Taxonomy extends CMB_Select {
 
 	private function get_terms() {
 
-		return get_terms( $this->args['taxonomy'], array( 'hide_empty' => $this->args['hide_empty'] ) );
+		return get_terms( array( 'taxonomy' => $this->args['taxonomy'], 'hide_empty' => $this->args['hide_empty'] ) );
 
 	}
 
@@ -1400,13 +1410,12 @@ class CMB_Post_Select extends CMB_Select {
 // TODO this should be in inside the class
 function cmb_ajax_post_select() {
 
-	$post_id = ! empty( $_POST['post_id'] ) ? intval( $_POST['post_id'] ) : false;
-	$nonce   = ! empty( $_POST['nonce'] ) ? sanitize_text_field($_POST['nonce']) : false;
-	$args    = ! empty( $_POST['query'] ) ? sanitize_text_field($_POST['query']) : array();
+	$post_id = ! empty( $_POST['post_id'] ) ? absint( wp_unslash( $_POST['post_id'] ) ) : 0;
+	$nonce   = ! empty( $_POST['nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '';
+	$args    = ! empty( $_POST['query'] ) && is_array( $_POST['query'] ) ? array_map( 'sanitize_text_field', wp_unslash( $_POST['query'] ) ) : ( ! empty( $_POST['query'] ) ? sanitize_text_field( wp_unslash( $_POST['query'] ) ) : array() );
 
 	if ( ! $nonce || ! wp_verify_nonce( $nonce, 'cmb_select_field' ) || ! current_user_can( 'edit_post', $post_id ) ) {
-		echo json_encode( array( 'total' => 0, 'posts' => array() ) );
-		exit;
+		wp_send_json( array( 'total' => 0, 'posts' => array() ) );
 	}
 
 	$args['fields'] = 'ids'; // Only need to retrieve post IDs.
@@ -1419,9 +1428,7 @@ function cmb_ajax_post_select() {
 		array_push( $json['posts'], array( 'id' => $post_id, 'text' => html_entity_decode( get_the_title( $post_id ) ) ) );
 	}
 
-	echo json_encode( $json );
-
-	exit;
+	wp_send_json( $json );
 
 }
 add_action( 'wp_ajax_cmb_post_select', 'cmb_ajax_post_select' );

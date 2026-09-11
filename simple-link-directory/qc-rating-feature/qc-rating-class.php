@@ -4,6 +4,10 @@
 * Revised On: 06-01-2017
 */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /*******************************
  * Main Class to Display Support
  * form and the promo pages
@@ -93,7 +97,7 @@ if( !class_exists('Qcrating') ){
 		}
 		
 		public function qc_load_rating_style(){
-			wp_enqueue_style( 'qc_rating_stylesheet', plugin_dir_url(__FILE__)."css/style.css");
+			wp_enqueue_style( 'qc_rating_stylesheet', plugin_dir_url(__FILE__)."css/style.css", array(), SLD_QCOPD_VERSION );
 		}
 		
 		public function qc_rating_notice_message(){
@@ -105,7 +109,7 @@ if( !class_exists('Qcrating') ){
 			
 			$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
 
-			$scheme      = ( parse_url( $request_uri, PHP_URL_QUERY ) ) ? '&' : '?';
+			$scheme      = ( wp_parse_url( $request_uri, PHP_URL_QUERY ) ) ? '&' : '?';
 			
 			$url         = $request_uri . $scheme . 'qc_'.$this->plugin_name.'_rating_dismiss=yes';
 			

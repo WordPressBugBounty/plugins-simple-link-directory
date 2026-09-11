@@ -1,5 +1,5 @@
 <?php
-if (defined('ABSPATH') === false) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
@@ -228,7 +228,7 @@ if( !function_exists('qcopd_sld_free_ai_function_first_sld_ajax') ){
                                             printf(
                                             /* translators: 1: URL to WordPress Updates screen, 2: URL to Update PHP page. */
                                                 ' ' . esc_html( '<a href="%1$s">Please update WordPress</a>, and then <a href="%2$s">learn more about updating PHP</a>.' ),
-                                                self_admin_url( 'update-core.php' ),
+                                                esc_url( self_admin_url( 'update-core.php' ) ),
                                                 esc_url( wp_get_update_php_url() )
                                             );
                                             wp_update_php_annotation( '</p><p><em>', '</em>' );
@@ -236,7 +236,7 @@ if( !function_exists('qcopd_sld_free_ai_function_first_sld_ajax') ){
                                             printf(
                                             /* translators: %s: URL to WordPress Updates screen. */
                                                 ' ' . esc_html( '<a href="%s">Please update WordPress</a>.' ),
-                                                self_admin_url( 'update-core.php' )
+                                                esc_url( self_admin_url( 'update-core.php' ) )
                                             );
                                         } elseif ( current_user_can( 'update_php' ) ) {
                                             printf(
@@ -252,7 +252,7 @@ if( !function_exists('qcopd_sld_free_ai_function_first_sld_ajax') ){
                                             printf(
                                             /* translators: %s: URL to WordPress Updates screen. */
                                                 ' ' . esc_html( '<a href="%s">Please update WordPress</a>.' ),
-                                                self_admin_url( 'update-core.php' )
+                                                esc_url( self_admin_url( 'update-core.php' ) )
                                             );
                                         }
                                     } elseif ( ! $compatible_php ) {
@@ -282,7 +282,7 @@ if( !function_exists('qcopd_sld_free_ai_function_first_sld_ajax') ){
                                     <div class="action-links">
                                         <?php
                                         if ( $action_links ) {
-                                            echo '<ul class="plugin-action-buttons"><li>' . implode( '</li><li>', $action_links ) . '</li></ul>';
+                                            echo wp_kses_post( '<ul class="plugin-action-buttons"><li>' . implode( '</li><li>', $action_links ) . '</li></ul>' );
                                         }
                                         ?>
                                     </div>
@@ -312,8 +312,7 @@ if( !function_exists('qcopd_sld_free_ai_function_first_sld_ajax') ){
         </div>
 <?php 
 
-    echo  ob_get_clean();
-    exit();
+    wp_die();
 
         }
 

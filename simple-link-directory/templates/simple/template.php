@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 wp_enqueue_style('sld-css-simple' ); 
 
 
@@ -20,8 +23,74 @@ if ( $list_query->have_posts() )
 	
 	if(get_option('sld_enable_top_part')=='on' || get_option('sld_enable_search')=='on') :
 		
-	 do_action('qcopd_sld_attach_embed_btn', $shortcodeAtts);
+	do_action('qcopd_sld_attach_embed_btn', $shortcodeAtts);
 	
+	endif;
+
+	$sld_featured = qcopd_get_featured_section_data( $list_query );
+	if ( $sld_featured ) :
+		$sld_feat_count = 1;
+		$sld_feat_cols  = max( 1, absint( $column ) );
+		if ( $sld_feat_cols > 4 ) {
+			$sld_feat_cols = 4;
+		}
+		$sld_feat_per_col = (int) ceil( count( $sld_featured['items'] ) / $sld_feat_cols );
+		$sld_feat_chunks  = array_chunk( $sld_featured['items'], max( 1, $sld_feat_per_col ) );
+		?>
+		<div class="qcld-main-container-style-simple sld-featured-strip <?php echo esc_attr( $sld_featured['bg_class'] ); ?>" style="background: <?php echo esc_attr( $sld_featured['bg'] ); ?>;">
+			<?php qcopd_render_featured_heading( $sld_featured['total'] ); ?>
+			<div class="sld-featured-columns sld-feat-cols-<?php echo esc_attr( $sld_feat_cols ); ?>">
+			<?php foreach ( $sld_feat_chunks as $sld_feat_chunk ) : ?>
+				<div class="qcopd-list-column simple">
+					<div class="qcopd-single-list">
+						<ul>
+						<?php foreach ( $sld_feat_chunk as $sld_ficon ) :
+							$list = $sld_ficon['list'];
+							$feat_post_id = $sld_ficon['post_id'];
+							$item_url   = isset( $list['qcopd_item_link'] ) ? esc_url( $list['qcopd_item_link'] ) : '';
+							$masked_url = $item_url;
+							?>
+							<li id="item-feat-<?php echo esc_attr( $feat_post_id . '-' . $sld_feat_count ); ?>" style="<?php echo ( isset($list['list_item_bg_color']) && !empty($list['list_item_bg_color']) ) ? 'background:'. esc_attr($list['list_item_bg_color']) : ''; ?>">
+								<a <?php if( isset($mask_url) && $mask_url == 'on') { echo 'onclick="document.location.href = \'' . esc_js($item_url) . '\'; return false;"'; } ?> <?php echo (isset($list['qcopd_item_nofollow']) && $list['qcopd_item_nofollow'] == 1) ? 'rel="nofollow"' : ''; ?> href="<?php echo esc_url($masked_url); ?>"
+									<?php echo (isset($list['qcopd_item_newtab']) && $list['qcopd_item_newtab'] == 1) ? 'target="_blank"' : ''; ?>>
+									<?php if( ($list_img == "true") && isset($list['qcopd_item_img'])  && $list['qcopd_item_img'] != "" ) : ?>
+										<span class="list-img">
+											<?php $img = wp_get_attachment_image_src($list['qcopd_item_img']); ?>
+											<img src="<?php echo ( isset($img[0]) ? esc_url($img[0]) : '' ); ?>" alt="<?php echo ( isset($list['qcopd_item_title']) ? esc_html($list['qcopd_item_title']) : '' ); ?>">
+										</span>
+									<?php else : ?>
+										<span class="list-img">
+											<img src="<?php echo esc_url( SLD_QCOPD_IMG_URL ); ?>/list-image-placeholder.png" alt="">
+										</span>
+									<?php endif; ?>
+									<?php echo ( isset($list['qcopd_item_title']) ? esc_html(trim($list['qcopd_item_title'])) : '' ); ?>
+								</a>
+								<?php if( $upvote == 'on' ) : ?>
+									<div class="upvote-section">
+										<span data-post-id="<?php echo esc_attr( $feat_post_id ); ?>" data-item-title="<?php echo ( isset($list['qcopd_item_title']) ? esc_html(trim($list['qcopd_item_title'])) : '' ); ?>" data-item-link="<?php echo  ( isset($list['qcopd_item_link']) ? esc_url($list['qcopd_item_link']) : '' ); ?>" class="upvote-btn upvote-on">
+											<i class="fa fa-thumbs-up"></i>
+										</span>
+										<span class="upvote-count">
+											<?php
+											  if( isset($list['qcopd_upvote_count']) && (int)$list['qcopd_upvote_count'] > 0 ){
+											  	echo (int)$list['qcopd_upvote_count'];
+											  }
+											?>
+										</span>
+									</div>
+								<?php endif; ?>
+								<div class="featured-section">
+									<i class="fa fa-bolt"></i>
+								</div>
+							</li>
+						<?php $sld_feat_count++; endforeach; ?>
+						</ul>
+					</div>
+				</div>
+			<?php endforeach; ?>
+			</div>
+		</div>
+		<?php
 	endif;
 
 	//Directory Wrap or Container

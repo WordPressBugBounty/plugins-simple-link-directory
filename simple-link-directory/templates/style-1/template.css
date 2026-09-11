@@ -57,8 +57,8 @@ color: #222;
 }
 
 .qcld-main-container-style-1 .style-1 .upvote-section.style-1-upvote-section{
-  padding-right: 1rem !important;
-  padding-left: 1rem !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
   border: 1px solid #dee2e6 !important;
   top: 6px !important;
   position: absolute !important;
@@ -220,15 +220,112 @@ border: 1px solid rgb(28 162 252 / 99%) !important;
 }
 
 .qcld-main-container-style-1 .style-1 .featured-section {
-  padding-right: 1rem !important;
-  padding-left: 1rem !important;
-  border: 1px solid #dee2e6 !important;
-  top: 40px !important;
-  position: absolute !important;
-  right: 6px !important;
-  border-color: rgb(28 162 252 / 21%) !important;
-  background-color: #ffeb3b;
-  border-radius: 50rem !important;
-  cursor: pointer;
-  color: #222;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #dee2e6 !important;
+    top: 6px !important;
+    position: absolute !important;
+    left: 6px !important;
+    border-color: rgb(28 162 252 / 21%) !important;
+    background-color: #ffeb3b;
+    border-radius: 50rem !important;
+    cursor: pointer;
+    color: #222;
+    height: auto;
+    line-height: normal;
+}
+
+.qcld-main-container-style-1 .sld-featured-strip {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 20px;
+  padding: 18px 15px 8px 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-featured-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 8px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid rgb(28 162 252 / 25%);
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-featured-heading-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-featured-heading h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-featured-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: #1ca2fc;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 50rem;
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-featured-heading-count {
+  font-size: 13px;
+  color: #1ca2fc;
+  white-space: nowrap;
+}
+.qcld-main-container-style-1 .sld-featured-strip.sld-featured-strip-dark .sld-featured-heading h2,
+.qcld-main-container-style-1 .sld-featured-strip.sld-featured-strip-dark .sld-featured-heading-count {
+  color: #fff;
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-featured-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-featured-columns .qcopd-list-column {
+  float: none !important;
+  margin: 0 !important;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-1 .qcopd-list-column {
+  width: 100%;
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-2 .qcopd-list-column {
+  width: calc((100% - 10px) / 2);
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-3 .qcopd-list-column {
+  width: calc((100% - 20px) / 3);
+}
+.qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-4 .qcopd-list-column {
+  width: calc((100% - 30px) / 4);
+}
+
+@media (max-width: 767px) {
+  .qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-2 .qcopd-list-column,
+  .qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-3 .qcopd-list-column,
+  .qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-4 .qcopd-list-column {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-3 .qcopd-list-column,
+  .qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-4 .qcopd-list-column {
+    width: calc((100% - 10px) / 2);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .qcld-main-container-style-1 .sld-featured-strip .sld-feat-cols-4 .qcopd-list-column {
+    width: calc((100% - 20px) / 3);
+  }
 }

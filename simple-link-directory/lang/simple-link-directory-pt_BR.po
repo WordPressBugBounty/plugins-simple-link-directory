@@ -1,0 +1,1621 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple-link-directory (AI Translated)\n"
+"Report-Msgid-Bugs-To: https://www.quantumcloud.net/\n"
+"POT-Creation-Date: 2026-09-07 06:32+0000\n"
+"PO-Revision-Date: 2026-09-07 06:32+0000\n"
+"Last-Translator: AI Language Packs <support@quantumcloud.net>\n"
+"Language-Team: Português do Brasil (Portuguese (Brazil))\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: AI Language Packs WordPress Plugin v1.0.2\n"
+
+msgid "We can't detect any plugin information. This is most probably because you have not included the code in the plugin main file."
+msgstr "Não conseguimos detectar nenhuma informação do plugin. Isso provavelmente ocorre porque você não incluiu o código no arquivo principal do plugin."
+
+msgid "Sorry to see you go"
+msgstr "Lamentamos vê-lo partir"
+
+msgid "Found a Bug"
+msgstr "Encontrei um Erro"
+
+msgid "Need More Features"
+msgstr "Preciso de Mais Recursos"
+
+msgid "Deactivating Temporarily"
+msgstr "Desativando Temporariamente"
+
+msgid "Upgrading to Pro"
+msgstr "Atualizando para a Versão Pro"
+
+msgid "Please provide email so we can contact with bug fixes"
+msgstr "Por favor, forneça um e-mail para que possamos entrar em contato sobre as correções de bugs"
+
+msgid "Please provide some details so we can improve the plugin"
+msgstr "Por favor, forneça alguns detalhes para que possamos melhorar o plugin"
+
+msgid "Submitting form"
+msgstr "Enviando formulário"
+
+msgid "Settings"
+msgstr "Configurações"
+
+msgid "Shortcodes and Help"
+msgstr "Shortcodes e Ajuda"
+
+msgid "Support"
+msgstr "Suporte"
+
+msgid "Live Search Items"
+msgstr "Itens de Pesquisa em Tempo Real"
+
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+msgid "Share List"
+msgstr "Compartilhar Lista"
+
+msgid "Generate Embed Code For This List"
+msgstr "Gerar Código de Incorporação para Esta Lista"
+
+msgid "Width: (in '%' or 'px')"
+msgstr "Largura: (em '%' ou 'px')"
+
+msgid "%"
+msgstr "%"
+
+msgid "px"
+msgstr "px"
+
+msgid "Height: (in 'px')"
+msgstr "Altura: (em 'px')"
+
+msgid "Generate & Copy"
+msgstr "Gerar e Copiar"
+
+msgid "Generated Code"
+msgstr "Código Gerado"
+
+msgid "Hit \\"
+msgstr "Pressione \\"
+
+msgid "ASC"
+msgstr "ASC"
+
+msgid "all"
+msgstr "todos"
+
+msgid "3"
+msgstr "3"
+
+msgid "simple"
+msgstr "simples"
+
+msgid "SLD - Shortcode Maker"
+msgstr "SLD - Criador de Shortcodes"
+
+msgid "SLD — Shortcode Maker"
+msgstr "SLD — Criador de Shortcodes"
+
+msgid "Generate SLD Shortcode"
+msgstr "Gerar Shortcode SLD"
+
+msgid "Are you sure you want to delete this field?"
+msgstr "Tem certeza de que deseja excluir este campo?"
+
+msgid "Add New List Items"
+msgstr "Adicionar Novos Itens à Lista"
+
+msgid "Remove Field"
+msgstr "Remover Campo"
+
+msgid "Add File"
+msgstr "Adicionar Arquivo"
+
+msgid "Remove"
+msgstr "Remover"
+
+msgid "Add Image"
+msgstr "Adicionar Imagem"
+
+msgid "None"
+msgstr "Nenhum"
+
+msgid "Type to search"
+msgstr "Digite para pesquisar"
+
+msgid "Drag to set the exact location"
+msgstr "Arraste para definir o local exato"
+
+msgid "AddOns"
+msgstr "Complementos"
+
+msgid "Simple Link Directory"
+msgstr "Diretório de Links Simples"
+
+msgid "Simple Link Directory Pro"
+msgstr "Diretório de Links Simples Pro"
+
+msgid " Addons"
+msgstr " Addons"
+
+msgid "MultiPage Advanced Addon"
+msgstr "Addon Avançado MultiPágina"
+
+msgid "Global Search, Pagination, Category view with Lists on home page."
+msgstr "Busca Global, Paginação, Visualização por Categoria com Listas na página inicial."
+
+msgid "Get It Now"
+msgstr "Obtenha Agora"
+
+msgid "Directory Broken Link Checker"
+msgstr "Verificador de Links Quebrados do Diretório"
+
+msgid "Check Broken Links for SLD and SBD and other Post Types Links"
+msgstr "Verifique Links Quebrados para SLD e SBD e Links de Outros Tipos de Post."
+
+msgid "Review, Rating for SLD Pro"
+msgstr "Avaliação, Classificação para SLD Pro"
+
+msgid "Allow your site users to leave a review comment and rate the link listings."
+msgstr "Permita que os usuários do seu site deixem um comentário de avaliação e classifiquem as listagens de links."
+
+msgid "Link Exchange AddOn for SLD Pro"
+msgstr "Addon de Troca de Links para SLD Pro"
+
+msgid "Allow your site users Exchange Links with Other Websites"
+msgstr "Permita que os usuários do seu site troquem links com outros sites."
+
+msgid "Themes"
+msgstr "Temas"
+
+msgid "Simple Link Directory Theme"
+msgstr "Tema do Diretório de Links Simples"
+
+msgid "Not Installed"
+msgstr "Não Instalado"
+
+msgid "Crafted carefully to make the best out of the popular Simple Link Directory plugin. One Click Install, Demo Data, Compatible with the Elementor and the Gutenberg Page Builder!"
+msgstr "Criado cuidadosamente para aproveitar ao máximo o popular plugin Simple Link Directory. Instalação com Um Clique, Dados de Demonstração, Compatível com o Elementor e o Construtor de Páginas Gutenberg!"
+
+msgid "Try our Free AI ChatBot - WPBot"
+msgstr "Experimente nosso ChatBot de IA Gratuito - WPBot"
+
+msgid "Get the Best ChatBot for WordPress – WPBot"
+msgstr "Obtenha o Melhor ChatBot para WordPress – WPBot"
+
+msgid "Do more than just chat with your ChatBot!"
+msgstr "Faça mais do que apenas conversar com seu ChatBot!"
+
+msgid "Do more than just chat with your ChatBot"
+msgstr "Faça mais do que apenas conversar com seu ChatBot"
+
+msgid "More Leads, Conversions"
+msgstr "Mais Leads, Conversões"
+
+msgid "Satisfied customers while"
+msgstr "Clientes satisfeitos enquanto"
+
+msgid "saving time"
+msgstr "economizando tempo"
+
+msgid "increasing your"
+msgstr "aumentando suas"
+
+msgid "business opportunities"
+msgstr "oportunidades de negócios"
+
+msgid "WPBot is the best ChatBot for WordPress to improve user engagement,"
+msgstr "WPBot é o melhor ChatBot para WordPress para melhorar o engajamento do usuário,"
+
+msgid "Generate Leads,"
+msgstr "Gerar Leads,"
+
+msgid "provide"
+msgstr "fornecer"
+
+msgid "Automated Live"
+msgstr "Ao Vivo Automatizado"
+
+msgid "customer"
+msgstr "cliente"
+
+msgid "support"
+msgstr "suporte"
+
+msgid "across your website"
+msgstr "em seu site"
+
+msgid "social platforms."
+msgstr "e plataformas sociais."
+
+msgid "The"
+msgstr "O"
+
+msgid "AI Insight"
+msgstr "Insight de IA"
+
+msgid "feature analyzes chat histories"
+msgstr "recurso analisa históricos de chat"
+
+msgid "reveals what your users want."
+msgstr "e revela o que seus usuários querem."
+
+msgid "Deliver AI-powered ChatBot services from your websites with LLMs like"
+msgstr "Ofereça serviços de ChatBot com IA em seus sites com LLMs como"
+
+msgid "OpenAI"
+msgstr "OpenAI"
+
+msgid "(ChatGPT), Gemini etc. along with many built-in, powerful features like"
+msgstr "(ChatGPT), Gemini etc. juntamente com muitos recursos poderosos e integrados como"
+
+msgid "Live"
+msgstr "Ao Vivo"
+
+msgid "Chat, Chat"
+msgstr "Chat, Bate-papo"
+
+msgid "Histories"
+msgstr "Históricos"
+
+msgid "Conversational forms"
+msgstr "Formulários conversacionais"
+
+msgid "Webhooks"
+msgstr "Webhooks"
+
+msgid "more!"
+msgstr "mais!"
+
+msgid "Need More Assistance?"
+msgstr "Precisa de Mais Ajuda?"
+
+msgid "Our support team is ready to help you with any issues or custom requests."
+msgstr "Nossa equipe de suporte está pronta para ajudar com quaisquer problemas ou solicitações personalizadas."
+
+msgid "Knowledge Base"
+msgstr "Base de Conhecimento"
+
+msgid "Get Direct Support"
+msgstr "Obter Suporte Direto"
+
+msgid "Handcrafted for productivity."
+msgstr "Feito à mão para produtividade."
+
+msgid "By %s"
+msgstr "Por %s"
+
+msgid "Install %s now"
+msgstr "Instalar %s agora"
+
+msgid "Install Now"
+msgstr "Instalar Agora"
+
+msgid "Cannot Install"
+msgstr "Não é possível instalar"
+
+msgid "Update %s now"
+msgstr "Atualizar %s agora"
+
+msgid "Update Now"
+msgstr "Atualizar Agora"
+
+msgid "Cannot Update"
+msgstr "Não é possível atualizar"
+
+msgid "Active"
+msgstr "Ativo"
+
+msgid "Activate"
+msgstr "Ativar"
+
+msgid "Activate %s"
+msgstr "Ativar %s"
+
+msgid "Network Activate"
+msgstr "Ativar na Rede"
+
+msgid "Network Activate %s"
+msgstr "Ativar %s na Rede"
+
+msgid "Installed"
+msgstr "Instalado"
+
+msgid "More Details"
+msgstr "Mais Detalhes"
+
+msgid "This plugin doesn&#8217;t work with your versions of WordPress and PHP."
+msgstr "Este plugin não funciona com suas versões do WordPress e PHP."
+
+msgid "<a href=\\"
+msgstr "&lt;a href=\\"
+
+msgid "This plugin doesn&#8217;t work with your version of WordPress."
+msgstr "Este plugin não funciona com sua versão do WordPress."
+
+msgid "This plugin doesn&#8217;t work with your version of PHP."
+msgstr "Este plugin não funciona com sua versão do PHP."
+
+msgid "Live Preview"
+msgstr "Pré-visualização ao Vivo"
+
+msgid "No Results Found for Your Search"
+msgstr "Nenhum Resultado Encontrado para Sua Busca"
+
+msgid "Bulk Import"
+msgstr "Importação em Massa"
+
+msgid "Import"
+msgstr "Importar"
+
+msgid "Please Note:"
+msgstr "Observação:"
+
+msgid "The import feature is still under development. Right now it only allows importing and creating new Lists. Existing Lists will not get updated. Also, export feature is not available in free version."
+msgstr "O recurso de importação ainda está em desenvolvimento. No momento, ele permite apenas importar e criar novas Listas. Listas existentes não serão atualizadas. Além disso, o recurso de exportação não está disponível na versão gratuita."
+
+msgid "Sample CSV File:"
+msgstr "Arquivo CSV de Exemplo:"
+
+msgid "Download Sample"
+msgstr "Baixar Exemplo"
+
+msgid "PROCESS:"
+msgstr "PROCESSO:"
+
+msgid "First download the above CSV file."
+msgstr "Primeiro, baixe o arquivo CSV acima."
+
+msgid "Add/Edit rows on the top of it, by maintaing proper provided format/fields."
+msgstr "Adicione/Edite linhas no topo dele, mantendo o formato/campos fornecidos corretamente."
+
+msgid "Finally, upload file in the below form."
+msgstr "Por fim, envie o arquivo no formulário abaixo."
+
+msgid "NOTES:"
+msgstr "OBSERVAÇÕES:"
+
+msgid "It should be a simple CSV file."
+msgstr "Deve ser um arquivo CSV simples."
+
+msgid "File encoding should be in UTF-8"
+msgstr "A codificação do arquivo deve ser UTF-8"
+
+msgid "File must be prepared as per provided sample CSV file."
+msgstr "O arquivo deve ser preparado conforme o arquivo CSV de exemplo fornecido."
+
+msgid "RESULT:"
+msgstr "RESULTADO:"
+
+msgid "entry with"
+msgstr "entrada com"
+
+msgid "element(s) was made successfully."
+msgstr "elemento(s) foi feita com sucesso."
+
+msgid "Upload CSV File to Import"
+msgstr "Enviar Arquivo CSV para Importar"
+
+msgid "** CSV File & Characters must be saved with UTF-8 encoding **"
+msgstr "** O arquivo CSV e os caracteres devem ser salvos com codificação UTF-8 **"
+
+msgid "Upload & Process"
+msgstr "Enviar e Processar"
+
+msgid "Crafted By:"
+msgstr "Criado por:"
+
+msgid "Web Design Company"
+msgstr "Empresa de Web Design"
+
+msgid "- QuantumCloud"
+msgstr "- QuantumCloud"
+
+msgid "Upgrade to Pro"
+msgstr "Atualizar para Pro"
+
+msgid "Add New List of Links"
+msgstr "Adicionar Nova Lista de Links"
+
+msgid "**SLD Pro Tip: Did you know that you can"
+msgstr "**Dica Pro SLD: Você sabia que pode"
+
+msgid "Auto Generate"
+msgstr "Gerar Automaticamente"
+
+msgid "Title, Subtitle & Thumbnail with the Pro Version in Just 2 Clicks?"
+msgstr "Título, Subtítulo e Miniatura com a Versão Pro em Apenas 2 Cliques?"
+
+msgid "Triple Your Link Entry Speed!"
+msgstr "Triplique a Velocidade de Inserção de Links!"
+
+msgid "**SLD Tip: Lists are the base pillars of SLD, not individual links. Group your links into different Lists for the best performance."
+msgstr "**Dica SLD: Listas são os pilares base do SLD, não links individuais. Agrupe seus links em diferentes Listas para o melhor desempenho."
+
+msgid "**SLD Tip: SLD looks the best when you create multiple Lists and use the Show All Lists mode."
+msgstr "**Dica SLD: O SLD fica melhor quando você cria várias Listas e usa o modo Mostrar Todas as Listas."
+
+msgid "**SLD Pro Tip: Did you know that SLD Pro version lets you monetize your directory and earn"
+msgstr "**Dica Pro SLD: Você sabia que a versão Pro do SLD permite monetizar seu diretório e ganhar"
+
+msgid "passive income?"
+msgstr "renda passiva?"
+
+msgid "Upgrade now!"
+msgstr "Atualize agora!"
+
+msgid "**SLD Tip: Try to keep the maximum number of links below 30 per list. Create multiple Lists as needed."
+msgstr "**Dica SLD: Tente manter o número máximo de links abaixo de 30 por lista. Crie várias Listas conforme necessário."
+
+msgid "**SLD Tip: Use the handy shortcode generator to make life easy. It is a small, blue [SLD] button found at the toolbar of any page's visual editor."
+msgstr "**Dica SLD: Use o prático gerador de shortcodes para facilitar a vida. É um pequeno botão azul [SLD] encontrado na barra de ferramentas do editor visual de qualquer página."
+
+msgid "**SLD Pro Tip: You can display your"
+msgstr "**Dica Pro SLD: Você pode exibir suas"
+
+msgid "Lists by category"
+msgstr "Listas por categoria"
+
+msgid "with the SLD pro version."
+msgstr "com a versão pro do SLD."
+
+msgid "16+ Templates, Multi page mode"
+msgstr "Mais de 16 Modelos, modo de várias páginas"
+
+msgid ", Widgets are also available."
+msgstr ", Widgets também estão disponíveis."
+
+msgid "**SLD Tip: You can create a page with a contact form and link the Add Link button to that page so people can submit links to your directory by email."
+msgstr "**Dica SLD: Você pode criar uma página com um formulário de contato e vincular o botão Adicionar Link a essa página para que as pessoas possam enviar links para o seu diretório por e-mail."
+
+msgid "**SLD Tip: If you are having problem with adding more items or saving a list then you may need to increase max_input_vars value in server. Check the help section for more details."
+msgstr "**Dica SLD: Se você estiver tendo problemas para adicionar mais itens ou salvar uma lista, pode ser necessário aumentar o valor de max_input_vars no servidor. Verifique a seção de ajuda para mais detalhes."
+
+msgid "**SLD Pro Tip: SLD pro version has"
+msgstr "**Dica Pro SLD: A versão pro do SLD possui"
+
+msgid "front end dashboard"
+msgstr "painel de front-end"
+
+msgid "for user registration and link management. As well as tags and instant search."
+msgstr "para registro de usuário e gerenciamento de links. Além de tags e busca instantânea."
+
+msgid "Upgrade to the Pro version now!"
+msgstr "Atualize para a versão Pro agora!"
+
+msgid "Shortcode Generator for SLD"
+msgstr "Gerador de Shortcode para SLD"
+
+msgid "AI List Items Generator"
+msgstr "Gerador de Itens de Lista com IA"
+
+msgid "Click the button below to generate shortcode"
+msgstr "Clique no botão abaixo para gerar o shortcode"
+
+msgid "Generate Shortcode"
+msgstr "Gerar Shortcode"
+
+msgid "Please enable an AI provider (OpenAI, Gemini or OpenRouter) in Simple Link Directory %s first."
+msgstr "Por favor, ative um provedor de IA (OpenAI, Gemini ou OpenRouter) em Simple Link Directory %s primeiro."
+
+msgid "settings tab"
+msgstr "aba de configurações"
+
+msgid "Active AI Provider:"
+msgstr "Provedor de IA Ativo:"
+
+msgid "Topic:"
+msgstr "Tópico:"
+
+msgid "e.g., JavaScript coding"
+msgstr "ex: programação JavaScript"
+
+msgid "Number of Items:"
+msgstr "Número de Itens:"
+
+msgid "Generate & Add Items"
+msgstr "Gerar e Adicionar Itens"
+
+msgid "%s  %s  %s"
+msgstr "%s %s %s"
+
+msgid "%1$s Simple Link Directory %2$s works the best when you create multiple Lists and show them all in a page. Use the following shortcode to display All lists on any page:  %3$s  %4$s  %5$s  Use the %6$s shortcode generator %7$s to select style and other options. "
+msgstr "%1$s Simple Link Directory %2$s funciona melhor quando você cria várias Listas e as exibe todas em uma página. Use o seguinte shortcode para exibir Todas as listas em qualquer página: %3$s %4$s %5$s Use o %6$s gerador de shortcode %7$s para selecionar estilo e outras opções."
+
+msgid "%1$s Import Simple Link Directory Demo Data:%2$s %3$sImport demo data to see how the plugin works.%4$s %5$sWe will create a sample directory with multiple Lists and create a new demo page using shortcode.%6$s %7$sYou can edit or delete the sample Lists to your requirements.%8$s %9$s Click to Import Data %10$s %11$s"
+msgstr "%1$s Importar Dados de Demonstração do Simple Link Directory:%2$s %3$sImporte dados de demonstração para ver como o plugin funciona.%4$s %5$sCriaremos um diretório de exemplo com várias Listas e uma nova página de demonstração usando shortcode.%6$s %7$sVocê pode editar ou excluir as Listas de exemplo conforme suas necessidades.%8$s %9$s Clique para Importar Dados %10$s %11$s"
+
+msgid "Getting Started"
+msgstr "Primeiros Passos"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Read the Documentation"
+msgstr "Leia a Documentação"
+
+msgid "Ask for Help"
+msgstr "Pedir Ajuda"
+
+msgid "Check out the SLD Demo"
+msgstr "Confira a Demonstração do SLD"
+
+msgid "Upgrade to Premium"
+msgstr "Atualizar para Premium"
+
+msgid "Start Here"
+msgstr "Comece Aqui"
+
+msgid "Manage Lists"
+msgstr "Gerenciar Listas"
+
+msgid "Manage List Item"
+msgstr "Gerenciar Item da Lista"
+
+msgid "New List"
+msgstr "Nova Lista"
+
+msgid "Add New List"
+msgstr "Adicionar Nova Lista"
+
+msgid "Edit List Item"
+msgstr "Editar Item da Lista"
+
+msgid "New List Item"
+msgstr "Novo Item da Lista"
+
+msgid "View List Item"
+msgstr "Ver Item da Lista"
+
+msgid "Search List Item"
+msgstr "Pesquisar Item da Lista"
+
+msgid "No List Item found"
+msgstr "Nenhum Item da Lista encontrado"
+
+msgid "No List Item found in the Trash"
+msgstr "Nenhum Item da Lista encontrado na Lixeira"
+
+msgid "This post type holds all posts for your directory items."
+msgstr "Este tipo de postagem contém todas as postagens para os itens do seu diretório."
+
+msgid "List Categories"
+msgstr "Categorias da Lista"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Search List Categories"
+msgstr "Pesquisar Categorias da Lista"
+
+msgid "All List Categories"
+msgstr "Todas as Categorias da Lista"
+
+msgid "Parent List Categories"
+msgstr "Categorias Pai da Lista"
+
+msgid "Parent List Category:"
+msgstr "Categoria Pai da Lista:"
+
+msgid "Edit List Category"
+msgstr "Editar Categoria da Lista"
+
+msgid "Update List Category"
+msgstr "Atualizar Categoria da Lista"
+
+msgid "Add New List Category"
+msgstr "Adicionar Nova Categoria da Lista"
+
+msgid "New List Category Name"
+msgstr "Nome da Nova Categoria da Lista"
+
+msgid "List Elements"
+msgstr "Itens da Lista"
+
+msgid "Create List Elements"
+msgstr "Criar Itens da Lista"
+
+msgid "Please add your list items here. Ideally, each List should have 10-30 links. Create multiple Lists on different topics and show them all with a shortcode."
+msgstr "Por favor, adicione seus itens da lista aqui. Idealmente, cada Lista deve ter de 10 a 30 links. Crie várias Listas sobre diferentes tópicos e mostre-as todas com um shortcode."
+
+msgid "If you are unable to save a long List, please increase the value of max_input_vars to 15000 on your server."
+msgstr "Se você não conseguir salvar uma Lista longa, por favor, aumente o valor de max_input_vars para 15000 no seu servidor."
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Number of Elements"
+msgstr "Número de Itens"
+
+msgid "Shortcode"
+msgstr "Shortcode"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "element"
+msgstr "item"
+
+msgid "Single List:"
+msgstr "Lista Única:"
+
+msgid "Copy Shortcode"
+msgstr "Copiar Shortcode"
+
+msgid "Copied!"
+msgstr "Copiado!"
+
+msgid "All Lists:"
+msgstr "Todas as Listas:"
+
+msgid "%s item"
+msgstr "%s item"
+
+msgid "%s items"
+msgstr "%s itens"
+
+msgid "Featured"
+msgstr "Em Destaque"
+
+msgid "Enable Dark Mode"
+msgstr "Ativar Modo Escuro"
+
+msgid "Dark Mode On"
+msgstr "Modo Escuro Ativado"
+
+msgid "Light Mode On"
+msgstr "Modo Claro Ativado"
+
+msgid "Scroll To Top"
+msgstr "Rolar para o Topo"
+
+msgid "Simple Link Directory Pro Features"
+msgstr "Recursos do Simple Link Directory Pro"
+
+msgid "Enhanced Usability"
+msgstr "Usabilidade Aprimorada"
+
+msgid "Build unlimited Lists and show them in multi-page mode"
+msgstr "Crie Listas ilimitadas e mostre-as no modo de várias páginas"
+
+msgid "Auto Generate Title, Description & Thumbnail from URL"
+msgstr "Gerar Automaticamente Título, Descrição e Miniatura a partir da URL"
+
+msgid "Video Gallery – Vimeo and Youtube Video Directory"
+msgstr "Galeria de Vídeos – Diretório de Vídeos do Vimeo e Youtube"
+
+msgid "Live, on page, instant search & filtering of lists"
+msgstr "Pesquisa e filtragem instantânea e ao vivo de listas na página"
+
+msgid "Tabbed Category Listing of All Your Directory Lists"
+msgstr "Listagem de Categorias em Abas de Todas as Suas Listas de Diretório"
+
+msgid "Community Features"
+msgstr "Recursos da Comunidade"
+
+msgid "Complete front end user registration, login and submission"
+msgstr "Registro, login e envio de usuários completos no frontend"
+
+msgid "Allow users to submit links to your directory"
+msgstr "Permitir que usuários enviem links para o seu diretório"
+
+msgid "Invite user interaction with Upvotes (Thumbs up, Heart, etc)"
+msgstr "Convide a interação do usuário com Votos Positivos (Curtir, Coração, etc)"
+
+msgid "Allow users to embed your lists on their websites"
+msgstr "Permitir que usuários incorporem suas listas em seus sites"
+
+msgid "Allow registered users to create Favorite Lists"
+msgstr "Permitir que usuários registrados criem Listas Favoritas"
+
+msgid "Monetization Options"
+msgstr "Opções de Monetização"
+
+msgid "Integrated PayPal & Stripe payment for link submission"
+msgstr "Pagamento integrado via PayPal e Stripe para envio de links"
+
+msgid "Create recurring subscription packages for listings"
+msgstr "Crie pacotes de assinatura recorrentes para listagens"
+
+msgid "Claim Listing for Payment feature"
+msgstr "Recurso de Reivindicar Listagem para Pagamento"
+
+msgid "Option to Mark Paid Items as Featured at Top"
+msgstr "Opção para Marcar Itens Pagos como Em Destaque no Topo"
+
+msgid "URL masking option for affiliate links"
+msgstr "Opção de mascaramento de URL para links de afiliados"
+
+msgid "Design & Layouts"
+msgstr "Design e Layouts"
+
+msgid "16 Premium templates for Single Page mode"
+msgstr "16 modelos Premium para o modo de Página Única"
+
+msgid "2 Premium templates for Multi Page mode"
+msgstr "2 modelos Premium para o modo de Múltiplas Páginas"
+
+msgid "Create or customize templates from your theme folder"
+msgstr "Crie ou personalize modelos da pasta do seu tema"
+
+msgid "Use theme fonts or choose Google fonts"
+msgstr "Use fontes do tema ou escolha fontes do Google"
+
+msgid "Configurable highlight color for each list"
+msgstr "Cor de destaque configurável para cada lista"
+
+msgid "Admin Tools & Statistics"
+msgstr "Ferramentas e Estatísticas do Administrador"
+
+msgid "Click statistics for admin dashboard"
+msgstr "Estatísticas de cliques para o painel de administração"
+
+msgid "CSV Import/Export to manage lists easily"
+msgstr "Importação/Exportação CSV para gerenciar listas facilmente"
+
+msgid "Order Listing Directory by Link Clicks or Upvotes"
+msgstr "Ordenar Diretório de Listagem por Cliques no Link ou Votos Positivos"
+
+msgid "Restrict UpVote by IP or Logged in Users only"
+msgstr "Restringir Voto Positivo por IP ou apenas para Usuários Logados"
+
+msgid "Copy List Items or Links to Other Lists"
+msgstr "Copiar Itens da Lista ou Links para Outras Listas"
+
+msgid "Front End Submission Features"
+msgstr "Recursos de Envio pelo Frontend"
+
+msgid "Front End User Registration with Captcha, Log in, Link Submission"
+msgstr "Registro de Usuário pelo Frontend com Captcha, Login, Envio de Link"
+
+msgid "Admin Approves User Submitted Links or Set to Auto Approve"
+msgstr "Administrador Aprova Links Enviados por Usuários ou Define para Aprovação Automática"
+
+msgid "Enable Free Frontend Submission & Free Submission Limit"
+msgstr "Ativar Envio Gratuito pelo Frontend e Limite de Envio Gratuito"
+
+msgid "Enable Email Notification for New Item Submission"
+msgstr "Ativar Notificação por E-mail para Novo Envio de Item"
+
+msgid "Allow User to Update Profile & Upload Image"
+msgstr "Permitir que o Usuário Atualize o Perfil e Envie Imagem"
+
+msgid "Customizability and Flexibility"
+msgstr "Personalização e Flexibilidade"
+
+msgid "Choose theme font or google font"
+msgstr "Escolha a fonte do tema ou a fonte do Google"
+
+msgid "Customize colors, fonts and almost all aspects of the link lists"
+msgstr "Personalize cores, fontes e quase todos os aspectos das listas de links"
+
+msgid "Complete control over directory list ordering"
+msgstr "Controle completo sobre a ordenação da lista do diretório"
+
+msgid "Custom JS and CSS panel to modify directory functionality"
+msgstr "Painel de JS e CSS Personalizado para modificar a funcionalidade do diretório"
+
+msgid "Over a dozen shortcode parameters & Shortcode Generator"
+msgstr "Mais de uma dúzia de parâmetros de shortcode e Gerador de Shortcode"
+
+msgid "Topsite List Script Features"
+msgstr "Recursos do Script de Lista de Topsites"
+
+msgid "Order Listing Directory by Link Clicks"
+msgstr "Ordenar Diretório de Listagem por Cliques no Link"
+
+msgid "Click statistics for admin"
+msgstr "Estatísticas de cliques para o administrador"
+
+msgid "Restrict upvote by IP"
+msgstr "Restringir voto positivo por IP"
+
+msgid "Restrict UpVote for Logged in Users only"
+msgstr "Restringir Voto Positivo apenas para Usuários Logados"
+
+msgid "Enable Upvote for Main Click in General settings"
+msgstr "Ativar Voto Positivo para o Clique Principal nas configurações Gerais"
+
+msgid "View Pro Demo"
+msgstr "Ver Demonstração Pro"
+
+msgid "Upgrade to Pro Now"
+msgstr "Atualizar para o Pro Agora"
+
+msgid "Unauthorized user."
+msgstr "Usuário não autorizado."
+
+msgid "API Key is empty."
+msgstr "A chave da API está vazia."
+
+msgid "Connection successful! Valid API Key."
+msgstr "Conexão bem-sucedida! Chave da API válida."
+
+msgid "Invalid API Key or API error."
+msgstr "Chave da API inválida ou erro da API."
+
+msgid "Invalid API Key."
+msgstr "Chave da API inválida."
+
+msgid "Prompt reset to default successfully!"
+msgstr "Prompt redefinido para o padrão com sucesso!"
+
+msgid "Prompt is empty."
+msgstr "O prompt está vazio."
+
+msgid "No AI provider is enabled in settings."
+msgstr "Nenhum provedor de IA está ativado nas configurações."
+
+msgid "OpenAI API key is missing."
+msgstr "A chave da API OpenAI está faltando."
+
+msgid "OpenAI API error."
+msgstr "Erro da API OpenAI."
+
+msgid "Gemini API key is missing."
+msgstr "Chave da API Gemini está faltando."
+
+msgid "Gemini API error."
+msgstr "Erro da API Gemini."
+
+msgid "OpenRouter API key is missing."
+msgstr "Chave da API OpenRouter está faltando."
+
+msgid "OpenRouter API error."
+msgstr "Erro da API OpenRouter."
+
+msgid "Failed to parse AI output. Raw content: "
+msgstr "Falha ao analisar a saída da IA. Conteúdo bruto: "
+
+msgid "Generated %d items successfully!"
+msgstr "Gerados %d itens com sucesso!"
+
+msgid "SLD Settings Page"
+msgstr "Página de Configurações do SLD"
+
+msgid "General Settings"
+msgstr "Configurações Gerais"
+
+msgid "AI Settings"
+msgstr "Configurações de IA"
+
+msgid "Language Settings"
+msgstr "Configurações de Idioma"
+
+msgid "Custom CSS"
+msgstr "CSS Personalizado"
+
+msgid "Custom Javascript"
+msgstr "Javascript Personalizado"
+
+msgid "Step 1"
+msgstr "Passo 1"
+
+msgid "Create List with Link Details "
+msgstr "Criar Lista com Detalhes do Link"
+
+msgid "Go to New List and create one by giving it a name. Then simply start adding List items or Links by filling up the fields you want. Use the Add New button to add more Links to your list."
+msgstr "Vá para Nova Lista e crie uma dando um nome a ela. Em seguida, comece a adicionar itens da Lista ou Links preenchendo os campos desejados. Use o botão Adicionar Novo para adicionar mais Links à sua lista."
+
+msgid "Step 2"
+msgstr "Passo 2"
+
+msgid "Create More Lists"
+msgstr "Criar Mais Listas"
+
+msgid "You can just create a single list and use the Single List mode. But this plugin works the best when you create a few Lists each conatining about 15-20 Llinks. This yields the best view."
+msgstr "Você pode criar apenas uma lista e usar o modo de Lista Única. Mas este plugin funciona melhor quando você cria algumas Listas, cada uma contendo cerca de 15-20 Links. Isso proporciona a melhor visualização."
+
+msgid "Step 3"
+msgstr "Passo 3"
+
+msgid "Generate and Paste Shortcode on a Page"
+msgstr "Gerar e Colar Shortcode em uma Página"
+
+msgid "Go to the page or post you want to display the directory. On the right sidebar you will see a ShortCode Generator block. Generate a shortcode with the options you want. Copy paste that to a section on your page."
+msgstr "Vá para a página ou post onde você deseja exibir o diretório. Na barra lateral direita, você verá um bloco Gerador de Shortcode. Gere um shortcode com as opções desejadas. Copie e cole-o em uma seção da sua página."
+
+msgid "Enable Top Area"
+msgstr "Habilitar Área Superior"
+
+msgid "Top area includes Embed button (more options coming soon)"
+msgstr "A área superior inclui o botão Incorporar (mais opções em breve)"
+
+msgid "Enable Live Search"
+msgstr "Habilitar Busca em Tempo Real"
+
+msgid "Live search through directory items."
+msgstr "Busca em tempo real pelos itens do diretório."
+
+msgid "Enable Upvote"
+msgstr "Habilitar Voto Positivo"
+
+msgid "Turn ON to visible Upvote feature for all templates."
+msgstr "Ativar para tornar visível o recurso de Voto Positivo para todos os modelos."
+
+msgid "Enable Add New Button"
+msgstr "Habilitar Botão Adicionar Novo"
+
+msgid "on"
+msgstr "ligado"
+
+msgid "The button will link to a page of your choice where you can place a contact form or instructions to submit links to your directory. Links have to be manually added by the admin."
+msgstr "O botão irá linkar para uma página de sua escolha onde você pode colocar um formulário de contato ou instruções para enviar links para o seu diretório. Os links devem ser adicionados manualmente pelo administrador."
+
+msgid "Add Button Link"
+msgstr "Adicionar Link do Botão"
+
+msgid "Example:  https://yourdomain.com/submit-link/"
+msgstr "Exemplo: https://seudominio.com/enviar-link/"
+
+msgid "Paste the full URL of a page that contains a contact form to submit link "
+msgstr "Cole a URL completa de uma página que contém um formulário de contato para enviar link"
+
+msgid "Front end submission with monetization feature is available with the "
+msgstr "Envio pelo frontend com recurso de monetização está disponível com a "
+
+msgid "Pro version"
+msgstr "versão Pro"
+
+msgid "Track Outbound Clicks"
+msgstr "Rastrear Cliques de Saída"
+
+msgid "You need to have the analytics.js"
+msgstr "Você precisa ter o analytics.js"
+
+msgid "Analytics tracking code in every page of your site"
+msgstr "Código de rastreamento do Analytics em todas as páginas do seu site"
+
+msgid "Embed Credit Title"
+msgstr "Título do Crédito de Incorporação"
+
+msgid "This text will be displayed below embedded list in other sites."
+msgstr "Este texto será exibido abaixo da lista incorporada em outros sites."
+
+msgid "Embed Credit Link"
+msgstr "Link de Crédito de Incorporação"
+
+msgid "Enable Scroll to Top Button"
+msgstr "Ativar Botão de Rolar para o Topo"
+
+msgid "Show Scroll to Top."
+msgstr "Mostrar Rolar para o Topo."
+
+msgid "Enable RTL Direction"
+msgstr "Ativar Direção RTL"
+
+msgid "If you make this option ON, then list items will be arranged in Right-to-Left direction."
+msgstr "Se você ativar esta opção, os itens da lista serão organizados na direção da Direita para a Esquerda."
+
+msgid "Enable this option to show Dark Mode for all themes"
+msgstr "Ative esta opção para exibir o Modo Escuro para todos os temas"
+
+msgid "Enable Featured Section"
+msgstr "Ativar Seção de Destaques"
+
+msgid "Turn ON to display the Featured section. Default is OFF."
+msgstr "Ative para exibir a seção de Destaques. O padrão é DESATIVADO."
+
+msgid "Featured Section Item Count"
+msgstr "Contagem de Itens da Seção de Destaques"
+
+msgid "How many featured items to show. Default is 9."
+msgstr "Quantos itens em destaque exibir. O padrão é 9."
+
+msgid "Featured Section Background Color"
+msgstr "Cor de Fundo da Seção de Destaques"
+
+msgid "Background color for the Featured section. Default is #0b0c0d."
+msgstr "Cor de fundo para a seção de Destaques. O padrão é #0b0c0d."
+
+msgid "Change the language for Add New"
+msgstr "Alterar o idioma para Adicionar Novo"
+
+msgid "Change the language for Share List"
+msgstr "Alterar o idioma para Compartilhar Lista"
+
+msgid "Change the language for Live Search Items"
+msgstr "Alterar o idioma para Itens de Busca em Tempo Real"
+
+msgid "Change the language for No Results Found for Your Search"
+msgstr "Alterar o idioma para Nenhum Resultado Encontrado para Sua Busca"
+
+msgid "Change the language for - Enable Dark Mode"
+msgstr "Alterar o idioma para - Ativar Modo Escuro"
+
+msgid "Change the language for - Dark Mode On"
+msgstr "Alterar o idioma para - Modo Escuro Ativado"
+
+msgid "Change the language for - Light Mode On"
+msgstr "Alterar o idioma para - Modo Claro Ativado"
+
+msgid "Custom CSS (Use *!important* flag if the changes does not take place)"
+msgstr "CSS Personalizado (Use a flag *!important* se as alterações não forem aplicadas)"
+
+msgid "Write your custom CSS here. Please do not use"
+msgstr "Escreva seu CSS personalizado aqui. Por favor, não use"
+
+msgid "style"
+msgstr "style"
+
+msgid "tag in this textarea."
+msgstr "tag nesta área de texto."
+
+msgid "Write your custom JS here. Please do not use"
+msgstr "Escreva seu JS personalizado aqui. Por favor, não use"
+
+msgid "script"
+msgstr "script"
+
+msgid "Select Active AI Provider"
+msgstr "Selecionar Provedor de IA Ativo"
+
+msgid "Disable AI"
+msgstr "Desativar IA"
+
+msgid "Google Gemini"
+msgstr "Google Gemini"
+
+msgid "OpenRouter"
+msgstr "OpenRouter"
+
+msgid "Choose which AI provider to enable for the directory features. Selecting \\"
+msgstr "Escolha qual provedor de IA ativar para os recursos do diretório. Selecionar \\"
+
+msgid "Auto Save Generated Items"
+msgstr "Salvar Automaticamente Itens Gerados"
+
+msgid "If enabled, directory posts will be automatically saved/updated immediately after the elements are successfully generated by the AI."
+msgstr "Se ativado, as publicações do diretório serão automaticamente salvas/atualizadas imediatamente após os elementos serem gerados com sucesso pela IA."
+
+msgid "OpenAI Integration Settings"
+msgstr "Configurações de Integração OpenAI"
+
+msgid "OpenAI API Key"
+msgstr "Chave da API OpenAI"
+
+msgid "sk-..."
+msgstr "sk-..."
+
+msgid "Test Connection"
+msgstr "Testar Conexão"
+
+msgid "Enter your OpenAI API key for AI generation features."
+msgstr "Insira sua chave da API OpenAI para os recursos de geração de IA."
+
+msgid "OpenAI Model"
+msgstr "Modelo OpenAI"
+
+msgid "Select the OpenAI model to use. You can load all latest available models using the Test Connection button."
+msgstr "Selecione o modelo OpenAI a ser usado. Você pode carregar todos os modelos mais recentes disponíveis usando o botão Testar Conexão."
+
+msgid "Add Custom Models"
+msgstr "Adicionar Modelos Personalizados"
+
+msgid "Manually add custom OpenAI models (comma separated)."
+msgstr "Adicione manualmente modelos OpenAI personalizados (separados por vírgula)."
+
+msgid "OpenAI Temperature"
+msgstr "Temperatura OpenAI"
+
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0). Note: Temperature is ignored for reasoning models (o1/o3 series)."
+msgstr "Controla a aleatoriedade: Valores mais altos, como 1.2, tornarão a saída mais aleatória, enquanto valores mais baixos, como 0.2, a tornarão mais focada e determinística. Intervalo: 0.0 a 2.0 (Padrão: 1.0). Nota: A temperatura é ignorada para modelos de raciocínio (séries o1/o3)."
+
+msgid "Google Gemini Integration Settings"
+msgstr "Configurações de Integração Google Gemini"
+
+msgid "Gemini API Key"
+msgstr "Chave de API Gemini"
+
+msgid "Enter your Google Gemini API key."
+msgstr "Digite sua chave de API do Google Gemini."
+
+msgid "Gemini Model"
+msgstr "Modelo Gemini"
+
+msgid "Select the Gemini model to use. You can load all latest available models using the Test Connection button."
+msgstr "Selecione o modelo Gemini a ser usado. Você pode carregar todos os modelos mais recentes disponíveis usando o botão Testar Conexão."
+
+msgid "Manually add custom Google Gemini models (comma separated)."
+msgstr "Adicione manualmente modelos Google Gemini personalizados (separados por vírgula)."
+
+msgid "Gemini Temperature"
+msgstr "Temperatura Gemini"
+
+msgid "Controls randomness: Higher values like 1.2 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Range: 0.0 to 2.0 (Default: 1.0)."
+msgstr "Controla a aleatoriedade: Valores mais altos, como 1.2, tornarão a saída mais aleatória, enquanto valores mais baixos, como 0.2, a tornarão mais focada e determinística. Intervalo: 0.0 a 2.0 (Padrão: 1.0)."
+
+msgid "OpenRouter Integration Settings"
+msgstr "Configurações de Integração OpenRouter"
+
+msgid "OpenRouter API Key"
+msgstr "Chave de API OpenRouter"
+
+msgid "Enter your OpenRouter API Key. You can get one from openrouter.ai."
+msgstr "Digite sua chave de API OpenRouter. Você pode obtê-la em openrouter.ai."
+
+msgid "OpenRouter Model"
+msgstr "Modelo OpenRouter"
+
+msgid "Select the OpenRouter model to use. Models are dynamically fetched if an API key is active."
+msgstr "Selecione o modelo OpenRouter a ser usado. Os modelos são buscados dinamicamente se uma chave de API estiver ativa."
+
+msgid "Manually add custom OpenRouter models (comma separated)."
+msgstr "Adicione manualmente modelos OpenRouter personalizados (separados por vírgula)."
+
+msgid "OpenRouter Temperature"
+msgstr "Temperatura OpenRouter"
+
+msgid "Controls randomness: Range 0.0 to 2.0 (Default: 1.0)."
+msgstr "Controla a aleatoriedade: Intervalo de 0.0 a 2.0 (Padrão: 1.0)."
+
+msgid "AI Prompt Settings"
+msgstr "Configurações de Prompt de IA"
+
+msgid "Custom Prompt Instruction"
+msgstr "Instrução de Prompt Personalizada"
+
+msgid "Reset to Default"
+msgstr "Redefinir para o Padrão"
+
+msgid "You can customize the prompt instructions sent to the AI model. Be sure to include the placeholders {count} and {prompt} so they can be replaced by the user's inputs dynamically. Also, keep the general format of the prompt as is. Do not modify if you are uncertain."
+msgstr "Você pode personalizar as instruções de prompt enviadas ao modelo de IA. Certifique-se de incluir os placeholders {count} e {prompt} para que possam ser substituídos dinamicamente pelas entradas do usuário. Além disso, mantenha o formato geral do prompt como está. Não modifique se tiver incertezas."
+
+msgid "Shortcode Generator"
+msgstr "Gerador de Shortcode"
+
+msgid "We encourage you to use the ShortCode generator found in the toolbar of your page/post editor in visual mode."
+msgstr "Recomendamos que você use o gerador de ShortCode encontrado na barra de ferramentas do editor de página/post em modo visual."
+
+msgid "See sample below for where to find it for Gutenberg."
+msgstr "Veja o exemplo abaixo de onde encontrá-lo para o Gutenberg."
+
+msgid "This is how the shortcode generator will look like."
+msgstr "É assim que o gerador de shortcode se parecerá."
+
+msgid "Shortcode Example"
+msgstr "Exemplo de Shortcode"
+
+msgid "You can use our given SHORTCODE GENERATOR to generate and insert shortcode easily, titled as \\"
+msgstr "Você pode usar nosso GERADOR DE SHORTCODE para gerar e inserir shortcodes facilmente, intitulado como \\"
+
+msgid "For all the lists:"
+msgstr "Para todas as listas:"
+
+msgid "[qcopd-directory mode=\\"
+msgstr "[qcopd-directory mode=\\"
+
+msgid "For only a single list:"
+msgstr "Para apenas uma lista:"
+
+msgid "Available Parameters:"
+msgstr "Parâmetros Disponíveis:"
+
+msgid "1. mode"
+msgstr "1. modo"
+
+msgid "[Value for this option can be set as \\"
+msgstr "[O valor para esta opção pode ser definido como \\"
+
+msgid "2. column"
+msgstr "2. coluna"
+
+msgid "Avaialble values: \\"
+msgstr "Valores disponíveis: \\"
+
+msgid "3. style"
+msgstr "3. estilo"
+
+msgid "Only 6 templates are available in the free version. For more styles or templates, please purchase the"
+msgstr "Apenas 6 modelos estão disponíveis na versão gratuita. Para mais estilos ou modelos, por favor, adquira o"
+
+msgid "premium version"
+msgstr "versão premium"
+
+msgid "4. orderby"
+msgstr "4. orderby"
+
+msgid "Compatible order by values: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' and 'menu_order'."
+msgstr "Valores compatíveis para ordenação: 'ID', 'author', 'title', 'name', 'type', 'date', 'modified', 'rand' e 'menu_order'."
+
+msgid "5. order"
+msgstr "5. order"
+
+msgid "Value for this option can be set as \\"
+msgstr "O valor para esta opção pode ser definido como \\"
+
+msgid "6. item_orderby"
+msgstr "6. item_orderby"
+
+msgid "Value for this option are \\"
+msgstr "Os valores para esta opção são \\"
+
+msgid "7. list_id"
+msgstr "7. list_id"
+
+msgid "Only applicable if you want to display a single list [not all]. You can provide specific list id here as a value. You can also get ready shortcode for a single list under \\"
+msgstr "Aplicável apenas se você quiser exibir uma única lista [não todas]. Você pode fornecer o ID específico da lista aqui como um valor. Você também pode obter o shortcode pronto para uma única lista em \\"
+
+msgid "8. enable_embedding"
+msgstr "8. enable_embedding"
+
+msgid "Allow visitors to embed list in other sites. Supported values - \\"
+msgstr "Permitir que visitantes incorporem a lista em outros sites. Valores suportados - \\"
+
+msgid "Example: enable_embedding=\\"
+msgstr "Exemplo: enable_embedding=\\"
+
+msgid "8. upvote"
+msgstr "8. upvote"
+
+msgid "Allow visitors to list item. Supported values - \\"
+msgstr "Permitir que visitantes votem positivamente no item da lista. Valores suportados - \\"
+
+msgid "Example: upvote=\\"
+msgstr "Exemplo: upvote=\\"
+
+msgid "9. style-16 image show"
+msgstr "9. exibição de imagem estilo-16"
+
+msgid " Add the shortcode parameter enable_image=\\"
+msgstr " Adicione o parâmetro do shortcode enable_image=\\"
+
+msgid "Example: enable_image=\\"
+msgstr "Exemplo: enable_image=\\"
+
+msgid "10. Search"
+msgstr "10. Pesquisa"
+
+msgid " Add the shortcode parameter search=\\"
+msgstr " Adicione o parâmetro do shortcode search=\\"
+
+msgid "Example: search=\\"
+msgstr "Exemplo: search=\\"
+
+msgid "11. dark_mode"
+msgstr "11. dark_mode"
+
+msgid "You can use this value to use the dark_mode of SLD templates. Available values for this option \\"
+msgstr "Você pode usar este valor para aplicar o dark_mode dos modelos SLD. Valores disponíveis para esta opção \\"
+
+msgid "== Frequently Asked Questions =="
+msgstr "== Perguntas Frequentes =="
+
+msgid "= I cannot save my List. delete item or add new items to the List ="
+msgstr "= Não consigo salvar minha Lista. excluir item ou adicionar novos itens à Lista ="
+
+msgid "The issue you are having with saving the Lists is because of a limitation set in your server. Your server probably has a low limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save new link items. The server’s configuration that dictates this is max_input_vars. Set it to a high limit like max_input_vars = 10000. You can do it with local php.ini file or htaccess if your server supports it, Otherwise, please contact your hosting company support if needed. "
+msgstr "O problema que você está enfrentando ao salvar as Listas é devido a uma limitação definida em seu servidor. Seu servidor provavelmente tem um limite baixo para quantos campos de formulário ele processará por vez. Assim, depois de adicionar um certo número de links, o servidor se recusa a salvar novos itens de link. A configuração do servidor que dita isso é max_input_vars. Defina-o para um limite alto como max_input_vars = 10000. Você pode fazer isso com o arquivo php.ini local ou htaccess se o seu servidor suportar. Caso contrário, entre em contato com o suporte da sua empresa de hospedagem, se necessário. "
+
+msgid "= The sub title is not showing ="
+msgstr "= O subtítulo não está aparecendo ="
+
+msgid "The default template does not show subtitles. Use style-1 from the shortcode generator to display subtitles."
+msgstr "O modelo padrão não exibe subtítulos. Use o estilo-1 do gerador de shortcodes para exibir subtítulos."
+
+msgid "= Does the free version have filter buttons? ="
+msgstr "= A versão gratuita tem botões de filtro? ="
+
+msgid "No. It is a pro version feature at the moment. But in the future, we have plans to make it available in the free version as well."
+msgstr "Não. É um recurso da versão Pro no momento. Mas, no futuro, temos planos de disponibilizá-lo também na versão gratuita."
+
+msgid "= I cannot have more than 1 columns ="
+msgstr "= Não consigo ter mais de 1 coluna ="
+
+msgid "To display more than one column, you need to create multiple Lists and choose to Show All Lists from the shortcode generator. A single list will always show in a single column."
+msgstr "Para exibir mais de uma coluna, você precisa criar várias Listas e escolher 'Mostrar Todas as Listas' no gerador de shortcodes. Uma única lista sempre será exibida em uma única coluna."
+
+msgid "= I’m having trouble grasping the use of categories. It seems like and that they can only be assigned to a list rather than a specific link. ="
+msgstr "= Estou com dificuldade para entender o uso de categorias. Parece que elas só podem ser atribuídas a uma lista, e não a um link específico. ="
+
+msgid "The base pillars of SLD are Lists, not individual links. The most common use case scenario of SLD is to create and display multiple Lists of many Links on specific topics. As such, there is no option for a Link (list item) to belong to multiple Lists or Categories. That would make the process of creating Lists slower. For each link you would have to select a List and a Category from drop downs despite the chances of a single List item to belong to multiple Lists are usually not that high. When you have dozens or hundreds of Lists that would become a real issue to create or manage your Lists."
+msgstr "Os pilares básicos do SLD são Listas, não links individuais. O cenário de uso mais comum do SLD é criar e exibir múltiplas Listas de muitos Links sobre tópicos específicos. Como tal, não há opção para um Link (item da lista) pertencer a múltiplas Listas ou Categorias. Isso tornaria o processo de criação de Listas mais lento. Para cada link, você teria que selecionar uma Lista e uma Categoria em menus suspensos, embora as chances de um único item da Lista pertencer a múltiplas Listas geralmente não sejam tão altas. Quando você tem dezenas ou centenas de Listas, isso se tornaria um problema real para criar ou gerenciar suas Listas."
+
+msgid "= Do you have pagination or load more items? I have thousands of links="
+msgstr "= Vocês têm paginação ou carregamento de mais itens? Tenho milhares de links="
+
+msgid "Items in lists can be paginated in the pro version. This option is available in the shortcode generator. But you can also add the parameters manually."
+msgstr "Os itens em listas podem ser paginados na versão Pro. Esta opção está disponível no gerador de shortcodes. Mas você também pode adicionar os parâmetros manualmente."
+
+msgid "Values: “true”, “false”. This option will allow you to paginate list items. It will break the list page wise. Example: paginate_items=“true”. You also need to add the parameter per_page. This option indicates the number of items per page. Default is “5”. paginate_items=“true” is required to get this parameter working. Example: per_page=“5”"
+msgstr "Valores: “true”, “false”. Esta opção permitirá que você pagine os itens da lista. Ela dividirá a lista por página. Exemplo: paginate_items=“true”. Você também precisa adicionar o parâmetro per_page. Esta opção indica o número de itens por página. O padrão é “5”. paginate_items=“true” é necessário para que este parâmetro funcione. Exemplo: per_page=“5”"
+
+msgid "Lists themselves cannot be paginated as the main concept of SLD is to be a Simple, One Page Directory."
+msgstr "As próprias listas não podem ser paginadas, pois o conceito principal do SLD é ser um Diretório Simples de Uma Página."
+
+msgid "= I have a list to import but it does not work and there is no message saying why my import does not work. ="
+msgstr "= Tenho uma lista para importar, mas não funciona e não há mensagem dizendo por que minha importação não funciona. ="
+
+msgid "The most common reason for failed import is encoding. The CSV file itself and characters in it must be in utf-8 format. Please check your CSV file for any unusual/non-utf-8 characters. If the problem persists, please email us the CSV file."
+msgstr "A razão mais comum para a falha na importação é a codificação. O próprio arquivo CSV e os caracteres nele devem estar no formato utf-8. Verifique seu arquivo CSV em busca de caracteres incomuns/não-utf-8. Se o problema persistir, envie-nos o arquivo CSV por e-mail."
+
+msgid "= I have some blank pages that are crawled by Google! How to avoid them? ="
+msgstr "= Tenho algumas páginas em branco que são rastreadas pelo Google! Como evitá-las? ="
+
+msgid "Like many, if not most, WordPress plugins SLD uses custom posts and WordPress creates slug URLs even though they are not being used by SLD at the moment. We are working on making use of them."
+msgstr "Como muitos, se não a maioria, dos plugins do WordPress, o SLD usa tipos de posts personalizados e o WordPress cria URLs de slug, mesmo que não estejam sendo usados pelo SLD no momento. Estamos trabalhando para utilizá-los."
+
+msgid "But rest assured they are not harmful. They are generally not linked from anywhere and not indexed by Google. The only exception is if you have an XML sitemap generator that automatically scans and generates Links to these slug URLs. Yoast SEO plugin does that. You can exclude those slugs from xml sitemap. Go to Yoast->XML Sitemap->Post Types tag and select Manage List Items (sld) to Not in sitemap – then Save."
+msgstr "Mas fique tranquilo, eles não são prejudiciais. Geralmente não são linkados de nenhum lugar e não são indexados pelo Google. A única exceção é se você tiver um gerador de sitemap XML que escaneia e gera automaticamente links para essas URLs de slug. O plugin Yoast SEO faz isso. Você pode excluir esses slugs do sitemap XML. Vá para Yoast-&gt;Sitemap XML-&gt;Tipos de Post e selecione Gerenciar Itens da Lista (sld) para Não no sitemap – depois Salvar."
+
+msgid "= How can I upgrade from free version of SLD to Pro version? ="
+msgstr "= Como posso atualizar da versão gratuita do SLD para a versão Pro? ="
+
+msgid "1. Download the latest pro version of the plugin from website"
+msgstr "1. Baixe a versão Pro mais recente do plugin no site"
+
+msgid "2. Log in to your WordPress admin area and go to the Plugins management page."
+msgstr "2. Faça login na sua área de administração do WordPress e vá para a página de gerenciamento de Plugins."
+
+msgid "3. Deactivate and Delete the old version of the plugin (don’t worry – your data is safe)"
+msgstr "3. Desative e Exclua a versão antiga do plugin (não se preocupe – seus dados estão seguros)"
+
+msgid "4. Upload and Activate the latest pro version of the plugin"
+msgstr "4. Faça upload e Ative a versão Pro mais recente do plugin"
+
+msgid "5. You are done."
+msgstr "5. Pronto."
+
+msgid "= I have setup List Categories and Lists and neither is showing on home page. Did I install correctly? ="
+msgstr "= Configurei Categorias de Lista e Listas e nenhuma está aparecendo na página inicial. Instalei corretamente? ="
+
+msgid "You have to put the short code on the WordPress oage or post page where you want to show the List/s. There is a Shortcode generator in your page or post visual editor. Use that to create shortcode and insert to your page, where you want to display the lists, easily."
+msgstr "Você precisa inserir o shortcode na página ou post do WordPress onde deseja exibir a(s) Lista(s). Há um gerador de shortcode no seu editor visual de página ou post. Use-o para criar o shortcode e inseri-lo facilmente na sua página, onde deseja exibir as listas."
+
+msgid "= Is SLD mobile friendly? Does it function well on cells and tablets? ="
+msgstr "= O SLD é compatível com dispositivos móveis? Funciona bem em celulares e tablets? ="
+
+msgid "Yes, all templates are mobile device friendly and Responsive."
+msgstr "Sim, todos os modelos são compatíveis com dispositivos móveis e Responsivos."
+
+msgid "Please take a quick look at our"
+msgstr "Por favor, dê uma olhada rápida em nossos"
+
+msgid "Video Tutorials"
+msgstr "Tutoriais em Vídeo"
+
+msgid "Note"
+msgstr "Observação"
+
+msgid "If you are having problem with adding more items or saving a list or your changes in the list are not getting saved then it is most likely because of a limitation set in your server. Your server has a limit for how many form fields it will process at a time. So, after you have added a certain number of links, the server refuses to save the List. The server’s configuration that dictates this is max_input_vars. You need to Set it to a high limit like max_input_vars = 15000. Since this is a server setting - you may need to contact your hosting company's support for this."
+msgstr "Se você está tendo problemas para adicionar mais itens ou salvar uma lista, ou se suas alterações na lista não estão sendo salvas, é muito provável que seja devido a uma limitação definida no seu servidor. Seu servidor tem um limite para quantos campos de formulário ele processará por vez. Assim, depois de adicionar um certo número de links, o servidor se recusa a salvar a Lista. A configuração do servidor que dita isso é max_input_vars. Você precisa defini-la para um limite alto, como max_input_vars = 15000. Como esta é uma configuração de servidor, você pode precisar entrar em contato com o suporte da sua empresa de hospedagem para isso."
+
+msgid "Leave A Review for Simple Link Directory?"
+msgstr "Deixar uma avaliação para o Simple Link Directory?"
+
+msgid "We hope you've enjoyed using"
+msgstr "Esperamos que você tenha gostado de usar"
+
+msgid " Would you consider leaving us a review on WordPress.org?"
+msgstr " Você consideraria nos deixar uma avaliação no WordPress.org?"
+
+msgid "Leave A Review"
+msgstr "Deixar uma avaliação"
+
+msgid "I've already left a review"
+msgstr "Já deixei uma avaliação"
+
+msgid "Maybe Later"
+msgstr "Talvez mais tarde"
+
+msgid "Never show this again"
+msgstr "Nunca mais mostrar isso"
+
+msgid "SLD Demo Data Imported"
+msgstr "Dados de Demonstração do SLD Importados"
+
+msgid "Already CSV data imported and page created."
+msgstr "Dados CSV já importados e página criada."
+
+msgid "More WordPress Goodies for You!"
+msgstr "Mais Coisas Boas de WordPress para Você!"
+
+msgid "Check Out Some of Our Other Works that Might Make Your Website Better"
+msgstr "Confira Alguns de Nossos Outros Trabalhos que Podem Melhorar Seu Site"
+
+msgid "All our Pro Version users get Premium, Guaranteed Quick, One on One Priority Support."
+msgstr "Todos os nossos usuários da Versão Pro recebem Suporte Prioritário Premium, Rápido e Individual Garantido."
+
+msgid "Get Priority Support "
+msgstr "Obter Suporte Prioritário "
+
+msgid "Online KnowledgeBase"
+msgstr "Base de Conhecimento Online"
+
+msgid "Get Support for Free Version"
+msgstr "Obter Suporte para a Versão Gratuita"
+
+msgid "Please fill up all the requried form fields."
+msgstr "Por favor, preencha todos os campos obrigatórios do formulário."
+
+msgid "Invalid email address."
+msgstr "Endereço de e-mail inválido."
+
+msgid "Support Request Details:"
+msgstr "Detalhes da Solicitação de Suporte:"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Subject"
+msgstr "Assunto"
+
+msgid "Message"
+msgstr "Mensagem"
+
+msgid "Sent Via the Plugin"
+msgstr "Enviado Via o Plugin"
+
+msgid "Mail sent from:"
+msgstr "E-mail enviado de:"
+
+msgid "URL:"
+msgstr "URL:"
+
+msgid "Mail Generated on:"
+msgstr "E-mail gerado em:"
+
+msgid "From Plugin Support Page:"
+msgstr "Da página de suporte do plugin:"
+
+msgid "Your email was sent successfully. Thanks!"
+msgstr "Seu e-mail foi enviado com sucesso. Obrigado!"
+
+msgid "Update To Pro"
+msgstr "Atualizar para Pro"
+
+msgid "SLD - Shortcode Generator"
+msgstr "SLD - Gerador de Shortcode"
+
+msgid "Mode"
+msgstr "Modo"
+
+msgid "All List"
+msgstr "Todas as Listas"
+
+msgid "One List"
+msgstr "Uma Lista"
+
+msgid "Select List "
+msgstr "Selecionar Lista"
+
+msgid "Please Select List"
+msgstr "Por favor, selecione a lista"
+
+msgid "List Category"
+msgstr "Categoria da Lista"
+
+msgid "Please Select Category"
+msgstr "Por favor, selecione a categoria"
+
+msgid "Template Style"
+msgstr "Estilo do Modelo"
+
+msgid "Default Style"
+msgstr "Estilo Padrão"
+
+msgid "Style 01"
+msgstr "Estilo 01"
+
+msgid "Style 02"
+msgstr "Estilo 02"
+
+msgid "Style 03"
+msgstr "Estilo 03"
+
+msgid "Style 04"
+msgstr "Estilo 04"
+
+msgid "Style 05"
+msgstr "Estilo 05"
+
+msgid "Style 16 (**NEW)"
+msgstr "Estilo 16 (**NOVO)"
+
+msgid "Demo URL: "
+msgstr "URL da Demonstração: "
+
+msgid "Column"
+msgstr "Coluna"
+
+msgid "Column 1"
+msgstr "Coluna 1"
+
+msgid "Column 2"
+msgstr "Coluna 2"
+
+msgid "Column 3"
+msgstr "Coluna 3"
+
+msgid "Column 4"
+msgstr "Coluna 4"
+
+msgid "Title Font Size"
+msgstr "Tamanho da Fonte do Título"
+
+msgid "Default"
+msgstr "Padrão"
+
+msgid "Title Line Height"
+msgstr "Altura da Linha do Título"
+
+msgid "Subtitle Font Size"
+msgstr "Tamanho da Fonte do Subtítulo"
+
+msgid "Subtitle Line Height"
+msgstr "Altura da Linha do Subtítulo"
+
+msgid "List Order By"
+msgstr "Ordenar Lista Por"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Date Modified"
+msgstr "Data de Modificação"
+
+msgid "Random"
+msgstr "Aleatório"
+
+msgid "Menu Order"
+msgstr "Ordem do Menu"
+
+msgid "List Order"
+msgstr "Ordem da Lista"
+
+msgid "Ascending"
+msgstr "Crescente"
+
+msgid "Descending"
+msgstr "Decrescente"
+
+msgid "List Item Orderby"
+msgstr "Ordenar itens da lista por"
+
+msgid "Upvotes"
+msgstr "Votos positivos"
+
+msgid "Enable Embeding"
+msgstr "Ativar incorporação"
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "the shortcode & use it any text block."
+msgstr "o shortcode e use-o em qualquer bloco de texto."
+
+msgid "Copy & Close"
+msgstr "Copiar e fechar"
+
+msgid "SLD - Alert"
+msgstr "SLD - Alerta"
+
+msgid "A list should have more than just 1 item."
+msgstr "Uma lista deve ter mais de apenas 1 item."
+
+msgid "We recommend"
+msgstr "Recomendamos"
+
+msgid "10-30"
+msgstr "10-30"
+
+msgid "links/businesses for each List."
+msgstr "links/negócios para cada lista."
+
+msgid "Create multiple Lists and show them all on a page using the"
+msgstr "Crie várias listas e mostre todas elas em uma página usando o"
+
+msgid "Shortcode Generator."
+msgstr "Gerador de Shortcodes."
+
+msgid "No"
+msgstr "Não"
+
+msgid "Add more item"
+msgstr "Adicionar mais item"

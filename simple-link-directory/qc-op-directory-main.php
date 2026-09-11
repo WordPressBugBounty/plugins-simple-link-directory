@@ -1,19 +1,21 @@
 <?php
 /**
  * Plugin Name: Link Directory - Simple Link Directory
- * Plugin URI: https://wordpress.org/plugins/simple-link-directory
+ * Plugin URI: https://www.quantumcloud.net/products/simple-link-directory/
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 9.1.6
+ * Version: 9.1.9
  * Author: QuantumCloud
- * Author URI: https://www.quantumcloud.com/products/simple-link-directory/
- * Requires at least: 4.6
+ * Author URI: https://www.quantumcloud.net/products/simple-link-directory/
+ * Requires at least: 5.2
  * Tested up to: 7.1
  * Text Domain: simple-link-directory
  * Domain Path: /lang/
  * License: GPL2
  */
 
-defined('ABSPATH') or die("No direct script access!");
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 // Abort execution if Pro version is active to prevent conflicts
 if ( ! function_exists( 'is_plugin_active' ) ) {
@@ -24,16 +26,22 @@ if ( is_plugin_active( 'qc-simple-link-directory/qc-op-directory-main.php' ) ) {
 }
 
 // Also abort if we are currently activating the Pro plugin
+// phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
 if ( isset($_REQUEST['action']) ) {
     if ( sanitize_text_field(wp_unslash($_REQUEST['action'])) == 'activate' && isset($_REQUEST['plugin']) && strpos(sanitize_text_field(wp_unslash($_REQUEST['plugin'])), 'qc-simple-link-directory') !== false ) {
         return;
     }
-    if ( sanitize_text_field(wp_unslash($_REQUEST['action'])) == 'activate-selected' && isset($_POST['checked']) && in_array('qc-simple-link-directory/qc-op-directory-main.php', $_POST['checked']) ) {
+    if ( sanitize_text_field(wp_unslash($_REQUEST['action'])) == 'activate-selected' && isset($_POST['checked']) && is_array($_POST['checked']) && in_array('qc-simple-link-directory/qc-op-directory-main.php', array_map('sanitize_text_field', wp_unslash($_POST['checked'])), true) ) {
         return;
     }
 }
+// phpcs:enable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
 
 //Custom Constants
+if (!defined('SLD_QCOPD_VERSION')) {
+    define('SLD_QCOPD_VERSION', '9.1.9');
+}
+
 if (!defined('SLD_QCOPD_URL')) {
     define('SLD_QCOPD_URL', plugin_dir_url(__FILE__));
 }
@@ -142,7 +150,7 @@ function qcopd_promo_link_in_cpt_table()
     $link = "";
 
     if ($current_screen == 'edit-sld') {
-        $link = '<div class="alignleft actions"><a href="' . esc_url("https://www.quantumcloud.com/products/simple-link-directory/") . '" target="_blank" class="button qcsld-promo-link" rel="nofollow">' . esc_html("Upgrade to Pro", 'simple-link-directory') . '</a></div>';
+        $link = '<div class="alignleft actions"><a href="' . esc_url("https://www.quantumcloud.net/products/simple-link-directory/") . '" target="_blank" class="button qcsld-promo-link" rel="nofollow">' . esc_html("Upgrade to Pro", 'simple-link-directory') . '</a></div>';
         $link .= '<div class="alignleft actions"><a href="' . esc_url(admin_url('post-new.php?post_type=sld')) . '" class="button">' . esc_html("Add New List of Links", 'simple-link-directory') . '</a></div>';
     }
 
@@ -160,7 +168,7 @@ function qcopd_promo_link_in_settings_page()
 
     $link = "";
 
-    $link = '<div class="alignleft actions"><a href="' . esc_url("https://www.quantumcloud.com/products/simple-link-directory/") . '" target="_blank" class="button qcsld-promo-link" rel="nofollow">' . esc_html("Upgrade to Pro", 'simple-link-directory') . '</a></div>';
+    $link = '<div class="alignleft actions"><a href="' . esc_url("https://www.quantumcloud.net/products/simple-link-directory/") . '" target="_blank" class="button qcsld-promo-link" rel="nofollow">' . esc_html("Upgrade to Pro", 'simple-link-directory') . '</a></div>';
 
     echo wp_kses_post($link);
 
@@ -240,7 +248,7 @@ function qcopd_options_instructions_example()
     $screen = get_current_screen();
 
     if (is_admin() && ($screen->post_type == 'sld')) {
-        wp_enqueue_script('jqc-slick.min-js', SLD_QCOPD_ASSETS_URL . '/js/slick.min.js', array('jquery'));
+        wp_enqueue_script('jqc-slick.min-js', SLD_QCOPD_ASSETS_URL . '/js/slick.min.js', array('jquery'), SLD_QCOPD_VERSION, true);
         ?>
         <div class="notice notice-info is-dismissible sld-notice" style="display:none">
             <div class="sld_info_carousel">
@@ -488,7 +496,8 @@ function qcopd_sld_activation_redirect($plugin)
     if ((isset($screen->base) && $screen->base == 'plugins') && $plugin == plugin_basename(__FILE__)) {
         //if( $plugin == plugin_basename( __FILE__ ) ) {
         if ('cli' !== php_sapi_name()) {
-            exit(wp_redirect(admin_url('edit.php?post_type=sld&page=sld_settings#help')));
+            wp_safe_redirect(admin_url('edit.php?post_type=sld&page=sld_settings#help'));
+            exit;
         }
     }
 }
@@ -524,7 +533,7 @@ function qcopd_sld_category_remove_row_actions($actions)
 
 if (is_admin()) {
     require_once('class-plugin-deactivate-feedback.php');
-    $SlD_feedback = new QCOPD_SLD_Usage_Feedback(__FILE__, 'plugins@quantumcloud.com', false, true);
+    $SlD_feedback = new QCOPD_SLD_Usage_Feedback(__FILE__, 'plugins@quantumcloud.net', false, true);
 }
 
 function qcopd_sld_remove_admin_menu_items()
@@ -549,7 +558,7 @@ function qcopd_sld_wp_shortcode_notice()
         <?php
         /*printf(
             __('%s  %s  %s', 'dna88-wp-notice'),
-            '<a href="'.esc_url('https://www.quantumcloud.com/products/simple-link-directory/').'" target="_blank">',
+            '<a href="'.esc_url('https://www.quantumcloud.net/products/simple-link-directory/').'" target="_blank">',
             '<img src="'.esc_url(SLD_QCOPD_ASSETS_URL).'/images/halloween25-sld.jpg" >',
             '</a>'
         );*/
@@ -617,7 +626,7 @@ function qcopd_sld_wp_shortcode_notice()
 
         <div class="qcld-sldquick-flyout">
             <div class="qcld-sldquick-flyout-items">
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>"
+                <a href="<?php echo esc_url('https://www.quantumcloud.net/resources/kb-sections/simple-link-directory/'); ?>"
                     target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item qcld-sldquick-flyout-premium"
                     rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
                     <div class="qcld-sldquick-flyout-label">
@@ -625,7 +634,7 @@ function qcopd_sld_wp_shortcode_notice()
                     </div>
                     <i class="dashicons dashicons-admin-home"></i>
                 </a>
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>"
+                <a href="<?php echo esc_url('https://www.quantumcloud.net/resources/kb-sections/simple-link-directory/'); ?>"
                     target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" rel="noopener noreferrer"
                     target="_blank" style="transition-delay: 60ms;">
                     <div class="qcld-sldquick-flyout-label">
@@ -633,7 +642,7 @@ function qcopd_sld_wp_shortcode_notice()
                     </div>
                     <i class="dashicons dashicons-flag"></i>
                 </a>
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/resources/kb-sections/simple-link-directory/'); ?>"
+                <a href="<?php echo esc_url('https://www.quantumcloud.net/resources/kb-sections/simple-link-directory/'); ?>"
                     target="_blank" class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item"
                     style="transition-delay: 90ms;">
                     <div class="qcld-sldquick-flyout-label">
@@ -649,14 +658,14 @@ function qcopd_sld_wp_shortcode_notice()
                     </div>
                     <i class="dashicons dashicons-email"></i>
                 </a>
-                <a href="<?php echo esc_url('https://dev.quantumcloud.com/sld/'); ?>" target="_blank"
+                <a href="<?php echo esc_url('https://dev.quantumcloud.net/sld/'); ?>" target="_blank"
                     class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item" style="transition-delay: 30ms;">
                     <div class="qcld-sldquick-flyout-label">
                         <div><?php esc_html_e('Check out the SLD Demo', 'simple-link-directory'); ?></div>
                     </div>
                     <i class="dashicons dashicons-welcome-view-site"></i>
                 </a>
-                <a href="<?php echo esc_url('https://www.quantumcloud.com/products/simple-link-directory/'); ?>" target="_blank"
+                <a href="<?php echo esc_url('https://www.quantumcloud.net/products/simple-link-directory/'); ?>" target="_blank"
                     class="qcld-sldquick-flyout-button qcld-sldquick-flyout-item qcld-sldquick-flyout-premium"
                     rel="noopener noreferrer" target="_blank" style="transition-delay: 0ms;">
                     <div class="qcld-sldquick-flyout-label">
