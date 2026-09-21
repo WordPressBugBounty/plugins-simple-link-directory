@@ -23,8 +23,8 @@ if( !function_exists('qcld_recommend_support_function_first_sld_ajax') ){
                         'icons'             => true,
                         'reviews'           => true, // excludes all reviews
                     ],
-        			'live_preview'   => 'https://dev.quantumcloud.net/knowledgebase/',
-        			'update_to_pro'  => 'https://www.quantumcloud.net/products/knowledgebase-helpdesk/'
+        			'live_preview'   => 'https://turbopowers.com/kbx/',
+        			'update_to_pro'  => 'https://turbopowers.com/'
                 ], 
                 [
                     'slug'      => 'woowbot-woocommerce-chatbot',

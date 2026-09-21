@@ -3,11 +3,11 @@
  * Plugin Name: Link Directory - Simple Link Directory
  * Plugin URI: https://www.quantumcloud.net/products/simple-link-directory/
  * Description: Link Directory WordPress plugin to curate topic based link collections. Curate gorgeous Link Directory, Local Business Directory, Partners or Vendors Directory
- * Version: 9.1.9
+ * Version: 9.2.0
  * Author: QuantumCloud
  * Author URI: https://www.quantumcloud.net/products/simple-link-directory/
  * Requires at least: 5.2
- * Tested up to: 7.1
+ * Tested up to: 7.1.1
  * Text Domain: simple-link-directory
  * Domain Path: /lang/
  * License: GPL2
@@ -39,7 +39,7 @@ if ( isset($_REQUEST['action']) ) {
 
 //Custom Constants
 if (!defined('SLD_QCOPD_VERSION')) {
-    define('SLD_QCOPD_VERSION', '9.1.9');
+    define('SLD_QCOPD_VERSION', '9.2.0');
 }
 
 if (!defined('SLD_QCOPD_URL')) {

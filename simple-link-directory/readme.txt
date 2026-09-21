@@ -4,7 +4,7 @@ Donate link: https://www.quantumcloud.net/products/simple-link-directory/
 Tags: directory, directory listing, link directory, link management, web directory
 Requires at least: 4.6
 Tested up to: 7.1
-Stable tag: 9.1.9
+Stable tag: 9.2.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.quantumcloud.net/products/simple-link-directory/
@@ -377,6 +377,9 @@ You can change the language texts from the Settings area. Currently, multi langu
 
 
 == Changelog ==
+
+= 9.2.0 =
+# KB Link fixed
 
 = 9.1.9 =
 # Updated domain and misc fixes
