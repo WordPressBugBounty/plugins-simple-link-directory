@@ -57,7 +57,7 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 			
 			// Deactivation
 			add_filter( 'plugin_action_links_' . plugin_basename( $this->plugin_file ), array( $this, 'filter_action_links' ) );
-			add_action( 'admin_footer', array( $this, 'goodbye_ajax' ) );
+			add_action( 'admin_footer-plugins.php', array( $this, 'goodbye_ajax' ) );
 			add_action( 'wp_ajax_goodbye_form', array( $this, 'goodbye_form_callback' ) );
 			
 		}
@@ -276,9 +276,10 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 				$form = $this->form_default_text();
 			}
 
-			$plugin_slug = esc_attr( $this->plugin_name );
-			$admin_email = esc_attr( get_option( 'admin_email' ) );
-			$logo_url    = defined( 'SLD_QCOPD_IMG_URL' ) ? esc_url( SLD_QCOPD_IMG_URL . '/sld-logo.png' ) : esc_url( plugins_url( 'assets/images/sld-logo.png', $this->plugin_file ) );
+			$plugin_slug         = esc_attr( $this->plugin_name );
+			$sld_body_active_class = 'wpb-sld-deactivate-active-' . $plugin_slug;
+			$admin_email         = esc_attr( get_option( 'admin_email' ) );
+			$logo_url            = defined( 'SLD_QCOPD_IMG_URL' ) ? esc_url( SLD_QCOPD_IMG_URL . '/sld-logo.png' ) : esc_url( plugins_url( 'assets/images/sld-logo.png', $this->plugin_file ) );
 			?>
 			<div class="wpb-goodbye-form-bg" id="wpb-goodbye-form-bg-<?php echo $plugin_slug; ?>" style="display:none;"></div>
 
@@ -320,16 +321,16 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 								<?php endforeach; ?>
 							</div>
 
-							<div id="wpb_additional_content" class="wpb-goodbye-additional" style="display:none;">
+							<div id="wpb-additional-content-<?php echo $plugin_slug; ?>" class="wpb-goodbye-additional" style="display:none;">
 								<div class="wpb-field-group">
-									<label for="wpb-goodbye-reasons" class="wpb-field-label"><?php echo esc_html( $form['details'] ); ?></label>
-									<textarea name="wpb-goodbye-reasons" id="wpb-goodbye-reasons" rows="3" class="wpb-form-textarea" placeholder="<?php esc_attr_e( 'Please share what we could improve...', 'simple-link-directory' ); ?>"></textarea>
+									<label for="wpb-goodbye-reasons-<?php echo $plugin_slug; ?>" class="wpb-field-label"><?php echo esc_html( $form['details'] ); ?></label>
+									<textarea name="wpb-goodbye-reasons" id="wpb-goodbye-reasons-<?php echo $plugin_slug; ?>" rows="3" class="wpb-form-textarea" placeholder="<?php esc_attr_e( 'Please share what we could improve...', 'simple-link-directory' ); ?>"></textarea>
 								</div>
 								<div class="wpb-field-group">
-									<label for="wpb-goodbye-email" class="wpb-field-label"><?php echo esc_html( $form['email'] ); ?></label>
-									<input type="email" name="wpb-goodbye-email" id="wpb-goodbye-email" class="wpb-form-input" value="<?php echo $admin_email; ?>" placeholder="<?php esc_attr_e( 'your-email@example.com', 'simple-link-directory' ); ?>" />
+									<label for="wpb-goodbye-email-<?php echo $plugin_slug; ?>" class="wpb-field-label"><?php echo esc_html( $form['email'] ); ?></label>
+									<input type="email" name="wpb-goodbye-email" id="wpb-goodbye-email-<?php echo $plugin_slug; ?>" class="wpb-form-input" value="<?php echo $admin_email; ?>" placeholder="<?php esc_attr_e( 'your-email@example.com', 'simple-link-directory' ); ?>" />
 								</div>
-								<div id="wpbot_deactivation_error" class="wpb-error-message" style="display:none;"></div>
+								<div id="wpbot-deactivation-error-<?php echo $plugin_slug; ?>" class="wpb-error-message" style="display:none;"></div>
 							</div>
 						</div>
 
@@ -344,15 +345,15 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 							<button type="button" class="wpb-btn-secondary wpb-goodbye-cancel-btn"><?php esc_html_e( 'Cancel', 'simple-link-directory' ); ?></button>
 						</div>
 						<div class="wpb-footer-right">
-							<a class="wpbot_just_deactivate" href="#" id="wpb-skip-deactivate"><?php esc_html_e( 'Skip & Deactivate', 'simple-link-directory' ); ?></a>
-							<button type="button" id="wpb-submit-form" class="wpb-btn-primary wpbot_submit_deactivate"><?php esc_html_e( 'Submit & Deactivate', 'simple-link-directory' ); ?></button>
+							<a class="wpbot_just_deactivate wpb-sld-skip-deactivate" href="#" id="wpb-skip-deactivate-<?php echo $plugin_slug; ?>"><?php esc_html_e( 'Skip & Deactivate', 'simple-link-directory' ); ?></a>
+							<button type="button" id="wpb-submit-form-<?php echo $plugin_slug; ?>" class="wpb-btn-primary wpbot_submit_deactivate"><?php esc_html_e( 'Submit & Deactivate', 'simple-link-directory' ); ?></button>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<style type="text/css">
-				.wpb-goodbye-form-bg {
+				#wpb-goodbye-form-bg-<?php echo $plugin_slug; ?> {
 					display: none;
 					position: fixed !important;
 					top: 0 !important;
@@ -366,13 +367,13 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 					-webkit-backdrop-filter: blur(4px) !important;
 					z-index: 999998 !important;
 				}
-				body.wpb-form-active .wpb-goodbye-form-bg {
+				body.<?php echo esc_attr( $sld_body_active_class ); ?> #wpb-goodbye-form-bg-<?php echo $plugin_slug; ?> {
 					display: block !important;
 				}
-				body.wpb-form-active {
+				body.<?php echo esc_attr( $sld_body_active_class ); ?> {
 					overflow: hidden !important;
 				}
-				.wpb-goodbye-form-modal {
+				#wpb-goodbye-form-<?php echo $plugin_slug; ?>.wpb-goodbye-form-modal {
 					display: none;
 					position: fixed !important;
 					top: 50% !important;
@@ -391,7 +392,7 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 					opacity: 0;
 					transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
 				}
-				.wpb-goodbye-form-sld_modal.is-open {
+				#wpb-goodbye-form-<?php echo $plugin_slug; ?>.wpb-goodbye-form-modal.is-open {
 					display: block !important;
 					transform: translate(-50%, -50%) scale(1) !important;
 					opacity: 1 !important;
@@ -574,8 +575,8 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 					color: #334155;
 					margin-bottom: 6px;
 				}
-				.wpb-form-textarea,
-				.wpb-form-input {
+				#wpb-goodbye-form-<?php echo $plugin_slug; ?> .wpb-form-textarea,
+				#wpb-goodbye-form-<?php echo $plugin_slug; ?> .wpb-form-input {
 					width: 100% !important;
 					box-sizing: border-box !important;
 					padding: 8px 12px !important;
@@ -589,12 +590,12 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 					box-shadow: none !important;
 					font-family: inherit !important;
 				}
-				.wpb-form-textarea:focus,
-				.wpb-form-input:focus {
+				#wpb-goodbye-form-<?php echo $plugin_slug; ?> .wpb-form-textarea:focus,
+				#wpb-goodbye-form-<?php echo $plugin_slug; ?> .wpb-form-input:focus {
 					border-color: #0284c7 !important;
 					box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
 				}
-				.wpb-form-textarea {
+				#wpb-goodbye-form-<?php echo $plugin_slug; ?> .wpb-form-textarea {
 					resize: vertical;
 					min-height: 72px;
 					line-height: 1.45;
@@ -700,6 +701,7 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 			<script type="text/javascript">
 				jQuery(document).ready(function($){
 					var sld_pluginName = "<?php echo esc_js( $this->plugin_name ); ?>";
+					var sld_bodyActiveClass = "<?php echo esc_js( $sld_body_active_class ); ?>";
 					var sld_modal = $("#wpb-goodbye-form-" + sld_pluginName);
 					var sld_bgOverlay = $("#wpb-goodbye-form-bg-" + sld_pluginName);
 					var sld_deactivationUrl = "";
@@ -709,32 +711,32 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 						sld_bgOverlay.stop(true, true).fadeOut(150);
 						setTimeout(function(){
 							sld_modal.css('display', 'none');
-							$('body').removeClass('wpb-form-active');
+							$('body').removeClass(sld_bodyActiveClass);
 						}, 200);
 					}
 
 					function sld_openModal(url) {
 						sld_deactivationUrl = url;
-						$('body').addClass('wpb-form-active');
+						$('body').addClass(sld_bodyActiveClass);
 						sld_bgOverlay.stop(true, true).fadeIn(150);
 						sld_modal.css({'opacity': '0', 'display': 'block'});
 						setTimeout(function(){
 							sld_modal.addClass('is-open');
 							sld_modal.css('opacity', '1');
 						}, 20);
-						sld_modal.find('#wpb-skip-deactivate').attr('href', sld_deactivationUrl);
+						sld_modal.find('#wpb-skip-deactivate-' + sld_pluginName).attr('href', sld_deactivationUrl);
 					}
 
 					// Intercept plugin row deactivation click (exclude modal's own skip/deactivate buttons)
-					$(document).on('click', "#wpb-goodbye-link-" + sld_pluginName + ", a[href*='action=deactivate'][href*='" + sld_pluginName + "']:not(.wpbot_just_deactivate):not(#wpb-skip-deactivate)", function(e){
+					$(document).on('click', "#wpb-goodbye-link-" + sld_pluginName + ", a[href*='action=deactivate'][href*='" + sld_pluginName + "']:not(.wpbot_just_deactivate):not(.wpb-sld-skip-deactivate)", function(e){
 						e.preventDefault();
 						e.stopPropagation();
 						var href = $(this).attr('href');
 						sld_openModal(href);
 					});
 
-					// Handle Skip / Just Deactivate click
-					$(document).on('click', "#wpb-goodbye-form-" + sld_pluginName + " .wpbot_just_deactivate, #wpb-skip-deactivate", function(e){
+					// Handle Skip / Just Deactivate click (scoped to this plugin's modal only)
+					$(document).on('click', "#wpb-goodbye-form-" + sld_pluginName + " .wpbot_just_deactivate, #wpb-skip-deactivate-" + sld_pluginName, function(e){
 						e.preventDefault();
 						e.stopPropagation();
 						var targetUrl = sld_deactivationUrl || $(this).attr('href');
@@ -754,9 +756,9 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 						sld_closeModal();
 					});
 
-					// ESC key to close
+					// ESC key to close (only when this plugin's modal is open)
 					$(document).on('keyup', function(e){
-						if (e.key === 'Escape' && $('body').hasClass('wpb-form-active')) {
+						if (e.key === 'Escape' && sld_modal.hasClass('is-open')) {
 							sld_closeModal();
 						}
 					});
@@ -771,26 +773,26 @@ if( ! class_exists( 'QCOPD_SLD_Usage_Feedback') ) {
 
 						if (needDetails == '1' || needDetails === 1 || needDetails === true) {
 							if (placeholder) {
-								sld_modal.find('#wpb-goodbye-reasons').attr('placeholder', placeholder);
+								sld_modal.find('#wpb-goodbye-reasons-' + sld_pluginName).attr('placeholder', placeholder);
 							}
-							sld_modal.find('#wpb_additional_content').slideDown(200);
+							sld_modal.find('#wpb-additional-content-' + sld_pluginName).slideDown(200);
 						} else {
-							sld_modal.find('#wpb_additional_content').slideUp(200);
+							sld_modal.find('#wpb-additional-content-' + sld_pluginName).slideUp(200);
 						}
-						sld_modal.find('#wpbot_deactivation_error').hide();
+						sld_modal.find('#wpbot-deactivation-error-' + sld_pluginName).hide();
 					});
 
 					// Submit & Deactivate
-					sld_modal.find('#wpb-submit-form').on('click', function(e){
+					sld_modal.find('#wpb-submit-form-' + sld_pluginName).on('click', function(e){
 						e.preventDefault();
 
 						var selectedRadio = sld_modal.find("input[name='wpb-goodbye-option-radio']:checked");
 						var selectedVal = selectedRadio.val() || '';
-						var details = sld_modal.find('#wpb-goodbye-reasons').val() || '';
-						var email = sld_modal.find('#wpb-goodbye-email').val() || '';
+						var details = sld_modal.find('#wpb-goodbye-reasons-' + sld_pluginName).val() || '';
+						var email = sld_modal.find('#wpb-goodbye-email-' + sld_pluginName).val() || '';
 
 						if (!selectedVal && !details) {
-							sld_modal.find('#wpbot_deactivation_error').text('<?php echo esc_js( __( 'Please select an option or share your feedback.', 'simple-link-directory' ) ); ?>').slideDown(150);
+							sld_modal.find('#wpbot-deactivation-error-' + sld_pluginName).text('<?php echo esc_js( __( 'Please select an option or share your feedback.', 'simple-link-directory' ) ); ?>').slideDown(150);
 							return;
 						}
 
